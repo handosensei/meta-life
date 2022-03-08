@@ -1,0 +1,31 @@
+{
+  "name": "antinomy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@antinomy-studio/size": "git+https://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:x-oauth-basic@github.com/antinomy-studio/size.git",
+    "@antinomy-studio/sniffer": "git+https://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:x-oauth-basic@github.com/antinomy-studio/sniffer.git",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "core-js": "^3.6.5",
+    "gsap": "^3.6.0",
+    "intersection-observer": "^0.12.0",
+    "nuxt": "^2.14.6",
+    "nuxt-polyfill": "^1.0.3",
+    "requestanimationframe": "0.0.23",
+    "requestidlecallback-polyfill": "^1.0.2",
+    "stats.js": "^0.17.0"
+  },
+  "devDependencies": {
+    "@nuxt/image": "^0.6.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint": "^8.7.0",
+    "sass": "^1.38.2",
+    "sass-loader": "^10.1.1"
+  }
+}
