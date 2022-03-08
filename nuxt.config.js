@@ -74,10 +74,6 @@ export default {
 
   // (https://nuxtjs.org/docs/directory-structure/modules/)
   buildModules: [
-    ['@nuxt/image', {
-      provider: 'static',
-      dir: "assets/images",
-    }],
     '@nuxtjs/style-resources',
     '@nuxtjs/eslint-module'
   ],

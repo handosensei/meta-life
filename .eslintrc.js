@@ -5,11 +5,14 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@babel/eslint-parser',
+    "requireConfigFile": false,
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    '@nuxtjs'
+  ],
+  plugins: [
+    "nuxt"
   ],
   rules: {
     'vue/no-v-html': 'off',
@@ -17,6 +20,7 @@ module.exports = {
     'array-bracket-spacing': [1, 'always'],
     'no-console': [0, 'off'],
     'vue/comment-directive':'off',
-    'new-cap':'off'
+    'new-cap':'off',
+    'vue/multi-word-component-names': 0
   }
 }
