@@ -6,7 +6,12 @@
         :key="chapter.id"
         class="listItem"
       >
-        <button class="button" type="button" @click="onClick(chapter)">
+        <button
+          class="button"
+          :class="{ 'isActive': chapter === activeChapter }"
+          type="button"
+          @click="onClick(chapter)"
+        >
           {{ chapter.name }}
         </button>
       </li>
@@ -21,7 +26,7 @@ export default {
   name: 'ChapterNavComponent',
 
   computed: {
-    ...mapState('home', ['chapters']),
+    ...mapState('home', ['chapters', 'activeChapter']),
   },
 
   methods: {
