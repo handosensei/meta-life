@@ -1,31 +1,64 @@
 {
-  "name": "antinomy",
+  "name": "meta-life",
   "version": "1.0.0",
   "private": true,
+  "contributors": [
+    "Ruud Luijten <ruud@rlly.co>",
+    "Rob Smittenaar <rob@exoape.com>"
+  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --cache",
+    "*.{scss,vue}": "stylelint",
+    "*.{js,css,scss,md}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
-    "@antinomy-studio/size": "git+https://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:x-oauth-basic@github.com/antinomy-studio/size.git",
-    "@antinomy-studio/sniffer": "git+https://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:x-oauth-basic@github.com/antinomy-studio/sniffer.git",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "core-js": "^3.6.5",
-    "gsap": "^3.6.0",
-    "intersection-observer": "^0.12.0",
-    "nuxt": "^2.14.6",
-    "nuxt-polyfill": "^1.0.3",
-    "requestanimationframe": "0.0.23",
-    "requestidlecallback-polyfill": "^1.0.2",
-    "stats.js": "^0.17.0"
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.6.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxt/image": "^0.6.2",
+    "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "eslint": "^8.7.0",
-    "sass": "^1.38.2",
-    "sass-loader": "^10.1.1"
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@nuxtjs/stylelint-module": "^4.1.0",
+    "@nuxtjs/svg": "^0.4.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "postcss-html": "^1.3.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "sass-loader": "10",
+    "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.1.0",
+    "stylelint-config-standard": "^24.0.0"
   }
 }

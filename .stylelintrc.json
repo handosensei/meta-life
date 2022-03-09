@@ -1,0 +1,11 @@
+{
+  "customSyntax": "postcss-html",
+  "extends": ["stylelint-config-standard", "stylelint-config-recommended-vue", "stylelint-config-prettier"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "custom-property-empty-line-before": null,
+    "no-missing-end-of-source-newline": null,
+    "declaration-block-trailing-semicolon": null
+  }
+}
