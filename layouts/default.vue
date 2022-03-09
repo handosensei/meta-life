@@ -14,26 +14,26 @@ export default {
     window.addEventListener('resize', throttle(this.onResize, 66), false);
     requestAnimationFrame(this.onRaf);
 
-    // this.loadFonts();
+    this.loadFonts();
     this.setWindowSize();
   },
 
   methods: {
-    // loadFonts() {
-    //   const hasCustomFont = false
-    //   if (document.fonts && hasCustomFont) {
-    //     const Font = new FontFace('Font-Name', 'url(/fonts/Font-Name.woff2)', {
-    //       style: 'normal',
-    //       weight: '400'
-    //     })
-    //     Promise.all([Font.load()]).then(() => {
-    //       document.fonts.add(Font)
-    //       this.$root.$emit('fonts:loaded')
-    //     })
-    //   } else {
-    //     this.$root.$emit('fonts:loaded')
-    //   }
-    // },
+    loadFonts() {
+      const hasCustomFont = true;
+      if (document.fonts && hasCustomFont) {
+        const Font = new FontFace('Matter', 'url(/fonts/Matter-Regular.woff2)', {
+          style: 'normal',
+          weight: '400'
+        })
+        Promise.all([Font.load()]).then(() => {
+          document.fonts.add(Font)
+          this.$root.$emit('fonts:loaded')
+        })
+      } else {
+        this.$root.$emit('fonts:loaded')
+      }
+    },
 
     onResize() {
       this.setWindowSize();
