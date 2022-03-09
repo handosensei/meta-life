@@ -1,10 +1,15 @@
 <template>
-  <section>
+  <section
+    class="section"
+    :class="{ 'isLight': theme === 'light' }"
+  >
     <h1 class="title">{{ name }}</h1>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'SectionComponent',
 
@@ -18,7 +23,11 @@ export default {
       type: String,
       required: true,
     },
-  }
+  },
+
+  computed: {
+    ...mapState('app', ['theme']),
+  },
 }
 </script>
 

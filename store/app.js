@@ -3,11 +3,16 @@ export const state = () => ({
     width: 0,
     height: 0,
   },
+  theme: 'dark',
 });
 
 export const actions = {
   setWindowSize({ commit }, size) {
     commit('SET_WINDOW_SIZE', size);
+  },
+
+  setTheme({ commit }, theme) {
+    commit('SET_THEME', theme);
   },
 };
 
@@ -19,5 +24,9 @@ export const mutations = {
         height: window.innerHeight,
       };
     }
+  },
+
+  SET_THEME(state, payload) {
+    state.theme = payload;
   },
 };

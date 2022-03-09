@@ -1,5 +1,9 @@
 .chapterNav {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
   margin-top: 3rem;
+  transform: translate(-50%, 0);
 }
 
 .list {
@@ -7,18 +11,21 @@
 }
 
 .listItem {
+  flex-shrink: 0;
+
   &:not(:first-child) {
-    margin-left: 1rem;
+    margin-left: -1px;
   }
 }
 
 .button {
   display: flex;
   padding: 1rem 2rem;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(243, 243, 243, 0.9);
 
   &.isActive {
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #f3f3f3;
   }
 }

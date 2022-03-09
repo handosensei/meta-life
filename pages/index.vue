@@ -35,6 +35,10 @@ export default {
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection']),
   },
 
+  watch: {
+    activeSection: 'onSectionChange',
+  },
+
   created() {
     this.setActiveChapterByUrlQuery();
   },
@@ -59,6 +63,10 @@ export default {
         this.setActiveChapter(chapter);
         this.setActiveSection(chapter.sections[0]);
       }
+    },
+
+    onSectionChange() {
+      this.setTheme(this.activeSection.theme || 'dark');
     },
 
     onWheel(event) {
@@ -111,6 +119,7 @@ export default {
       this.isNavigating = false;
     },
 
+    ...mapActions('app', ['setTheme']),
     ...mapActions('home', ['setActiveChapter', 'setActiveSection']),
   },
 };

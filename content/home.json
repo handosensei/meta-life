@@ -6,10 +6,12 @@
       "sections": [
         {
           "id": "start-01",
+          "theme": "dark",
           "name": "Start: Section 01"
         },
         {
           "id": "start-02",
+          "theme": "dark",
           "name": "Start: Section 02"
         }
       ]
@@ -21,10 +23,12 @@
       "sections": [
         {
           "id": "metaverse-01",
+          "theme": "dark",
           "name": "Metaverse: Section 01"
         },
         {
           "id": "metaverse-02",
+          "theme": "dark",
           "name": "Metaverse: Section 02"
         }
       ]
@@ -36,10 +40,12 @@
       "sections": [
         {
           "id": "playToEarn-01",
+          "theme": "dark",
           "name": "Play to earn: Section 01"
         },
         {
           "id": "playToEarn-02",
+          "theme": "dark",
           "name": "Play to earn: Section 02"
         }
       ]
@@ -51,10 +57,12 @@
       "sections": [
         {
           "id": "yourLand-01",
+          "theme": "dark",
           "name": "Your land: Section 01"
         },
         {
           "id": "yourLand-02",
+          "theme": "dark",
           "name": "Your land: Section 02"
         }
       ]
@@ -66,10 +74,12 @@
       "sections": [
         {
           "id": "tokens-01",
+          "theme": "light",
           "name": "Tokens: Section 01"
         },
         {
           "id": "tokens-02",
+          "theme": "light",
           "name": "Tokens: Section 02"
         }
       ]
@@ -81,10 +91,12 @@
       "sections": [
         {
           "id": "assets-01",
+          "theme": "light",
           "name": "Assets: Section 01"
         },
         {
           "id": "assets-02",
+          "theme": "light",
           "name": "Assets: Section 02"
         }
       ]
@@ -96,10 +108,12 @@
       "sections": [
         {
           "id": "youAndNfts-01",
+          "theme": "light",
           "name": "You, and Nfts: Section 01"
         },
         {
           "id": "youAndNfts-02",
+          "theme": "light",
           "name": "You, and Nfts: Section 02"
         }
       ]
