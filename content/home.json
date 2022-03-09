@@ -1,0 +1,108 @@
+{
+  "chapters": [
+    {
+      "id": "start",
+      "name": "Start",
+      "sections": [
+        {
+          "id": "start-01",
+          "name": "Start: Section 01"
+        },
+        {
+          "id": "start-02",
+          "name": "Start: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "metaverse",
+      "name": "Metaverse",
+      "sections": [
+        {
+          "id": "metaverse-01",
+          "name": "Metaverse: Section 01"
+        },
+        {
+          "id": "metaverse-02",
+          "name": "Metaverse: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "playToEarn",
+      "name": "Play to earn",
+      "sections": [
+        {
+          "id": "playToEarn-01",
+          "name": "Play to earn: Section 01"
+        },
+        {
+          "id": "playToEarn-02",
+          "name": "Play to earn: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "yourLand",
+      "name": "Your land",
+      "sections": [
+        {
+          "id": "yourLand-01",
+          "name": "Your land: Section 01"
+        },
+        {
+          "id": "yourLand-02",
+          "name": "Your land: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "tokens",
+      "name": "Tokens",
+      "sections": [
+        {
+          "id": "tokens-01",
+          "name": "Tokens: Section 01"
+        },
+        {
+          "id": "tokens-02",
+          "name": "Tokens: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "assets",
+      "name": "Assets",
+      "sections": [
+        {
+          "id": "assets-01",
+          "name": "Assets: Section 01"
+        },
+        {
+          "id": "assets-02",
+          "name": "Assets: Section 02"
+        }
+      ]
+    },
+
+    {
+      "id": "youAndNfts",
+      "name": "You, and Nfts",
+      "sections": [
+        {
+          "id": "youAndNfts-01",
+          "name": "You, and Nfts: Section 01"
+        },
+        {
+          "id": "youAndNfts-02",
+          "name": "You, and Nfts: Section 02"
+        }
+      ]
+    }
+  ]
+}

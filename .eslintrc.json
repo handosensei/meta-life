@@ -23,6 +23,8 @@
           // Absolute imports and other imports such as Vue-style `@/foo`.
           // Anything not matched in another group.
           ["^"],
+          // Import content
+          ["content/"],
           // Import utils
           ["utils/"],
           // Import components
