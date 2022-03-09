@@ -14,7 +14,7 @@ export default {
     window.addEventListener('resize', throttle(this.onResize, 66), false);
     requestAnimationFrame(this.onRaf);
 
-    this.loadFonts();
+    // this.loadFonts();
     this.setWindowSize();
   },
 
