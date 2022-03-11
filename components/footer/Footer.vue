@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" :class="{ 'isDark': theme === 'light' }">
+  <footer class="footer">
     <div>
       Trailer Preview
     </div>

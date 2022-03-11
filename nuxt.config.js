@@ -29,7 +29,9 @@ export default {
   modules: ['@nuxt/image', '@nuxtjs/svg'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['gsap'],
+  },
 
   // Server Configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-server
   server: {

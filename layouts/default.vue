@@ -1,22 +1,29 @@
 <template>
   <div>
+    <Preloader v-if="!assetsPreloaded" />
     <Header />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 import throttle from '~/utils/functions/throttle';
 
 import Header from '~/components/header/Header.vue';
+import Preloader from '~/components/preloader/Preloader.vue';
 
 export default {
   name: 'DefaultLayout',
 
   components: {
     Header,
+    Preloader,
+  },
+
+  computed: {
+    ...mapState('app', ['assetsPreloaded']),
   },
 
   beforeMount() {

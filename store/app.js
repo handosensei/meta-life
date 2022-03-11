@@ -3,12 +3,17 @@ export const state = () => ({
     width: 0,
     height: 0,
   },
+  assetsPreloaded: false,
   theme: 'dark',
 });
 
 export const actions = {
   setWindowSize({ commit }, size) {
     commit('SET_WINDOW_SIZE', size);
+  },
+
+  setAssetsPreloaded({ commit }) {
+    commit('SET_ASSETS_PRELOADED');
   },
 
   setTheme({ commit }, theme) {
@@ -24,6 +29,10 @@ export const mutations = {
         height: window.innerHeight,
       };
     }
+  },
+
+  SET_ASSETS_PRELOADED(state) {
+    state.assetsPreloaded = true;
   },
 
   SET_THEME(state, payload) {
