@@ -1,5 +1,8 @@
 <template>
-  <Nuxt />
+  <div>
+    <Header />
+    <Nuxt />
+  </div>
 </template>
 
 <script>
@@ -7,8 +10,14 @@ import { mapActions } from 'vuex';
 
 import throttle from '~/utils/functions/throttle';
 
+import Header from '~/components/header/Header.vue';
+
 export default {
   name: 'DefaultLayout',
+
+  components: {
+    Header,
+  },
 
   beforeMount() {
     window.addEventListener('resize', throttle(this.onResize, 66), false);

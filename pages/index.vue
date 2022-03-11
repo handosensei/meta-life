@@ -1,7 +1,8 @@
 <template>
   <main>
     <Section v-bind="activeSection" />
-    <ChapterNav />
+    <Footer v-if="activeSection.footerVisible" />
+    <ChapterNav v-if="!activeSection.navHidden" />
   </main>
 </template>
 
@@ -13,6 +14,7 @@ import delay from '~/utils/functions/delay';
 import normalizeWheel from '~/utils/functions/normalizeWheel';
 
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
+import Footer from '~/components/footer/Footer.vue';
 import Section from '~/components/section/Section.vue';
 
 const WHEEL_THRESHOLD = 10;
@@ -21,8 +23,9 @@ export default {
   name: 'IndexPage',
 
   components: {
-    Section,
     ChapterNav,
+    Footer,
+    Section,
   },
 
   data() {

@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 8rem;
+  left: 8rem;
+  z-index: 10;
+  width: calc(100% - 16rem);
+  color: var(--color-white);
+
+  &.isDark {
+    color: var(--color-black);
+  }
+}

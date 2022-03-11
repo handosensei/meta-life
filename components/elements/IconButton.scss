@@ -1,0 +1,13 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 3px;
+
+  .isDark & {
+    border-color: var(--color-border-dark);
+  }
+}

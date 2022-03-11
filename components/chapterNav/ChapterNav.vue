@@ -7,6 +7,7 @@
         class="listItem"
       >
         <button
+          v-if="!chapter.hideInNav"
           class="button"
           :class="{ 'isActive': chapter === activeChapter }"
           type="button"

@@ -1,6 +1,20 @@
 {
   "chapters": [
     {
+      "id": "intro",
+      "name": "Intro",
+      "hideInNav": true,
+      "sections": [
+        {
+          "id": "intro-01",
+          "theme": "dark",
+          "name": "Intro",
+          "navHidden": true,
+          "footerVisible": true
+        }
+      ]
+    },
+    {
       "id": "start",
       "name": "Start",
       "sections": [
