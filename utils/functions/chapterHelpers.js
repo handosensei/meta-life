@@ -69,3 +69,13 @@ export const goToPreviousSection = (chapters, activeChapter, activeSection) => {
     section: newActiveSection,
   };
 };
+
+/**
+ *
+ * @param {array} chapters
+ * @param {object} activeChapter
+ * @returns {number}
+ */
+export const getChapterIndex = (chapters, activeChapter) => {
+  return getObjectIndexById(chapters, activeChapter);
+};

@@ -9,6 +9,8 @@
           "id": "intro-01",
           "theme": "dark",
           "name": "Intro",
+          "text": "With Metalife, live an experience beyond the reality",
+          "hasPlayTrailerButton": true,
           "navHidden": true,
           "footerVisible": true
         }
@@ -21,7 +23,9 @@
         {
           "id": "start-01",
           "theme": "dark",
-          "name": "Start: Section 01"
+          "name": "Start: Section 01",
+          "text": "You will be able to embody your own Meta Legends and live your own adventure.",
+          "hasPlayTrailerButton": true
         },
         {
           "id": "start-02",

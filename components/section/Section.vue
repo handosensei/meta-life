@@ -3,30 +3,62 @@
     class="section"
     :class="{ 'isLight': theme === 'light' }"
   >
+    <!-- TODO: Remove this -->
     <h1 class="title">{{ name }}</h1>
+
+    <SectionText
+      :has-play-trailer-button="hasPlayTrailerButton"
+      :number="chapterNumber"
+      :text="text"
+    />
   </section>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 
+import { getChapterIndex } from '~/utils/functions/chapterHelpers';
+
+import SectionText from '~/components/text/Text.vue';
+
 export default {
   name: 'SectionComponent',
 
+  components: {
+    SectionText,
+  },
+
   props: {
+    hasPlayTrailerButton: {
+      type: Boolean,
+      required: false,
+    },
+
     id: {
       type: String,
       required: true,
     },
 
+    // TODO: Remove this prop
     name: {
       type: String,
       required: true,
     },
+
+    text: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
 
   computed: {
+    chapterNumber() {
+      return getChapterIndex(this.chapters, this.activeChapter) + 1;
+    },
+
     ...mapState('app', ['theme']),
+    ...mapState('home', ['chapters', 'activeChapter']),
   },
 }
 </script>
