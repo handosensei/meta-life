@@ -58,13 +58,15 @@
       "sections": [
         {
           "id": "playToEarn-01",
-          "theme": "dark",
-          "name": "Play to earn: Section 01"
+          "theme": "light",
+          "name": "Play to earn: Section 01",
+          "title": "Play to"
         },
         {
           "id": "playToEarn-02",
-          "theme": "dark",
-          "name": "Play to earn: Section 02"
+          "theme": "light",
+          "name": "Play to earn: Section 02",
+          "title": "Earn"
         }
       ]
     },
@@ -75,12 +77,12 @@
       "sections": [
         {
           "id": "yourLand-01",
-          "theme": "dark",
+          "theme": "light",
           "name": "Your land: Section 01"
         },
         {
           "id": "yourLand-02",
-          "theme": "dark",
+          "theme": "light",
           "name": "Your land: Section 02"
         }
       ]
