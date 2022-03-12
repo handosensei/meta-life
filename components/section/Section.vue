@@ -13,9 +13,9 @@
       :text="text"
     />
 
-    <SectionTitle
-      v-if="title"
-      :title="title"
+    <SectionHeading
+      v-if="heading"
+      :text="heading"
     />
   </section>
 </template>
@@ -25,15 +25,15 @@ import { mapState } from 'vuex';
 
 import { getChapterIndex } from '~/utils/functions/chapterHelpers';
 
+import SectionHeading from '~/components/heading/Heading.vue';
 import SectionText from '~/components/text/Text.vue';
-import SectionTitle from '~/components/title/Title.vue';
 
 export default {
   name: 'SectionComponent',
 
   components: {
+    SectionHeading,
     SectionText,
-    SectionTitle,
   },
 
   props: {
@@ -59,7 +59,7 @@ export default {
       default: '',
     },
 
-    title: {
+    heading: {
       type: String,
       required: false,
       default: '',

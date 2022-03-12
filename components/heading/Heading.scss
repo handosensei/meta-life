@@ -1,0 +1,17 @@
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 400;
+  font-size: 220px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: var(--color-black);
+
+  .isLight & {
+    color: var(--color-white);
+  }
+}

@@ -60,13 +60,13 @@
           "id": "playToEarn-01",
           "theme": "light",
           "name": "Play to earn: Section 01",
-          "title": "Play to"
+          "heading": "Play to"
         },
         {
           "id": "playToEarn-02",
           "theme": "light",
           "name": "Play to earn: Section 02",
-          "title": "Earn"
+          "heading": "Earn"
         }
       ]
     },
