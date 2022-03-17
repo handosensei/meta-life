@@ -1,5 +1,17 @@
-body {
+*,
+:after,
+:before {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  user-select: none;
 }
 
 button {

@@ -1,0 +1,17 @@
+@mixin maxMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin minTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

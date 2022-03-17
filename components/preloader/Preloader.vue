@@ -1,12 +1,19 @@
 <template>
   <div class="preloader">
-    <h1 class="title">
-      Meta<br />Life
-    </h1>
+    <Icon type="preloaderLogo" class="preloaderLogo" />
 
-    <div ref="progress" class="progress">
-      0%
+    <p class="title">
+      Enter in the new world
+    </p>
+    
+    <Icon type="wordmark" class="wordmark" />
+
+    <div class="progress">
+      <div ref="progressCount" class="progressCount">0%</div>
+      <Icon type="preloaderProgress" class="preloaderProgress" />
     </div>
+
+    <Icon type="preloaderShape" class="preloaderShape" />
   </div>
 </template>
 
@@ -14,8 +21,14 @@
 import { gsap } from 'gsap';
 import { mapActions } from 'vuex';
 
+import Icon from '~/components/elements/Icon.vue';
+
 export default {
   name: 'PreloaderComponent',
+
+  components: {
+    Icon,
+  },
 
   created() {
     const { skipIntro } = this.$router.history.current.query;
@@ -44,7 +57,7 @@ export default {
 
   methods: {
     updateProgress(value) {
-      this.$refs.progress.innerHTML = `${value.toFixed()}%`;
+      this.$refs.progressCount.innerHTML = `${value.toFixed()}%`;
     },
 
     ...mapActions('app', ['setAssetsPreloaded']),

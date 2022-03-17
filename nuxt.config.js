@@ -19,7 +19,7 @@ export default {
 
   // Exposed styles: https://github.com/nuxt-community/style-resources-module#readme
   styleResources: {
-    scss: ['~/assets/scss/breakpoints.scss', '~/assets/scss/vars.scss', '~/assets/scss/type.scss'],
+    scss: ['~/assets/scss/mixins.scss', '~/assets/scss/vars.scss', '~/assets/scss/type.scss'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
