@@ -11,7 +11,7 @@
           "name": "Intro",
           "component": {
             "name": "SectionText",
-            "title": "With <span class=\"purple\">Metalife</span>, live an experience beyond <span class=\"green blur\">the reality</span>",
+            "title": "With <span class=\"purple\">Metalife</span>,<br>live an experience beyond <span class=\"green blur\">the reality</span>",
             "hasPlayTrailerButton": true,
             "position": "center top"
           },
@@ -47,7 +47,7 @@
           "name": "Your land: Create",
           "component": {
             "name": "SectionText",
-            "title": "How to create your <span class=\"purple\">home.</span>",
+            "title": "How to create<br>your <span class=\"purple\">home.</span>",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
             "position": "left bottom"
           }
