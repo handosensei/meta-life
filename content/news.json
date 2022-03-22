@@ -1,0 +1,125 @@
+{
+  "title": "The latest news from the <span class=\"purple\">MetaLife</span> and beyond.",
+  "items": [
+    {
+      "slug": "metalife-is-almost-there-be-ready-1",
+      "category": "The game",
+      "title": "MetaLife is almost there. Be ready!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-last-call-2",
+      "category": "Category 2",
+      "title": "MetaLife is almost there. Last call!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-be-ready-3",
+      "category": "Category 2",
+      "title": "MetaLife is almost there. Be ready!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-last-call-4",
+      "category": "Category 3",
+      "title": "MetaLife is almost there. Last call!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-be-ready-5",
+      "category": "Category 3",
+      "title": "MetaLife is almost there. Be ready!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-last-call-6",
+      "category": "The game",
+      "title": "MetaLife is almost there. Last call!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-be-ready-7",
+      "category": "The game",
+      "title": "MetaLife is almost there. Be ready!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    },
+    {
+      "slug": "metalife-is-almost-there-last-call-8",
+      "category": "The game",
+      "title": "MetaLife is almost there. Last call!",
+      "image": {
+        "thumb": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+          "alt": "placeholder image"
+        },
+        "highres": {
+          "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+          "alt": "placeholder image"
+        }
+      }
+    }
+  ]
+}
