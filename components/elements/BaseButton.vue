@@ -7,9 +7,8 @@
     :target="as === 'a' && target === '_blank' ? target : null"
     :type="as === 'button' ? type : null"
     @click="onClick"
-  >
-    {{ text }}
-  </component>
+    v-html="text"
+  />
 </template>
 
 <script lang="ts">
