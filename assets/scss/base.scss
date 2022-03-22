@@ -24,3 +24,26 @@ img {
   width: 100%;
   height: auto;
 }
+
+h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.purple {
+  color: var(--color-purple);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.grey {
+  color: var(--color-grey);
+}
+
+.blur {
+  filter: blur(1px);
+}

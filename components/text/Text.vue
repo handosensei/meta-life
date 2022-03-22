@@ -2,8 +2,8 @@
   <div class="text" :class="positioningClass">
     <!-- <div>{{ number }}</div> -->
     <h2 class="title" v-html="title" />
-    <p v-if="text" class="text">{{ text }}</p>
-    <BaseButton v-if="hasPlayTrailerButton" as="button" text="Play the trailer" />
+    <p v-if="text" class="paragraph">{{ text }}</p>
+    <BaseButton v-if="hasPlayTrailerButton" as="button" text="<span>Play</span> the trailer" />
   </div>
 </template>
 
