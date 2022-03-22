@@ -4,6 +4,10 @@
   left: 50%;
   margin-top: 3rem;
   transform: translate(-50%, 0);
+
+  @include maxMobile {
+    display: none;
+  }
 }
 
 .list {
