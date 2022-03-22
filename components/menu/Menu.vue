@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 import Icon from '~/components/elements/Icon.vue';
 
 export default {
@@ -52,6 +54,24 @@ export default {
         }
       ]
     };
+  },
+
+  mounted() {
+    window.addEventListener('keydown', this.onKeyDown);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.onKeyDown);
+  },
+
+  methods: {
+    onKeyDown({ key }) {
+      if (key === 'Escape') {
+        this.setMenuOpen(false);
+      }
+    },
+
+    ...mapActions('app', ['setMenuOpen']),
   },
 }
 </script>
