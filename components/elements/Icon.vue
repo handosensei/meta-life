@@ -6,6 +6,7 @@
 import Burger from '~/assets/svg/burger.svg?inline=true';
 import Logo from '~/assets/svg/logo.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
+import Play from '~/assets/svg/play.svg?inline=true';
 import PreloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
 import PreloaderProgress from '~/assets/svg/preloaderProgress.svg?inline=true';
 import PreloaderShape from '~/assets/svg/preloaderShape.svg?inline=true';
@@ -18,6 +19,7 @@ export default {
     Burger,
     Logo,
     MetaLegends,
+    Play,
     PreloaderLogo,
     PreloaderProgress,
     PreloaderShape,

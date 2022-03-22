@@ -1,8 +1,6 @@
 <template>
   <footer class="footer">
-    <div>
-      Trailer Preview
-    </div>
+    <TrailerPreview class="trailerPreview" />
 
     <div>
       socials
@@ -11,8 +9,14 @@
 </template>
 
 <script>
+import TrailerPreview from '~/components/trailerPreview/TrailerPreview.vue';
+
 export default {
   name: 'FooterComponent',
+
+  components: {
+    TrailerPreview,
+  },
 }
 </script>
 

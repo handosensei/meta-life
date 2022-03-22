@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-white);
+  transform: translate(-50%, -50%);
+}
