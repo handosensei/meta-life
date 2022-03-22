@@ -1,19 +1,24 @@
 <template>
   <nav class="menu">
-    <ul>
+    <ol class="menuList">
       <li
         v-for="{ href, text } in links"
         :key="href"
+        class="menuItem"
       >
-        <NuxtLink :to="href">{{ text }}</NuxtLink>
+        <NuxtLink :to="href" class="menuLink">
+          {{ text }}
+        </NuxtLink>
       </li>
-    </ul>
+    </ol>
 
-    <Icon type="MetaLegends" />
+    <Icon class="menuLogo" type="MetaLegends" />
 
-    <div>
-      Visit <a href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
+    <div class="menuSub">
+      visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
     </div>
+
+    <div class="menuBg" />
   </nav>
 </template>
 
