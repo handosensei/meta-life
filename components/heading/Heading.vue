@@ -1,5 +1,5 @@
 <template>
-  <h2 class="heading">{{ text }}</h2>
+  <h2 class="heading">{{ title }}</h2>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'HeadingComponent',
 
   props: {
-    text: {
+    title: {
       type: String,
       required: true,
     },

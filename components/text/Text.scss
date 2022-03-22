@@ -1,0 +1,19 @@
+.title {
+  font-size: 3rem;
+
+  &::v-deep .purple {
+    color: purple;
+  }
+
+  &::v-deep .green {
+    color: green;
+  }
+
+  &::v-deep .grey {
+    color: grey;
+  }
+
+  &::v-deep .blur {
+    filter: blur(1px);
+  }
+}

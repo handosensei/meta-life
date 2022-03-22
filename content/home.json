@@ -9,8 +9,11 @@
           "id": "intro-01",
           "theme": "dark",
           "name": "Intro",
-          "text": "With Metalife, live an experience beyond the reality",
-          "hasPlayTrailerButton": true,
+          "component": {
+            "name": "SectionText",
+            "title": "With <span class=\"purple\">Metalife</span>, live an experience beyond <span class=\"green blur\">the reality</span>",
+            "hasPlayTrailerButton": true
+          },
           "navHidden": true,
           "footerVisible": true
         }
@@ -23,50 +26,11 @@
         {
           "id": "start-01",
           "theme": "dark",
-          "name": "Start: Section 01",
-          "text": "You will be able to embody your own Meta Legends and live your own adventure.",
-          "hasPlayTrailerButton": true
-        },
-        {
-          "id": "start-02",
-          "theme": "dark",
-          "name": "Start: Section 02"
-        }
-      ]
-    },
-
-    {
-      "id": "metaverse",
-      "name": "Metaverse",
-      "sections": [
-        {
-          "id": "metaverse-01",
-          "theme": "dark",
-          "name": "Metaverse: Section 01"
-        },
-        {
-          "id": "metaverse-02",
-          "theme": "dark",
-          "name": "Metaverse: Section 02"
-        }
-      ]
-    },
-
-    {
-      "id": "playToEarn",
-      "name": "Play to earn",
-      "sections": [
-        {
-          "id": "playToEarn-01",
-          "theme": "light",
-          "name": "Play to earn: Section 01",
-          "heading": "Play to"
-        },
-        {
-          "id": "playToEarn-02",
-          "theme": "light",
-          "name": "Play to earn: Section 02",
-          "heading": "Earn"
+          "name": "Start",
+          "component": {
+            "name": "SectionText",
+            "title": "You will be able to embody your <span class=\"green\">own Meta Legends</span> and live your <span class=\"purple\">own adventure.</span>"
+          }
         }
       ]
     },
@@ -76,65 +40,161 @@
       "name": "Your land",
       "sections": [
         {
-          "id": "yourLand-01",
-          "theme": "light",
-          "name": "Your land: Section 01"
+          "id": "yourLand-create",
+          "theme": "dark",
+          "name": "Your land: Create",
+          "component": {
+            "name": "SectionText",
+            "title": "How to create your <span class=\"purple\">home.</span>",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque."
+          }
         },
         {
-          "id": "yourLand-02",
-          "theme": "light",
-          "name": "Your land: Section 02"
+          "id": "yourLand-buy",
+          "theme": "dark",
+          "name": "Your land: Buy",
+          "component": {
+            "name": "SectionText",
+            "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land."
+          }
+        },
+        {
+          "id": "yourLand-rent",
+          "theme": "dark",
+          "name": "Your land: Rent",
+          "component": {
+            "name": "SectionText",
+            "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land."
+          }
         }
       ]
     },
 
     {
-      "id": "tokens",
-      "name": "Tokens",
+      "id": "playToEarn",
+      "name": "Play to earn",
       "sections": [
         {
-          "id": "tokens-01",
+          "id": "playToEarn-buyAndUseXMetal",
           "theme": "light",
-          "name": "Tokens: Section 01"
+          "name": "Play to earn: Buy and use xMetal",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Play to"
+          }
         },
         {
-          "id": "tokens-02",
+          "id": "playToEarn-tokenomics",
           "theme": "light",
-          "name": "Tokens: Section 02"
+          "name": "Play to earn: Tokenomics",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Earn"
+          }
+        },
+        {
+          "id": "playToEarn-howToPlay",
+          "theme": "light",
+          "name": "Play to earn: How to play",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Earn"
+          }
         }
       ]
     },
 
     {
-      "id": "assets",
-      "name": "Assets",
+      "id": "showroom",
+      "name": "Showroom",
       "sections": [
         {
-          "id": "assets-01",
+          "id": "showroom-amor",
           "theme": "light",
-          "name": "Assets: Section 01"
+          "name": "Showroom: Amor"
         },
         {
-          "id": "assets-02",
+          "id": "showroom-pets",
           "theme": "light",
-          "name": "Assets: Section 02"
+          "name": "Showroom: Pets"
+        },
+        {
+          "id": "showroom-vehicles",
+          "theme": "light",
+          "name": "Showroom: Vehicles"
+        },
+        {
+          "id": "showroom-weapons",
+          "theme": "light",
+          "name": "Showroom: Weapons"
         }
       ]
     },
 
     {
-      "id": "youAndNfts",
-      "name": "You, and Nfts",
+      "id": "buildYourMetaverse",
+      "name": "Build your Metaverse",
       "sections": [
         {
-          "id": "youAndNfts-01",
+          "id": "buildYourMetaverse-createAssets",
           "theme": "light",
-          "name": "You, and Nfts: Section 01"
+          "name": "Build your Metaverse: Create assets"
         },
         {
-          "id": "youAndNfts-02",
+          "id": "buildYourMetaverse-integrateExternalAssets",
           "theme": "light",
-          "name": "You, and Nfts: Section 02"
+          "name": "Build your Metaverse: Integrate external assets"
+        }
+      ]
+    },
+
+    {
+      "id": "ecosystem",
+      "name": "Ecosystem",
+      "sections": [
+        {
+          "id": "ecosystem-metaConnect",
+          "theme": "light",
+          "name": "Ecosystem: Meta Connect"
+        },
+        {
+          "id": "ecosystem-legendsZone",
+          "theme": "light",
+          "name": "Ecosystem: Legends Zone"
+        },
+        {
+          "id": "ecosystem-metaLegends",
+          "theme": "light",
+          "name": "Ecosystem: Meta Legends"
+        }
+      ]
+    },
+
+    {
+      "id": "legendsBenefits",
+      "name": "Legends Benefits",
+      "sections": [
+        {
+          "id": "legendsBenefits-benefits",
+          "theme": "light",
+          "name": "Legends Benefits: Benefits"
+        },
+        {
+          "id": "legendsBenefits-buyALegend",
+          "theme": "light",
+          "name": "Legends Benefits: Buy a Legend"
+        }
+      ]
+    },
+
+    {
+      "id": "joinNow",
+      "name": "Join now",
+      "sections": [
+        {
+          "id": "joinNow-01",
+          "theme": "light",
+          "name": "Join now: 01"
         }
       ]
     }

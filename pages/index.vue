@@ -3,6 +3,7 @@
     <Section v-bind="activeSection" />
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
+    <Webgl />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import normalizeWheel from '~/utils/functions/normalizeWheel';
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
 import Section from '~/components/section/Section.vue';
+import Webgl from '~/components/webgl/Webgl.vue';
 
 const WHEEL_THRESHOLD = 10;
 
@@ -26,6 +28,7 @@ export default {
     ChapterNav,
     Footer,
     Section,
+    Webgl,
   },
 
   data() {

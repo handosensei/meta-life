@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div>{{ number }}</div>
-    <p>{{ text }}</p>
+    <!-- <div>{{ number }}</div> -->
+    <h2 class="title" v-html="title" />
+    <p v-if="text" class="text">{{ text }}</p>
     <BaseButton v-if="hasPlayTrailerButton" as="button" text="Play the trailer" />
   </div>
 </template>
@@ -22,12 +23,18 @@ export default {
       required: false,
     },
 
-    number: {
-      type: Number,
-      required: true,
-    },
+    // number: {
+    //   type: Number,
+    //   required: true,
+    // },
 
     text: {
+      type: String,
+      required: false,
+      default: '',
+    },
+
+    title: {
       type: String,
       required: true,
     },

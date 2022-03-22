@@ -6,17 +6,19 @@
     <!-- TODO: Remove this -->
     <h1 class="head">{{ name }}</h1>
 
-    <SectionText
+    <!-- <SectionText
       v-if="text"
       :has-play-trailer-button="hasPlayTrailerButton"
       :number="chapterNumber"
       :text="text"
-    />
+    /> -->
 
-    <SectionHeading
+    <component :is="component.name" v-bind="component" />
+
+    <!-- <SectionHeading
       v-if="heading"
       :text="heading"
-    />
+    /> -->
   </section>
 </template>
 
@@ -37,9 +39,14 @@ export default {
   },
 
   props: {
-    hasPlayTrailerButton: {
-      type: Boolean,
-      required: false,
+    // hasPlayTrailerButton: {
+    //   type: Boolean,
+    //   required: false,
+    // },
+
+    component: {
+      type: Object,
+      required: true,
     },
 
     id: {
@@ -53,17 +60,17 @@ export default {
       required: true,
     },
 
-    text: {
-      type: String,
-      required: false,
-      default: '',
-    },
+    // text: {
+    //   type: String,
+    //   required: false,
+    //   default: '',
+    // },
 
-    heading: {
-      type: String,
-      required: false,
-      default: '',
-    },
+    // heading: {
+    //   type: String,
+    //   required: false,
+    //   default: '',
+    // },
   },
 
   computed: {
