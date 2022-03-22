@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text" :class="positioningClass">
     <!-- <div>{{ number }}</div> -->
     <h2 class="title" v-html="title" />
     <p v-if="text" class="text">{{ text }}</p>
@@ -28,6 +28,12 @@ export default {
     //   required: true,
     // },
 
+    position: {
+      type: String,
+      required: false,
+      default: 'center top',
+    },
+
     text: {
       type: String,
       required: false,
@@ -38,6 +44,19 @@ export default {
       type: String,
       required: true,
     },
+  },
+
+  computed: {
+    positioningClass() {
+      const CLASS = {
+        'center top': 'positionCenterTop',
+        'right top': 'positionRightTop',
+        'left bottom': 'positionLeftBottom',
+        'right center': 'positionRightCenter',
+      }
+
+      return CLASS[this.position];
+    }
   }
 }
 </script>

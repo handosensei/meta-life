@@ -12,7 +12,8 @@
           "component": {
             "name": "SectionText",
             "title": "With <span class=\"purple\">Metalife</span>, live an experience beyond <span class=\"green blur\">the reality</span>",
-            "hasPlayTrailerButton": true
+            "hasPlayTrailerButton": true,
+            "position": "center top"
           },
           "navHidden": true,
           "footerVisible": true
@@ -29,7 +30,8 @@
           "name": "Start",
           "component": {
             "name": "SectionText",
-            "title": "You will be able to embody your <span class=\"green\">own Meta Legends</span> and live your <span class=\"purple\">own adventure.</span>"
+            "title": "You will be able to embody your <span class=\"green\">own Meta Legends</span> and live your <span class=\"purple\">own adventure.</span>",
+            "position": "right top"
           }
         }
       ]
@@ -46,7 +48,8 @@
           "component": {
             "name": "SectionText",
             "title": "How to create your <span class=\"purple\">home.</span>",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+            "position": "left bottom"
           }
         },
         {
@@ -55,7 +58,8 @@
           "name": "Your land: Buy",
           "component": {
             "name": "SectionText",
-            "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land."
+            "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land.",
+            "position": "right center"
           }
         },
         {
