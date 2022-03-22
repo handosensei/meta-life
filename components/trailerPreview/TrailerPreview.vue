@@ -1,17 +1,14 @@
 <template>
-  <div class="container">
-    <div>
-      Play the trailer
+  <button type="button" aria-label="Play trailer">
+    <div class="trailerTitle">
+      <span>Play</span> the trailer
     </div>
 
-    <button type="button" aria-label="Play trailer">
-      <img src="https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="placeholder image">
-
-      <div class="playButton">
-        <Icon type="Play" />
-      </div>
-    </button>
-  </div>
+    <div class="trailerButton">
+      <img class="trailerImage" src="/img/trailerImage.png" alt="placeholder image">
+      <Icon class="playIcon" type="Play" />
+    </div>
+  </button>
 </template>
 
 <script>
