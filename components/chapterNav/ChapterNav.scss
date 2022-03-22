@@ -1,35 +1,59 @@
 .chapterNav {
   position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  margin-top: 3rem;
-  transform: translate(-50%, 0);
+  left: 4rem;
+  right: 4rem;
+  bottom: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(243, 243, 243, 0.1);
+  backdrop-filter: blur(20px);
 
   @include maxMobile {
     display: none;
   }
 }
 
-.list {
-  display: inline-flex;
+.navList {
+  display: flex;
 }
 
-.listItem {
-  flex-shrink: 0;
+.navItem {
+  flex: 1;
 
-  &:not(:first-child) {
-    margin-left: -1px;
+  &:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  // TODO: @ruud first button is empty?
+  &:first-child {
+    display: none;
+  }
+
+  &.isActive {
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
-.button {
+.navButton {
   display: flex;
-  padding: 1rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: rgba(243, 243, 243, 0.9);
+  margin-left: auto;
+}
 
-  &.isActive {
-    color: #000;
-    background-color: #f3f3f3;
+.buttonLabel {
+  display: flex;
+  margin-left: auto;
+  font-size: clamp(10px, 1rem, 1rem);
+  line-height: 4.3rem;
+  white-space: nowrap;
+  padding-left: 3rem;
+
+  &::after {
+    content: '›';
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 2rem 0 1rem;
+
+    .isActive & {
+      color: var(--color-white);
+    }
   }
 }
