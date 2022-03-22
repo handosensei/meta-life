@@ -1,12 +1,12 @@
 <template>
   <header class="header" :class="{ 'isDark': theme === 'light' }">
-    <IconButton icon="Burger" :on-click="() => {}" />
+    <IconButton icon="Burger" :on-click="() => setMenuOpen(!menuOpen)" />
     <IconButton icon="Logo" :on-click="() => {}" />
   </header>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 import IconButton from '~/components/elements/IconButton.vue';
 
@@ -18,7 +18,11 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['theme']),
+    ...mapState('app', ['theme', 'menuOpen']),
+  },
+
+  methods: {
+    ...mapActions('app', ['setMenuOpen']),
   }
 }
 </script>

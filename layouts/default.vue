@@ -2,6 +2,7 @@
   <div>
     <Preloader v-if="!assetsPreloaded" />
     <Header />
+    <Menu v-if="menuOpen" />
     <Nuxt />
   </div>
 </template>
@@ -12,6 +13,7 @@ import { mapActions, mapState } from 'vuex';
 import throttle from '~/utils/functions/throttle';
 
 import Header from '~/components/header/Header.vue';
+import Menu from '~/components/menu/Menu.vue';
 import Preloader from '~/components/preloader/Preloader.vue';
 
 export default {
@@ -19,11 +21,16 @@ export default {
 
   components: {
     Header,
+    Menu,
     Preloader,
   },
 
   computed: {
-    ...mapState('app', ['assetsPreloaded']),
+    ...mapState('app', ['assetsPreloaded', 'menuOpen']),
+  },
+
+  watch: {
+    $route: 'onRouteChange',
   },
 
   beforeMount() {
@@ -61,7 +68,13 @@ export default {
       requestAnimationFrame(this.onRaf);
     },
 
-    ...mapActions('app', ['setWindowSize']),
+    onRouteChange() {
+      if (this.menuOpen) {
+        this.setMenuOpen(false);
+      }
+    },
+
+    ...mapActions('app', ['setWindowSize', 'setMenuOpen']),
   },
 };
 </script>

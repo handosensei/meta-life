@@ -4,6 +4,7 @@ export const state = () => ({
     height: 0,
   },
   assetsPreloaded: false,
+  menuOpen: false,
   theme: 'dark',
 });
 
@@ -14,6 +15,10 @@ export const actions = {
 
   setAssetsPreloaded({ commit }) {
     commit('SET_ASSETS_PRELOADED');
+  },
+
+  setMenuOpen({ commit }, bool) {
+    commit('SET_MENU_OPEN', bool);
   },
 
   setTheme({ commit }, theme) {
@@ -33,6 +38,10 @@ export const mutations = {
 
   SET_ASSETS_PRELOADED(state) {
     state.assetsPreloaded = true;
+  },
+
+  SET_MENU_OPEN(state, payload) {
+    state.menuOpen = payload;
   },
 
   SET_THEME(state, payload) {

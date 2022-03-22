@@ -5,9 +5,10 @@
 <script>
 import Burger from '~/assets/svg/burger.svg?inline=true';
 import Logo from '~/assets/svg/logo.svg?inline=true';
-import preloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
-import preloaderProgress from '~/assets/svg/preloaderProgress.svg?inline=true';
-import preloaderShape from '~/assets/svg/preloaderShape.svg?inline=true';
+import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
+import PreloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
+import PreloaderProgress from '~/assets/svg/preloaderProgress.svg?inline=true';
+import PreloaderShape from '~/assets/svg/preloaderShape.svg?inline=true';
 import Wordmark from '~/assets/svg/wordmark.svg?inline=true';
 
 export default {
@@ -16,9 +17,10 @@ export default {
   components: {
     Burger,
     Logo,
-    preloaderLogo,
-    preloaderProgress,
-    preloaderShape,
+    MetaLegends,
+    PreloaderLogo,
+    PreloaderProgress,
+    PreloaderShape,
     Wordmark,
   },
 
