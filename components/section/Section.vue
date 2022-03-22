@@ -27,6 +27,7 @@ import { mapState } from 'vuex';
 
 import { getChapterIndex } from '~/utils/functions/chapterHelpers';
 
+import SectionGallery from '~/components/gallery/Gallery.vue';
 import SectionHeading from '~/components/heading/Heading.vue';
 import SectionText from '~/components/text/Text.vue';
 
@@ -34,6 +35,7 @@ export default {
   name: 'SectionComponent',
 
   components: {
+    SectionGallery,
     SectionHeading,
     SectionText,
   },

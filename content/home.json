@@ -79,12 +79,21 @@
       "name": "Play to earn",
       "sections": [
         {
-          "id": "playToEarn-buyAndUseXMetal",
+          "id": "playToEarn-playTo",
           "theme": "light",
-          "name": "Play to earn: Buy and use xMetal",
+          "name": "Play to earn: Play to",
           "component": {
             "name": "SectionHeading",
             "title": "Play to"
+          }
+        },
+        {
+          "id": "playToEarn-earn",
+          "theme": "light",
+          "name": "Play to earn: Earn",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Earn"
           }
         },
         {
@@ -93,7 +102,7 @@
           "name": "Play to earn: Tokenomics",
           "component": {
             "name": "SectionHeading",
-            "title": "Earn"
+            "title": "How to use Metalife Token."
           }
         },
         {
@@ -102,7 +111,7 @@
           "name": "Play to earn: How to play",
           "component": {
             "name": "SectionHeading",
-            "title": "Earn"
+            "title": "How to buy, sell, and rent with your Token."
           }
         }
       ]
@@ -113,24 +122,80 @@
       "name": "Showroom",
       "sections": [
         {
-          "id": "showroom-amor",
+          "id": "showroom-gallery",
           "theme": "light",
-          "name": "Showroom: Amor"
-        },
-        {
-          "id": "showroom-pets",
-          "theme": "light",
-          "name": "Showroom: Pets"
-        },
-        {
-          "id": "showroom-vehicles",
-          "theme": "light",
-          "name": "Showroom: Vehicles"
-        },
-        {
-          "id": "showroom-weapons",
-          "theme": "light",
-          "name": "Showroom: Weapons"
+          "name": "Showroom: Gallery",
+          "component": {
+            "name": "SectionGallery",
+            "title": "Showroom",
+            "backLabel": "Back to gallery",
+            "items": [
+              {
+                "id": "showroom-amor",
+                "name": "Amor",
+                "title": "Jintar",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                "image": {
+                  "thumb": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+                    "alt": "placeholder image"
+                  },
+                  "highres": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+                    "alt": "placeholder image"
+                  }
+                }
+              },
+              {
+                "id": "showroom-pets",
+                "name": "Pets",
+                "title": "Jintar",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                "image": {
+                  "thumb": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+                    "alt": "placeholder image"
+                  },
+                  "highres": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+                    "alt": "placeholder image"
+                  }
+                }
+              },
+              {
+                "id": "showroom-vehicles",
+                "name": "Vehicles",
+                "title": "Jintar",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                "image": {
+                  "thumb": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+                    "alt": "placeholder image"
+                  },
+                  "highres": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+                    "alt": "placeholder image"
+                  }
+                }
+              },
+              {
+                "id": "showroom-weapons",
+                "name": "Weapons",
+                "title": "Jintar",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                "image": {
+                  "thumb": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+                    "alt": "placeholder image"
+                  },
+                  "highres": {
+                    "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+                    "alt": "placeholder image"
+                  }
+                }
+              }     
+            ]
+          }
         }
       ]
     },
@@ -142,12 +207,21 @@
         {
           "id": "buildYourMetaverse-createAssets",
           "theme": "light",
-          "name": "Build your Metaverse: Create assets"
+          "name": "Build your Metaverse: Create assets",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Build your Metaverse"
+          }
         },
         {
           "id": "buildYourMetaverse-integrateExternalAssets",
           "theme": "light",
-          "name": "Build your Metaverse: Integrate external assets"
+          "name": "Build your Metaverse: Integrate external assets",
+          "component": {
+            "name": "SectionText",
+            "title": "Bring your <span class=\"purple\">own content</span> to the metaverse.",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque."
+          }
         }
       ]
     },
@@ -159,17 +233,32 @@
         {
           "id": "ecosystem-metaConnect",
           "theme": "light",
-          "name": "Ecosystem: Meta Connect"
+          "name": "Ecosystem: Meta Connect",
+          "component": {
+            "name": "SectionText",
+            "title": "",
+            "text": ""
+          }
         },
         {
           "id": "ecosystem-legendsZone",
           "theme": "light",
-          "name": "Ecosystem: Legends Zone"
+          "name": "Ecosystem: Legends Zone",
+          "component": {
+            "name": "SectionText",
+            "title": "",
+            "text": ""
+          }
         },
         {
           "id": "ecosystem-metaLegends",
           "theme": "light",
-          "name": "Ecosystem: Meta Legends"
+          "name": "Ecosystem: Meta Legends",
+          "component": {
+            "name": "SectionText",
+            "title": "",
+            "text": ""
+          }
         }
       ]
     },
@@ -181,12 +270,22 @@
         {
           "id": "legendsBenefits-benefits",
           "theme": "light",
-          "name": "Legends Benefits: Benefits"
+          "name": "Legends Benefits: Benefits",
+          "component": {
+            "name": "SectionText",
+            "title": "",
+            "text": ""
+          }
         },
         {
           "id": "legendsBenefits-buyALegend",
           "theme": "light",
-          "name": "Legends Benefits: Buy a Legend"
+          "name": "Legends Benefits: Buy a Legend",
+          "component": {
+            "name": "SectionText",
+            "title": "",
+            "text": ""
+          }
         }
       ]
     },
@@ -198,7 +297,11 @@
         {
           "id": "joinNow-01",
           "theme": "light",
-          "name": "Join now: 01"
+          "name": "Join now: 01",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Join now"
+          }
         }
       ]
     }
