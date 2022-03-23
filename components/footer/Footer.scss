@@ -1,10 +1,15 @@
 .footer {
   display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 8rem;
-  left: 8rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
   z-index: 8;
-  width: calc(100% - 16rem);
+  width: calc(100% - 8rem);
   color: var(--color-white);
+
+  @include minTablet {
+    bottom: 9rem;
+    left: 8rem;
+    width: calc(100% - 16rem);
+  }
 }
