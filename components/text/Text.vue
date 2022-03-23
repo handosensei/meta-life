@@ -52,6 +52,7 @@ export default {
         'center top': 'positionCenterTop',
         'right top': 'positionRightTop',
         'left bottom': 'positionLeftBottom',
+        'left center': 'positionLeftCenter',
         'right center': 'positionRightCenter',
       }
 

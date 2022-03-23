@@ -238,7 +238,18 @@
           "component": {
             "name": "SectionText",
             "title": "Bring your <span class=\"purple\">own content</span> to the metaverse.",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+            "position": "right center"
+          }
+        },
+        {
+          "id": "buildYourMetaverse-learnHowToBuild",
+          "theme": "light",
+          "name": "Build your Metaverse: Learn how to build",
+          "component": {
+            "name": "SectionText",
+            "title": "<span class=\"purple\">Learn</span> how to build your weapons, vehicules, place.",
+            "position": "left center"
           }
         }
       ]
@@ -318,7 +329,12 @@
           "name": "Join now: 01",
           "component": {
             "name": "SectionHeading",
-            "title": "Join now"
+            "title": "Join now",
+            "link": {
+              "href": "#",
+              "text": "Discover the marketplace"
+            },
+            "size": "large"
           }
         }
       ]
