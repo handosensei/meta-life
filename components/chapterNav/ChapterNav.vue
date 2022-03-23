@@ -2,13 +2,12 @@
   <nav class="chapterNav">
     <ul class="navList">
       <li
-        v-for="chapter in chapters"
+        v-for="chapter in visibleChapters"
         :key="chapter.id"
         class="navItem"
         :class="{ 'isActive': chapter === activeChapter }"
       >
         <button
-          v-if="!chapter.hideInNav"
           class="navButton"
           type="button"
           @click="onClick(chapter)"
@@ -29,6 +28,10 @@ export default {
   name: 'ChapterNavComponent',
 
   computed: {
+    visibleChapters() {
+      return this.chapters.filter(({ hideInNav }) => !hideInNav);
+    },
+
     ...mapState('home', ['chapters', 'activeChapter']),
   },
 

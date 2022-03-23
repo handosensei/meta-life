@@ -24,11 +24,6 @@
     border-right: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  // TODO: @ruud first button is empty?
-  &:first-child {
-    display: none;
-  }
-
   &.isActive {
     color: var(--color-white);
     background-color: rgba(255, 255, 255, 0.1);
