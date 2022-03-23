@@ -11,7 +11,7 @@
     &::after {
       margin-left: 5rem;
       content: '›';
-      color: rgba(41, 43, 87, 0.4);
+      color: var(--color-purple-04);
     }
   }
 
@@ -22,5 +22,5 @@
 }
 
 ::v-deep span {
-  color: rgba(41, 43, 87, 0.4);
+  color: var(--color-purple-04);
 }

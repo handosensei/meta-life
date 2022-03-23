@@ -20,7 +20,7 @@
   text-align: left;
 
   span {
-    color: rgba(41, 43, 87, 0.4);
+    color: var(--color-purple-04);
   }
 
   &::after {
@@ -29,7 +29,7 @@
     right: 1.5rem;
     content: '›';
     transform: translateY(calc(-50% - 0.2rem));
-    color: rgba(41, 43, 87, 0.4);
+    color: var(--color-purple-04);
   }
 }
 
