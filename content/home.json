@@ -84,7 +84,8 @@
           "name": "Play to earn: Play to",
           "component": {
             "name": "SectionHeading",
-            "title": "Play to"
+            "title": "Play to",
+            "size": "large"
           }
         },
         {
@@ -93,7 +94,8 @@
           "name": "Play to earn: Earn",
           "component": {
             "name": "SectionHeading",
-            "title": "Earn"
+            "title": "Earn",
+            "size": "large"
           }
         },
         {
@@ -102,7 +104,8 @@
           "name": "Play to earn: Tokenomics",
           "component": {
             "name": "SectionHeading",
-            "title": "How to use Metalife Token."
+            "title": "How to use Metalife Token.",
+            "size": "small"
           }
         },
         {
@@ -111,7 +114,22 @@
           "name": "Play to earn: How to play",
           "component": {
             "name": "SectionHeading",
-            "title": "How to buy, sell, and rent with your Token."
+            "title": "How to buy, sell, and rent with your Token.",
+            "size": "small"
+          }
+        },
+        {
+          "id": "playToEarn-buy",
+          "theme": "light",
+          "name": "Play to earn: Buy",
+          "component": {
+            "name": "SectionHeading",
+            "title": "Buy",
+            "size": "large",
+            "link": {
+              "href": "#",
+              "text": "Discover more"
+            }
           }
         }
       ]
