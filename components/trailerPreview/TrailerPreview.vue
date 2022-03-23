@@ -1,5 +1,5 @@
 <template>
-  <button type="button" aria-label="Play trailer">
+  <button class="trailerPreview" type="button" aria-label="Play trailer">
     <div class="trailerTitle">
       <span>Play</span> the trailer
     </div>
