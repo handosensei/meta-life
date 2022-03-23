@@ -1,5 +1,8 @@
 <template>
-  <nav class="chapterNav">
+  <nav
+    class="chapterNav"
+    :class="{ 'isLight': theme === 'light' }"
+  >
     <ul class="navList">
       <li
         v-for="chapter in visibleChapters"
@@ -32,6 +35,7 @@ export default {
       return this.chapters.filter(({ hideInNav }) => !hideInNav);
     },
 
+    ...mapState('app', ['theme']),
     ...mapState('home', ['chapters', 'activeChapter']),
   },
 

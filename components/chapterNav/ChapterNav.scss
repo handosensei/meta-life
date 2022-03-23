@@ -3,9 +3,15 @@
   left: 4rem;
   right: 4rem;
   bottom: 4rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-white-04);
   background: rgba(243, 243, 243, 0.1);
+  border: 1px solid var(--color-white-005);
   backdrop-filter: blur(20px);
+
+  &.isLight {
+    color: var(--color-purple-04);
+    border: 1px solid var(--color-black-005);
+  }
 
   @include maxMobile {
     display: none;
@@ -21,12 +27,21 @@
   display: flex;
 
   &:not(:last-child) {
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid var(--color-white-005);
+
+    .isLight & {
+      border-right: 1px solid var(--color-black-005);
+    }
   }
 
   &.isActive {
     color: var(--color-white);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--color-white-01);
+
+    .isLight & {
+      color: var(--color-black);
+      background-color: var(--color-white);
+    }
   }
 }
 
@@ -45,11 +60,19 @@
 
   &::after {
     content: '›';
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--color-white-04);
     margin: 0 2rem 0 1rem;
+
+    .isLight & {
+      color: var(--color-purple-04);
+    }
 
     .isActive & {
       color: var(--color-white);
+
+      .isLight & {
+        color: var(--color-black);
+      }
     }
   }
 }
