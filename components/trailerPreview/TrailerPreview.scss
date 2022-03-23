@@ -1,16 +1,55 @@
-.container {
+.trailerPreview {
+  position: relative;
+
+  @include maxMobile {
+    display: none;
+  }
+}
+
+.trailerTitle {
+  position: relative;
+  width: 21.4rem;
+  height: 4rem;
+  color: var(--color-black);
+  line-height: 3.5rem;
+  padding: 0 2rem;
+  font-size: clamp(10px, 1rem, 1rem);
+  background-color: var(--color-white);
+  border-top-left-radius: 0.4rem 0.4rem;
+  border-top-right-radius: 0.4rem 0.4rem;
+  text-align: left;
+
+  span {
+    color: rgba(41, 43, 87, 0.4);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    content: '›';
+    transform: translateY(calc(-50% - 0.2rem));
+    color: rgba(41, 43, 87, 0.4);
+  }
+}
+
+.trailerButton {
   position: relative;
 }
 
-.playButton {
+.trailerImage {
+  width: 24rem;
+  height: 15.7rem;
+  margin-top: -0.5rem;
+  border-radius: 0.4rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 30%, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%, 0% 70%, 0% 30%);
+}
+
+.playIcon {
   position: absolute;
   top: 50%;
   left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  background-color: var(--color-white);
+  width: 6.4rem;
+  height: 6.4rem;
   transform: translate(-50%, -50%);
 }
