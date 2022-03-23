@@ -1,17 +1,35 @@
-.heading {
+.sectionHeading {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 5rem;
   font-weight: 400;
-  font-size: 220px;
-  line-height: 110%;
+  line-height: 90%;
   text-align: center;
   letter-spacing: -0.01em;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
   color: var(--color-black);
+
+  @include minTablet {
+    font-size: 11rem;
+    transform: translateY(-5rem);
+  }
 
   .isLight & {
     color: var(--color-white);
+  }
+
+  &.isLarge {
+    font-size: 8rem;
+    line-height: 110%;
+
+    @include minTablet {
+      font-size: 22rem;
+      transform: translateY(-2.5rem);
+    }
   }
 }

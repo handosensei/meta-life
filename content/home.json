@@ -104,7 +104,7 @@
           "name": "Play to earn: Tokenomics",
           "component": {
             "name": "SectionHeading",
-            "title": "How to use Metalife Token.",
+            "title": "How to use<br>Metalife Token.",
             "size": "small"
           }
         },

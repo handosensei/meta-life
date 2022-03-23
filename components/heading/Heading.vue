@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <div class="sectionHeading">
     <h2
       class="heading"
       :class="{ 'isLarge': size === 'large' }"
-    >
-      {{ title }}
-    </h2>
+      v-html="title"
+    />
 
-    <NuxtLink v-if="link" :to="link.href">{{ link.text }}</NuxtLink>
+    <NuxtLink v-if="link" :to="link.href">
+      {{ link.text }}
+    </NuxtLink>
   </div>
 </template>
 
