@@ -1,19 +1,27 @@
 <template>
-  <div>
+  <div class="sectionHeading">
     <h2
       class="heading"
       :class="{ 'isLarge': size === 'large' }"
-    >
-      {{ title }}
-    </h2>
+      v-html="title"
+    />
 
-    <NuxtLink v-if="link" :to="link.href">{{ link.text }}</NuxtLink>
+    <NuxtLink v-if="link" :to="link.href" class="link">
+      <Icon type="discover" class="icon" />
+      {{ link.text }}
+    </NuxtLink>
   </div>
 </template>
 
 <script>
+import Icon from '~/components/elements/Icon.vue';
+
 export default {
   name: 'HeadingComponent',
+
+  components: {
+    Icon,
+  },
 
   props: {
     size: {
