@@ -5,6 +5,7 @@
 <script>
 import Burger from '~/assets/svg/burger.svg?inline=true';
 import Discord from '~/assets/svg/discord.svg?inline=true';
+import Discover from '~/assets/svg/discover.svg?inline=true';
 import Equalizer from '~/assets/svg/equalizer.svg?inline=true';
 import Logo from '~/assets/svg/logo.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
@@ -21,6 +22,7 @@ export default {
   components: {
     Burger,
     Discord,
+    Discover,
     Equalizer,
     Logo,
     MetaLegends,
