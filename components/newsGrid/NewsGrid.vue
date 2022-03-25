@@ -1,14 +1,14 @@
 <template>
-  <ul>
+  <ul class="newsItems">
     <li
       v-for="item in items"
       :key="item.slug"
-      class="item"
+      class="newsItem"
     >
-      <NuxtLink :to="`/news/${item.slug}`">
-        <img :src="item.image.thumb.src" :alt="item.image.thumb.alt">
-        <div>{{ item.category }}</div>
-        <div>{{ item.title }}</div>
+      <NuxtLink class="newsLink" :to="`/news/${item.slug}`">
+        <img :src="item.image.thumb.src" class="newsThumb" :alt="item.image.thumb.alt">
+        <div class="newsCategory">{{ item.category }}</div>
+        <div class="newsTitle">{{ item.title }}</div>
       </NuxtLink>
     </li>
   </ul>
