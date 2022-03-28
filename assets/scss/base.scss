@@ -47,3 +47,15 @@ h1 {
 .blur {
   filter: blur(1px);
 }
+
+a,
+button {
+  &:focus {
+    outline: none;
+  }
+
+  &.focus-visible:focus {
+    outline-offset: 3px;
+    outline: 1px dashed var(--color-green);
+  }
+}

@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import 'focus-visible';
 import { mapActions, mapState } from 'vuex';
 
 import throttle from '~/utils/functions/throttle';
