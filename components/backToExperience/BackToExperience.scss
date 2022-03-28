@@ -6,10 +6,23 @@
   height: 100vh;
   background-color: var(--color-black);
   color: var(--color-white);
+
+  &.isLight {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
 }
 
 .link {
-  max-width: 17ch;
-  font-size: 5rem;
+  max-width: 15ch;
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
   text-align: center;
+
+  @include minTablet {
+    font-size: 5rem;
+  }
 }

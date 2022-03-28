@@ -1,0 +1,21 @@
+.partnersHero {
+  margin-bottom: 4.3rem;
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  right: 18.7rem;
+  width: clamp(453px, 45.3rem, 45.3rem);
+  font-size: 7rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+  transform: translate(0, -50%);
+
+  &::v-deep span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}

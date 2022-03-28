@@ -1,0 +1,120 @@
+{
+  "title": "Meet our <span class=\"purple\">Partners</span> on <span class=\"green\">Metalife</span>.",
+  "featured": {
+    "items": [
+      {
+        "title": "Adidas",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/adidas.svg",
+          "width": 96,
+          "height": 65
+        }
+      },
+      {
+        "title": "Nike",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/nike.svg",
+          "width": 96,
+          "height": 34
+        }
+      },
+      {
+        "title": "RTFKT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/rtfkt.svg",
+          "width": 159,
+          "height": 26
+        }
+      }
+    ]
+  },
+  "investors": {
+    "title": "Investors",
+    "items": [
+      {
+        "title": "Adidas",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/adidas.svg",
+          "width": 96,
+          "height": 65
+        }
+      },
+      {
+        "title": "Nike",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/nike.svg",
+          "width": 96,
+          "height": 34
+        }
+      },
+      {
+        "title": "RTFKT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/rtfkt.svg",
+          "width": 159,
+          "height": 26
+        }
+      },
+      {
+        "title": "Adidas",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/adidas.svg",
+          "width": 96,
+          "height": 65
+        }
+      },
+      {
+        "title": "Nike",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/nike.svg",
+          "width": 96,
+          "height": 34
+        }
+      },
+      {
+        "title": "RTFKT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/rtfkt.svg",
+          "width": 159,
+          "height": 26
+        }
+      },
+      {
+        "title": "Adidas",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/adidas.svg",
+          "width": 96,
+          "height": 65
+        }
+      },
+      {
+        "title": "Nike",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/nike.svg",
+          "width": 96,
+          "height": 34
+        }
+      },
+      {
+        "title": "RTFKT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "image": {
+          "src": "/img/partners/rtfkt.svg",
+          "width": 159,
+          "height": 26
+        }
+      }
+    ]
+  }
+}
