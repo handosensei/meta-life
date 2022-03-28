@@ -1,29 +1,31 @@
 <template>
-  <nav class="menu">
-    <ol class="menuList">
-      <li
-        v-for="{ href, text } in links"
-        :key="href"
-        class="menuItem"
-      >
-        <NuxtLink :to="href" class="menuLink">
-          {{ text }}
-        </NuxtLink>
-      </li>
-    </ol>
+  <FocusLock :disabled="!menuOpen">
+    <nav class="menu">
+      <ol class="menuList">
+        <li
+          v-for="{ href, text } in links"
+          :key="href"
+          class="menuItem"
+        >
+          <NuxtLink :to="href" class="menuLink">
+            {{ text }}
+          </NuxtLink>
+        </li>
+      </ol>
 
-    <Icon class="menuLogo" type="MetaLegends" />
+      <Icon class="menuLogo" type="MetaLegends" />
 
-    <div class="menuSub">
-      visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
-    </div>
+      <div class="menuSub">
+        visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
+      </div>
 
-    <div class="menuBg" />
-  </nav>
+      <div class="menuBg" />
+    </nav>
+  </FocusLock>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 import Icon from '~/components/elements/Icon.vue';
 
@@ -59,6 +61,10 @@ export default {
         }
       ]
     };
+  },
+
+  computed: {
+    ...mapState('app', ['menuOpen']),
   },
 
   mounted() {
