@@ -26,12 +26,6 @@ export default {
     IconButton,
   },
 
-  data() {
-    return {
-      prevTheme: '',
-    };
-  },
-
   computed: {
     ...mapState('app', ['theme', 'previousTheme', 'menuOpen']),
   },
