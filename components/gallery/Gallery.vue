@@ -2,18 +2,20 @@
   <div class="gallery">
     <h2 class="title">{{ title }}</h2>
 
-    <button
-      v-for="item in items"
-      :key="item.id"
-      class="item"
-      type="button"
-      @click="toggleOverlay(item)"
-    >
-      <img :src="item.image.thumb.src" :alt="item.image.thumb.alt">
-      <div>
-        {{ item.name }}
-      </div>
-    </button>
+    <div class="items">
+      <button
+        v-for="item in items"
+        :key="item.id"
+        class="item"
+        type="button"
+        @click="toggleOverlay(item)"
+      >
+        <img class="image" :src="item.image.thumb.src" :alt="item.image.thumb.alt">
+        <h3 class="name">
+          {{ item.name }}
+        </h3>
+      </button>
+    </div>
 
     <GalleryOverlay
       v-if="galleryOpen"
