@@ -1,7 +1,16 @@
 <template>
   <header class="header" :class="{ 'isDark': theme === 'light', 'menuOpen': menuOpen }">
-    <IconButton class="headerButton" icon="Burger" :on-click="toggleMenu" />
-    <IconButton class="headerButton" icon="Logo" :on-click="() => {}" />
+    <IconButton
+      class="menuButton"
+      :filled="menuOpen"
+      icon="Burger"
+      :on-click="toggleMenu"
+    />
+    <IconButton
+      class="logoButton"
+      icon="Logo"
+      :on-click="() => {}"
+    />
   </header>
 </template>
 

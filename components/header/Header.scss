@@ -19,7 +19,8 @@
   }
 }
 
-.headerButton {
+.menuButton,
+.logoButton {
   .header.menuOpen &.focus-visible:focus {
     outline-color: var(--color-white);
   }

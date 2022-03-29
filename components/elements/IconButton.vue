@@ -1,6 +1,7 @@
 <template>
   <button
     class="iconButton"
+    :class="{ 'isFilled': filled }"
     :type="type"
     @click="onClick"
   >
@@ -19,6 +20,12 @@ export default {
   },
 
   props: {
+    filled: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+
     icon: {
       type: String,
       required: true,

@@ -3,6 +3,16 @@
   height: clamp(60px, 6rem, 6rem);
   color: var(--color-white);
 
+  &.menuButton.isFilled {
+    ::v-deep path {
+      fill: var(--color-white);
+    }
+
+    ::v-deep line {
+      stroke: var(--color-black);
+    }
+  }
+
   .isDark & {
     color: var(--color-black);
   }
