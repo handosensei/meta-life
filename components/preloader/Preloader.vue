@@ -1,6 +1,6 @@
 <template>
   <div class="preloader">
-    <Icon type="preloaderLogo" class="preloaderLogo" />
+    <Icon type="PreloaderLogo" class="preloaderLogo" />
 
     <p class="title">
       Enter in the new world
@@ -10,10 +10,10 @@
 
     <div class="progress">
       <div ref="progressCount" class="progressCount">0%</div>
-      <Icon type="preloaderProgress" class="preloaderProgress" />
+      <Icon type="PreloaderProgress" class="preloaderProgress" />
     </div>
 
-    <Icon type="preloaderShape" class="preloaderShape" />
+    <Icon type="PreloaderShape" class="preloaderShape" />
   </div>
 </template>
 

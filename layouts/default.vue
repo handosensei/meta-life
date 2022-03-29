@@ -1,14 +1,17 @@
 <template>
   <div>
     <Preloader v-if="!assetsPreloaded" />
-    <Header />
-    <Menu v-if="menuOpen" />
+    <FocusLock :disabled="!menuOpen">
+      <Header />
+      <Menu v-if="menuOpen" />
+    </FocusLock>
     <Nuxt />
   </div>
 </template>
 
 <script>
 import 'focus-visible';
+import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
 import throttle from '~/utils/functions/throttle';
@@ -21,6 +24,7 @@ export default {
   name: 'DefaultLayout',
 
   components: {
+    FocusLock,
     Header,
     Menu,
     Preloader,

@@ -38,7 +38,7 @@ export default {
   },
 
   computed: {
-    ...mapState('home', ['chapters', 'activeChapter', 'activeSection']),
+    ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
   },
 
   watch: {
@@ -68,6 +68,7 @@ export default {
       if (chapterExists) {
         this.setActiveChapter(chapter);
         this.setActiveSection(chapter.sections[0]);
+        this.setTheme(this.activeSection.theme || 'dark');
       }
     },
 
@@ -100,10 +101,12 @@ export default {
 
       this.isNavigating = true;
 
-      if (key === 'ArrowRight' || key === 'ArrowDown') {
-        this.navigate(1);
-      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
-        this.navigate(-1);
+      if (!this.galleryOpen) {
+        if (key === 'ArrowRight' || key === 'ArrowDown') {
+          this.navigate(1);
+        } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+          this.navigate(-1);
+        }
       }
     },
 

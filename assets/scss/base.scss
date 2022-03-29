@@ -25,22 +25,6 @@ img {
   height: auto;
 }
 
-.purple {
-  color: var(--color-purple);
-}
-
-.green {
-  color: var(--color-green);
-}
-
-.grey {
-  color: var(--color-grey);
-}
-
-.blur {
-  filter: blur(1px);
-}
-
 a,
 button {
   &:focus {
@@ -49,6 +33,6 @@ button {
 
   &.focus-visible:focus {
     outline-offset: 3px;
-    outline: 1px dashed var(--color-green);
+    outline: 1px dashed var(--color-purple);
   }
 }

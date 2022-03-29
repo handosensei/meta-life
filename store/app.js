@@ -5,6 +5,7 @@ export const state = () => ({
   },
   assetsPreloaded: false,
   menuOpen: false,
+  previousTheme: '',
   theme: 'dark',
 });
 
@@ -19,6 +20,10 @@ export const actions = {
 
   setMenuOpen({ commit }, bool) {
     commit('SET_MENU_OPEN', bool);
+  },
+
+  setPreviousTheme({ commit }, theme) {
+    commit('SET_PREVIOUS_THEME', theme);
   },
 
   setTheme({ commit }, theme) {
@@ -42,6 +47,10 @@ export const mutations = {
 
   SET_MENU_OPEN(state, payload) {
     state.menuOpen = payload;
+  },
+
+  SET_PREVIOUS_THEME(state, payload) {
+    state.previousTheme = payload;
   },
 
   SET_THEME(state, payload) {

@@ -1,6 +1,5 @@
 <template>
   <div class="text" :class="positioningClass">
-    <!-- <div>{{ number }}</div> -->
     <h2 class="title" v-html="title" />
     <p v-if="text" class="paragraph">{{ text }}</p>
     <BaseButton v-if="hasPlayTrailerButton" as="button" text="<span>Play</span> the trailer" />
@@ -22,11 +21,6 @@ export default {
       type: Boolean,
       required: false,
     },
-
-    // number: {
-    //   type: Number,
-    //   required: true,
-    // },
 
     position: {
       type: String,

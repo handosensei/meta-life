@@ -8,7 +8,6 @@
         {
           "id": "intro-01",
           "theme": "dark",
-          "name": "Intro",
           "component": {
             "name": "SectionText",
             "title": "With <span class=\"purple\">Metalife</span>,<br>live an experience beyond <span class=\"green blur\">the reality</span>",
@@ -27,7 +26,6 @@
         {
           "id": "start-01",
           "theme": "dark",
-          "name": "Start",
           "component": {
             "name": "SectionText",
             "title": "You will be able to embody your <span class=\"green\">own Meta Legends</span> and live your <span class=\"purple\">own adventure.</span>",
@@ -44,7 +42,6 @@
         {
           "id": "yourLand-create",
           "theme": "dark",
-          "name": "Your land: Create",
           "component": {
             "name": "SectionText",
             "title": "How to create<br>your <span class=\"purple\">home.</span>",
@@ -55,7 +52,6 @@
         {
           "id": "yourLand-buy",
           "theme": "dark",
-          "name": "Your land: Buy",
           "component": {
             "name": "SectionText",
             "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land.",
@@ -65,7 +61,6 @@
         {
           "id": "yourLand-rent",
           "theme": "dark",
-          "name": "Your land: Rent",
           "component": {
             "name": "SectionText",
             "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land."
@@ -81,7 +76,6 @@
         {
           "id": "playToEarn-playTo",
           "theme": "light",
-          "name": "Play to earn: Play to",
           "component": {
             "name": "SectionHeading",
             "title": "Play to",
@@ -91,7 +85,6 @@
         {
           "id": "playToEarn-earn",
           "theme": "light",
-          "name": "Play to earn: Earn",
           "component": {
             "name": "SectionHeading",
             "title": "Earn",
@@ -101,7 +94,6 @@
         {
           "id": "playToEarn-tokenomics",
           "theme": "light",
-          "name": "Play to earn: Tokenomics",
           "component": {
             "name": "SectionHeading",
             "title": "How to use<br>Metalife Token.",
@@ -111,7 +103,6 @@
         {
           "id": "playToEarn-howToPlay",
           "theme": "light",
-          "name": "Play to earn: How to play",
           "component": {
             "name": "SectionHeading",
             "title": "How to buy, sell, and rent with your Token.",
@@ -121,7 +112,6 @@
         {
           "id": "playToEarn-buy",
           "theme": "light",
-          "name": "Play to earn: Buy",
           "component": {
             "name": "SectionHeading",
             "title": "Buy",
@@ -142,11 +132,9 @@
         {
           "id": "showroom-gallery",
           "theme": "light",
-          "name": "Showroom: Gallery",
           "component": {
             "name": "SectionGallery",
             "title": "Showroom",
-            "backLabel": "Back to gallery",
             "items": [
               {
                 "id": "showroom-amor",
@@ -225,7 +213,6 @@
         {
           "id": "buildYourMetaverse-createAssets",
           "theme": "light",
-          "name": "Build your Metaverse: Create assets",
           "component": {
             "name": "SectionHeading",
             "title": "Build your Metaverse"
@@ -234,7 +221,6 @@
         {
           "id": "buildYourMetaverse-integrateExternalAssets",
           "theme": "light",
-          "name": "Build your Metaverse: Integrate external assets",
           "component": {
             "name": "SectionText",
             "title": "Bring your <span class=\"purple\">own content</span> to the metaverse.",
@@ -245,7 +231,6 @@
         {
           "id": "buildYourMetaverse-learnHowToBuild",
           "theme": "light",
-          "name": "Build your Metaverse: Learn how to build",
           "component": {
             "name": "SectionText",
             "title": "<span class=\"purple\">Learn</span> how to build your weapons, vehicules, place.",
@@ -262,7 +247,6 @@
         {
           "id": "ecosystem-metaConnect",
           "theme": "light",
-          "name": "Ecosystem: Meta Connect",
           "component": {
             "name": "SectionText",
             "title": "",
@@ -272,7 +256,6 @@
         {
           "id": "ecosystem-legendsZone",
           "theme": "light",
-          "name": "Ecosystem: Legends Zone",
           "component": {
             "name": "SectionText",
             "title": "",
@@ -282,7 +265,6 @@
         {
           "id": "ecosystem-metaLegends",
           "theme": "light",
-          "name": "Ecosystem: Meta Legends",
           "component": {
             "name": "SectionText",
             "title": "",
@@ -299,7 +281,6 @@
         {
           "id": "legendsBenefits-benefits",
           "theme": "light",
-          "name": "Legends Benefits: Benefits",
           "component": {
             "name": "SectionText",
             "title": "",
@@ -309,7 +290,6 @@
         {
           "id": "legendsBenefits-buyALegend",
           "theme": "light",
-          "name": "Legends Benefits: Buy a Legend",
           "component": {
             "name": "SectionText",
             "title": "",
@@ -326,7 +306,6 @@
         {
           "id": "joinNow-01",
           "theme": "light",
-          "name": "Join now: 01",
           "component": {
             "name": "SectionHeading",
             "title": "Join now",

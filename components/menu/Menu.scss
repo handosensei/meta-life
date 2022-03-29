@@ -46,6 +46,10 @@
     border: 1px solid var(--color-white-04);
     text-align: center;
   }
+
+  &.focus-visible:focus {
+    outline-color: var(--color-white);
+  }
 }
 
 .menuLogo {
@@ -79,6 +83,10 @@
 .menuSubLink {
   text-decoration: underline;
   color: var(--color-white);
+
+  &.focus-visible:focus {
+    outline-color: var(--color-white);
+  }
 }
 
 .menuBg {

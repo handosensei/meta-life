@@ -4,6 +4,7 @@
 
 <script>
 import Burger from '~/assets/svg/burger.svg?inline=true';
+import Close from '~/assets/svg/close.svg?inline=true';
 import Discord from '~/assets/svg/discord.svg?inline=true';
 import Discover from '~/assets/svg/discover.svg?inline=true';
 import Equalizer from '~/assets/svg/equalizer.svg?inline=true';
@@ -21,6 +22,7 @@ export default {
 
   components: {
     Burger,
+    Close,
     Discord,
     Discover,
     Equalizer,

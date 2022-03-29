@@ -18,3 +18,9 @@
     color: var(--color-black);
   }
 }
+
+.headerButton {
+  .header.menuOpen &.focus-visible:focus {
+    outline-color: var(--color-white);
+  }
+}

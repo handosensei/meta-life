@@ -1,7 +1,7 @@
 <template>
-  <header class="header" :class="{ 'isDark': theme === 'light' }">
-    <IconButton icon="Burger" :on-click="() => setMenuOpen(!menuOpen)" />
-    <IconButton icon="Logo" :on-click="() => {}" />
+  <header class="header" :class="{ 'isDark': theme === 'light', 'menuOpen': menuOpen }">
+    <IconButton class="headerButton" icon="Burger" :on-click="toggleMenu" />
+    <IconButton class="headerButton" icon="Logo" :on-click="() => {}" />
   </header>
 </template>
 
@@ -17,12 +17,35 @@ export default {
     IconButton,
   },
 
+  data() {
+    return {
+      prevTheme: '',
+    };
+  },
+
   computed: {
-    ...mapState('app', ['theme', 'menuOpen']),
+    ...mapState('app', ['theme', 'previousTheme', 'menuOpen']),
   },
 
   methods: {
-    ...mapActions('app', ['setMenuOpen']),
+    toggleMenu() {
+      // Keep track of previous theme before opening menu
+      if (!this.menuOpen) {
+        this.setPreviousTheme(this.theme);
+      }
+
+      if (this.menuOpen) {
+        // If closing the menu reset the theme to the previous theme
+        this.setTheme(this.previousTheme);
+      } else {
+        // If opening the menu set the theme to 'dark'
+        this.setTheme('dark');
+      }
+
+      this.setMenuOpen(!this.menuOpen)
+    },
+
+    ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme']),
   }
 }
 </script>

@@ -1,27 +1,25 @@
 <template>
-  <FocusLock :disabled="!menuOpen">
-    <nav class="menu">
-      <ol class="menuList">
-        <li
-          v-for="{ href, text } in links"
-          :key="href"
-          class="menuItem"
-        >
-          <NuxtLink :to="href" class="menuLink">
-            {{ text }}
-          </NuxtLink>
-        </li>
-      </ol>
+  <nav class="menu">
+    <ol class="menuList">
+      <li
+        v-for="{ href, text } in links"
+        :key="href"
+        class="menuItem"
+      >
+        <NuxtLink :to="href" class="menuLink">
+          {{ text }}
+        </NuxtLink>
+      </li>
+    </ol>
 
-      <Icon class="menuLogo" type="MetaLegends" />
+    <Icon class="menuLogo" type="MetaLegends" />
 
-      <div class="menuSub">
-        visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
-      </div>
+    <div class="menuSub">
+      visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
+    </div>
 
-      <div class="menuBg" />
-    </nav>
-  </FocusLock>
+    <div class="menuBg" />
+  </nav>
 </template>
 
 <script>
@@ -64,7 +62,7 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['menuOpen']),
+    ...mapState('app', ['previousTheme']),
   },
 
   mounted() {
@@ -79,10 +77,11 @@ export default {
     onKeyDown({ key }) {
       if (key === 'Escape') {
         this.setMenuOpen(false);
+        this.setTheme(this.previousTheme);
       }
     },
 
-    ...mapActions('app', ['setMenuOpen']),
+    ...mapActions('app', ['setMenuOpen', 'setTheme']),
   },
 }
 </script>
