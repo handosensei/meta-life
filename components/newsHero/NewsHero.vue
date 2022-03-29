@@ -2,25 +2,22 @@
   <div>
     <h1 class="title" v-html="title" />
 
-    <div class="filter">
-      Filter By |
-      <select @change="onChange($event)">
-        <option value="" checked>All categories</option>
-        <option
-          v-for="category in categories"
-          :key="category"
-          :value="category"
-        >
-          {{ category }}
-        </option>
-      </select>
-    </div>
+    <NewsFilter
+      :categories="categories"
+      :select-category="selectCategory"
+    />
   </div>
 </template>
 
 <script>
+import NewsFilter from '~/components/newsFilter/NewsFilter.vue';
+
 export default {
   name: 'NewsHeroComponent',
+
+  components: {
+    NewsFilter,
+  },
 
   props: {
     title: {
@@ -37,12 +34,6 @@ export default {
       type: Function,
       required: true,
     },
-  },
-
-  methods: {
-    onChange({ target: { value } }) {
-      this.selectCategory(value);
-    }
   },
 }
 </script>
