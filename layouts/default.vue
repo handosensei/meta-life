@@ -50,16 +50,21 @@ export default {
     loadFonts() {
       const hasCustomFont = true;
       if (document.fonts && hasCustomFont) {
-        const Font = new FontFace('Matter', 'url(/fonts/Matter-Regular.woff2)', {
+        const fontMatterNormal = new FontFace('Matter', 'url(/fonts/Matter-Regular.woff2)', {
           style: 'normal',
-          weight: '400'
-        })
-        Promise.all([Font.load()]).then(() => {
-          document.fonts.add(Font)
-          this.$root.$emit('fonts:loaded')
-        })
+          weight: '400',
+        });
+        const fontMatterMedium = new FontFace('Matter', 'url(/fonts/Matter-Medium.woff2)', {
+          style: 'normal',
+          weight: '500',
+        });
+        Promise.all([fontMatterNormal.load(), fontMatterMedium.load()]).then(() => {
+          document.fonts.add(fontMatterNormal);
+          document.fonts.add(fontMatterMedium);
+          this.$root.$emit('fonts:loaded');
+        });
       } else {
-        this.$root.$emit('fonts:loaded')
+        this.$root.$emit('fonts:loaded');
       }
     },
 
