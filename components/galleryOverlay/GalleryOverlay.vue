@@ -1,5 +1,5 @@
 <template>
-  <FocusLock :disabled="!galleryOpen">
+  <FocusLock :disabled="!galleryOpen || menuOpen">
     <div class="galleryOverlay">
       <div class="content">
         <div class="head">
