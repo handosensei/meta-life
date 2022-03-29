@@ -57,14 +57,6 @@
             "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land.",
             "position": "right center"
           }
-        },
-        {
-          "id": "yourLand-rent",
-          "theme": "dark",
-          "component": {
-            "name": "SectionText",
-            "title": "<span class=\"purple\">Advertise</span> your business, <span class=\"green\">create</span> events or <span class=\"grey\">rent</span> your land."
-          }
         }
       ]
     },
