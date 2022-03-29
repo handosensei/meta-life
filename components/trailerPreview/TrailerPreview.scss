@@ -20,7 +20,7 @@
   text-align: left;
 
   span {
-    color: var(--color-purple-04);
+    color: var(--color-dark-04);
   }
 
   &::after {
@@ -29,7 +29,7 @@
     right: 1.5rem;
     content: '›';
     transform: translateY(calc(-50% - 0.2rem));
-    color: var(--color-purple-04);
+    color: var(--color-dark-04);
   }
 }
 

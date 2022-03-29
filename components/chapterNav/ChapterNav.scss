@@ -9,7 +9,7 @@
   backdrop-filter: blur(20px);
 
   &.isLight {
-    color: var(--color-purple-04);
+    color: var(--color-dark-04);
     border: 1px solid var(--color-black-005);
   }
 
@@ -64,7 +64,7 @@
     margin: 0 2rem 0 1rem;
 
     .isLight & {
-      color: var(--color-purple-04);
+      color: var(--color-dark-04);
     }
 
     .isActive & {
