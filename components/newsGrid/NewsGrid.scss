@@ -1,6 +1,7 @@
 .newsItems {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  background: var(--color-concrete);
 
   @include minTablet {
     grid-template-columns: repeat(18, 1fr);

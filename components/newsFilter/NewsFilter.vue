@@ -1,16 +1,20 @@
 <template>
   <div class="newsFilter">
-    Filter By |
-    <select @change="onChange($event)">
-      <option value="" checked>All categories</option>
-      <option
-        v-for="category in categories"
-        :key="category"
-        :value="category"
-      >
-        {{ category }}
-      </option>
-    </select>
+    <div class="title">
+      Filter by
+    </div>
+    <div class="filter">
+      <select class="select" @change="onChange($event)">
+        <option value="" checked>All categories</option>
+        <option
+          v-for="category in categories"
+          :key="category"
+          :value="category"
+        >
+          {{ category }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="title" v-html="title" />
+  <div class="newsHero">
+    <h1 class="newsTitle" v-html="title" />
 
     <NewsFilter
       :categories="categories"

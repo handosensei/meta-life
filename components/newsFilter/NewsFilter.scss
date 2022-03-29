@@ -1,0 +1,42 @@
+.newsFilter {
+  display: flex;
+  color: var(--color-black-04);
+  margin: 4.5rem 4rem 0 4rem;
+  border-bottom: 1px solid var(--color-black-01);
+  border-right: 1px solid var(--color-black-01);
+
+  @include minTablet {
+    margin: 5rem 16rem 0 32rem;
+  }
+}
+
+.title {
+  font-size: clamp(10px, 1rem, 1rem);
+  padding-bottom: 2rem;
+}
+
+.select {
+  border: 0;
+  appearance: none;
+  display: inline-flex;
+  font-size: clamp(10px, 1rem, 1rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black-04);
+  margin-left: 4rem;
+  padding: 0 0 2rem 4rem;
+  border-left: 1px solid var(--color-black-01);
+  background: none;
+}
+
+.filter {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: clamp(-10px, -1rem, -1rem);
+    color: var(--color-black-04);
+    transform: rotate(90deg);
+    content: '›';
+  }
+}

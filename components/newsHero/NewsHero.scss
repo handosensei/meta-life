@@ -1,0 +1,33 @@
+.newsHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-concrete);
+
+  @include maxMobile {
+    padding: 23rem 0 7rem;
+  }
+
+  @include minTablet {
+    height: 100vh;
+  }
+}
+
+.newsTitle {
+  font-size: 4rem;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  margin: 0 8rem 0 4rem;
+
+  @include minTablet {
+    width: 45.3rem;
+    font-size: 5rem;
+    margin: 0 auto 0 32rem;
+  }
+
+  &::v-deep span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
