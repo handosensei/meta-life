@@ -75,3 +75,18 @@
     transform: translateY(-50%);
   }
 }
+
+.positionLeftCenter {
+  @include maxMobile {
+    top: 25vh;
+    left: 4rem;
+    right: 4rem;
+  }
+
+  @include minTablet {
+    top: 50%;
+    left: 16rem;
+    width: clamp(285px, 28.5rem, 28.5rem);
+    transform: translateY(-50%);
+  }
+}

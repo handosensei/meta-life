@@ -223,7 +223,8 @@
           "theme": "light",
           "component": {
             "name": "SectionHeading",
-            "title": "Build your Metaverse"
+            "title": "Build your Metaverse",
+            "size": "large"
           }
         },
         {
