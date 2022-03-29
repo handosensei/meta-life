@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 import data from '~/content/news.json';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
@@ -40,6 +42,7 @@ export default {
   beforeMount() {
     this.activeCategory = this.categories[0];
     this.activeItems = this.items;
+    this.setTheme('light');
   },
 
   methods: {
@@ -51,7 +54,9 @@ export default {
       } else {
         this.activeItems = this.items.filter((item) => item.category === category);
       }
-    }
+    },
+
+    ...mapActions('app', ['setTheme']),
   }
 }
 </script>
