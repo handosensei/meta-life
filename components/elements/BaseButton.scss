@@ -1,11 +1,12 @@
 .baseButton {
-  font-size: clamp(10px, 1rem, 1rem);
-  line-height: 120%;
-  color: var(--color-bunker);
-  background: var(--color-white);
-  border-radius: 0.5rem;
-  margin-top: clamp(30px, 3rem, 3rem);
-  padding: 1.4rem 1.8rem;
+  ::v-deep div {
+    font-size: clamp(10px, 1rem, 1rem);
+    line-height: 120%;
+    color: var(--color-bunker);
+    background: var(--color-white);
+    border-radius: 0.5rem;
+    padding: 1.4rem 1.8rem;
+  }
 
   @include maxMobile {
     &::after {
@@ -15,12 +16,14 @@
     }
   }
 
-  @include minTablet {
-    padding: 0.8rem 1.4rem;
-    clip-path: polygon(0 0, 100% 0%, 100% 30%, 100% calc(100% - 0.5rem), calc(100% - 0.5rem) 100%, 0 100%, 0% 70%, 0% 30%);
+  ::v-deep span {
+    color: var(--color-dark-04);
   }
-}
 
-::v-deep span {
-  color: var(--color-dark-04);
+  @include minTablet {
+    ::v-deep div {
+      padding: 0.8rem 1.4rem;
+      clip-path: polygon(0 0, 100% 0%, 100% 30%, 100% calc(100% - 0.5rem), calc(100% - 0.5rem) 100%, 0 100%, 0% 70%, 0% 30%);
+    }
+  }
 }

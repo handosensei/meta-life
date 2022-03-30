@@ -2,7 +2,12 @@
   <div class="text" :class="positioningClass">
     <h2 class="title" v-html="title" />
     <p v-if="text" class="paragraph">{{ text }}</p>
-    <BaseButton v-if="hasPlayTrailerButton" as="button" text="<span>Play</span> the trailer" />
+    <BaseButton
+      v-if="hasPlayTrailerButton"
+      as="button"
+      class="textButton"
+      text="<span>Play</span> the trailer"
+    />
   </div>
 </template>
 
