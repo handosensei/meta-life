@@ -1,14 +1,14 @@
 <template>
   <footer class="footer">
     <TrailerPreview />
-    <Social />
+    <Socials />
     <AudioPlayer />
   </footer>
 </template>
 
 <script>
 import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
-import Social from '~/components/social/Social.vue';
+import Socials from '~/components/socials/Socials.vue';
 import TrailerPreview from '~/components/trailerPreview/TrailerPreview.vue';
 
 export default {
@@ -16,7 +16,7 @@ export default {
 
   components: {
     AudioPlayer,
-    Social,
+    Socials,
     TrailerPreview,
   },
 }

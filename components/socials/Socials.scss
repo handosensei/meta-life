@@ -22,12 +22,15 @@
 }
 
 .discordIcon {
-  width: clamp(14px, 1.4rem, 1.4rem);
-  height: clamp(11px, 1.1rem, 1.1rem);
   margin-right: clamp(15px, 1.5rem, 1.5rem);
+
+  svg {
+    width: clamp(14px, 1.4rem, 1.4rem);
+    height: clamp(11px, 1.1rem, 1.1rem);
+  }
 }
 
-.twitterIcon {
+.twitterIcon svg {
   width: clamp(13px, 1.3rem, 1.3rem);
   height: clamp(11px, 1.1rem, 1.1rem);
 }
