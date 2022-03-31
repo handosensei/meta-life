@@ -3,16 +3,16 @@
     <div class="galleryOverlay">
       <div class="content">
         <div class="head">
-          <div class="title">{{ activeItem.title }}</div>
-          <div class="subtitle">{{ activeItem.name }}</div>
+          <div class="title">{{ activeSlide.title }}</div>
+          <div class="subtitle">{{ activeItem.category }}</div>
         </div>
-        <p class="text">{{ activeItem.text }}</p>
+        <p class="text">{{ activeSlide.text }}</p>
       </div>
 
       <img
         class="backgroundImage"
-        :src="activeItem.image.highres.src"
-        :alt="activeItem.image.highres.alt"
+        :src="activeSlide.image.highres.src"
+        :alt="activeSlide.image.highres.alt"
       >
 
       <nav class="nav">
@@ -27,17 +27,17 @@
 
         <div>
           <button
-            v-for="item in items"
-            :key="item.id"
+            v-for="slide, index in activeItem.slides"
+            :key="`${index}-${slide.title}`"
             class="navButton"
-            :class="{ 'isActive': activeItem === item }"
+            :class="{ 'isActive': activeSlide === slide }"
             type="button"
-            @click="setActiveItem(item)"
+            @click="setActiveSlide(slide)"
           >
             <img
               class="navImage"
-              :src="item.image.thumb.src"
-              :alt="item.image.thumb.alt"
+              :src="slide.image.thumb.src"
+              :alt="slide.image.thumb.alt"
             >
           </button>
         </div>
@@ -82,6 +82,12 @@ export default {
     },
   },
 
+  data() {
+    return {
+      activeSlide: this.activeItem.slides[0],
+    };
+  },
+
   computed: {
     ...mapState('app', ['menuOpen']),
     ...mapState('home', ['galleryOpen', 'activeSection']),
@@ -96,18 +102,27 @@ export default {
   },
 
   methods: {
+    setActiveSlide(slide) {
+      if (this.activeSlide === slide) {
+        return;
+      }
+
+      this.activeSlide = slide;
+    },
+
     onKeyDown({ key }) {
       if (key === 'Escape' && !this.menuOpen) {
         this.toggleOverlay('');
         this.setTheme(this.activeSection.theme);
       }
 
-      const currentIndex = this.items.indexOf(this.activeItem, 0);
+      const currentIndex = this.activeItem.slides.indexOf(this.activeSlide, 0);
 
       if (key === 'ArrowRight' || key === 'ArrowDown') {
-        const nextIndex = (currentIndex + 1) % this.items.length;
-        const nextItem = this.items[nextIndex];
-        this.setActiveItem(nextItem);
+        const nextIndex = (currentIndex + 1) % this.activeItem.slides.length;
+        const nextItem = this.activeItem.slides[nextIndex];
+
+        this.setActiveSlide(nextItem);
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
         let prevIndex;
         if (currentIndex === 0) {
@@ -116,8 +131,8 @@ export default {
           prevIndex = currentIndex - 1;
         }
         
-        const prevItem = this.items[prevIndex];
-        this.setActiveItem(prevItem);
+        const prevItem = this.activeItem.slides[prevIndex];
+        this.setActiveSlide(prevItem);
       }
     },
 

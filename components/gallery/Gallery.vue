@@ -10,9 +10,9 @@
         type="button"
         @click="toggleOverlay(item)"
       >
-        <img class="image" :src="item.image.thumb.src" :alt="item.image.thumb.alt">
-        <h3 class="name">
-          {{ item.name }}
+        <img class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt">
+        <h3 class="category">
+          {{ item.category }}
         </h3>
       </button>
     </div>

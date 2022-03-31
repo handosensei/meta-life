@@ -73,9 +73,10 @@
 
 .image {
   border-radius: 0.4rem;
+  object-fit: cover;
 }
 
-.name {
+.category {
   font-size: clamp(10px, 1rem, 1rem);
   line-height: clamp(30px, 3rem, 3rem);
   letter-spacing: 0.1em;
