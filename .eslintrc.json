@@ -25,6 +25,8 @@
           ["^"],
           // Import content
           ["content/"],
+          // Import mixins
+          ["mixins/"],
           // Import utils
           ["utils/"],
           // Import components

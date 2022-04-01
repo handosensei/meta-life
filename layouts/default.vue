@@ -14,6 +14,8 @@ import 'focus-visible';
 import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
+import assetsLoader from '~/mixins/assetsLoader';
+
 import throttle from '~/utils/functions/throttle';
 
 import Header from '~/components/header/Header.vue';
@@ -29,6 +31,8 @@ export default {
     Menu,
     Preloader,
   },
+
+  mixins: [assetsLoader],
 
   computed: {
     ...mapState('app', ['assetsPreloaded', 'menuOpen']),

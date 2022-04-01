@@ -114,6 +114,7 @@
 .navImage {
   width: 6.8rem;
   border-radius: 1px;
+  aspect-ratio: 4 / 3;
 
   .isActive & {
     opacity: 0.5;

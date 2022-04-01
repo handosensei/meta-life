@@ -21,6 +21,8 @@
 import { gsap } from 'gsap';
 import { mapActions } from 'vuex';
 
+import homeData from '~/content/home.json';
+
 import Icon from '~/components/elements/Icon.vue';
 
 export default {
@@ -39,6 +41,8 @@ export default {
   },
 
   mounted() {
+    this.preloadGalleryThumbs();
+
     const progress = {
       value: 0,
       end: 100,
@@ -56,6 +60,17 @@ export default {
   },
 
   methods: {
+    preloadGalleryThumbs() {
+      // Preload gallery thumbnails
+      const galleryThumbs = homeData.chapters
+        .flatMap(({ sections }) => sections)
+        .filter(({ component }) => component.name === 'SectionGallery')
+        .flatMap(({ component }) => component.items)
+        .flatMap(({ slides }) => slides[0])
+        .map(({ image }) => image.thumb.src);
+      this.$nuxt.$emit('assetsLoader:load', galleryThumbs);
+    },
+
     updateProgress(value) {
       this.$refs.progressCount.innerHTML = `${value.toFixed()}%`;
     },

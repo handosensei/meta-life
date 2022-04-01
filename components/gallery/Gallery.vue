@@ -10,6 +10,7 @@
         type="button"
         @click="toggleOverlay(item)"
       >
+        <!-- <NuxtPicture class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt" /> -->
         <img class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt">
         <h3 class="category">
           {{ item.category }}
@@ -61,7 +62,24 @@ export default {
     ...mapState('home', ['galleryOpen', 'activeSection']),
   },
 
+  created() {
+    this.preloadGalleryThumbs();
+  },
+
   methods: {
+    preloadGalleryThumbs() {
+      const galleryThumbs = this.items
+        .flatMap((item) => {
+          return item.slides.flatMap(({ image }, index) => {
+            if (index > 0) return image.thumb.src;
+            return null;
+          })
+        })
+        .filter((x) => !!x);
+
+      this.$nuxt.$emit('assetsLoader:load', galleryThumbs);
+    },
+
     setActiveItem(item) {
       if (item === this.activeItem) {
         return;

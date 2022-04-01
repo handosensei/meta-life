@@ -26,7 +26,17 @@ export default {
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', '@nuxtjs/style-resources'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/image', '@nuxtjs/svg'],
+  modules: ['@nuxt/image', '@nuxtjs/svg', 'nuxt-polyfill'],
+
+  // (https://www.npmjs.com/package/nuxt-polyfill)
+  polyfill: {
+    features: [
+      {
+        require: 'requestidlecallback-polyfill',
+        detect: () => 'requestIdleCallback' in window,
+      },
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

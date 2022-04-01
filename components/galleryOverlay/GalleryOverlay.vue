@@ -95,6 +95,8 @@ export default {
 
   mounted() {
     window.addEventListener('keydown', this.onKeyDown);
+
+    this.$nuxt.$emit('assetsLoader:load', this.activeItem.slides.map(({ image }) => image.highres.src));
   },
 
   beforeDestroy() {
