@@ -1,6 +1,6 @@
-/* eslint-disable no-console, simple-import-sort/imports */
-
+/* eslint-disable no-console */
 import Stats from 'stats.js';
+
 import Performances from '~/utils/config/Performances';
 
 export default async function ({ app }, inject) {

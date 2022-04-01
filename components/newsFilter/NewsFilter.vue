@@ -37,6 +37,10 @@ export default {
   methods: {
     onChange({ target: { value } }) {
       this.selectCategory(value);
+
+      this.$nextTick(() => {
+        this.$root.$emit('scroll:resize');
+      })
     }
   },
 }
