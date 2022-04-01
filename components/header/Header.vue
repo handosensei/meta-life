@@ -2,11 +2,12 @@
   <header class="header" :class="{ 'isDark': theme === 'light', 'menuOpen': menuOpen }">
     <IconButton
       class="menuButton"
-      :filled="menuOpen"
+      :filled="menuOpen || videoPlayerOpen"
       icon="Burger"
-      :on-click="toggleMenu"
+      :on-click="onMenuButtonClick"
     />
     <IconButton
+      v-if="!videoPlayerOpen"
       class="logoButton"
       icon="Logo"
       :on-click="() => {}"
@@ -27,11 +28,18 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['theme', 'previousTheme', 'menuOpen']),
+    ...mapState('app', ['theme', 'previousTheme', 'menuOpen', 'videoPlayerOpen']),
   },
 
   methods: {
-    toggleMenu() {
+    onMenuButtonClick() {
+      // Close video player if open and return
+      if (this.videoPlayerOpen) {
+        this.setVideoPlayerOpen(false);
+
+        return;
+      }
+
       // Keep track of previous theme before opening menu
       if (!this.menuOpen) {
         this.setPreviousTheme(this.theme);
@@ -48,7 +56,7 @@ export default {
       this.setMenuOpen(!this.menuOpen)
     },
 
-    ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme']),
+    ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme', 'setVideoPlayerOpen']),
   }
 }
 </script>

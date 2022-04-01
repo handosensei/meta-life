@@ -1,6 +1,6 @@
 <template>
 	<div class="audioPlayer">
-		<Icon class="equalizerIcon" type="Equalizer" />
+		<Icon type="Equalizer" />
 	</div>
 </template>
 

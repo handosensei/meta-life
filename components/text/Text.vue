@@ -7,6 +7,7 @@
       as="button"
       class="textButton"
       text="<span>Play</span> the trailer"
+      :on-click="onPlayTrailer"
     />
   </div>
 </template>
@@ -57,6 +58,12 @@ export default {
 
       return CLASS[this.position];
     }
+  },
+
+  methods: {
+    onPlayTrailer() {
+      this.$root.$emit('trailerPreview:toggleVideoPlayer');
+    },
   }
 }
 </script>

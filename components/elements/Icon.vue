@@ -8,6 +8,7 @@ import Close from '~/assets/svg/close.svg?inline=true';
 import Discord from '~/assets/svg/discord.svg?inline=true';
 import Discover from '~/assets/svg/discover.svg?inline=true';
 import Equalizer from '~/assets/svg/equalizer.svg?inline=true';
+import EqualizerVideo from '~/assets/svg/equalizerVideo.svg?inline=true';
 import Logo from '~/assets/svg/logo.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
 import Play from '~/assets/svg/play.svg?inline=true';
@@ -26,6 +27,7 @@ export default {
     Discord,
     Discover,
     Equalizer,
+    EqualizerVideo,
     Logo,
     MetaLegends,
     Play,

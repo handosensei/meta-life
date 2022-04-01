@@ -7,6 +7,7 @@ export const state = () => ({
   menuOpen: false,
   previousTheme: '',
   theme: 'dark',
+  videoPlayerOpen: false,
 });
 
 export const actions = {
@@ -28,6 +29,10 @@ export const actions = {
 
   setTheme({ commit }, theme) {
     commit('SET_THEME', theme);
+  },
+
+  setVideoPlayerOpen({ commit }, bool) {
+    commit('SET_VIDEO_PLAYER_OPEN', bool);
   },
 };
 
@@ -55,5 +60,9 @@ export const mutations = {
 
   SET_THEME(state, payload) {
     state.theme = payload;
+  },
+
+  SET_VIDEO_PLAYER_OPEN(state, payload) {
+    state.videoPlayerOpen = payload;
   },
 };
