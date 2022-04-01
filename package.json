@@ -30,12 +30,15 @@
     }
   },
   "dependencies": {
+    "@antinomy-studio/size": "git+https://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:x-oauth-basic@github.com/antinomy-studio/size.git",
+    "@antinomy-studio/sniffer": "git+https://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:x-oauth-basic@github.com/antinomy-studio/sniffer.git",
     "core-js": "^3.19.3",
     "focus-visible": "^5.2.0",
     "gsap": "^3.9.1",
     "nuxt": "^2.15.8",
     "nuxt-polyfill": "^1.0.3",
     "requestidlecallback-polyfill": "^1.0.2",
+    "stats.js": "^0.17.0",
     "vue": "^2.6.14",
     "vue-focus-lock": "^1.4.1",
     "vue-server-renderer": "^2.6.14",

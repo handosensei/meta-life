@@ -1,15 +1,21 @@
 <template>
-  <main>
-    <NewsHero :title="title" :categories="categories" :select-category="selectCategory" />
-    <NewsGrid :items="activeItems" />
-    <BackToExperience />
+  <main class="page">
+    <div ref="bounding" class="bounding">
+      <NewsHero :title="title" :categories="categories" :select-category="selectCategory" data-section />
+      <NewsGrid :items="activeItems" data-section />
+      <BackToExperience data-section />
+    </div>
   </main>
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import { mapActions } from 'vuex';
 
 import data from '~/content/news.json';
+
+import Page from '~/mixins/page';
+import Scroll from '~/mixins/scroll';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import NewsGrid from '~/components/newsGrid/NewsGrid.vue';
@@ -23,6 +29,8 @@ export default {
     NewsGrid,
     NewsHero,
   },
+
+  mixins: [Page, Scroll],
 
   data() {
     return {
@@ -46,6 +54,12 @@ export default {
   },
 
   methods: {
+    animateIn () {
+      gsap.set(this.$el, {
+        autoAlpha: 1
+      })
+    },
+
     selectCategory(category) {
       this.activeCategory = category;
 

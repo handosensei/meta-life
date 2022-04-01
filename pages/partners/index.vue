@@ -1,14 +1,21 @@
 <template>
   <main class="page">
-    <PartnersHero :title="title" />
-    <PartnersList v-bind="featured" />
-    <PartnersList v-bind="investors" />
-    <BackToExperience theme="light" />
+    <div ref="bounding" class="bounding">
+      <PartnersHero :title="title" data-section />
+      <PartnersList v-bind="featured" data-section />
+      <PartnersList v-bind="investors" data-section />
+      <BackToExperience theme="light" data-section />
+    </div>
   </main>
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 import data from '~/content/partners.json';
+
+import Page from '~/mixins/page';
+import Scroll from '~/mixins/scroll';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import PartnersHero from '~/components/partnersHero/PartnersHero.vue';
@@ -23,11 +30,21 @@ export default {
     PartnersList,
   },
 
+  mixins: [Page, Scroll],
+
   data() {
     return {
       ...data,
     };
   },
+
+  methods: {
+    animateIn () {
+      gsap.set(this.$el, {
+        autoAlpha: 1
+      })
+    },
+  }
 }
 </script>
 

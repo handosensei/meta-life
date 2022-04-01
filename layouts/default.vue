@@ -11,10 +11,11 @@
 
 <script>
 import 'focus-visible';
+import sniffer from '@antinomy-studio/sniffer';
 import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
-import assetsLoader from '~/mixins/assetsLoader';
+import AssetsLoader from '~/mixins/assetsLoader';
 
 import throttle from '~/utils/functions/throttle';
 
@@ -32,7 +33,7 @@ export default {
     Preloader,
   },
 
-  mixins: [assetsLoader],
+  mixins: [AssetsLoader],
 
   computed: {
     ...mapState('app', ['assetsPreloaded', 'menuOpen']),
@@ -43,6 +44,9 @@ export default {
   },
 
   beforeMount() {
+    this.$root.smooth = sniffer.isDesktop && this.$performances.PERF >= this.$performances.PERFS.PERF_HIGH
+    this.$root.smooth && document.documentElement.classList.add('is-smooth')
+
     window.addEventListener('resize', throttle(this.onResize, 66), false);
     requestAnimationFrame(this.onRaf);
 

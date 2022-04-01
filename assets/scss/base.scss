@@ -38,3 +38,22 @@ input {
     outline: 1px dashed var(--color-purple);
   }
 }
+
+.page {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+
+  .is-smooth & {
+    position: fixed;
+
+    .bounding {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

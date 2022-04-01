@@ -28,6 +28,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxt/image', '@nuxtjs/svg', 'nuxt-polyfill'],
 
+  // (https://go.nuxtjs.dev/config-plugins)
+  plugins: [{ src: '~/plugins/global.js', ssr: false }],
+
   // (https://www.npmjs.com/package/nuxt-polyfill)
   polyfill: {
     features: [
