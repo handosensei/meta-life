@@ -44,7 +44,7 @@
           class="buttonMute"
           @click="onMute"
         >
-          <Icon type="EqualizerVideo" />
+          <Icon ref="equalizer" type="EqualizerVideo" />
         </button>
       </div>
     </div>
@@ -84,6 +84,7 @@ export default {
   mounted() {
     this.isMounted = true;
     this.idleStart();
+    this.setEqualizer();
 
     window.addEventListener('mousemove', this.onMouseMove, false);
     window.addEventListener('keydown', this.onKeyDown);
@@ -99,6 +100,75 @@ export default {
   },
 
   methods: {
+    setEqualizer() {
+      this.bars = this.$refs.equalizer.$el.childNodes;
+      gsap.set(this.bars, { transformOrigin: 'bottom center', scaleY: 0.1 });
+
+      this.animateEqualizer();
+    },
+
+    onEnter() {
+      gsap.fromTo(this.$refs.button, {
+        scale: 0.1,
+      }, {
+        scale: 1,
+        delay: 2,
+        duration: 2,
+        ease: 'expo.inOut',
+      });
+    },
+
+    animateEqualizer() {
+      if (this.$refs.video.muted) {
+        gsap.killTweensOf(this.bars);
+
+        gsap.to(this.bars, {
+          duration: 0.8,
+          ease: 'expo.out',
+          scaleY: 0.1,
+        });
+      } else {
+        gsap.fromTo(this.bars[0], {
+          scaleY: 0.1,
+        }, {
+          duration: 0.5,
+          repeat: -1,
+          yoyo: true,
+          scaleY: 1,
+        });
+
+        gsap.fromTo(this.bars[1], {
+          scaleY: 0.1,
+        }, {
+          delay: 0.1,
+          repeat: -1,
+          yoyo: true,
+          scaleY: 1,
+          duration: 0.3,
+        });
+
+        gsap.fromTo(this.bars[2], {
+          scaleY: 0.3,
+        }, {
+          delay: 0.2,
+          repeat: -1,
+          yoyo: true,
+          scaleY: 1,
+          duration: 0.6,
+        });
+
+        gsap.fromTo(this.bars[3], {
+          scaleY: 0.1,
+        }, {
+          repeat: -1,
+          yoyo: true,
+          scaleY: 1,
+          duration: 0.4,
+        });
+      }
+    },
+
+
     onKeyDown({ key, keyCode }) {
       if (key === 'Escape') {
         this.setVideoPlayerOpen(false);
@@ -116,6 +186,8 @@ export default {
       } else {
         this.$refs.video.muted = true;
       }
+
+      this.animateEqualizer();
     },
 
     onPlayPause() {
