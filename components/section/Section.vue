@@ -2,12 +2,22 @@
   <section
     class="section"
     :class="{ 'isLight': theme === 'light' }"
+    @mousedown="onDragStart"
+    @touchstart.passive="onDragStart"
+    @mousemove="onDrag"
+    @touchmove.passive="onDrag"
+    @mouseup="onDragEnd"
+    @touchend.passive="onDragEnd"
+    @touchleave.passive="onDragEnd"
+    @mouseleave="onDragEnd"
+    @wheel="onWheel"
   >
     <component :is="component.name" v-bind="component" />
   </section>
 </template>
 
 <script>
+import sniffer from '@antinomy-studio/sniffer';
 import { mapActions, mapState } from 'vuex';
 
 import normalizeWheel from '~/utils/functions/normalizeWheel';
@@ -55,7 +65,7 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['theme']),
+    ...mapState('app', ['theme', 'menuOpen', 'windowSize']),
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
   },
 
@@ -64,12 +74,10 @@ export default {
   },
 
   mounted() {
-    window.addEventListener('wheel', this.onWheel);
     window.addEventListener('keydown', this.onKeyDown);
   },
 
   beforeDestroy() {
-    window.removeEventListener('wheel', this.onWheel);
     window.removeEventListener('keydown', this.onKeyDown);
   },
 
@@ -79,7 +87,7 @@ export default {
     },
 
     onWheel(event) {
-      if (this.isNavigating) {
+      if (this.isNavigating || this.menuOpen || this.galleryOpen) {
         return;
       }
 
@@ -96,19 +104,53 @@ export default {
       }
     },
 
-    onKeyDown({ key }) {
-      if (this.isNavigating) {
+    onDragStart(event) {
+      if (this.isNavigating || this.menuOpen || this.galleryOpen) {
         return;
       }
 
-      this.setIsNavigating(true);
+      this.isDragging = true;
+      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? (event.touches?.[0] || event.changedTouches?.[0]) : event;
+      this.dragStart = this.touchEvent?.clientY;
+      this.delta = 0;
+    },
 
-      if (!this.galleryOpen) {
-        if (key === 'ArrowRight' || key === 'ArrowDown') {
+    onDrag(event) {
+      if (!this.isDragging) return;
+
+      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? (event.touches?.[0] || event.changedTouches?.[0]) : event;
+      this.delta = this.touchEvent?.clientY - this.dragStart;
+    },
+
+    onDragEnd() {
+      if (!this.isDragging) return;
+
+      this.isDragging = false;
+      const multiply = (sniffer.isTouch) ? 5 : 8;
+
+      if (Math.abs(this.delta) > this.windowSize.height / multiply) {
+        if (this.delta < 0) {
+          this.setIsNavigating(true);
           this.navigate(1);
-        } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        } else {
+          this.setIsNavigating(true);
           this.navigate(-1);
         }
+      }
+    },
+
+
+    onKeyDown({ key }) {
+      if (this.isNavigating || this.menuOpen || this.galleryOpen) {
+        return;
+      }
+
+      if (key === 'ArrowRight' || key === 'ArrowDown') {
+        this.setIsNavigating(true);
+        this.navigate(1);
+      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        this.setIsNavigating(true);
+        this.navigate(-1);
       }
     },
 
