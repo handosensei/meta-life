@@ -18,17 +18,25 @@
       </button>
     </div>
 
-    <GalleryOverlay
-      v-if="galleryOpen"
-      :active-item="activeItem"
-      :items="items"
-      :set-active-item="setActiveItem"
-      :toggle-overlay="toggleOverlay"
-    />
+    <transition
+      name="galleryOverlayTransition"
+      :css="false"
+      @enter="onEnterGalleryOverlay"
+      @leave="onLeaveGalleryOverlay"
+    >
+      <GalleryOverlay
+        v-if="galleryOpen"
+        :active-item="activeItem"
+        :items="items"
+        :set-active-item="setActiveItem"
+        :toggle-overlay="toggleOverlay"
+      />
+    </transition>
   </div>
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
@@ -97,6 +105,22 @@ export default {
       } else {
         this.setTheme(this.activeSection.theme);
       }
+    },
+
+    onEnterGalleryOverlay(el) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 },
+      );
+    },
+
+    onLeaveGalleryOverlay(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, onComplete: done },
+      );
     },
 
     ...mapActions('app', ['setTheme']),
