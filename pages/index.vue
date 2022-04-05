@@ -1,6 +1,11 @@
 <template>
   <main>
-    <Section v-bind="activeSection" />
+    <Section
+      v-bind="activeSection"
+      :navigate="navigate"
+      :is-navigating="isNavigating"
+      :set-is-navigating="setIsNavigating"
+    />
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
     <Webgl />
@@ -12,14 +17,11 @@ import { mapActions, mapState } from 'vuex';
 
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
-import normalizeWheel from '~/utils/functions/normalizeWheel';
 
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
 import Section from '~/components/section/Section.vue';
 import Webgl from '~/components/webgl/Webgl.vue';
-
-const WHEEL_THRESHOLD = 10;
 
 export default {
   name: 'IndexPage',
@@ -33,7 +35,7 @@ export default {
 
   data() {
     return {
-      isNavigation: false,
+      isNavigating: false,
     };
   },
 
@@ -41,22 +43,8 @@ export default {
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
   },
 
-  watch: {
-    activeSection: 'onSectionChange',
-  },
-
   created() {
     this.setActiveChapterByUrlQuery();
-  },
-
-  mounted() {
-    window.addEventListener('wheel', this.onWheel);
-    window.addEventListener('keydown', this.onKeyDown);
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('wheel', this.onWheel);
-    window.removeEventListener('keydown', this.onKeyDown);
   },
 
   methods: {
@@ -69,44 +57,6 @@ export default {
         this.setActiveChapter(chapter);
         this.setActiveSection(chapter.sections[0]);
         this.setTheme(this.activeSection.theme || 'dark');
-      }
-    },
-
-    onSectionChange() {
-      this.setTheme(this.activeSection.theme || 'dark');
-    },
-
-    onWheel(event) {
-      if (this.isNavigating) {
-        return;
-      }
-
-      const { pixelY } = normalizeWheel(event);
-
-      if ((pixelY > WHEEL_THRESHOLD || pixelY < -WHEEL_THRESHOLD)) {
-        this.isNavigating = true;
-
-        if (pixelY > WHEEL_THRESHOLD) {
-          this.navigate(1);
-        } else {
-          this.navigate(-1);
-        }
-      }
-    },
-
-    onKeyDown({ key }) {
-      if (this.isNavigating) {
-        return;
-      }
-
-      this.isNavigating = true;
-
-      if (!this.galleryOpen) {
-        if (key === 'ArrowRight' || key === 'ArrowDown') {
-          this.navigate(1);
-        } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
-          this.navigate(-1);
-        }
       }
     },
 
@@ -125,7 +75,11 @@ export default {
 
       await delay(1000);
 
-      this.isNavigating = false;
+      this.setIsNavigating(false);
+    },
+
+    setIsNavigating(bool) {
+      this.isNavigating = bool;
     },
 
     ...mapActions('app', ['setTheme']),
