@@ -1,8 +1,7 @@
 .chapterNav {
-  position: absolute;
-  left: 4rem;
-  right: 4rem;
+  position: fixed;
   bottom: 4rem;
+  left: 0;
   color: var(--color-white-04);
   background: rgba(243, 243, 243, 0.1);
   border: 1px solid var(--color-white-005);
@@ -13,8 +12,10 @@
     border: 1px solid var(--color-black-005);
   }
 
-  @include maxMobile {
-    display: none;
+  @include minTablet {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
   }
 }
 
@@ -56,7 +57,7 @@
   font-size: clamp(10px, 1rem, 1rem);
   line-height: 4.3rem;
   white-space: nowrap;
-  padding-left: 3rem;
+  padding-left: 9rem;
 
   &::after {
     content: '›';
@@ -74,5 +75,9 @@
         color: var(--color-black);
       }
     }
+  }
+
+  @include minTablet {
+    padding-left: 3rem;
   }
 }
