@@ -12,6 +12,7 @@ import EqualizerVideo from '~/assets/svg/equalizerVideo.svg?inline=true';
 import Logo from '~/assets/svg/logo.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
 import Play from '~/assets/svg/play.svg?inline=true';
+import Plus from '~/assets/svg/plus.svg?inline=true';
 import PreloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
 import PreloaderProgress from '~/assets/svg/preloaderProgress.svg?inline=true';
 import PreloaderShape from '~/assets/svg/preloaderShape.svg?inline=true';
@@ -31,6 +32,7 @@ export default {
     Logo,
     MetaLegends,
     Play,
+    Plus,
     PreloaderLogo,
     PreloaderProgress,
     PreloaderShape,

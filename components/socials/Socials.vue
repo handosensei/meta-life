@@ -1,5 +1,5 @@
 <template>
-	<div class="social">
+	<div class="socials">
 		<a href="#" class="discordIcon" target="_blank" rel="noreferrer">
 			<Icon type="Discord" />
 		</a>

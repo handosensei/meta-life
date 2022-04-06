@@ -1,19 +1,8 @@
-.social {
-  position: absolute;
+.socials {
   display: flex;
   align-items: center;
   color: var(--color-white);
   font-size: clamp(10px, 1rem, 1rem);
-
-  @include maxMobile {
-    left: 0;
-    bottom: 0.3rem;
-  }
-
-  @include minTablet {
-    right: 5rem;
-    bottom: 0.6rem;
-  }
 
   span {
     color: var(--color-white-04);

@@ -1,9 +1,11 @@
 .footer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   bottom: 4rem;
   left: 4rem;
-  z-index: 8;
+  z-index: 7;
   width: calc(100% - 8rem);
   color: var(--color-white);
 

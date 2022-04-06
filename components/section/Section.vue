@@ -24,6 +24,7 @@ import normalizeWheel from '~/utils/functions/normalizeWheel';
 
 import SectionGallery from '~/components/gallery/Gallery.vue';
 import SectionHeading from '~/components/heading/Heading.vue';
+import SectionIntro from '~/components/intro/Intro.vue';
 import SectionText from '~/components/text/Text.vue';
 
 const WHEEL_THRESHOLD = 10;
@@ -34,6 +35,7 @@ export default {
   components: {
     SectionGallery,
     SectionHeading,
+    SectionIntro,
     SectionText,
   },
 

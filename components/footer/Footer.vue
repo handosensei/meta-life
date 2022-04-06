@@ -1,6 +1,5 @@
 <template>
   <footer class="footer">
-    <TrailerPreview />
     <Socials />
     <AudioPlayer />
   </footer>
@@ -9,7 +8,6 @@
 <script>
 import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
 import Socials from '~/components/socials/Socials.vue';
-import TrailerPreview from '~/components/trailerPreview/TrailerPreview.vue';
 
 export default {
   name: 'FooterComponent',
@@ -17,7 +15,6 @@ export default {
   components: {
     AudioPlayer,
     Socials,
-    TrailerPreview,
   },
 }
 </script>
