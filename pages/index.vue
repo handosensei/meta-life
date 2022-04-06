@@ -6,6 +6,18 @@
       :is-navigating="isNavigating"
       :set-is-navigating="setIsNavigating"
     />
+    <transition
+      name="galleryOverlayTransition"
+      :css="false"
+      @enter="onEnterGalleryOverlay"
+      @leave="onLeaveGalleryOverlay"
+    >
+      <GalleryOverlay
+        v-if="galleryOpen"
+        :active-item="activeGalleryItem"
+        :set-active-item="setActiveGalleryItem"
+      />
+    </transition>
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
     <Webgl />
@@ -13,6 +25,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
@@ -20,6 +33,7 @@ import delay from '~/utils/functions/delay';
 
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
+import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
 import Section from '~/components/section/Section.vue';
 import Webgl from '~/components/webgl/Webgl.vue';
 
@@ -29,6 +43,7 @@ export default {
   components: {
     ChapterNav,
     Footer,
+    GalleryOverlay,
     Section,
     Webgl,
   },
@@ -45,6 +60,14 @@ export default {
 
   created() {
     this.setActiveChapterByUrlQuery();
+  },
+
+  mounted() {
+    this.$root.$on('galleryOverlay:toggle', this.onToggleGalleryOverlay);
+  },
+
+  beforeDestroy() {
+    this.$root.$off('galleryOverlay:toggle', this.onToggleGalleryOverlay);
   },
 
   methods: {
@@ -82,8 +105,43 @@ export default {
       this.isNavigating = bool;
     },
 
+    setActiveGalleryItem(item) {
+      if (item === this.activeGalleryItem) {
+        return;
+      }
+
+      this.activeGalleryItem = item;
+    },
+    
+    onToggleGalleryOverlay(item) {
+      this.activeGalleryItem = item;
+      this.setGalleryOpen(!this.galleryOpen);
+
+      if (this.galleryOpen) {
+        this.setTheme('dark');
+      } else {
+        this.setTheme(this.activeSection.theme);
+      }
+    },
+
+    onEnterGalleryOverlay(el) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 },
+      );
+    },
+
+    onLeaveGalleryOverlay(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, onComplete: done },
+      );
+    },
+
     ...mapActions('app', ['setTheme']),
-    ...mapActions('home', ['setActiveChapter', 'setActiveSection']),
+    ...mapActions('home', ['setActiveChapter', 'setActiveSection', 'setGalleryOpen']),
   },
 };
 </script>

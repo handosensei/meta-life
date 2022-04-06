@@ -19,7 +19,7 @@
         <button
           class="backButton"
           type="button"
-          @click="toggleOverlay('')"
+          @click="onClose"
         >
           <Icon class="closeIcon" type="Close" />
           Back to gallery
@@ -66,16 +66,6 @@ export default {
       required: true,
     },
 
-    items: {
-      type: Array,
-      required: true,
-    },
-
-    toggleOverlay: {
-      type: Function,
-      required: true,
-    },
-
     setActiveItem: {
       type: Function,
       required: true,
@@ -114,7 +104,7 @@ export default {
 
     onKeyDown({ key }) {
       if (key === 'Escape' && !this.menuOpen) {
-        this.toggleOverlay('');
+        this.$root.$emit('galleryOverlay:toggle', '');
         this.setTheme(this.activeSection.theme);
       }
 
@@ -128,7 +118,7 @@ export default {
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
         let prevIndex;
         if (currentIndex === 0) {
-          prevIndex = this.items.length - 1;
+          prevIndex = this.activeItem.slides.length - 1;
         } else {
           prevIndex = currentIndex - 1;
         }
@@ -136,6 +126,10 @@ export default {
         const prevItem = this.activeItem.slides[prevIndex];
         this.setActiveSlide(prevItem);
       }
+    },
+
+    onClose() {
+      this.$root.$emit('galleryOverlay:toggle', '');
     },
 
     ...mapActions('app', ['setTheme']),
