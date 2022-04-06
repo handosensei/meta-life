@@ -6,6 +6,7 @@
       <Menu v-if="menuOpen" />
     </FocusLock>
     <Nuxt />
+    <Webgl />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import throttle from '~/utils/functions/throttle';
 import Header from '~/components/header/Header.vue';
 import Menu from '~/components/menu/Menu.vue';
 import Preloader from '~/components/preloader/Preloader.vue';
+import Webgl from '~/components/webgl/Webgl.vue';
 
 export default {
   name: 'DefaultLayout',
@@ -31,6 +33,7 @@ export default {
     Header,
     Menu,
     Preloader,
+    Webgl,
   },
 
   mixins: [AssetsLoader],

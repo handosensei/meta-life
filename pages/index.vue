@@ -20,7 +20,6 @@
     </transition>
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
-    <Webgl />
   </main>
 </template>
 
@@ -35,7 +34,6 @@ import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
 import Section from '~/components/section/Section.vue';
-import Webgl from '~/components/webgl/Webgl.vue';
 
 export default {
   name: 'IndexPage',
@@ -45,7 +43,6 @@ export default {
     Footer,
     GalleryOverlay,
     Section,
-    Webgl,
   },
 
   data() {
