@@ -90,6 +90,7 @@ export default {
     },
 
     onRouteChange() {
+      // Close menu if open
       if (this.menuOpen) {
         this.setMenuOpen(false);
       }

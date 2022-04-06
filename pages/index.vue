@@ -56,6 +56,8 @@ export default {
   },
 
   created() {
+    this.setActiveChapter(this.chapters[0]);
+    this.setActiveSection(this.chapters[0].sections[0]);
     this.setActiveChapterByUrlQuery();
   },
 
