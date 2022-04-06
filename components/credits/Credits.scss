@@ -1,0 +1,31 @@
+.credits {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 8.1rem;
+  height: 2.7rem;
+  z-index: 1;
+
+  @include minTablet {
+    left: 8rem;
+    bottom: 8rem;
+  }
+}
+
+.sub {
+  margin-left: 3.5rem;
+  font-size: clamp(10px, 1rem, 1rem);
+  color: var(--color-white-05);
+  z-index: 1;
+}
+
+.subLink {
+  text-decoration: underline;
+  color: var(--color-white);
+
+  &.focus-visible:focus {
+    outline-color: var(--color-white);
+  }
+}

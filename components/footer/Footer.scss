@@ -15,3 +15,23 @@
     width: calc(100% - 16rem);
   }
 }
+
+.footerCredits {
+  @include maxMobile {
+    display: none;
+  }
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+
+  @include maxMobile {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.footerSocials {
+  margin-right: 3rem;
+}

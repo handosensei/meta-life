@@ -12,11 +12,7 @@
       </li>
     </ol>
 
-    <Icon class="menuLogo" type="MetaLegends" />
-
-    <div class="menuSub">
-      visit : <a class="menuSubLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a>
-    </div>
+    <Credits class="menuCredits" />
 
     <div class="menuBg" />
   </nav>
@@ -25,13 +21,13 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 
-import Icon from '~/components/elements/Icon.vue';
+import Credits from '~/components/credits/Credits.vue';
 
 export default {
   name: 'MenuComponent',
 
   components: {
-    Icon,
+    Credits,
   },
 
   data() {

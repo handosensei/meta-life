@@ -1,12 +1,17 @@
 <template>
   <footer class="footer">
-    <Socials />
-    <AudioPlayer />
+    <Credits class="footerCredits" />
+
+    <div class="footerRight">
+      <Socials class="footerSocials" />
+      <AudioPlayer />
+    </div>
   </footer>
 </template>
 
 <script>
 import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
+import Credits from '~/components/credits/Credits.vue';
 import Socials from '~/components/socials/Socials.vue';
 
 export default {
@@ -14,6 +19,7 @@ export default {
 
   components: {
     AudioPlayer,
+    Credits,
     Socials,
   },
 }
