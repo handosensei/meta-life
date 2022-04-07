@@ -4,13 +4,22 @@
     :class="{ 'isFilled': filled }"
     :type="type"
     @click="onClick"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
-    <Icon :type="icon" />
+    <Icon ref="icon" :type="icon" />
   </button>
 </template>
 
 <script>
+import { gsap } from 'gsap';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+
 import Icon from '~/components/elements/Icon.vue';
+
+if (process.client) {
+  gsap.registerPlugin(DrawSVGPlugin);
+}
 
 export default {
   name: 'IconButtonComponent',
@@ -42,6 +51,65 @@ export default {
       default: 'button',
     },
   },
+  
+  mounted() {
+    this.iconEl = this.$refs.icon.$el;
+    this.iconPath = this.iconEl.firstChild;
+
+    this.init();
+  },
+
+  methods: {
+    init() {
+      gsap.set(this.iconPath, { drawSVG: '0%' });
+    },
+
+    onMouseEnter() {
+      gsap.fromTo(
+        this.iconPath,
+        { drawSVG: '0%' },
+        { drawSVG: '100%', ease: 'expo.out', duration: 0.5 }
+      );
+
+      if (this.icon === 'Burger') {
+        const lines = this.iconEl.querySelectorAll('line');
+
+        gsap.fromTo(
+          [lines[0], lines[2]],
+          { drawSVG: '100%' },
+          { drawSVG: '50%', ease: 'expo.out', stagger: 0.1, duration: 0.5 }
+        );
+      }
+
+      if (this.icon === 'CloseButton') {
+        const lines = this.iconEl.querySelectorAll('path');
+
+        gsap.fromTo(
+          lines[1],
+          { rotate: 0, transformOrigin: 'center' },
+          { rotate: 90, ease: 'expo.out', duration: 0.5 }
+        );
+      }
+    },
+
+    onMouseLeave() {
+      gsap.fromTo(
+        this.iconPath,
+        { drawSVG: '-100%' },
+        { drawSVG: '0%', ease: 'expo.out', duration: 0.5 }
+      );
+
+      if (this.icon === 'Burger') {
+        const lines = this.iconEl.querySelectorAll('line');
+
+        gsap.fromTo(
+          [lines[0], lines[2]],
+          { drawSVG: '50%' },
+          { drawSVG: '100%', ease: 'expo.out', stagger: 0.1, duration: 0.5 }
+        );
+      }
+    }
+  }
 };
 </script>
 

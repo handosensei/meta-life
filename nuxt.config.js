@@ -46,6 +46,11 @@ export default {
     transpile: ['gsap'],
   },
 
+  // Routing: https://nuxtjs.org/docs/get-started/routing
+  router: {
+    linkExactActiveClass: 'isExactActive',
+  },
+
   // Server Configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-server
   server: {
     host: '0.0.0.0',

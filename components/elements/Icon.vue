@@ -3,13 +3,14 @@
 </template>
 
 <script>
-import Burger from '~/assets/svg/burger.svg?inline=true';
 import Close from '~/assets/svg/close.svg?inline=true';
+import CloseButton from '~/assets/svg/closeButton.svg?inline=true';
 import Discord from '~/assets/svg/discord.svg?inline=true';
 import Discover from '~/assets/svg/discover.svg?inline=true';
 import Equalizer from '~/assets/svg/equalizer.svg?inline=true';
 import EqualizerVideo from '~/assets/svg/equalizerVideo.svg?inline=true';
-import Logo from '~/assets/svg/logo.svg?inline=true';
+import LogoButton from '~/assets/svg/logoButton.svg?inline=true';
+import MenuButton from '~/assets/svg/menuButton.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
 import Play from '~/assets/svg/play.svg?inline=true';
 import Plus from '~/assets/svg/plus.svg?inline=true';
@@ -23,13 +24,14 @@ export default {
   name: 'IconComponent',
 
   components: {
-    Burger,
     Close,
+    CloseButton,
     Discord,
     Discover,
     Equalizer,
     EqualizerVideo,
-    Logo,
+    LogoButton,
+    MenuButton,
     MetaLegends,
     Play,
     Plus,

@@ -3,7 +3,15 @@
     <Preloader v-if="!assetsPreloaded" />
     <FocusLock :disabled="!menuOpen">
       <Header />
-      <Menu v-if="menuOpen" />
+      <transition
+        name="menuTransition"
+        mode="out-in"
+        :css="false"
+        @enter="onMenuEnter"
+        @leave="onMenuLeave"
+      >
+        <Menu v-if="menuOpen" ref="menu" />
+      </transition>
     </FocusLock>
     <Nuxt />
     <Webgl />
@@ -94,6 +102,14 @@ export default {
       if (this.menuOpen) {
         this.setMenuOpen(false);
       }
+    },
+
+    onMenuEnter() {
+      this.$refs.menu.enter();
+    },
+
+    onMenuLeave(_, done) {
+      this.$refs.menu.leave(done);
     },
 
     ...mapActions('app', ['setWindowSize', 'setMenuOpen']),

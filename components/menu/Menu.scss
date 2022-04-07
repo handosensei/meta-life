@@ -3,59 +3,107 @@
   inset: 0;
   z-index: 9;
   color: var(--color-white);
-  background-color: var(--color-concrete);
-  counter-reset: digit;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+  @include maxMobile {
+    text-align: center;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.1;
+  width: 13ch;
+  text-align: center;
+
+  @include minTablet {
+    font-size: 8rem;
+    line-height: 0.9;
+  }
 }
 
 .menuList {
-  position: absolute;
-  top: 50%;
-  left: 8rem;
-  z-index: 1;
-  transform: translateY(-50%);
   list-style: none;
   padding: 0;
+  margin-top: 3rem;
 
   @include minTablet {
-    left: 20rem;
+    display: inline-flex;
+    margin-top: 4rem;
   }
 }
 
 .menuItem {
-  counter-increment: digit;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  @include minTablet {
+    &:not(:last-child) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .menuLink {
   position: relative;
-  font-size: clamp(40px, 4rem, 4rem);
-  line-height: 110%;
+  font-size: clamp(14px, 1.4rem, 1.4rem);
+  line-height: 1.3;
   letter-spacing: -0.01em;
   color: var(--color-white);
+  opacity: 0.5;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 8px;
-    height: 8px;
-    line-height: 6px;
-    content: counter(digit);
-    font-size: 4px;
-    border-radius: 50%;
-    border: 1px solid var(--color-white-04);
-    text-align: center;
+  &.isExactActive {
+    opacity: 1;
+    text-decoration: underline;
   }
 
   &.focus-visible:focus {
     outline-color: var(--color-white);
   }
+
+  @media (hover: hover) {
+    transition: 0.3s opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .menuCredits {
   position: absolute;
-  left: 4rem;
-  bottom: 4rem;
+  left: 7.5rem;
+  bottom: 5rem;
+
+  @include maxMobile {
+    right: 7.5rem;
+  }
+
+  @include minTablet {
+    left: 8rem;
+    bottom: 9rem;
+  }
+}
+
+::v-deep .sub {
+  @include maxMobile {
+    margin-left: auto;
+  }
 }
 
 .menuBg {

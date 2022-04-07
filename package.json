@@ -34,7 +34,7 @@
     "@antinomy-studio/sniffer": "git+https://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:x-oauth-basic@github.com/antinomy-studio/sniffer.git",
     "core-js": "^3.19.3",
     "focus-visible": "^5.2.0",
-    "gsap": "^3.9.1",
+    "gsap": "file:assets/gsap-bonus.tgz",
     "nuxt": "^2.15.8",
     "nuxt-polyfill": "^1.0.3",
     "requestidlecallback-polyfill": "^1.0.2",
