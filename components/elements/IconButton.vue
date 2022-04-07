@@ -1,14 +1,21 @@
 <template>
-  <button
+  <component
+    :is="as"
     class="iconButton"
     :class="{ 'isFilled': filled }"
-    :type="type"
+    :href="isLink ? href : null"
+    :to="as === 'NuxtLink' ? href : null"
+    :target="as === 'a' && target === '_blank' ? target : null"
+    :type="as === 'button' ? type : null"
     @click="onClick"
-    @mouseenter="onMouseEnter"
-    @mouseleave="onMouseLeave"
   >
-    <Icon ref="icon" :type="icon" />
-  </button>
+    <span
+      @mouseenter="onMouseEnter"
+      @mouseleave="onMouseLeave"
+    >
+      <Icon ref="icon" :type="icon" />
+    </span>
+  </component>
 </template>
 
 <script>
@@ -29,10 +36,22 @@ export default {
   },
 
   props: {
+    as: {
+      type: String,
+      required: false,
+      default: 'NuxtLink',
+    },
+    
     filled: {
       type: Boolean,
       required: false,
       default: false,
+    },
+
+    href: {
+      type: String,
+      required: false,
+      default: '',
     },
 
     icon: {
@@ -42,13 +61,26 @@ export default {
 
     onClick: {
       type: Function,
-      required: true,
+      required: false,
+      default: () => {},
+    },
+
+    target: {
+      type: String,
+      required: false,
+      default: '_self',
     },
 
     type: {
       type: String,
       required: false,
       default: 'button',
+    },
+  },
+
+  computed: {
+    isLink() {
+      return this.as === 'NuxtLink' || this.as === 'a';
     },
   },
   

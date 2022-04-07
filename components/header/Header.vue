@@ -2,21 +2,23 @@
   <header class="header" :class="{ 'isDark': theme === 'light', 'menuOpen': menuOpen }">
     <IconButton
       ref="menuButton"
+      as="button"
       class="menuButton"
       icon="MenuButton"
       :on-click="onMenuButtonClick"
     />
     <IconButton
       ref="closeButton"
+      as="button"
       class="closeButton"
       icon="CloseButton"
       :on-click="onMenuButtonClick"
     />
     <IconButton
       v-if="!videoPlayerOpen"
+      href="/"
       class="logoButton"
       icon="LogoButton"
-      :on-click="() => {}"
     />
   </header>
 </template>
