@@ -7,6 +7,7 @@
     :to="as === 'NuxtLink' ? href : null"
     :target="as === 'a' && target === '_blank' ? target : null"
     :type="as === 'button' ? type : null"
+    :disabled="disabled"
     @click="onClick"
   >
     <span
@@ -40,6 +41,12 @@ export default {
       type: String,
       required: false,
       default: 'NuxtLink',
+    },
+    
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
     
     filled: {

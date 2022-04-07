@@ -16,4 +16,8 @@
   .isDark & {
     color: var(--color-black);
   }
+
+  span {
+    display: block;
+  }
 }

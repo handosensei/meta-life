@@ -5,6 +5,7 @@
       as="button"
       class="menuButton"
       icon="MenuButton"
+      :disabled="menuOpen || videoPlayerOpen"
       :on-click="onMenuButtonClick"
     />
     <IconButton
@@ -12,6 +13,7 @@
       as="button"
       class="closeButton"
       icon="CloseButton"
+      :disabled="!menuOpen && !videoPlayerOpen"
       :on-click="onMenuButtonClick"
     />
     <IconButton
@@ -76,7 +78,7 @@ export default {
 
     initCloseButton() {
       gsap.set(
-        this.$refs.closeButton.$el,
+        this.$refs.closeButton.$el.firstChild,
         { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` }
       );
     },
@@ -84,13 +86,13 @@ export default {
     onMenuButtonToggle() {
       if (this.menuOpen || this.galleryOpen) {
         gsap.fromTo(
-          this.$refs.closeButton.$el,
+          this.$refs.closeButton.$el.firstChild,
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%', duration: 1.5, ease: 'expo.inOut' },
         );
       } else {
         gsap.fromTo(
-          this.$refs.closeButton.$el,
+          this.$refs.closeButton.$el.firstChild,
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%' },
           { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
         );
