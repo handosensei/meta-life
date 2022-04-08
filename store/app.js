@@ -7,6 +7,7 @@ export const state = () => ({
   menuOpen: false,
   previousTheme: '',
   theme: 'dark',
+  preloaderVisible: true,
   videoPlayerOpen: false,
 });
 
@@ -29,6 +30,10 @@ export const actions = {
 
   setTheme({ commit }, theme) {
     commit('SET_THEME', theme);
+  },
+
+  setPreloaderVisible({ commit }, bool) {
+    commit('SET_PRELOADER_VISIBLE', bool);
   },
 
   setVideoPlayerOpen({ commit }, bool) {
@@ -60,6 +65,10 @@ export const mutations = {
 
   SET_THEME(state, payload) {
     state.theme = payload;
+  },
+
+  SET_PRELOADER_VISIBLE(state, payload) {
+    state.preloaderVisible = payload;
   },
 
   SET_VIDEO_PLAYER_OPEN(state, payload) {

@@ -71,12 +71,13 @@ export default {
   },
 
   computed: {
-    ...mapState('app', ['menuOpen']),
+    ...mapState('app', ['menuOpen', 'preloaderVisible']),
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
   },
 
   watch: {
     activeSection: 'onSectionChange',
+    preloaderVisible: 'onPageReady',
   },
 
   created() {
@@ -87,7 +88,11 @@ export default {
 
   mounted() {
     this.$root.$on('galleryOverlay:toggle', this.onToggleGalleryOverlay);
-    this.onSectionEnter();
+    
+    // If skipping the preloader through the url (skipIntro=true)
+    if (!this.preloaderVisible) {
+      this.onSectionEnter();
+    }
   },
 
   beforeDestroy() {
@@ -95,6 +100,12 @@ export default {
   },
 
   methods: {
+    onPageReady() {
+      if (!this.preloaderVisible) {
+        this.onSectionEnter();
+      }
+    },
+
     onSectionChange() {
       this.setTheme(this.activeSection.theme || 'dark');
     },

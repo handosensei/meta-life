@@ -1,6 +1,12 @@
 <template>
   <div>
-    <Preloader v-if="!assetsPreloaded" />
+    <transition
+      name="preloaderTransition"
+      :css="false"
+      @leave="onPreloaderLeave"
+    >
+      <Preloader v-if="!assetsPreloaded" ref="preloader" />
+    </transition>
     <FocusLock :disabled="!menuOpen">
       <Header />
       <transition
@@ -102,6 +108,10 @@ export default {
       if (this.menuOpen) {
         this.setMenuOpen(false);
       }
+    },
+
+    onPreloaderLeave(_, done) {
+      this.$refs.preloader.leave(done);
     },
 
     onMenuEnter() {

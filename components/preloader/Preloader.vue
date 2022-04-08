@@ -32,16 +32,28 @@ export default {
     Icon,
   },
 
+  data() {
+    return {
+      skipIntro: false,
+    };
+  },
+
   created() {
     const { skipIntro } = this.$router.history.current.query;
+    this.skipIntro = skipIntro;
 
     if (skipIntro) {
       this.setAssetsPreloaded();
+      this.setPreloaderVisible(false);
     }
   },
 
   mounted() {
     this.preloadGalleryThumbs();
+
+    if (!this.skipIntro) {
+      this.enter();
+    }
 
     const progress = {
       value: 0,
@@ -51,7 +63,7 @@ export default {
     gsap.to(
       progress,
       {
-        duration: 2,
+        duration: 2, // TEMP: set duration equal to duration of enter animation
         value: progress.end,
         onUpdate: () => this.updateProgress(progress.value),
         onComplete: this.setAssetsPreloaded
@@ -75,7 +87,16 @@ export default {
       this.$refs.progressCount.innerHTML = `${value.toFixed()}%`;
     },
 
-    ...mapActions('app', ['setAssetsPreloaded']),
+    enter() {
+      
+    },
+
+    leave(done) {
+      this.setPreloaderVisible(false);
+      done();
+    },
+
+    ...mapActions('app', ['setAssetsPreloaded', 'setPreloaderVisible']),
   },
 }
 </script>
