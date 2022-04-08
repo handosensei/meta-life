@@ -1,19 +1,36 @@
 <template>
   <FocusLock :disabled="!galleryOpen || menuOpen">
     <div class="galleryOverlay">
-      <div class="content">
-        <div class="head">
-          <div class="title">{{ activeSlide.title }}</div>
-          <div class="subtitle">{{ activeItem.category }}</div>
-        </div>
-        <p class="text">{{ activeSlide.text }}</p>
-      </div>
-
-      <img
-        class="backgroundImage"
-        :src="activeSlide.image.highres.src"
-        :alt="activeSlide.image.highres.alt"
+      <transition
+        :css="false"
+        name="galleryOverlayContentTransition"
+        @enter="onEnterContent"
+        @leave="onLeaveContent"
       >
+        <div :key="activeSlide.title" class="content">
+          <div class="head">
+            <div class="title">{{ activeSlide.title }}</div>
+            <div class="subtitle">{{ activeItem.category }}</div>
+          </div>
+          <p class="text">{{ activeSlide.text }}</p>
+        </div>
+      </transition>
+
+      <div class="backgroundImages">
+        <transition
+          :css="false"
+          name="galleryOverlayImageTransition"
+          @enter="onEnterImage"
+          @leave="onLeaveImage"
+        >
+          <img
+            :key="activeSlide.image.highres.src"
+            class="backgroundImage"
+            :src="activeSlide.image.highres.src"
+            :alt="activeSlide.image.highres.alt"
+          >
+        </transition>
+      </div>
 
       <nav class="nav">
         <button
@@ -47,6 +64,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
@@ -130,6 +148,38 @@ export default {
 
     onClose() {
       this.$root.$emit('galleryOverlay:toggle', '');
+    },
+
+    onEnterImage(el) {
+      gsap.fromTo(
+        el,
+        { scale: 1.5, zIndex: 1 },
+        { scale: 1, duration: 2, ease: 'expo.out' },
+      );
+    },
+
+    onLeaveImage(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1, zIndex: 2 },
+        { autoAlpha: 0, duration: 2, ease: 'expo.out', onComplete: done },
+      );
+    },
+
+    onEnterContent(el) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 },
+      );
+    },
+
+    onLeaveContent(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, onComplete: done },
+      );
     },
 
     ...mapActions('app', ['setTheme']),
