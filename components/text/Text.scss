@@ -30,6 +30,10 @@
   }
 }
 
+::v-deep .paragraph-line {
+  will-change: transform;
+}
+
 .positionCenterTop {
   top: 27vh;
   left: 50%;

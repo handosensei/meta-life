@@ -12,12 +12,17 @@
     @mouseleave="onDragEnd"
     @wheel="onWheel"
   >
-    <component :is="component.name" v-bind="component" />
+    <component
+      :is="component.name"
+      ref="component"
+      v-bind="component"
+    />
   </section>
 </template>
 
 <script>
 import sniffer from '@antinomy-studio/sniffer';
+import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 import normalizeWheel from '~/utils/functions/normalizeWheel';
@@ -71,10 +76,6 @@ export default {
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
   },
 
-  watch: {
-    activeSection: 'onSectionChange',
-  },
-
   mounted() {
     window.addEventListener('keydown', this.onKeyDown);
   },
@@ -84,10 +85,6 @@ export default {
   },
 
   methods: {
-    onSectionChange() {
-      this.setTheme(this.activeSection.theme || 'dark');
-    },
-
     onWheel(event) {
       if (this.isNavigating || this.menuOpen || this.galleryOpen) {
         return;
@@ -96,8 +93,6 @@ export default {
       const { pixelY } = normalizeWheel(event);
 
       if ((pixelY > WHEEL_THRESHOLD || pixelY < -WHEEL_THRESHOLD)) {
-        this.setIsNavigating(true);
-
         if (pixelY > WHEEL_THRESHOLD) {
           this.navigate(1);
         } else {
@@ -132,10 +127,8 @@ export default {
 
       if (Math.abs(this.delta) > this.windowSize.height / multiply) {
         if (this.delta < 0) {
-          this.setIsNavigating(true);
           this.navigate(1);
         } else {
-          this.setIsNavigating(true);
           this.navigate(-1);
         }
       }
@@ -148,12 +141,33 @@ export default {
       }
 
       if (key === 'ArrowRight' || key === 'ArrowDown') {
-        this.setIsNavigating(true);
         this.navigate(1);
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
-        this.setIsNavigating(true);
         this.navigate(-1);
       }
+    },
+
+    getEnterTl() {
+      const tl = gsap.timeline();
+      const componentTl = this.$refs.component.getEnterTl();
+
+      tl
+        .addLabel('start')
+        .call(() => {
+          this.$root.$emit('background:switchColor', this.activeSection.theme)
+        })
+        .add(componentTl, 'start')
+
+      return tl;
+    },
+
+    getLeaveTl() {
+      const tl = gsap.timeline();
+      const componentTl = this.$refs.component.getLeaveTl();
+
+      tl.add(componentTl);
+
+      return tl;
     },
 
     ...mapActions('app', ['setTheme']),

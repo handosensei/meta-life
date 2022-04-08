@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 export default {
@@ -62,6 +63,32 @@ export default {
 
     onToggleOverlay(item) {
       this.$root.$emit('galleryOverlay:toggle', item);
+    },
+
+    getEnterTl() {
+      const tl = gsap.timeline();
+
+      tl
+        .fromTo(
+          this.$el,
+          { autoAlpha: 0 },
+          { autoAlpha: 1 },
+        );
+
+      return tl;
+    },
+
+    getLeaveTl() {
+      const tl = gsap.timeline();
+
+      tl
+        .fromTo(
+          this.$el,
+          { autoAlpha: 1 },
+          { autoAlpha: 0 },
+        );
+
+      return tl;
     },
 
     ...mapActions('app', ['setTheme']),

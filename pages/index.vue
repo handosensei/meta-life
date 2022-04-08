@@ -1,16 +1,27 @@
 <template>
   <main>
-    <Section
-      v-bind="activeSection"
-      :navigate="navigate"
-      :is-navigating="isNavigating"
-      :set-is-navigating="setIsNavigating"
-    />
+    <transition
+      name="sectionTransition"
+      mode="out-in"
+      :css="false"
+      @enter="onSectionEnter"
+      @leave="onSectionLeave"
+    >
+      <Section
+        ref="section"
+        :key="activeSection.id"
+        v-bind="activeSection"
+        :navigate="navigate"
+        :is-navigating="isNavigating"
+        :set-is-navigating="setIsNavigating"
+      />
+    </transition>
+
     <transition
       name="galleryOverlayTransition"
       :css="false"
-      @enter="onEnterGalleryOverlay"
-      @leave="onLeaveGalleryOverlay"
+      @enter="onGalleryOverlayEnter"
+      @leave="onGalleryOverlayLeave"
     >
       <GalleryOverlay
         v-if="galleryOpen"
@@ -20,8 +31,10 @@
     </transition>
 
     <TunnelSquares ref="tunnelSquares" />
+    <Background />
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
+    <Footer v-if="activeSection.footerVisible" />
   </main>
 </template>
 
@@ -32,6 +45,7 @@ import { mapActions, mapState } from 'vuex';
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
 
+import Background from '~/components/background/Background.vue';
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
@@ -42,6 +56,7 @@ export default {
   name: 'IndexPage',
 
   components: {
+    Background,
     ChapterNav,
     Footer,
     GalleryOverlay,
@@ -56,7 +71,12 @@ export default {
   },
 
   computed: {
+    ...mapState('app', ['menuOpen']),
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
+  },
+
+  watch: {
+    activeSection: 'onSectionChange',
   },
 
   created() {
@@ -67,6 +87,7 @@ export default {
 
   mounted() {
     this.$root.$on('galleryOverlay:toggle', this.onToggleGalleryOverlay);
+    this.onSectionEnter();
   },
 
   beforeDestroy() {
@@ -74,6 +95,10 @@ export default {
   },
 
   methods: {
+    onSectionChange() {
+      this.setTheme(this.activeSection.theme || 'dark');
+    },
+
     setActiveChapterByUrlQuery() {
       const { chapter: chapterId } = this.$router.history.current.query;
       const chapter = this.chapters.find(({ id }) => id === chapterId);
@@ -87,6 +112,12 @@ export default {
     },
 
     async navigate(dir) {
+      if (this.isNavigating || this.menuOpen || this.galleryOpen) {
+        return;
+      }
+
+      this.setIsNavigating(true);
+
       if (dir === -1) {
         const { chapter, section } = goToPreviousSection(this.chapters, this.activeChapter, this.activeSection);
         this.setActiveChapter(chapter);
@@ -129,7 +160,7 @@ export default {
       }
     },
 
-    onEnterGalleryOverlay(el) {
+    onGalleryOverlayEnter(el) {
       gsap.fromTo(
         el,
         { autoAlpha: 0 },
@@ -137,12 +168,26 @@ export default {
       );
     },
 
-    onLeaveGalleryOverlay(el, done) {
+    onGalleryOverlayLeave(el, done) {
       gsap.fromTo(
         el,
         { autoAlpha: 1 },
         { autoAlpha: 0, onComplete: done },
       );
+    },
+
+    onSectionLeave(el, done) {
+      const tl = gsap.timeline({ onComplete: done });
+      const sectionTl = this.$refs.section.getLeaveTl();
+
+      tl.add(sectionTl);
+    },
+
+    onSectionEnter(el) {
+      const tl = gsap.timeline();
+      const sectionTl = this.$refs.section.getEnterTl();
+
+      tl.add(sectionTl);
     },
 
     ...mapActions('app', ['setTheme']),

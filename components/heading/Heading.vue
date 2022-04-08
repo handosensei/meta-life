@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
+
 import Icon from '~/components/elements/Icon.vue';
 
 export default {
@@ -41,7 +43,35 @@ export default {
       required: false,
       default: () => {}
     },
-  }
+  },
+
+  methods: {
+    getEnterTl() {
+      const tl = gsap.timeline();
+
+      tl
+        .fromTo(
+          this.$el,
+          { autoAlpha: 0 },
+          { autoAlpha: 1 },
+        );
+
+      return tl;
+    },
+
+    getLeaveTl() {
+      const tl = gsap.timeline();
+
+      tl
+        .fromTo(
+          this.$el,
+          { autoAlpha: 1 },
+          { autoAlpha: 0 },
+        );
+
+      return tl;
+    }
+  },
 }
 </script>
 

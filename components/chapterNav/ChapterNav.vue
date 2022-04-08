@@ -1,7 +1,7 @@
 <template>
   <nav
     class="chapterNav"
-    :class="{ 'isLight': theme === 'light' }"
+    :class="{ 'isLight': theme === 'light', 'isDisabled': disabled }"
   >
     <ul class="navList">
       <li
@@ -31,6 +31,7 @@ import { mapActions, mapState } from 'vuex';
 
 import BREAKPOINTS from '~/utils/config/breakpoints';
 import { getChapterIndex } from '~/utils/functions/chapterHelpers';
+import delay from '~/utils/functions/delay';
 
 export default {
   name: 'ChapterNavComponent',
@@ -38,6 +39,7 @@ export default {
   data() {
     return {
       bounds: [],
+      disabled: false,
     };
   },
 
@@ -57,10 +59,12 @@ export default {
   mounted() {
     this.setBounds();
     this.$root.$on('window:resize', this.onResize);
+    this.$root.$on('section:navigate', this.onSectionNavigation);
   },
 
   beforeDestroy() {
     this.$root.$off('window:resize', this.onResize);
+    this.$root.$off('section:navigate', this.onSectionNavigation);
   },
 
   methods: {
@@ -105,9 +109,15 @@ export default {
       }
     },
 
-    onClick(chapter) {
+    async onClick(chapter) {
+      this.disabled = true;
+
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
+
+      await delay(1000);
+      
+      this.disabled = false;
     },
 
     ...mapActions('home', ['setActiveChapter', 'setActiveSection']),

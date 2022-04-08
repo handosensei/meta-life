@@ -10,7 +10,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionIntro",
-            "title": "Play, <span class=\"purple\">Explore,</span> <span class=\"green\">Earn.</span>",
+            "title": "Play, Explore, Earn.</span>",
             "subtitle": "welcome to the future",
             "text": "Enter the metaverse and discover a<br>law-droppina world.",
             "galleryItems": [

@@ -110,7 +110,7 @@ export default {
         { drawSVG: '100%', ease: 'expo.out', duration: 0.5 }
       );
 
-      if (this.icon === 'Burger') {
+      if (this.icon === 'MenuButton') {
         const lines = this.iconEl.querySelectorAll('line');
 
         gsap.fromTo(
@@ -138,7 +138,7 @@ export default {
         { drawSVG: '0%', ease: 'expo.out', duration: 0.5 }
       );
 
-      if (this.icon === 'Burger') {
+      if (this.icon === 'MenuButton') {
         const lines = this.iconEl.querySelectorAll('line');
 
         gsap.fromTo(
