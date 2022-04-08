@@ -134,7 +134,7 @@ export default {
 
       this.$refs.tunnelSquares.animate(dir);
 
-      await delay(1000);
+      await delay(this.$root.sectionTransitionDuration);
 
       this.setIsNavigating(false);
     },

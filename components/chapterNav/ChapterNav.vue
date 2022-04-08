@@ -115,7 +115,7 @@ export default {
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
 
-      await delay(1000);
+      await delay(this.$root.sectionTransitionDuration);
       
       this.disabled = false;
     },
