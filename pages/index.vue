@@ -43,7 +43,14 @@
       <ChapterNav v-if="!activeSection.navHidden" />
     </transition>
     
-    <Footer v-if="activeSection.footerVisible" />
+    <transition
+      name="footerTransition"
+      :css="false"
+      @enter="onFooterEnter"
+      @leave="onFooterLeave"
+    >
+      <Footer v-if="activeSection.footerVisible" />
+    </transition>
   </main>
 </template>
 
@@ -196,6 +203,22 @@ export default {
     },
 
     onChapterNavLeave(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, onComplete: done },
+      );
+    },
+
+    onFooterEnter(el) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 },
+      );
+    },
+
+    onFooterLeave(el, done) {
       gsap.fromTo(
         el,
         { autoAlpha: 1 },
