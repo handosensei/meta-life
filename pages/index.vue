@@ -33,7 +33,16 @@
     <TunnelSquares ref="tunnelSquares" />
     <Background />
     <Footer v-if="activeSection.footerVisible" />
-    <ChapterNav v-if="!activeSection.navHidden" />
+
+    <transition
+      name="chapterNavTransition"
+      :css="false"
+      @enter="onChapterNavEnter"
+      @leave="onChapterNavLeave"
+    >
+      <ChapterNav v-if="!activeSection.navHidden" />
+    </transition>
+    
     <Footer v-if="activeSection.footerVisible" />
   </main>
 </template>
@@ -171,6 +180,22 @@ export default {
     },
 
     onGalleryOverlayLeave(el, done) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, onComplete: done },
+      );
+    },
+
+    onChapterNavEnter(el) {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        { autoAlpha: 1 },
+      );
+    },
+
+    onChapterNavLeave(el, done) {
       gsap.fromTo(
         el,
         { autoAlpha: 1 },
