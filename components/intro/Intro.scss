@@ -56,6 +56,7 @@
   position: absolute;
   width: 14.5rem;
   height: 14.5rem;
+  border-radius: 50%; // For better focus state
 
   &:first-child {
     top: 14.89vh;
