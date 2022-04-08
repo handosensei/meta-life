@@ -18,6 +18,8 @@
         :set-active-item="setActiveGalleryItem"
       />
     </transition>
+
+    <TunnelSquares ref="tunnelSquares" />
     <Footer v-if="activeSection.footerVisible" />
     <ChapterNav v-if="!activeSection.navHidden" />
   </main>
@@ -34,6 +36,7 @@ import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import Footer from '~/components/footer/Footer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
 import Section from '~/components/section/Section.vue';
+import TunnelSquares from '~/components/tunnelSquares/TunnelSquares.vue';
 
 export default {
   name: 'IndexPage',
@@ -43,6 +46,7 @@ export default {
     Footer,
     GalleryOverlay,
     Section,
+    TunnelSquares,
   },
 
   data() {
@@ -94,6 +98,8 @@ export default {
         this.setActiveChapter(chapter);
         this.setActiveSection(section);
       }
+
+      this.$refs.tunnelSquares.animate(dir);
 
       await delay(1000);
 
