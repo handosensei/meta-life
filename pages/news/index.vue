@@ -14,6 +14,7 @@ import { mapActions } from 'vuex';
 
 import data from '~/content/news.json';
 
+import Debug from '~/mixins/debug';
 import Page from '~/mixins/page';
 import Scroll from '~/mixins/scroll';
 
@@ -30,7 +31,7 @@ export default {
     NewsHero,
   },
 
-  mixins: [Page, Scroll],
+  mixins: [Debug, Page, Scroll],
 
   data() {
     return {

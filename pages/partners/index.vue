@@ -14,6 +14,7 @@ import { gsap } from 'gsap'
 
 import data from '~/content/partners.json';
 
+import Debug from '~/mixins/debug';
 import Page from '~/mixins/page';
 import Scroll from '~/mixins/scroll';
 
@@ -30,7 +31,7 @@ export default {
     PartnersList,
   },
 
-  mixins: [Page, Scroll],
+  mixins: [Debug, Page, Scroll],
 
   data() {
     return {

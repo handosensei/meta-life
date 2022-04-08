@@ -42,6 +42,8 @@
 import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
+import Debug from '~/mixins/debug';
+
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
 
@@ -64,6 +66,8 @@ export default {
     TunnelSquares,
   },
 
+  mixins: [Debug],
+
   data() {
     return {
       isNavigating: false,
@@ -83,7 +87,6 @@ export default {
   created() {
     this.setActiveChapter(this.chapters[0]);
     this.setActiveSection(this.chapters[0].sections[0]);
-    this.setActiveChapterByUrlQuery();
   },
 
   mounted() {
@@ -108,18 +111,6 @@ export default {
 
     onSectionChange() {
       this.setTheme(this.activeSection.theme || 'dark');
-    },
-
-    setActiveChapterByUrlQuery() {
-      const { chapter: chapterId } = this.$router.history.current.query;
-      const chapter = this.chapters.find(({ id }) => id === chapterId);
-      const chapterExists = !!chapter;
-
-      if (chapterExists) {
-        this.setActiveChapter(chapter);
-        this.setActiveSection(chapter.sections[0]);
-        this.setTheme(this.activeSection.theme || 'dark');
-      }
     },
 
     async navigate(dir) {

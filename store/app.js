@@ -1,23 +1,24 @@
 export const state = () => ({
-  windowSize: {
-    width: 0,
-    height: 0,
-  },
   assetsPreloaded: false,
+  introSkipped: false,
   menuOpen: false,
   previousTheme: '',
   theme: 'dark',
   preloaderVisible: true,
   videoPlayerOpen: false,
+  windowSize: {
+    width: 0,
+    height: 0,
+  },
 });
 
 export const actions = {
-  setWindowSize({ commit }, size) {
-    commit('SET_WINDOW_SIZE', size);
-  },
-
   setAssetsPreloaded({ commit }) {
     commit('SET_ASSETS_PRELOADED');
+  },
+
+  setIntroSkipped({ commit }, bool) {
+    commit('SET_INTRO_SKIPPED', bool);
   },
 
   setMenuOpen({ commit }, bool) {
@@ -39,20 +40,19 @@ export const actions = {
   setVideoPlayerOpen({ commit }, bool) {
     commit('SET_VIDEO_PLAYER_OPEN', bool);
   },
+
+  setWindowSize({ commit }, size) {
+    commit('SET_WINDOW_SIZE', size);
+  },
 };
 
 export const mutations = {
-  SET_WINDOW_SIZE(state) {
-    if (process.client) {
-      state.windowSize = {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    }
-  },
-
   SET_ASSETS_PRELOADED(state) {
     state.assetsPreloaded = true;
+  },
+
+  SET_INTRO_SKIPPED(state, payload) {
+    state.introSkipped = payload;
   },
 
   SET_MENU_OPEN(state, payload) {
@@ -73,5 +73,14 @@ export const mutations = {
 
   SET_VIDEO_PLAYER_OPEN(state, payload) {
     state.videoPlayerOpen = payload;
+  },
+
+  SET_WINDOW_SIZE(state) {
+    if (process.client) {
+      state.windowSize = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    }
   },
 };

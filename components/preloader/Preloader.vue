@@ -19,7 +19,7 @@
 
 <script>
 import { gsap } from 'gsap';
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 import homeData from '~/content/home.json';
 
@@ -38,11 +38,12 @@ export default {
     };
   },
 
-  created() {
-    const { skipIntro } = this.$router.history.current.query;
-    this.skipIntro = skipIntro;
+  computed: {
+    ...mapState('app', ['introSkipped']),
+  },
 
-    if (skipIntro) {
+  created() {
+    if (this.introSkipped) {
       this.setAssetsPreloaded();
       this.setPreloaderVisible(false);
     }
@@ -51,7 +52,7 @@ export default {
   mounted() {
     this.preloadGalleryThumbs();
 
-    if (!this.skipIntro) {
+    if (!this.introSkipped) {
       this.enter();
     }
 
