@@ -20,4 +20,8 @@
   span {
     display: block;
   }
+
+  &[disabled] {
+    z-index: -1;
+  }
 }
