@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import { mapState } from 'vuex';
 
 const COLORS = {
-  dark: 'rgba(10, 14, 20, 1)',
+  dark: 'rgba(10, 14, 25, 1)',
   light: 'rgba(243, 243, 243, 1)',
 };
 

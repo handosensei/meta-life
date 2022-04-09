@@ -18,6 +18,7 @@ import PreloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
 import PreloaderProgress from '~/assets/svg/preloaderProgress.svg?inline=true';
 import PreloaderShape from '~/assets/svg/preloaderShape.svg?inline=true';
 import Sphere from '~/assets/svg/sphere.svg?inline=true';
+import Tunnel from '~/assets/svg/tunnel.svg?inline=true';
 import Twitter from '~/assets/svg/twitter.svg?inline=true';
 import Wordmark from '~/assets/svg/wordmark.svg?inline=true';
 
@@ -40,6 +41,7 @@ export default {
     PreloaderProgress,
     PreloaderShape,
     Sphere,
+    Tunnel,
     Twitter,
     Wordmark,
   },
