@@ -1,40 +1,71 @@
 .partnersList {
-  padding: 0 16rem;
+  padding: 0 4rem;
   margin-bottom: 12rem;
   color: var(--color-white);
 
   & + & {
-    margin-top: 15rem;
+    margin-top: 10rem;
+  }
+
+  @include minTablet {
+    padding: 0 16rem;
+
+    & + & {
+      margin-top: 15rem;
+    }
   }
 }
 
 .head {
-  padding-top: 2.7rem;
-  margin-bottom: 15rem;
-  border-top: 1px solid var(--color-white-01);
-  font-size: clamp(10px, 1rem, 1rem);
-  line-height: 120%;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-white-04);
+  display: none;
+
+  @include minTablet {
+    padding-top: 2.7rem;
+    margin-bottom: 15rem;
+    border-top: 1px solid var(--color-white-01);
+    font-size: clamp(10px, 1rem, 1rem);
+    line-height: 120%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-white-04);
+  }
 }
 
 .title {
-  margin-bottom: 15rem;
-  font-size: 22rem;
+  margin-bottom: 10rem;
+  font-size: 5rem;
+  line-height: 0.9;
   font-weight: 500;
   text-align: center;
   letter-spacing: -0.01em;
+
+  @include minTablet {
+    margin-bottom: 15rem;
+    font-size: 22rem;
+  }
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   row-gap: 5rem;
+
+  @include minTablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .listItem {
-  &:not(:nth-child(3n + 1)) > div > ::v-deep div {
-    border-left: 0;
+  & + & {
+    margin-top: 4rem;
+  }
+
+  @include minTablet {
+    &:not(:nth-child(3n + 1)) > div > ::v-deep div {
+      border-left: 0;
+    }
+
+    & + & {
+      margin-top: 0;
+    }
   }
 }

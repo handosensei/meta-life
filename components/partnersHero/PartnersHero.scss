@@ -6,16 +6,26 @@
 .title {
   position: absolute;
   top: 50%;
-  right: 18.7rem;
-  width: clamp(453px, 45.3rem, 45.3rem);
-  font-size: 7rem;
+  left: 50%;
+  width: 10ch;
+  font-size: 4rem;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  text-align: center;
   color: var(--color-white);
-  transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
 
   &::v-deep span {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+  }
+
+  @include minTablet {
+    left: auto;
+    right: 18.7rem;
+    width: clamp(453px, 45.3rem, 45.3rem);
+    font-size: 7rem;
+    text-align: left;
+    transform: translate(0, -50%);
   }
 }
