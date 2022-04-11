@@ -13,7 +13,7 @@
       <Icon type="PreloaderProgress" class="preloaderProgress" />
     </div>
 
-    <Icon type="PreloaderShape" class="preloaderShape" />
+    <Icon type="LogoOutline" class="logoOutline" />
   </div>
 </template>
 

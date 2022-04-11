@@ -4,7 +4,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-black);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
 
   &.isLight {
@@ -24,5 +24,14 @@
 
   @include minTablet {
     font-size: 5rem;
+  }
+}
+
+.logoOutline {
+  position: absolute;
+
+  @include minTablet {
+    width: 74.2rem;
+    height: 56.3rem;
   }
 }
