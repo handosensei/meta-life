@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: var(--color-bg-dark);
   color: var(--color-white);
+  overflow: hidden;
 
   &.isLight {
     background-color: var(--color-concrete);
