@@ -190,7 +190,7 @@ export default {
         .fromTo(
           el.querySelector('.nav'),
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' }, 0
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.2, ease: 'expo.out' }, 0.85
         )
         .fromTo(
           el.querySelector('.content').children,
@@ -200,7 +200,7 @@ export default {
         .fromTo(
           el.querySelectorAll('.navButton'),
           { clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' }, 0
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' }, 0.8
         );
     },
 
