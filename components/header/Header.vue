@@ -88,12 +88,12 @@ export default {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%', duration: 1.5, ease: 'expo.inOut' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
         );
       } else {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' },
           { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
         );
       }

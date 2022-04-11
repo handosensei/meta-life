@@ -179,19 +179,34 @@ export default {
     },
 
     onGalleryOverlayEnter(el) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 0 },
-        { autoAlpha: 1 },
-      );
+      this.overlayTl = gsap.timeline();
+      
+      this.overlayTl
+        .fromTo(
+          el.querySelector('.backgroundImages'),
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' }, 0
+        )
+        .fromTo(
+          el.querySelector('.nav'),
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' }, 0
+        )
+        .fromTo(
+          el.querySelector('.content').children,
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 1.5, stagger: 0.2, ease: 'expo.inOut' }, 0.5
+        )
+        .fromTo(
+          el.querySelectorAll('.navButton'),
+          { clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' }, 0
+        );
     },
 
     onGalleryOverlayLeave(el, done) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 1 },
-        { autoAlpha: 0, onComplete: done },
-      );
+      this.overlayTl.reverse();
+      gsap.delayedCall(2, done);
     },
 
     onChapterNavEnter(el) {

@@ -12,7 +12,7 @@
             <div class="title">{{ activeSlide.title }}</div>
             <div class="subtitle">{{ activeItem.category }}</div>
           </div>
-          <p class="text">{{ activeSlide.text }}</p>
+          <p ref="text" class="text">{{ activeSlide.text }}</p>
         </div>
       </transition>
 
