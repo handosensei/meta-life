@@ -198,7 +198,7 @@ export default {
           { autoAlpha: 1, duration: 1.5, stagger: 0.2, ease: 'expo.inOut' }, 0.5
         )
         .fromTo(
-          el.querySelectorAll('.navButton'),
+          el.querySelectorAll('.navImage'),
           { clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)' },
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' }, 0
         );
