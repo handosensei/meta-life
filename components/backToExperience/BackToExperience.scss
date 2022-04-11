@@ -1,16 +1,21 @@
 .backToExperience {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
   background-color: var(--color-bg-dark);
   color: var(--color-white);
 
   &.isLight {
-    background-color: var(--color-white);
+    background-color: var(--color-concrete);
     color: var(--color-black);
   }
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link {
@@ -18,12 +23,45 @@
   font-size: 4rem;
   line-height: 110%;
   letter-spacing: -0.01em;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
   text-align: center;
+  z-index: 1;
 
   @include minTablet {
     font-size: 5rem;
+  }
+
+  @include hover {
+    &:hover {
+      .link-line {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+}
+
+.link-line {
+  position: relative;
+
+  &:nth-child(2) {
+    &::after {
+      transition-delay: 150ms;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0.2rem;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background: currentColor;
+    transform-origin: right;
+    transition: transform 500ms cubic-bezier(1, 0, 0, 1); /* easeInOutExpo */
+    content: '';
   }
 }
 
@@ -33,5 +71,9 @@
   @include minTablet {
     width: 74.2rem;
     height: 56.3rem;
+  }
+
+  ::v-deep path {
+    stroke-opacity: 0.1;
   }
 }
