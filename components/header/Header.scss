@@ -8,6 +8,11 @@
   width: calc(100% - 8rem);
   color: var(--color-white);
 
+  ::v-deep svg {
+    transition: 0.5s color, 0.5s fill;
+    transition-delay: 0.5s;
+  }
+
   @include minTablet {
     top: 8rem;
     left: 8rem;
