@@ -84,7 +84,7 @@ export default {
       gsap.fromTo(
         this.$el,
         { clipPath: from },
-        { clipPath: to, duration: 1.5, ease: 'expo.inOut', clearProps: 'all' },
+        { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', clearProps: 'all' },
       );
 
       gsap.fromTo(
@@ -107,7 +107,7 @@ export default {
       gsap.fromTo(
         this.$el,
         { clipPath: from },
-        { clipPath: to, duration: 1.5, ease: 'expo.inOut', onComplete: done },
+        { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', onComplete: done },
       );
     },
 

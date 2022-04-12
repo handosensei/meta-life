@@ -1,7 +1,7 @@
 <template>
   <section
     class="section"
-    :class="{ 'isLight': theme === 'light' }"
+    :class="{ 'isLight': theme === 'light' || menuAnimating }"
     @mousedown="onDragStart"
     @touchstart.passive="onDragStart"
     @mousemove="onDrag"
@@ -25,6 +25,7 @@ import sniffer from '@antinomy-studio/sniffer';
 import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
+import delay from '~/utils/functions/delay';
 import normalizeWheel from '~/utils/functions/normalizeWheel';
 
 import SectionGallery from '~/components/gallery/Gallery.vue';
@@ -71,9 +72,19 @@ export default {
     },
   },
 
+  data() {
+    return {
+      menuAnimating: false,
+    };
+  },
+
   computed: {
     ...mapState('app', ['theme', 'menuOpen', 'windowSize']),
     ...mapState('home', ['chapters', 'activeChapter', 'activeSection', 'galleryOpen']),
+  },
+
+  watch: {
+    theme: 'onThemeChange',
   },
 
   mounted() {
@@ -144,6 +155,16 @@ export default {
         this.navigate(1);
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
         this.navigate(-1);
+      }
+    },
+
+    async onThemeChange() {
+      if (this.menuOpen) {
+        this.menuAnimating = true;
+  
+        await delay(this.$root.menuTransitionDuration);
+  
+        this.menuAnimating = false;
       }
     },
 
