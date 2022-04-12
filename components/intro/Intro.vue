@@ -14,6 +14,7 @@
         class="galleryItem"
         type="button"
         :aria-label="`open ${galleryItem.category} gallery album`"
+        :disabled="galleryItemsDisabled"
         @click="onToggleOverlay(galleryItem)"
         @mouseenter="onMouseEnter(id)"
         @mouseleave="onMouseLeave(id)"
@@ -68,6 +69,12 @@ export default {
       type: String,
       required: true,
     },
+  },
+
+  data() {
+    return {
+      galleryItemsDisabled: true,
+    };
   },
 
   mounted() {
@@ -171,7 +178,16 @@ export default {
           .fromTo(
             this.gallerySphere,
             { drawSVG: '0%', rotate: -360, transformOrigin: 'center' },
-            { drawSVG: '100%', rotate: 0, duration: 2, stagger: { from: 'random', amount: 0.5 }, ease: 'expo.inOut' }, 0.5
+            {
+                drawSVG: '100%',
+                rotate: 0,
+                duration: 2,
+                stagger: { from: 'random', amount: 0.5 },
+                ease: 'expo.inOut',
+                onComplete: () => {
+                  this.galleryItemsDisabled = false;
+                }
+              }, 0.5
           )
           .fromTo(
             this.galleryPlus,
