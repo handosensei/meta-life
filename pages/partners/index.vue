@@ -1,5 +1,5 @@
 <template>
-  <main class="page">
+  <main class="page isDark">
     <div ref="bounding" class="bounding">
       <PartnersHero :title="title" data-section />
       <PartnersList v-bind="featured" data-section />
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
+import { mapActions } from 'vuex';
 
 import data from '~/content/partners.json';
 
 import Debug from '~/mixins/debug';
-import Page from '~/mixins/page';
+import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
@@ -31,7 +31,7 @@ export default {
     PartnersList,
   },
 
-  mixins: [Debug, Page, Scroll],
+  mixins: [Debug, PageTransition, Scroll],
 
   data() {
     return {
@@ -39,18 +39,12 @@ export default {
     };
   },
 
+  mounted() {
+    this.setTheme('dark');
+  },
+
   methods: {
-    animateIn () {
-      gsap.set(this.$el, {
-        autoAlpha: 1
-      })
-    },
-  }
+    ...mapActions('app', ['setTheme']),
+  },
 }
 </script>
-
-<style lang="scss" scoped>
-.page {
-  background-color: var(--color-bg-dark);
-}
-</style>

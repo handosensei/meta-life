@@ -59,6 +59,7 @@ import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 import Debug from '~/mixins/debug';
+import PageTransition from '~/mixins/pageTransition';
 
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
@@ -82,7 +83,7 @@ export default {
     TunnelSquares,
   },
 
-  mixins: [Debug],
+  mixins: [Debug, PageTransition],
 
   data() {
     return {
@@ -107,6 +108,8 @@ export default {
 
   mounted() {
     this.$root.$on('galleryOverlay:toggle', this.onToggleGalleryOverlay);
+    
+    this.setTheme(this.activeSection.theme || 'dark');
     
     // If skipping the preloader through the url (skipIntro=true)
     if (!this.preloaderVisible) {

@@ -15,7 +15,7 @@ import { mapActions } from 'vuex';
 import data from '~/content/news.json';
 
 import Debug from '~/mixins/debug';
-import Page from '~/mixins/page';
+import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
@@ -31,7 +31,7 @@ export default {
     NewsHero,
   },
 
-  mixins: [Debug, Page, Scroll],
+  mixins: [Debug, PageTransition, Scroll],
 
   data() {
     return {
@@ -55,12 +55,6 @@ export default {
   },
 
   methods: {
-    animateIn () {
-      gsap.set(this.$el, {
-        autoAlpha: 1
-      })
-    },
-
     selectCategory(category) {
       this.activeCategory = category;
 
