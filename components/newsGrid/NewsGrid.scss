@@ -1,4 +1,4 @@
-.newsItems {
+.newsGrid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   background: var(--color-concrete);
@@ -8,7 +8,7 @@
   }
 }
 
-.newsItem {
+.item {
   grid-column: 2/9;
 
   @include minTablet {
@@ -40,7 +40,11 @@
   }
 }
 
-.newsThumb {
+.link {
+  display: block;
+}
+
+.thumb {
   height: 36.7rem;
   object-fit: cover;
   margin-bottom: clamp(30px, 3rem, 3rem);
@@ -51,7 +55,7 @@
   }
 }
 
-.newsCategory {
+.category {
   font-size: clamp(10px, 1rem, 1rem);
   line-height: 120%;
   letter-spacing: 0.18em;
@@ -60,7 +64,7 @@
   margin-bottom: clamp(10px, 1rem, 1rem);
 }
 
-.newsTitle {
+.title {
   font-size: clamp(17px, 2rem, 2rem);
   line-height: 120%;
   letter-spacing: 0.01em;
