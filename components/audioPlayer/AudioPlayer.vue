@@ -1,7 +1,7 @@
 <template>
-	<div class="audioPlayer">
+	<button type="button" class="audioPlayer" aria-label="Toggle sound button">
 		<Icon type="Equalizer" />
-	</div>
+	</button>
 </template>
 
 <script>

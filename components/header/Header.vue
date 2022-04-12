@@ -7,6 +7,7 @@
       icon="MenuButton"
       :disabled="menuOpen || videoPlayerOpen"
       :on-click="onMenuButtonClick"
+      aria-label="open menu button"
     />
     <IconButton
       ref="closeButton"
@@ -15,12 +16,14 @@
       icon="CloseButton"
       :disabled="!menuOpen && !videoPlayerOpen"
       :on-click="onMenuButtonClick"
+      aria-label="close menu button"
     />
     <IconButton
       v-if="!videoPlayerOpen"
       href="/"
       class="logoButton"
       icon="LogoButton"
+      aria-label="go to homepage button"
     />
   </header>
 </template>

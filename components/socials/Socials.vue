@@ -1,9 +1,9 @@
 <template>
 	<div class="socials">
-		<a href="#" class="discordIcon" target="_blank" rel="noreferrer">
+		<a href="#" class="discordIcon" target="_blank" rel="noreferrer" aria-label="Discord">
 			<Icon type="Discord" />
 		</a>
-		<a href="#" class="twitterIcon" target="_blank" rel="noreferrer">
+		<a href="#" class="twitterIcon" target="_blank" rel="noreferrer" aria-label="Twitter">
 			<Icon type="Twitter" />
 		</a>
 		<span>Join the</span> community
