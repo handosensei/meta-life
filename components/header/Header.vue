@@ -53,12 +53,18 @@ export default {
 
   methods: {
     onMenuButtonClick() {
+      if (this.animating) {
+        return;
+      }
+
       // Close video player if open and return
       if (this.videoPlayerOpen) {
         this.setVideoPlayerOpen(false);
 
         return;
       }
+
+      this.animating = true;
 
       // Keep track of previous theme before opening menu
       if (!this.menuOpen) {
@@ -88,13 +94,27 @@ export default {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 1.5,
+            ease: 'expo.inOut',
+            onComplete: () => {
+              this.animating = false;
+            }
+          },
         );
       } else {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' },
-          { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
+          {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+            duration: 1.5,
+            ease: 'expo.inOut',
+            onComplete: () => {
+              this.animating = false;
+            }
+          },
         );
       }
     },
