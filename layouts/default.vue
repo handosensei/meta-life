@@ -63,7 +63,7 @@ export default {
   beforeMount() {
     this.$root.smooth = sniffer.isDesktop && this.$performances.PERF >= this.$performances.PERFS.PERF_HIGH;
     this.$root.smooth && document.documentElement.classList.add('is-smooth');
-    this.$root.sectionTransitionDuration = 1000;
+    this.$root.sectionTransitionDuration = 500;
 
     window.addEventListener('resize', throttle(this.onResize, 66), false);
     requestAnimationFrame(this.onRaf);

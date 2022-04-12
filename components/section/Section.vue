@@ -170,7 +170,6 @@ export default {
       return tl;
     },
 
-    ...mapActions('app', ['setTheme']),
     ...mapActions('home', ['setActiveChapter', 'setActiveSection']),
   },
 }

@@ -4,9 +4,10 @@
   left: 0;
   z-index: 5;
   color: var(--color-white-04);
-  background: rgba(243, 243, 243, 0.1);
+  background-color: rgba(243, 243, 243, 0.1);
   border: 1px solid var(--color-white-005);
   backdrop-filter: blur(20px);
+  transition: 1s color, 1s border, 1s background-color;
 
   &.isLight {
     color: var(--color-dark-04);
@@ -43,6 +44,7 @@
   &.isActive {
     color: var(--color-white);
     background-color: var(--color-white-01);
+    transition: 0.5s background-color, 0.5s color;
 
     .isLight & {
       color: var(--color-black);
@@ -68,6 +70,7 @@
     content: '›';
     color: var(--color-white-04);
     margin: 0 2rem 0 1rem;
+    transition: color 1s;
 
     .isLight & {
       color: var(--color-dark-04);

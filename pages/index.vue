@@ -126,7 +126,9 @@ export default {
     },
 
     onSectionChange() {
-      this.setTheme(this.activeSection.theme || 'dark');
+      setTimeout(() => {
+        this.setTheme(this.activeSection.theme || 'dark');
+      }, this.$root.sectionTransitionDuration)
     },
 
     async navigate(dir) {
