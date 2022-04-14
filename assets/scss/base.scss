@@ -15,6 +15,10 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  background: var(--color-bg-dark);
+}
+
 img,
 svg {
   display: block;
