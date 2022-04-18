@@ -165,6 +165,9 @@ export default {
         const to = 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)';
 
         galleryTl
+          .set(this.$el,
+            { autoAlpha: 1 }, 0
+          )
           .fromTo(
             this.splitSubtitle.chars,
             { autoAlpha: 0 },
