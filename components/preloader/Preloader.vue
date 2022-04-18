@@ -154,9 +154,14 @@ export default {
     },
 
     leave(done) {
-      this.setPreloaderVisible(false);
-
-      gsap.to(this.$el, { autoAlpha: 0, onComplete: done, delay: 0.5 } );
+      gsap.to(this.$el, {
+        autoAlpha: 0,
+        delay: 0.5,
+        onComplete: () => {
+          this.setPreloaderVisible(false);
+          done();
+        },
+      });
     },
 
     ...mapActions('app', ['setAssetsPreloaded', 'setPreloaderVisible']),
