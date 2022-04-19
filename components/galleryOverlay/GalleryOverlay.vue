@@ -42,7 +42,7 @@
           Back to gallery
         </button>
 
-        <div>
+        <div class="navButtons">
           <button
             v-for="slide, index in activeItem.slides"
             :key="`${index}-${slide.title}`"
