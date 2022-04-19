@@ -13,9 +13,19 @@
 }
 
 .title {
-  font-size: 8rem;
-  line-height: 0.9;
+  font-size: 4rem;
+  line-height: 4.4rem;
   letter-spacing: -0.01em;
+
+  @include maxMobile {
+    text-align: center;
+  }
+
+  @include minTablet {
+    font-size: 8rem;
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+  }
 }
 
 ::v-deep .title-word {
@@ -47,10 +57,20 @@
   max-width: 42ch;
   font-size: clamp(14px, 1.4rem, 1.4rem);
   line-height: 1.3;
+
+  @include maxMobile {
+    display: none;
+  }
 }
 
 ::v-deep .text-line {
   will-change: transform;
+}
+
+.galleryItems {
+  @include maxMobile {
+    display: none;
+  }
 }
 
 .galleryItem {

@@ -6,7 +6,7 @@
       <p ref="text" class="text" v-html="text" />
     </div>
 
-    <div v-if="galleryItems" ref="galleryItems">
+    <div v-if="galleryItems" ref="galleryItems" class="galleryItems">
       <button
         v-for="(galleryItem, id) in galleryItems"
         ref="button"
