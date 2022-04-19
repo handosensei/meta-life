@@ -1,19 +1,21 @@
 <template>
   <div class="preloader">
-    <Icon ref="preloaderLogo" type="PreloaderLogo" class="preloaderLogo" />
+    <div ref="container" class="container">
+      <Icon ref="preloaderLogo" type="PreloaderLogo" class="preloaderLogo" />
 
-    <p ref="title" class="title">
-      Enter in the new world
-    </p>
-    
-    <Icon ref="wordmark" type="wordmark" class="wordmark" />
+      <p ref="title" class="title">
+        Enter in the new world
+      </p>
+      
+      <Icon ref="wordmark" type="wordmark" class="wordmark" />
 
-    <div class="progress">
-      <div ref="progressCount" class="progressCount">0%</div>
-      <Icon ref="preloaderProgress" type="PreloaderProgress" class="preloaderProgress" />
+      <div class="progress">
+        <div ref="progressCount" class="progressCount">0%</div>
+        <Icon ref="preloaderProgress" type="PreloaderProgress" class="preloaderProgress" />
+      </div>
+
+      <Icon ref="logoOutline" type="LogoOutline" class="logoOutline" />
     </div>
-
-    <Icon ref="logoOutline" type="LogoOutline" class="logoOutline" />
   </div>
 </template>
 
@@ -67,6 +69,7 @@ export default {
     gsap.to(
       progress,
       {
+        delay: 0.5,
         duration: 2, // TEMP: set duration equal to duration of enter animation
         value: progress.end,
         onUpdate: () => this.updateProgress(progress.value),
@@ -117,13 +120,13 @@ export default {
 
       enterTl
         .set(
-          this.$el,
-          { autoAlpha: 1 }
+          this.$refs.container,
+          { autoAlpha: 1 }, 0
         )
         .fromTo(
           this.logoOutline.children,
           { drawSVG: '0%' },
-          { drawSVG: '100%', duration: 1, delay: 1, ease: 'linear' },
+          { drawSVG: '100%', duration: 1, delay: 1, ease: 'linear' }, 0
         )
         .fromTo(
           this.preloaderLogo.children[0],
@@ -148,7 +151,12 @@ export default {
         .fromTo(
           this.preloaderProgress.children[0],
           { clipPath: from },
-          { clipPath: to, duration: 2, ease: 'linear' }, 0
+          { clipPath: to, duration: 2, ease: 'linear' }, 0.5
+        )
+        .fromTo(
+          this.preloaderProgress.children[1],
+          { drawSVG: '0%' },
+          { drawSVG: '100%', duration: 1 }, 0
         )
         .fromTo(
           this.splitSubtitle.chars,

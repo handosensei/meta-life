@@ -4,13 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   background-color: var(--color-bg-dark);
   color: var(--color-white);
-  visibility: hidden;
   z-index: 20;
 }
 
@@ -24,6 +19,16 @@
   @include minTablet {
     margin-bottom: 4.4rem;
   }
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
 }
 
 .wordmark {
