@@ -65,6 +65,7 @@
 
 <script>
 import { gsap } from 'gsap';
+import { SplitText } from 'gsap/SplitText';
 import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
@@ -167,11 +168,35 @@ export default {
     },
 
     onEnterContent(el) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 0 },
-        { autoAlpha: 1 },
+      const title = el.querySelector('.title');
+      const subtitle = el.querySelector('.subtitle');
+      const text = el.querySelector('.text');
+
+      this.splitText = new SplitText(
+        text,
+        {
+          type: 'lines',
+          linesClass: 'text-line',
+        }
       );
+
+      const tl = gsap.timeline(
+        { defaults:
+          { duration: 1, ease: 'expo.out', willChange: 'transform' }
+        }
+      );
+
+      tl
+        .fromTo(
+          [title, subtitle],
+          { autoAlpha: 0, yPercent: 50 },
+          { autoAlpha: 1, yPercent: 0, stagger: 0.2 }, 0.5
+        )
+        .fromTo(
+          this.splitText.lines,
+          { autoAlpha: 0, yPercent: 50 },
+          { autoAlpha: 1, yPercent: 0, stagger: 0.1 }, 0.5
+        );
     },
 
     onLeaveContent(el, done) {
