@@ -116,10 +116,14 @@ export default {
       const to = `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%`;
 
       enterTl
+        .set(
+          this.$el,
+          { autoAlpha: 1 }
+        )
         .fromTo(
           this.logoOutline.children,
           { drawSVG: '0%' },
-          { drawSVG: '100%', duration: 2, delay: 1, ease: 'linear' }, 0
+          { drawSVG: '100%', duration: 1, delay: 1, ease: 'linear' },
         )
         .fromTo(
           this.preloaderLogo.children[0],
@@ -134,12 +138,12 @@ export default {
         .fromTo(
           this.wordmarChars.slice(0, 4),
           { yPercent: -120 },
-          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0
+          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5
         )
         .fromTo(
           this.wordmarChars.slice(4, 8),
           { yPercent: 120 },
-          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0
+          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5
         )
         .fromTo(
           this.preloaderProgress.children[0],
@@ -149,7 +153,7 @@ export default {
         .fromTo(
           this.splitSubtitle.chars,
           { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0
+          { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5
         );
     },
 
