@@ -210,8 +210,9 @@ export default {
     },
 
     onGalleryOverlayLeave(el, done) {
+      const tlDuration = this.overlayTl.duration();
       this.overlayTl.reverse();
-      gsap.delayedCall(2, done);
+      gsap.delayedCall(tlDuration, done);
     },
 
     onChapterNavEnter(el) {
