@@ -6,8 +6,11 @@ export default {
   },
 
   created() {
-    this.setActiveChapterByUrlQuery();
     this.checkSkipIntro();
+  },
+
+  beforeMount() {
+    this.setActiveChapterByUrlQuery();
   },
 
   methods: {
