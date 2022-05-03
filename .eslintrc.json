@@ -9,35 +9,10 @@
     "requireConfigFile": false
   },
   "extends": ["@nuxtjs", "plugin:nuxt/recommended", "prettier"],
-  "plugins": ["simple-import-sort"],
   "rules": {
+    "no-console": "off",
     "camelcase": 0,
     "no-unused-vars": "warn",
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": [
-      "error",
-      {
-        "groups": [
-          // Packages. `nuxt` related packages come first.
-          ["nuxt"],
-          // Absolute imports and other imports such as Vue-style `@/foo`.
-          // Anything not matched in another group.
-          ["^"],
-          // Import content
-          ["content/"],
-          // Import mixins
-          ["mixins/"],
-          // Import utils
-          ["utils/"],
-          // Import components
-          ["components/"],
-          // Import assets and static
-          ["assets/", "static/"],
-          // Local imports last, should only be styling
-          ["^\\."]
-        ]
-      }
-    ],
     "space-before-function-paren": 0,
     "template-curly-spacing": 0,
     "vue/no-v-html": 0

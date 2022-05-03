@@ -1,8 +1,12 @@
 <template>
-  <div class="text" :class="positioningClass">
-    <h2 ref="title" class="title" v-html="title" />
-    <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
-    <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
+  <div class="u-abs">
+    <div class="text" :class="positioningClass">
+      <h2 ref="title" class="title" v-html="title" />
+      <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
+      <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
+    </div>
+
+    <GalleryItems v-if="galleryItems && galleryItems.length > 0" ref="galleryItems" :gallery-items="galleryItems" />
   </div>
 </template>
 
@@ -11,15 +15,23 @@ import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
 import BaseButton from '~/components/elements/BaseButton.vue';
+import GalleryItems from '~/components/GalleryItems/GalleryItems.vue';
 
 export default {
   name: 'TextComponent',
 
   components: {
     BaseButton,
+    GalleryItems,
   },
 
   props: {
+    galleryItems: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
+
     hasPlayTrailerButton: {
       type: Boolean,
       required: false,
@@ -88,6 +100,11 @@ export default {
         { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' },
         0
       );
+
+      if (this.galleryItems && this.galleryItems.length > 0) {
+        const galleryTl = this.$refs.galleryItems.getGalleryTl();
+        tl.add(galleryTl, 0);
+      }
 
       return tl;
     },

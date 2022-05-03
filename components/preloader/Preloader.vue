@@ -123,7 +123,7 @@ export default {
         })
         .to(this.$refs.transform, {
           y: -85,
-          duration: 0.75,
+          duration: 1.2,
           ease: 'expo.inOut',
         })
         .to(

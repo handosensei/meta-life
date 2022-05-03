@@ -1,0 +1,53 @@
+.galleryItems {
+  @include maxMobile {
+    display: none;
+  }
+}
+
+.galleryItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 14.5rem;
+  height: 14.5rem;
+  border-radius: 50%; // For better focus state
+
+  &:first-child {
+    top: 14.89vh;
+    left: 26.32vw;
+  }
+
+  &:nth-child(2) {
+    top: 22.33vh;
+    left: 62.92vw;
+  }
+
+  &:nth-child(3) {
+    top: 66.33vh;
+    left: 27.78vw;
+  }
+}
+
+.galleryImage {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.galleryPlus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallerySphere {
+  position: absolute;
+}
+
+::v-deep circle {
+  &:last-child {
+    visibility: hidden;
+  }
+}

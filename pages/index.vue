@@ -139,7 +139,7 @@ export default {
 
       this.activeGalleryItem = item;
     },
-    
+
     onToggleGalleryOverlay(item) {
       this.activeGalleryItem = item;
       this.setGalleryOpen(!this.galleryOpen);
