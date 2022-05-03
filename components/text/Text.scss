@@ -8,10 +8,10 @@
   font-size: clamp(30px, 3rem, 3rem);
   color: var(--color-white);
 
-  &::v-deep span {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-  }
+  // &::v-deep span {
+  //   text-decoration: underline;
+  //   text-decoration-thickness: 2px;
+  // }
 
   .isLight & {
     color: var(--color-dark);
@@ -30,6 +30,10 @@
   }
 }
 
+::v-deep .white {
+  color: white;
+}
+
 ::v-deep .paragraph-line {
   will-change: transform;
 }
@@ -37,12 +41,33 @@
 .positionCenterTop {
   top: 27vh;
   left: 50%;
-  width: clamp(250px, 25rem, 25rem);
-  transform: translateX(-12rem);
+  width: clamp(500px, 25rem, 25rem);
+  transform: translateX(-50%);
   text-align: center;
 
   @include minTablet {
     top: 20vh;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.01em;
+
+    @include maxMobile {
+      text-align: center;
+    }
+
+    @include minTablet {
+      font-size: 56px;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  .paragraph {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

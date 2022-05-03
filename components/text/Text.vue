@@ -1,7 +1,7 @@
 <template>
   <div class="text" :class="positioningClass">
     <h2 ref="title" class="title" v-html="title" />
-    <p v-if="text" ref="paragraph" class="paragraph">{{ text }}</p>
+    <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
     <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
   </div>
 </template>

@@ -85,10 +85,12 @@ export default {
     },
 
     initTl() {
-      this.splitSubtitle = new SplitText(this.$refs.subtitle, {
-        type: 'chars',
-        charsClass: 'subtitle-char',
-      });
+      if (this.subtitle) {
+        this.splitSubtitle = new SplitText(this.$refs.subtitle, {
+          type: 'chars',
+          charsClass: 'subtitle-char',
+        });
+      }
 
       this.splitTitle = new SplitText(this.$refs.title, {
         type: 'words',
@@ -132,8 +134,11 @@ export default {
         const from = 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%)';
         const to = 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)';
 
+        if (this.subtitle) {
+          galleryTl.fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0);
+        }
+
         galleryTl
-          .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0)
           .fromTo(this.$refs.galleryMask, { clipPath: from }, { clipPath: to, duration: 2, stagger: { from: 'random', amount: 0.5 }, ease: 'expo.inOut' }, 0.5)
           .fromTo(
             this.gallerySphere,

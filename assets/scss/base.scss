@@ -79,3 +79,35 @@ input {
     background-color: var(--color-bg-dark);
   }
 }
+
+.button {
+  display: inline-flex;
+  position: relative;
+  width: 146px;
+  height: 61px;
+
+  > svg {
+    display: block;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+
+    .icon {
+      width: 14px;
+      height: auto;
+      fill: #131e2f;
+      margin-right: 15px;
+    }
+
+    span {
+      font: 400 10px/1 'Matter';
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

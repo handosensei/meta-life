@@ -9,6 +9,7 @@ import Discord from '~/assets/svg/discord.svg?inline=true';
 import Discover from '~/assets/svg/discover.svg?inline=true';
 import Equalizer from '~/assets/svg/equalizer.svg?inline=true';
 import EqualizerVideo from '~/assets/svg/equalizerVideo.svg?inline=true';
+import Instagram from '~/assets/svg/instagram.svg?inline=true';
 import LogoButton from '~/assets/svg/logoButton.svg?inline=true';
 import LogoOutline from '~/assets/svg/logoOutline.svg?inline=true';
 import MenuButton from '~/assets/svg/menuButton.svg?inline=true';
@@ -43,6 +44,7 @@ export default {
     Sphere,
     Tunnel,
     Twitter,
+    Instagram,
     Wordmark,
   },
 

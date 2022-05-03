@@ -108,29 +108,39 @@ export default {
     },
 
     onLoaded() {
-      gsap.timeline({
-        paused: true,
-        onComplete: () => {
-          this.vs = new VirtualScroll();
-          this.vs.on(this.onScroll);
-        }
-      }).to([this.preloaderLogo, this.$refs.progress], {
-        autoAlpha: 0,
-        duration: 0.4,
-        ease: 'none'
-      }).to(this.$refs.transform, {
-        y: -85,
-        duration: 0.75,
-        ease: 'expo.inOut'
-      }).to(this.logoOutline, {
-        autoAlpha: 0,
-        duration: 0.4,
-        ease: 'none'
-      }, '-=0.5').to(this.$refs.scroll, {
-        autoAlpha: 1,
-        duration: 0.4,
-        ease: 'none'
-      }).restart()
+      gsap
+        .timeline({
+          paused: true,
+          onComplete: () => {
+            this.vs = new VirtualScroll();
+            this.vs.on(this.onScroll);
+          },
+        })
+        .to([this.preloaderLogo, this.$refs.progress], {
+          autoAlpha: 0,
+          duration: 0.4,
+          ease: 'none',
+        })
+        .to(this.$refs.transform, {
+          y: -85,
+          duration: 0.75,
+          ease: 'expo.inOut',
+        })
+        .to(
+          this.logoOutline,
+          {
+            autoAlpha: 0,
+            duration: 0.4,
+            ease: 'none',
+          },
+          '-=0.5'
+        )
+        .to(this.$refs.scroll, {
+          autoAlpha: 1,
+          duration: 0.4,
+          ease: 'none',
+        })
+        .restart();
     },
 
     onScroll(event) {
