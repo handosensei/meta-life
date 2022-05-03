@@ -1,21 +1,11 @@
 <template>
   <div>
-    <transition
-      name="preloaderTransition"
-      :css="false"
-      @leave="onPreloaderLeave"
-    >
-      <Preloader v-if="!assetsPreloaded" ref="preloader" />
+    <transition name="preloaderTransition" :css="false" @leave="onPreloaderLeave">
+      <Preloader v-if="hasPreloader" ref="preloader" />
     </transition>
     <FocusLock :disabled="!menuOpen">
       <Header />
-      <transition
-        name="menuTransition"
-        mode="out-in"
-        :css="false"
-        @enter="onMenuEnter"
-        @leave="onMenuLeave"
-      >
+      <transition name="menuTransition" mode="out-in" :css="false" @enter="onMenuEnter" @leave="onMenuLeave">
         <Menu v-if="menuOpen" ref="menu" />
       </transition>
     </FocusLock>
@@ -53,7 +43,7 @@ export default {
   mixins: [AssetsLoader],
 
   computed: {
-    ...mapState('app', ['assetsPreloaded', 'menuOpen']),
+    ...mapState('app', ['hasPreloader', 'assetsPreloaded', 'menuOpen']),
   },
 
   watch: {

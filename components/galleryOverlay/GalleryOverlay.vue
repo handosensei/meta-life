@@ -1,12 +1,7 @@
 <template>
   <FocusLock :disabled="!galleryOpen || menuOpen">
     <div class="galleryOverlay">
-      <transition
-        :css="false"
-        name="galleryOverlayContentTransition"
-        @enter="onEnterContent"
-        @leave="onLeaveContent"
-      >
+      <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
         <div :key="activeSlide.title" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
@@ -17,45 +12,27 @@
       </transition>
 
       <div class="backgroundImages">
-        <transition
-          :css="false"
-          name="galleryOverlayImageTransition"
-          @enter="onEnterImage"
-          @leave="onLeaveImage"
-        >
-          <img
-            :key="activeSlide.image.highres.src"
-            class="backgroundImage"
-            :src="activeSlide.image.highres.src"
-            :alt="activeSlide.image.highres.alt"
-          >
+        <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
+          <img :key="activeSlide.image.highres.src" class="backgroundImage" :src="activeSlide.image.highres.src" :alt="activeSlide.image.highres.alt" />
         </transition>
       </div>
 
       <nav class="nav">
-        <button
-          class="backButton"
-          type="button"
-          @click="onClose"
-        >
+        <button class="backButton" type="button" @click="onClose">
           <Icon class="closeIcon" type="Close" />
           Back to gallery
         </button>
 
         <div class="navButtons">
           <button
-            v-for="slide, index in activeItem.slides"
+            v-for="(slide, index) in activeItem.slides"
             :key="`${index}-${slide.title}`"
             class="navButton"
-            :class="{ 'isActive': activeSlide === slide }"
+            :class="{ isActive: activeSlide === slide }"
             type="button"
             @click="setActiveSlide(slide)"
           >
-            <img
-              class="navImage"
-              :src="slide.image.thumb.src"
-              :alt="slide.image.thumb.alt"
-            >
+            <img class="navImage" :src="slide.image.thumb.src" :alt="slide.image.thumb.alt" />
           </button>
         </div>
       </nav>
@@ -105,7 +82,10 @@ export default {
   mounted() {
     window.addEventListener('keydown', this.onKeyDown);
 
-    this.$nuxt.$emit('assetsLoader:load', this.activeItem.slides.map(({ image }) => image.highres.src));
+    this.$nuxt.$emit(
+      'assetsLoader:load',
+      this.activeItem.slides.map(({ image }) => image.highres.src)
+    );
   },
 
   beforeDestroy() {
@@ -141,7 +121,7 @@ export default {
         } else {
           prevIndex = currentIndex - 1;
         }
-        
+
         const prevItem = this.activeItem.slides[prevIndex];
         this.setActiveSlide(prevItem);
       }
@@ -152,19 +132,11 @@ export default {
     },
 
     onEnterImage(el) {
-      gsap.fromTo(
-        el,
-        { scale: 1.5, zIndex: 1 },
-        { scale: 1, duration: 2, ease: 'expo.out' },
-      );
+      gsap.fromTo(el, { scale: 1.5, zIndex: 1 }, { scale: 1, duration: 2, ease: 'expo.out' });
     },
 
     onLeaveImage(el, done) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 1, zIndex: 2 },
-        { autoAlpha: 0, duration: 2, ease: 'expo.out', onComplete: done },
-      );
+      gsap.fromTo(el, { autoAlpha: 1, zIndex: 2 }, { autoAlpha: 0, duration: 2, ease: 'expo.out', onComplete: done });
     },
 
     onEnterContent(el) {
@@ -172,44 +144,28 @@ export default {
       const subtitle = el.querySelector('.subtitle');
       const text = el.querySelector('.text');
 
-      this.splitText = new SplitText(
-        text,
-        {
-          type: 'lines',
-          linesClass: 'text-line',
-        }
-      );
+      this.splitText = new SplitText(text, {
+        type: 'lines',
+        linesClass: 'text-line',
+      });
 
-      const tl = gsap.timeline(
-        { defaults:
-          { duration: 1, ease: 'expo.out', willChange: 'transform' }
-        }
-      );
+      const tl = gsap.timeline({ defaults: { duration: 1, ease: 'expo.out', willChange: 'transform' } });
 
-      tl
-        .fromTo(
-          [title, subtitle],
-          { autoAlpha: 0, yPercent: 50 },
-          { autoAlpha: 1, yPercent: 0, stagger: 0.2 }, 0.5
-        )
-        .fromTo(
-          this.splitText.lines,
-          { autoAlpha: 0, yPercent: 50 },
-          { autoAlpha: 1, yPercent: 0, stagger: 0.1 }, 0.5
-        );
+      tl.fromTo([title, subtitle], { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, stagger: 0.2 }, 0.5).fromTo(
+        this.splitText.lines,
+        { autoAlpha: 0, yPercent: 50 },
+        { autoAlpha: 1, yPercent: 0, stagger: 0.1 },
+        0.5
+      );
     },
 
     onLeaveContent(el, done) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 1 },
-        { autoAlpha: 0, onComplete: done },
-      );
+      gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, onComplete: done });
     },
 
     ...mapActions('app', ['setTheme']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,54 +1,22 @@
 <template>
   <main>
-    <transition
-      name="sectionTransition"
-      mode="out-in"
-      :css="false"
-      @enter="onSectionEnter"
-      @leave="onSectionLeave"
-    >
-      <Section
-        ref="section"
-        :key="activeSection.id"
-        v-bind="activeSection"
-        :navigate="navigate"
-        :is-navigating="isNavigating"
-        :set-is-navigating="setIsNavigating"
-      />
+    <transition name="sectionTransition" mode="out-in" :css="false" @enter="onSectionEnter" @leave="onSectionLeave">
+      <Section ref="section" :key="activeSection.id" v-bind="activeSection" :navigate="navigate" :is-navigating="isNavigating" :set-is-navigating="setIsNavigating" />
     </transition>
 
-    <transition
-      name="galleryOverlayTransition"
-      :css="false"
-      @enter="onGalleryOverlayEnter"
-      @leave="onGalleryOverlayLeave"
-    >
-      <GalleryOverlay
-        v-if="galleryOpen"
-        :active-item="activeGalleryItem"
-        :set-active-item="setActiveGalleryItem"
-      />
+    <transition name="galleryOverlayTransition" :css="false" @enter="onGalleryOverlayEnter" @leave="onGalleryOverlayLeave">
+      <GalleryOverlay v-if="galleryOpen" :active-item="activeGalleryItem" :set-active-item="setActiveGalleryItem" />
     </transition>
 
     <TunnelSquares ref="tunnelSquares" />
     <Background />
     <Footer v-if="activeSection.footerVisible" />
 
-    <transition
-      name="chapterNavTransition"
-      :css="false"
-      @enter="onChapterNavEnter"
-      @leave="onChapterNavLeave"
-    >
+    <transition name="chapterNavTransition" :css="false" @enter="onChapterNavEnter" @leave="onChapterNavLeave">
       <ChapterNav v-if="!activeSection.navHidden" />
     </transition>
-    
-    <transition
-      name="footerTransition"
-      :css="false"
-      @enter="onFooterEnter"
-      @leave="onFooterLeave"
-    >
+
+    <transition name="footerTransition" :css="false" @enter="onFooterEnter" @leave="onFooterLeave">
       <Footer v-if="activeSection.footerVisible" />
     </transition>
   </main>
@@ -108,9 +76,9 @@ export default {
 
   mounted() {
     this.$root.$on('galleryOverlay:toggle', this.onToggleGalleryOverlay);
-    
+
     this.setTheme(this.activeSection.theme || 'dark');
-    
+
     // If skipping the preloader through the url (skipIntro=true)
     if (!this.preloaderVisible) {
       this.onSectionEnter();
@@ -131,7 +99,7 @@ export default {
     onSectionChange() {
       setTimeout(() => {
         this.setTheme(this.activeSection.theme || 'dark');
-      }, 500)
+      }, 500);
     },
 
     async navigate(dir) {
@@ -171,7 +139,7 @@ export default {
 
       this.activeGalleryItem = item;
     },
-    
+
     onToggleGalleryOverlay(item) {
       this.activeGalleryItem = item;
       this.setGalleryOpen(!this.galleryOpen);
@@ -185,27 +153,21 @@ export default {
 
     onGalleryOverlayEnter(el) {
       this.overlayTl = gsap.timeline();
-      
+
       this.overlayTl
         .fromTo(
           el.querySelector('.backgroundImages'),
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' }, 0
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, ease: 'expo.inOut' },
+          0
         )
-        .fromTo(
-          el.querySelector('.nav'),
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.2, ease: 'expo.out' }, 0.85
-        )
-        .fromTo(
-          el.querySelector('.content').children,
-          { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 1.5, stagger: 0.2, ease: 'expo.inOut' }, 0.5
-        )
+        .fromTo(el.querySelector('.nav'), { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.2, ease: 'expo.out' }, 0.85)
+        .fromTo(el.querySelector('.content').children, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.5, stagger: 0.2, ease: 'expo.inOut' }, 0.5)
         .fromTo(
           el.querySelectorAll('.navImage'),
           { clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)' },
-          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' }, 0.8
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', stagger: -0.1, duration: 1.5, ease: 'expo.inOut' },
+          0.8
         );
     },
 
@@ -216,35 +178,19 @@ export default {
     },
 
     onChapterNavEnter(el) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 0 },
-        { autoAlpha: 1 },
-      );
+      gsap.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1 });
     },
 
     onChapterNavLeave(el, done) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 1 },
-        { autoAlpha: 0, onComplete: done },
-      );
+      gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, onComplete: done });
     },
 
     onFooterEnter(el) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 0 },
-        { autoAlpha: 1 },
-      );
+      gsap.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1 });
     },
 
     onFooterLeave(el, done) {
-      gsap.fromTo(
-        el,
-        { autoAlpha: 1 },
-        { autoAlpha: 0, onComplete: done },
-      );
+      gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, onComplete: done });
     },
 
     onSectionLeave(el, done) {

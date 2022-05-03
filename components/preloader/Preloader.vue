@@ -3,13 +3,13 @@
     <div ref="container" class="container">
       <Icon ref="preloaderLogo" type="PreloaderLogo" class="preloaderLogo" />
 
-      <p ref="title" class="title">
-        Enter in the new world
-      </p>
-      
-      <Icon ref="wordmark" type="wordmark" class="wordmark" />
+      <div ref="transform" class="transform">
+        <p ref="title" class="title">Enter in the new world</p>
+        <Icon ref="wordmark" type="wordmark" class="wordmark" />
+        <p ref="scroll" class="scroll">Scroll to discover</p>
+      </div>
 
-      <div class="progress">
+      <div ref="progress" class="progress">
         <div ref="progressCount" class="progressCount">0%</div>
         <Icon ref="preloaderProgress" type="PreloaderProgress" class="preloaderProgress" />
       </div>
@@ -22,6 +22,7 @@
 <script>
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import VirtualScroll from 'virtual-scroll';
 import { mapActions, mapState } from 'vuex';
 
 import homeData from '~/content/home.json';
@@ -64,29 +65,23 @@ export default {
     const progress = {
       value: 0,
       end: 100,
-    }
+    };
 
-    gsap.to(
-      progress,
-      {
-        delay: 0.5,
-        duration: 2, // TEMP: set duration equal to duration of enter animation
-        value: progress.end,
-        onUpdate: () => this.updateProgress(progress.value),
-        onComplete: this.setAssetsPreloaded
-      },
-    );
+    gsap.to(progress, {
+      delay: 0.5,
+      duration: 2, // TEMP: set duration equal to duration of enter animation
+      value: progress.end,
+      onUpdate: () => this.updateProgress(progress.value),
+      onComplete: this.onLoaded,
+    });
   },
 
   methods: {
     initTl() {
-      this.splitSubtitle = new SplitText(
-        this.$refs.title,
-        {
-          type: 'chars',
-          charsClass: 'subtitle-char',
-        }
-      );
+      this.splitSubtitle = new SplitText(this.$refs.title, {
+        type: 'chars',
+        charsClass: 'subtitle-char',
+      });
 
       this.wordmark = this.$refs.wordmark.$el;
       this.wordmarChars = Array.prototype.slice.call(this.wordmark.children);
@@ -96,7 +91,7 @@ export default {
       this.preloaderLogo = this.$refs.preloaderLogo.$el;
       this.preloaderProgress = this.$refs.preloaderProgress.$el;
     },
-    
+
     preloadGalleryThumbs() {
       // Preload gallery thumbnails
       const galleryThumbs = homeData.chapters
@@ -112,6 +107,39 @@ export default {
       this.$refs.progressCount.innerHTML = `${value.toFixed()}%`;
     },
 
+    onLoaded() {
+      gsap.timeline({
+        paused: true,
+        onComplete: () => {
+          this.vs = new VirtualScroll();
+          this.vs.on(this.onScroll);
+        }
+      }).to([this.preloaderLogo, this.$refs.progress], {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: 'none'
+      }).to(this.$refs.transform, {
+        y: -85,
+        duration: 0.75,
+        ease: 'expo.inOut'
+      }).to(this.logoOutline, {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: 'none'
+      }, '-=0.5').to(this.$refs.scroll, {
+        autoAlpha: 1,
+        duration: 0.4,
+        ease: 'none'
+      }).restart()
+    },
+
+    onScroll(event) {
+      if (Math.abs(event.deltaY) >= 50) {
+        this.vs.destroy();
+        this.setHasPreloader(false);
+      }
+    },
+
     enter() {
       const enterTl = gsap.timeline({ defaults: { ease: 'expo.out' } });
 
@@ -119,50 +147,15 @@ export default {
       const to = `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%`;
 
       enterTl
-        .set(
-          this.$refs.container,
-          { autoAlpha: 1 }, 0
-        )
-        .fromTo(
-          this.logoOutline.children,
-          { drawSVG: '0%' },
-          { drawSVG: '100%', duration: 1, delay: 1, ease: 'linear' }, 0
-        )
-        .fromTo(
-          this.preloaderLogo.children[0],
-          { drawSVG: '0%' },
-          { drawSVG: '100%', duration: 1, delay: 1 }, 0
-        )
-        .fromTo(
-          this.preloaderLogo.children,
-          { y: 10, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, duration: 1, delay: 0.5, stagger: { from: 'edges', amount: 0.1 } }, 0
-        )
-        .fromTo(
-          this.wordmarChars.slice(0, 4),
-          { yPercent: -120 },
-          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5
-        )
-        .fromTo(
-          this.wordmarChars.slice(4, 8),
-          { yPercent: 120 },
-          { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5
-        )
-        .fromTo(
-          this.preloaderProgress.children[0],
-          { clipPath: from },
-          { clipPath: to, duration: 2, ease: 'linear' }, 0.5
-        )
-        .fromTo(
-          this.preloaderProgress.children[1],
-          { drawSVG: '0%' },
-          { drawSVG: '100%', duration: 1 }, 0
-        )
-        .fromTo(
-          this.splitSubtitle.chars,
-          { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5
-        );
+        .set(this.$refs.container, { autoAlpha: 1 }, 0)
+        .fromTo(this.logoOutline.children, { drawSVG: '0%' }, { drawSVG: '100%', duration: 1, delay: 1, ease: 'linear' }, 0)
+        .fromTo(this.preloaderLogo.children[0], { drawSVG: '0%' }, { drawSVG: '100%', duration: 1, delay: 1 }, 0)
+        .fromTo(this.preloaderLogo.children, { y: 10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, delay: 0.5, stagger: { from: 'edges', amount: 0.1 } }, 0)
+        .fromTo(this.wordmarChars.slice(0, 4), { yPercent: -120 }, { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5)
+        .fromTo(this.wordmarChars.slice(4, 8), { yPercent: 120 }, { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5)
+        .fromTo(this.preloaderProgress.children[0], { clipPath: from }, { clipPath: to, duration: 2, ease: 'linear' }, 0.5)
+        .fromTo(this.preloaderProgress.children[1], { drawSVG: '0%' }, { drawSVG: '100%', duration: 1 }, 0)
+        .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5);
     },
 
     leave(done) {
@@ -170,15 +163,16 @@ export default {
         autoAlpha: 0,
         delay: 0.5,
         onComplete: () => {
+          this.setAssetsPreloaded();
           this.setPreloaderVisible(false);
           done();
         },
       });
     },
 
-    ...mapActions('app', ['setAssetsPreloaded', 'setPreloaderVisible']),
+    ...mapActions('app', ['setAssetsPreloaded', 'setHasPreloader', 'setPreloaderVisible']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -2,13 +2,7 @@
   <div class="text" :class="positioningClass">
     <h2 ref="title" class="title" v-html="title" />
     <p v-if="text" ref="paragraph" class="paragraph">{{ text }}</p>
-    <BaseButton
-      v-if="hasPlayTrailerButton"
-      as="button"
-      class="textButton"
-      text="<span>Play</span> the trailer"
-      :on-click="onPlayTrailer"
-    />
+    <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
   </div>
 </template>
 
@@ -57,10 +51,10 @@ export default {
         'left bottom': 'positionLeftBottom',
         'left center': 'positionLeftCenter',
         'right center': 'positionRightCenter',
-      }
+      };
 
       return CLASS[this.position];
-    }
+    },
   },
 
   mounted() {
@@ -71,13 +65,10 @@ export default {
     initTl() {
       this.splitTitle = this.$refs.title.querySelectorAll('span');
 
-      this.splitParagraph = new SplitText(
-        this.$refs.paragraph,
-        {
-          type: 'lines',
-          linesClass: 'paragraph-line',
-        }
-      );
+      this.splitParagraph = new SplitText(this.$refs.paragraph, {
+        type: 'lines',
+        linesClass: 'paragraph-line',
+      });
     },
 
     onPlayTrailer() {
@@ -88,24 +79,15 @@ export default {
       const tl = gsap.timeline();
 
       if (this.$refs.paragraph) {
-        gsap.fromTo(
-          this.splitParagraph.lines,
-          { autoAlpha: 0, yPercent: 50 },
-          { autoAlpha: 1, yPercent: 0, delay: 0.5, duration: 1, stagger: 0.1, ease: 'expo.out' }
-        );
+        gsap.fromTo(this.splitParagraph.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, delay: 0.5, duration: 1, stagger: 0.1, ease: 'expo.out' });
       }
 
-      tl
-        .fromTo(
-          this.$refs.title,
-          { autoAlpha: 0 },
-          { autoAlpha: 1 }, 0
-        )
-        .fromTo(
-          this.splitTitle,
-          { autoAlpha: 0, filter: 'blur(5px)' },
-          { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0
-        );
+      tl.fromTo(this.$refs.title, { autoAlpha: 0 }, { autoAlpha: 1 }, 0).fromTo(
+        this.splitTitle,
+        { autoAlpha: 0, filter: 'blur(5px)' },
+        { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' },
+        0
+      );
 
       return tl;
     },
@@ -113,17 +95,12 @@ export default {
     getLeaveTl() {
       const tl = gsap.timeline();
 
-      tl
-        .fromTo(
-          this.$el,
-          { autoAlpha: 1 },
-          { autoAlpha: 0 },
-        );
+      tl.fromTo(this.$el, { autoAlpha: 1 }, { autoAlpha: 0 });
 
       return tl;
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

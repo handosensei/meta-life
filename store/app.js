@@ -1,4 +1,5 @@
 export const state = () => ({
+  hasPreloader: true,
   assetsPreloaded: false,
   introSkipped: false,
   menuOpen: false,
@@ -13,6 +14,10 @@ export const state = () => ({
 });
 
 export const actions = {
+  setHasPreloader({ commit }) {
+    commit('SET_HAS_PRELOADER');
+  },
+
   setAssetsPreloaded({ commit }) {
     commit('SET_ASSETS_PRELOADED');
   },
@@ -47,6 +52,10 @@ export const actions = {
 };
 
 export const mutations = {
+  SET_HAS_PRELOADER(state, payload) {
+    state.hasPreloader = payload;
+  },
+
   SET_ASSETS_PRELOADED(state) {
     state.assetsPreloaded = true;
   },

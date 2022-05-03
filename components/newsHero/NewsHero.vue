@@ -2,10 +2,7 @@
   <div class="newsHero">
     <h1 class="newsTitle" v-html="title" />
 
-    <NewsFilter
-      :categories="categories"
-      :select-category="selectCategory"
-    />
+    <NewsFilter :categories="categories" :select-category="selectCategory" />
   </div>
 </template>
 
@@ -35,7 +32,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

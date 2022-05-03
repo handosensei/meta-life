@@ -11,8 +11,8 @@ export default {
       type: String,
       required: true,
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

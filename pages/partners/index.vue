@@ -46,5 +46,5 @@ export default {
   methods: {
     ...mapActions('app', ['setTheme']),
   },
-}
+};
 </script>

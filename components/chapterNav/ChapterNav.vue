@@ -1,21 +1,8 @@
 <template>
-  <nav
-    class="chapterNav"
-    :class="{ 'isLight': theme === 'light', 'isDisabled': disabled }"
-  >
+  <nav class="chapterNav" :class="{ isLight: theme === 'light', isDisabled: disabled }">
     <ul class="navList">
-      <li
-        v-for="chapter in visibleChapters"
-        ref="navItems"
-        :key="chapter.id"
-        class="navItem"
-        :class="{ 'isActive': chapter === activeChapter }"
-      >
-        <button
-          class="navButton"
-          type="button"
-          @click="onClick(chapter)"
-        >
+      <li v-for="chapter in visibleChapters" ref="navItems" :key="chapter.id" class="navItem" :class="{ isActive: chapter === activeChapter }">
+        <button class="navButton" type="button" @click="onClick(chapter)">
           <div class="buttonLabel">
             {{ chapter.name }}
           </div>
@@ -96,7 +83,7 @@ export default {
       gsap.to(this.$el, { duration: 0.5, ease: 'power2.inOut', x });
     },
 
-    onChapterChange() { 
+    onChapterChange() {
       this.updatePosition();
     },
 
@@ -116,13 +103,13 @@ export default {
       this.setActiveSection(chapter.sections[0]);
 
       await delay(500);
-      
+
       this.disabled = false;
     },
 
     ...mapActions('home', ['setActiveChapter', 'setActiveSection']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -3,15 +3,9 @@
     <h2 class="title">{{ title }}</h2>
 
     <div class="items">
-      <button
-        v-for="item in items"
-        :key="item.id"
-        class="item"
-        type="button"
-        @click="onToggleOverlay(item)"
-      >
+      <button v-for="item in items" :key="item.id" class="item" type="button" @click="onToggleOverlay(item)">
         <!-- <NuxtPicture class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt" /> -->
-        <img class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt">
+        <img class="image" :src="item.slides[0].image.thumb.src" :alt="item.slides[0].image.thumb.alt" />
         <h3 class="category">
           {{ item.category }}
         </h3>
@@ -54,7 +48,7 @@ export default {
           return item.slides.flatMap(({ image }, index) => {
             if (index > 0) return image.thumb.src;
             return null;
-          })
+          });
         })
         .filter((x) => !!x);
 
@@ -68,12 +62,7 @@ export default {
     getEnterTl() {
       const tl = gsap.timeline();
 
-      tl
-        .fromTo(
-          this.$el,
-          { autoAlpha: 0 },
-          { autoAlpha: 1 },
-        );
+      tl.fromTo(this.$el, { autoAlpha: 0 }, { autoAlpha: 1 });
 
       return tl;
     },
@@ -81,12 +70,7 @@ export default {
     getLeaveTl() {
       const tl = gsap.timeline();
 
-      tl
-        .fromTo(
-          this.$el,
-          { autoAlpha: 1 },
-          { autoAlpha: 0 },
-        );
+      tl.fromTo(this.$el, { autoAlpha: 1 }, { autoAlpha: 0 });
 
       return tl;
     },
@@ -94,7 +78,7 @@ export default {
     ...mapActions('app', ['setTheme']),
     ...mapActions('home', ['setGalleryOpen']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

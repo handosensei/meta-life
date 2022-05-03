@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="tunnelSquares"
-    :class="{ 'isLight': theme === 'light' }"
-  >
-		<Icon ref="squaresOne" class="squares" type="Tunnel" />
+  <div class="tunnelSquares" :class="{ isLight: theme === 'light' }">
+    <Icon ref="squaresOne" class="squares" type="Tunnel" />
     <Icon ref="squaresTwo" class="squares" type="Tunnel" />
   </div>
 </template>
@@ -34,14 +31,14 @@ export default {
         squaresOne,
         {
           scale: dir === 1 ? 0 : 3,
-          transformOrigin: 'center'
+          transformOrigin: 'center',
         },
         {
           scale: 1,
           stagger: dir === 1 ? 0.1 : -0.1,
           rotate: dir === 1 ? '+=90' : '-=90',
           ease: 'expo.inOut',
-          duration: 2
+          duration: 2,
         }
       );
 
@@ -50,19 +47,19 @@ export default {
         {
           scale: 1,
           visibility: 'visible',
-          transformOrigin: 'center'
+          transformOrigin: 'center',
         },
         {
           scale: dir === 1 ? 3 : 0,
           stagger: dir === 1 ? 0.1 : -0.1,
           rotate: dir === 1 ? '+=90' : '-=90',
           ease: 'expo.inOut',
-          duration: 2
+          duration: 2,
         }
       );
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

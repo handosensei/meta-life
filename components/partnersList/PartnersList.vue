@@ -4,11 +4,7 @@
     <h2 v-if="title" class="title">{{ title }}</h2>
 
     <ul class="list">
-      <li
-        v-for="item, index in items"
-        :key="`${index}-${item.title}`"
-        class="listItem"
-      >
+      <li v-for="(item, index) in items" :key="`${index}-${item.title}`" class="listItem">
         <PartnersCard v-bind="item" />
       </li>
     </ul>
@@ -37,7 +33,7 @@ export default {
       default: '',
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

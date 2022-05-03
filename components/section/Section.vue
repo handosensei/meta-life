@@ -1,7 +1,7 @@
 <template>
   <section
     class="section"
-    :class="{ 'isLight': theme === 'light' || menuAnimating }"
+    :class="{ isLight: theme === 'light' || menuAnimating }"
     @mousedown="onDragStart"
     @touchstart.passive="onDragStart"
     @mousemove="onDrag"
@@ -12,11 +12,7 @@
     @mouseleave="onDragEnd"
     @wheel="onWheel"
   >
-    <component
-      :is="component.name"
-      ref="component"
-      v-bind="component"
-    />
+    <component :is="component.name" ref="component" v-bind="component" />
   </section>
 </template>
 
@@ -103,7 +99,7 @@ export default {
 
       const { pixelY } = normalizeWheel(event);
 
-      if ((pixelY > WHEEL_THRESHOLD || pixelY < -WHEEL_THRESHOLD)) {
+      if (pixelY > WHEEL_THRESHOLD || pixelY < -WHEEL_THRESHOLD) {
         if (pixelY > WHEEL_THRESHOLD) {
           this.navigate(1);
         } else {
@@ -118,7 +114,7 @@ export default {
       }
 
       this.isDragging = true;
-      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? (event.touches?.[0] || event.changedTouches?.[0]) : event;
+      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? event.touches?.[0] || event.changedTouches?.[0] : event;
       this.dragStart = this.touchEvent?.clientY;
       this.delta = 0;
     },
@@ -126,7 +122,7 @@ export default {
     onDrag(event) {
       if (!this.isDragging) return;
 
-      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? (event.touches?.[0] || event.changedTouches?.[0]) : event;
+      this.touchEvent = sniffer.isTouch && event.type !== 'mousemove' ? event.touches?.[0] || event.changedTouches?.[0] : event;
       this.delta = this.touchEvent?.clientY - this.dragStart;
     },
 
@@ -134,7 +130,7 @@ export default {
       if (!this.isDragging) return;
 
       this.isDragging = false;
-      const multiply = (sniffer.isTouch) ? 5 : 8;
+      const multiply = sniffer.isTouch ? 5 : 8;
 
       if (Math.abs(this.delta) > this.windowSize.height / multiply) {
         if (this.delta < 0) {
@@ -144,7 +140,6 @@ export default {
         }
       }
     },
-
 
     onKeyDown({ key }) {
       if (this.isNavigating || this.menuOpen || this.galleryOpen) {
@@ -161,9 +156,9 @@ export default {
     async onThemeChange() {
       if (this.menuOpen) {
         this.menuAnimating = true;
-  
+
         await delay(this.$root.menuTransitionDuration);
-  
+
         this.menuAnimating = false;
       }
     },
@@ -172,12 +167,11 @@ export default {
       const tl = gsap.timeline();
       const componentTl = this.$refs.component.getEnterTl();
 
-      tl
-        .addLabel('start')
+      tl.addLabel('start')
         .call(() => {
-          this.$root.$emit('background:switchColor', this.activeSection.theme)
+          this.$root.$emit('background:switchColor', this.activeSection.theme);
         })
-        .add(componentTl, 'start')
+        .add(componentTl, 'start');
 
       return tl;
     },
@@ -193,7 +187,7 @@ export default {
 
     ...mapActions('home', ['setActiveChapter', 'setActiveSection']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

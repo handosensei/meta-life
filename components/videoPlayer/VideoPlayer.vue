@@ -1,16 +1,7 @@
 <template>
   <div class="videoPlayer">
-    <video
-      ref="video"
-      class="video"
-      :poster="video.poster"
-      autoplay
-      playsInline
-      @click="onPlayPause"
-      @canplay="onCanPlay"
-      @ended="onEnded"
-    >
-      <source :src="video.src" type="video/mp4">
+    <video ref="video" class="video" :poster="video.poster" autoplay playsInline @click="onPlayPause" @canplay="onCanPlay" @ended="onEnded">
+      <source :src="video.src" type="video/mp4" />
     </video>
 
     <div ref="controls" class="controls">
@@ -19,31 +10,16 @@
       </div>
 
       <div class="timeline">
-        <input
-          ref="range"
-          class="range"
-          type="range"
-          min="0"
-          step="0.5"
-          @input="changeTime"
-        >
+        <input ref="range" class="range" type="range" min="0" step="0.5" @input="changeTime" />
         <progress ref="progress" class="progress" max="100" />
       </div>
 
       <div class="controlsButtons">
-        <button
-          type="button"
-          class="buttonPlay"
-          @click="onPlayPause"
-        >
+        <button type="button" class="buttonPlay" @click="onPlayPause">
           {{ isPlaying ? 'Pause' : 'Play' }}
         </button>
         <div ref="time" class="time" />
-        <button
-          type="button"
-          class="buttonMute"
-          @click="onMute"
-        >
+        <button type="button" class="buttonMute" @click="onMute">
           <Icon ref="equalizer" type="EqualizerVideo" />
         </button>
       </div>
@@ -69,7 +45,7 @@ export default {
     video: {
       type: Object,
       required: true,
-    }
+    },
   },
 
   data() {
@@ -108,14 +84,18 @@ export default {
     },
 
     onEnter() {
-      gsap.fromTo(this.$refs.button, {
-        scale: 0.1,
-      }, {
-        scale: 1,
-        delay: 2,
-        duration: 2,
-        ease: 'expo.inOut',
-      });
+      gsap.fromTo(
+        this.$refs.button,
+        {
+          scale: 0.1,
+        },
+        {
+          scale: 1,
+          delay: 2,
+          duration: 2,
+          ease: 'expo.inOut',
+        }
+      );
     },
 
     animateEqualizer() {
@@ -128,46 +108,61 @@ export default {
           scaleY: 0.1,
         });
       } else {
-        gsap.fromTo(this.bars[0], {
-          scaleY: 0.1,
-        }, {
-          duration: 0.5,
-          repeat: -1,
-          yoyo: true,
-          scaleY: 1,
-        });
+        gsap.fromTo(
+          this.bars[0],
+          {
+            scaleY: 0.1,
+          },
+          {
+            duration: 0.5,
+            repeat: -1,
+            yoyo: true,
+            scaleY: 1,
+          }
+        );
 
-        gsap.fromTo(this.bars[1], {
-          scaleY: 0.1,
-        }, {
-          delay: 0.1,
-          repeat: -1,
-          yoyo: true,
-          scaleY: 1,
-          duration: 0.3,
-        });
+        gsap.fromTo(
+          this.bars[1],
+          {
+            scaleY: 0.1,
+          },
+          {
+            delay: 0.1,
+            repeat: -1,
+            yoyo: true,
+            scaleY: 1,
+            duration: 0.3,
+          }
+        );
 
-        gsap.fromTo(this.bars[2], {
-          scaleY: 0.3,
-        }, {
-          delay: 0.2,
-          repeat: -1,
-          yoyo: true,
-          scaleY: 1,
-          duration: 0.6,
-        });
+        gsap.fromTo(
+          this.bars[2],
+          {
+            scaleY: 0.3,
+          },
+          {
+            delay: 0.2,
+            repeat: -1,
+            yoyo: true,
+            scaleY: 1,
+            duration: 0.6,
+          }
+        );
 
-        gsap.fromTo(this.bars[3], {
-          scaleY: 0.1,
-        }, {
-          repeat: -1,
-          yoyo: true,
-          scaleY: 1,
-          duration: 0.4,
-        });
+        gsap.fromTo(
+          this.bars[3],
+          {
+            scaleY: 0.1,
+          },
+          {
+            repeat: -1,
+            yoyo: true,
+            scaleY: 1,
+            duration: 0.4,
+          }
+        );
       }
     },
-
 
     onKeyDown({ key, keyCode }) {
       if (key === 'Escape') {
@@ -202,7 +197,7 @@ export default {
 
     onRaf() {
       this.setTime();
-      
+
       this.$refs.time.innerHTML = this.formatTime(this.videoCurrentTime);
     },
 
@@ -270,9 +265,9 @@ export default {
 
     formatTime(seconds) {
       let minutes = Math.floor(seconds / 60);
-      minutes = (minutes >= 10) ? minutes : '0' + minutes;
+      minutes = minutes >= 10 ? minutes : '0' + minutes;
       seconds = Math.floor(seconds % 60);
-      seconds = (seconds >= 10) ? seconds : '0' + seconds;
+      seconds = seconds >= 10 ? seconds : '0' + seconds;
       return minutes + ':' + seconds;
     },
 
@@ -282,7 +277,7 @@ export default {
       range.value = video.currentTime * 10;
       progress.value = video.currentTime * 10;
     },
-    
+
     changeTime() {
       this.$refs.video.currentTime = this.$refs.range.value / 10;
       this.setTime();
@@ -290,7 +285,7 @@ export default {
 
     ...mapActions('app', ['setVideoPlayerOpen']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

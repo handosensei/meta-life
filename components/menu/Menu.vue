@@ -3,11 +3,7 @@
     <div class="content">
       <div ref="title" class="title">The Future will be here soon</div>
       <ul ref="menuList" class="menuList">
-        <li
-          v-for="{ href, text } in links"
-          :key="href"
-          class="menuItem"
-        >
+        <li v-for="{ href, text } in links" :key="href" class="menuItem">
           <NuxtLink :to="href" class="menuLink">
             {{ text }}
           </NuxtLink>
@@ -47,7 +43,7 @@ export default {
         { href: '/newsletter', text: 'Newsletter' },
         { href: '/privacy-policy', text: 'Privacy Policy' },
         { href: '/terms-conditions', text: 'Terms & Conditions' },
-      ]
+      ],
     };
   },
 
@@ -81,39 +77,23 @@ export default {
       const from = `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)`;
       const to = `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%`;
 
-      gsap.fromTo(
-        this.$el,
-        { clipPath: from },
-        { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', clearProps: 'all' },
-      );
+      gsap.fromTo(this.$el, { clipPath: from }, { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', clearProps: 'all' });
 
-      gsap.fromTo(
-        this.splitTitle.words,
-        { autoAlpha: 0, filter: 'blur(5px)' },
-        { autoAlpha: 1, filter: 'blur(0px)', stagger: { from: 'random', amount: 0.5 }, delay: 1, clearProps: 'filter' },
-      );
+      gsap.fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: { from: 'random', amount: 0.5 }, delay: 1, clearProps: 'filter' });
 
-      gsap.fromTo(
-        this.$refs.menuList.children,
-        { autoAlpha: 0 },
-        { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' },
-      );
+      gsap.fromTo(this.$refs.menuList.children, { autoAlpha: 0 }, { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' });
     },
 
     leave(done) {
       const from = `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%`;
       const to = 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)';
 
-      gsap.fromTo(
-        this.$el,
-        { clipPath: from },
-        { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', onComplete: done },
-      );
+      gsap.fromTo(this.$el, { clipPath: from }, { clipPath: to, duration: this.$root.menuTransitionDuration / 1000, ease: 'expo.inOut', onComplete: done });
     },
 
     ...mapActions('app', ['setMenuOpen', 'setTheme']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

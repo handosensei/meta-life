@@ -1,10 +1,6 @@
 <template>
   <div class="sectionHeading">
-    <h2
-      class="heading"
-      :class="{ 'isLarge': size === 'large' }"
-      v-html="title"
-    />
+    <h2 class="heading" :class="{ isLarge: size === 'large' }" v-html="title" />
 
     <NuxtLink v-if="link" :to="link.href" class="link">
       <Icon type="discover" class="icon" />
@@ -41,7 +37,7 @@ export default {
     link: {
       type: Object,
       required: false,
-      default: () => {}
+      default: () => {},
     },
   },
 
@@ -49,12 +45,7 @@ export default {
     getEnterTl() {
       const tl = gsap.timeline();
 
-      tl
-        .fromTo(
-          this.$el,
-          { autoAlpha: 0 },
-          { autoAlpha: 1 },
-        );
+      tl.fromTo(this.$el, { autoAlpha: 0 }, { autoAlpha: 1 });
 
       return tl;
     },
@@ -62,17 +53,12 @@ export default {
     getLeaveTl() {
       const tl = gsap.timeline();
 
-      tl
-        .fromTo(
-          this.$el,
-          { autoAlpha: 1 },
-          { autoAlpha: 0 },
-        );
+      tl.fromTo(this.$el, { autoAlpha: 1 }, { autoAlpha: 0 });
 
       return tl;
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

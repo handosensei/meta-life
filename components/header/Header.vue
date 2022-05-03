@@ -1,30 +1,8 @@
 <template>
-  <header class="header" :class="{ 'isDark': theme === 'light', 'menuOpen': menuOpen }">
-    <IconButton
-      ref="menuButton"
-      as="button"
-      class="menuButton"
-      icon="MenuButton"
-      :disabled="menuOpen || videoPlayerOpen"
-      :on-click="onMenuButtonClick"
-      aria-label="open menu button"
-    />
-    <IconButton
-      ref="closeButton"
-      as="button"
-      class="closeButton"
-      icon="CloseButton"
-      :disabled="!menuOpen && !videoPlayerOpen"
-      :on-click="onMenuButtonClick"
-      aria-label="close menu button"
-    />
-    <IconButton
-      v-if="!videoPlayerOpen"
-      href="/"
-      class="logoButton"
-      icon="LogoButton"
-      aria-label="go to homepage button"
-    />
+  <header class="header" :class="{ isDark: theme === 'light', menuOpen: menuOpen }">
+    <IconButton ref="menuButton" as="button" class="menuButton" icon="MenuButton" :disabled="menuOpen || videoPlayerOpen" :on-click="onMenuButtonClick" aria-label="open menu button" />
+    <IconButton ref="closeButton" as="button" class="closeButton" icon="CloseButton" :disabled="!menuOpen && !videoPlayerOpen" :on-click="onMenuButtonClick" aria-label="close menu button" />
+    <IconButton v-if="!videoPlayerOpen" href="/" class="logoButton" icon="LogoButton" aria-label="go to homepage button" />
   </header>
 </template>
 
@@ -82,14 +60,11 @@ export default {
         this.setTheme('dark');
       }
 
-      this.setMenuOpen(!this.menuOpen)
+      this.setMenuOpen(!this.menuOpen);
     },
 
     initCloseButton() {
-      gsap.set(
-        this.$refs.closeButton.$el.firstChild,
-        { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` }
-      );
+      gsap.set(this.$refs.closeButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
     },
 
     onMenuButtonToggle() {
@@ -103,8 +78,8 @@ export default {
             ease: 'expo.inOut',
             onComplete: () => {
               this.animating = false;
-            }
-          },
+            },
+          }
         );
       } else {
         gsap.fromTo(
@@ -116,15 +91,15 @@ export default {
             ease: 'expo.inOut',
             onComplete: () => {
               this.animating = false;
-            }
-          },
+            },
+          }
         );
       }
     },
 
     ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme', 'setVideoPlayerOpen']),
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -22,7 +22,7 @@ export default {
     Credits,
     Socials,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

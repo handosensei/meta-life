@@ -4,11 +4,12 @@
       <img
         class="image"
         :style="{
-          width: `${imageSize.width / 1440 * 100}%`,
-          height: `${imageSize.height / 1440 * 100}%`, 
+          width: `${(imageSize.width / 1440) * 100}%`,
+          height: `${(imageSize.height / 1440) * 100}%`,
         }"
-        :src="image.src" :alt="`${title} logo`"
-      >
+        :src="image.src"
+        :alt="`${title} logo`"
+      />
     </div>
 
     <div class="content">
@@ -47,13 +48,13 @@ export default {
     imageSize() {
       const imageSize = 80000;
       const dimensions = imageDimensions(this.image, imageSize);
-      
+
       return dimensions;
     },
 
     ...mapState('app', ['windowSize']),
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

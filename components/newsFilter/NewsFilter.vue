@@ -1,16 +1,10 @@
 <template>
   <div class="newsFilter">
-    <div class="title">
-      Filter by
-    </div>
+    <div class="title">Filter by</div>
     <div class="filter">
       <select class="select" @change="onChange($event)">
         <option value="" checked>All categories</option>
-        <option
-          v-for="category in categories"
-          :key="category"
-          :value="category"
-        >
+        <option v-for="category in categories" :key="category" :value="category">
           {{ category }}
         </option>
       </select>
@@ -40,10 +34,10 @@ export default {
 
       this.$nextTick(() => {
         this.$root.$emit('scroll:resize');
-      })
-    }
+      });
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

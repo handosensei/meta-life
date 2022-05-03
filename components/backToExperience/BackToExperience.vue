@@ -1,5 +1,5 @@
 <template>
-  <div class="backToExperience" :class="{ 'isLight': theme === 'light' }">
+  <div class="backToExperience" :class="{ isLight: theme === 'light' }">
     <div ref="container" class="container">
       <NuxtLink to="/" class="link">
         <span class="link-line">Back to the</span>
@@ -31,7 +31,7 @@ export default {
       type: String,
       required: false,
       default: 'dark',
-    }
+    },
   },
 
   computed: {
@@ -66,23 +66,19 @@ export default {
 
       const value = bounds.top - this.windowSize.height;
       const max = bounds.height;
-      
+
       this.progress = progress(value, 0, max);
       this.scrollTl.progress(-this.progress);
     },
 
     setAnimation() {
       const bounds = this.$el.getBoundingClientRect();
-      
+
       this.scrollTl = gsap.timeline({ paused: true });
-      this.scrollTl
-      .fromTo(this.$refs.container,
-        { y: -bounds.height / 2 },
-        { y: 0, ease: 'linear' }
-      );
+      this.scrollTl.fromTo(this.$refs.container, { y: -bounds.height / 2 }, { y: 0, ease: 'linear' });
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

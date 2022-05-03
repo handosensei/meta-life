@@ -42,9 +42,9 @@ export default {
       gsap.to(this.$el, { duration: 0.5, backgroundColor });
 
       this.activeTheme = theme;
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

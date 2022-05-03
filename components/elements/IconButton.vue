@@ -2,7 +2,7 @@
   <component
     :is="as"
     class="iconButton"
-    :class="{ 'isFilled': filled }"
+    :class="{ isFilled: filled }"
     :href="isLink ? href : null"
     :to="as === 'NuxtLink' ? href : null"
     :target="as === 'a' && target === '_blank' ? target : null"
@@ -10,10 +10,7 @@
     :disabled="disabled"
     @click="onClick"
   >
-    <span
-      @mouseenter="onMouseEnter"
-      @mouseleave="onMouseLeave"
-    >
+    <span @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
       <Icon ref="icon" :type="icon" />
     </span>
   </component>
@@ -42,13 +39,13 @@ export default {
       required: false,
       default: 'NuxtLink',
     },
-    
+
     disabled: {
       type: Boolean,
       required: false,
       default: false,
     },
-    
+
     filled: {
       type: Boolean,
       required: false,
@@ -90,7 +87,7 @@ export default {
       return this.as === 'NuxtLink' || this.as === 'a';
     },
   },
-  
+
   mounted() {
     this.iconEl = this.$refs.icon.$el;
     this.iconPath = this.iconEl.firstChild;
@@ -104,51 +101,31 @@ export default {
     },
 
     onMouseEnter() {
-      gsap.fromTo(
-        this.iconPath,
-        { drawSVG: '0%' },
-        { drawSVG: '100%', ease: 'expo.out', duration: 0.5 }
-      );
+      gsap.fromTo(this.iconPath, { drawSVG: '0%' }, { drawSVG: '100%', ease: 'expo.out', duration: 0.5 });
 
       if (this.icon === 'MenuButton') {
         const lines = this.iconEl.querySelectorAll('line');
 
-        gsap.fromTo(
-          [lines[0], lines[2]],
-          { drawSVG: '100%' },
-          { drawSVG: '50%', ease: 'expo.out', stagger: 0.1, duration: 0.5 }
-        );
+        gsap.fromTo([lines[0], lines[2]], { drawSVG: '100%' }, { drawSVG: '50%', ease: 'expo.out', stagger: 0.1, duration: 0.5 });
       }
 
       if (this.icon === 'CloseButton') {
         const lines = this.iconEl.querySelectorAll('path');
 
-        gsap.fromTo(
-          lines[1],
-          { rotate: 0, transformOrigin: 'center' },
-          { rotate: 90, ease: 'expo.out', duration: 0.5 }
-        );
+        gsap.fromTo(lines[1], { rotate: 0, transformOrigin: 'center' }, { rotate: 90, ease: 'expo.out', duration: 0.5 });
       }
     },
 
     onMouseLeave() {
-      gsap.fromTo(
-        this.iconPath,
-        { drawSVG: '-100%' },
-        { drawSVG: '0%', ease: 'expo.out', duration: 0.5 }
-      );
+      gsap.fromTo(this.iconPath, { drawSVG: '-100%' }, { drawSVG: '0%', ease: 'expo.out', duration: 0.5 });
 
       if (this.icon === 'MenuButton') {
         const lines = this.iconEl.querySelectorAll('line');
 
-        gsap.fromTo(
-          [lines[0], lines[2]],
-          { drawSVG: '50%' },
-          { drawSVG: '100%', ease: 'expo.out', stagger: 0.1, duration: 0.5 }
-        );
+        gsap.fromTo([lines[0], lines[2]], { drawSVG: '50%' }, { drawSVG: '100%', ease: 'expo.out', stagger: 0.1, duration: 0.5 });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

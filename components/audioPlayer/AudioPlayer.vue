@@ -1,7 +1,7 @@
 <template>
-	<button type="button" class="audioPlayer" aria-label="Toggle sound button">
-		<Icon type="Equalizer" />
-	</button>
+  <button type="button" class="audioPlayer" aria-label="Toggle sound button">
+    <Icon type="Equalizer" />
+  </button>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
   components: {
     Icon,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

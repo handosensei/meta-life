@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { gsap } from 'gsap';
 import { mapActions } from 'vuex';
 
 import data from '~/content/news.json';
@@ -45,7 +44,7 @@ export default {
   computed: {
     categories() {
       return [...new Set(this.items.flatMap(({ category }) => category))];
-    }
+    },
   },
 
   beforeMount() {
@@ -59,13 +58,13 @@ export default {
       this.activeCategory = category;
 
       if (category === '') {
-        this.activeItems = this.items;        
+        this.activeItems = this.items;
       } else {
         this.activeItems = this.items.filter((item) => item.category === category);
       }
     },
 
     ...mapActions('app', ['setTheme']),
-  }
-}
+  },
+};
 </script>
