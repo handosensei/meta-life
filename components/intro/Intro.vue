@@ -82,7 +82,6 @@ export default {
         .fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0)
         .fromTo(this.splitText.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0.5);
 
-      console.log('galleryItems', this.galleryItems, this.$refs.galleryItems)
       if (this.galleryItems && this.galleryItems.length > 0) {
         const galleryTl = this.$refs.galleryItems.getGalleryTl();
         tl.add(galleryTl, 0);

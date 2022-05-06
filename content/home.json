@@ -455,7 +455,7 @@
 
     {
       "id": "metal",
-      "name": "Metal",
+      "name": "$METAL",
       "sections": [
         {
           "id": "metal-01",
