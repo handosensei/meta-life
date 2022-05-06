@@ -14,7 +14,7 @@
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
-import GalleryItems from '~/components/GalleryItems/GalleryItems.vue';
+import GalleryItems from '~/components/galleryItems/GalleryItems.vue';
 
 export default {
   name: 'IntroComponent',
