@@ -6,7 +6,14 @@
       <div ref="transform" class="transform">
         <p ref="title" class="title">Enter in the new world</p>
         <Icon ref="wordmark" type="wordmark" class="wordmark" />
-        <p ref="scroll" class="scroll">Scroll to discover</p>
+        <div ref="button" class="preloader-button" @click="onClick">
+          <svg width="205" height="61" viewBox="0 0 205 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3C0 1.34315 1.34315 0 3 0H202C203.657 0 205 1.34315 205 3V50L199.003 55.5L193.005 61H2.99999C1.34314 61 0 59.6569 0 58V3Z" fill="white"/>
+          </svg>
+          <div>
+            <span>Launch the experience</span>
+          </div>
+        </div>
       </div>
 
       <div ref="progress" class="progress">
@@ -135,7 +142,7 @@ export default {
           },
           '-=0.5'
         )
-        .to(this.$refs.scroll, {
+        .to(this.$refs.button, {
           autoAlpha: 1,
           duration: 0.4,
           ease: 'none',
@@ -143,11 +150,9 @@ export default {
         .restart();
     },
 
-    onScroll(event) {
-      if (Math.abs(event.deltaY) >= 50) {
-        this.vs.destroy();
-        this.setHasPreloader(false);
-      }
+    onClick() {
+      this.vs.destroy();
+      this.setHasPreloader(false);
     },
 
     enter() {

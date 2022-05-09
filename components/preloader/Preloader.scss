@@ -42,18 +42,33 @@
   }
 }
 
-.scroll {
-  font-size: clamp(10px, 1rem, 1rem);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-white-04);
-  margin-top: 3rem;
-  text-align: center;
+.preloader-button {
+  width: 205px;
+  height: 61px;
+  position: relative;
+  cursor: pointer;
+  margin: 30px auto 0;
   opacity: 0;
   visibility: hidden;
 
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+
+    > span {
+      font: 400 10px/1 'Matter';
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #131e2f;
+    }
+  }
+
   @include minTablet {
-    margin-top: 4.4rem;
+    margin-top: 60px;
   }
 }
 
