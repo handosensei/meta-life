@@ -1,0 +1,89 @@
+.contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url('/img/contact/background.png') no-repeat fixed center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include minTablet {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+
+.main {
+  max-width: 266px;
+}
+
+h1 {
+  font: 400 30px 'Matter';
+  line-height: 90%;
+  letter-spacing: -0.01em;
+  color: white;
+  text-align: inherit;
+
+  @include minTablet {
+    font: 400 40px 'Matter';
+  }
+}
+
+.socials {
+  position: relative;
+  margin-top: 77px;
+
+  @include minTablet {
+    margin-top: 0;
+    margin-left: 20.4%;
+  }
+}
+
+.infos {
+  margin-top: 25px;
+}
+
+p {
+  text-align: inherit;
+  font: 400 14px 'Matter';
+  line-height: 130%;
+  color: var(--color-white-04);
+}
+
+h2 {
+  font: 400 14px 'Matter';
+  line-height: 130%;
+  color: var(--color-white-04);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: inherit;
+}
+
+a {
+  color: white;
+
+  &.email {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  margin-top: 25px;
+}
+
+li {
+  font: 400 30px 'Matter';
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: white;
+  text-align: inherit;
+
+  @include minTablet {
+    font: 400 40px 'Matter';
+  }
+}
