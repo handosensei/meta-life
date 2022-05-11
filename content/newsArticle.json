@@ -1,0 +1,31 @@
+[
+  {
+    "type": "Update",
+    "title": "Update : MetaLife is almost there. Be ready!",
+    "slug": "metalife-is-almost-there-be-ready-1",
+    "date": "29-09-22",
+    "img": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    "sections": [
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor sed sed ut dictum at maecenas vulputate. Convallis vitae, tristique pulvinar sit tempor orci. Accumsan, interdum eget euismod integer. Mattis sed arcu lectus non tristique consectetur.",
+        "contents": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim curabitur donec cras nisl sit ullamcorper scelerisque ornare. Est nibh elementum faucibus congue. Nisl faucibus libero at parturient ultrices dignissim gravida lectus id. Leo mauris mattis viverra lectus. Praesent vitae enim odio malesuada libero morbi nunc nisl. Natoque massa venenatis gravida tristique felis, ac ultrices. Dolor lectus sed consectetur pellentesque aliquet a, mi aliquet.",
+          "Elit pellentesque amet sit enim purus vitae bibendum suspendisse phasellus. Interdum vitae vel mus ultrices et. Neque in adipiscing vulputate eleifend a, viverra ac et at. Egestas nam id dignissim ultricies etiam sollicitudin pellentesque turpis. Sit sed non, tellus commodo ullamcorper. Morbi massa risus, interdum libero non iaculis porttitor donec commodo. In purus id ante nulla elementum in consectetur. Nunc commodo gravida mattis risus ipsum euismod vel nisi, mus. Pellentesque neque, aliquet convallis enim et. Enim sed nisi, dictum mattis blandit euismod. Tempus at et ut quam integer diam et sit tristique. Auctor cras arcu amet viverra nulla accumsan. At mattis etiam aliquam elementum, quam.",
+          "Egestas etiam pretium, habitant congue. Nec maecenas leo, accumsan semper enim vel. Odio tellus tincidunt aliquet gravida nisi diam sit. Urna pellentesque sed suspendisse vitae ut cum. A vitae mi eu nunc eget non pharetra cum."
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+        "alt": "Nice rinoceros"
+      },
+      {
+        "title": "Sortie imminente !",
+        "contents": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim curabitur donec cras nisl sit ullamcorper scelerisque ornare. Est nibh elementum faucibus congue. Nisl faucibus libero at parturient ultrices dignissim gravida lectus id. Leo mauris mattis viverra lectus.<br />Praesent vitae enim odio malesuada libero morbi nunc nisl. Natoque massa venenatis gravida tristique felis, ac ultrices. Dolor lectus sed consectetur pellentesque aliquet a, mi aliquet.",
+          "Elit pellentesque amet sit enim purus vitae bibendum suspendisse phasellus. Interdum vitae vel mus ultrices et. Neque in adipiscing vulputate eleifend a, viverra ac et at. Egestas nam id dignissim ultricies etiam sollicitudin pellentesque turpis. Sit sed non, tellus commodo ullamcorper. Morbi massa risus, interdum libero non iaculis porttitor donec commodo. In purus id ante nulla elementum in consectetur. Nunc commodo gravida mattis risus ipsum euismod vel nisi, mus. Pellentesque neque, aliquet convallis enim et. Enim sed nisi, dictum mattis blandit euismod. Tempus at et ut quam integer diam et sit tristique. Auctor cras arcu amet viverra nulla accumsan. At mattis etiam aliquam elementum, quam.",
+          "Egestas etiam pretium, habitant congue. Nec maecenas leo, accumsan semper enim vel. Odio tellus tincidunt aliquet gravida nisi diam sit. Urna pellentesque sed suspendisse vitae ut cum. A vitae mi eu nunc eget non pharetra cum."
+        ]
+      }
+    ]
+  }
+]

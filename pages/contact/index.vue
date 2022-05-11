@@ -15,12 +15,12 @@ import Contact from '~/components/contact/Contact.vue'
 
 export default {
   name: 'ContactPage',
-
-  mixins: [Debug, PageTransition, Scroll],
-
+  
   components: {
     Contact,
   },
+
+  mixins: [Debug, PageTransition, Scroll],
 
   beforeMount() {
     this.setTheme('dark');

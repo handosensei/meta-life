@@ -3,6 +3,7 @@
   "items": [
     {
       "slug": "metalife-is-almost-there-be-ready-1",
+      "type": "Update",
       "category": "The game",
       "title": "MetaLife is almost there. Be ready!",
       "image": {
@@ -18,6 +19,7 @@
     },
     {
       "slug": "metalife-is-almost-there-last-call-2",
+      "type": "Update",
       "category": "Category 2",
       "title": "MetaLife is almost there. Last call!",
       "image": {
@@ -33,6 +35,7 @@
     },
     {
       "slug": "metalife-is-almost-there-be-ready-3",
+      "type": "Update",
       "category": "Category 2",
       "title": "MetaLife is almost there. Be ready!",
       "image": {
@@ -48,6 +51,7 @@
     },
     {
       "slug": "metalife-is-almost-there-last-call-4",
+      "type": "Update",
       "category": "Category 3",
       "title": "MetaLife is almost there. Last call!",
       "image": {
@@ -63,6 +67,7 @@
     },
     {
       "slug": "metalife-is-almost-there-be-ready-5",
+      "type": "Update",
       "category": "Category 3",
       "title": "MetaLife is almost there. Be ready!",
       "image": {
@@ -78,6 +83,7 @@
     },
     {
       "slug": "metalife-is-almost-there-last-call-6",
+      "type": "Update",
       "category": "The game",
       "title": "MetaLife is almost there. Last call!",
       "image": {
@@ -93,6 +99,7 @@
     },
     {
       "slug": "metalife-is-almost-there-be-ready-7",
+      "type": "Update",
       "category": "The game",
       "title": "MetaLife is almost there. Be ready!",
       "image": {
@@ -108,6 +115,7 @@
     },
     {
       "slug": "metalife-is-almost-there-last-call-8",
+      "type": "Update",
       "category": "The game",
       "title": "MetaLife is almost there. Last call!",
       "image": {
