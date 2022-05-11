@@ -6,8 +6,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: url('/img/contact/background.png') no-repeat fixed center;
-  background-size: cover;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -15,6 +13,17 @@
   @include minTablet {
     text-align: left;
     flex-direction: row;
+  }
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
   }
 }
 
@@ -86,4 +95,70 @@ li {
   @include minTablet {
     font: 400 40px 'Matter';
   }
+}
+
+//particles
+
+/* Config */
+$color-particle: #8b7fb7;
+$spacing: 2560;
+$url: url('/img/contact/particle.png');
+
+@function randomCenter() {
+  @return calc(random($spacing) - 100);
+}
+
+@function particles($max, $size) {
+  $val: randomCenter() + px randomCenter() + px/$size no-repeat $url;
+  @for $i from 1 through $max {
+    $val: #{$val}, randomCenter() + px randomCenter() + px/$size no-repeat $url;
+  }
+  @return $val;
+}
+
+@mixin particles($max, $size) {
+  background: particles($max, $size);
+}
+
+.animation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.particle {
+  border-radius: 50%;
+}
+
+.particle-1 {
+  @include particles(15, 5px);
+}
+.particle-2 {
+  @include particles(7, 12px);
+}
+
+.particle-3 {
+  @include particles(15, 5px);
+}
+
+.particle-3bis {
+  @include particles(15, 5px);
+}
+
+.particle-4 {
+  @include particles(15, 12px);
+}
+
+.particle-4bis {
+  @include particles(15, 12px);
 }
