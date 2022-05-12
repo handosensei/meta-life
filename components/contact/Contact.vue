@@ -34,7 +34,7 @@
 
 <script>
 import size from '@antinomy-studio/size'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 export default {
   name: 'ContactComponent',
