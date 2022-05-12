@@ -1,7 +1,7 @@
 <template>
   <div class="newsHero">
     <div class="newsBackground">
-      <img :src="article.img" alt=""/>
+      <img :src="article.img" alt="" data-fx="y" data-speed="0.5"/>
     </div>
     <div class="newsTitle">
       <span class="newsType">{{ article.type }}</span>

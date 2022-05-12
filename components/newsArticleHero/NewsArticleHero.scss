@@ -6,11 +6,13 @@
 
 .newsBackground {
   position: absolute;
-  inset: 0;
-  height: 85.5vh;
+  inset: -4vh 0 0;
+  height: 89.5vh;
   display: flex;
+  overflow: hidden;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   > img {
+    transform: scale(1.1);
     object-fit: cover;
     z-index: -1;
   }
