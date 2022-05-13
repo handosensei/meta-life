@@ -34,6 +34,7 @@ export default {
   watch: {
     menuOpen: 'onMenuButtonToggle',
     galleryOpen: 'onMenuButtonToggle',
+    '$nuxt.$route.name': 'onRouteChange'
   },
 
   mounted() {
@@ -78,13 +79,21 @@ export default {
 
     initButtons() {
       gsap.set(this.$refs.closeButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
-      if(this.windowSize.width < BREAKPOINTS.s){
+      this.displayButtons()
+    },
+
+    displayButtons () {
+      const smallScreen = this.windowSize.width < BREAKPOINTS.s
+      gsap.set(this.$refs.wordmark.$el, { display: smallScreen ? 'block' : 'none' });
+      if(smallScreen && this.$nuxt.$route.name === 'index'){
         gsap.set(this.$refs.logoButton.$el, { display: "none" });
         gsap.set(this.$refs.closeChapterNavButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
+        gsap.set(this.$refs.openChapterNavButton.$el, { display: "block" });
+        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "block" });
       } else {
+        gsap.set(this.$refs.logoButton.$el, { display: "block" });
         gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
         gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
-        gsap.set(this.$refs.wordmark.$el, { display: "none" });
       }
     },
 
@@ -151,20 +160,15 @@ export default {
       this.setChapterNavOpen(!this.chapterNavOpen)
     },
 
-    onResize () {
-      if(this.windowSize.width < BREAKPOINTS.s){
-        gsap.set(this.$refs.logoButton.$el, { display: "none" });
-        gsap.set(this.$refs.closeChapterNavButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
-        gsap.set(this.$refs.openChapterNavButton.$el, { display: "block" });
-        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "block" });
-        gsap.set(this.$refs.wordmark.$el, { display: "block" });
-      } else {
-        gsap.set(this.$refs.logoButton.$el, { display: "block" });
-        gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
-        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
-        gsap.set(this.$refs.wordmark.$el, { display: "none" });
-      }
+    onRouteChange () {
+      this.displayButtons()
     },
+
+    onResize () {
+      this.displayButtons()
+    },
+
+
 
     ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme', 'setVideoPlayerOpen']),
     ...mapActions('home', ['setChapterNavOpen']),
