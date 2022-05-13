@@ -84,6 +84,7 @@ export default {
       } else {
         gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
         gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
+        gsap.set(this.$refs.wordmark.$el, { display: "none" });
       }
     },
 
@@ -156,10 +157,12 @@ export default {
         gsap.set(this.$refs.closeChapterNavButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
         gsap.set(this.$refs.openChapterNavButton.$el, { display: "block" });
         gsap.set(this.$refs.closeChapterNavButton.$el, { display: "block" });
+        gsap.set(this.$refs.wordmark.$el, { display: "block" });
       } else {
         gsap.set(this.$refs.logoButton.$el, { display: "block" });
         gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
         gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
+        gsap.set(this.$refs.wordmark.$el, { display: "none" });
       }
     },
 
