@@ -91,7 +91,6 @@ export default {
   mounted() {
     this.iconEl = this.$refs.icon.$el;
     this.iconPath = this.iconEl.firstChild;
-
     this.init();
   },
 
@@ -113,6 +112,20 @@ export default {
         const lines = this.iconEl.querySelectorAll('path');
 
         gsap.fromTo(lines[1], { rotate: 0, transformOrigin: 'center' }, { rotate: 90, ease: 'expo.out', duration: 0.5 });
+      }
+
+      if (this.icon === 'NavButton') {
+        const lines = this.$el.querySelectorAll('path');
+        gsap.fromTo(lines[2], {
+          attr: {d: 'M26 25H30V29H26V25ZM24 31V29H26V31H24ZM24 31V35H20V31H24ZM32 31H30V29H32V31ZM36 31H32V35H36V31ZM38 29V31H36V29H38ZM38 29H42V25H38V29Z'}
+        },{
+          attr: {d: "M26 31H30V35H26V31ZM24 31V29H26V31H24ZM24 29V25H20V29H24ZM32 31H30V29H32V31ZM36 29H32V25H36V29ZM38 29V31H36V29H38ZM38 31H42V35H38V31Z"},
+          ease: 'linear',
+          duration: 0,
+          repeat: 6,
+          yoyo: true,
+          repeatDelay: 0.1
+        })
       }
     },
 

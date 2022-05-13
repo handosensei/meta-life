@@ -4,7 +4,7 @@
     <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
     <div class="buttons">
       <div v-for="(link, index) in links" :key="index">
-        <SocialButton  :href="link.href" :name="link.text" :icon="link.icon" />
+        <SocialButton ref="socials" :href="link.href" :name="link.text" :icon="link.icon"/>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 <script>
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
-import SocialButton from '~/components/socialButton/SocialButton.vue';
+import SocialButton from '../socialButton/SocialButton.vue';
 
 export default {
   name: 'HeadingComponent',
@@ -62,21 +62,21 @@ export default {
 
     getEnterTl() {
       const tl = gsap.timeline();
-
+      
       if (this.$refs.paragraph) {
         tl.fromTo(this.splitParagraph.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, delay: 0.5, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0);
       }
+      tl.fromTo(this.$refs.socials.map(c => c.$el),  {autoAlpha: 0, yPercent: 50}, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 1);
 
       tl.fromTo(this.$el, { autoAlpha: 0 }, { autoAlpha: 1 }, 0);
+
 
       return tl;
     },
 
     getLeaveTl() {
       const tl = gsap.timeline();
-
       tl.fromTo(this.$el, { autoAlpha: 1 }, { autoAlpha: 0 });
-
       return tl;
     },
   },

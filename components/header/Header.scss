@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 4rem;
   left: 4rem;
@@ -29,6 +30,11 @@
   top: 0;
   left: 0;
   z-index: 1;
+
+  &.right {
+    left: auto;
+    right: 0;
+  }
 }
 
 .closeButton,
@@ -37,4 +43,9 @@
   .header.menuOpen &.focus-visible:focus {
     outline-color: var(--color-white);
   }
+}
+
+.wordmark {
+  width: max(57px, 5.7rem);
+  height: max(24px, 2.4rem);
 }

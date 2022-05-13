@@ -10,7 +10,6 @@ export const state = () => ({
 
 export const actions = {
   setActiveChapter({ commit }, chapter) {
-    console.log('set active chapter triggerd', chapter, commit);
     commit('SET_ACTIVE_CHAPTER', chapter);
   },
 
@@ -29,7 +28,6 @@ export const actions = {
 
 export const mutations = {
   SET_ACTIVE_CHAPTER(state, payload) {
-    console.log('change active chapter', payload);
     state.activeChapter = payload;
   },
 

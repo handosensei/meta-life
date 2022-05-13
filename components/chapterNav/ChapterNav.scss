@@ -1,13 +1,7 @@
 .chapterNav {
-  position: fixed;
-  bottom: 4rem;
-  left: 0;
   z-index: 5;
   color: var(--color-white-04);
-  background-color: rgba(243, 243, 243, 0.1);
-  border: 1px solid var(--color-white-005);
   backdrop-filter: blur(20px);
-  transition: 1s color, 1s border, 1s background-color;
 
   &.isLight {
     color: var(--color-dark-04);
@@ -18,74 +12,141 @@
     pointer-events: none;
   }
 
+  @include maxMobile {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background: rgba(42, 32, 91, 0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+
   @include minTablet {
+    display: block;
     position: absolute;
     left: 4rem;
     right: 4rem;
+    bottom: 4rem;
+    background-color: rgba(243, 243, 243, 0.1);
+    border: 1px solid var(--color-white-005);
+    transition: 1s color, 1s border, 1s background-color;
   }
 }
 
 .navList {
   display: flex;
+
+  @include maxMobile {
+    position: relative;
+    flex-direction: column;
+    top: max(42px, 4.2rem);
+  }
 }
 
 .navItem {
   flex: 1;
   display: flex;
 
-  &:not(:last-child) {
-    border-right: 1px solid var(--color-white-005);
-
-    .isLight & {
-      border-right: 1px solid var(--color-black-005);
-    }
-  }
-
-  &.isActive {
-    color: var(--color-white);
-    background-color: var(--color-white-01);
-    transition: 0.5s background-color, 0.5s color;
-
-    .isLight & {
-      color: var(--color-black);
-      background-color: var(--color-white);
-    }
-  }
-}
-
-.navButton {
-  flex: 1;
-  display: flex;
-}
-
-.buttonLabel {
-  display: flex;
-  margin-left: auto;
-  font-size: clamp(10px, 1rem, 1rem);
-  line-height: 4.3rem;
-  white-space: nowrap;
-  padding-left: 9rem;
-
-  &::after {
-    content: '›';
-    color: var(--color-white-04);
-    margin: 0 2rem 0 1rem;
-    transition: color 1s;
-
-    .isLight & {
-      color: var(--color-dark-04);
-    }
-
-    .isActive & {
-      color: var(--color-white);
-
-      .isLight & {
-        color: var(--color-black);
-      }
+  @include maxMobile {
+    &:not(:first-child) {
+      margin-top: 10px;
     }
   }
 
   @include minTablet {
+    &:not(:last-child) {
+      border-right: 1px solid var(--color-white-005);
+
+      .isLight & {
+        border-right: 1px solid var(--color-black-005);
+      }
+    }
+
+    &.isActive {
+      color: var(--color-white);
+      background-color: var(--color-white-01);
+      transition: 0.5s background-color, 0.5s color;
+
+      .isLight & {
+        color: var(--color-black);
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  position: relative;
+
+  @include maxMobile {
+    width: max(202px, 20.2rem);
+    height: max(50px, 5rem);
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include minTablet {
+    width: auto;
+  }
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  path {
+    fill-opacity: 1;
+  }
+
+  .buttonLabel {
+    color: var(--color-black);
+  }
+
+  @include minTablet {
+    display: none;
+  }
+}
+
+.buttonLabel {
+  display: flex;
+  font-size: clamp(10px, 1rem, 1rem);
+  white-space: nowrap;
+
+  @include maxMobile {
+    line-height: 12rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @include minTablet {
+    line-height: 4.3rem;
+    margin-left: auto;
     padding-left: 3rem;
+    &::after {
+      content: '›';
+      color: var(--color-white-04);
+      margin: 0 2rem 0 1rem;
+      transition: color 1s;
+
+      .isLight & {
+        color: var(--color-dark-04);
+      }
+
+      .isActive & {
+        color: var(--color-white);
+
+        .isLight & {
+          color: var(--color-black);
+        }
+      }
+    }
   }
 }

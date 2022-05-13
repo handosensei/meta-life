@@ -39,11 +39,11 @@ export default {
   mounted () {
     this.elementWidth = this.$refs.slider.firstElementChild?.clientWidth
     this.index = 0
-    window.addEventListener('resize', this.onResize)
+    this.$root.$on('window:resize', this.onResize);
   },
 
   beforeUnmount () {
-    window.removeEventListener('resize', this.onResize)
+    this.$root.$off('window:resize', this.onResize);
   },
 
   methods: {
@@ -58,7 +58,7 @@ export default {
     },
 
     onResize () {
-      this.elementWidth = this.$refs.carousel.firstElementChild?.clientWidth
+      this.elementWidth = this.$refs.carousel && this.$refs.carousel.firstElementChild.clientWidth
     }
   }
 }

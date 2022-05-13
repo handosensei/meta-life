@@ -16,10 +16,7 @@
   font-size: 4rem;
   line-height: 4.4rem;
   letter-spacing: -0.01em;
-
-  @include maxMobile {
-    text-align: center;
-  }
+  text-align: center;
 
   @include minTablet {
     font-size: 56px;

@@ -14,6 +14,7 @@ import LogoButton from '~/assets/svg/logoButton.svg?inline=true';
 import LogoOutline from '~/assets/svg/logoOutline.svg?inline=true';
 import MenuButton from '~/assets/svg/menuButton.svg?inline=true';
 import MetaLegends from '~/assets/svg/metaLegends.svg?inline=true';
+import NavButton from '~/assets/svg/navButton.svg?inline=true';
 import Play from '~/assets/svg/play.svg?inline=true';
 import Plus from '~/assets/svg/plus.svg?inline=true';
 import PreloaderLogo from '~/assets/svg/preloaderLogo.svg?inline=true';
@@ -37,6 +38,7 @@ export default {
     LogoOutline,
     MenuButton,
     MetaLegends,
+    NavButton,
     Play,
     Plus,
     PreloaderLogo,

@@ -2,7 +2,10 @@
   <header class="header" :class="{ isDark: theme === 'light', menuOpen: menuOpen }">
     <IconButton ref="menuButton" as="button" class="menuButton" icon="MenuButton" :disabled="menuOpen || videoPlayerOpen" :on-click="onMenuButtonClick" aria-label="open menu button" />
     <IconButton ref="closeButton" as="button" class="closeButton" icon="CloseButton" :disabled="!menuOpen && !videoPlayerOpen" :on-click="onMenuButtonClick" aria-label="close menu button" />
-    <IconButton v-if="!videoPlayerOpen" href="/" class="logoButton" icon="LogoButton" aria-label="go to homepage button" />
+    <Icon ref="wordmark" type="wordmark" class="wordmark" />
+    <IconButton ref="openChapterNavButton" :disabled="chapterNavOpen" as="button" class="navButton" icon="NavButton" aria-label="open navigation button" @click.native="toggleChapterNav"/>
+    <IconButton ref="closeChapterNavButton" :disabled="!chapterNavOpen" as="button" class="closeButton right" icon="CloseButton" aria-label="close navigation button" @click.native="toggleChapterNav"/>
+    <IconButton v-if="!videoPlayerOpen" ref="logoButton" href="/" class="logoButton" icon="LogoButton" aria-label="go to homepage button" />
   </header>
 </template>
 
@@ -11,16 +14,21 @@ import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
 import IconButton from '~/components/elements/IconButton.vue';
+import Icon from '~/components/elements/Icon.vue';
+import BREAKPOINTS from '~/utils/config/breakpoints';
+
 
 export default {
   name: 'HeaderComponent',
 
   components: {
     IconButton,
+    Icon,
   },
 
   computed: {
-    ...mapState('app', ['theme', 'previousTheme', 'menuOpen', 'videoPlayerOpen']),
+    ...mapState('app', ['theme', 'previousTheme', 'menuOpen', 'videoPlayerOpen', 'windowSize']),
+    ...mapState('home', ['chapterNavOpen']),
   },
 
   watch: {
@@ -29,7 +37,14 @@ export default {
   },
 
   mounted() {
-    this.initCloseButton();
+    this.initButtons();
+    this.$root.$on('window:resize', this.onResize);
+    this.$root.$on('chapter-nav:toggle', this.toggleChapterNav);
+  },
+
+  beforeUnmount() {
+    this.$root.$off('window:resize', this.onResize);
+    this.$root.$off('chapter-nav:toggle', this.toggleChapterNav);
   },
 
   methods: {
@@ -41,7 +56,6 @@ export default {
       // Close video player if open and return
       if (this.videoPlayerOpen) {
         this.setVideoPlayerOpen(false);
-
         return;
       }
 
@@ -59,12 +73,18 @@ export default {
         // If opening the menu set the theme to 'dark'
         this.setTheme('dark');
       }
-
       this.setMenuOpen(!this.menuOpen);
     },
 
-    initCloseButton() {
+    initButtons() {
       gsap.set(this.$refs.closeButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
+      if(this.windowSize.width < BREAKPOINTS.s){
+        gsap.set(this.$refs.logoButton.$el, { display: "none" });
+        gsap.set(this.$refs.closeChapterNavButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
+      } else {
+        gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
+        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
+      }
     },
 
     onMenuButtonToggle() {
@@ -81,6 +101,7 @@ export default {
             },
           }
         );
+        gsap.fromTo(this.$refs.openChapterNavButton, {autoAlpha: 1}, {autoAlpha: 0})
       } else {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
@@ -94,10 +115,56 @@ export default {
             },
           }
         );
+        gsap.fromTo(this.$refs.openChapterNavButton, {autoAlpha: 0}, {autoAlpha: 1})
+      }
+    },
+
+    toggleChapterNav () {
+       if (!this.chapterNavOpen) {
+        gsap.fromTo(
+          this.$refs.closeChapterNavButton.$el.firstChild,
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 1.5,
+            ease: 'expo.inOut',
+            onComplete: () => {
+              this.animating = false;
+            },
+          }
+        );
+      } else {
+        gsap.fromTo(
+          this.$refs.closeChapterNavButton.$el.firstChild,
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' },
+          {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+            duration: 1.5,
+            ease: 'expo.inOut',
+            onComplete: () => {
+              this.animating = false;
+            },
+          }
+        );
+      }
+      this.setChapterNavOpen(!this.chapterNavOpen)
+    },
+
+    onResize () {
+      if(this.windowSize.width < BREAKPOINTS.s){
+        gsap.set(this.$refs.logoButton.$el, { display: "none" });
+        gsap.set(this.$refs.closeChapterNavButton.$el.firstChild, { clipPath: `polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)` });
+        gsap.set(this.$refs.openChapterNavButton.$el, { display: "block" });
+        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "block" });
+      } else {
+        gsap.set(this.$refs.logoButton.$el, { display: "block" });
+        gsap.set(this.$refs.openChapterNavButton.$el, { display: "none" });
+        gsap.set(this.$refs.closeChapterNavButton.$el, { display: "none" });
       }
     },
 
     ...mapActions('app', ['setMenuOpen', 'setTheme', 'setPreviousTheme', 'setVideoPlayerOpen']),
+    ...mapActions('home', ['setChapterNavOpen']),
   },
 };
 </script>

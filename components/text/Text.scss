@@ -32,7 +32,6 @@
 }
 
 .paragraph {
-  width: clamp(282px, 28.2rem, 28.2rem);
   line-height: 130%;
   color: var(--color-white-04);
   margin-top: clamp(30px, 3rem, 3rem);
@@ -42,6 +41,7 @@
   }
 
   @include maxMobile {
+    width: clamp(230px, 23rem, 23rem);
     font-size: clamp(14px, 1.4rem, 20px);
     display: flex;
     flex-direction: column;
@@ -49,6 +49,7 @@
   }
 
   @include minTablet {
+    width: clamp(282px, 28.2rem, 28.2rem);
     font-size: max(14px, 1.4rem);
   }
 }

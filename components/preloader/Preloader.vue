@@ -182,7 +182,7 @@ export default {
           this.setPreloaderVisible(false);
           done();
         },
-      });
+      })
     },
 
     ...mapActions('app', ['setAssetsPreloaded', 'setHasPreloader', 'setPreloaderVisible']),
