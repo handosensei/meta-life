@@ -41,15 +41,16 @@ export default {
     const article = await new Promise(resolve =>
       resolve(data.find(article => article.slug === params.id))
     )
+    const news = dataNews.items.filter(item => item.slug !== params.id)
     return {
-      article
+      article,
+      news
     }
   },
 
   data() {
     return {
       ...data,
-      news: dataNews.items
     };
   },
 

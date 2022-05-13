@@ -2,7 +2,7 @@
   <div class="newsArticleFeed">
    <h1 class="title">Read more</h1>
    <div ref="slider" class="feed">
-     <div v-for="(newsElem, index) in news" :key="index" class="news">
+     <NuxtLink v-for="(newsElem, index) in news" :key="index" :to="`/news/${newsElem.slug}`" class="news">
         <div class="newsImg">
           <img :src="newsElem.image.thumb.src" :alt="newsElem.image.highres.src" />
         </div>
@@ -10,7 +10,7 @@
           <span class="newsType">{{ newsElem.type }}</span>
           <h1 class="newsTitle" v-html="newsElem.title" />
         </div>
-     </div>
+     </NuxtLink>
    </div>
    <div class="buttons">
     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" @click="previous">
@@ -58,7 +58,8 @@ export default {
     },
 
     onResize () {
-      this.elementWidth = this.$refs.carousel && this.$refs.carousel.firstElementChild.clientWidth
+      this.elementWidth = this.$refs.slider && this.$refs.slider.firstElementChild.clientWidth
+      console.log(this.elementWidth, this.$refs.slider.firstElementChild)
     }
   }
 }

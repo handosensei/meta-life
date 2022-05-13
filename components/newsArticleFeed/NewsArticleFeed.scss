@@ -30,7 +30,14 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  padding: 0 11.2%;
+  padding-left: 11.2%;
+
+  &:after {
+    content: '&nbsp';
+    display: block;
+    width: 11.2vw;
+    flex-shrink: 0;
+  }
 }
 
 .news {
