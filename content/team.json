@@ -1,119 +1,201 @@
 {
-  "title": "Meet our <span class=\"purple\">Partners</span> on <span class=\"green\">Metalife</span>.",
-  "featured": {
+  "title": "Meet the <span class=\"purple\">Team</span> on <span class=\"green\">Metalife</span>.",
+  "coreTeam": {
     "items": [
       {
-        "title": "Adidas",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "title": "Robin",
+        "text": "Co-Founder - CEO - Metaverse Empire Builder",
         "image": {
-          "src": "/img/partners/adidas.svg",
-          "width": 96,
-          "height": 65
+          "src": "/img/team/Robin.png"
         }
       },
       {
-        "title": "Nike",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "title": "Max",
+        "text": "Co-Founder - Visionary Artist",
         "image": {
-          "src": "/img/partners/nike.svg",
-          "width": 96,
-          "height": 34
+          "src": "/img/team/Max.png"
         }
       },
       {
-        "title": "RTFKT",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
+        "title": "Dara",
+        "text": "GM - Operations Consigliere",
         "image": {
-          "src": "/img/partners/rtfkt.svg",
-          "width": 159,
-          "height": 26
+          "src": "/img/team/Dara.png"
+        }
+      },
+      {
+        "title": "Jack",
+        "text": "Communications Maverick",
+        "image": {
+          "src": "/img/team/Jack.png"
+        }
+      },
+      {
+        "title": "Alex",
+        "text": "Discord Master Chief",
+        "image": {
+          "src": "/img/team/Alex.png"
+        }
+      },
+      {
+        "title": "Tony",
+        "text": "Game Design Wizard",
+        "image": {
+          "src": "/img/team/Tony.png"
+        }
+      },
+      {
+        "title": "Adrien",
+        "text": "Artist Whisperer",
+        "image": {
+          "src": "/img/team/Adrien.png"
         }
       }
     ]
   },
-  "investors": {
-    "title": "Investors",
+  "legendaryTeam": {
+    "title": "Legendary Team",
     "items": [
       {
-        "title": "Adidas",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/adidas.svg",
-          "width": 96,
-          "height": 65
-        }
+        "title": "3D Monster",
+        "text": "3D Magician Content Creation"
       },
       {
-        "title": "Nike",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/nike.svg",
-          "width": 96,
-          "height": 34
-        }
+        "title": "Younes",
+        "text": "Graphics Guru"
       },
       {
-        "title": "RTFKT",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/rtfkt.svg",
-          "width": 159,
-          "height": 26
-        }
+        "title": "Dave (Remlevad)",
+        "text": "Community Administrator"
       },
       {
-        "title": "Adidas",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/adidas.svg",
-          "width": 96,
-          "height": 65
-        }
+        "title": "Brannstrom",
+        "text": "Brand outreach & research"
       },
       {
-        "title": "Nike",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/nike.svg",
-          "width": 96,
-          "height": 34
-        }
+        "title": "Daniel (Noodlecup)",
+        "text": "Academy Content Creator"
+      }
+    ]
+  },
+  "constructionSquad": {
+    "title": "Metaverse Construction Squad",
+    "items": [
+      {
+        "title": "Timothe",
+        "text": "Meta Residence Architecture Supervisor"
       },
       {
-        "title": "RTFKT",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/rtfkt.svg",
-          "width": 159,
-          "height": 26
-        }
+        "title": "Ferdinand",
+        "text": "Map Artist"
       },
       {
-        "title": "Adidas",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/adidas.svg",
-          "width": 96,
-          "height": 65
-        }
+        "title": "Emmanuel",
+        "text": "Creatures Supervisor"
       },
       {
-        "title": "Nike",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/nike.svg",
-          "width": 96,
-          "height": 34
-        }
+        "title": "Otto",
+        "text": "Illustration Artist"
       },
       {
-        "title": "RTFKT",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque.",
-        "image": {
-          "src": "/img/partners/rtfkt.svg",
-          "width": 159,
-          "height": 26
-        }
+        "title": "Genis",
+        "text": "Illustration Artist"
+      },
+      {
+        "title": "Cyril",  
+        "text": "Illustration Artist"
+      },
+      {
+        "title": "Frick",  
+        "text": "Illustration Artist"
+      },
+      {
+        "title": "Nemow",  
+        "text": "Illustration Artist/Modelling Artist"
+      },
+    
+      {
+        "title": "Pascal",  
+        "text": "Vehicles Concept Wizard"
+      },
+      {
+        "title": "Rick Hefner",
+        "text": "Weapons Innovation Supervisor"
+      },
+      {
+        "title": "Bandith",  
+        "text": "Weapons Artist"
+      },
+      {
+        "title": "Kieren",  
+        "text": "Weapons Artist"
+      },
+    
+      {
+        "title": "Romain",  
+        "text": "Armours Supervisor"
+      },
+      {
+        "title": "Lucien",  
+        "text": "Armours Artist"
+      },
+      {
+        "title": "Pierre",  
+        "text": "Armours Artist"
+      },
+      {
+        "title": "Loki",  
+        "text": "Armours Artist"
+      },
+      {
+        "title": "Djasko",  
+        "text": "Armours Artist"
+      }
+    ]
+  },
+  "external": {
+    "title": "External",
+    "items": [
+      {
+        "title": "Meta Life Website",
+        "text": "Antinomy" 
+      },
+      {
+        "title": "Trailer Assets",
+        "text": "Arès Studio" 
+      },
+      {
+        "title": "3D Assets for Meta Life",
+        "text": "Arès Studio" 
+      },
+      {
+        "title": "Tokenomics & DAO Development",
+        "text": "Brightnode" 
+      },
+      {
+        "title": "Game Economy",
+        "text": "Machination" 
+      }
+    ]
+  },
+  "advisors": {
+    "title": "Advisors",
+    "items": [
+      {
+        "title": "Theo",
+        "text": "Strategy" 
+      },
+      {
+        "title": "Maxence",
+        "text": "(Blockchain & NFT Analyst)" 
+      },
+      {
+        "title": "Salvatore",
+        "text": "Partnerships & Collaborations" 
+      },
+      {
+        "title": "Roman",
+        "text": "Tokenomics"
       }
     ]
   }

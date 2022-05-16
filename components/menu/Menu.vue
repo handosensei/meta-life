@@ -36,7 +36,7 @@ export default {
       links: [
         { href: '/', text: 'Home' },
         { href: '/news', text: 'News' },
-        { href: '/partners', text: 'Partners' },
+        { href: '/team', text: 'Team' },
         { href: '/contact', text: 'Contact' },
         { href: '/whitepaper', text: 'Whitepaper' },
         { href: '/economic-paper', text: 'Economic paper' },

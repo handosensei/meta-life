@@ -1,12 +1,12 @@
 <template>
   <div class="Card">
-    <div class="imageWrapper">
-      <img
-        class="image"
-        :style="{
+    <div class="imageWrapper" v-if="image">
+      <!-- :style="{
           width: `${(imageSize.width / 1440) * 100}%`,
           height: `${(imageSize.height / 1440) * 100}%`,
-        }"
+        }" -->
+      <img
+        class="image"
         :src="image.src"
         :alt="`${title} logo`"
       />
@@ -30,7 +30,7 @@ export default {
   props: {
     image: {
       type: Object,
-      required: true,
+      required: false,
     },
 
     text: {

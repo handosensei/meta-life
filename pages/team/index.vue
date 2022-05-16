@@ -2,8 +2,11 @@
   <main class="page isDark">
     <div ref="bounding" class="bounding">
       <TeamHero :title="title" data-section />
-      <TeamList v-bind="featured" data-section />
-      <TeamList v-bind="investors" data-section />
+      <TeamList v-bind="coreTeam" data-section />
+      <TeamList v-bind="legendaryTeam" data-section />
+      <TeamList v-bind="constructionSquad" data-section />
+      <TeamList v-bind="external" data-section />
+      <TeamList v-bind="advisors" data-section />
       <BackToExperience theme="light" data-section />
     </div>
   </main>
