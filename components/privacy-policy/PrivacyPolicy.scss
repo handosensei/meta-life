@@ -1,0 +1,45 @@
+.privacyPolicy {
+  width: 100%;
+  padding: 187px 4.2rem 60px;
+
+  @include minTablet {
+    padding: 264px 56rem 100px 32rem;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: max(40px, 4rem);
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  text-decoration-line: underline;
+  margin-bottom: 40px;
+
+  @include minTablet {
+    font-size: max(50px, 5rem);
+    margin-bottom: 50px;
+  }
+}
+
+p {
+  font-size: max(14px, 1.4rem);
+  line-height: 160%;
+  color: var(--color-white-05);
+  margin-bottom: 40px;
+
+  @include minTablet {
+    margin-bottom: 53px;
+  }
+}
+
+h2 {
+  font-size: max(30px, 3rem);
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: white;
+  margin-bottom: 40px;
+
+  @include minTablet {
+    margin-bottom: 50px;
+  }
+}
