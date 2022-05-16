@@ -43,7 +43,7 @@ export default {
     this.$root.$on('chapter-nav:toggle', this.toggleChapterNav);
   },
 
-  beforeUnmount() {
+  beforeDestroy() {
     this.$root.$off('window:resize', this.onResize);
     this.$root.$off('chapter-nav:toggle', this.toggleChapterNav);
   },

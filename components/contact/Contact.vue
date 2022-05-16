@@ -83,7 +83,7 @@ export default {
     }).play(0)
   },
 
-  beforeUnount () {
+  beforeDestroy () {
     window.removeEventListener('mousemove', this.onMouseMove)
   },
 

@@ -42,7 +42,7 @@ export default {
     this.$root.$on('window:resize', this.onResize);
   },
 
-  beforeUnmount () {
+  beforeDestroy () {
     this.$root.$off('window:resize', this.onResize);
   },
 
