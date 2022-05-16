@@ -81,7 +81,7 @@
 
     @include maxMobile {
       text-align: center;
-      font-size: clamp(40px, 4rem, 60px);
+      font-size: clamp(40px, 3rem, 3rem);
       line-height: 1.1;
     }
 
@@ -168,10 +168,24 @@
   margin-top: 40px;
 
   @include minTablet {
-    display: none;
+    margin-top: 35px;
   }
 }
 
-.earn .text {
-  top: 33vh;
+@include maxMobile {
+  .earn .text {
+    top: 33vh;
+  }
+
+  .open-world .text {
+    top: 21.9vh;
+  }
+
+  .play .text {
+    top: 33.1vh;
+  }
+
+  .metal .text {
+    top: 23.3vh;
+  }
 }
