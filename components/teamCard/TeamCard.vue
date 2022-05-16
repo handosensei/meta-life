@@ -1,5 +1,5 @@
 <template>
-  <div class="partnersCard">
+  <div class="Card">
     <div class="imageWrapper">
       <img
         class="image"
@@ -25,7 +25,7 @@ import { mapState } from 'vuex';
 import imageDimensions from '~/utils/functions/imageDimensions';
 
 export default {
-  name: 'PartnersCardComponent',
+  name: 'TeamCardComponent',
 
   props: {
     image: {
@@ -58,5 +58,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './PartnersCard';
+@import './TeamCard';
 </style>

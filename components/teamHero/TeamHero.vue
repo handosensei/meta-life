@@ -1,12 +1,12 @@
 <template>
-  <div class="partnersHero">
+  <div class="teamHero">
     <h1 class="title" v-html="title" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PartnersHeroComponent',
+  name: 'TeamHeroComponent',
 
   props: {
     title: {
@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './PartnersHero';
+@import './TeamHero';
 </style>

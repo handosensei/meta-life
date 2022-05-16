@@ -1,24 +1,24 @@
 <template>
-  <div class="partnersList">
+  <div class="teamList">
     <div v-if="title" class="head">{{ title }}</div>
     <h2 v-if="title" class="title">{{ title }}</h2>
 
     <ul class="list">
       <li v-for="(item, index) in items" :key="`${index}-${item.title}`" class="listItem">
-        <PartnersCard v-bind="item" />
+        <TeamCard v-bind="item" />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import PartnersCard from '~/components/partnersCard/PartnersCard.vue';
+import TeamCard from '~/components/teamCard/TeamCard.vue';
 
 export default {
-  name: 'PartnersListComponent',
+  name: 'TeamListComponent',
 
   components: {
-    PartnersCard,
+    TeamCard,
   },
 
   props: {
@@ -37,5 +37,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './PartnersList';
+@import './TeamList';
 </style>

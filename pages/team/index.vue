@@ -1,9 +1,9 @@
 <template>
   <main class="page isDark">
     <div ref="bounding" class="bounding">
-      <PartnersHero :title="title" data-section />
-      <PartnersList v-bind="featured" data-section />
-      <PartnersList v-bind="investors" data-section />
+      <TeamHero :title="title" data-section />
+      <TeamList v-bind="featured" data-section />
+      <TeamList v-bind="investors" data-section />
       <BackToExperience theme="light" data-section />
     </div>
   </main>
@@ -12,23 +12,23 @@
 <script>
 import { mapActions } from 'vuex';
 
-import data from '~/content/partners.json';
+import data from '~/content/team.json';
 
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
-import PartnersHero from '~/components/partnersHero/PartnersHero.vue';
-import PartnersList from '~/components/partnersList/PartnersList.vue';
+import TeamHero from '~/components/teamHero/TeamHero.vue';
+import TeamList from '~/components/teamList/TeamList.vue';
 
 export default {
   name: 'PartnersPage',
 
   components: {
     BackToExperience,
-    PartnersHero,
-    PartnersList,
+    TeamHero,
+    TeamList,
   },
 
   mixins: [Debug, PageTransition, Scroll],
