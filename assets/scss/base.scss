@@ -107,14 +107,63 @@ input {
     .icon {
       width: 14px;
       height: auto;
-      fill: #131e2f;
       margin-right: 15px;
     }
 
     span {
       font: 400 10px/1 'Matter';
       text-transform: uppercase;
-      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.light {
+    > svg > path {
+      &:first-child {
+        fill: white;
+      }
+      &:last-child {
+        stroke: black;
+      }
+    }
+    .icon path {
+      fill: #131e2f;
+    }
+    span {
+      color: var(--color-black-04);
+    }
+  }
+
+  &.dark {
+    > svg > path {
+      &:first-child {
+        fill: transparent;
+      }
+      &:last-child {
+        stroke: white;
+      }
+    }
+    .icon path {
+      fill: white;
+    }
+    span {
+      color: var(--color-white-04);
+    }
+
+    @include maxMobile {
+      > svg > path {
+        &:first-child {
+          fill: white;
+        }
+        &:last-child {
+          stroke: black;
+        }
+      }
+      .icon path {
+        fill: #131e2f;
+      }
+      span {
+        color: var(--color-black-04);
+      }
     }
   }
 }
