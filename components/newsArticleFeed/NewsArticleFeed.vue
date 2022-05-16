@@ -59,7 +59,6 @@ export default {
 
     onResize () {
       this.elementWidth = this.$refs.slider && this.$refs.slider.firstElementChild.clientWidth
-      console.log(this.elementWidth, this.$refs.slider.firstElementChild)
     }
   }
 }

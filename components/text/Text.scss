@@ -163,3 +163,15 @@
   top: 30%;
   position: absolute;
 }
+
+.button {
+  margin-top: 40px;
+
+  @include minTablet {
+    display: none;
+  }
+}
+
+.earn .text {
+  top: 33vh;
+}

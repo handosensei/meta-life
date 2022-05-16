@@ -4,16 +4,20 @@
       <h2 ref="title" class="title" v-html="title" />
       <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
       <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
+      <SocialButton v-if="useGallery && smallScreen" ref="galleryBtn" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
     </div>
 
-    <GalleryItems v-if="galleryItems && galleryItems.length > 0" ref="galleryItems" :gallery-items="galleryItems" />
+    <GalleryItems v-if="useGallery && !smallScreen" ref="galleryItems" :gallery-items="galleryItems" />
   </div>
 </template>
 
 <script>
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import { mapState } from 'vuex';
 
+import BREAKPOINTS from '~/utils/config/breakpoints';
+import SocialButton from '~/components/socialButton/SocialButton.vue';
 import BaseButton from '~/components/elements/BaseButton.vue';
 import GalleryItems from '~/components/galleryItems/GalleryItems.vue';
 
@@ -21,6 +25,7 @@ export default {
   name: 'TextComponent',
 
   components: {
+    SocialButton,
     BaseButton,
     GalleryItems,
   },
@@ -56,6 +61,7 @@ export default {
   },
 
   computed: {
+    ...mapState('app', ['windowSize']),
     positioningClass() {
       const CLASS = {
         'center top': 'positionCenterTop',
@@ -67,6 +73,14 @@ export default {
 
       return CLASS[this.position];
     },
+
+    useGallery() {
+      return this.galleryItems && this.galleryItems.length > 0
+    },
+
+    smallScreen() {
+      return this.windowSize.width < BREAKPOINTS.s
+    }
   },
 
   mounted() {
@@ -101,10 +115,16 @@ export default {
         0
       );
 
-      if (this.galleryItems && this.galleryItems.length > 0) {
+      if (this.smallScreen && this.useGallery) {
+        tl.fromTo(this.$refs.galleryBtn.$el,
+          { autoAlpha: 0, yPercent: 50 },
+          { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }
+        , 1)
+      }
+      else if (this.useGallery) {
         const galleryTl = this.$refs.galleryItems.getGalleryTl();
         tl.add(galleryTl, 0);
-      }
+      }else 
 
       return tl;
     },
@@ -116,6 +136,10 @@ export default {
 
       return tl;
     },
+
+    toggleGallery() {
+      this.$root.$emit('galleryOverlay:toggle', this.galleryItems[0]);
+    }
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section
     class="section"
-    :class="{ isLight: theme === 'light' || menuAnimating }"
+    :class="[activeChapter.id, theme === 'light' ? 'isLight' : menuAnimating]"
     @mousedown="onDragStart"
     @touchstart.passive="onDragStart"
     @mousemove="onDrag"

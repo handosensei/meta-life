@@ -51,15 +51,23 @@
 
 .text {
   margin-top: 4rem;
-  max-width: 42ch;
+  max-width: 25rem;
   font-size: clamp(14px, 1.4rem, 1.4rem);
   line-height: 1.3;
 
-  @include maxMobile {
-    display: none;
+  @include minTablet {
+    max-width: 42ch;
   }
 }
 
 ::v-deep .text-line {
   will-change: transform;
+}
+
+.button {
+  margin-top: 40px;
+
+  @include minTablet {
+    display: none;
+  }
 }

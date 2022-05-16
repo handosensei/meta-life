@@ -1,10 +1,6 @@
 <template>
   <div class="Card">
-    <div class="imageWrapper" v-if="image">
-      <!-- :style="{
-          width: `${(imageSize.width / 1440) * 100}%`,
-          height: `${(imageSize.height / 1440) * 100}%`,
-        }" -->
+    <div v-if="image" class="imageWrapper">
       <img
         class="image"
         :src="image.src"
@@ -30,7 +26,7 @@ export default {
   props: {
     image: {
       type: Object,
-      required: false,
+      default: null,
     },
 
     text: {

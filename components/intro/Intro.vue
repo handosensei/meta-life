@@ -4,22 +4,26 @@
       <h3 v-if="subtitle" ref="subtitle" class="subtitle">{{ subtitle }}</h3>
       <h2 ref="title" class="title" v-html="title" />
       <p ref="text" class="text" v-html="text" />
+      <SocialButton v-if="useGallery && smallScreen" ref="galleryBtn" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
     </div>
-
-    <GalleryItems v-if="galleryItems && galleryItems.length > 0" ref="galleryItems" :gallery-items="galleryItems" />
+    <GalleryItems v-if="useGallery && !smallScreen" ref="galleryItems" :gallery-items="galleryItems" />
   </div>
 </template>
 
 <script>
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import { mapState } from 'vuex';
 
+import SocialButton from '~/components/socialButton/SocialButton.vue';
 import GalleryItems from '~/components/galleryItems/GalleryItems.vue';
+import BREAKPOINTS from '~/utils/config/breakpoints';
 
 export default {
   name: 'IntroComponent',
 
   components: {
+    SocialButton,
     GalleryItems,
   },
 
@@ -47,6 +51,18 @@ export default {
     },
   },
 
+  computed: {
+    ...mapState('app', ['windowSize']),
+
+    useGallery() {
+      return this.galleryItems && this.galleryItems.length > 0
+    },
+
+    smallScreen () {
+      return this.windowSize.width < BREAKPOINTS.s
+    }
+  },
+
   mounted() {
     this.initTl();
   },
@@ -65,10 +81,11 @@ export default {
         wordsClass: 'title-word',
       });
 
-      this.splitText = new SplitText(this.$refs.text, {
-        type: 'lines',
-        linesClass: 'text-line',
-      });
+       this.splitText = new SplitText(this.$refs.text, {
+          type: 'lines',
+          linesClass: 'text-line',
+        });
+
     },
 
     getEnterTl() {
@@ -82,7 +99,14 @@ export default {
         .fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0)
         .fromTo(this.splitText.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0.5);
 
-      if (this.galleryItems && this.galleryItems.length > 0) {
+      
+      if(this.smallScreen && this.useGallery){
+        tl.fromTo(this.$refs.galleryBtn.$el,
+          { autoAlpha: 0, yPercent: 50 },
+          { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }
+        , 1)
+      }
+      else if (this.useGallery) {
         const galleryTl = this.$refs.galleryItems.getGalleryTl();
         tl.add(galleryTl, 0);
       }
@@ -97,6 +121,10 @@ export default {
 
       return tl;
     },
+
+    toggleGallery() {
+      this.$root.$emit('galleryOverlay:toggle', this.galleryItems[0]);
+    }
   },
 };
 </script>

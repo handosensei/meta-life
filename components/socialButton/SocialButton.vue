@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="button">
+  <component :is="href ? 'NuxtLink' : 'button'" :to="href" class="button">
     <svg width="147" height="61" viewBox="0 0 147 61" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M0.144531 3C0.144531 1.34315 1.48768 0 3.14453 0H143.357C145.014 0 146.357 1.34315 146.357 3V50L141.501 55.5L136.645 61H3.14453C1.48768 61 0.144531 59.6569 0.144531 58V3Z"
@@ -15,7 +15,7 @@
       <Icon v-if="icon" :type="icon" class="icon" />
       <span v-if="name">{{ name }}</span>
     </div>
-  </a>
+  </component>
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
   props: {
     href: {
       type: String,
-      required: true,
+      default: '',
     },
     name: {
       type: String,
