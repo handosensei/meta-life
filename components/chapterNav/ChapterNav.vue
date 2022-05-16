@@ -29,6 +29,7 @@
 import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
+import { getChapterIndex } from '~/utils/functions/chapterHelpers';
 import BREAKPOINTS from '~/utils/config/breakpoints';
 import delay from '~/utils/functions/delay';
 
@@ -39,8 +40,6 @@ export default {
     return {
       bounds: [],
       disabled: false,
-      mobileDisplay: false,
-      activeChapterIndex: 0
     };
   },
 
@@ -51,28 +50,32 @@ export default {
 
     ...mapState('app', ['theme', 'windowSize']),
     ...mapState('home', ['chapters', 'activeChapter', 'chapterNavOpen']),
+
+    activeChapterIndex() {
+      return getChapterIndex(this.chapters, this.activeChapter);
+    },
+
+    mobileDisplay() {
+      return this.windowSize.width < BREAKPOINTS.s
+    }
   },
 
   watch: {
-    chapterNavOpen: 'toggleVisibility'
+    chapterNavOpen: 'toggleVisibility',
+    activeChapter: 'switchActiveElement'
   },
 
   mounted() {
-    if (this.windowSize.width < BREAKPOINTS.s) {
-        // this.setBounds();
-        // gsap.set(this.$el, { x: this.getCenterPos(0) });
-        this.mobileDisplay = true
-        const selectedElement = this.$refs.actives[this.activeChapterIndex]
-        gsap.set(this.$refs.actives, {
-          yPercent: -100
-        })
-        gsap.set(this.$refs.actives.map(element => element.querySelector('div')), {
-          yPercent: 100
-        })
-        gsap.set([selectedElement, selectedElement.querySelector('div')], {
-          yPercent: 0
-        })
-    }
+    const selectedElement = this.$refs.actives[this.activeChapterIndex]
+    gsap.set(this.$refs.actives, {
+      yPercent: -100
+    })
+    gsap.set(this.$refs.actives.map(element => element.querySelector('div')), {
+      yPercent: 100
+    })
+    gsap.set([selectedElement, selectedElement.querySelector('div')], {
+      yPercent: 0
+    })
     this.$root.$on('window:resize', this.onResize);
     this.$root.$on('section:navigate', this.onSectionNavigation);
   },
@@ -83,71 +86,40 @@ export default {
   },
 
   methods: {
-    // setBounds() {
-    //   this.bounds = []
-    //   this.$refs.navItems.forEach((navItem, index) => {
-    //     const { width, x } = navItem.getBoundingClientRect();
-    //     this.bounds.push({
-    //       width,
-    //       x
-    //     });
-    //   });
-    // },
-
-    // updatePosition() {
-    //   if (this.windowSize.width > BREAKPOINTS.s) {
-    //     return;
-    //   }
-    //   const activeChapterIndex = getChapterIndex(this.chapters, this.activeChapter);
-    //   const x = this.getCenterPos(activeChapterIndex)
-    //   gsap.to(this.$el, { duration: 0.5, ease: 'power2.inOut', x });
-    // },
-
-    // getCenterPos (chapterIndex) {
-    //   console.log(this.chapters,chapterIndex, this.bounds)
-    //  return -this.bounds[chapterIndex].x + this.windowSize.width / 2 - this.bounds[chapterIndex].width / 2;
-    // },
-
-    // onChapterChange() {
-    //   console.log('onChapchange')
-      // this.updatePosition();
-    // },
-
     toggleVisibility() {
       gsap.to(this.$el, {autoAlpha: this.chapterNavOpen ? 1 : 0})
     },
 
+    switchActiveElement(newChapter, oldChapter) {
+      if (this.mobileDisplay) {
+        this.disabled = true;
+        const newActiveElement = this.$refs.actives[this.activeChapterIndex]
+        const previousActiveElement = this.$refs.actives[getChapterIndex(this.chapters, oldChapter)];
+        gsap.timeline({paused: true}).to(previousActiveElement, {
+          yPercent: 100
+        }, 0).to(previousActiveElement.querySelector('.activeWrapper'), {
+          yPercent: -100
+        }, 0).fromTo(newActiveElement, {
+          yPercent: -100
+        }, {
+          yPercent: 0
+        }, 0).fromTo(newActiveElement.querySelectorAll('.activeWrapper'), {
+          yPercent: 100
+        },{
+          yPercent: 0
+        }, 0).restart()
+      }
+    },
+
     onResize() {
-      if (this.windowSize.width > BREAKPOINTS.s) {
+      if (!this.mobileDisplay) {
         gsap.set(this.$el, { clearProps: 'all' });
-        this.mobileDisplay = false
-      } else {
-        // this.setBounds();
-        // this.updatePosition();
-        this.mobileDisplay = true
       }
     },
 
     async onClick(chapter, index) {
-      this.disabled = true;
-      const previousActiveElement = this.$refs.actives[this.activeChapterIndex];
-      const newActiveElement = this.$refs.actives[index];
-      gsap.timeline({paused: true}).to(previousActiveElement, {
-        yPercent: 100
-      }, 0).to(previousActiveElement.querySelector('.activeWrapper'), {
-        yPercent: -100
-      }, 0).fromTo(newActiveElement, {
-        yPercent: -100
-      }, {
-        yPercent: 0
-      }, 0).fromTo(newActiveElement.querySelectorAll('.activeWrapper'), {
-        yPercent: 100
-      },{
-        yPercent: 0
-      }, 0).restart()
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
-      this.activeChapterIndex = index;
       await delay(500);
       this.mobileDisplay && this.$root.$emit('chapter-nav:toggle')
       this.disabled = false;
