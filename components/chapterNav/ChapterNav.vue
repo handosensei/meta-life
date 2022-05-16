@@ -92,7 +92,6 @@ export default {
 
     switchActiveElement(newChapter, oldChapter) {
       if (this.mobileDisplay) {
-        this.disabled = true;
         const newActiveElement = this.$refs.actives[this.activeChapterIndex]
         const previousActiveElement = this.$refs.actives[getChapterIndex(this.chapters, oldChapter)];
         gsap.timeline({paused: true}).to(previousActiveElement, {
