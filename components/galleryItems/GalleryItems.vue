@@ -23,6 +23,7 @@
 
 <script>
 import { gsap } from 'gsap';
+import { mapState } from 'vuex';
 
 import Icon from '~/components/elements/Icon.vue';
 
@@ -43,12 +44,23 @@ export default {
     galleryItemsDisabled: true,
   }),
 
+  computed: {
+    ...mapState('home', ['audio']),
+  },
+
   mounted() {
     this.gallerySphere = this.$el.querySelectorAll('.gallerySphere circle');
     this.galleryPlus = this.$el.querySelectorAll('.galleryPlus');
 
     gsap.to(this.$refs.galleryImage, { rotate: 360, ease: 'linear', repeat: -1, duration: 20 });
     gsap.to(this.$refs.galleryMask, { rotate: -360, ease: 'linear', repeat: -1, duration: 20 });
+
+    this.sound = new Audio('/audio/itemHover.mp3');
+  },
+
+  beforeDestroy() {
+    this.sound.removeAttribute('src');
+    this.sound.load()
   },
 
   methods: {
@@ -62,6 +74,10 @@ export default {
         { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
         { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
       );
+      if(this.audio){
+        this.sound.currentTime = 0;
+        this.sound.play();
+      }
     },
 
     onMouseLeave(id) {

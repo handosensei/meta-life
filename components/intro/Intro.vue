@@ -106,7 +106,7 @@ export default {
           { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }
         , 1)
       }
-      else if (this.useGallery) {
+     if (this.useGallery) {
         const galleryTl = this.$refs.galleryItems.getGalleryTl();
         tl.add(galleryTl, 0);
       }

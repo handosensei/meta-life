@@ -6,6 +6,7 @@ export const state = () => ({
   activeChapter: data.chapters[0],
   activeSection: data.chapters[0].sections[0],
   galleryOpen: false,
+  audio: true,
 });
 
 export const actions = {
@@ -24,6 +25,10 @@ export const actions = {
   setGalleryOpen({ commit }, bool) {
     commit('SET_GALLERY_OPEN', bool);
   },
+
+  setAudio({ commit }, bool) {
+    commit('SET_AUDIO', bool);
+  },
 };
 
 export const mutations = {
@@ -41,5 +46,9 @@ export const mutations = {
 
   SET_GALLERY_OPEN(state, payload) {
     state.galleryOpen = payload;
+  },
+
+  SET_AUDIO(state, payload) {
+    state.audio = payload;
   },
 };

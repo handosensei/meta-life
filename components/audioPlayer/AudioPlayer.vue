@@ -2,14 +2,14 @@
   <button type="button" class="audioPlayer" aria-label="Toggle sound button" @click="toggleAudio">
     <div class="text">
       <span class="sound">Sound :</span>
-      <span class="onOff">{{ playing ? 'On' : 'Off' }}</span>
+      <span class="onOff">{{ audio ? 'On' : 'Off' }}</span>
     </div>
     <Icon ref="icon" type="Equalizer" />
   </button>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 import Icon from '~/components/elements/Icon.vue';
 
 export default {
@@ -32,6 +32,7 @@ export default {
 
   computed: {
     ...mapState('app', ['hasPreloader']),
+    ...mapState('home', ['audio']),
   },
 
   watch: {
@@ -47,19 +48,22 @@ export default {
   },
 
   beforeDestroy() {
-    this.audioPlayer.pause()
+    this.audioPlayer.removeAttribute('src');
+    this.audioPlayer.load()
   },
 
   methods: {
     toggleAudio () {
       if(this.audioPlayer.paused){
         this.audioPlayer.play();
-        this.playing = true;
+        this.setAudio(true)
       } else {
         this.audioPlayer.pause();
-        this.playing = false;
+        this.setAudio(false)
       }
-    }
+    },
+
+    ...mapActions('home', ['setAudio'])
   }
 };
 </script>
