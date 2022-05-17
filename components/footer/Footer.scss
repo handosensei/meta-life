@@ -8,6 +8,8 @@
   z-index: 7;
   width: calc(100% - 8rem);
   color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
 
   @include minTablet {
     bottom: 9rem;
@@ -30,8 +32,4 @@
     justify-content: space-between;
     width: 100%;
   }
-}
-
-.footerSocials {
-  margin-right: 3rem;
 }

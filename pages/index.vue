@@ -10,14 +10,10 @@
 
     <TunnelSquares ref="tunnelSquares" />
     <Background />
-    <Footer v-if="activeSection.footerVisible" />
+    <AudioPlayer />
 
     <transition name="chapterNavTransition" :css="false" @enter="onChapterNavEnter" @leave="onChapterNavLeave">
       <ChapterNav v-if="!activeSection.navHidden" />
-    </transition>
-
-    <transition name="footerTransition" :css="false" @enter="onFooterEnter" @leave="onFooterLeave">
-      <Footer v-if="activeSection.footerVisible" />
     </transition>
   </main>
 </template>
@@ -34,7 +30,7 @@ import delay from '~/utils/functions/delay';
 
 import Background from '~/components/background/Background.vue';
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
-import Footer from '~/components/footer/Footer.vue';
+import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
 import Section from '~/components/section/Section.vue';
 import TunnelSquares from '~/components/tunnelSquares/TunnelSquares.vue';
@@ -45,7 +41,7 @@ export default {
   components: {
     Background,
     ChapterNav,
-    Footer,
+    AudioPlayer,
     GalleryOverlay,
     Section,
     TunnelSquares,
@@ -182,14 +178,6 @@ export default {
     },
 
     onChapterNavLeave(el, done) {
-      gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, onComplete: done });
-    },
-
-    onFooterEnter(el) {
-      gsap.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1 });
-    },
-
-    onFooterLeave(el, done) {
       gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, onComplete: done });
     },
 

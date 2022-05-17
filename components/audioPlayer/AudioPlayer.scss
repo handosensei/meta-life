@@ -1,4 +1,37 @@
 .audioPlayer {
+  position: fixed;
+  bottom: 40px;
+  right: 37px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include minTablet {
+    bottom: 121px;
+    right: 79px;
+  }
+}
+
+svg {
   width: clamp(18px, 1.8rem, 1.8rem);
   height: clamp(18px, 1.8rem, 1.8rem);
+  margin-left: 14px;
+}
+
+line {
+  transform-origin: bottom;
+}
+
+.text > span {
+  font-size: max(1rem, 10px);
+  line-height: 120%;
+}
+
+.sound {
+  color: var(--color-white-03);
+}
+
+.onOff {
+  color: white;
 }

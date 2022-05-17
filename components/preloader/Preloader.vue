@@ -22,25 +22,28 @@
       </div>
 
       <Icon ref="logoOutline" type="LogoOutline" class="logoOutline" />
+      <Footer ref="footer"/>
     </div>
   </div>
-</template>
+</template>    this.$root.on("experience:start", this.toggleAudio)
+
 
 <script>
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
-import VirtualScroll from 'virtual-scroll';
 import { mapActions, mapState } from 'vuex';
 
 import homeData from '~/content/home.json';
 
 import Icon from '~/components/elements/Icon.vue';
+import Footer from '~/components/footer/Footer.vue';
 
 export default {
   name: 'PreloaderComponent',
 
   components: {
     Icon,
+    Footer
   },
 
   data() {
@@ -118,10 +121,6 @@ export default {
       gsap
         .timeline({
           paused: true,
-          onComplete: () => {
-            this.vs = new VirtualScroll();
-            this.vs.on(this.onScroll);
-          },
         })
         .to([this.preloaderLogo, this.$refs.progress], {
           autoAlpha: 0,
@@ -147,11 +146,13 @@ export default {
           duration: 0.4,
           ease: 'none',
         })
+        .fromTo(this.$refs.footer.$el,
+          { autoAlpha: 0 },
+          { autoAlpha: 1 })
         .restart();
     },
 
     onClick() {
-      this.vs.destroy();
       this.setHasPreloader(false);
     },
 
