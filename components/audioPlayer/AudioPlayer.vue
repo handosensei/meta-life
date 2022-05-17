@@ -39,7 +39,7 @@ export default {
   },
 
   mounted () {
-    this.audioPlayer = new Audio('/audio/bensound-newdawn.mp3');
+    this.audioPlayer = new Audio('/audio/audio.mpeg');
     this.audioPlayer.loop = true;
     if(!this.hasPreloader) {
       this.audioPlayer.play()
