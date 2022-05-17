@@ -4,9 +4,9 @@
       <h3 v-if="subtitle" ref="subtitle" class="subtitle">{{ subtitle }}</h3>
       <h2 ref="title" class="title" v-html="title" />
       <p ref="text" class="text" v-html="text" />
-      <SocialButton v-if="useGallery && smallScreen" ref="galleryBtn" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
+      <SocialButton ref="galleryBtn" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
     </div>
-    <GalleryItems v-if="useGallery && !smallScreen" ref="galleryItems" :gallery-items="galleryItems" />
+    <GalleryItems ref="galleryItems" :gallery-items="galleryItems"/>
   </div>
 </template>
 

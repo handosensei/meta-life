@@ -93,6 +93,10 @@
 
   @include minTablet {
     width: auto;
+
+    svg {
+      display: none;
+    }
   }
 }
 

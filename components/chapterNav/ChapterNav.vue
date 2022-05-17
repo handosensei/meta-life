@@ -3,7 +3,7 @@
     <ul class="navList">
       <li v-for="(chapter, index) in visibleChapters" ref="navItems" :key="chapter.id" class="navItem" :class="{ isActive: chapter === activeChapter }">
         <button class="button" type="button" :disabled="activeChapterIndex === index" @click="onClick(chapter, index)">
-          <svg v-if="mobileDisplay" viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z" fill="white" fill-opacity="0.1"/>
           </svg>
           <div class="buttonLabel">
@@ -11,7 +11,7 @@
           </div>
           <div ref="actives" class="active">
             <div class="activeWrapper">
-              <svg v-if="mobileDisplay" viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z" fill="white" fill-opacity="0.1"/>
               </svg>
               <div class="buttonLabel">
@@ -55,7 +55,7 @@ export default {
       return getChapterIndex(this.chapters, this.activeChapter);
     },
 
-    mobileDisplay() {
+    smallScreen() {
       return this.windowSize.width < BREAKPOINTS.s
     }
   },
@@ -91,27 +91,25 @@ export default {
     },
 
     switchActiveElement(newChapter, oldChapter) {
-      if (this.mobileDisplay) {
-        const newActiveElement = this.$refs.actives[this.activeChapterIndex]
-        const previousActiveElement = this.$refs.actives[getChapterIndex(this.chapters, oldChapter)];
-        gsap.timeline({paused: true}).to(previousActiveElement, {
-          yPercent: 100
-        }, 0).to(previousActiveElement.querySelector('.activeWrapper'), {
-          yPercent: -100
-        }, 0).fromTo(newActiveElement, {
-          yPercent: -100
-        }, {
-          yPercent: 0
-        }, 0).fromTo(newActiveElement.querySelectorAll('.activeWrapper'), {
-          yPercent: 100
-        },{
-          yPercent: 0
-        }, 0).restart()
-      }
+      const newActiveElement = this.$refs.actives[this.activeChapterIndex]
+      const previousActiveElement = this.$refs.actives[getChapterIndex(this.chapters, oldChapter)];
+      gsap.timeline({paused: true}).to(previousActiveElement, {
+        yPercent: 100
+      }, 0).to(previousActiveElement.querySelector('.activeWrapper'), {
+        yPercent: -100
+      }, 0).fromTo(newActiveElement, {
+        yPercent: -100
+      }, {
+        yPercent: 0
+      }, 0).fromTo(newActiveElement.querySelectorAll('.activeWrapper'), {
+        yPercent: 100
+      },{
+        yPercent: 0
+      }, 0).restart()
     },
 
     onResize() {
-      if (!this.mobileDisplay) {
+      if (!this.smallScreen) {
         gsap.set(this.$el, { clearProps: 'all' });
       }
     },
@@ -120,7 +118,7 @@ export default {
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
       await delay(500);
-      this.mobileDisplay && this.$root.$emit('chapter-nav:toggle')
+      this.smallScreen && this.$root.$emit('chapter-nav:toggle')
       this.disabled = false;
     },
 
