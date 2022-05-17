@@ -50,7 +50,6 @@ export default {
   beforeMount() {
     this.activeCategory = this.categories[0];
     this.activeItems = this.items;
-    this.setTheme('light');
   },
 
   methods: {
