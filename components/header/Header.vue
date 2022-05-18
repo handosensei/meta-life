@@ -111,7 +111,7 @@ export default {
             },
           }
         );
-        gsap.fromTo(this.$refs.openChapterNavButton, {autoAlpha: 1}, {autoAlpha: 0})
+        gsap.fromTo(this.$refs.openChapterNavButton.$el, {autoAlpha: 1}, {autoAlpha: 0})
       } else {
         gsap.fromTo(
           this.$refs.closeButton.$el.firstChild,
@@ -125,7 +125,7 @@ export default {
             },
           }
         );
-        gsap.fromTo(this.$refs.openChapterNavButton, {autoAlpha: 0}, {autoAlpha: 1})
+        gsap.fromTo(this.$refs.openChapterNavButton.$el, {autoAlpha: 0}, {autoAlpha: 1})
       }
     },
 
