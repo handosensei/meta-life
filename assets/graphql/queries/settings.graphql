@@ -1,0 +1,26 @@
+query SettingsQuery {
+  site: _site {
+    globalSeo {
+      siteName
+      titleSuffix
+      twitterAccount
+      fallbackSeo {
+        description
+        title
+        twitterCard
+        image {
+          url
+        }
+      }
+    }
+    favicon {
+      mimeType
+      url
+    }
+    faviconMetaTags {
+      attributes
+      content
+      tag
+    }
+  }
+}

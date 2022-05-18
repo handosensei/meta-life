@@ -2,8 +2,8 @@
   <ul class="newsGrid">
     <li v-for="item in items" :key="item.slug" class="item">
       <NuxtLink class="link" :to="`/news/${item.slug}`">
-        <img :src="item.image.thumb.src" class="thumb" :alt="item.image.thumb.alt" />
-        <div class="category">{{ item.category }}</div>
+        <img :src="item.image.src" class="thumb" :alt="item.image.alt" />
+        <div class="category">{{ item.articleType }}</div>
         <div class="title">{{ item.title }}</div>
       </NuxtLink>
     </li>

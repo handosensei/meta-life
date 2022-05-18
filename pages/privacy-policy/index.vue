@@ -12,6 +12,7 @@ import { mapActions } from 'vuex';
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
+import SEO from '~/mixins/seo';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import PrivacyPolicy from '~/components/privacy-policy/PrivacyPolicy.vue'
@@ -24,7 +25,7 @@ export default {
     BackToExperience
   },
 
-  mixins: [Debug, PageTransition, Scroll],
+  mixins: [Debug, PageTransition, Scroll, SEO],
 
   beforeMount() {
     this.setTheme('dark');

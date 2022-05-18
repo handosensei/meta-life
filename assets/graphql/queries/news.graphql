@@ -1,0 +1,18 @@
+#import "../fragments/responsiveImage.graphql"
+
+query newsPageQuery {
+  news: allNewsArticles(first: 100, orderBy: _firstPublishedAt_DESC) {
+    articleType
+    title
+    slug
+    categories {
+      name
+    }
+    image {
+      ...ResponsiveImage
+    }
+  }
+  categories: allCategories(first: 100, orderBy: name_ASC) {
+    name
+  }
+}

@@ -1,0 +1,44 @@
+#import "../fragments/seo.graphql"
+#import "../fragments/responsiveImage.graphql"
+
+query newsArticlePageQuery($slug: String) {
+  article: newsArticle(filter: { slug: { eq: $slug } }) {
+    seo {
+      ...SeoFragment
+    }
+    image {
+      ...ResponsiveImage
+    }
+    title
+    _firstPublishedAt
+    articleType
+    sections {
+      ... on ArticleImageRecord {
+        __typename
+        image {
+          ...ResponsiveImage
+        }
+      }
+      ... on ArticleIntroRecord {
+        __typename
+        title
+      }
+      ... on ArticleParagraphRecord {
+        __typename
+        content
+      }
+      ... on ArticleSubtitleRecord {
+        __typename
+        title
+      }
+    }
+  }
+  news: allNewsArticles(first: 10, orderBy: _firstPublishedAt_DESC, filter: { slug: { neq: $slug } }) {
+    articleType
+    title
+    slug
+    image {
+      ...ResponsiveImage
+    }
+  }
+}

@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Meta Life',
+    // title: 'Meta Life',
     htmlAttrs: {
       lang: 'en',
     },
@@ -29,7 +29,7 @@ export default {
   modules: ['@nuxt/image', '@nuxtjs/svg', 'nuxt-polyfill'],
 
   // (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/global.js', ssr: false }],
+  plugins: [{ src: '~/plugins/global.js', ssr: false }, { src: '~/plugins/datocmsClient.js' }, { src: '~/plugins/inject.js' }],
 
   // (https://www.npmjs.com/package/nuxt-polyfill)
   polyfill: {
@@ -44,6 +44,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['gsap'],
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
+      });
+    },
   },
 
   // Routing: https://nuxtjs.org/docs/get-started/routing
@@ -54,5 +61,9 @@ export default {
   // Server Configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-server
   server: {
     host: '0.0.0.0',
+  },
+
+  env: {
+    CMS_DATOCMS_API_TOKEN: process.env.CMS_DATOCMS_API_TOKEN,
   },
 };

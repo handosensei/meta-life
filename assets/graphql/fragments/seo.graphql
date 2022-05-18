@@ -1,0 +1,7 @@
+fragment SeoFragment on SeoField {
+  title
+  description
+  image {
+    url
+  }
+}

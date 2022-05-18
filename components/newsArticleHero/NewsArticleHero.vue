@@ -1,10 +1,10 @@
 <template>
   <div class="newsHero">
     <div class="newsBackground">
-      <img :src="article.img" alt="" data-fx="y" data-speed="0.5"/>
+      <img :src="article.image.src" alt="" data-fx="y" data-speed="0.5"/>
     </div>
     <div class="newsTitle">
-      <span class="newsType">{{ article.type }}</span>
+      <span class="newsType">{{ article.articleType }}</span>
       <h1 v-html="article.title" />
     </div>
   </div>

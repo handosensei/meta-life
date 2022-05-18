@@ -11,6 +11,7 @@ export const state = () => ({
     width: 0,
     height: 0,
   },
+  settings: {},
 });
 
 export const actions = {
@@ -48,6 +49,11 @@ export const actions = {
 
   setWindowSize({ commit }, size) {
     commit('SET_WINDOW_SIZE', size);
+  },
+
+  async initSite({ commit }) {
+    const settings = await this.$datocmsClient.getSettings();
+    commit('SET_SETTINGS', settings);
   },
 };
 
@@ -91,5 +97,9 @@ export const mutations = {
         height: window.innerHeight,
       };
     }
+  },
+
+  SET_SETTINGS(state, payload) {
+    state.settings = payload;
   },
 };

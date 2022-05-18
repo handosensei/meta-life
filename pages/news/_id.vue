@@ -12,12 +12,12 @@
 <script>
 import { mapActions } from 'vuex';
 
-import data from '~/content/newsArticle.json';
-import dataNews from '~/content/news.json';
+// import data from '~/content/newsArticle.json';
 
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
+import SEO from '~/mixins/seo';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import NewsArticle from '~/components/newsArticle/NewsArticle.vue';
@@ -35,23 +35,27 @@ export default {
     NewsArticleFeed,
   },
 
-  mixins: [Debug, PageTransition, Scroll],
+  mixins: [Debug, PageTransition, Scroll, SEO],
 
-  async asyncData ({ params }) {
-    const article = await new Promise(resolve =>
-      resolve(data.find(article => article.slug === params.id))
-    )
-    const news = dataNews.items.filter(item => item.slug !== params.id)
-    return {
-      article,
-      news
+  async asyncData ({ query, params, $datocmsClient }) {
+    try {
+      const preview =
+        query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN
+      const data = await $datocmsClient.getPage({ name: 'newsArticle', variables: {slug: params.id}, preview })
+      return data
+    } catch (e) {
+      console.log(e)
+      return e
     }
   },
 
-  data() {
-    return {
-      ...data,
-    };
+  head () {
+    const seo = this.$store.state.app.settings.site
+    return this.$getPageMeta({
+      seo,
+      type: 'news',
+      news: this.article
+    })
   },
 
   beforeMount() {

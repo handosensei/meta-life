@@ -1,7 +1,7 @@
 <template>
   <main class="page">
     <div ref="bounding" class="bounding">
-      <NewsHero :title="title" :categories="categories" :select-category="selectCategory" data-section />
+      <NewsHero :categories="categories" :select-category="selectCategory" data-section />
       <NewsGrid :items="activeItems" data-section />
       <BackToExperience data-section />
     </div>
@@ -11,11 +11,10 @@
 <script>
 import { mapActions } from 'vuex';
 
-import data from '~/content/news.json';
-
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
+import SEO from '~/mixins/seo';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import NewsGrid from '~/components/newsGrid/NewsGrid.vue';
@@ -30,21 +29,28 @@ export default {
     NewsHero,
   },
 
-  mixins: [Debug, PageTransition, Scroll],
+  mixins: [Debug, PageTransition, Scroll, SEO],
+
+  async asyncData ({ query, $datocmsClient }) {
+    try {
+      const preview =
+        query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN;
+      const {news: items, categories} = await $datocmsClient.getPage({ name: 'news', preview });
+      return {
+        items,
+        categories
+      }
+    } catch (e) {
+      console.log(e)
+      return e
+    }
+  },
 
   data() {
     return {
-      ...data,
-
       activeCategory: '',
       activeItems: [],
     };
-  },
-
-  computed: {
-    categories() {
-      return [...new Set(this.items.flatMap(({ category }) => category))];
-    },
   },
 
   beforeMount() {
@@ -55,13 +61,14 @@ export default {
   methods: {
     selectCategory(category) {
       this.activeCategory = category;
-
-      if (category === '') {
+      if(this.activeCategory) {
+        this.activeItems = this.items.filter((item) => item.categories.find(category => category.name === this.activeCategory));
+      }
+      else {
         this.activeItems = this.items;
-      } else {
-        this.activeItems = this.items.filter((item) => item.category === category);
       }
     },
+
 
     ...mapActions('app', ['setTheme']),
   },

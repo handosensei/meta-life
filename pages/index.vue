@@ -24,6 +24,7 @@ import { mapActions, mapState } from 'vuex';
 
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
+import SEO from '~/mixins/seo';
 
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
@@ -47,7 +48,7 @@ export default {
     TunnelSquares,
   },
 
-  mixins: [Debug, PageTransition],
+  mixins: [Debug, PageTransition, SEO],
 
   data() {
     return {

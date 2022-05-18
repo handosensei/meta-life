@@ -1,6 +1,8 @@
 <template>
   <div class="newsHero">
-    <h1 class="newsTitle" v-html="title" />
+    <h1 class="newsTitle">
+      The latest news from the <span class="purple">MetaLife</span> and beyond.
+    </h1>
 
     <NewsFilter :categories="categories" :select-category="selectCategory" />
   </div>
@@ -17,11 +19,6 @@ export default {
   },
 
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-
     categories: {
       type: Array,
       required: true,

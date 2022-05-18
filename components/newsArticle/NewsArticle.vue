@@ -1,27 +1,23 @@
 <template>
   <div class="newsArticle">
     <div class="date">
-      <span>Date: {{ article.date }}</span>
+      <span>Date: {{ date }}</span>
     </div>
     <div v-for="(section, index) in article.sections" :key="index" class="section">
-      <template v-if="section.title">
-        <h2 class="title">{{section.title}}</h2>
-        <p v-for="(content, indexC) in section.contents" :key="indexC" class="content">
-          {{ content }}
-        </p>
-      </template>
-      <template v-if="section.img">
+      <h2  v-if="section.title" class="title">{{ section.title }}</h2>
+      <div v-if="section.content" class="content" v-html="section.content" />
+      <template v-if="section.image">
         <div class="articleImg">
-          <img :src="section.img" :alt="section.alt" />
+          <img :src="section.image.src" :alt="section.image.alt && section.image.alt" />
         </div>
       </template>
     </div>
     <div class="section share">
       <span class="shareTitle">Share this news on:</span>
       <div class="buttons">
-        <SocialButton href="#" name="Discord" icon="discord" />
-        <SocialButton href="#" name="Twitter" icon="twitter" />
-        <SocialButton href="#" name="Instagram" icon="instagram" />
+        <SocialButton :name="discordText" icon="discord" @click.native="shareOnDiscord"/>
+        <SocialButton target="_blank" :href="`https://twitter.com/intent/tweet?text=${path}`" name="Twitter" icon="twitter" />
+        <SocialButton :name="instagramText" icon="instagram" @click.native="shareOnInstagram"/>
       </div>
     </div>
   </div>
@@ -43,6 +39,45 @@ export default {
       required: true,
     },
   },
+
+  data: () => ({
+    discordText: 'Discord',
+    instagramText: 'Instagram'
+  }),
+
+  computed: {
+    date() {
+      const date = new Date(this.article._firstPublishedAt);
+      return date.toLocaleDateString();
+    },
+    path () {
+      if (process.client) {
+        return location.href;
+      }
+      return '';
+    }
+  },
+
+  methods: {
+    shareOnDiscord() {
+      navigator.clipboard.writeText(this.path);
+      this.discordText = 'Copied to Clipboard';
+
+      setTimeout( () => {
+        window.open('https://discord.com', '_blank').focus();
+        this.discordText  = 'Discord'
+      }, 1500)
+    },
+    shareOnInstagram() {
+      navigator.clipboard.writeText(this.path);
+      this.instagramText = 'Copied to Clipboard';
+
+      setTimeout( () => {
+        window.open('https://www.instagram.com', '_blank').focus();
+        this.instagramText  = 'Instagram'
+      }, 1500)
+    }
+  }
 }
 </script>
 

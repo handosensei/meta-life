@@ -4,10 +4,10 @@
    <div ref="slider" class="feed">
      <NuxtLink v-for="(newsElem, index) in news" :key="index" :to="`/news/${newsElem.slug}`" class="news">
         <div class="newsImg">
-          <img :src="newsElem.image.thumb.src" :alt="newsElem.image.highres.src" />
+          <img :src="newsElem.image.src" :alt="newsElem.image.alt" />
         </div>
         <div class="newsInfos">
-          <span class="newsType">{{ newsElem.type }}</span>
+          <span class="newsType">{{ newsElem.articleType }}</span>
           <h1 class="newsTitle" v-html="newsElem.title" />
         </div>
      </NuxtLink>

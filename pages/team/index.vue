@@ -20,6 +20,7 @@ import data from '~/content/team.json';
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
+import SEO from '~/mixins/seo';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
 import TeamHero from '~/components/teamHero/TeamHero.vue';
@@ -34,7 +35,7 @@ export default {
     TeamList,
   },
 
-  mixins: [Debug, PageTransition, Scroll],
+  mixins: [Debug, PageTransition, Scroll, SEO],
 
   data() {
     return {

@@ -11,6 +11,7 @@ import { mapActions } from 'vuex';
 import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
+import SEO from '~/mixins/seo';
 import Contact from '~/components/contact/Contact.vue'
 
 export default {
@@ -20,7 +21,7 @@ export default {
     Contact,
   },
 
-  mixins: [Debug, PageTransition, Scroll],
+  mixins: [Debug, PageTransition, Scroll, SEO],
 
   beforeMount() {
     this.setTheme('dark');

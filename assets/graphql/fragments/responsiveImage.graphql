@@ -1,0 +1,20 @@
+fragment ResponsiveImage on FileField {
+  url
+  src: url(imgixParams: { q: 90, fit: max, w: 2000, h: 3000 })
+  srcHd: url
+  webp: url(imgixParams: { q: 90, fm: webp, fit: max, w: 2000, h: 3000 })
+  webpHd: url(imgixParams: { fm: webp })
+  height
+  width
+  alt
+  responsiveImage(imgixParams: { q: 90, fit: max, w: 2000, h: 3000 }) {
+    bgColor
+    src
+    width
+    height
+    aspectRatio
+    alt
+    title
+    base64
+  }
+}

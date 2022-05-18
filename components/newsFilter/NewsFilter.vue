@@ -4,8 +4,8 @@
     <div class="filter">
       <select class="select" @change="onChange($event)">
         <option value="" checked>All categories</option>
-        <option v-for="category in categories" :key="category" :value="category">
-          {{ category }}
+        <option v-for="(category) in categories" :key="category.name" :value="category.name">
+          {{ category.name }}
         </option>
       </select>
     </div>
