@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export default class SpherePointsMaterial extends THREE.ShaderMaterial {
+export default class PointsMaterial extends THREE.ShaderMaterial {
   constructor({ color1 = new THREE.Color('red'), color2 = new THREE.Color('blue'), color3 = new THREE.Color('white') } = {}) {
     super({
       vertexShader: `
@@ -10,6 +10,7 @@ export default class SpherePointsMaterial extends THREE.ShaderMaterial {
         uniform vec3 color3;
         uniform float time;
         uniform float pointScale;
+        uniform float pr;
 
         varying vec3 vColor;
         varying float vAlpha;
@@ -19,7 +20,7 @@ export default class SpherePointsMaterial extends THREE.ShaderMaterial {
             vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
             gl_Position = projectionMatrix * mvPosition;
             float r1 = fract((position.x + position.y + position.z) * 416.3716);
-            gl_PointSize = mix(2.0, 8.0, r1) * pointScale;
+            gl_PointSize = mix(2.0, 8.0, r1) * pointScale / 2.5 * pr;
 
             float r2 = floor(fract((position.x + position.y + position.z) * 31.44387) * 3.0);
             vColor = r2 == 0.0 ? color1 / 255.0 : r2 == 1.0 ? color2 / 255.0 : color3 / 255.0;
@@ -52,13 +53,14 @@ export default class SpherePointsMaterial extends THREE.ShaderMaterial {
         fogNear: { value: 12 },
         fogFar: { value: 15 },
         pointScale: { value: 1 },
+        pr: { value: 2.5 },
       },
       depthTest: false,
       blending: THREE.AdditiveBlending,
       transparent: true,
     });
 
-    this.type = 'SpherePointsMaterial';
-    this.name = 'SpherePointsMaterial';
+    this.type = 'CustomPointsMaterial';
+    this.name = 'CustomPointsMaterial';
   }
 }

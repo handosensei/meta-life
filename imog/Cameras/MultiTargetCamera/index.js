@@ -74,7 +74,7 @@ export default IMOG.Component('MultiTargetCamera', {
   },
 
   async setup({ options }) {
-    this.camera = new THREE.PerspectiveCamera(16.5, 1, 0.001, 200);
+    this.camera = new THREE.PerspectiveCamera(16.5, 1, 0.1, 200);
     this.helper = new THREE.CameraHelper(this.camera);
     this.cameraContainer = new THREE.Object3D();
     this.cameraContainer.isCamera = true;

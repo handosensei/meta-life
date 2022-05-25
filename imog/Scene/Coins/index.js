@@ -8,8 +8,8 @@ import AmbientLight from '~/imog/AmbientLight';
 import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';
 
-import SphereThreadsMaterial from '~/imog/Scene/Planets/SphereThreadsMaterial';
-import SpherePointsMaterial from '~/imog/Scene/Planets/SpherePointsMaterial';
+import ThreadsMaterial from '~/imog/_Shared/ThreadsMaterial';
+import PointsMaterial from '~/imog/_Shared/PointsMaterial';
 
 export default IMOG.Component('Coins', {
   options: {
@@ -21,6 +21,8 @@ export default IMOG.Component('Coins', {
     return {
       active: true,
       progress: 0,
+
+      pr: (props, { context }) => context.$rendererProps.pr,
 
       mouse: useMouse({ normalized: true }),
       mouseX: useSpring({
@@ -49,12 +51,12 @@ export default IMOG.Component('Coins', {
 
     this.group.traverse((obj) => {
       if (obj.isMesh && obj.name.match('Thread')) {
-        obj.material = new SphereThreadsMaterial({
+        obj.material = new ThreadsMaterial({
           color: new THREE.Color(0, 0, 255),
         });
         obj.layers.enable(1);
         const clone = obj.clone();
-        clone.material = new SphereThreadsMaterial({
+        clone.material = new ThreadsMaterial({
           color: new THREE.Color(129, 199, 255),
         });
         // clone.geometry = clone.geometry.clone();
@@ -76,26 +78,29 @@ export default IMOG.Component('Coins', {
     const coinSmallParticlesRef = this.group.getObjectByName('CoinSmall_Meshparticles');
 
     this.points = [];
-    [coinBigParticlesRef, coinSmallParticlesRef].forEach((ref) => {
-      ref.material = new THREE.MeshBasicMaterial({
-        color: 0xffffff,
-        wireframe: true,
+    [coinBigParticlesRef, coinSmallParticlesRef].forEach((ref, i) => {
+      const geo = new THREE.BufferGeometry();
+      const reps = i === 0 ? 2 : 3;
+      const newPositions = new Float32Array(ref.geometry.attributes.position.array.length * reps);
+      _.times(reps, (i) => {
+        newPositions.set(ref.geometry.attributes.position.array, i * ref.geometry.attributes.position.array.length);
       });
-      ref.visible = false;
-      _.each(ref.geometry.attributes.position.array, (val, i) => {
-        ref.geometry.attributes.position.array[i] = val + (Math.random() - 0.5) * 0.15;
+      geo.setAttribute('position', new THREE.BufferAttribute(newPositions, 3));
+
+      _.each(geo.attributes.position.array, (val, i) => {
+        geo.attributes.position.array[i] = val + (Math.random() - 0.5) * 0.15;
       });
 
       const randVertices = new Float32Array(
-        _.range(ref.geometry.attributes.position.count).map((i) => {
+        _.range(geo.attributes.position.count).map((i) => {
           return Math.random();
         })
       );
-      ref.geometry.setAttribute('rand', new THREE.BufferAttribute(randVertices, 1));
+      geo.setAttribute('rand', new THREE.BufferAttribute(randVertices, 1));
 
       const points = new THREE.Points(
-        ref.geometry,
-        new SpherePointsMaterial({
+        geo,
+        new PointsMaterial({
           color1: new THREE.Color(0, 144, 129),
           color2: new THREE.Color(16 * 0.5, 16 * 0.5, 255 * 0.5),
           color3: new THREE.Color(11 * 0.5, 146 * 0.5, 255 * 0.5),
@@ -150,7 +155,7 @@ export default IMOG.Component('Coins', {
     if (this.$gui) {
       const f = this.$gui.addFolder({
         title: '#3 Coins',
-        // expanded: false,
+        expanded: false,
       });
       f.addInput(this.ambientLight1.props, 'color', {
         label: 'ambient 1 color',
@@ -187,6 +192,11 @@ export default IMOG.Component('Coins', {
       this.coinSmall.rotation.copy(this.coinSmall.rOrigin);
       this.coinSmall.rotation.y -= this.props.mouseX.value * 1;
       this.coinSmall.rotation.x -= -this.props.mouseY.value * 1;
+    },
+    'set:pr'(pr) {
+      this.points.forEach((points, i) => {
+        points.material.uniforms.pr.value = pr;
+      });
     },
   },
 });

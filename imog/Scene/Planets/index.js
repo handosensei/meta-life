@@ -8,8 +8,8 @@ import TrailsBoid from '~/imog/TrailsBoid';
 import AmbientParticles from '~/imog/AmbientParticles';
 import AmbientLight from '~/imog/AmbientLight';
 
-import SphereThreadsMaterial from './SphereThreadsMaterial';
-import SpherePointsMaterial from './SpherePointsMaterial';
+import ThreadsMaterial from '~/imog/_Shared/ThreadsMaterial';
+import PointsMaterial from '~/imog/_Shared/PointsMaterial';
 
 export default IMOG.Component('Planets', {
   options: {
@@ -22,6 +22,7 @@ export default IMOG.Component('Planets', {
       target: 0,
       progress: 0,
       active: (props) => props.progress >= 0 && props.progress < 4,
+      pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
 
@@ -37,14 +38,16 @@ export default IMOG.Component('Planets', {
     this.group.traverse((obj) => {
       if (obj.isMesh && obj.name.match('Threads')) {
         this.sphere1 = obj;
-        obj.material = new SphereThreadsMaterial({
+        obj.material = new ThreadsMaterial({
           color: new THREE.Color(0, 0, 255),
+          backFace: 0.1,
         });
         obj.layers.enable(1);
         const clone = obj.clone();
         this.sphere2 = clone;
-        clone.material = new SphereThreadsMaterial({
+        clone.material = new ThreadsMaterial({
           color: new THREE.Color(129, 199, 255),
+          backFace: 0.1,
         });
         // clone.geometry = clone.geometry.clone();
         clone.scale.set(-1, 1, 1);
@@ -123,7 +126,7 @@ export default IMOG.Component('Planets', {
     });
 
     const pointsGeometry = new THREE.BufferGeometry();
-    const pointsAmount = 2000;
+    const pointsAmount = 5000;
     const pointsVertices = new Float32Array(
       _.flatten(
         _.range(pointsAmount).map((i) => {
@@ -131,7 +134,7 @@ export default IMOG.Component('Planets', {
           const v = Math.random();
           const theta = u * 2.0 * Math.PI;
           const phi = Math.acos(2.0 * v - 1.0);
-          const r = 1 + Math.random() * 0.15;
+          const r = 1 + Math.random() * 0.1;
           const sinTheta = Math.sin(theta);
           const cosTheta = Math.cos(theta);
           const sinPhi = Math.sin(phi);
@@ -154,7 +157,7 @@ export default IMOG.Component('Planets', {
 
     this.points = new THREE.Points(
       pointsGeometry,
-      new SpherePointsMaterial({
+      new PointsMaterial({
         color1: new THREE.Color(0, 144, 129),
         color2: new THREE.Color(16, 16, 255),
         color3: new THREE.Color(11, 146, 255),
@@ -221,6 +224,9 @@ export default IMOG.Component('Planets', {
       this.points.rotation.y += 0.00002 * dt;
       this.sphere1.rotation.y += 0.00002 * dt;
       this.sphere2.rotation.y += 0.00005 * dt;
+    },
+    'set:pr'(pr) {
+      this.points.material.uniforms.pr.value = pr;
     },
   },
 });

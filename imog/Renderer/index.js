@@ -38,9 +38,9 @@ export default IMOG.Component('Renderer', {
       saturation: 1.13,
 
       bloomActive: true,
-      bloomStrength: 1,
+      bloomStrength: 1.8,
       bloomThreshold: 0,
-      bloomRadius: 1.5,
+      bloomRadius: 0.8,
     };
   },
 
@@ -89,13 +89,10 @@ export default IMOG.Component('Renderer', {
     this.worldTarget = new THREE.WebGLRenderTarget(1, 1);
     this.worldTarget.texture.encoding = THREE.sRGBEncoding;
     this.worldTarget.texture.generateMipmaps = false;
-    // this.worldTarget.texture.minFilter = THREE.NearestFilter;
-    // this.worldTarget.texture.magFilter = THREE.NearestFilter;
+    this.worldTarget.texture.minFilter = THREE.NearestFilter;
+    this.worldTarget.texture.magFilter = THREE.NearestFilter;
     this.worldTarget.stencilBuffer = false;
     this.worldTarget.depthBuffer = true;
-    this.worldTarget.depthTexture = new THREE.DepthTexture();
-    this.worldTarget.depthTexture.format = THREE.DepthFormat;
-    this.worldTarget.depthTexture.type = THREE.UnsignedShortType;
     IMOG.inject('worldTarget', this.worldTarget);
 
     this.vfxTarget = new THREE.WebGLRenderTarget(1, 1, {});
@@ -188,7 +185,7 @@ export default IMOG.Component('Renderer', {
         glContext: this.renderer.getContext(),
         desktopTiers: [0, 15, 30, 50],
       });
-      this.props.pr = gpuTier.tier > 2 ? 2.5 : 1.5;
+      this.props.pr = gpuTier.tier >= 2 ? 2.5 : 1.5;
     })();
 
     window.addEventListener('focus', this.handleWindowFocus);
@@ -269,14 +266,9 @@ export default IMOG.Component('Renderer', {
     render(ms) {
       this.postMaterial.material.uniforms.uTime.value += 0.1;
       if (!this.props.bloomActive) {
-        // BG
-        this.worldCamera.layers.set(5);
-        this.screenCamera.layers.set(5);
-        this.renderer.render(this.worldScene, this.screenCamera);
-        this.screenCamera.layers.set(0);
         // Scene
         this.worldCamera.layers.set(0);
-        this.renderer.setRenderTarget(null);
+        this.renderer.setRenderTarget(this.worldTarget);
         this.renderer.clear();
         this.renderer.render(this.worldScene, this.worldCamera);
       } else {

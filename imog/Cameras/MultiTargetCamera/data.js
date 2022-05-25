@@ -28,5 +28,5 @@ export const ambients = {
   4: 0.1,
   5: 5,
   6: 1,
-  7: 3,
+  7: 0,
 };

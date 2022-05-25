@@ -15,6 +15,8 @@ export default IMOG.Component('AmbientParticles', {
       position: { x: 0, y: 0, z: 0 },
       positionComputed: (props) => ({ ...props.position }),
       scale: 1,
+
+      pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
 
@@ -81,6 +83,9 @@ export default IMOG.Component('AmbientParticles', {
     },
     'set:scale'(s) {
       this.group.scale.setScalar(s);
+    },
+    'set:pr'(pr) {
+      this.points.material.uniforms.pr.value = pr;
     },
   },
 });

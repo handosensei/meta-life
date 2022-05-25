@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export default class SphereThreadsMaterial extends THREE.ShaderMaterial {
+export default class ThreadsMaterial extends THREE.ShaderMaterial {
   constructor(options) {
     super();
 
@@ -11,11 +11,12 @@ export default class SphereThreadsMaterial extends THREE.ShaderMaterial {
     this.uniforms = {
       ...THREE.ShaderLib.basic.uniforms,
       color: { value: options.color },
+      backFace: { value: options.backFace || 0 },
     };
 
     // this.isMeshBasicMaterial = true;
-    this.type = 'SphereThreadsMaterial';
-    this.name = 'SphereThreadsMaterial';
+    this.type = 'ThreadsMaterial';
+    this.name = 'ThreadsMaterial';
 
     this.vertexShader = `
       #include <common>
@@ -90,6 +91,8 @@ export default class SphereThreadsMaterial extends THREE.ShaderMaterial {
       #include <clipping_planes_pars_fragment>
 
       uniform vec3 color;
+      uniform float backFace;
+
       varying vec3 vNN;
       varying vec3 vEye;
 
@@ -126,7 +129,7 @@ export default class SphereThreadsMaterial extends THREE.ShaderMaterial {
         vec4 worldColor = vec4(color/255.0 * fresnelTerm, 1.0);
         gl_FragColor = worldColor;
 
-        float backFace = clamp(map(dotN, 0.2, -0.1, 1.0, 0.0), 0.0, 1.0);
+        float backFace = clamp(map(dotN, 0.2, -0.1, 1.0, 0.0), backFace, 1.0);
         gl_FragColor.rgb *= backFace;
 
 

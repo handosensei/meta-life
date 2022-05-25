@@ -9,6 +9,7 @@ export default class ParticlePointsMaterial extends THREE.ShaderMaterial {
         uniform vec3 color2;
         uniform vec3 color3;
         uniform float time;
+        uniform float pr;
 
         varying vec3 vColor;
         varying float vAlpha;
@@ -19,7 +20,7 @@ export default class ParticlePointsMaterial extends THREE.ShaderMaterial {
             mvPosition.y += 0.5 * sin(rand * 3.14*2.0 + time * 0.1 + 0.4);
             gl_Position = projectionMatrix * mvPosition;
             float r1 = fract((position.x + position.y + position.z) * 416.3716);
-            gl_PointSize = mix(2.0, 12.0, r1);
+            gl_PointSize = mix(2.0, 12.0, r1) / 2.5 * pr;
 
             float r2 = floor(fract((position.x + position.y + position.z) * 31.44387) * 3.0);
             vColor = r2 == 0.0 ? color1 / 255.0 : r2 == 1.0 ? color2 / 255.0 : color3 / 255.0;
@@ -51,8 +52,9 @@ export default class ParticlePointsMaterial extends THREE.ShaderMaterial {
         time: { value: 0 },
         fogNear: { value: 0 },
         fogFar: { value: 150 },
+        pr: { value: 2.5 },
       },
-      depthTest: false,
+      depthWrite: false,
       blending: THREE.AdditiveBlending,
       transparent: true,
     });

@@ -26,7 +26,8 @@ export default class AmbientLightMaterial extends THREE.ShaderMaterial {
         color: { value: color },
         scale: { value: 1 },
       },
-      depthTest: false,
+      depthWrite: false,
+
       // blending: THREE.AdditiveBlending,
       transparent: true,
     });
