@@ -20,7 +20,6 @@ export default {
         },
         handleReady: () => {
           console.log('Loading complete');
-          this.canvas.props.target = 2;
         },
         domElement: this.$el,
       },
