@@ -8,6 +8,8 @@
   z-index: 10;
   width: calc(100% - 8rem);
   color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
 
   ::v-deep svg {
     transition: 0.5s color, 0.5s fill;

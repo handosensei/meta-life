@@ -3,6 +3,7 @@
     {
       "id": "explore",
       "name": "Explore",
+      "webgl": "2",
       "hideInNav": false,
       "sections": [
         {
@@ -251,6 +252,7 @@
     {
       "id": "play",
       "name": "Play",
+      "webgl": "3",
       "sections": [
         {
           "id": "play-01",
@@ -268,6 +270,7 @@
     {
       "id": "earn",
       "name": "Earn",
+      "webgl": "4",
       "sections": [
         {
           "id": "earn-01",
@@ -439,6 +442,7 @@
     {
       "id": "open-world",
       "name": "Open World",
+      "webgl": "5",
       "sections": [
         {
           "id": "open-world-01",
@@ -456,6 +460,7 @@
     {
       "id": "metal",
       "name": "$METAL",
+      "webgl": "6",
       "sections": [
         {
           "id": "metal-01",
@@ -479,6 +484,7 @@
     {
       "id": "join",
       "name": "Join now",
+      "webgl": "7",
       "sections": [
         {
           "id": "join-01",

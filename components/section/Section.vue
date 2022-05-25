@@ -169,6 +169,7 @@ export default {
 
       tl.addLabel('start')
         .call(() => {
+          window.canvas.props.target = parseInt(this.activeChapter.webgl);
           this.$root.$emit('background:switchColor', this.activeSection.theme);
         })
         .add(componentTl, 'start');

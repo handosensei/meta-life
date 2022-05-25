@@ -59,6 +59,11 @@ input {
   }
 }
 
+main {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .page {
   width: 100%;
   height: auto;

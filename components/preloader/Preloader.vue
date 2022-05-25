@@ -149,6 +149,9 @@ export default {
         .fromTo(this.$refs.footer.$el,
           { autoAlpha: 0 },
           { autoAlpha: 1 })
+        .add(() => {
+          window.canvas.props.target = 1
+        }, 0)
         .restart();
     },
 
@@ -175,6 +178,11 @@ export default {
     },
 
     leave(done) {
+      gsap.to(['main', '.header'], {
+        autoAlpha: 1,
+        duration: 0.4,
+        delay: 0.25
+      })
       gsap.to(this.$el, {
         autoAlpha: 0,
         delay: 0.5,
