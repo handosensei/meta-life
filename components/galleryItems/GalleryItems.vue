@@ -69,19 +69,23 @@ export default {
     },
 
     onMouseEnter(id) {
-      gsap.fromTo(
-        this.$refs.gallerySphere[id].$el.lastChild,
-        { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-        { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-      );
-      if(this.audio){
-        this.sound.currentTime = 0;
-        this.sound.play();
+      if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
+        gsap.fromTo(
+          this.$refs.gallerySphere[id].$el.lastChild,
+          { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+          { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+        );
+        if(this.audio){
+          this.sound.currentTime = 0;
+          this.sound.play();
+        }
       }
     },
 
     onMouseLeave(id) {
-      gsap.fromTo(this.$refs.gallerySphere[id].$el.lastChild, { drawSVG: '-100%', rotate: 90, transformOrigin: 'center' }, { drawSVG: '0%', rotate: 270, duration: 1.5, ease: 'expo.out' });
+      if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
+        gsap.fromTo(this.$refs.gallerySphere[id].$el.lastChild, { drawSVG: '-100%', rotate: 90, transformOrigin: 'center' }, { drawSVG: '0%', rotate: 270, duration: 1.5, ease: 'expo.out' });
+      }
     },
 
     getGalleryTl() {

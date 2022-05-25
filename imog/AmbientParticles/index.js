@@ -26,7 +26,7 @@ export default IMOG.Component('AmbientParticles', {
     if (options.addTo) options.addTo.add(this.group);
 
     const pointsGeometry = new THREE.BufferGeometry();
-    const pointsAmount = 500;
+    const pointsAmount = 750;
     const pointsVertices = new Float32Array(
       _.flatten(
         _.range(pointsAmount).map((i) => {
@@ -55,7 +55,7 @@ export default IMOG.Component('AmbientParticles', {
     );
     pointsGeometry.setAttribute('rand', new THREE.BufferAttribute(randVertices, 1));
 
-    const alpha = 0.2;
+    const alpha = 0.75;
     this.points = new THREE.Points(
       pointsGeometry,
       new Material({

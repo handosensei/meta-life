@@ -36,8 +36,9 @@ export default IMOG.Component('TrailsBoid', {
 
     this.boids = [];
 
-    for (var i = 0; i < 20; i++) {
-      const color = i < 10 ? options.color1 : options.color2;
+    const numberTrails = 60;
+    for (var i = 0; i < numberTrails; i++) {
+      const color = i < numberTrails * 0.5 ? options.color1 : options.color2;
       var boid = (this.boids[i] = new Boid({
         position: new THREE.Vector3(Math.random() * 300 - 150, Math.random() * 300 - 150, Math.random() * 300 - 150),
         velocity: new THREE.Vector3((Math.random() - 0.5) * 5, (Math.random() - 0.5) * 5, (Math.random() - 0.5) * 5),
