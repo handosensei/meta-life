@@ -106,17 +106,26 @@ export default IMOG.Component('Land', {
         addTo: this.groundGroup,
       },
       props: {
-        position: { x: -2.5, y: 1.4, z: 0 },
-        scale: 3,
+        position: { x: 0, y: -1, z: 0 },
+        scale: 5,
       },
     });
     this.ambientParticles2 = new AmbientParticles({
       options: {
-        addTo: this.groundGroup,
+        addTo: this.group,
       },
       props: {
-        position: { x: 2.5, y: -1.4, z: 0 },
-        scale: 4,
+        position: { x: 0, y: 8, z: -8 },
+        scale: 8,
+      },
+    });
+    this.ambientParticles3 = new AmbientParticles({
+      options: {
+        addTo: this.group,
+      },
+      props: {
+        position: { x: 0, y: 8, z: 8 },
+        scale: 8,
       },
     });
 
