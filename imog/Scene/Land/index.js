@@ -42,14 +42,14 @@ export default IMOG.Component('Land', {
     this.threads1 = this.group.getObjectByName('Tower_Threadexp');
     this.threads1.material = new ThreadsMaterial({
       color: new THREE.Color(0, 0, 255),
-      backFace: 0.1,
+      backFace: 0.5,
     });
     this.threads1.layers.enable(1);
     this.groundGroup.add(this.threads1);
     this.threads2 = this.group.getObjectByName('Tower_Thread2exp');
     this.threads2.material = new ThreadsMaterial({
       color: new THREE.Color(129, 199, 255),
-      backFace: 0.1,
+      backFace: 0.5,
     });
     this.threads2.layers.enable(1);
     this.groundGroup.add(this.threads2);

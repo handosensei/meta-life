@@ -46,7 +46,7 @@ export default IMOG.Component('Planets', {
         const clone = obj.clone();
         this.sphere2 = clone;
         clone.material = new ThreadsMaterial({
-          color: new THREE.Color(129, 199, 255),
+          color: new THREE.Color(129 * 0.5, 199 * 0.5, 255 * 0.5),
           backFace: 0.1,
         });
         // clone.geometry = clone.geometry.clone();

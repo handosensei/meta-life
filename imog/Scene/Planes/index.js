@@ -5,6 +5,8 @@ import { map } from '~/lib/math';
 
 import TrailsTunnel from '~/imog/TrailsTunnel';
 
+import FresnelMaterial from '~/imog/_Shared/FresnelMaterial';
+
 import { SimplexNoise } from 'simplex-noise';
 const simplex = new SimplexNoise();
 const rand = (x, y) => simplex.noise2D(x, y);
@@ -40,7 +42,11 @@ export default IMOG.Component('Planes', {
 
     this.planes = [...this.group.children[0].children];
     this.planes.forEach((plane, i) => {
+      plane.material = new FresnelMaterial({
+        color: new THREE.Color(129 * 0.1, 199 * 0.1, 255 * 0.4),
+      });
       plane.origin = plane.position.clone();
+      plane.layers.enable(1);
     });
 
     this.trailsTunnel = new TrailsTunnel({
