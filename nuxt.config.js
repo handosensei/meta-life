@@ -43,12 +43,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['gsap'],
+    transpile: ['three', 'gsap'],
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.(graphql|gql)$/,
         exclude: /node_modules/,
         loader: 'graphql-tag/loader',
+      });
+      config.module.rules.push({
+        test: /\.(glsl|vs|fs|vert|frag)$/,
+        exclude: /node_modules/,
+        use: ['raw-loader', 'glslify-loader'],
       });
     },
   },
@@ -65,5 +70,6 @@ export default {
 
   env: {
     CMS_DATOCMS_API_TOKEN: process.env.CMS_DATOCMS_API_TOKEN,
+    isNuxt: true,
   },
 };

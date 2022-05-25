@@ -9,7 +9,7 @@
     </transition>
 
     <TunnelSquares ref="tunnelSquares" />
-    <Background />
+    <!-- <Background /> -->
     <AudioPlayer />
 
     <transition name="chapterNavTransition" :css="false" @enter="onChapterNavEnter" @leave="onChapterNavLeave">
@@ -29,7 +29,7 @@ import SEO from '~/mixins/seo';
 import { goToNextSection, goToPreviousSection } from '~/utils/functions/chapterHelpers';
 import delay from '~/utils/functions/delay';
 
-import Background from '~/components/background/Background.vue';
+// import Background from '~/components/background/Background.vue';
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
 import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
@@ -40,7 +40,7 @@ export default {
   name: 'IndexPage',
 
   components: {
-    Background,
+    // Background,
     ChapterNav,
     AudioPlayer,
     GalleryOverlay,

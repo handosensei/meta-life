@@ -1,0 +1,185 @@
+.UITop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Helvetica Neue;
+  font-size: 10px;
+
+  .far,
+  .close {
+    display: inline;
+  }
+
+  .isClose .close {
+    text-decoration: underline;
+  }
+
+  .isFar .far {
+    text-decoration: underline;
+  }
+}
+
+.PasswordScreen {
+  font-family: Helvetica Neue;
+
+  z-index: 5;
+  background: #111;
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  .UITop,
+  .UIBottom {
+    // opacity: 0.5;
+  }
+}
+
+.passwordDots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  text-align: center;
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    margin: 7px;
+
+    &.active {
+      background: white;
+      border: transparent;
+    }
+  }
+}
+
+.passwordTextarea {
+  opacity: 0.05;
+  width: 120vw;
+  height: 200vh;
+  margin-top: -10vh;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.passwordSpinner {
+  opacity: 0;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  // background: #74a6f2;
+  padding: 10px;
+  border-radius: 10px;
+  transform: scale(0.8) translate(-50%, -50%);
+
+  div {
+    width: 6%;
+    height: 16%;
+    background: #fff;
+    position: absolute;
+    left: 49%;
+    top: 43%;
+    opacity: 0;
+    -webkit-border-radius: 50px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-animation: fade 1s linear infinite;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0.25;
+    }
+  }
+
+  div.bar1 {
+    -webkit-transform: rotate(0deg) translate(0, -130%);
+    -webkit-animation-delay: 0s;
+  }
+
+  div.bar2 {
+    -webkit-transform: rotate(30deg) translate(0, -130%);
+    -webkit-animation-delay: -0.9167s;
+  }
+
+  div.bar3 {
+    -webkit-transform: rotate(60deg) translate(0, -130%);
+    -webkit-animation-delay: -0.833s;
+  }
+  div.bar4 {
+    -webkit-transform: rotate(90deg) translate(0, -130%);
+    -webkit-animation-delay: -0.7497s;
+  }
+  div.bar5 {
+    -webkit-transform: rotate(120deg) translate(0, -130%);
+    -webkit-animation-delay: -0.667s;
+  }
+  div.bar6 {
+    -webkit-transform: rotate(150deg) translate(0, -130%);
+    -webkit-animation-delay: -0.5837s;
+  }
+  div.bar7 {
+    -webkit-transform: rotate(180deg) translate(0, -130%);
+    -webkit-animation-delay: -0.5s;
+  }
+  div.bar8 {
+    -webkit-transform: rotate(210deg) translate(0, -130%);
+    -webkit-animation-delay: -0.4167s;
+  }
+  div.bar9 {
+    -webkit-transform: rotate(240deg) translate(0, -130%);
+    -webkit-animation-delay: -0.333s;
+  }
+  div.bar10 {
+    -webkit-transform: rotate(270deg) translate(0, -130%);
+    -webkit-animation-delay: -0.2497s;
+  }
+  div.bar11 {
+    -webkit-transform: rotate(300deg) translate(0, -130%);
+    -webkit-animation-delay: -0.167s;
+  }
+  div.bar12 {
+    -webkit-transform: rotate(330deg) translate(0, -130%);
+    -webkit-animation-delay: -0.0833s;
+  }
+}
+
+.passwordProgress {
+  opacity: 0;
+  width: 140px;
+  margin-left: -70px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  border-radius: 1px;
+}
+.passwordProgressFill {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 1);
+  transition: width 0.4s ease-out;
+}
