@@ -150,7 +150,7 @@ export default IMOG.Component('Land', {
       this.group.visible = v > 5.75;
     },
     'while:active'(dt) {
-      this.groundGroup.rotation.y += 0.0002 * dt;
+      this.groundGroup.rotation.y += 0.0001 * dt;
     },
   },
 });
