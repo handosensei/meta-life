@@ -48,6 +48,10 @@
   flex: 1;
   display: flex;
 
+  .button {
+    height: 44px;
+  }
+
   @include maxMobile {
     &:not(:first-child) {
       margin-top: 10px;
