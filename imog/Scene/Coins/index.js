@@ -2,11 +2,11 @@ import * as THREE from 'three';
 import IMOG from '~/lib/imog';
 import _ from 'underscore';
 
-import AmbientParticles from '~/imog/AmbientParticles';
-import AmbientLight from '~/imog/AmbientLight';
-
 import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';
+
+import AmbientParticles from '~/imog/AmbientParticles';
+import AmbientLight from '~/imog/AmbientLight';
 
 import ThreadsMaterial from '~/imog/_Shared/ThreadsMaterial';
 import PointsMaterial from '~/imog/_Shared/PointsMaterial';

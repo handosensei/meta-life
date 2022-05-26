@@ -41,6 +41,7 @@ export default IMOG.Component('Land', {
 
     this.threads1 = this.group.getObjectByName('Tower_Threadexp');
     this.threads1.material = new ThreadsMaterial({
+      depthTest: true,
       color: new THREE.Color(0, 0, 255),
       backFace: 0.5,
     });
@@ -48,6 +49,7 @@ export default IMOG.Component('Land', {
     this.groundGroup.add(this.threads1);
     this.threads2 = this.group.getObjectByName('Tower_Thread2exp');
     this.threads2.material = new ThreadsMaterial({
+      depthTest: true,
       color: new THREE.Color(129, 199, 255),
       backFace: 0.5,
     });
@@ -56,7 +58,7 @@ export default IMOG.Component('Land', {
 
     (() => {
       const ref = this.group.getObjectByName('Tower_Particles');
-      ref.parent.remove(ref);
+      this.groundGroup.add(ref);
       const geo = new THREE.BufferGeometry();
       const reps = 2;
       const newPositions = new Float32Array(ref.geometry.attributes.position.array.length * reps);

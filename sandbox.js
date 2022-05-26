@@ -16,7 +16,7 @@ const handleClick = () => {
   if (urlParams.get('dev') !== null) {
     await require('~/lib/gui');
   }
-  if (true || process.env.VERCEL || process.env.NETLIFY) {
+  if (process.env.VERCEL || process.env.NETLIFY) {
     const PasswordScreen = await require('~/lib/dev/PasswordScreen').default;
     let psScreen = new PasswordScreen({
       options: {

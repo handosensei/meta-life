@@ -6,7 +6,7 @@ export default class ThreadsMaterial extends THREE.ShaderMaterial {
 
     this.transparent = true;
     this.blending = THREE.AdditiveBlending;
-    this.depthTest = false;
+    this.depthTest = !!options.depthTest;
 
     this.uniforms = {
       ...THREE.ShaderLib.basic.uniforms,
