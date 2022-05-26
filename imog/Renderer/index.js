@@ -24,7 +24,11 @@ export default IMOG.Component('Renderer', {
   props() {
     return {
       windowSize: useWindowSize(),
-      pr: 1,
+      quality: 'low',
+      pr: (props) => {
+        const resolution = props.windowSize.width * props.windowSize.height;
+        return { low: 1.5, mid: 1.5, high: resolution > 1500000 ? 2 : 2.5 }[props.quality];
+      },
       size: (props) => ({
         width: props.windowSize.width,
         height: props.windowSize.height,
@@ -185,7 +189,7 @@ export default IMOG.Component('Renderer', {
         glContext: this.renderer.getContext(),
         desktopTiers: [0, 15, 30, 50],
       });
-      this.props.pr = gpuTier.tier >= 2 ? 2.5 : 1.5;
+      this.props.quality = gpuTier.tier >= 2 ? 'high' : 'normal';
     })();
 
     window.addEventListener('focus', this.handleWindowFocus);
