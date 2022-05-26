@@ -109,6 +109,7 @@ export default IMOG.Component('Coins', {
       points.material.uniforms.fogFar.value = 999;
       points.layers.enable(1);
       ref.parent.add(points);
+      ref.parent.remove(ref);
       this.points.push(points);
     });
 
