@@ -65,6 +65,8 @@ export default {
 
       tl.delay(1.25)
 
+      tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' })
+
       if (this.$refs.paragraph) {
         tl.fromTo(this.splitParagraph.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, delay: 0.5, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0);
       }
