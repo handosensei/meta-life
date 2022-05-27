@@ -136,7 +136,7 @@ export default IMOG.Component('Planets', {
     });
 
     const pointsGeometry = new THREE.BufferGeometry();
-    const pointsAmount = 5000;
+    const pointsAmount = 3000;
     const pointsVertices = new Float32Array(
       _.flatten(
         _.range(pointsAmount).map((i) => {
