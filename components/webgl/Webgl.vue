@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import Canvas from '~/imog/Canvas';
 
 export default {
@@ -20,6 +21,12 @@ export default {
         },
         handleReady: () => {
           console.log('Loading complete');
+          gsap.to(this.$el, {
+            autoAlpha: 1,
+            duration: 0.4,
+            ease: 'none',
+            delay: 0.1
+          })
           // this.canvas.props.target = 0;
         },
         domElement: this.$el,
