@@ -93,6 +93,8 @@ export default {
 
       tl.delay(1)
 
+      tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' })
+
       if (this.subtitle) {
         tl.fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0);
       }

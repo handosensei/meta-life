@@ -5,6 +5,13 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5158657212885154) 15%, rgba(0, 0, 0, 0) 30%);
+  }
 }
 
 .heading {
