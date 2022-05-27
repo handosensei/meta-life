@@ -104,17 +104,21 @@ export default {
 
       if (dir === -1) {
         const { chapter, section } = goToPreviousSection(this.chapters, this.activeChapter, this.activeSection);
+        if (chapter.id !== this.activeChapter.id || section.id !== this.activeSection.id) {
+          this.$refs.tunnelSquares.animate(dir);
+        }
         this.setActiveChapter(chapter);
         this.setActiveSection(section);
       }
 
       if (dir === 1) {
         const { chapter, section } = goToNextSection(this.chapters, this.activeChapter, this.activeSection);
+        if (chapter.id !== this.activeChapter.id || section.id !== this.activeSection.id) {
+          this.$refs.tunnelSquares.animate(dir);
+        }
         this.setActiveChapter(chapter);
         this.setActiveSection(section);
       }
-
-      this.$refs.tunnelSquares.animate(dir);
 
       await delay(this.$root.sectionTransitionDuration);
 
