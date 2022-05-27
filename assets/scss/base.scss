@@ -60,6 +60,21 @@ input {
   // }
 }
 
+.site-border {
+  display: none;
+  position: fixed;
+  inset: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 3;
+
+  @include minTablet {
+    display: block;
+    inset: 4rem;
+  }
+}
+
 main {
   opacity: 0;
   visibility: hidden;

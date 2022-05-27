@@ -5,6 +5,7 @@
     </transition>
     <FocusLock :disabled="!menuOpen">
       <Header />
+      <div class="site-border"></div>
       <transition name="menuTransition" mode="out-in" :css="false" @enter="onMenuEnter" @leave="onMenuLeave">
         <Menu v-if="menuOpen" ref="menu" />
       </transition>
