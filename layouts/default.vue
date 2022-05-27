@@ -101,6 +101,13 @@ export default {
 
     onRouteChange() {
       // Close menu if open
+      console.log('onRouteChange', this.$route.name)
+      if (this.$route.name !== 'index') {
+        window.canvas.props.active = false
+      } else {
+        window.canvas.props.active = true
+      }
+      console.log('window.canvas.props.active', window.canvas.props.active)
       if (this.menuOpen) {
         this.setMenuOpen(false);
       }
