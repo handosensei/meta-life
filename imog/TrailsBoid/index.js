@@ -36,7 +36,7 @@ export default IMOG.Component('TrailsBoid', {
 
     this.boids = [];
 
-    const numberTrails = 60;
+    const numberTrails = 30;
     for (var i = 0; i < numberTrails; i++) {
       const color = i < numberTrails * 0.5 ? options.color1 : options.color2;
       var boid = (this.boids[i] = new Boid({

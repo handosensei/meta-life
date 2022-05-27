@@ -41,7 +41,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
     this.trail_material = new CustomLineMaterial({
       color,
       worldUnits: true,
-      linewidth: 0.006, // in world units with size attenuation, pixels otherwise
+      linewidth: 0.003, // in world units with size attenuation, pixels otherwise
       vertexColors: false,
       //resolution: [innerWidth, innerHeight],
 

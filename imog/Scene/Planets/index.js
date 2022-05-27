@@ -22,7 +22,7 @@ export default IMOG.Component('Planets', {
       sceneActive: true,
       target: 0,
       progress: 0,
-      active: (props) => props.sceneActive && props.progress >= 0 && props.progress < 4,
+      active: (props) => props.sceneActive && props.progress >= 0 && props.progress <= 4,
       pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
@@ -67,7 +67,7 @@ export default IMOG.Component('Planets', {
         color2: this.boildThreadsColor2,
       },
       props: {
-        active: (props) => this.props.active && this.props.progress > 1.5 && this.props.progress < 3.5,
+        active: (props) => this.props.active && this.props.progress > 0 && this.props.progress < 3.5,
       },
     });
 
@@ -217,7 +217,7 @@ export default IMOG.Component('Planets', {
     'set:progress'(v) {
       this.group.visible = v < 4.5;
       this.spheres.forEach((obj, i) => {
-        obj.morphTargetInfluences[0] = map(v, 1, 2, 0.75, -0.75, true);
+        obj.morphTargetInfluences[0] = map(v, 1, 2, 0.25, -0.75, true);
       });
 
       this.smallSpheres.forEach((obj, i) => {
@@ -228,13 +228,19 @@ export default IMOG.Component('Planets', {
         }
       });
 
+      this.spheresTransitionR = map(v, 0, 1, 0, -1, true) + map(v, 1, 2, 0, -5, true) + map(v, 2, 3, 0, -3, true) + map(v, 3, 4, 0, -20, true);
+
       this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 1, true);
     },
     'while:active'(dt) {
       this.points.material.uniforms.time.value += 0.0005 * dt;
-      this.points.rotation.y += 0.00002 * dt;
-      this.sphere1.rotation.y += 0.00002 * dt;
-      this.sphere2.rotation.y += 0.00005 * dt;
+      // this.points.rotation.y += 0.00002 * dt;
+      // this.sphere1.rotation.y += 0.00002 * dt;
+      // this.sphere2.rotation.y += 0.00005 * dt;
+
+      this.points.rotation.y = this.spheresTransitionR * 0.2;
+      this.sphere1.rotation.y = this.spheresTransitionR;
+      this.sphere2.rotation.y = this.spheresTransitionR * 0.5;
     },
     'set:pr'(pr) {
       this.points.material.uniforms.pr.value = pr;
