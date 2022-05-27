@@ -78,7 +78,7 @@ export default {
     };
 
     gsap.set(this.$refs.transform, {
-      y: 40
+      y: 60
     })
 
     gsap.to(progress, {
