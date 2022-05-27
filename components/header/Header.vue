@@ -28,12 +28,13 @@ export default {
 
   computed: {
     ...mapState('app', ['theme', 'previousTheme', 'menuOpen', 'videoPlayerOpen', 'windowSize']),
-    ...mapState('home', ['chapterNavOpen']),
+    ...mapState('home', ['chapterNavOpen', 'galleryOpen']),
   },
 
   watch: {
+    galleryOpen: 'onGalleryOpen',
     menuOpen: 'onMenuButtonToggle',
-    galleryOpen: 'onMenuButtonToggle',
+    // galleryOpen: 'onMenuButtonToggle',
     '$nuxt.$route.name': 'onRouteChange'
   },
 
@@ -49,6 +50,16 @@ export default {
   },
 
   methods: {
+    onGalleryOpen (value) {
+      console.log('value', value)
+      gsap.to(this.$refs.menuButton.$el, {
+        autoAlpha: value ? 0 : 1,
+        duration: 0.4,
+        delay: value ? 0 : 1.5,
+        ease: 'none'
+      })
+    },
+
     onMenuButtonClick() {
       if (this.animating) {
         return;

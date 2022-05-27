@@ -76,6 +76,11 @@ export default {
 
     animateAudio () {
       if (this.$route.name !== 'index') {
+        gsap.to(this.$el, {
+          y: 50,
+          duration: 0.6,
+          ease: 'expo.out'
+        })
         gsap.to(this.audioPlayer, {
           volume: 0
         })
@@ -83,6 +88,11 @@ export default {
           volume: 1
         })
       } else {
+        gsap.to(this.$el, {
+          y: 0,
+          duration: 0.6,
+          ease: 'expo.out'
+        })
         gsap.to(this.audioPlayer, {
           volume: 1
         })
