@@ -102,7 +102,6 @@ export default IMOG.Component('Canvas', {
 
   hooks: {
     'set:computedTarget'(index, prevIndex) {
-      console.log(index);
       if (index === -1) return;
 
       gsap.killTweensOf(this.props, { progress: true });
