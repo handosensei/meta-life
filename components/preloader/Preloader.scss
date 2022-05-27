@@ -64,11 +64,29 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #131e2f;
+      transition: color 0.4s ease-out;
     }
   }
 
   @include minTablet {
     margin-top: 60px;
+  }
+
+  svg {
+    path {
+      transition: opacity 0.4s ease-out;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        opacity: 0.1;
+      }
+    }
+    > div > span {
+      color: white;
+    }
   }
 }
 

@@ -11,7 +11,7 @@
       </transition>
     </FocusLock>
     <Nuxt />
-    <Webgl />
+    <Webgl ref="webgl" />
     <AudioPlayer />
   </div>
 </template>
@@ -21,6 +21,7 @@ import 'focus-visible';
 import sniffer from '@antinomy-studio/sniffer';
 import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
+import { gsap } from 'gsap';
 
 import AssetsLoader from '~/mixins/assetsLoader';
 
@@ -47,10 +48,11 @@ export default {
   mixins: [AssetsLoader],
 
   computed: {
-    ...mapState('app', ['hasPreloader', 'assetsPreloaded', 'menuOpen']),
+    ...mapState('app', ['hasPreloader', 'preloaderVisible', 'assetsPreloaded', 'menuOpen']),
   },
 
   watch: {
+    preloaderVisible: 'onRouteChange',
     $route: 'onRouteChange',
   },
 
@@ -100,7 +102,24 @@ export default {
     },
 
     onRouteChange() {
-      // Close menu if open
+      if (this.$route.name !== 'index') {
+        gsap.to(this.$refs.webgl.$el, {
+          autoAlpha: 0,
+          duration: 0.2,
+          ease: 'none',
+          onComplete: () => {
+            window.canvas.props.active = false
+          }
+        })
+      } else {
+        window.canvas.props.active = true
+        gsap.to(this.$refs.webgl.$el, {
+          autoAlpha: 1,
+          duration: 0.6,
+          ease: 'none',
+          delay: 0.25
+        })
+      }
       if (this.menuOpen) {
         this.setMenuOpen(false);
       }

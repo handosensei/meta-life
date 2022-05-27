@@ -187,20 +187,33 @@ export default {
     },
 
     leave(done) {
-      gsap.to(['main', '.header'], {
-        autoAlpha: 1,
-        duration: 0.4,
-        delay: 0.25
-      })
-      gsap.to(this.$el, {
-        autoAlpha: 0,
-        delay: 0.5,
+      const bounds = this.$refs.wordmark.$el.getBoundingClientRect()
+      gsap.timeline({
+        paused: true,
         onComplete: () => {
           this.setAssetsPreloaded();
           this.setPreloaderVisible(false);
           done();
-        },
-      })
+        }
+      }).to(this.$refs.button, {
+        autoAlpha: 0,
+        duration: 0.2,
+        ease: 'none'
+      }, 0).to(this.$refs.wordmark.$el, {
+        y: (bounds.top + bounds.height + 50) * -1,
+        duration: 1.75,
+        ease: 'expo.inOut'
+      }, 0).to(['main', '.header'], {
+        autoAlpha: 1,
+        duration: 0.4,
+        delay: 0.25
+      }, 1.25).to(this.$el, {
+        autoAlpha: 0,
+        duration: 0.2,
+        ease: 'none'
+      }, 1.25).add(() => {
+        window.canvas.props.target = 2
+      }, 0.35).restart()
     },
 
     ...mapActions('app', ['setAssetsPreloaded', 'setHasPreloader', 'setPreloaderVisible']),

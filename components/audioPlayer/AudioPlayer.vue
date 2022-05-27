@@ -32,13 +32,14 @@ export default {
   }),
 
   computed: {
-    ...mapState('app', ['hasPreloader']),
+    ...mapState('app', ['hasPreloader', 'menuOpen']),
     ...mapState('home', ['audio']),
   },
 
   watch: {
     hasPreloader: 'toggleAudio',
-    $route: 'animateAudio'
+    $route: 'animateAudio',
+    menuOpen: 'animateAudio'
   },
 
   mounted () {
@@ -75,7 +76,7 @@ export default {
     },
 
     animateAudio () {
-      if (this.$route.name !== 'index') {
+      if (this.$route.name !== 'index' || this.menuOpen) {
         gsap.to(this.$el, {
           y: 50,
           duration: 0.6,
