@@ -52,6 +52,12 @@
     height: 44px;
   }
 
+  &:hover {
+    .buttonLabel {
+      color: white;
+    }
+  }
+
   @include maxMobile {
     &:not(:first-child) {
       margin-top: 10px;
@@ -128,6 +134,7 @@
   display: flex;
   font-size: clamp(10px, 1rem, 1rem);
   white-space: nowrap;
+  transition: color 0.4s ease-out;
 
   @include maxMobile {
     line-height: 12rem;
@@ -138,7 +145,8 @@
   @include minTablet {
     line-height: 4.3rem;
     margin-left: auto;
-    padding-left: 3rem;
+    justify-content: flex-end;
+
     &::after {
       content: '›';
       color: var(--color-white-04);
