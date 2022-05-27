@@ -1,5 +1,7 @@
 <template>
   <div class="credits">
+    <div class="sub">Powered by</div>
+
     <Icon class="logo" type="MetaLegends" />
 
     <div class="sub">visit : <a class="subLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a></div>
