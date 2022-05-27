@@ -217,7 +217,7 @@ export default IMOG.Component('Planets', {
     'set:progress'(v) {
       this.group.visible = v < 4.5;
       this.spheres.forEach((obj, i) => {
-        obj.morphTargetInfluences[0] = map(v, 1, 2, 0.75, -0.5, true);
+        obj.morphTargetInfluences[0] = map(v, 1, 2, 0.75, -0.75, true);
       });
 
       this.smallSpheres.forEach((obj, i) => {
