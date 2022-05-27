@@ -170,6 +170,8 @@ export default IMOG.Component('MultiTargetCamera', {
     'set:cameraProgressData'({ prevIndex, nextIndex, localProgress }) {
       if (!this.props.ready) {
         this.position.set(99, 99, 99);
+        this.lookAt.set(99, 1000, 99);
+
         return;
       }
 

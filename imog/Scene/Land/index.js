@@ -163,6 +163,7 @@ export default IMOG.Component('Land', {
     },
     'while:active'(dt) {
       this.groundGroup.rotation.y += 0.0001 * dt;
+      this.points.material.uniforms.time.value += 0.0005 * dt;
     },
   },
 });

@@ -110,12 +110,15 @@ export default IMOG.Component('Planets', {
       },
     });
 
-    this.spheresMaterial = new THREE.MeshBasicMaterial({
-      color: 0x0b92ff,
-      transparent: true,
-      blending: THREE.AdditiveBlending,
-      opacity: 0.05,
+    this.spheresMaterial = new ThreadsMaterial({
+      color: new THREE.Color(25, 25, 255),
+      backFace: 0.1,
     });
+    this.spheresMaterial2 = new ThreadsMaterial({
+      color: new THREE.Color(177, 177, 255),
+      backFace: 0.1,
+    });
+
     this.sphereSmall1 = this.group.getObjectByName('SphereSmall1');
     this.sphereSmall2 = this.group.getObjectByName('SphereSmall2');
     this.smallSpheres = [this.sphereSmall1, this.sphereSmall2];
@@ -123,10 +126,17 @@ export default IMOG.Component('Planets', {
     this.smallSpheres.forEach((obj, i) => {
       obj.material = this.spheresMaterial;
       obj.origin = obj.position.clone();
+      obj.morphTargetInfluences[0] = -1;
+      const clone = obj.clone();
+      clone.material = this.spheresMaterial2;
+      clone.rotation.x = Math.PI / 2;
+      clone.origin = obj.position.clone();
+      obj.parent.add(clone);
+      this.smallSpheres.push(clone);
     });
 
     const pointsGeometry = new THREE.BufferGeometry();
-    const pointsAmount = 5000;
+    const pointsAmount = 3000;
     const pointsVertices = new Float32Array(
       _.flatten(
         _.range(pointsAmount).map((i) => {
@@ -212,15 +222,15 @@ export default IMOG.Component('Planets', {
       this.smallSpheres.forEach((obj, i) => {
         obj.visible = v > 2;
         if (obj.visible) {
-          obj.position.set(0, 0, 0).lerp(obj.origin, map(v, 2, 3, 0.5, 1, true));
-          obj.material.opacity = map(v, 2, 3, 0, 0.05, true);
+          obj.position.set(0, 0, 0).lerp(obj.origin, map(v, 2.5, 3, 0.75, 1, true));
+          obj.material.uniforms.alpha.value = map(v, 2.5, 3, 0, 1, true);
         }
       });
 
-      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 0.75, true);
+      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 1, true);
     },
     'while:active'(dt) {
-      this.points.material.uniforms.time.value += 0.0003 * dt;
+      this.points.material.uniforms.time.value += 0.0005 * dt;
       this.points.rotation.y += 0.00002 * dt;
       this.sphere1.rotation.y += 0.00002 * dt;
       this.sphere2.rotation.y += 0.00005 * dt;

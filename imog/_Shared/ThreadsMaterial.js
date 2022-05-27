@@ -12,6 +12,7 @@ export default class ThreadsMaterial extends THREE.ShaderMaterial {
       ...THREE.ShaderLib.basic.uniforms,
       color: { value: options.color },
       backFace: { value: options.backFace || 0 },
+      alpha: { value: 1 },
     };
 
     // this.isMeshBasicMaterial = true;
@@ -92,6 +93,7 @@ export default class ThreadsMaterial extends THREE.ShaderMaterial {
 
       uniform vec3 color;
       uniform float backFace;
+      uniform float alpha;
 
       varying vec3 vNN;
       varying vec3 vEye;
@@ -131,6 +133,7 @@ export default class ThreadsMaterial extends THREE.ShaderMaterial {
 
         float backFace = clamp(map(dotN, 0.2, -0.1, 1.0, 0.0), backFace, 1.0);
         gl_FragColor.rgb *= backFace;
+        gl_FragColor.a *= alpha;
 
 
         #include <tonemapping_fragment>
