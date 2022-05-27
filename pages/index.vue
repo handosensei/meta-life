@@ -9,8 +9,6 @@
     </transition>
 
     <TunnelSquares ref="tunnelSquares" />
-    <!-- <Background /> -->
-    <AudioPlayer />
 
     <transition name="chapterNavTransition" :css="false" @enter="onChapterNavEnter" @leave="onChapterNavLeave">
       <ChapterNav v-if="!activeSection.navHidden" />
@@ -31,7 +29,6 @@ import delay from '~/utils/functions/delay';
 
 // import Background from '~/components/background/Background.vue';
 import ChapterNav from '~/components/chapterNav/ChapterNav.vue';
-import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
 import GalleryOverlay from '~/components/galleryOverlay/GalleryOverlay.vue';
 import Section from '~/components/section/Section.vue';
 import TunnelSquares from '~/components/tunnelSquares/TunnelSquares.vue';
@@ -42,7 +39,6 @@ export default {
   components: {
     // Background,
     ChapterNav,
-    AudioPlayer,
     GalleryOverlay,
     Section,
     TunnelSquares,
