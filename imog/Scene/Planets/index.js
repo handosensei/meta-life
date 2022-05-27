@@ -227,10 +227,10 @@ export default IMOG.Component('Planets', {
         }
       });
 
-      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 0.75, true);
+      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 1, true);
     },
     'while:active'(dt) {
-      this.points.material.uniforms.time.value += 0.0003 * dt;
+      this.points.material.uniforms.time.value += 0.0005 * dt;
       this.points.rotation.y += 0.00002 * dt;
       this.sphere1.rotation.y += 0.00002 * dt;
       this.sphere2.rotation.y += 0.00005 * dt;

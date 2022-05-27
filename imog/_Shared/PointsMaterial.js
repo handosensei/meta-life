@@ -1,35 +1,10 @@
 import * as THREE from 'three';
+import vertexShader from './pointsVertex.glsl';
 
 export default class PointsMaterial extends THREE.ShaderMaterial {
   constructor({ color1 = new THREE.Color('red'), color2 = new THREE.Color('blue'), color3 = new THREE.Color('white') } = {}) {
     super({
-      vertexShader: `
-        attribute float rand;
-        uniform vec3 color1;
-        uniform vec3 color2;
-        uniform vec3 color3;
-        uniform float time;
-        uniform float pointScale;
-        uniform float pr;
-
-        varying vec3 vColor;
-        varying float vAlpha;
-        varying float vFogDepth;
-
-        void main() {
-            vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-            gl_Position = projectionMatrix * mvPosition;
-            float r1 = fract((position.x + position.y + position.z) * 416.3716);
-            gl_PointSize = mix(2.0, 8.0, r1) * pointScale / 2.5 * pr;
-
-            float r2 = floor(fract((position.x + position.y + position.z) * 31.44387) * 3.0);
-            vColor = r2 == 0.0 ? color1 / 255.0 : r2 == 1.0 ? color2 / 255.0 : color3 / 255.0;
-
-            vAlpha = sin(rand * 3.14 * 2.0 + time);
-
-            vFogDepth = - mvPosition.z;
-        }
-      `,
+      vertexShader,
       fragmentShader: `
         varying vec3 vColor;
         varying float vAlpha;
