@@ -206,7 +206,7 @@ export default IMOG.Component('Planets', {
     'set:progress'(v) {
       this.group.visible = v < 4.5;
       this.spheres.forEach((obj, i) => {
-        obj.morphTargetInfluences[0] = map(v, 1, 2, 0, -2, true);
+        obj.morphTargetInfluences[0] = map(v, 1, 2, 0.75, -0.5, true);
       });
 
       this.smallSpheres.forEach((obj, i) => {
@@ -217,7 +217,7 @@ export default IMOG.Component('Planets', {
         }
       });
 
-      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 2, 1, true);
+      this.points.material.uniforms.pointScale.value = map(v, 1, 2, 1, 0.75, true);
     },
     'while:active'(dt) {
       this.points.material.uniforms.time.value += 0.0003 * dt;
