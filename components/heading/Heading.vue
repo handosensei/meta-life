@@ -62,7 +62,9 @@ export default {
 
     getEnterTl() {
       const tl = gsap.timeline();
-      
+
+      tl.delay(1.25)
+
       if (this.$refs.paragraph) {
         tl.fromTo(this.splitParagraph.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, delay: 0.5, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0);
       }

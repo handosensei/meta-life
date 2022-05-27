@@ -7,7 +7,7 @@
       <TeamList v-bind="constructionSquad" data-section />
       <TeamList v-bind="external" data-section />
       <TeamList v-bind="advisors" data-section />
-      <BackToExperience theme="light" data-section />
+      <BackToExperience data-section />
     </div>
   </main>
 </template>

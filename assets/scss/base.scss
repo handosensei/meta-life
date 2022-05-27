@@ -99,6 +99,7 @@ main {
   position: relative;
   width: 146px;
   height: 61px;
+  cursor: pointer;
 
   > svg {
     display: block;
@@ -120,6 +121,7 @@ main {
     span {
       font: 400 10px/1 'Matter';
       text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -127,9 +129,10 @@ main {
     > svg > path {
       &:first-child {
         fill: white;
+        transition: fill 0.2s ease-out;
       }
       &:last-child {
-        stroke: black;
+        stroke: none;
       }
     }
     .icon path {
@@ -138,12 +141,26 @@ main {
     span {
       color: var(--color-black-04);
     }
+    &:hover {
+      > svg > path {
+        &:first-child {
+          fill: rgba(255, 255, 255, 0.25);
+        }
+      }
+      .icon path {
+        fill: white;
+      }
+      span {
+        color: var(--color-white);
+      }
+    }
   }
 
   &.dark {
     > svg > path {
       &:first-child {
         fill: transparent;
+        transition: fill 0.2s ease-out;
       }
       &:last-child {
         stroke: white;
@@ -154,6 +171,20 @@ main {
     }
     span {
       color: var(--color-white-04);
+    }
+
+    &:hover {
+      > svg > path {
+        &:first-child {
+          fill: white;
+        }
+      }
+      .icon path {
+        fill: #131e2f;
+      }
+      span {
+        color: var(--color-black-04);
+      }
     }
 
     @include maxMobile {

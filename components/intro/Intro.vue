@@ -91,6 +91,8 @@ export default {
     getEnterTl() {
       const tl = gsap.timeline();
 
+      tl.delay(1)
+
       if (this.subtitle) {
         tl.fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0);
       }
@@ -99,7 +101,7 @@ export default {
         .fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0)
         .fromTo(this.splitText.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0.5);
 
-      
+
       if(this.smallScreen && this.useGallery){
         tl.fromTo(this.$refs.galleryBtn.$el,
           { autoAlpha: 0, yPercent: 50 },
