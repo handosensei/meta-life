@@ -59,7 +59,6 @@ export default IMOG.Component('Land', {
     (() => {
       const ref = this.group.getObjectByName('Tower_Particles');
       this.groundGroup.add(ref);
-      console.log(ref.material);
       ref.material = new THREE.MeshBasicMaterial({ color: new THREE.Color(0, 0, 0.02) });
       const geo = new THREE.BufferGeometry();
       const reps = 2;

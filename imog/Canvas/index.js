@@ -44,6 +44,7 @@ export default IMOG.Component('Canvas', {
     this.multiTargetCamera = new MultiTargetCamera({
       props: {
         target: (props) => this.props.target,
+        progress: (props) => this.props.progress,
       },
     });
 
@@ -95,19 +96,23 @@ export default IMOG.Component('Canvas', {
   },
 
   render() {
+    if (!this.props.ready) return;
     this.renderer.render();
   },
 
   hooks: {
     'set:computedTarget'(index, prevIndex) {
+      console.log(index);
       if (index === -1) return;
 
-      const duration = prevIndex !== index + 1 && prevIndex !== index - 1 ? 0 : 1;
+      gsap.killTweensOf(this.props, { progress: true });
+
+      const duration = prevIndex !== index + 1 && prevIndex !== index - 1 ? 0 : 1.5;
 
       gsap.to(this.props, {
         progress: index,
         duration,
-        ease: 'expo.inOut',
+        ease: 'power3.inOut',
       });
     },
   },

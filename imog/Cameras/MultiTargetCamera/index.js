@@ -33,6 +33,7 @@ export default IMOG.Component('MultiTargetCamera', {
       prevIndex: (props) => clamp(Math.floor(props.progress), 0, props.offsets.length - 1),
       nextIndex: (props) => clamp(Math.ceil(props.progress), 0, props.offsets.length - 1),
       localProgress: (props) => props.progress % 1,
+      cameraProgressData: (props) => _.pick(props, 'prevIndex', 'nextIndex', 'localProgress'),
 
       offsets: _.values(data.offsets),
       shakes: _.values(data.shakes),
@@ -160,27 +161,25 @@ export default IMOG.Component('MultiTargetCamera', {
 
       this.helper.update();
     },
-    'set:computedTarget'(index, prevIndex) {
-      if (index === -1) return;
+    // 'set:computedTarget'(index, prevIndex) {
+    //   if (index === -1) return;
+    //
+    //   let duration = prevIndex !== index + 1 && prevIndex !== index - 1 ? 0 : 2;
+    //   if (prevIndex === -1) duration = 0;
+    // },
+    'set:cameraProgressData'({ prevIndex, nextIndex, localProgress }) {
+      if (!this.props.ready) {
+        this.position.set(99, 99, 99);
+        return;
+      }
 
-      let duration = prevIndex !== index + 1 && prevIndex !== index - 1 ? 0 : 1;
-      if (prevIndex === -1) duration = 0;
+      const prevPosition = this.positions[prevIndex];
+      const nextPosition = this.positions[nextIndex];
+      this.position.copy(prevPosition).lerp(nextPosition, localProgress);
 
-      gsap.to(this.props, {
-        progress: index,
-        duration,
-        ease: 'expo.inOut',
-      });
-      gsap.to(this.position, {
-        ..._.pick(this.positions[index], 'x', 'y', 'z'),
-        duration,
-        ease: 'expo.inOut',
-      });
-      gsap.to(this.lookAt, {
-        ..._.pick(this.targets[index], 'x', 'y', 'z'),
-        duration,
-        ease: 'expo.inOut',
-      });
+      const prevTarget = this.targets[prevIndex];
+      const nextTarget = this.targets[nextIndex];
+      this.lookAt.copy(prevTarget).lerp(nextTarget, localProgress);
     },
   },
 });
