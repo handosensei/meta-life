@@ -12,6 +12,7 @@
     </FocusLock>
     <Nuxt />
     <Webgl />
+    <AudioPlayer />
   </div>
 </template>
 
@@ -29,6 +30,7 @@ import Header from '~/components/header/Header.vue';
 import Menu from '~/components/menu/Menu.vue';
 import Preloader from '~/components/preloader/Preloader.vue';
 import Webgl from '~/components/webgl/Webgl.vue';
+import AudioPlayer from '~/components/audioPlayer/AudioPlayer.vue';
 
 export default {
   name: 'DefaultLayout',
@@ -39,6 +41,7 @@ export default {
     Menu,
     Preloader,
     Webgl,
+    AudioPlayer
   },
 
   mixins: [AssetsLoader],

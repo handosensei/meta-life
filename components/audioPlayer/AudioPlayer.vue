@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 import Icon from '~/components/elements/Icon.vue';
 
@@ -36,30 +37,68 @@ export default {
   },
 
   watch: {
-    hasPreloader: 'toggleAudio'
+    hasPreloader: 'toggleAudio',
+    $route: 'animateAudio'
   },
 
   mounted () {
     this.audioPlayer = new Audio('/audio/audio.mpeg');
     this.audioPlayer.loop = true;
+    this.audioFiltered = new Audio('/audio/audio_filtered_1.mp3');
+    this.audioFiltered.loop = true;
+    this.audioFiltered.volume = 0;
+
     if(!this.hasPreloader) {
       this.audioPlayer.play()
+      this.audioFiltered.play()
     }
   },
 
   beforeDestroy() {
     this.audioPlayer.removeAttribute('src');
     this.audioPlayer.load()
+    this.audioFiltered.removeAttribute('src');
+    this.audioFiltered.load()
   },
 
   methods: {
     toggleAudio () {
       if(this.audioPlayer.paused){
         this.audioPlayer.play();
+        this.audioFiltered.play();
         this.setAudio(true)
       } else {
         this.audioPlayer.pause();
+        this.audioFiltered.pause();
         this.setAudio(false)
+      }
+    },
+
+    animateAudio () {
+      if (this.$route.name !== 'index') {
+        gsap.to(this.$el, {
+          y: 50,
+          duration: 0.6,
+          ease: 'expo.out'
+        })
+        gsap.to(this.audioPlayer, {
+          volume: 0
+        })
+        gsap.to(this.audioFiltered, {
+          volume: 1
+        })
+      } else {
+        gsap.to(this.$el, {
+          y: 0,
+          duration: 0.6,
+          ease: 'expo.out'
+        })
+        gsap.to(this.audioPlayer, {
+          volume: 1
+        })
+        gsap.to(this.audioFiltered, {
+          volume: 0
+        })
       }
     },
 
