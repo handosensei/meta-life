@@ -122,13 +122,18 @@ export default {
         .timeline({
           paused: true,
         })
+        .to(this.$refs.title, {
+          autoAlpha: 0,
+          duration: 0.4,
+          ease: 'none'
+        }, 0)
         .to([this.preloaderLogo, this.$refs.progress], {
           autoAlpha: 0,
           duration: 0.4,
           ease: 'none',
-        })
+        }, 0)
         .to(this.$refs.transform, {
-          y: -85,
+          y: -20,
           duration: 1.2,
           ease: 'expo.inOut',
         })
