@@ -146,7 +146,7 @@ export default IMOG.Component('Land', {
     if (this.$gui) {
       const f = this.$gui.addFolder({
         title: '#4 Land',
-        // expanded: false,
+        expanded: false,
       });
       f.addInput(this.ambientLight1.props, 'color', {
         label: 'ambient 1 color',

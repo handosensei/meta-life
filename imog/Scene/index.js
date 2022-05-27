@@ -17,7 +17,9 @@ export default IMOG.Component('Scene', {
 
   props() {
     return {
+      canvasActive: true,
       active: false,
+      computedActive: (props) => props.canvasActive && props.active,
       target: 0,
       progress: 0,
     };
@@ -34,6 +36,7 @@ export default IMOG.Component('Scene', {
         target: options.referenceScene.getObjectByName('Planets'),
       },
       props: {
+        sceneActive: (props) => this.props.computedActive,
         target: (props) => this.props.target,
         progress: () => this.props.progress,
       },
@@ -41,6 +44,7 @@ export default IMOG.Component('Scene', {
 
     this.planes = new Planes({
       options: {
+        sceneActive: (props) => this.props.computedActive,
         addTo: options.addTo,
         target: options.referenceScene.getObjectByName('Planes'),
       },
@@ -52,6 +56,7 @@ export default IMOG.Component('Scene', {
 
     this.coins = new Coins({
       options: {
+        sceneActive: (props) => this.props.computedActive,
         addTo: options.addTo,
         target: options.referenceScene.getObjectByName('Coin'),
       },
@@ -67,15 +72,12 @@ export default IMOG.Component('Scene', {
         target: options.referenceScene.getObjectByName('Land'),
       },
       props: {
+        sceneActive: (props) => this.props.computedActive,
         target: (props) => this.props.target,
         progress: () => this.props.progress,
       },
     });
 
     this.props.active = true;
-  },
-
-  hooks: {
-    'while:active'() {},
   },
 });

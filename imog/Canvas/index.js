@@ -23,6 +23,10 @@ export default IMOG.Component('Canvas', {
   props() {
     return {
       ready: false,
+
+      active: true,
+      computedActive: (props) => props.ready && props.active,
+
       target: +urlParams.get('target') || 0,
       computedTarget: (props) => (props.ready ? props.target : -1),
       progress: 0,
@@ -55,7 +59,7 @@ export default IMOG.Component('Canvas', {
       },
     });
 
-    const cameraGltf = await loadGLTF('/gltf/camera/index.glb', {
+    const cameraGltf = await loadGLTF('/gltf/camera/optim.glb', {
       renderer: this.$renderer,
     });
     const targets = [];
@@ -73,6 +77,7 @@ export default IMOG.Component('Canvas', {
         referenceScene: cameraGltf.scene,
       },
       props: {
+        canvasActive: (props) => this.props.computedActive,
         target: (props) => this.props.target,
         progress: (props) => this.props.progress,
       },
@@ -96,7 +101,7 @@ export default IMOG.Component('Canvas', {
   },
 
   render() {
-    if (!this.props.ready) return;
+    if (!this.props.computedActive) return;
     this.renderer.render();
   },
 

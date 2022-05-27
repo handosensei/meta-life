@@ -25,7 +25,9 @@ export default IMOG.Component('Planes', {
 
   props() {
     return {
-      active: true,
+      sceneActive: true,
+
+      active: (props) => props.sceneActive && props.progress >= 3.5 && props.progress < 5.5,
       progress: 0,
 
       mouse: useMouse({ normalized: true }),
@@ -122,7 +124,6 @@ export default IMOG.Component('Planes', {
 
   hooks: {
     'set:progress'(v) {
-      this.group.visible = v < 5.5 && v > 3.5;
       const originP = new THREE.Vector3(-2, 5, 18);
       const zeroP = new THREE.Vector3(0, 0, 0);
       if (v <= 4) {
@@ -139,6 +140,9 @@ export default IMOG.Component('Planes', {
       this.planes.forEach((plane, i) => {
         plane.material.uniforms.color.value.copy(blueColor).lerp(lightColor, map(v, 4, 5, 0, 1, true));
       });
+    },
+    'set:active'(a) {
+      this.group.visible = a;
     },
     'while:active'() {
       const t = performance.now() * 0.05;

@@ -19,9 +19,10 @@ export default IMOG.Component('Planets', {
 
   props() {
     return {
+      sceneActive: true,
       target: 0,
       progress: 0,
-      active: (props) => props.progress >= 0 && props.progress < 4,
+      active: (props) => props.sceneActive && props.progress >= 0 && props.progress < 4,
       pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
@@ -66,7 +67,7 @@ export default IMOG.Component('Planets', {
         color2: this.boildThreadsColor2,
       },
       props: {
-        active: (props) => this.props.progress > 1.5 && this.props.progress < 3.5,
+        active: (props) => this.props.active && this.props.progress > 1.5 && this.props.progress < 3.5,
       },
     });
 
