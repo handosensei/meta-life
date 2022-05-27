@@ -91,7 +91,7 @@ export default {
     getEnterTl() {
       const tl = gsap.timeline();
 
-      tl.delay(1)
+      tl.delay(0)
 
       tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' })
 
