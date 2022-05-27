@@ -77,6 +77,10 @@ export default {
       end: 100,
     };
 
+    gsap.set(this.$refs.transform, {
+      y: 40
+    })
+
     gsap.to(progress, {
       delay: 0.5,
       duration: 2, // TEMP: set duration equal to duration of enter animation
