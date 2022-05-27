@@ -9,18 +9,18 @@
   z-index: 20;
 }
 
-.title {
-  font-size: clamp(10px, 1rem, 1rem);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-white-04);
-  margin-bottom: 3rem;
-  text-align: center;
+// .title {
+//   font-size: clamp(10px, 1rem, 1rem);
+//   letter-spacing: 0.1em;
+//   text-transform: uppercase;
+//   color: var(--color-white-04);
+//   margin-bottom: 3rem;
+//   text-align: center;
 
-  @include minTablet {
-    margin-bottom: 4.4rem;
-  }
-}
+//   @include minTablet {
+//     margin-bottom: 4.4rem;
+//   }
+// }
 
 .container {
   position: absolute;

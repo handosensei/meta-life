@@ -1,6 +1,7 @@
 .credits {
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 
 .logo {
@@ -15,17 +16,18 @@
 }
 
 .sub {
-  margin-left: 3.5rem;
+  // margin-left: 3.5rem;
   font-size: clamp(10px, 1rem, 1rem);
   color: var(--color-white-05);
   z-index: 1;
 }
 
 .subLink {
-  text-decoration: underline;
   color: var(--color-white);
 
+  &:hover,
   &.focus-visible:focus {
+    text-decoration: underline;
     outline-color: var(--color-white);
   }
 }

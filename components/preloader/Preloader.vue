@@ -4,7 +4,7 @@
       <Icon ref="preloaderLogo" type="PreloaderLogo" class="preloaderLogo" />
 
       <div ref="transform" class="transform">
-        <p ref="title" class="title">Enter in the new world</p>
+        <!-- <p ref="title" class="title">Enter in the new world</p> -->
         <Icon ref="wordmark" type="wordmark" class="wordmark" />
         <div ref="button" class="preloader-button" @click="onClick">
           <svg width="205" height="61" viewBox="0 0 205 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,6 +77,10 @@ export default {
       end: 100,
     };
 
+    gsap.set(this.$refs.transform, {
+      y: 40
+    })
+
     gsap.to(progress, {
       delay: 0.5,
       duration: 2, // TEMP: set duration equal to duration of enter animation
@@ -88,10 +92,10 @@ export default {
 
   methods: {
     initTl() {
-      this.splitSubtitle = new SplitText(this.$refs.title, {
-        type: 'chars',
-        charsClass: 'subtitle-char',
-      });
+      // this.splitSubtitle = new SplitText(this.$refs.title, {
+      //   type: 'chars',
+      //   charsClass: 'subtitle-char',
+      // });
 
       this.wordmark = this.$refs.wordmark.$el;
       this.wordmarChars = Array.prototype.slice.call(this.wordmark.children);
@@ -122,13 +126,18 @@ export default {
         .timeline({
           paused: true,
         })
+        // .to(this.$refs.title, {
+        //   autoAlpha: 0,
+        //   duration: 0.4,
+        //   ease: 'none'
+        // }, 0)
         .to([this.preloaderLogo, this.$refs.progress], {
           autoAlpha: 0,
           duration: 0.4,
           ease: 'none',
-        })
+        }, 0)
         .to(this.$refs.transform, {
-          y: -85,
+          y: -20,
           duration: 1.2,
           ease: 'expo.inOut',
         })
@@ -174,7 +183,7 @@ export default {
         .fromTo(this.wordmarChars.slice(4, 8), { yPercent: 120 }, { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5)
         .fromTo(this.preloaderProgress.children[0], { clipPath: from }, { clipPath: to, duration: 2, ease: 'linear' }, 0.5)
         .fromTo(this.preloaderProgress.children[1], { drawSVG: '0%' }, { drawSVG: '100%', duration: 1 }, 0)
-        .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5);
+        // .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5);
     },
 
     leave(done) {
