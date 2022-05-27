@@ -33,7 +33,7 @@ export default IMOG.Component('MultiTargetCamera', {
       prevIndex: (props) => clamp(Math.floor(props.progress), 0, props.offsets.length - 1),
       nextIndex: (props) => clamp(Math.ceil(props.progress), 0, props.offsets.length - 1),
       localProgress: (props) => props.progress % 1,
-      cameraProgressData: (props) => _.pick(props, 'prevIndex', 'nextIndex', 'localProgress'),
+      cameraProgressData: (props) => _.pick(props, 'ready', 'prevIndex', 'nextIndex', 'localProgress'),
 
       offsets: _.values(data.offsets),
       shakes: _.values(data.shakes),
