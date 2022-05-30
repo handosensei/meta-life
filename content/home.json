@@ -11,7 +11,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionIntro",
-            "title": "Connect, Discover, Explore.</span>",
+            "title": "Connect. Discover. Explore.",
             "subtitle": "",
             "text": "Join a new world and become a true legend",
             "galleryItems": [
@@ -259,7 +259,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Ready, <span class=\"purple\">Play,</span> <span class=\"green\">Meta.</span>",
+            "title": "Ready. <span class=\"purple\">Play.</span> <span class=\"green\">Meta.</span>",
             "text": "Meta Life is a portal to a new world on the Blockchain that is fully operated by its community.<br /><br />Build your own version of Meta Life and make it your new home.<br /><br /><span class=\"white\">Let the magic happen.</span>",
             "position": "right center"
           }
@@ -277,7 +277,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Own, <span class=\"purple\">Use,</span> <span class=\"green\">Earn.</span>",
+            "title": "Own. <span class=\"purple\">Use.</span> <span class=\"green\">Earn.</span>",
             "text": "Invest in assets that you can use for returns, customise, sell or rent to other players. The possibilities are endless.",
             "position": "center top",
             "galleryItems": [
@@ -449,7 +449,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Meet, <span class=\"purple\">Build,</span> <span class=\"green\">Enjoy.</span>",
+            "title": "Meet. <span class=\"purple\">Build.</span> <span class=\"green\">Enjoy.</span>",
             "text": "Meta Life is a new open world that welcomes all communities.",
             "position": "center top"
           }
@@ -467,7 +467,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Buy, <span class=\"purple\">Stake,</span> <span class=\"green\">Benefits.</span>",
+            "title": "Buy. <span class=\"purple\">Stake.</span> <span class=\"green\">Benefits.</span>",
             "text": "Meta Life will be powered by our $METAL dual token economy. Stake and lock your $METAL tokens and receive exclusive rewards.",
             "position": "right center",
             "button": {
