@@ -35,6 +35,8 @@ export default IMOG.Component('Planets', {
     this.group.scale.copy(options.target.scale);
     options.target.parent.add(this.group);
 
+    this.spheresAutoR = 0;
+
     this.group.add(options.target);
     this.group.traverse((obj) => {
       if (obj.isMesh && obj.name.match('Threads')) {
@@ -234,13 +236,14 @@ export default IMOG.Component('Planets', {
     },
     'while:active'(dt) {
       this.points.material.uniforms.time.value += 0.0005 * dt;
+      this.spheresAutoR -= 0.00015 * dt;
       // this.points.rotation.y += 0.00002 * dt;
       // this.sphere1.rotation.y += 0.00002 * dt;
       // this.sphere2.rotation.y += 0.00005 * dt;
 
-      this.points.rotation.y = this.spheresTransitionR * 0.2;
-      this.sphere1.rotation.y = this.spheresTransitionR;
-      this.sphere2.rotation.y = this.spheresTransitionR * 0.5;
+      this.points.rotation.y = this.spheresAutoR + this.spheresTransitionR * 0.2;
+      this.sphere1.rotation.y = this.spheresAutoR + this.spheresTransitionR;
+      this.sphere2.rotation.y = this.spheresAutoR + this.spheresTransitionR * 0.5;
     },
     'set:pr'(pr) {
       this.points.material.uniforms.pr.value = pr;

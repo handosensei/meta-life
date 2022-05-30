@@ -59,7 +59,7 @@ export default IMOG.Component('Canvas', {
       },
     });
 
-    const cameraGltf = await loadGLTF('/gltf/camera/optim.glb', {
+    const cameraGltf = await loadGLTF('/gltf/camera/index.glb', {
       renderer: this.$renderer,
     });
     const targets = [];

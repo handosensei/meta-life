@@ -9,6 +9,7 @@ import useSpring from '~/lib/imog/use/spring';
 import TrailsTunnel from '~/imog/TrailsTunnel';
 
 import FresnelMaterial from '~/imog/_Shared/FresnelMaterial';
+import VelocityTrailsMaterial from './VelocityTrailsMaterial';
 
 import { SimplexNoise } from 'simplex-noise';
 const simplex = new SimplexNoise();
@@ -58,6 +59,8 @@ export default IMOG.Component('Planes', {
 
     const planes = [...this.group.children[0].children];
     this.planes = [];
+    this.trails = [];
+
     planes.forEach((plane, i) => {
       plane.material = new FresnelMaterial({
         color: new THREE.Color(129 * 0.1, 199 * 0.1, 255 * 0.4),
@@ -80,18 +83,28 @@ export default IMOG.Component('Planes', {
       }
       plane.bonesAmount = bi - 1;
 
+      if (i !== 2) {
+        plane.rootBones.forEach((rootBone) => {
+          this.simpleBendBone(rootBone, 0, plane.bonesAmount, map(i, 0, 5, -1, 1));
+        });
+      }
+
       plane.traverse((child) => {
         if (child.isSkinnedMesh) {
           child.frustumCulled = false;
           child.layers.enable(1);
-          child.material = child.material.clone();
-          child.material.color.setRGB(0, 0, 0.4);
+          child.material = new VelocityTrailsMaterial({
+            color: new THREE.Color(5, 5, 70),
+            highlightColor: new THREE.Color(8, 211, 224),
+          });
+          // child.material.color.setRGB(0, 0, 0.4);
           child.material.transparent = true;
           child.material.opacity = 1;
-          if (Math.random() > 0.25) {
-            child.material.color.setRGB(0.1, 0.1, 0.4);
-          }
+          // if (Math.random() > 0.25) {
+          // child.material.uniforms.color.value.setRGB(10, 10, 40);
+          // }
           child.parent.scale.setScalar(2.5);
+          this.trails.push(child);
         }
       });
     });
@@ -120,6 +133,16 @@ export default IMOG.Component('Planes', {
         this.bendBone(bone.children[0], p + 1 / amount, amount, t, intensity);
       }
     },
+    simpleBendBone(bone, p, amount, intensity) {
+      bone.rotation.z = 0.5 * intensity * (1 - p) * 0.2 * (Math.sin(p * 10) + 0.25);
+      // bone.rotation.y = intensity * (1 - p) * 0.5 * Math.cos(p + t * 0.2);
+
+      // bone.rotation.y = t * 5;
+
+      if (bone.children[0]) {
+        this.simpleBendBone(bone.children[0], p + 1 / amount, amount, intensity);
+      }
+    },
   },
 
   hooks: {
@@ -134,17 +157,25 @@ export default IMOG.Component('Planes', {
         this.group.children[0].rotation.x = map(v, 4, 5, -0.5, 0);
       }
       this.planes[2].rootBones.forEach((bone, i) => {
-        if (i > 2) bone.parent.children[1].material.opacity = map(v, 4, 4.5, 1, 0, true);
+        if (i > 2) bone.parent.children[1].material.uniforms.alpha.value = map(v, 4, 4.5, 1, 0, true);
       });
 
       this.planes.forEach((plane, i) => {
         plane.material.uniforms.color.value.copy(blueColor).lerp(lightColor, map(v, 4, 5, 0, 1, true));
       });
+
+      this.trails.forEach((trail, i) => {
+        trail.morphTargetInfluences[0] = map(v, 4, 5, 0, 0.5);
+      });
     },
     'set:active'(a) {
       this.group.visible = a;
     },
-    'while:active'() {
+    'while:active'(dt) {
+      this.trails.forEach((trail, i) => {
+        trail.material.uniforms.t.value += 0.005 * dt;
+      });
+
       const t = performance.now() * 0.05;
       const progress = this.props.progress;
       this.planes.forEach((plane, i) => {
