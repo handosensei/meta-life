@@ -6,7 +6,7 @@ import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry';
 
 export default class Line {
-  constructor({ position = new THREE.Vector3(), color = new THREE.Color(255, 255, 255), tunnelLength = 100 } = {}) {
+  constructor({ position = new THREE.Vector3(), tunnelLength = 100 } = {}) {
     this.position = position;
     this.origin = position.clone();
     this.tunnelLength = tunnelLength;
@@ -18,7 +18,7 @@ export default class Line {
     this.geometry.setPositions(this.positions);
 
     this.material = new LineMaterial({
-      color,
+      color: Math.random() > 0.3 ? new THREE.Color(0, 0, 0.2) : new THREE.Color(0.3, 0.3, 0.3),
       worldUnits: true,
       linewidth: 0.02,
       vertexColors: false,

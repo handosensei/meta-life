@@ -7,9 +7,11 @@ import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';
 
 import TrailsTunnel from '~/imog/TrailsTunnel';
+import AmbientLight from '~/imog/AmbientLight';
 
 import FresnelMaterial from '~/imog/_Shared/FresnelMaterial';
 import VelocityTrailsMaterial from './VelocityTrailsMaterial';
+import VelocityPointsMaterial from './VelocityPointsMaterial';
 
 import { SimplexNoise } from 'simplex-noise';
 const simplex = new SimplexNoise();
@@ -120,6 +122,63 @@ export default IMOG.Component('Planes', {
         addTo: this.trailsTunnelGroup,
       },
     });
+
+    // POINTS
+    const pointsGeometry = new THREE.BufferGeometry();
+    const pointsAmount = 1000;
+    const pointsVertices = new Float32Array(
+      _.flatten(
+        _.range(pointsAmount).map((i) => {
+          const u = Math.random();
+          const v = Math.random();
+          const theta = u * 2.0 * Math.PI * 0.15;
+          const phi = Math.acos(2.0 * v - 1.0) * 0.5 - Math.PI * 0.25;
+          const r = 25 * Math.random() + 1;
+          // const r = 30 * Math.cbrt(Math.random());
+          const sinTheta = Math.sin(theta);
+          const cosTheta = Math.cos(theta);
+          const sinPhi = Math.sin(phi);
+          const cosPhi = Math.cos(phi);
+          const x = r * sinPhi * cosTheta;
+          const y = r * sinPhi * sinTheta;
+          const z = r * cosPhi;
+          return [x, y, z];
+        })
+      )
+    );
+    pointsGeometry.setAttribute('position', new THREE.BufferAttribute(pointsVertices, 3));
+
+    const randVertices = new Float32Array(
+      _.range(pointsAmount).map((i) => {
+        return Math.random();
+      })
+    );
+    pointsGeometry.setAttribute('rand', new THREE.BufferAttribute(randVertices, 1));
+
+    this.points = new THREE.Points(
+      pointsGeometry,
+      new VelocityPointsMaterial({
+        color1: new THREE.Color(0, 144, 129),
+        color2: new THREE.Color(16, 16, 255),
+        color3: new THREE.Color(11 * 0.5, 146 * 0.5, 255 * 0.5),
+      })
+    );
+    this.points.position.z = -1;
+    this.points.layers.enable(1);
+    this.planes[2].add(this.points);
+
+    // AMBIENT LIGHT
+
+    this.ambientLight1 = new AmbientLight({
+      options: {
+        addTo: this.group,
+      },
+      props: {
+        position: { x: 0, y: 0, z: 12 },
+        scale: 25,
+        color: { r: 7 * 1.2, g: 7 * 1.2, b: 36 * 1.2 },
+      },
+    });
   },
 
   methods: {
@@ -167,6 +226,8 @@ export default IMOG.Component('Planes', {
       this.trails.forEach((trail, i) => {
         trail.morphTargetInfluences[0] = map(v, 4, 5, 0, 0.5);
       });
+
+      this.points.material.uniforms.alpha.value = map(v, 4, 4.5, 1, 0, true);
     },
     'set:active'(a) {
       this.group.visible = a;
@@ -176,6 +237,8 @@ export default IMOG.Component('Planes', {
         trail.material.uniforms.t.value += 0.005 * dt;
       });
 
+      this.points.material.uniforms.time.value += 0.002 * dt;
+
       const t = performance.now() * 0.05;
       const progress = this.props.progress;
       this.planes.forEach((plane, i) => {
@@ -184,7 +247,7 @@ export default IMOG.Component('Planes', {
         plane.position.z = plane.origin.z + rand(t * 0.02, i + 983782.28) * 0.1;
         if (i !== 2) {
           const delay = i === 0 || i === 4 ? 0 : 0.4;
-          plane.position.z += map(progress, 4, 5 - delay, 7, 0, true);
+          plane.position.z += map(progress, 4, 5.5 - delay, 7, 0, true);
         }
       });
 

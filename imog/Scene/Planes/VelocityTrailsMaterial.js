@@ -128,7 +128,7 @@ export default class VelocityTrailsMaterial extends THREE.ShaderMaterial {
         gl_FragColor.rgb = color/255.0 * 0.5;
         // gl_FragColor.rgb += vec3(fract(vUv.y * 5.0 + t * 1.0 + randV));
         float n = noise(vec2(randV * 7362.736 + vUv.x * 10.0, vUv.y * 4.0 + t * mix(0.8, 1.0, vUv.x * 5.0) * 1.0));
-        gl_FragColor.rgb = mix(gl_FragColor.rgb, highlightColor * 0.7 / 255.0, smoothstep(0.4, 0.6, n)) * 0.75;
+        gl_FragColor.rgb = mix(gl_FragColor.rgb, highlightColor * 0.5 / 255.0, smoothstep(0.4, 0.6, n)) * 0.75;
 
         gl_FragColor.a = alpha;
 
