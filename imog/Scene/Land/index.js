@@ -101,11 +101,15 @@ export default IMOG.Component('Land', {
     this.ground = this.group.getObjectByName('Ground');
     this.ground.material = new THREE.MeshBasicMaterial({
       color: 0x000000,
-      side: THREE.DoubleSide,
-      depthWrite: true,
-      depthTest: true,
     });
     this.groundGroup.add(this.ground);
+
+    this.groundWire = this.group.getObjectByName('GroundWire');
+    this.groundWire.material = new THREE.MeshBasicMaterial({
+      color: 0x222266,
+    });
+    // this.groundWire.layers.enable(1);
+    // this.groundGroup.add(this.groundWire);
 
     this.ambientParticles1 = new AmbientParticles({
       options: {
