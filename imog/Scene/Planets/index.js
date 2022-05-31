@@ -226,6 +226,7 @@ export default IMOG.Component('Planets', {
         obj.visible = v > 2;
         if (obj.visible) {
           obj.position.set(0, 0, 0).lerp(obj.origin, map(v, 2.5, 3, 0.75, 1, true));
+          if (this.$rendererProps.isMobile) obj.position.y = -Math.abs(obj.position.y) * 0.7;
           obj.material.uniforms.alpha.value = map(v, 2.5, 3, 0, 1, true);
         }
       });

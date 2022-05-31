@@ -42,6 +42,8 @@ export default IMOG.Component('Planes', {
         target: (props) => -props.mouse.y,
         friction: 0.1,
       }),
+
+      pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
 
@@ -258,6 +260,9 @@ export default IMOG.Component('Planes', {
       this.planes[2].rootBones.forEach((bone, i) => {
         this.bendBone(bone, 0, this.planes[2].bonesAmount, t * 0.03 + i * 476.38726, 1 - aTween);
       });
+    },
+    'set:pr'(pr) {
+      this.points.material.uniforms.pr.value = pr;
     },
   },
 });

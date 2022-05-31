@@ -23,11 +23,12 @@ export default IMOG.Component('Renderer', {
 
   props() {
     return {
+      isMobile: false,
       windowSize: useWindowSize(),
       quality: 'low',
       pr: (props) => {
         const resolution = props.windowSize.width * props.windowSize.height;
-        return { low: 1.5, mid: 1.5, high: resolution > 1500000 ? 2 : 2.5 }[props.quality];
+        return { low: 1.5, mid: 1.5, high: resolution > 1500000 ? 1.5 : 2 }[props.quality || 0];
       },
       size: (props) => ({
         width: props.windowSize.width,
@@ -45,6 +46,7 @@ export default IMOG.Component('Renderer', {
       bloomStrength: 1.8,
       bloomThreshold: 0,
       bloomRadius: 0.8,
+      bloomRadiusComputed: (props) => (props.bloomRadius * props.pr) / 2.5,
     };
   },
 
@@ -132,7 +134,7 @@ export default IMOG.Component('Renderer', {
     this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
     this.bloomPass.threshold = this.props.bloomThreshold;
     this.bloomPass.strength = this.props.bloomStrength;
-    this.bloomPass.radius = this.props.bloomRadius;
+    this.bloomPass.radius = this.props.bloomRadiusComputed;
 
     this.composer = new EffectComposer(this.$renderer);
     // this.composer.addPass(this.renderScene);
@@ -255,7 +257,7 @@ export default IMOG.Component('Renderer', {
     'set:bloomThreshold'(v) {
       this.bloomPass.threshold = v;
     },
-    'set:bloomRadius'(v) {
+    'set:bloomRadiusComputed'(v) {
       this.bloomPass.radius = v;
     },
     'set:levels'({ x, y, z }) {

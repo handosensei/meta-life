@@ -18,6 +18,8 @@ export default IMOG.Component('Land', {
     return {
       active: true,
       progress: 0,
+
+      pr: (props, { context }) => context.$rendererProps.pr,
     };
   },
 
@@ -89,6 +91,7 @@ export default IMOG.Component('Land', {
       );
       this.points.material.uniforms.fogNear.value = 20;
       this.points.material.uniforms.fogFar.value = 50;
+      this.points.material.uniforms.pointScale.value = 1;
       this.points.layers.enable(1);
       this.points.scale.copy(ref.scale);
       this.points.rotation.copy(ref.rotation);
@@ -164,6 +167,10 @@ export default IMOG.Component('Land', {
     'while:active'(dt) {
       this.groundGroup.rotation.y += 0.0001 * dt;
       this.points.material.uniforms.time.value += 0.0005 * dt;
+    },
+
+    'set:pr'(pr) {
+      this.points.material.uniforms.pr.value = pr;
     },
   },
 });

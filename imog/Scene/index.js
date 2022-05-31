@@ -3,7 +3,6 @@ import IMOG from '~/lib/imog';
 import loadTexture from '~/lib/three/loadTexture';
 
 import Sky from './Sky';
-import Floor from './Floor';
 import Planets from './Planets';
 import Planes from './Planes';
 import Coins from './Coins';

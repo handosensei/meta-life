@@ -25,11 +25,14 @@ export default {
             autoAlpha: 1,
             duration: 0.4,
             ease: 'none',
-            delay: 0.1
-          })
+            delay: 0.1,
+          });
           // this.canvas.props.target = 0;
         },
         domElement: this.$el,
+      },
+      props: {
+        isMobile: false,
       },
     });
   },

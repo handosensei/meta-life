@@ -26,6 +26,7 @@ export default IMOG.Component('MultiTargetCamera', {
       ready: false,
       active: true,
       helpers: false,
+      isMobile: false,
 
       target: 0,
       computedTarget: (props) => (props.ready ? props.target : -1),
@@ -35,7 +36,8 @@ export default IMOG.Component('MultiTargetCamera', {
       localProgress: (props) => props.progress % 1,
       cameraProgressData: (props) => _.pick(props, 'ready', 'prevIndex', 'nextIndex', 'localProgress'),
 
-      offsets: _.values(data.offsets),
+      offsets: (props) => (props.isMobile ? _.values(data.offsetsMobile) : _.values(data.offsets)),
+      zooms: (props) => (props.isMobile ? _.values(data.zoomsMobile) : 1),
       shakes: _.values(data.shakes),
       ambients: _.values(data.ambients),
 
@@ -44,8 +46,13 @@ export default IMOG.Component('MultiTargetCamera', {
         const prevOffset = props.offsets[props.prevIndex];
         const nextOffset = props.offsets[props.nextIndex];
         const offset = [lerp(props.localProgress, prevOffset[0], nextOffset[0]), lerp(props.localProgress, prevOffset[1], nextOffset[1])];
+        const prevZoom = props.zooms[props.prevIndex];
+        const nextZoom = props.zooms[props.nextIndex];
+        const zoom = props.isMobile ? lerp(props.localProgress, prevZoom, nextZoom) : 1;
+
         return {
           offset,
+          zoom,
           width: props.windowSize.width,
           height: props.windowSize.height,
         };
@@ -58,6 +65,7 @@ export default IMOG.Component('MultiTargetCamera', {
       },
 
       ambientAmount: (props) => {
+        if (props.isMobile) return 0;
         const prev = props.ambients[props.prevIndex];
         const next = props.ambients[props.nextIndex];
         return lerp(props.localProgress, prev, next);
@@ -123,9 +131,10 @@ export default IMOG.Component('MultiTargetCamera', {
       this.pointHelper.visible = v;
       this.planeHelper.visible = v;
     },
-    'set:projectionData'({ width, height, pr, offset }) {
+    'set:projectionData'({ width, height, pr, offset, zoom }) {
       this.camera.aspect = width / height;
       this.camera.setViewOffset(width, height, offset[0] * width, offset[1] * height, width, height);
+      this.camera.zoom = zoom;
       this.camera.updateProjectionMatrix();
       this.planeHelper.scale.x = this.camera.aspect;
     },

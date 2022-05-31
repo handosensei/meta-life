@@ -30,6 +30,8 @@ export default IMOG.Component('Canvas', {
       target: +urlParams.get('target') || 0,
       computedTarget: (props) => (props.ready ? props.target : -1),
       progress: 0,
+
+      isMobile: urlParams.get('isMobile') !== null || false,
     };
   },
 
@@ -49,6 +51,7 @@ export default IMOG.Component('Canvas', {
       props: {
         target: (props) => this.props.target,
         progress: (props) => this.props.progress,
+        isMobile: (props) => this.props.isMobile,
       },
     });
 
@@ -56,6 +59,9 @@ export default IMOG.Component('Canvas', {
       options: {
         domElement: options.domElement,
         multiTargetCamera: this.multiTargetCamera,
+      },
+      props: {
+        isMobile: (props) => this.props.isMobile,
       },
     });
 
