@@ -87,9 +87,9 @@ export default IMOG.Component('Planes', {
       }
       plane.bonesAmount = bi - 1;
 
-      if (i !== 2) {
+      if (index !== 2) {
         plane.rootBones.forEach((rootBone) => {
-          this.simpleBendBone(rootBone, 0, plane.bonesAmount, map(i, 0, 5, -1, 1));
+          this.simpleBendBone(rootBone, 0, plane.bonesAmount, map(index, 0, 5, -1, 1));
         });
       }
 
