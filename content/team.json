@@ -17,6 +17,13 @@
         }
       },
       {
+        "title": "Haissam",
+        "text": "CTO - Blockchain Oracle",
+        "image": {
+          "src": "/img/team/Haissam.png"
+        }
+      },
+      {
         "title": "Dara",
         "text": "GM - Operations Consigliere",
         "image": {
@@ -102,20 +109,20 @@
         "text": "Illustration Artist"
       },
       {
-        "title": "Cyril",  
+        "title": "Cyril",
         "text": "Illustration Artist"
       },
       {
-        "title": "Frick",  
+        "title": "Frick",
         "text": "Illustration Artist"
       },
       {
-        "title": "Nemow",  
+        "title": "Nemow",
         "text": "Illustration Artist/Modelling Artist"
       },
-    
+
       {
-        "title": "Pascal",  
+        "title": "Pascal",
         "text": "Vehicles Concept Wizard"
       },
       {
@@ -123,32 +130,32 @@
         "text": "Weapons Innovation Supervisor"
       },
       {
-        "title": "Bandith",  
+        "title": "Bandith",
         "text": "Weapons Artist"
       },
       {
-        "title": "Kieren",  
+        "title": "Kieren",
         "text": "Weapons Artist"
       },
-    
+
       {
-        "title": "Romain",  
+        "title": "Romain",
         "text": "Armours Supervisor"
       },
       {
-        "title": "Lucien",  
+        "title": "Lucien",
         "text": "Armours Artist"
       },
       {
-        "title": "Pierre",  
+        "title": "Pierre",
         "text": "Armours Artist"
       },
       {
-        "title": "Loki",  
+        "title": "Loki",
         "text": "Armours Artist"
       },
       {
-        "title": "Djasko",  
+        "title": "Djasko",
         "text": "Armours Artist"
       }
     ]
@@ -158,23 +165,23 @@
     "items": [
       {
         "title": "Meta Life Website",
-        "text": "Antinomy" 
+        "text": "Antinomy"
       },
       {
         "title": "Trailer Assets",
-        "text": "Arès Studio" 
+        "text": "Arès Studio"
       },
       {
         "title": "3D Assets for Meta Life",
-        "text": "Arès Studio" 
+        "text": "Arès Studio"
       },
       {
         "title": "Tokenomics & DAO Development",
-        "text": "Brightnode" 
+        "text": "Brightnode"
       },
       {
         "title": "Game Economy",
-        "text": "Machination" 
+        "text": "Machination"
       }
     ]
   },
@@ -183,15 +190,15 @@
     "items": [
       {
         "title": "Theo",
-        "text": "Strategy" 
+        "text": "Strategy"
       },
       {
         "title": "Maxence",
-        "text": "(Blockchain & NFT Analyst)" 
+        "text": "(Blockchain & NFT Analyst)"
       },
       {
         "title": "Salvatore",
-        "text": "Partnerships & Collaborations" 
+        "text": "Partnerships & Collaborations"
       },
       {
         "title": "Roman",
