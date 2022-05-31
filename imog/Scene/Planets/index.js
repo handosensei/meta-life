@@ -132,7 +132,7 @@ export default IMOG.Component('Planets', {
       obj.morphTargetInfluences[0] = -1;
       const clone = obj.clone();
       clone.material = this.spheresMaterial2;
-      clone.rotation.x = Math.PI / 2;
+      clone.rotation.y = Math.PI / 2;
       clone.origin = obj.position.clone();
       obj.parent.add(clone);
       this.smallSpheres.push(clone);
@@ -245,6 +245,10 @@ export default IMOG.Component('Planets', {
       this.points.rotation.y = this.spheresAutoR + this.spheresTransitionR * 0.2;
       this.sphere1.rotation.y = this.spheresAutoR + this.spheresTransitionR;
       this.sphere2.rotation.y = this.spheresAutoR + this.spheresTransitionR * 0.5;
+
+      this.smallSpheres.forEach((sphere, i) => {
+        sphere.rotation.y = this.spheresAutoR * 0.5;
+      });
     },
     'set:pr'(pr) {
       this.points.material.uniforms.pr.value = pr;
