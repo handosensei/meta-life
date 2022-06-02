@@ -2,7 +2,7 @@
   <FocusLock :disabled="!galleryOpen || menuOpen">
     <div class="galleryOverlay">
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
-        <div :key="activeSlide.title" class="content">
+        <div ref="content" :key="activeSlide.title" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
             <div class="subtitle">{{ activeItem.category }}</div>
@@ -128,6 +128,7 @@ export default {
     },
 
     onClose() {
+      gsap.to(this.$refs.content, { autoAlpha: 0, ease: 'none', duration: 0.3 })
       this.$root.$emit('galleryOverlay:toggle', '');
     },
 
