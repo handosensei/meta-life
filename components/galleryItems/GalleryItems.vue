@@ -12,6 +12,7 @@
       @mouseenter="onMouseEnter(id)"
       @mouseleave="onMouseLeave(id)"
     >
+      <span>{{ galleryItem.category }}</span>
       <div ref="galleryMask" class="galleryMask">
         <img ref="galleryImage" class="galleryImage" :src="galleryItem.slides[0].image.thumb.src" :alt="galleryItem.slides[0].image.thumb.alt" />
       </div>
@@ -70,11 +71,29 @@ export default {
 
     onMouseEnter(id) {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
-        gsap.fromTo(
-          this.$refs.gallerySphere[id].$el.lastChild,
-          { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-          { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-        );
+        const mask = this.$refs.galleryMask[id]
+        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
+        gsap.killTweensOf(this.$refs.gallerySphere[id].$el.lastChild)
+        gsap.to(mask, {
+          autoAlpha: 1,
+          duration: 0.65,
+          ease: 'expo.out',
+          delay: 0.15
+        })
+        gsap.to(circles, {
+          attr: {
+            r: 72,
+            duration: 0.75,
+            ease: 'expo.out'
+          },
+          onComplete: () => {
+            gsap.fromTo(
+              this.$refs.gallerySphere[id].$el.lastChild,
+              { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+              { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+            );
+          }
+        })
         if(this.audio){
           this.sound.currentTime = 0;
           this.sound.play();
@@ -84,7 +103,33 @@ export default {
 
     onMouseLeave(id) {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
-        gsap.fromTo(this.$refs.gallerySphere[id].$el.lastChild, { drawSVG: '-100%', rotate: 90, transformOrigin: 'center' }, { drawSVG: '0%', rotate: 270, duration: 1.5, ease: 'expo.out' });
+        const mask = this.$refs.galleryMask[id]
+        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
+        gsap.killTweensOf(this.$refs.gallerySphere[id].$el.lastChild)
+        gsap.to(mask, {
+          autoAlpha: 0,
+          duration: 0.65,
+          ease: 'expo.out'
+        })
+        gsap.to(circles, {
+          attr: {
+            r: 25,
+            duration: 0.75,
+            ease: 'expo.out'
+          },
+          onComplete: () => {
+            gsap.fromTo(this.$refs.gallerySphere[id].$el.lastChild, {
+              drawSVG: '-100%',
+              rotate: 90,
+              transformOrigin: 'center'
+            }, {
+              drawSVG: '0%',
+              rotate: 270,
+              duration: 1.5,
+              ease: 'expo.out'
+            });
+          }
+        })
       }
     },
 
