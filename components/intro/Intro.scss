@@ -33,12 +33,12 @@
 }
 
 ::v-deep .title-word {
-  &:nth-child(2) {
-    color: var(--color-purple);
-  }
-  &:nth-child(3) {
-    color: var(--color-green);
-  }
+  // &:nth-child(3) {
+  //   color: var(--color-purple);
+  // }
+  // &:nth-child(4) {
+  //   color: var(--color-green);
+  // }
 }
 
 .subtitle,

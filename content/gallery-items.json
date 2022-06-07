@@ -1,0 +1,120 @@
+{
+  "galleryItems": [
+    {
+      "id": "environment1",
+      "category": "Environment",
+      "slides": [
+        {
+          "title": "Environment #1",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/environment/thumb/01.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/environment/01.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        },
+        {
+          "title": "Environment #2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/environment/thumb/02.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/environment/02.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "pets",
+      "category": "Pets",
+      "slides": [
+        {
+          "title": "Pet Name",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/pets/thumb/01.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/pets/01.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        },
+        {
+          "title": "Pet Name",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/pets/thumb/02.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/pets/02.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        },
+        {
+          "title": "Pet Name",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/pets/thumb/03.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/pets/03.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "environment2",
+      "category": "Environment",
+      "slides": [
+        {
+          "title": "Environment #3",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/environment/thumb/06.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/environment/06.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        },
+        {
+          "title": "Environment #4",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+          "image": {
+            "thumb": {
+              "src": "/img/gallery/environment/thumb/07.jpg",
+              "alt": "placeholder image"
+            },
+            "highres": {
+              "src": "/img/gallery/environment/07.jpg",
+              "alt": "placeholder image"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

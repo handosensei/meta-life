@@ -4,6 +4,20 @@
   }
 }
 
+.text.positionRightCenter + .galleryItems {
+  top: 2%;
+  left: -18%;
+
+  .galleryItem:first-child {
+    top: 22vh;
+    left: 25vw;
+  }
+
+  .galleryItem:nth-child(2) {
+    left: 55.92vw;
+  }
+}
+
 .galleryItem {
   display: flex;
   align-items: center;
@@ -14,13 +28,13 @@
   border-radius: 50%; // For better focus state
 
   &:first-child {
-    top: 14.89vh;
-    left: 26.32vw;
+    top: 8.89vh;
+    left: 23.32vw;
   }
 
   &:nth-child(2) {
-    top: 22.33vh;
-    left: 62.92vw;
+    top: 16.33vh;
+    left: 45.92vw;
   }
 
   &:nth-child(3) {

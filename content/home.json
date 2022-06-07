@@ -11,9 +11,27 @@
           "theme": "dark",
           "component": {
             "name": "SectionIntro",
-            "title": "Connect. Discover. Explore.",
+            "title": "Discover a new Life.",
             "subtitle": "",
-            "text": "Join a new world and become a true legend",
+            "text": "Explore. Pay. Earn."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "play",
+      "name": "Play",
+      "webgl": "3",
+      "sections": [
+        {
+          "id": "play-01",
+          "theme": "dark",
+          "component": {
+            "name": "SectionText",
+            "title": "Discover <span class=\"purple\">Meta</span> <span class=\"green\">Life</span>",
+            "text": "The Meta Life world is home to all beings and environments…<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
+            "position": "right center",
             "galleryItems": [
               {
                 "id": "environment1",
@@ -138,24 +156,6 @@
     },
 
     {
-      "id": "play",
-      "name": "Play",
-      "webgl": "3",
-      "sections": [
-        {
-          "id": "play-01",
-          "theme": "dark",
-          "component": {
-            "name": "SectionText",
-            "title": "Ready. <span class=\"purple\">Play.</span> <span class=\"green\">Meta.</span>",
-            "text": "Meta Life is a portal to a new world on the Blockchain that is fully operated by its community.<br /><br />Build your own version of Meta Life and make it your new home.<br /><br /><span class=\"white\">Let the magic happen.</span>",
-            "position": "right center"
-          }
-        }
-      ]
-    },
-
-    {
       "id": "earn",
       "name": "Earn",
       "webgl": "4",
@@ -165,7 +165,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Own. <span class=\"purple\">Use.</span> <span class=\"green\">Earn.</span>",
+            "title": "Explore",
             "text": "Invest in assets that you can use for returns, customise, sell or rent to other players. The possibilities are endless.",
             "position": "center top",
             "galleryItems": [
@@ -337,8 +337,8 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Meet. <span class=\"purple\">Build.</span> <span class=\"green\">Enjoy.</span>",
-            "text": "Meta Life is a new open world that welcomes all communities.",
+            "title": "Play",
+            "text": "Play with your friends or companions.",
             "position": "center top"
           }
         }
@@ -355,7 +355,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Buy. <span class=\"purple\">Stake.</span> <span class=\"green\">Benefits.</span>",
+            "title": "Earn",
             "text": "Meta Life will be powered by our $METAL dual token economy. Stake and lock your $METAL tokens and receive exclusive rewards.",
             "position": "right center",
             "button": {

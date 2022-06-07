@@ -81,6 +81,7 @@ export default {
     },
 
     useGallery() {
+      console.log(this.galleryItems)
       return this.galleryItems && this.galleryItems.length > 0
     },
 

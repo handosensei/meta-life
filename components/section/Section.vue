@@ -84,6 +84,7 @@ export default {
   },
 
   mounted() {
+    console.log(this.component)
     window.addEventListener('keydown', this.onKeyDown);
   },
 
