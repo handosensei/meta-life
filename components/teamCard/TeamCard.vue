@@ -1,11 +1,7 @@
 <template>
   <div class="Card">
     <div v-if="image" class="imageWrapper">
-      <img
-        class="image"
-        :src="image.src"
-        :alt="`${title} logo`"
-      />
+      <Lazy :src="image.src" :alt="`${title} logo`" />
     </div>
 
     <div class="content">
@@ -17,11 +13,12 @@
 
 <script>
 import { mapState } from 'vuex';
-
+import Lazy from '~/components/lazy/LazyImage'
 import imageDimensions from '~/utils/functions/imageDimensions';
 
 export default {
   name: 'TeamCardComponent',
+  components: {Lazy},
 
   props: {
     image: {
