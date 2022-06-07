@@ -12,7 +12,7 @@
       @mouseenter="onMouseEnter(id)"
       @mouseleave="onMouseLeave(id)"
     >
-      <span>{{ galleryItem.category }}</span>
+      <span ref="label">{{ galleryItem.category }}</span>
       <div ref="galleryMask" class="galleryMask">
         <img ref="galleryImage" class="galleryImage" :src="galleryItem.slides[0].image.thumb.src" :alt="galleryItem.slides[0].image.thumb.alt" />
       </div>
@@ -156,8 +156,8 @@ export default {
           },
           0.5
         )
-        .fromTo(this.galleryPlus, { autoAlpha: 0, rotate: 90 }, { autoAlpha: 1, rotate: 0, duration: 3, ease: 'expo.inOut' }, 1);
-
+        .fromTo(this.galleryPlus, { autoAlpha: 0, rotate: 90 }, { autoAlpha: 1, rotate: 0, duration: 3, ease: 'expo.inOut' }, 1)
+        .fromTo(this.$refs.label, { autoAlpha: 0 }, { autoAlpha: 0.75 }, 1)
       return galleryTl;
     },
   },
