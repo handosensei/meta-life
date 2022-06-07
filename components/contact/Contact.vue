@@ -14,8 +14,8 @@
     <div class="main">
         <h1>Contact</h1>
         <div class="infos">
-          <p>Press : <a class="email">press@metalife.com</a><br/>
-          Infos : <a class="email">contact@metalife.com</a><br/>
+          <p>Press : <a class="email" href="mailto:press@metalife.com">press@metalife.com</a><br/>
+          Infos : <a class="email" href="mailto:contact@metalife.com">contact@metalife.com</a><br/>
           <br/>
           Questions about economic ecosystem, read our whitepaper sections.
           </p>
@@ -46,7 +46,7 @@ export default {
     this.particles2XTo = gsap.quickTo(this.$refs.particles2, "x", {duration: parallaxeDuration})
     this.particles2YTo = gsap.quickTo(this.$refs.particles2, "y", {duration: parallaxeDuration})
     this.backgroundXTo = gsap.quickTo(this.$refs.background, "x", {duration: parallaxeDuration})
-    this.backgroundYTo = gsap.quickTo(this.$refs.background, "y", {duration: parallaxeDuration}) 
+    this.backgroundYTo = gsap.quickTo(this.$refs.background, "y", {duration: parallaxeDuration})
     window.addEventListener('mousemove', this.onMouseMove)
 
     const params = {
@@ -60,7 +60,7 @@ export default {
       ...params,
       duration: 200
     }).play(100)
-    
+
     gsap.timeline({paused: true}).fromTo(this.$refs.particles4, {
       yPercent: 100
     }, {
@@ -74,7 +74,7 @@ export default {
       ...params,
       duration: 200
     }).play(0)
-    
+
      gsap.timeline({paused: true}).fromTo(this.$refs.particles4bis, {
       yPercent: 100
     }, {
@@ -96,7 +96,7 @@ export default {
       this.particles2XTo(parralaxX * 50)
       this.particles2YTo(parralaxY * 50)
       this.backgroundXTo(parralaxX * 5)
-      this.backgroundYTo(parralaxY * 5) 
+      this.backgroundYTo(parralaxY * 5)
     }
   }
 };
