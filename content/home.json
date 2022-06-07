@@ -205,7 +205,7 @@
             "text": "Meta Life will be powered by our $METAL dual token economy. Stake and lock your $METAL tokens and receive exclusive rewards.",
             "position": "right center",
             "button": {
-              "name": "Buy X Metal",
+              "name": "Tokenomics",
               "icon": "Plus",
               "href": "https://google.com",
               "theme": "dark"
