@@ -65,6 +65,12 @@ export default {
   methods: {
     toggleAudio () {
       if(this.audioPlayer.paused){
+        gsap.to(this.$el, {
+          autoAlpha: 1,
+          duration: 0.4,
+          ease: 'none',
+          delay: 0.5
+        })
         this.audioPlayer.play();
         this.audioFiltered.play();
         this.setAudio(true)
