@@ -167,161 +167,7 @@
             "name": "SectionText",
             "title": "Explore",
             "text": "Invest in assets that you can use for returns, customise, sell or rent to other players. The possibilities are endless.",
-            "position": "center top",
-            "galleryItems": [
-              {
-                "id": "playExploreEarn-amor",
-                "category": "Amor",
-                "slides": [
-                  {
-                    "title": "Jintar",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar2",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1619472376731-3ca648a34b69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1619472376731-3ca648a34b69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2428&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar3",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1619472032094-eadb7ec01655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1619472032094-eadb7ec01655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2428&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar4",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1619472351888-f844a0b33f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1619472351888-f844a0b33f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2428&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar5",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2428&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "playExploreEarn-pets",
-                "category": "Pets",
-                "slides": [
-                  {
-                    "title": "Jintar",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar2",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar3",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2467&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar4",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1620121684840-edffcfc4b878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1620121684840-edffcfc4b878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Jintar5",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
-                    "image": {
-                      "thumb": {
-                        "src": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                        "alt": "placeholder image"
-                      },
-                      "highres": {
-                        "src": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-                        "alt": "placeholder image"
-                      }
-                    }
-                  }
-                ]
-              }
-            ]
+            "position": "center top"
           }
         }
       ]
@@ -361,7 +207,7 @@
             "button": {
               "name": "Buy X Metal",
               "icon": "Plus",
-              "href": "#",
+              "href": "https://google.com",
               "theme": "dark"
             }
           }
@@ -383,17 +229,17 @@
             "text": "Meta Life will be available soon. Discover the latest news on our social accounts.",
             "links": [
               {
-                "href": "",
+                "href": "https://discord.gg",
                 "icon": "discord",
                 "text": "DISCORD"
               },
               {
-                "href": "",
+                "href": "https://twitter.com/metalegendsnft",
                 "icon": "twitter",
                 "text": "TWITTER"
               },
               {
-                "href": "",
+                "href": "https://instagram.com/meta.legends",
                 "icon": "instagram",
                 "text": "Instagram"
               }
