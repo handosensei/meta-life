@@ -73,13 +73,14 @@ export default {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
         const mask = this.$refs.galleryMask[id]
         const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf(this.$refs.gallerySphere[id].$el.lastChild)
+        gsap.killTweensOf([mask, ...circles, this.$refs.gallerySphere[id].$el.lastChild])
         gsap.to(mask, {
           autoAlpha: 1,
           duration: 0.65,
           ease: 'expo.out',
           delay: 0.15
         })
+        gsap.to(this.$refs.label[id], { y: 40, duration: 0.75, ease: 'expo.out' })
         gsap.to(circles, {
           attr: {
             r: 72,
@@ -105,12 +106,13 @@ export default {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
         const mask = this.$refs.galleryMask[id]
         const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf(this.$refs.gallerySphere[id].$el.lastChild)
+        gsap.killTweensOf([mask, ...circles, this.$refs.gallerySphere[id].$el.lastChild])
         gsap.to(mask, {
           autoAlpha: 0,
           duration: 0.65,
           ease: 'expo.out'
         })
+        gsap.to(this.$refs.label[id], { y: 0, duration: 0.75, ease: 'expo.out' })
         gsap.to(circles, {
           attr: {
             r: 25,
