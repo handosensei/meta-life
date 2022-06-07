@@ -3,10 +3,13 @@
     <div class="content">
       <div ref="title" class="title">The Future will be here soon</div>
       <ul ref="menuList" class="menuList">
-        <li v-for="{ href, text } in links" :key="href" class="menuItem">
-          <NuxtLink :to="href" class="menuLink">
+        <li v-for="{ href, text, internal } in links" :key="href" class="menuItem">
+          <NuxtLink v-if="internal" :to="href" class="menuLink">
             {{ text }}
           </NuxtLink>
+          <a v-else :href="href" target="_blank" class="menuLink">
+            {{ text }}
+          </a>
         </li>
       </ul>
     </div>
@@ -34,15 +37,14 @@ export default {
   data() {
     return {
       links: [
-        { href: '/', text: 'Home' },
-        { href: '/news', text: 'News' },
-        { href: '/team', text: 'Team' },
-        { href: '/contact', text: 'Contact' },
-        { href: '/whitepaper', text: 'Whitepaper' },
-        { href: '/economic-paper', text: 'Economic paper' },
-        { href: '/newsletter', text: 'Newsletter' },
-        { href: '/privacy-policy', text: 'Privacy Policy' },
-        { href: '/terms-conditions', text: 'Terms & Conditions' },
+        { href: '/', text: 'Home', internal: true },
+        { href: '/news', text: 'News', internal: true },
+        { href: '/team', text: 'Team', internal: true },
+        { href: '/contact', text: 'Contact', internal: true },
+        { href: 'https://google.com', text: 'Tokenomics', internal: false },
+        { href: 'https://google.com', text: 'Newsletter', internal: false },
+        { href: '/privacy-policy', text: 'Privacy Policy', internal: true },
+        { href: '/terms-conditions', text: 'Terms & Conditions', internal: true },
       ],
     };
   },
