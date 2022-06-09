@@ -41,7 +41,7 @@ export default {
         { href: '/news', text: 'News', internal: true },
         { href: '/team', text: 'Team', internal: true },
         { href: '/contact', text: 'Contact', internal: true },
-        { href: 'https://google.com', text: 'Tokenomics', internal: false },
+        { href: 'https://google.com/?', text: 'Tokenomics', internal: false },
         { href: 'https://google.com', text: 'Newsletter', internal: false },
         { href: '/privacy-policy', text: 'Privacy Policy', internal: true },
         { href: '/terms-conditions', text: 'Terms & Conditions', internal: true },
