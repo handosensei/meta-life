@@ -73,7 +73,7 @@ export default {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
         const mask = this.$refs.galleryMask[id]
         const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf([mask, ...circles, this.$refs.gallerySphere[id].$el.lastChild])
+        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild])
         gsap.to(mask, {
           autoAlpha: 1,
           duration: 0.65,
@@ -106,7 +106,7 @@ export default {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
         const mask = this.$refs.galleryMask[id]
         const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf([mask, ...circles, this.$refs.gallerySphere[id].$el.lastChild])
+        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild])
         gsap.to(mask, {
           autoAlpha: 0,
           duration: 0.65,
