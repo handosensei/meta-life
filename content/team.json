@@ -6,56 +6,56 @@
         "title": "Robin",
         "text": "Co-Founder - CEO - Metaverse Empire Builder",
         "image": {
-          "src": "/img/team/Robin.png"
+          "src": "/img/team/Robin.jpg"
         }
       },
       {
         "title": "Max",
         "text": "Co-Founder - Visionary Artist",
         "image": {
-          "src": "/img/team/Max.png"
+          "src": "/img/team/Max.jpg"
         }
       },
       {
         "title": "Haissam",
         "text": "CTO - Metaverse - Blockchain Oracle",
         "image": {
-          "src": "/img/team/Haissam.png"
+          "src": "/img/team/Haissam.jpg"
         }
       },
       {
         "title": "Dara",
         "text": "GM - Operations Consigliere",
         "image": {
-          "src": "/img/team/Dara.png"
+          "src": "/img/team/Dara.jpg"
         }
       },
       {
         "title": "Jack",
         "text": "Communications Maverick",
         "image": {
-          "src": "/img/team/Jack.png"
+          "src": "/img/team/Jack.jpg"
         }
       },
       {
         "title": "Alex",
         "text": "Discord Master Chief",
         "image": {
-          "src": "/img/team/Alex.png"
+          "src": "/img/team/Alex.jpg"
         }
       },
       {
         "title": "Tony",
         "text": "Game Design Wizard",
         "image": {
-          "src": "/img/team/Tony.png"
+          "src": "/img/team/Tony.jpg"
         }
       },
       {
         "title": "Adrien",
         "text": "Artist Whisperer",
         "image": {
-          "src": "/img/team/Adrien.png"
+          "src": "/img/team/Adrien.jpg"
         }
       }
     ]
@@ -65,23 +65,43 @@
     "items": [
       {
         "title": "3D Monster",
-        "text": "3D Magician Content Creation"
+        "text": "3D Magician Content Creation",
+        "image": {
+          "size": "small",
+          "src": "/img/team/3dMonster.jpg"
+        }
       },
       {
         "title": "Younes",
-        "text": "Graphics Guru"
+        "text": "Graphics Guru",
+        "image": {
+          "size": "small",
+          "src": "/img/team/Younes.jpg"
+        }
       },
       {
         "title": "Dave (Remlevad)",
-        "text": "Community Administrator"
+        "text": "Community Administrator",
+        "image": {
+          "size": "small",
+          "src": "/img/team/Remlevad.jpg"
+        }
       },
       {
         "title": "Brannstrom",
-        "text": "Brand outreach & research"
+        "text": "Brand outreach & research",
+        "image": {
+          "size": "small",
+          "src": "/img/team/Brannstrom.jpg"
+        }
       },
       {
         "title": "Daniel (Noodlecup)",
-        "text": "Academy Content Creator"
+        "text": "Academy Content Creator",
+        "image": {
+          "size": "small",
+          "src": "/img/team/Noodlecup.jpg"
+        }
       }
     ]
   },

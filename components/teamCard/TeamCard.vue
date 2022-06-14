@@ -1,6 +1,6 @@
 <template>
   <div class="Card">
-    <div v-if="image" class="imageWrapper">
+    <div v-if="image" :class="['imageWrapper', image.size ? image.size : '']">
       <Lazy :src="image.src" :alt="`${title} logo`" />
     </div>
 

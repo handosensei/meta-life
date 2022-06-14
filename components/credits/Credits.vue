@@ -4,7 +4,7 @@
 
     <Icon class="logo" type="MetaLegends" />
 
-    <div class="sub">visit : <a class="subLink" href="https://metalegends.com" target="_blank" rel="noreferrer">metalegends.com</a></div>
+    <div class="sub">visit : <a class="subLink" href="https://meta-legends.com" target="_blank" rel="noreferrer">meta-legends.com</a></div>
   </div>
 </template>
 
