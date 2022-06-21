@@ -7,6 +7,9 @@
       <SocialButton ref="galleryBtn" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
     </div>
     <GalleryItems ref="galleryItems" :gallery-items="galleryItems"/>
+    <div ref="scroll" class="scroll">
+      <span>Scroll</span>
+    </div>
   </div>
 </template>
 
@@ -94,6 +97,8 @@ export default {
       tl.delay(0)
 
       tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' })
+
+      tl.to(this.$refs.scroll, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 0.25)
 
       if (this.subtitle) {
         tl.fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0);

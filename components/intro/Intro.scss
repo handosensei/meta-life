@@ -9,6 +9,30 @@
   }
 }
 
+.scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 122px;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+
+  span{
+    font-size: 12px;
+    color: white;
+    animation: scroll 1s infinite linear;
+  }
+
+  @keyframes scroll {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;

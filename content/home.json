@@ -166,7 +166,7 @@
           "component": {
             "name": "SectionText",
             "title": "Explore",
-            "text": "Explore the vast open world of Meta Life where you'll be able to build and customize residences on your lands in your own image. Chart your path through the dangerous 'friendly-fire on' zones to find areas rich with resources, at your own risk. <br /> The Meta Life world will be rich with possibilities, beauty and fun; a truly innovative and mindful approach is being taken to bring together the best of gaming and Web3.",
+            "text": "Explore the vast open world of Meta Life where you'll be able to build and customize residences on your lands in your own image. Chart your path through the dangerous 'friendly-fire on' zones to find areas rich with resources, at your own risk. <br /><br /> The Meta Life world will be rich with possibilities, beauty and fun; a truly innovative and mindful approach is being taken to bring together the best of gaming and Web3.",
             "position": "center top"
           }
         }
@@ -202,7 +202,7 @@
           "component": {
             "name": "SectionText",
             "title": "Earn",
-            "text": "Meta Life's economy will be powered by our duel token economics model, developed in partnership with Brightnode. Find multiple ways to leverage your skills, assets, time or a combination of all to earn $METAL tokens straight to your wallet.<br />Invest in assets that you can customise, sell or rent to other players for a return. The possibilities are endless.",
+            "text": "Meta Life's economy will be powered by our duel token economics model, developed in partnership with Brightnode. Find multiple ways to leverage your skills, assets, time or a combination of all to earn $METAL tokens straight to your wallet.<br /><br />Invest in assets that you can customise, sell or rent to other players for a return. The possibilities are endless.",
             "position": "right center",
             "button": {
               "name": "Tokenomics",
