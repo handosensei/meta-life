@@ -60,6 +60,7 @@ export default {
   watch: {
     activeSection: 'onSectionChange',
     preloaderVisible: 'onPageReady',
+    $route: 'onRouteChange'
   },
 
   created() {
@@ -83,6 +84,18 @@ export default {
   },
 
   methods: {
+    onRouteChange (route) {
+      if (route.hash === '#gallery') {
+        console.warn(this.chapters)
+        const galleryItem = this.chapters[1].sections[0].component.galleryItems[0];
+        this.setActiveChapter(this.chapters[1]);
+        this.setActiveSection(this.chapters[1].sections[0]);
+        this.$root.$emit('galleryOverlay:toggle', galleryItem);
+      } else {
+        this.$root.$emit('galleryOverlay:toggle', '');
+      }
+    },
+
     onPageReady() {
       if (!this.preloaderVisible) {
         this.onSectionEnter();

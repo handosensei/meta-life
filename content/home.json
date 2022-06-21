@@ -2,7 +2,7 @@
   "chapters": [
     {
       "id": "explore",
-      "name": "Explore",
+      "name": "Meta Life",
       "webgl": "2",
       "hideInNav": false,
       "sections": [
@@ -13,7 +13,7 @@
             "name": "SectionIntro",
             "title": "Discover a new Life.",
             "subtitle": "",
-            "text": "Explore. Pay. Earn."
+            "text": "Explore. Play. Earn."
           }
         }
       ]
@@ -21,7 +21,7 @@
 
     {
       "id": "play",
-      "name": "Play",
+      "name": "Discover",
       "webgl": "3",
       "sections": [
         {
@@ -157,7 +157,7 @@
 
     {
       "id": "earn",
-      "name": "Earn",
+      "name": "Explore",
       "webgl": "4",
       "sections": [
         {
@@ -166,7 +166,7 @@
           "component": {
             "name": "SectionText",
             "title": "Explore",
-            "text": "Invest in assets that you can use for returns, customise, sell or rent to other players. The possibilities are endless.",
+            "text": "Explore the vast open world of Meta Life where you'll be able to build and customize residences on your lands in your own image. Chart your path through the dangerous 'friendly-fire on' zones to find areas rich with resources, at your own risk. <br /> The Meta Life world will be rich with possibilities, beauty and fun; a truly innovative and mindful approach is being taken to bring together the best of gaming and Web3.",
             "position": "center top"
           }
         }
@@ -175,7 +175,7 @@
 
     {
       "id": "open-world",
-      "name": "Open World",
+      "name": "Play",
       "webgl": "5",
       "sections": [
         {
@@ -184,7 +184,7 @@
           "component": {
             "name": "SectionText",
             "title": "Play",
-            "text": "Play with your friends or companions.",
+            "text": "Play together with your friends or discover new ones in the beautiful, unified world of Meta Life. Fight together in PvE modes or wager your skills in PvP.",
             "position": "center top"
           }
         }
@@ -193,7 +193,7 @@
 
     {
       "id": "metal",
-      "name": "$METAL",
+      "name": "Earn",
       "webgl": "6",
       "sections": [
         {
@@ -202,7 +202,7 @@
           "component": {
             "name": "SectionText",
             "title": "Earn",
-            "text": "Meta Life will be powered by our $METAL dual token economy. Stake and lock your $METAL tokens and receive exclusive rewards.",
+            "text": "Meta Life's economy will be powered by our duel token economics model, developed in partnership with Brightnode. Find multiple ways to leverage your skills, assets, time or a combination of all to earn $METAL tokens straight to your wallet.<br />Invest in assets that you can customise, sell or rent to other players for a return. The possibilities are endless.",
             "position": "right center",
             "button": {
               "name": "Tokenomics",

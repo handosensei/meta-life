@@ -12,6 +12,17 @@
           </a>
         </li>
       </ul>
+      <br />
+      <ul ref="menuList2" class="menuList">
+        <li v-for="{ href, text, internal } in links2" :key="href" class="menuItem">
+          <NuxtLink v-if="internal" :to="href" class="menuLink">
+            {{ text }}
+          </NuxtLink>
+          <a v-else :href="href" target="_blank" class="menuLink">
+            {{ text }}
+          </a>
+        </li>
+      </ul>
     </div>
 
     <Credits class="menuCredits" />
@@ -41,11 +52,14 @@ export default {
         { href: '/news', text: 'News', internal: true },
         { href: '/team', text: 'Team', internal: true },
         { href: '/contact', text: 'Contact', internal: true },
+        { href: '/#gallery', text: 'Gallery', internal: true },
         { href: 'https://google.com/?', text: 'Tokenomics', internal: false },
-        { href: 'https://google.com', text: 'Newsletter', internal: false },
+        { href: 'https://google.com', text: 'Newsletter', internal: false }
+      ],
+      links2: [
         { href: '/privacy-policy', text: 'Privacy Policy', internal: true },
         { href: '/terms-conditions', text: 'Terms & Conditions', internal: true },
-      ],
+      ]
     };
   },
 
@@ -83,7 +97,7 @@ export default {
 
       gsap.fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: { from: 'random', amount: 0.5 }, delay: 1, clearProps: 'filter' });
 
-      gsap.fromTo(this.$refs.menuList.children, { autoAlpha: 0 }, { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' });
+      gsap.fromTo([this.$refs.menuList.children, this.$refs.menuList2.children], { autoAlpha: 0 }, { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' });
     },
 
     leave(done) {

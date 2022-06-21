@@ -5,7 +5,7 @@
         <div ref="content" :key="activeSlide.title" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
-            <div class="subtitle">{{ activeItem.category }}</div>
+            <!-- <div class="subtitle">{{ activeItem.category }}</div> -->
           </div>
           <p ref="text" class="text">{{ activeSlide.text }}</p>
         </div>
@@ -130,6 +130,7 @@ export default {
     onClose() {
       gsap.to(this.$refs.content, { autoAlpha: 0, ease: 'none', duration: 0.3 })
       this.$root.$emit('galleryOverlay:toggle', '');
+      window.history.pushState("", document.title, window.location.pathname + window.location.search);
     },
 
     onEnterImage(el) {
