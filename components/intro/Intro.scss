@@ -11,11 +11,16 @@
 
 .scroll {
   position: absolute;
-  left: 50%;
-  bottom: 122px;
-  transform: translateX(-50%);
+  left: 40px;
+  bottom: 41px;
   opacity: 0;
   visibility: hidden;
+
+  @include minTablet {
+    left: 50%;
+    bottom: 122px;
+    transform: translateX(-50%);
+  }
 
   span{
     font-size: 12px;
