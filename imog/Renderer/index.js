@@ -58,8 +58,8 @@ export default IMOG.Component('Renderer', {
     this.renderer.toneMapping = THREE.CustomToneMapping;
     this.renderer.setClearColor(0x000000, 0);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
-    this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFShadowMap;
+    // this.renderer.shadowMap.enabled = true;
+    // this.renderer.shadowMap.type = THREE.PCFShadowMap;
 
     if (!options.domElement) {
       document.body.appendChild(this.renderer.domElement);
