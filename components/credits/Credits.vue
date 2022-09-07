@@ -4,7 +4,11 @@
 
     <Icon class="logo" type="MetaLegends" />
 
-    <div class="sub">visit : <a class="subLink" href="https://meta-legends.com" target="_blank" rel="noreferrer">meta-legends.com</a></div>
+    <div class="sub">
+      <span>visit : <a class="subLink" href="https://meta-legends.com" target="_blank" rel="noreferrer">meta-legends.com</a></span>
+      <span style="margin-left: 15px; opacity: 0.2;"><NuxtLink to="/privacy-policy" class="subLink">Privacy Policy</NuxtLink></span>
+      <span style="margin-left: 5px; opacity: 0.2;"><NuxtLink to="/terms-conditions" class="subLink">Terms &amp; Conditions</NuxtLink></span>
+    </div>
   </div>
 </template>
 

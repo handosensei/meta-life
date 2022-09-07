@@ -3,13 +3,20 @@
     <div class="content">
       <div ref="title" class="title">The Future will be here soon</div>
       <ul ref="menuList" class="menuList">
-        <li v-for="{ href, text, internal } in links" :key="href" class="menuItem">
-          <NuxtLink v-if="internal" :to="href" class="menuLink">
-            {{ text }}
-          </NuxtLink>
-          <a v-else :href="href" target="_blank" class="menuLink">
-            {{ text }}
-          </a>
+        <li v-for="{ href, text, internal, disabled } in links" :key="href" class="menuItem">
+          <template v-if="!disabled">
+            <NuxtLink v-if="internal" :to="href" class="menuLink">
+              {{ text }}
+            </NuxtLink>
+            <a v-else :href="href" target="_blank" class="menuLink">
+              {{ text }}
+            </a>
+          </template>
+          <template v-else>
+            <span class="menuLink --disabled">
+              {{ text }}
+            </span>
+          </template>
         </li>
       </ul>
       <br />
@@ -48,18 +55,16 @@ export default {
   data() {
     return {
       links: [
-        { href: '/', text: 'Home', internal: true },
-        { href: '/news', text: 'News', internal: true },
-        { href: '/team', text: 'Team', internal: true },
-        { href: '/contact', text: 'Contact', internal: true },
-        { href: '/#gallery', text: 'Gallery', internal: true },
-        { href: 'https://google.com/?', text: 'Tokenomics', internal: false },
-        { href: 'https://google.com', text: 'Newsletter', internal: false }
+        { href: '/', text: 'Home', internal: true, disabled: false },
+        { href: '/news', text: 'News', internal: true, disabled: false },
+        { href: '/team', text: 'Team', internal: true, disabled: false },
+        { href: '/contact', text: 'Contact', internal: true, disabled: false },
+        { href: '/#gallery', text: 'Gallery', internal: true, disabled: false },
+        { href: 'https://google.com/?', text: 'Whitepaper', internal: false, disabled: false },
+        { href: 'https://google.com', text: 'Newsletter', internal: false, disabled: false },
+        { href: '#', text: 'Marketplace', internal: false, disabled: true }
       ],
-      links2: [
-        { href: '/privacy-policy', text: 'Privacy Policy', internal: true },
-        { href: '/terms-conditions', text: 'Terms & Conditions', internal: true },
-      ]
+      links2: []
     };
   },
 

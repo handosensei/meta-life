@@ -43,7 +43,7 @@ export default {
   },
 
   mounted () {
-    this.audioPlayer = new Audio('/audio/audio.mpeg');
+    this.audioPlayer = new Audio('/audio/audio.mp3');
     this.audioPlayer.loop = true;
     this.audioFiltered = new Audio('/audio/audio_filtered_1.mp3');
     this.audioFiltered.loop = true;

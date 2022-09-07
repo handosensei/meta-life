@@ -80,6 +80,27 @@ br + .menuList {
     outline-color: var(--color-white);
   }
 
+  &.--disabled {
+    opacity: 0.2;
+    pointer-events: none;
+
+    &:after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: 'Coming Soon';
+      position: absolute;
+      top: -15px;
+      right: -50px;
+      padding: 0 5px 2px;
+      height: 15px;
+      border-radius: 2px;
+      font-size: 9px;
+      background: white;
+      color: black;
+    }
+  }
+
   @media (hover: hover) {
     transition: 0.3s opacity;
 
