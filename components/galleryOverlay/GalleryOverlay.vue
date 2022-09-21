@@ -17,6 +17,8 @@
         </transition>
       </div>
 
+      <IconButton ref="close" as="button" class="closeButton right" icon="CloseButton" aria-label="close gallery button" @click.native="onClose"/>
+
       <nav class="nav">
         <button class="backButton" type="button" @click="onClose">
           <Icon class="closeIcon" type="Close" />
@@ -47,6 +49,7 @@ import FocusLock from 'vue-focus-lock';
 import { mapActions, mapState } from 'vuex';
 
 import Icon from '~/components/elements/Icon.vue';
+import IconButton from '~/components/elements/IconButton.vue';
 
 export default {
   name: 'GalleryOverlayComponent',
@@ -54,6 +57,7 @@ export default {
   components: {
     FocusLock,
     Icon,
+    IconButton
   },
 
   props: {
@@ -81,6 +85,9 @@ export default {
 
   mounted() {
     window.addEventListener('keydown', this.onKeyDown);
+
+    gsap.to('.header', { autoAlpha: 0, ease: 'none', duration: 0.3 })
+    gsap.to(this.$refs.close.$el, { autoAlpha: 1, ease: 'none', duration: 0.3 })
 
     this.$nuxt.$emit(
       'assetsLoader:load',
@@ -128,6 +135,8 @@ export default {
     },
 
     onClose() {
+      gsap.to('.header', { autoAlpha: 1, ease: 'none', duration: 0.3 })
+      gsap.to(this.$refs.close.$el, { autoAlpha: 0, ease: 'none', duration: 0.3 })
       gsap.to(this.$refs.content, { autoAlpha: 0, ease: 'none', duration: 0.3 })
       this.$root.$emit('galleryOverlay:toggle', '');
       window.history.pushState("", document.title, window.location.pathname + window.location.search);
