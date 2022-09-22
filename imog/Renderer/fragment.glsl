@@ -36,7 +36,7 @@ void main() {
     vec4 vfxBloomColor = texture2D(tVfxBloom, vUv);
     // gl_FragColor = mix(worldColor, vfxColor / clamp(vfxColor.a, 0.001, 1.0), vfxColor.a) + vfxBloomColor;
     // gl_FragColor = mix(worldColor, vfxBloomColor, 0.1) + vfxBloomColor;
-    gl_FragColor = worldColor + vfxBloomColor;
+    gl_FragColor = worldColor; // + vfxBloomColor;
     gl_FragColor.rgb = czm_saturation(gl_FragColor.rgb, saturation);
     gl_FragColor.rgb = finalLevels(gl_FragColor.rgb, levels.x, levels.y, levels.z);
     gl_FragColor.rgb = mix(gl_FragColor.rgb, vec3(grain(vUv + sin(uTime * 123.277), resolution / 2.0)), 0.07);
