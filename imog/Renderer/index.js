@@ -191,7 +191,7 @@ export default IMOG.Component('Renderer', {
         glContext: this.renderer.getContext(),
         desktopTiers: [0, 15, 30, 50],
       });
-      this.props.quality = gpuTier.tier >= 2 ? 'high' : 'normal';
+      this.props.quality = 'high'; // gpuTier.tier >= 2 ? 'high' : 'normal';
     })();
 
     window.addEventListener('focus', this.handleWindowFocus);
