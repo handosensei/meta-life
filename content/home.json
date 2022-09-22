@@ -361,7 +361,8 @@
                       },
                       "highres": {
                         "src": "/img/gallery/vehicles/01.jpg",
-                        "alt": "ZERO 11"
+                        "alt": "ZERO 11",
+                        "contain": true
                       }
                     }
                   },
@@ -375,7 +376,8 @@
                       },
                       "highres": {
                         "src": "/img/gallery/vehicles/02.jpg",
-                        "alt": "Buggy"
+                        "alt": "Buggy",
+                        "contain": true
                       }
                     }
                   }
