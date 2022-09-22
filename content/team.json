@@ -3,56 +3,56 @@
   "coreTeam": {
     "items": [
       {
-        "title": "Robin",
+        "title": "Robin Janssens",
         "text": "Co-Founder - CEO - Metaverse Empire Builder",
         "image": {
           "src": "/img/team/Robin.jpg"
         }
       },
       {
-        "title": "Max",
+        "title": "Maxime Hacquard",
         "text": "Co-Founder - Visionary Artist",
         "image": {
           "src": "/img/team/Max.jpg"
         }
       },
       {
-        "title": "Haissam",
+        "title": "Haissam Wakeb",
         "text": "CTO - Metaverse - Blockchain Oracle",
         "image": {
           "src": "/img/team/Haissam.jpg"
         }
       },
       {
-        "title": "Dara",
+        "title": "Dara Sabeti",
         "text": "GM - Operations Consigliere",
         "image": {
           "src": "/img/team/Dara.jpg"
         }
       },
       {
-        "title": "Jack",
+        "title": "Jack Walter",
         "text": "Communications Maverick",
         "image": {
           "src": "/img/team/Jack.jpg"
         }
       },
       {
-        "title": "Alex",
+        "title": "Alexandre Turlan",
         "text": "Discord Master Chief",
         "image": {
           "src": "/img/team/Alex.jpg"
         }
       },
       {
-        "title": "Tony",
+        "title": "Tony Munoz",
         "text": "Game Design Wizard",
         "image": {
           "src": "/img/team/Tony.jpg"
         }
       },
       {
-        "title": "Adrien",
+        "title": "Adrien Cordier",
         "text": "Artist Whisperer",
         "image": {
           "src": "/img/team/Adrien.jpg"
@@ -64,7 +64,7 @@
     "title": "Legendary Team",
     "items": [
       {
-        "title": "3D Monster",
+        "title": "Arlind Braka (3D Monster)",
         "text": "3D Magician Content Creation",
         "image": {
           "size": "small",
@@ -72,7 +72,7 @@
         }
       },
       {
-        "title": "Younes",
+        "title": "Younes Mountassir Idrissi",
         "text": "Graphics Guru",
         "image": {
           "size": "small",
@@ -201,19 +201,15 @@
     "title": "Advisors",
     "items": [
       {
-        "title": "Theo",
+        "title": "Theodoric Plichart",
         "text": "Strategy"
       },
       {
-        "title": "Maxence",
+        "title": "Maxence Sallier",
         "text": "(Blockchain & NFT Analyst)"
       },
       {
-        "title": "Salvatore",
-        "text": "Partnerships & Collaborations"
-      },
-      {
-        "title": "Roman",
+        "title": "Roman Czerny",
         "text": "Tokenomics"
       }
     ]

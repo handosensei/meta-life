@@ -13,7 +13,7 @@
 
       <div class="backgroundImages">
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
-          <img :key="activeSlide.image.highres.src" class="backgroundImage" :src="activeSlide.image.highres.src" :alt="activeSlide.image.highres.alt" />
+          <img :key="activeSlide.image.highres.src" class="backgroundImage" :class="activeSlide.image.highres.contain ? 'contain' : ''" :src="activeSlide.image.highres.src" :alt="activeSlide.image.highres.alt" />
         </transition>
       </div>
 

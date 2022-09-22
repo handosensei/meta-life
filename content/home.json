@@ -11,9 +11,9 @@
           "theme": "dark",
           "component": {
             "name": "SectionIntro",
-            "title": "Discover a new Life.",
+            "title": "A new world is born",
             "subtitle": "",
-            "text": "Explore. Play. Earn."
+            "text": "Your journey in the metaverse begins now"
           }
         }
       ]
@@ -21,7 +21,7 @@
 
     {
       "id": "play",
-      "name": "Discover",
+      "name": "Explore",
       "webgl": "3",
       "sections": [
         {
@@ -29,121 +29,353 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Discover <span class=\"purple\">Meta</span> <span class=\"green\">Life</span>",
-            "text": "The Meta Life world is home to all beings and environments…<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
+            "title": "Open your eyes",
+            "text": "Explore an extraordinary and vast universe, home to wonderful environments and mysterious creatures<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
             "position": "right center",
             "galleryItems": [
               {
-                "id": "environment1",
-                "category": "Environment",
+                "id": "cities",
+                "category": "Cities",
                 "slides": [
                   {
-                    "title": "Environment #1",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Astralis",
+                    "text": "Magically suspended in the sky, Astralis is the capital of the noble Celestials, the most prestigious race in Meta Life. Filled with process and knowledge, it is home to godly monuments, clear lakes, stylized buildings and architectural spaces on different levels showcasing beautiful nature.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/01.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/cities/thumb/01.jpg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/01.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/cities/01.jpg",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "Environment #2",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Astralis (2)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/02.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/cities/thumb/02.jpg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/02.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/cities/02.jpg",
+                        "alt": "Astralis"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "Home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. It connects rivers and seas through a magnificently modern coastline that outlines its futuristic skyscrapers and glass-windowed buildings. It was named after its purpose: provide a new place for Cybers to thrive.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/03.jpg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/03.jpg",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (2)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/04.jpg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/04.jpg",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (3)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/05.jpg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/05.jpg",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/06.jpg",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/06.jpg",
+                        "alt": "Neopolis"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Capital 111 or C-111",
+                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/07.jpg",
+                        "alt": "Capital 111 or C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/07.jpg",
+                        "alt": "Capital 111 or C-111"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora, the Golden City",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/08.jpg",
+                        "alt": "Aurora, the Golden City"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/08.jpg",
+                        "alt": "Aurora, the Golden City"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-mörr",
+                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/09.jpg",
+                        "alt": "Barad-mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/09.jpg",
+                        "alt": "Barad-mörr"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust",
+                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/10.jpg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/10.jpg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Wildlings",
+                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/11.jpg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/11.jpg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Swamps",
+                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/12.jpg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/12.jpg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboters Garage",
+                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/cities/thumb/13.jpg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/cities/13.jpg",
+                        "alt": "Rust"
                       }
                     }
                   }
                 ]
               },
               {
-                "id": "pets",
-                "category": "Pets",
+                "id": "creatures",
+                "category": "Creatures",
                 "slides": [
                   {
-                    "title": "Pet Name",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Mörberr",
+                    "text": "A creature specific to the Burner environment with heavy armor equipment, and great forged claws. Ideal for tanking damage while hurting enemies back.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/pets/thumb/01.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/thumb/01.jpg",
+                        "alt": "Mörberr"
                       },
                       "highres": {
-                        "src": "/img/gallery/pets/01.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/01.jpg",
+                        "alt": "Mörberr",
+                        "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Pet Name",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Celix",
+                    "text": "A stunning and extraordinary Celestial creature rarely witnessed by humans. Taming it and mastering its devastating spells requires time and dedication.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/pets/thumb/02.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/thumb/02.jpg",
+                        "alt": "Celix"
                       },
                       "highres": {
-                        "src": "/img/gallery/pets/02.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/02.jpg",
+                        "alt": "Celix",
+                        "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Pet Name",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Vitruvis",
+                    "text": "Some say Vitruvis is a godly creature or a Celestial divinity. No one really knows but its ancient roots and magnificent aesthetics make it a rare occurence in the world of Meta Life.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/pets/thumb/03.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/thumb/03.jpg",
+                        "alt": "Vitruvis"
                       },
                       "highres": {
-                        "src": "/img/gallery/pets/03.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/creatures/03.jpg",
+                        "alt": "Vitruvis",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Squir",
+                    "text": "Squir is a mecha squirrel escaped from the Cybers Mecha Factory and is now nowhere to be found. Some say to have spotted it in The Swamps where it hunts other creatures. Approach with great caution.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/04.jpg",
+                        "alt": "Squir"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/04.jpg",
+                        "alt": "Squir",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rhimo",
+                    "text": "The Rhimo was made by the Matrix Angels and is built with a powerful mechanical body that makes it an intimidating companion and creature to deal with.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/05.jpg",
+                        "alt": "Rhimo"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/05.jpg",
+                        "alt": "Rhimo",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Spyder",
+                    "text": "The Spyder is capable of detecting movements from afar thanks to an internal AI-powered algorithm. A formidable skill for hunters.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/06.jpg",
+                        "alt": "Spyder"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/06.jpg",
+                        "alt": "Spyder",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Ryena",
+                    "text": "The Ryena is a rare creature often found in or near C-111, the capital of the Roboters. It roams around the abandoned neighborhoods of the city to find food, most often at night. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/07.jpg",
+                        "alt": "Ryena"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/07.jpg",
+                        "alt": "Ryena",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Crust",
+                    "text": "Crust can bite, crawl and tear out faster than most creatures. It typically lives in arid environments and is said to be quite invasive in the region of Rust where Roughs reside. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/08.jpg",
+                        "alt": "Crust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/08.jpg",
+                        "alt": "Crust",
+                        "contain": true
                       }
                     }
                   }
                 ]
               },
               {
-                "id": "environment2",
-                "category": "Environment",
+                "id": "vehicles",
+                "category": "Vehicles",
                 "slides": [
                   {
-                    "title": "Environment #3",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "ZERO 11",
+                    "text": "The ZERO 11 motorbike is a product of Cybers engineering. It’s a light, fast and stable bike that is electrically powered.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/06.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/vehicles/thumb/06.jpg",
+                        "alt": "ZERO 11"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/06.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/vehicles/06.jpg",
+                        "alt": "ZERO 11"
                       }
                     }
                   },
                   {
-                    "title": "Environment #4",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper convallis sed aliquam eget pharetra habitant. Posuere rhoncus ut mauris dui. Viverra malesuada volutpat tellus vivamus neque. Ultricies neque leo velit sit amet lectus egestas faucibus egestas.",
+                    "title": "Buggy",
+                    "text": "The Buggy is an all-terrain vehicle used mostly by Roughs in and outside of Rust, in desert areas and on difficult soils.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/07.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/vehicles/thumb/02.jpg",
+                        "alt": "Buggy"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/07.jpg",
-                        "alt": "placeholder image"
+                        "src": "/img/gallery/vehicles/02.jpg",
+                        "alt": "Buggy"
                       }
                     }
                   }
@@ -157,7 +389,7 @@
 
     {
       "id": "earn",
-      "name": "Explore",
+      "name": "Settle",
       "webgl": "4",
       "sections": [
         {
@@ -165,8 +397,8 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Explore",
-            "text": "Explore the vast open world of Meta Life where you'll be able to build and customize residences on your lands in your own image. Chart your path through the dangerous 'friendly-fire on' zones to find areas rich with resources, at your own risk. <br /><br /> The Meta Life world will be rich with possibilities, beauty and fun; a truly innovative and mindful approach is being taken to bring together the best of gaming and Web3.",
+            "title": "Your new life",
+            "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
             "position": "center top"
           }
         }
@@ -175,7 +407,7 @@
 
     {
       "id": "open-world",
-      "name": "Play",
+      "name": "Experience",
       "webgl": "5",
       "sections": [
         {
@@ -183,8 +415,8 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Play",
-            "text": "Play together with your friends or discover new ones in the beautiful, unified world of Meta Life. Fight together in PvE modes or wager your skills in PvP.",
+            "title": "Experience the metaverse",
+            "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <br /><br /> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
             "position": "center top"
           }
         }
@@ -201,8 +433,8 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "Earn",
-            "text": "Meta Life's economy will be powered by our duel token economics model, developed in partnership with Brightnode. Find multiple ways to leverage your skills, assets, time or a combination of all to earn $METAL tokens straight to your wallet.<br /><br />Invest in assets that you can customise, sell or rent to other players for a return. The possibilities are endless.",
+            "title": "A new economy",
+            "text": "Meta Life is powered by $METAL, its dual economy token. <br /><br /> Earn xMETAL by staking assets, selling on the marketplace and lending to other players. Swap it for ETH anytime. <br /><br /> Swap xMETAL for METAL - our governance token - to participe in the Meta Life DAO and help shape the future of your metaverse.",
             "position": "right center",
             "button": {
               "name": "Tokenomics",

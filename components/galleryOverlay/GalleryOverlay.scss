@@ -91,6 +91,10 @@
   @include maxMobile {
     opacity: 0.5;
   }
+
+  &.contain {
+    object-fit: contain;
+  }
 }
 
 .nav {
@@ -161,6 +165,7 @@
   width: 6.8rem;
   border-radius: 1px;
   aspect-ratio: 4 / 3;
+  object-fit: cover;
 
   .isActive & {
     opacity: 0.5;

@@ -20,7 +20,7 @@
         </li>
       </ul>
       <br />
-      <ul ref="menuList2" class="menuList">
+      <!-- <ul ref="menuList2" class="menuList">
         <li v-for="{ href, text, internal } in links2" :key="href" class="menuItem">
           <NuxtLink v-if="internal" :to="href" class="menuLink">
             {{ text }}
@@ -29,7 +29,7 @@
             {{ text }}
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
 
     <Credits class="menuCredits" />
@@ -102,7 +102,7 @@ export default {
 
       gsap.fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: { from: 'random', amount: 0.5 }, delay: 1, clearProps: 'filter' });
 
-      gsap.fromTo([this.$refs.menuList.children, this.$refs.menuList2.children], { autoAlpha: 0 }, { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' });
+      gsap.fromTo(this.$refs.menuList.children, { autoAlpha: 0 }, { autoAlpha: 1, stagger: { from: 'center', amount: 0.5 }, delay: 1, clearProps: 'all' });
     },
 
     leave(done) {

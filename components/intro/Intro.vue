@@ -4,9 +4,7 @@
       <h3 v-if="subtitle" ref="subtitle" class="subtitle">{{ subtitle }}</h3>
       <h2 ref="title" class="title" v-html="title" />
       <p ref="text" class="text" v-html="text" />
-      <!-- <SocialButton ref="galleryBtn" name="Open Gallery" icon="Plus" @click.native="toggleGallery"/> -->
     </div>
-    <GalleryItems ref="galleryItems" :gallery-items="galleryItems"/>
     <div ref="scroll" class="scroll">
       <span>Scroll</span>
     </div>
