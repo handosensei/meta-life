@@ -1,5 +1,5 @@
 <template>
-  <div class="u-abs">
+  <div class="u-abs text-layer">
     <div class="text" :class="positioningClass">
       <h2 ref="title" class="title" v-html="title" />
       <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
@@ -112,6 +112,8 @@ export default {
       const tl = gsap.timeline();
 
       tl.delay(1.25)
+
+      tl.fromTo(this.$el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 })
 
       if (this.$refs.paragraph) {
         tl.fromTo(this.splitParagraph.lines, {

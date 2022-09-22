@@ -8,6 +8,12 @@
   }
 }
 
+.text-layer {
+  @include maxMobile {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
 .title {
   line-height: 110%;
   letter-spacing: -0.01em;
@@ -33,7 +39,7 @@
 
 .paragraph {
   line-height: 130%;
-  color: var(--color-white-04);
+  color: var(--color-dark-04);
   margin-top: clamp(30px, 3rem, 3rem);
 
   .isLight & {
@@ -43,6 +49,7 @@
   @include maxMobile {
     width: clamp(230px, 23rem, 23rem);
     font-size: clamp(14px, 1.4rem, 20px);
+    color: rgba(255, 255, 255, 0.85);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +78,10 @@
   width: clamp(500px, 25rem, 25rem);
   transform: translateX(-50%);
   text-align: center;
+
+  @include maxMobile {
+    width: clamp(340px, 25rem, 25rem);
+  }
 
   @include minTablet {
     top: 20vh;
