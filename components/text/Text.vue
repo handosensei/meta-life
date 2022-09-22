@@ -128,12 +128,17 @@ export default {
         });
       }
 
-      tl.fromTo(this.$refs.title, { autoAlpha: 0 }, { autoAlpha: 1 }, 0).fromTo(
-        this.splitTitle,
-        { autoAlpha: 0, filter: 'blur(5px)' },
-        { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' },
-        0
-      );
+      tl.fromTo(this.$refs.title, { autoAlpha: 0 }, { autoAlpha: 1 }, 0)
+
+      console.log(this.splitTitle && this.splitTitle.length > 0)
+      if (this.splitTitle && this.splitTitle.length > 0) {
+        tl.fromTo(
+          this.splitTitle,
+          { autoAlpha: 0, filter: 'blur(5px)' },
+          { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' },
+          0
+        );
+      }
 
       if (this.$refs.button) {
         tl.fromTo(this.$refs.button.$el,
