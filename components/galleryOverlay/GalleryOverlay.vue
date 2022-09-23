@@ -22,7 +22,7 @@
       <nav class="nav">
         <button class="backButton" type="button" @click="onClose">
           <Icon class="closeIcon" type="Close" />
-          Back to gallery
+          Back to the Experience
         </button>
 
         <div class="navButtons">
