@@ -5,7 +5,7 @@
       <div v-if="text" ref="paragraph" class="paragraph" v-html="text"></div>
       <BaseButton v-if="hasPlayTrailerButton" as="button" class="textButton" text="<span>Play</span> the trailer" :on-click="onPlayTrailer" />
       <SocialButton v-if="useGallery && smallScreen" ref="button" name="Open Galery" icon="Plus" @click.native="toggleGallery"/>
-      <SocialButton type="a" v-if="button" ref="button" v-bind="button"/>
+      <SocialButton v-if="button" ref="button" type="a" v-bind="button"/>
     </div>
 
     <GalleryItems v-if="useGallery && !smallScreen" ref="galleryItems" :gallery-items="galleryItems" />
@@ -17,7 +17,7 @@ import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { mapState } from 'vuex';
 
-import BREAKPOINTS from '~/utils/config/breakpoints';
+import BREAKPOINTS from '~/utils/config/breakpoints'; 
 import SocialButton from '~/components/socialButton/SocialButton.vue';
 import BaseButton from '~/components/elements/BaseButton.vue';
 import GalleryItems from '~/components/galleryItems/GalleryItems.vue';
