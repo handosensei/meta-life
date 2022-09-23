@@ -14,7 +14,8 @@
   }
 
   .galleryItem:nth-child(2) {
-    left: 55.92vw;
+    left: 59.92vw;
+    top: 63vh;
   }
 }
 
@@ -28,18 +29,18 @@
   border-radius: 50%; // For better focus state
 
   &:first-child {
-    top: 8.89vh;
-    left: 23.32vw;
+    top: 2vh;
+    left: 18vw;
   }
 
   &:nth-child(2) {
-    top: 16.33vh;
-    left: 45.92vw;
+    top: 20vh;
+    left: 74vw;
   }
 
   &:nth-child(3) {
-    top: 66.33vh;
-    left: 27.78vw;
+    top: 31vh;
+    left: 12.78vw;
   }
 
   > span {

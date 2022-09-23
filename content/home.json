@@ -34,8 +34,265 @@
             "position": "right center",
             "galleryItems": [
               {
-                "id": "cities",
-                "category": "Cities",
+                "id": "creatures",
+                "category": "Creatures",
+                "slides": [
+                  {
+                    "title": "Mörberr",
+                    "text": "A creature specific to the Burner environment with heavy armor equipment, and great forged claws. Ideal for tanking damage while hurting enemies back.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/01.jpg",
+                        "alt": "Mörberr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/01.jpg",
+                        "alt": "Mörberr",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celix",
+                    "text": "A stunning and extraordinary Celestial creature rarely witnessed by humans. Taming it and mastering its devastating spells requires time and dedication.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/02.jpg",
+                        "alt": "Celix"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/02.jpg",
+                        "alt": "Celix",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Vitruvis",
+                    "text": "Some say Vitruvis is a godly creature or a Celestial divinity. No one really knows but its ancient roots and magnificent aesthetics make it a rare occurence in the world of Meta Life.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/03.jpg",
+                        "alt": "Vitruvis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/03.jpg",
+                        "alt": "Vitruvis",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Squir",
+                    "text": "Squir is a mecha squirrel escaped from the Cybers Mecha Factory and is now nowhere to be found. Some say to have spotted it in The Swamps where it hunts other creatures. Approach with great caution.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/04.jpg",
+                        "alt": "Squir"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/04.jpg",
+                        "alt": "Squir",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rhimo",
+                    "text": "The Rhimo was made by the Matrix Angels and is built with a powerful mechanical body that makes it an intimidating companion and creature to deal with.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/05.jpg",
+                        "alt": "Rhimo"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/05.jpg",
+                        "alt": "Rhimo",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Spyder",
+                    "text": "The Spyder is capable of detecting movements from afar thanks to an internal AI-powered algorithm. A formidable skill for hunters.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/06.jpg",
+                        "alt": "Spyder"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/06.jpg",
+                        "alt": "Spyder",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Ryena",
+                    "text": "The Ryena is a rare creature often found in or near C-111, the capital of the Roboters. It roams around the abandoned neighborhoods of the city to find food, most often at night. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/07.jpg",
+                        "alt": "Ryena"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/07.jpg",
+                        "alt": "Ryena",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Crust",
+                    "text": "Crust can bite, crawl and tear out faster than most creatures. It typically lives in arid environments and is said to be quite invasive in the region of Rust where Roughs reside. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/08.jpg",
+                        "alt": "Crust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/08.jpg",
+                        "alt": "Crust",
+                        "contain": true
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "environments",
+                "category": "Environments",
+                "slides": [
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/01.jpg",
+                        "alt": "The Swamps"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/01.jpg",
+                        "alt": "The Swamps",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/02.jpg",
+                        "alt": "The Forest"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/02.jpg",
+                        "alt": "The Forest",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/03.jpg",
+                        "alt": "The Desert"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/03.jpg",
+                        "alt": "The Desert",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/04.jpg",
+                        "alt": "The Mountains"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/04.jpg",
+                        "alt": "The Mountains",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/05.jpg",
+                        "alt": "The Mountains"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/05.jpg",
+                        "alt": "The Mountains",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/06.jpg",
+                        "alt": "The Mountains"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/06.jpg",
+                        "alt": "The Mountains",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/07.jpg",
+                        "alt": "The Mountains"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/07.jpg",
+                        "alt": "The Mountains",
+                        "contain": true
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "earn",
+      "name": "Settle",
+      "webgl": "4",
+      "sections": [
+        {
+          "id": "earn-01",
+          "theme": "dark",
+          "component": {
+            "name": "SectionText",
+            "title": "Your new life",
+            "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
+            "position": "center top",
+            "galleryItems": [
+              {
+                "id": "lands",
+                "category": "Lands",
                 "slides": [
                   {
                     "title": "Astralis",
@@ -222,125 +479,510 @@
                 ]
               },
               {
-                "id": "creatures",
-                "category": "Creatures",
+                "id": "residences",
+                "category": "Residences",
                 "slides": [
                   {
-                    "title": "Mörberr",
-                    "text": "A creature specific to the Burner environment with heavy armor equipment, and great forged claws. Ideal for tanking damage while hurting enemies back.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/01.jpg",
-                        "alt": "Mörberr"
+                        "src": "/img/gallery/residences/thumbs/1.png",
+                        "alt": ""
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/01.jpg",
-                        "alt": "Mörberr",
+                        "src": "/img/gallery/residences/1.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/2.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/2.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/3.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/3.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/4.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/4.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/5.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/5.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/6.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/6.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/7.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/7.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/8.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/8.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/9.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/9.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/10.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/10.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/11.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/11.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/12.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/12.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/13.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/13.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/14.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/14.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/15.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/15.png",
+                        "alt": ""
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/16.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/16.png",
+                        "alt": ""
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "open-world",
+      "name": "Experience",
+      "webgl": "5",
+      "sections": [
+        {
+          "id": "open-world-01",
+          "theme": "dark",
+          "component": {
+            "name": "SectionText",
+            "title": "Experience the metaverse",
+            "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <br /><br /> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
+            "position": "center top",
+            "galleryItems": [
+              {
+                "id": "weapons",
+                "category": "Weapons",
+                "slides": [
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/1.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/1.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Celix",
-                    "text": "A stunning and extraordinary Celestial creature rarely witnessed by humans. Taming it and mastering its devastating spells requires time and dedication.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/02.jpg",
-                        "alt": "Celix"
+                        "src": "/img/gallery/weapons/thumbs/2.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/02.jpg",
-                        "alt": "Celix",
+                        "src": "/img/gallery/weapons/2.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Vitruvis",
-                    "text": "Some say Vitruvis is a godly creature or a Celestial divinity. No one really knows but its ancient roots and magnificent aesthetics make it a rare occurence in the world of Meta Life.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/03.jpg",
-                        "alt": "Vitruvis"
+                        "src": "/img/gallery/weapons/thumbs/3.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/03.jpg",
-                        "alt": "Vitruvis",
+                        "src": "/img/gallery/weapons/3.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Squir",
-                    "text": "Squir is a mecha squirrel escaped from the Cybers Mecha Factory and is now nowhere to be found. Some say to have spotted it in The Swamps where it hunts other creatures. Approach with great caution.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/04.jpg",
-                        "alt": "Squir"
+                        "src": "/img/gallery/weapons/thumbs/4.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/04.jpg",
-                        "alt": "Squir",
+                        "src": "/img/gallery/weapons/4.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Rhimo",
-                    "text": "The Rhimo was made by the Matrix Angels and is built with a powerful mechanical body that makes it an intimidating companion and creature to deal with.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/05.jpg",
-                        "alt": "Rhimo"
+                        "src": "/img/gallery/weapons/thumbs/5.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/05.jpg",
-                        "alt": "Rhimo",
+                        "src": "/img/gallery/weapons/5.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Spyder",
-                    "text": "The Spyder is capable of detecting movements from afar thanks to an internal AI-powered algorithm. A formidable skill for hunters.",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/06.jpg",
-                        "alt": "Spyder"
+                        "src": "/img/gallery/weapons/thumbs/6.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/06.jpg",
-                        "alt": "Spyder",
+                        "src": "/img/gallery/weapons/6.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Ryena",
-                    "text": "The Ryena is a rare creature often found in or near C-111, the capital of the Roboters. It roams around the abandoned neighborhoods of the city to find food, most often at night. ",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/07.jpg",
-                        "alt": "Ryena"
+                        "src": "/img/gallery/weapons/thumbs/7.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/07.jpg",
-                        "alt": "Ryena",
+                        "src": "/img/gallery/weapons/7.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
                   },
                   {
-                    "title": "Crust",
-                    "text": "Crust can bite, crawl and tear out faster than most creatures. It typically lives in arid environments and is said to be quite invasive in the region of Rust where Roughs reside. ",
+                    "title": "",
+                    "text": "",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/08.jpg",
-                        "alt": "Crust"
+                        "src": "/img/gallery/weapons/thumbs/8.png",
+                        "alt": "Weapons"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/08.jpg",
-                        "alt": "Crust",
+                        "src": "/img/gallery/weapons/8.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/9.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/9.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/10.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/10.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/11.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/11.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/12.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/12.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/13.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/13.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/14.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/14.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/15.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/15.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/16.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/16.png",
+                        "alt": "Weapons",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/17.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/17.png",
+                        "alt": "Weapons",
                         "contain": true
                       }
                     }
@@ -382,44 +1024,126 @@
                     }
                   }
                 ]
+              },
+              {
+                "id": "armor",
+                "category": "Armors",
+                "slides": [
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/1.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/1.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/2.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/2.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/3.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/3.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/4.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/4.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/5.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/5.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/6.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/6.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/7.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/7.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/8.png",
+                        "alt": "Weapons"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/8.png",
+                        "alt": "Weapons"
+                      }
+                    }
+                  }
+                ]
               }
             ]
-          }
-        }
-      ]
-    },
-
-    {
-      "id": "earn",
-      "name": "Settle",
-      "webgl": "4",
-      "sections": [
-        {
-          "id": "earn-01",
-          "theme": "dark",
-          "component": {
-            "name": "SectionText",
-            "title": "Your new life",
-            "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
-            "position": "center top"
-          }
-        }
-      ]
-    },
-
-    {
-      "id": "open-world",
-      "name": "Experience",
-      "webgl": "5",
-      "sections": [
-        {
-          "id": "open-world-01",
-          "theme": "dark",
-          "component": {
-            "name": "SectionText",
-            "title": "Experience the metaverse",
-            "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <br /><br /> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
-            "position": "center top"
           }
         }
       ]
@@ -435,7 +1159,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "A new economy",
+            "title": "Your new economy",
             "text": "Meta Life is powered by $METAL, its dual economy token. <br /><br /> Earn xMETAL by staking assets, selling on the marketplace and lending to other players. Swap it for ETH anytime. <br /><br /> Swap xMETAL for METAL - our governance token - to participe in the Meta Life DAO and help shape the future of your metaverse.",
             "position": "right center",
             "button": {
