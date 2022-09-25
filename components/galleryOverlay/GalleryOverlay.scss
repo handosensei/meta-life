@@ -124,7 +124,8 @@
   letter-spacing: 0.1em;
   color: var(--color-black-04);
   text-transform: uppercase;
-
+  flex-shrink: 0;
+  margin-right: 1em;
   @include maxMobile {
     display: none;
   }

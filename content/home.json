@@ -314,107 +314,422 @@
                 "category": "Environments",
                 "slides": [
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis",
+                    "text": "Magically suspended in the sky, Astralis is the capital of the noble Celestials, the most prestigious race in Meta Life. Filled with process and knowledge, it is home to godly monuments, clear lakes, stylized buildings and architectural spaces on different levels showcasing beautiful nature.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/01.jpg",
-                        "alt": "The Swamps"
+                        "src": "/img/gallery/environment/Astralis/1.jpg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/01.jpg",
-                        "alt": "The Swamps",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/1.jpg",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis (2)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/02.jpg",
-                        "alt": "The Forest"
+                        "src": "/img/gallery/environment/Astralis/2.png",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/02.jpg",
-                        "alt": "The Forest",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/2.png",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis (3)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/03.jpg",
-                        "alt": "The Desert"
+                        "src": "/img/gallery/environment/Astralis/3.png",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/03.jpg",
-                        "alt": "The Desert",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/3.png",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis (4)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/04.jpg",
-                        "alt": "The Mountains"
+                        "src": "/img/gallery/environment/Astralis/4.jpeg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/04.jpg",
-                        "alt": "The Mountains",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/4.jpeg",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis (5)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/05.jpg",
-                        "alt": "The Mountains"
+                        "src": "/img/gallery/environment/Astralis/5.jpeg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/05.jpg",
-                        "alt": "The Mountains",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/5.jpeg",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "Astralis (6)",
+                    "text": "Another angle of Astralis, home to the Celestials.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/06.jpg",
-                        "alt": "The Mountains"
+                        "src": "/img/gallery/environment/Astralis/6.jpeg",
+                        "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/06.jpg",
-                        "alt": "The Mountains",
-                        "contain": true
+                        "src": "/img/gallery/environment/Astralis/6.jpeg",
+                        "alt": "Astralis"
                       }
                     }
                   },
                   {
-                    "title": "",
-                    "text": "",
+                    "title": "New Heaven",
+                    "text": "Home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. It connects rivers and seas through a magnificently modern coastline that outlines its futuristic skyscrapers and glass-windowed buildings. It was named after its purpose: provide a new place for Cybers to thrive.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/thumb/07.jpg",
-                        "alt": "The Mountains"
+                        "src": "/img/gallery/environment/New Heaven/1.png",
+                        "alt": "New Heaven"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/07.jpg",
-                        "alt": "The Mountains",
-                        "contain": true
+                        "src": "/img/gallery/environment/New Heaven/1.png",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (2)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (3)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (4)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/4.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/4.png",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (5)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/5.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/5.png",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven (6)",
+                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/6.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/6.png",
+                        "alt": "New Heaven"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/1.jpeg",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/1.jpeg",
+                        "alt": "Neopolis"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis (2)",
+                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/2.png",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/2.png",
+                        "alt": "Neopolis"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis (3)",
+                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/3.png",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/3.png",
+                        "alt": "Neopolis"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Capital 111 or C-111",
+                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/1.png",
+                        "alt": "Capital 111 or C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/1.png",
+                        "alt": "Capital 111 or C-111"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Capital 111 or C-111 (2)",
+                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/2.jpeg",
+                        "alt": "Capital 111 or C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/2.jpeg",
+                        "alt": "Capital 111 or C-111"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Capital 111 or C-111 (3)",
+                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/3.jpg",
+                        "alt": "Capital 111 or C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/3.jpg",
+                        "alt": "Capital 111 or C-111"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora, the Golden City",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Aurora/1.png",
+                        "alt": "Aurora, the Golden City"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Aurora/1.png",
+                        "alt": "Aurora, the Golden City"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora, the Golden City (2)",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Aurora/2.jpeg",
+                        "alt": "Aurora, the Golden City"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Aurora/2.jpeg",
+                        "alt": "Aurora, the Golden City"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora, the Golden City (3)",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Aurora/3.jpeg",
+                        "alt": "Aurora, the Golden City"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Aurora/3.jpeg",
+                        "alt": "Aurora, the Golden City"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-mörr",
+                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/1.png",
+                        "alt": "Barad-mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/1.png",
+                        "alt": "Barad-mörr"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-mörr (2)",
+                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/2.png",
+                        "alt": "Barad-mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/2.png",
+                        "alt": "Barad-mörr"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-mörr (3)",
+                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/3.png",
+                        "alt": "Barad-mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/3.png",
+                        "alt": "Barad-mörr"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust",
+                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Rust/1.jpeg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Rust/1.jpeg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust (2)",
+                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Rust/2.jpeg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Rust/2.jpeg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust (3)",
+                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Rust/3.png",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Rust/3.png",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Wildlings",
+                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Wildlings/1.png",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Wildlings/1.png",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Swamps",
+                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboters Garage",
+                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/thumb/13.jpg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/13.jpg",
+                        "alt": "Rust"
                       }
                     }
                   }
@@ -443,190 +758,7 @@
               {
                 "id": "lands",
                 "category": "Lands",
-                "slides": [
-                  {
-                    "title": "Astralis",
-                    "text": "Magically suspended in the sky, Astralis is the capital of the noble Celestials, the most prestigious race in Meta Life. Filled with process and knowledge, it is home to godly monuments, clear lakes, stylized buildings and architectural spaces on different levels showcasing beautiful nature.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/01.jpg",
-                        "alt": "Astralis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/01.jpg",
-                        "alt": "Astralis"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Astralis (2)",
-                    "text": "Another angle of Astralis, home to the Celestials.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/02.jpg",
-                        "alt": "Astralis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/02.jpg",
-                        "alt": "Astralis"
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven",
-                    "text": "Home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. It connects rivers and seas through a magnificently modern coastline that outlines its futuristic skyscrapers and glass-windowed buildings. It was named after its purpose: provide a new place for Cybers to thrive.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/03.jpg",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/03.jpg",
-                        "alt": "New Heaven"
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven (2)",
-                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/04.jpg",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/04.jpg",
-                        "alt": "New Heaven"
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven (3)",
-                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/05.jpg",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/05.jpg",
-                        "alt": "New Heaven"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Neopolis",
-                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/06.jpg",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/06.jpg",
-                        "alt": "Neopolis"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Capital 111 or C-111",
-                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/07.jpg",
-                        "alt": "Capital 111 or C-111"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/07.jpg",
-                        "alt": "Capital 111 or C-111"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Aurora, the Golden City",
-                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/08.jpg",
-                        "alt": "Aurora, the Golden City"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/08.jpg",
-                        "alt": "Aurora, the Golden City"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Barad-mörr",
-                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/09.jpg",
-                        "alt": "Barad-mörr"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/09.jpg",
-                        "alt": "Barad-mörr"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Rust",
-                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/10.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/10.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Wildlings",
-                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/11.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/11.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Swamps",
-                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/12.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/12.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Roboters Garage",
-                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/13.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/13.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  }
-                ]
+                "slides": []
               },
               {
                 "id": "residences",
