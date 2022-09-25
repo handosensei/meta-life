@@ -1148,11 +1148,11 @@
                     "text": "The ZERO 11 motorbike is a product of Cybers engineering. It’s a light, fast and stable bike that is electrically powered.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/01.jpg",
+                        "src": "/img/gallery/vehicles/thumb/1.png",
                         "alt": "ZERO 11"
                       },
                       "highres": {
-                        "src": "/img/gallery/vehicles/01.jpg",
+                        "src": "/img/gallery/vehicles/1.png",
                         "alt": "ZERO 11",
                         "contain": true
                       }
@@ -1163,11 +1163,11 @@
                     "text": "The Buggy is an all-terrain vehicle used mostly by Roughs in and outside of Rust, in desert areas and on difficult soils.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/02.jpg",
+                        "src": "/img/gallery/vehicles/thumb/2.png",
                         "alt": "Buggy"
                       },
                       "highres": {
-                        "src": "/img/gallery/vehicles/02.jpg",
+                        "src": "/img/gallery/vehicles/2.png",
                         "alt": "Buggy",
                         "contain": true
                       }
