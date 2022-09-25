@@ -42,7 +42,7 @@ export default {
     Menu,
     Preloader,
     Webgl,
-    AudioPlayer
+    AudioPlayer,
   },
 
   mixins: [AssetsLoader],
@@ -108,19 +108,19 @@ export default {
           duration: 0.2,
           ease: 'none',
           onComplete: () => {
-            window.canvas.props.active = false
-          }
-        })
+            window.canvas.props.active = false;
+          },
+        });
       } else {
-        console.log(window.canvas.props.active)
-        window.canvas.props.active = true
-        console.log(this.$refs.webgl.$el)
+        console.log(window.canvas.props.active);
+        window.canvas.props.active = true;
+        console.log(this.$refs.webgl.$el);
         gsap.to(this.$refs.webgl.$el, {
           autoAlpha: 1,
           duration: 0.6,
           ease: 'none',
-          delay: 0.25
-        })
+          delay: 0.25,
+        });
       }
       if (this.menuOpen) {
         this.setMenuOpen(false);

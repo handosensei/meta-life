@@ -56,12 +56,12 @@ export default {
     ...mapState('app', ['windowSize']),
 
     useGallery() {
-      return this.galleryItems && this.galleryItems.length > 0
+      return this.galleryItems && this.galleryItems.length > 0;
     },
 
-    smallScreen () {
-      return this.windowSize.width < BREAKPOINTS.s
-    }
+    smallScreen() {
+      return this.windowSize.width < BREAKPOINTS.s;
+    },
   },
 
   mounted() {
@@ -82,21 +82,20 @@ export default {
         wordsClass: 'title-word',
       });
 
-       this.splitText = new SplitText(this.$refs.text, {
-          type: 'lines',
-          linesClass: 'text-line',
-        });
-
+      this.splitText = new SplitText(this.$refs.text, {
+        type: 'lines',
+        linesClass: 'text-line',
+      });
     },
 
     getEnterTl() {
       const tl = gsap.timeline();
 
-      tl.delay(0)
+      tl.delay(0);
 
-      tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' })
+      tl.to(this.$el, { autoAlpha: 1, duration: 0.4, ease: 'none' });
 
-      tl.to(this.$refs.scroll, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 0.25)
+      tl.to(this.$refs.scroll, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 0.25);
 
       if (this.subtitle) {
         tl.fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0);
@@ -106,14 +105,10 @@ export default {
         .fromTo(this.splitTitle.words, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0)
         .fromTo(this.splitText.lines, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 0.5);
 
-
-      if(this.smallScreen && this.useGallery){
-        tl.fromTo(this.$refs.galleryBtn.$el,
-          { autoAlpha: 0, yPercent: 50 },
-          { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }
-        , 1)
+      if (this.smallScreen && this.useGallery) {
+        tl.fromTo(this.$refs.galleryBtn.$el, { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 1, stagger: 0.1, ease: 'expo.out' }, 1);
       }
-     if (this.useGallery) {
+      if (this.useGallery) {
         const galleryTl = this.$refs.galleryItems.getGalleryTl();
         tl.add(galleryTl, 0);
       }
@@ -131,7 +126,7 @@ export default {
 
     toggleGallery() {
       this.$root.$emit('galleryOverlay:toggle', this.galleryItems[0]);
-    }
+    },
   },
 };
 </script>

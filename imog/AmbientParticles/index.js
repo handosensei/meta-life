@@ -1,8 +1,8 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import _ from 'underscore';
 
 import Material from './ParticlePointsMaterial';
+import IMOG from '~/lib/imog';
 
 export default IMOG.Component('AmbientParticles', {
   options: {

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import _ from 'underscore';
+import IMOG from '~/lib/imog';
 
 import AmbientParticles from '~/imog/AmbientParticles';
 import AmbientLight from '~/imog/AmbientLight';

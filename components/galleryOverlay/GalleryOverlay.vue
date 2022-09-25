@@ -13,11 +13,17 @@
 
       <div class="backgroundImages">
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
-          <img :key="activeSlide.image.highres.src" class="backgroundImage" :class="activeSlide.image.highres.contain ? 'contain' : ''" :src="activeSlide.image.highres.src" :alt="activeSlide.image.highres.alt" />
+          <img
+            :key="activeSlide.image.highres.src"
+            class="backgroundImage"
+            :class="activeSlide.image.highres.contain ? 'contain' : ''"
+            :src="activeSlide.image.highres.src"
+            :alt="activeSlide.image.highres.alt"
+          />
         </transition>
       </div>
 
-      <IconButton ref="close" as="button" class="closeButton right" icon="CloseButton" aria-label="close gallery button" @click.native="onClose"/>
+      <IconButton ref="close" as="button" class="closeButton right" icon="CloseButton" aria-label="close gallery button" @click.native="onClose" />
 
       <nav class="nav">
         <button class="backButton" type="button" @click="onClose">
@@ -57,7 +63,7 @@ export default {
   components: {
     FocusLock,
     Icon,
-    IconButton
+    IconButton,
   },
 
   props: {
@@ -86,8 +92,8 @@ export default {
   mounted() {
     window.addEventListener('keydown', this.onKeyDown);
 
-    gsap.to('.header', { autoAlpha: 0, ease: 'none', duration: 0.3 })
-    gsap.to(this.$refs.close.$el, { autoAlpha: 1, ease: 'none', duration: 0.3 })
+    gsap.to('.header', { autoAlpha: 0, ease: 'none', duration: 0.3 });
+    gsap.to(this.$refs.close.$el, { autoAlpha: 1, ease: 'none', duration: 0.3 });
 
     this.$nuxt.$emit(
       'assetsLoader:load',
@@ -135,11 +141,11 @@ export default {
     },
 
     onClose() {
-      gsap.to('.header', { autoAlpha: 1, ease: 'none', duration: 0.3 })
-      gsap.to(this.$refs.close.$el, { autoAlpha: 0, ease: 'none', duration: 0.3 })
-      gsap.to(this.$refs.content, { autoAlpha: 0, ease: 'none', duration: 0.3 })
+      gsap.to('.header', { autoAlpha: 1, ease: 'none', duration: 0.3 });
+      gsap.to(this.$refs.close.$el, { autoAlpha: 0, ease: 'none', duration: 0.3 });
+      gsap.to(this.$refs.content, { autoAlpha: 0, ease: 'none', duration: 0.3 });
       this.$root.$emit('galleryOverlay:toggle', '');
-      window.history.pushState("", document.title, window.location.pathname + window.location.search);
+      window.history.pushState('', document.title, window.location.pathname + window.location.search);
     },
 
     onEnterImage(el) {

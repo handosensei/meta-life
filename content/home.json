@@ -42,11 +42,11 @@
                     "text": "A creature specific to the Burner environment with heavy armor equipment, and great forged claws. Ideal for tanking damage while hurting enemies back.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/01.jpg",
+                        "src": "/img/gallery/creatures/thumb/1.png",
                         "alt": "Mörberr"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/01.jpg",
+                        "src": "/img/gallery/creatures/1.png",
                         "alt": "Mörberr",
                         "contain": true
                       }
@@ -57,11 +57,11 @@
                     "text": "A stunning and extraordinary Celestial creature rarely witnessed by humans. Taming it and mastering its devastating spells requires time and dedication.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/02.jpg",
+                        "src": "/img/gallery/creatures/thumb/2.png",
                         "alt": "Celix"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/02.jpg",
+                        "src": "/img/gallery/creatures/2.png",
                         "alt": "Celix",
                         "contain": true
                       }
@@ -72,11 +72,11 @@
                     "text": "Some say Vitruvis is a godly creature or a Celestial divinity. No one really knows but its ancient roots and magnificent aesthetics make it a rare occurence in the world of Meta Life.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/03.jpg",
+                        "src": "/img/gallery/creatures/thumb/3.png",
                         "alt": "Vitruvis"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/03.jpg",
+                        "src": "/img/gallery/creatures/3.png",
                         "alt": "Vitruvis",
                         "contain": true
                       }
@@ -87,11 +87,11 @@
                     "text": "Squir is a mecha squirrel escaped from the Cybers Mecha Factory and is now nowhere to be found. Some say to have spotted it in The Swamps where it hunts other creatures. Approach with great caution.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/04.jpg",
+                        "src": "/img/gallery/creatures/thumb/4.png",
                         "alt": "Squir"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/04.jpg",
+                        "src": "/img/gallery/creatures/4.png",
                         "alt": "Squir",
                         "contain": true
                       }
@@ -102,11 +102,11 @@
                     "text": "The Rhimo was made by the Matrix Angels and is built with a powerful mechanical body that makes it an intimidating companion and creature to deal with.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/05.jpg",
+                        "src": "/img/gallery/creatures/thumb/5.png",
                         "alt": "Rhimo"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/05.jpg",
+                        "src": "/img/gallery/creatures/5.png",
                         "alt": "Rhimo",
                         "contain": true
                       }
@@ -117,11 +117,11 @@
                     "text": "The Spyder is capable of detecting movements from afar thanks to an internal AI-powered algorithm. A formidable skill for hunters.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/06.jpg",
+                        "src": "/img/gallery/creatures/thumb/6.png",
                         "alt": "Spyder"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/06.jpg",
+                        "src": "/img/gallery/creatures/6.png",
                         "alt": "Spyder",
                         "contain": true
                       }
@@ -132,11 +132,11 @@
                     "text": "The Ryena is a rare creature often found in or near C-111, the capital of the Roboters. It roams around the abandoned neighborhoods of the city to find food, most often at night. ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/07.jpg",
+                        "src": "/img/gallery/creatures/thumb/7.png",
                         "alt": "Ryena"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/07.jpg",
+                        "src": "/img/gallery/creatures/7.png",
                         "alt": "Ryena",
                         "contain": true
                       }
@@ -147,12 +147,162 @@
                     "text": "Crust can bite, crawl and tear out faster than most creatures. It typically lives in arid environments and is said to be quite invasive in the region of Rust where Roughs reside. ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/08.jpg",
+                        "src": "/img/gallery/creatures/thumb/8.png",
                         "alt": "Crust"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/08.jpg",
+                        "src": "/img/gallery/creatures/8.png",
                         "alt": "Crust",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/9.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/9.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/10.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/10.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/11.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/11.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/12.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/12.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/13.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/13.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/14.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/14.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/15.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/15.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/16.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/16.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/17.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/17.png",
+                        "alt": "",
+                        "contain": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "",
+                    "text": "",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/18.png",
+                        "alt": ""
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/18.png",
+                        "alt": "",
                         "contain": true
                       }
                     }

@@ -23,11 +23,13 @@ import Sphere from '~/assets/svg/sphere.svg?inline=true';
 import Tunnel from '~/assets/svg/tunnel.svg?inline=true';
 import Twitter from '~/assets/svg/twitter.svg?inline=true';
 import Wordmark from '~/assets/svg/wordmark.svg?inline=true';
+import BigSphere from '~/assets/svg/bigSphere.svg?inline=true';
 
 export default {
   name: 'IconComponent',
 
   components: {
+    BigSphere,
     Close,
     CloseButton,
     Discord,

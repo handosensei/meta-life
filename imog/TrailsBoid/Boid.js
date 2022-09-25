@@ -2,24 +2,24 @@ import _ from 'underscore';
 import * as THREE from 'three';
 
 import { Line2 } from 'three/examples/jsm/lines/Line2';
-import { CustomLineMaterial } from './Material';
 import { LineGeometry } from 'three/examples/jsm/lines/LineGeometry';
+import { CustomLineMaterial } from './Material';
 
 const v = new THREE.Vector3();
 
-var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vector3(), color = 0xffffff } = {}) {
-  var self = this;
+const Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vector3(), color = 0xffffff } = {}) {
+  const self = this;
 
-  var vector = new THREE.Vector3(),
-    _acceleration,
-    _width = 500,
-    _height = 500,
-    _depth = 500,
-    _goal,
-    _neighborhoodRadius = 50,
-    _maxSpeed = 4,
-    _maxSteerForce = 0.2,
-    _avoidWalls = false;
+  let vector = new THREE.Vector3();
+    let _acceleration;
+    let _width = 500;
+    let _height = 500;
+    let _depth = 500;
+    let _goal;
+    const _neighborhoodRadius = 50;
+    const _maxSpeed = 4;
+    const _maxSteerForce = 0.2;
+    let _avoidWalls = false;
 
   this.position = position;
   this.velocity = velocity;
@@ -43,9 +43,9 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
       worldUnits: true,
       linewidth: 0.003, // in world units with size attenuation, pixels otherwise
       vertexColors: false,
-      //resolution: [innerWidth, innerHeight],
+      // resolution: [innerWidth, innerHeight],
 
-      //resolution:  // to be set by renderer, eventually
+      // resolution:  // to be set by renderer, eventually
       dashed: false,
       alphaToCoverage: true,
     });
@@ -138,7 +138,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   this.move = function () {
     this.velocity.add(_acceleration);
 
-    var l = this.velocity.length();
+    const l = this.velocity.length();
 
     if (l > _maxSpeed) {
       this.velocity.divideScalar(l / _maxSpeed);
@@ -172,7 +172,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   //
 
   this.avoid = function (target) {
-    var steer = new THREE.Vector3();
+    const steer = new THREE.Vector3();
 
     steer.copy(this.position);
     steer.sub(target);
@@ -183,10 +183,10 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   };
 
   this.repulse = function (target) {
-    var distance = this.position.distanceTo(target);
+    const distance = this.position.distanceTo(target);
 
     if (distance < 300) {
-      var steer = new THREE.Vector3();
+      const steer = new THREE.Vector3();
 
       steer.subVectors(this.position, target);
       steer.multiplyScalar(0.1 / distance);
@@ -196,7 +196,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   };
 
   this.reach = function (target, amount) {
-    var steer = new THREE.Vector3();
+    const steer = new THREE.Vector3();
 
     steer.subVectors(target, this.position);
     steer.multiplyScalar(amount);
@@ -205,11 +205,11 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   };
 
   this.alignment = function (boids) {
-    var boid,
-      velSum = new THREE.Vector3(),
-      count = 0;
+    let boid;
+      const velSum = new THREE.Vector3();
+      let count = 0;
 
-    for (var i = 0, il = boids.length; i < il; i++) {
+    for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;
 
       boid = boids[i];
@@ -225,7 +225,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
     if (count > 0) {
       velSum.divideScalar(count);
 
-      var l = velSum.length();
+      const l = velSum.length();
 
       if (l > _maxSteerForce) {
         velSum.divideScalar(l / _maxSteerForce);
@@ -236,13 +236,13 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   };
 
   this.cohesion = function (boids) {
-    var boid,
-      distance,
-      posSum = new THREE.Vector3(),
-      steer = new THREE.Vector3(),
-      count = 0;
+    let boid;
+      let distance;
+      const posSum = new THREE.Vector3();
+      const steer = new THREE.Vector3();
+      let count = 0;
 
-    for (var i = 0, il = boids.length; i < il; i++) {
+    for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;
 
       boid = boids[i];
@@ -260,7 +260,7 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
 
     steer.subVectors(posSum, this.position);
 
-    var l = steer.length();
+    const l = steer.length();
 
     if (l > _maxSteerForce) {
       steer.divideScalar(l / _maxSteerForce);
@@ -270,12 +270,12 @@ var Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Vect
   };
 
   this.separation = function (boids) {
-    var boid,
-      distance,
-      posSum = new THREE.Vector3(),
-      repulse = new THREE.Vector3();
+    let boid;
+      let distance;
+      const posSum = new THREE.Vector3();
+      const repulse = new THREE.Vector3();
 
-    for (var i = 0, il = boids.length; i < il; i++) {
+    for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;
 
       boid = boids[i];

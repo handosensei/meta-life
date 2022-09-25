@@ -12,12 +12,13 @@
       @mouseenter="onMouseEnter(id)"
       @mouseleave="onMouseLeave(id)"
     >
-      <span ref="label">{{ galleryItem.category }}</span>
+      <span ref="label" class>{{ galleryItem.category }}</span>
       <div ref="galleryMask" class="galleryMask">
         <img ref="galleryImage" class="galleryImage" :src="galleryItem.slides[0].image.thumb.src" :alt="galleryItem.slides[0].image.thumb.alt" />
       </div>
       <Icon ref="galleryPlus" class="galleryPlus" type="Plus" />
       <Icon ref="gallerySphere" class="gallerySphere" type="Sphere" />
+      <Icon ref="galleryBigSphere" class="galleryBigSphere gallerySphere" type="bigSphere" />
     </button>
   </div>
 </template>
@@ -51,17 +52,35 @@ export default {
 
   mounted() {
     this.gallerySphere = this.$el.querySelectorAll('.gallerySphere circle');
+    this.galleryBigSphere = this.$el.querySelectorAll('.galleryBigSphere circle');
     this.galleryPlus = this.$el.querySelectorAll('.galleryPlus');
 
     gsap.to(this.$refs.galleryImage, { rotate: 360, ease: 'linear', repeat: -1, duration: 20 });
     gsap.to(this.$refs.galleryMask, { rotate: -360, ease: 'linear', repeat: -1, duration: 20 });
-
-    this.sound = new Audio('/audio/itemHover.mp3');
+    this.bigCircleAnimation = gsap.timeline()
+    this.bigCircleAnimation.fromTo(
+      this.galleryBigSphere,
+      {
+        attr: {
+          r: 45,
+        },
+      },
+      {
+        attr: {
+          r: 55,
+        },
+        ease: 'power1.inOut',
+        duration: 1,
+        yoyo: true,
+        repeat: -1,
+      }
+    );
+    this.sound = new Audio('/audio/sound.mp3');
   },
 
   beforeDestroy() {
     this.sound.removeAttribute('src');
-    this.sound.load()
+    this.sound.load();
   },
 
   methods: {
@@ -71,21 +90,22 @@ export default {
 
     onMouseEnter(id) {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
-        const mask = this.$refs.galleryMask[id]
-        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild])
+        const mask = this.$refs.galleryMask[id];
+        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle');
+        const bigCircles = this.$refs.galleryBigSphere[id].$el.querySelectorAll('.js-circle');
+        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild]);
         gsap.to(mask, {
           autoAlpha: 1,
           duration: 0.65,
           ease: 'expo.out',
-          delay: 0.15
-        })
-        gsap.to(this.$refs.label[id], { y: 40, duration: 0.75, ease: 'expo.out' })
+          delay: 0.15,
+        });
+        gsap.to(this.$refs.label[id], { y: 20, duration: 0.75, ease: 'expo.out' });
         gsap.to(circles, {
           attr: {
             r: 72,
             duration: 0.75,
-            ease: 'expo.out'
+            ease: 'expo.out',
           },
           onComplete: () => {
             gsap.fromTo(
@@ -93,9 +113,25 @@ export default {
               { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
               { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
             );
-          }
-        })
-        if(this.audio){
+          },
+        });
+        this.bigCircleAnimation.pause();
+        gsap.to(bigCircles, {
+          attr: {
+            r: 102,
+            duration: 0.75,
+            ease: 'expo.out',
+          },
+          onComplete: () => {
+            gsap.fromTo(
+              this.$refs.galleryBigSphere[id].$el.lastChild,
+              { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+              { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+            );
+          },
+        });
+
+        if (this.audio) {
           this.sound.currentTime = 0;
           this.sound.play();
         }
@@ -104,34 +140,65 @@ export default {
 
     onMouseLeave(id) {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
-        const mask = this.$refs.galleryMask[id]
-        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle')
-        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild])
+        const mask = this.$refs.galleryMask[id];
+        const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle');
+        const bigCircles = this.$refs.galleryBigSphere[id].$el.querySelectorAll('.js-circle');
+        gsap.killTweensOf([...circles, this.$refs.gallerySphere[id].$el.lastChild]);
         gsap.to(mask, {
           autoAlpha: 0,
           duration: 0.65,
-          ease: 'expo.out'
-        })
-        gsap.to(this.$refs.label[id], { y: 0, duration: 0.75, ease: 'expo.out' })
+          ease: 'expo.out',
+        });
+        gsap.to(this.$refs.label[id], { y: 0, duration: 0.75, ease: 'expo.out' });
         gsap.to(circles, {
           attr: {
             r: 25,
             duration: 0.75,
-            ease: 'expo.out'
+            ease: 'expo.out',
           },
           onComplete: () => {
-            gsap.fromTo(this.$refs.gallerySphere[id].$el.lastChild, {
-              drawSVG: '-100%',
-              rotate: 90,
-              transformOrigin: 'center'
-            }, {
-              drawSVG: '0%',
-              rotate: 270,
-              duration: 1.5,
-              ease: 'expo.out'
-            });
-          }
-        })
+            gsap.fromTo(
+              this.$refs.gallerySphere[id].$el.lastChild,
+              {
+                drawSVG: '-100%',
+                rotate: 90,
+                transformOrigin: 'center',
+              },
+              {
+                drawSVG: '0%',
+                rotate: 270,
+                duration: 1.5,
+                ease: 'expo.out',
+              }
+            );
+          },
+        });
+
+        
+        gsap.to(bigCircles, {
+          attr: {
+            r: 55,
+            duration: 0.75,
+            ease: 'expo.out',
+          },
+          onComplete: () => {
+            gsap.fromTo(
+              this.$refs.galleryBigSphere[id].$el.lastChild,
+              {
+                drawSVG: '100%',
+                rotate: 90,
+                transformOrigin: 'center',
+              },
+              {
+                drawSVG: '0%',
+                rotate: 270,
+                duration: 1.5,
+                ease: 'expo.out',
+              }
+            );
+          },
+        });
+        this.bigCircleAnimation.restart();
       }
     },
 
@@ -159,7 +226,7 @@ export default {
           0.5
         )
         .fromTo(this.galleryPlus, { autoAlpha: 0, rotate: 90 }, { autoAlpha: 1, rotate: 0, duration: 3, ease: 'expo.inOut' }, 1)
-        .fromTo(this.$refs.label, { autoAlpha: 0 }, { autoAlpha: 0.75 }, 1)
+        .fromTo(this.$refs.label, { autoAlpha: 0 }, { autoAlpha: 0.75 }, 1);
       return galleryTl;
     },
   },

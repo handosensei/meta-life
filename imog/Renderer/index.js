@@ -1,16 +1,16 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import { getGPUTier } from 'detect-gpu';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import PostMaterial from './material';
+import { UnrealBloomPass } from './UnrealBloomPass';
+import IMOG from '~/lib/imog';
 import useWindowSize from '~/lib/imog/use/windowSize';
 
 import OrbitCamera from '~/imog/Cameras/OrbitCamera';
 import BasicCamera from '~/imog/Cameras/BasicCamera';
 import KeyboardCamera from '~/imog/Cameras/KeyboardCamera';
 
-import PostMaterial from './material';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-import { UnrealBloomPass } from './UnrealBloomPass';
 
 const quadGeometry = new THREE.PlaneBufferGeometry(1, 1);
 
@@ -219,7 +219,7 @@ export default IMOG.Component('Renderer', {
       this.vfxTargetBloom.setSize(width * pr, height * pr);
       this.composer.setSize(width * pr, height * pr);
 
-      //screen
+      // screen
       this.screenCamera.left = (-width * pr) / 2;
       this.screenCamera.right = (width * pr) / 2;
       this.screenCamera.top = (height * pr) / 2;

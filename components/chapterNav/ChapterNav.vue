@@ -4,7 +4,11 @@
       <li v-for="(chapter, index) in visibleChapters" ref="navItems" :key="chapter.id" class="navItem" :class="{ isActive: chapter === activeChapter }">
         <button class="button" type="button" :disabled="activeChapterIndex === index" @click="onClick(chapter, index)">
           <svg viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z" fill="white" fill-opacity="0.1"/>
+            <path
+              d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z"
+              fill="white"
+              fill-opacity="0.1"
+            />
           </svg>
           <div class="buttonLabel">
             {{ chapter.name }}
@@ -12,13 +16,17 @@
           <div ref="actives" class="active">
             <div class="activeWrapper">
               <svg viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z" fill="white" fill-opacity="0.1"/>
+                <path
+                  d="M0 3C0 1.34315 1.34315 0 3 0H199.439C201.096 0 202.439 1.34315 202.439 3V36.5854L196.517 43.2927L190.594 50H2.99999C1.34314 50 0 48.6569 0 47V3Z"
+                  fill="white"
+                  fill-opacity="0.1"
+                />
               </svg>
               <div class="buttonLabel">
                 {{ chapter.name }}
               </div>
-              </div>
-           </div>
+            </div>
+          </div>
         </button>
       </li>
     </ul>
@@ -56,26 +64,29 @@ export default {
     },
 
     smallScreen() {
-      return this.windowSize.width < BREAKPOINTS.s
-    }
+      return this.windowSize.width < BREAKPOINTS.s;
+    },
   },
 
   watch: {
     chapterNavOpen: 'toggleVisibility',
-    activeChapter: 'switchActiveElement'
+    activeChapter: 'switchActiveElement',
   },
 
   mounted() {
-    const selectedElement = this.$refs.actives[this.activeChapterIndex]
+    const selectedElement = this.$refs.actives[this.activeChapterIndex];
     gsap.set(this.$refs.actives, {
-      yPercent: -100
-    })
-    gsap.set(this.$refs.actives.map(element => element.querySelector('div')), {
-      yPercent: 100
-    })
+      yPercent: -100,
+    });
+    gsap.set(
+      this.$refs.actives.map((element) => element.querySelector('div')),
+      {
+        yPercent: 100,
+      }
+    );
     gsap.set([selectedElement, selectedElement.querySelector('div')], {
-      yPercent: 0
-    })
+      yPercent: 0,
+    });
     this.$root.$on('window:resize', this.onResize);
     this.$root.$on('section:navigate', this.onSectionNavigation);
   },
@@ -87,25 +98,49 @@ export default {
 
   methods: {
     toggleVisibility() {
-      gsap.to(this.$el, {autoAlpha: this.chapterNavOpen ? 1 : 0})
+      gsap.to(this.$el, { autoAlpha: this.chapterNavOpen ? 1 : 0 });
     },
 
     switchActiveElement(newChapter, oldChapter) {
-      const newActiveElement = this.$refs.actives[this.activeChapterIndex]
+      const newActiveElement = this.$refs.actives[this.activeChapterIndex];
       const previousActiveElement = this.$refs.actives[getChapterIndex(this.chapters, oldChapter)];
-      gsap.timeline({paused: true}).to(previousActiveElement, {
-        yPercent: 100
-      }, 0).to(previousActiveElement.querySelector('.activeWrapper'), {
-        yPercent: -100
-      }, 0).fromTo(newActiveElement, {
-        yPercent: -100
-      }, {
-        yPercent: 0
-      }, 0).fromTo(newActiveElement.querySelectorAll('.activeWrapper'), {
-        yPercent: 100
-      },{
-        yPercent: 0
-      }, 0).restart()
+      gsap
+        .timeline({ paused: true })
+        .to(
+          previousActiveElement,
+          {
+            yPercent: 100,
+          },
+          0
+        )
+        .to(
+          previousActiveElement.querySelector('.activeWrapper'),
+          {
+            yPercent: -100,
+          },
+          0
+        )
+        .fromTo(
+          newActiveElement,
+          {
+            yPercent: -100,
+          },
+          {
+            yPercent: 0,
+          },
+          0
+        )
+        .fromTo(
+          newActiveElement.querySelectorAll('.activeWrapper'),
+          {
+            yPercent: 100,
+          },
+          {
+            yPercent: 0,
+          },
+          0
+        )
+        .restart();
     },
 
     onResize() {
@@ -115,11 +150,11 @@ export default {
     },
 
     async onClick(chapter, index) {
-      console.warn(chapter)
+      console.warn(chapter);
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
       await delay(500);
-      this.smallScreen && this.$root.$emit('chapter-nav:toggle')
+      this.smallScreen && this.$root.$emit('chapter-nav:toggle');
       this.disabled = false;
     },
 

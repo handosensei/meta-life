@@ -62,9 +62,9 @@ export default {
         { href: '/#gallery', text: 'Gallery', internal: true, disabled: false },
         { href: 'https://google.com/?', text: 'Whitepaper', internal: false, disabled: false },
         { href: 'https://google.com', text: 'Newsletter', internal: false, disabled: false },
-        { href: '#', text: 'Marketplace', internal: false, disabled: true }
+        { href: '#', text: 'Marketplace', internal: false, disabled: true },
       ],
-      links2: []
+      links2: [],
     };
   },
 

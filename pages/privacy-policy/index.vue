@@ -2,7 +2,7 @@
   <main class="page">
     <div ref="bounding" class="bounding">
       <PrivacyPolicy data-section />
-      <BackToExperience data-section /> 
+      <BackToExperience data-section />
     </div>
   </main>
 </template>
@@ -15,14 +15,14 @@ import Scroll from '~/mixins/scroll';
 import SEO from '~/mixins/seo';
 
 import BackToExperience from '~/components/backToExperience/BackToExperience.vue';
-import PrivacyPolicy from '~/components/privacy-policy/PrivacyPolicy.vue'
+import PrivacyPolicy from '~/components/privacy-policy/PrivacyPolicy.vue';
 
 export default {
   name: 'PrivacyPolicyPage',
-  
+
   components: {
     PrivacyPolicy,
-    BackToExperience
+    BackToExperience,
   },
 
   mixins: [Debug, PageTransition, Scroll, SEO],

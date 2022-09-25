@@ -1,7 +1,7 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import IMOG from '~/lib/imog';
 import useWindowSize from '~/lib/imog/use/windowSize';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export default IMOG.Component('OrbitCamera', {
   options: {
