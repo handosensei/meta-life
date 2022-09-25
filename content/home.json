@@ -552,8 +552,8 @@
                     }
                   },
                   {
-                    "title": "Capital 111 or C-111 (3)",
-                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
+                    "title": "Roboters Garage",
+                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/environment/C-111/3.jpg",
@@ -718,20 +718,6 @@
                         "alt": "Rust"
                       }
                     }
-                  },
-                  {
-                    "title": "Roboters Garage",
-                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/thumb/13.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/13.jpg",
-                        "alt": "Rust"
-                      }
-                    }
                   }
                 ]
               }
@@ -758,7 +744,22 @@
               {
                 "id": "lands",
                 "category": "Lands",
-                "slides": []
+                "slides": [
+                  {
+                    "title": "The Swamps",
+                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "id": "residences",
