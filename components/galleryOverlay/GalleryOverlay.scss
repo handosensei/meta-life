@@ -16,6 +16,7 @@
   color: var(--color-white);
 
   @include maxMobile {
+    top: 65%;
     left: 40px;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   }
@@ -53,7 +54,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--color-black);
+  background: url('/img/gallery/background.png') no-repeat center center / cover;
 
   &::before {
     content: '';
@@ -63,6 +64,7 @@
     width: 100%;
     height: 100%;
     z-index: 3;
+    opacity: 0.5;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 46.42%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   }
 }
@@ -82,14 +84,16 @@
 
 .backgroundImage {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 
   @include maxMobile {
-    opacity: 0.5;
+    width: 100%;
+    top: 30%;
+    transform: translateY(-25%);
+    margin: auto;
   }
 
   &.contain {
@@ -163,6 +167,7 @@
 }
 
 .navImage {
+  background: url('/img/gallery/background.png') no-repeat center center / cover;
   width: 6.8rem;
   border-radius: 1px;
   aspect-ratio: 4 / 3;
