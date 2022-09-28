@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { Sky } from './SkyObject';
 import IMOG from '~/lib/imog';
 
-
 const v = new THREE.Vector3();
 
 export default IMOG.Component('Sky', {

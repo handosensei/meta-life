@@ -54,16 +54,16 @@ export default {
     this.gallerySphere = this.$el.querySelectorAll('.gallerySphere circle');
     this.galleryBigSphere = this.$el.querySelectorAll('.galleryBigSphere circle');
     this.galleryPlus = this.$el.querySelectorAll('.galleryPlus');
-    this.bigCircleAnimation = []
-    
+    this.bigCircleAnimation = [];
+
     gsap.to(this.$refs.galleryImage, { rotate: 360, ease: 'linear', repeat: -1, duration: 20 });
     gsap.to(this.$refs.galleryMask, { rotate: -360, ease: 'linear', repeat: -1, duration: 20 });
 
-    for(let i = 0; i < this.galleryItems.length; i++) {
-      this.bigCircleAnimation[i] = gsap.timeline()
+    for (let i = 0; i < this.galleryItems.length; i++) {
+      this.bigCircleAnimation[i] = gsap.timeline();
       this.bigCircleAnimation[i].fromTo(
-        [this.galleryBigSphere[i*2], this.galleryBigSphere[i*2+1]],
-        
+        [this.galleryBigSphere[i * 2], this.galleryBigSphere[i * 2 + 1]],
+
         {
           attr: {
             r: 45,
@@ -83,17 +83,27 @@ export default {
 
     this.sound = new Audio('/audio/itemHover.mp3');
 
-    this.buttonAnimation = gsap.timeline({repeat: -1, repeatDelay: 2, delay:2});
-    for(let i = 0; i < this.galleryItems.length; i++) {
-      this.buttonAnimation.call(()=>{this.onMouseEnter(i)},null, '+=0.75');
-      this.buttonAnimation.call(()=>{this.onMouseLeave(i)},null, '+=2');
+    this.buttonAnimation = gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2 });
+    for (let i = 0; i < this.galleryItems.length; i++) {
+      this.buttonAnimation.call(
+        () => {
+          this.onMouseEnter(i, false);
+        },
+        null,
+        '+=0.75'
+      );
+      this.buttonAnimation.call(
+        () => {
+          this.onMouseLeave(i);
+        },
+        null,
+        '+=2'
+      );
     }
- 
-   
   },
 
   beforeDestroy() {
-    for(let i = 0; i < this.galleryItems.length; i++) {
+    for (let i = 0; i < this.galleryItems.length; i++) {
       this.bigCircleAnimation[i].kill();
     }
     this.buttonAnimation.kill();
@@ -106,7 +116,7 @@ export default {
       this.$root.$emit('galleryOverlay:toggle', item);
     },
 
-    onMouseEnter(id) {
+    onMouseEnter(id, sound = true) {
       if (this.$refs.gallerySphere[id] && this.$refs.gallerySphere[id].$el) {
         const mask = this.$refs.galleryMask[id];
         const circles = this.$refs.gallerySphere[id].$el.querySelectorAll('.js-circle');
@@ -151,7 +161,7 @@ export default {
           },
         });
 
-        if (this.audio) {
+        if (this.audio && sound) {
           this.sound.currentTime = 0;
           this.sound.play();
         }
@@ -194,7 +204,6 @@ export default {
           },
         });
 
-        
         gsap.to(bigCircles, {
           attr: {
             r: 55,
@@ -214,11 +223,11 @@ export default {
                 rotate: 270,
                 duration: 1.5,
                 ease: 'expo.out',
-              },             
+              }
             );
           },
         });
-        this.bigCircleAnimation[id].restart()
+        this.bigCircleAnimation[id].restart();
       }
     },
 

@@ -110,7 +110,7 @@ $jscomp.polyfill(
         };
       }
       var l = this;
-        var f = !1;
+      var f = !1;
       return { resolve: e(this.resolveTo_), reject: e(this.reject_) };
     };
     h.prototype.resolveTo_ = function (e) {
@@ -184,11 +184,11 @@ $jscomp.polyfill(
           : f;
       }
       let m;
-        let v;
-        const t = new h(function (e, f) {
-          m = e;
-          v = f;
-        });
+      let v;
+      const t = new h(function (e, f) {
+        m = e;
+        v = f;
+      });
       this.callWhenSettled_(l(e, m), l(f, v));
       return t;
     };
@@ -224,7 +224,7 @@ $jscomp.polyfill(
     };
     h.all = function (e) {
       const f = $jscomp.makeIterator(e);
-        let m = f.next();
+      let m = f.next();
       return m.done
         ? v([])
         : new h(function (e, h) {
@@ -236,7 +236,7 @@ $jscomp.polyfill(
               };
             }
             var t = [];
-              var z = 0;
+            var z = 0;
             do t.push(void 0), z++, v(m.value).callWhenSettled_(l(t.length - 1), h), (m = f.next());
             while (!m.done);
           });
@@ -339,15 +339,15 @@ const DracoDecoderModule = (function () {
     function ba() {
       if (!ba.strings) {
         const a = {
-            USER: 'web_user',
-            LOGNAME: 'web_user',
-            PATH: '/',
-            PWD: '/',
-            HOME: '/home/web_user',
-            LANG: ((typeof navigator === 'object' && navigator.languages && navigator.languages[0]) || 'C').replace('-', '_') + '.UTF-8',
-            _: na,
-          };
-          let c;
+          USER: 'web_user',
+          LOGNAME: 'web_user',
+          PATH: '/',
+          PWD: '/',
+          HOME: '/home/web_user',
+          LANG: ((typeof navigator === 'object' && navigator.languages && navigator.languages[0]) || 'C').replace('-', '_') + '.UTF-8',
+          _: na,
+        };
+        let c;
         for (c in Aa) a[c] = Aa[c];
         const b = [];
         for (c in a) b.push(c + '=' + a[c]);
@@ -387,7 +387,7 @@ const DracoDecoderModule = (function () {
     }
     function N(a, c) {
       const b = u(c);
-        let d = b[a];
+      let d = b[a];
       if (d) return d;
       d = Object.create((c || p).prototype);
       d.ptr = a;
@@ -519,8 +519,8 @@ const DracoDecoderModule = (function () {
     }
     m = m || {};
     var a = typeof m !== 'undefined' ? m : {};
-      let Ga = !1;
-      let Ha = !1;
+    let Ga = !1;
+    let Ha = !1;
     a.onRuntimeInitialized = function () {
       Ga = !0;
       if (Ha && typeof a.onModuleLoaded === 'function') a.onModuleLoaded(a);
@@ -535,21 +535,21 @@ const DracoDecoderModule = (function () {
       return a.length < 2 || a.length > 3 ? !1 : a[0] == 1 && a[1] >= 0 && a[1] <= 3 ? !0 : a[0] != 0 || a[1] > 10 ? !1 : !0;
     };
     let ha = {};
-      let W;
+    let W;
     for (W in a) a.hasOwnProperty(W) && (ha[W] = a[W]);
     var na = './this.program';
-      var ea = !1;
-      var Z = !1;
-      let oa = !1;
-      let fb = !1;
-      let Ia = !1;
+    var ea = !1;
+    var Z = !1;
+    let oa = !1;
+    let fb = !1;
+    let Ia = !1;
     ea = typeof window === 'object';
     Z = typeof importScripts === 'function';
     oa = (fb = typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') && !ea && !Z;
     Ia = !ea && !oa && !Z;
     var M = '';
-      let pa;
-      let qa;
+    let pa;
+    let qa;
     if (oa) {
       M = __dirname + '/';
       var ra = function (a, c) {
@@ -604,7 +604,7 @@ const DracoDecoderModule = (function () {
             return new Uint8Array(c.response);
           });
     var ya = a.print || console.log.bind(console);
-      var Y = a.printErr || console.warn.bind(console);
+    var Y = a.printErr || console.warn.bind(console);
     for (W in ha) ha.hasOwnProperty(W) && (a[W] = ha[W]);
     ha = null;
     a.thisProgram && (na = a.thisProgram);
@@ -612,601 +612,601 @@ const DracoDecoderModule = (function () {
     a.wasmBinary && (da = a.wasmBinary);
     typeof WebAssembly !== 'object' && Y('no native wasm support detected');
     let ia;
-      const gb = new WebAssembly.Table({ initial: 381, maximum: 381, element: 'anyfunc' });
-      var za = !1;
-      var xa = typeof TextDecoder !== 'undefined' ? new TextDecoder('utf8') : void 0;
+    const gb = new WebAssembly.Table({ initial: 381, maximum: 381, element: 'anyfunc' });
+    var za = !1;
+    var xa = typeof TextDecoder !== 'undefined' ? new TextDecoder('utf8') : void 0;
     typeof TextDecoder !== 'undefined' && new TextDecoder('utf-16le');
     let T;
-      let ca;
-      let P;
-      let Ja = a.TOTAL_MEMORY || 16777216;
+    let ca;
+    let P;
+    let Ja = a.TOTAL_MEMORY || 16777216;
     if ((ia = a.wasmMemory ? a.wasmMemory : new WebAssembly.Memory({ initial: Ja / 65536 }))) var ka = ia.buffer;
     Ja = ka.byteLength;
     l(ka);
     P[4604] = 5261456;
     var Fa = [];
-      var Ca = [];
-      var Da = [];
-      var Ea = [];
-      var Ba = !1;
-      var aa = 0;
-      let sa = null;
-      let ja = null;
+    var Ca = [];
+    var Da = [];
+    var Ea = [];
+    var Ba = !1;
+    var aa = 0;
+    let sa = null;
+    let ja = null;
     a.preloadedImages = {};
     a.preloadedAudios = {};
     var U = 'draco_decoder.wasm';
     va(U) || (U = v(U));
     Ca.push({
-      func () {
+      func() {
         hb();
       },
     });
     var Aa = {};
-      var R = {
-        buffers: [null, [], []],
-        printChar (a, c) {
-          const b = R.buffers[a];
-          c === 0 || c === 10 ? ((a === 1 ? ya : Y)(h(b, 0)), (b.length = 0)) : b.push(c);
-        },
-        varargs: 0,
-        get (a) {
-          R.varargs += 4;
-          return P[(R.varargs - 4) >> 2];
-        },
-        getStr () {
-          return X(R.get());
-        },
-        get64 () {
-          const a = R.get();
-          R.get();
-          return a;
-        },
-        getZero () {
-          R.get();
-        },
-      };
-      const Ka = {
-        __cxa_allocate_exception (a) {
-          return ib(a);
-        },
-        __cxa_throw (a, c, b) {
-          'uncaught_exception' in ta ? ta.uncaught_exceptions++ : (ta.uncaught_exceptions = 1);
-          throw a;
-        },
-        abort () {
-          z();
-        },
-        emscripten_get_sbrk_ptr () {
-          return 18416;
-        },
-        emscripten_memcpy_big (a, c, b) {
-          ca.set(ca.subarray(c, c + b), a);
-        },
-        emscripten_resize_heap (a) {
-          if (a > 2147418112) return !1;
-          for (var c = Math.max(T.length, 16777216); c < a; ) c = c <= 536870912 ? e(2 * c, 65536) : Math.min(e((3 * c + 2147483648) / 4, 65536), 2147418112);
-          a: {
-            try {
-              ia.grow((c - ka.byteLength + 65535) >> 16);
-              l(ia.buffer);
-              var b = 1;
-              break a;
-            } catch (d) {}
-            b = void 0;
-          }
-          return b ? !0 : !1;
-        },
-        environ_get (a, c) {
-          let b = 0;
-          ba().forEach(function (d, e) {
-            let f = c + b;
-            e = P[(a + 4 * e) >> 2] = f;
-            for (f = 0; f < d.length; ++f) T[e++ >> 0] = d.charCodeAt(f);
-            T[e >> 0] = 0;
-            b += d.length + 1;
-          });
-          return 0;
-        },
-        environ_sizes_get (a, c) {
-          const b = ba();
-          P[a >> 2] = b.length;
-          let d = 0;
-          b.forEach(function (a) {
-            d += a.length + 1;
-          });
-          P[c >> 2] = d;
-          return 0;
-        },
-        fd_close (a) {
-          return 0;
-        },
-        fd_seek (a, c, b, d, e) {
-          return 0;
-        },
-        fd_write (a, c, b, d) {
+    var R = {
+      buffers: [null, [], []],
+      printChar(a, c) {
+        const b = R.buffers[a];
+        c === 0 || c === 10 ? ((a === 1 ? ya : Y)(h(b, 0)), (b.length = 0)) : b.push(c);
+      },
+      varargs: 0,
+      get(a) {
+        R.varargs += 4;
+        return P[(R.varargs - 4) >> 2];
+      },
+      getStr() {
+        return X(R.get());
+      },
+      get64() {
+        const a = R.get();
+        R.get();
+        return a;
+      },
+      getZero() {
+        R.get();
+      },
+    };
+    const Ka = {
+      __cxa_allocate_exception(a) {
+        return ib(a);
+      },
+      __cxa_throw(a, c, b) {
+        'uncaught_exception' in ta ? ta.uncaught_exceptions++ : (ta.uncaught_exceptions = 1);
+        throw a;
+      },
+      abort() {
+        z();
+      },
+      emscripten_get_sbrk_ptr() {
+        return 18416;
+      },
+      emscripten_memcpy_big(a, c, b) {
+        ca.set(ca.subarray(c, c + b), a);
+      },
+      emscripten_resize_heap(a) {
+        if (a > 2147418112) return !1;
+        for (var c = Math.max(T.length, 16777216); c < a; ) c = c <= 536870912 ? e(2 * c, 65536) : Math.min(e((3 * c + 2147483648) / 4, 65536), 2147418112);
+        a: {
           try {
-            for (var e = 0, f = 0; f < b; f++) {
-              for (var g = P[(c + 8 * f) >> 2], k = P[(c + (8 * f + 4)) >> 2], h = 0; h < k; h++) R.printChar(a, ca[g + h]);
-              e += k;
-            }
-            P[d >> 2] = e;
-            return 0;
-          } catch (ua) {
-            return (typeof FS !== 'undefined' && ua instanceof FS.ErrnoError) || z(ua), ua.errno;
+            ia.grow((c - ka.byteLength + 65535) >> 16);
+            l(ia.buffer);
+            var b = 1;
+            break a;
+          } catch (d) {}
+          b = void 0;
+        }
+        return b ? !0 : !1;
+      },
+      environ_get(a, c) {
+        let b = 0;
+        ba().forEach(function (d, e) {
+          let f = c + b;
+          e = P[(a + 4 * e) >> 2] = f;
+          for (f = 0; f < d.length; ++f) T[e++ >> 0] = d.charCodeAt(f);
+          T[e >> 0] = 0;
+          b += d.length + 1;
+        });
+        return 0;
+      },
+      environ_sizes_get(a, c) {
+        const b = ba();
+        P[a >> 2] = b.length;
+        let d = 0;
+        b.forEach(function (a) {
+          d += a.length + 1;
+        });
+        P[c >> 2] = d;
+        return 0;
+      },
+      fd_close(a) {
+        return 0;
+      },
+      fd_seek(a, c, b, d, e) {
+        return 0;
+      },
+      fd_write(a, c, b, d) {
+        try {
+          for (var e = 0, f = 0; f < b; f++) {
+            for (var g = P[(c + 8 * f) >> 2], k = P[(c + (8 * f + 4)) >> 2], h = 0; h < k; h++) R.printChar(a, ca[g + h]);
+            e += k;
           }
-        },
-        memory: ia,
-        setTempRet0 (a) {},
-        table: gb,
-      };
-      const La = (function () {
-        function e(c, b) {
-          a.asm = c.exports;
-          aa--;
-          a.monitorRunDependencies && a.monitorRunDependencies(aa);
-          aa == 0 && (sa !== null && (clearInterval(sa), (sa = null)), ja && ((c = ja), (ja = null), c()));
+          P[d >> 2] = e;
+          return 0;
+        } catch (ua) {
+          return (typeof FS !== 'undefined' && ua instanceof FS.ErrnoError) || z(ua), ua.errno;
         }
-        function c(a) {
-          e(a.instance);
-        }
-        function b(a) {
-          return Ma()
-            .then(function (a) {
-              return WebAssembly.instantiate(a, d);
-            })
-            .then(a, function (a) {
-              Y('failed to asynchronously prepare wasm: ' + a);
-              z(a);
-            });
-        }
-        var d = { env: Ka, wasi_unstable: Ka };
-        aa++;
+      },
+      memory: ia,
+      setTempRet0(a) {},
+      table: gb,
+    };
+    const La = (function () {
+      function e(c, b) {
+        a.asm = c.exports;
+        aa--;
         a.monitorRunDependencies && a.monitorRunDependencies(aa);
-        if (a.instantiateWasm)
-          try {
-            return a.instantiateWasm(d, e);
-          } catch (Na) {
-            return Y('Module.instantiateWasm callback failed with error: ' + Na), !1;
-          }
-        (function () {
-          if (da || typeof WebAssembly.instantiateStreaming !== 'function' || va(U) || typeof fetch !== 'function') return b(c);
-          fetch(U, { credentials: 'same-origin' }).then(function (a) {
-            return WebAssembly.instantiateStreaming(a, d).then(c, function (a) {
-              Y('wasm streaming compile failed: ' + a);
-              Y('falling back to ArrayBuffer instantiation');
-              b(c);
-            });
+        aa == 0 && (sa !== null && (clearInterval(sa), (sa = null)), ja && ((c = ja), (ja = null), c()));
+      }
+      function c(a) {
+        e(a.instance);
+      }
+      function b(a) {
+        return Ma()
+          .then(function (a) {
+            return WebAssembly.instantiate(a, d);
+          })
+          .then(a, function (a) {
+            Y('failed to asynchronously prepare wasm: ' + a);
+            z(a);
           });
-        })();
-        return {};
+      }
+      var d = { env: Ka, wasi_unstable: Ka };
+      aa++;
+      a.monitorRunDependencies && a.monitorRunDependencies(aa);
+      if (a.instantiateWasm)
+        try {
+          return a.instantiateWasm(d, e);
+        } catch (Na) {
+          return Y('Module.instantiateWasm callback failed with error: ' + Na), !1;
+        }
+      (function () {
+        if (da || typeof WebAssembly.instantiateStreaming !== 'function' || va(U) || typeof fetch !== 'function') return b(c);
+        fetch(U, { credentials: 'same-origin' }).then(function (a) {
+          return WebAssembly.instantiateStreaming(a, d).then(c, function (a) {
+            Y('wasm streaming compile failed: ' + a);
+            Y('falling back to ArrayBuffer instantiation');
+            b(c);
+          });
+        });
       })();
+      return {};
+    })();
     a.asm = La;
     var hb = (a.___wasm_call_ctors = function () {
-        return a.asm.__wasm_call_ctors.apply(null, arguments);
-      });
-      const jb = (a._emscripten_bind_Status_code_0 = function () {
-        return a.asm.emscripten_bind_Status_code_0.apply(null, arguments);
-      });
-      const kb = (a._emscripten_bind_Status_ok_0 = function () {
-        return a.asm.emscripten_bind_Status_ok_0.apply(null, arguments);
-      });
-      const lb = (a._emscripten_bind_Status_error_msg_0 = function () {
-        return a.asm.emscripten_bind_Status_error_msg_0.apply(null, arguments);
-      });
-      const mb = (a._emscripten_bind_Status___destroy___0 = function () {
-        return a.asm.emscripten_bind_Status___destroy___0.apply(null, arguments);
-      });
-      var Oa = (a._emscripten_bind_DracoUInt16Array_DracoUInt16Array_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt16Array_DracoUInt16Array_0.apply(null, arguments);
-      });
-      const nb = (a._emscripten_bind_DracoUInt16Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoUInt16Array_GetValue_1.apply(null, arguments);
-      });
-      const ob = (a._emscripten_bind_DracoUInt16Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt16Array_size_0.apply(null, arguments);
-      });
-      const pb = (a._emscripten_bind_DracoUInt16Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoUInt16Array___destroy___0.apply(null, arguments);
-      });
-      var Pa = (a._emscripten_bind_PointCloud_PointCloud_0 = function () {
-        return a.asm.emscripten_bind_PointCloud_PointCloud_0.apply(null, arguments);
-      });
-      const qb = (a._emscripten_bind_PointCloud_num_attributes_0 = function () {
-        return a.asm.emscripten_bind_PointCloud_num_attributes_0.apply(null, arguments);
-      });
-      const rb = (a._emscripten_bind_PointCloud_num_points_0 = function () {
-        return a.asm.emscripten_bind_PointCloud_num_points_0.apply(null, arguments);
-      });
-      const sb = (a._emscripten_bind_PointCloud___destroy___0 = function () {
-        return a.asm.emscripten_bind_PointCloud___destroy___0.apply(null, arguments);
-      });
-      var Qa = (a._emscripten_bind_DracoUInt8Array_DracoUInt8Array_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt8Array_DracoUInt8Array_0.apply(null, arguments);
-      });
-      const tb = (a._emscripten_bind_DracoUInt8Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoUInt8Array_GetValue_1.apply(null, arguments);
-      });
-      const ub = (a._emscripten_bind_DracoUInt8Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt8Array_size_0.apply(null, arguments);
-      });
-      const vb = (a._emscripten_bind_DracoUInt8Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoUInt8Array___destroy___0.apply(null, arguments);
-      });
-      var Ra = (a._emscripten_bind_DracoUInt32Array_DracoUInt32Array_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt32Array_DracoUInt32Array_0.apply(null, arguments);
-      });
-      const wb = (a._emscripten_bind_DracoUInt32Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoUInt32Array_GetValue_1.apply(null, arguments);
-      });
-      const xb = (a._emscripten_bind_DracoUInt32Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoUInt32Array_size_0.apply(null, arguments);
-      });
-      const yb = (a._emscripten_bind_DracoUInt32Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoUInt32Array___destroy___0.apply(null, arguments);
-      });
-      var Sa = (a._emscripten_bind_AttributeOctahedronTransform_AttributeOctahedronTransform_0 = function () {
-        return a.asm.emscripten_bind_AttributeOctahedronTransform_AttributeOctahedronTransform_0.apply(null, arguments);
-      });
-      const zb = (a._emscripten_bind_AttributeOctahedronTransform_InitFromAttribute_1 = function () {
-        return a.asm.emscripten_bind_AttributeOctahedronTransform_InitFromAttribute_1.apply(null, arguments);
-      });
-      const Ab = (a._emscripten_bind_AttributeOctahedronTransform_quantization_bits_0 = function () {
-        return a.asm.emscripten_bind_AttributeOctahedronTransform_quantization_bits_0.apply(null, arguments);
-      });
-      const Bb = (a._emscripten_bind_AttributeOctahedronTransform___destroy___0 = function () {
-        return a.asm.emscripten_bind_AttributeOctahedronTransform___destroy___0.apply(null, arguments);
-      });
-      var Ta = (a._emscripten_bind_PointAttribute_PointAttribute_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_PointAttribute_0.apply(null, arguments);
-      });
-      const Cb = (a._emscripten_bind_PointAttribute_size_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_size_0.apply(null, arguments);
-      });
-      const Db = (a._emscripten_bind_PointAttribute_GetAttributeTransformData_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_GetAttributeTransformData_0.apply(null, arguments);
-      });
-      const Eb = (a._emscripten_bind_PointAttribute_attribute_type_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_attribute_type_0.apply(null, arguments);
-      });
-      const Fb = (a._emscripten_bind_PointAttribute_data_type_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_data_type_0.apply(null, arguments);
-      });
-      const Gb = (a._emscripten_bind_PointAttribute_num_components_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_num_components_0.apply(null, arguments);
-      });
-      const Hb = (a._emscripten_bind_PointAttribute_normalized_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_normalized_0.apply(null, arguments);
-      });
-      const Ib = (a._emscripten_bind_PointAttribute_byte_stride_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_byte_stride_0.apply(null, arguments);
-      });
-      const Jb = (a._emscripten_bind_PointAttribute_byte_offset_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_byte_offset_0.apply(null, arguments);
-      });
-      const Kb = (a._emscripten_bind_PointAttribute_unique_id_0 = function () {
-        return a.asm.emscripten_bind_PointAttribute_unique_id_0.apply(null, arguments);
-      });
-      const Lb = (a._emscripten_bind_PointAttribute___destroy___0 = function () {
-        return a.asm.emscripten_bind_PointAttribute___destroy___0.apply(null, arguments);
-      });
-      var Ua = (a._emscripten_bind_AttributeTransformData_AttributeTransformData_0 = function () {
-        return a.asm.emscripten_bind_AttributeTransformData_AttributeTransformData_0.apply(null, arguments);
-      });
-      const Mb = (a._emscripten_bind_AttributeTransformData_transform_type_0 = function () {
-        return a.asm.emscripten_bind_AttributeTransformData_transform_type_0.apply(null, arguments);
-      });
-      const Nb = (a._emscripten_bind_AttributeTransformData___destroy___0 = function () {
-        return a.asm.emscripten_bind_AttributeTransformData___destroy___0.apply(null, arguments);
-      });
-      var Va = (a._emscripten_bind_AttributeQuantizationTransform_AttributeQuantizationTransform_0 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform_AttributeQuantizationTransform_0.apply(null, arguments);
-      });
-      const Ob = (a._emscripten_bind_AttributeQuantizationTransform_InitFromAttribute_1 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform_InitFromAttribute_1.apply(null, arguments);
-      });
-      const Pb = (a._emscripten_bind_AttributeQuantizationTransform_quantization_bits_0 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform_quantization_bits_0.apply(null, arguments);
-      });
-      const Qb = (a._emscripten_bind_AttributeQuantizationTransform_min_value_1 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform_min_value_1.apply(null, arguments);
-      });
-      const Rb = (a._emscripten_bind_AttributeQuantizationTransform_range_0 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform_range_0.apply(null, arguments);
-      });
-      const Sb = (a._emscripten_bind_AttributeQuantizationTransform___destroy___0 = function () {
-        return a.asm.emscripten_bind_AttributeQuantizationTransform___destroy___0.apply(null, arguments);
-      });
-      var Wa = (a._emscripten_bind_DracoInt8Array_DracoInt8Array_0 = function () {
-        return a.asm.emscripten_bind_DracoInt8Array_DracoInt8Array_0.apply(null, arguments);
-      });
-      const Tb = (a._emscripten_bind_DracoInt8Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoInt8Array_GetValue_1.apply(null, arguments);
-      });
-      const Ub = (a._emscripten_bind_DracoInt8Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoInt8Array_size_0.apply(null, arguments);
-      });
-      const Vb = (a._emscripten_bind_DracoInt8Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoInt8Array___destroy___0.apply(null, arguments);
-      });
-      var Xa = (a._emscripten_bind_MetadataQuerier_MetadataQuerier_0 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_MetadataQuerier_0.apply(null, arguments);
-      });
-      const Wb = (a._emscripten_bind_MetadataQuerier_HasEntry_2 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_HasEntry_2.apply(null, arguments);
-      });
-      const Xb = (a._emscripten_bind_MetadataQuerier_GetIntEntry_2 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_GetIntEntry_2.apply(null, arguments);
-      });
-      const Yb = (a._emscripten_bind_MetadataQuerier_GetIntEntryArray_3 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_GetIntEntryArray_3.apply(null, arguments);
-      });
-      const Zb = (a._emscripten_bind_MetadataQuerier_GetDoubleEntry_2 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_GetDoubleEntry_2.apply(null, arguments);
-      });
-      const $b = (a._emscripten_bind_MetadataQuerier_GetStringEntry_2 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_GetStringEntry_2.apply(null, arguments);
-      });
-      const ac = (a._emscripten_bind_MetadataQuerier_NumEntries_1 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_NumEntries_1.apply(null, arguments);
-      });
-      const bc = (a._emscripten_bind_MetadataQuerier_GetEntryName_2 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier_GetEntryName_2.apply(null, arguments);
-      });
-      const cc = (a._emscripten_bind_MetadataQuerier___destroy___0 = function () {
-        return a.asm.emscripten_bind_MetadataQuerier___destroy___0.apply(null, arguments);
-      });
-      var Ya = (a._emscripten_bind_DracoInt16Array_DracoInt16Array_0 = function () {
-        return a.asm.emscripten_bind_DracoInt16Array_DracoInt16Array_0.apply(null, arguments);
-      });
-      const dc = (a._emscripten_bind_DracoInt16Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoInt16Array_GetValue_1.apply(null, arguments);
-      });
-      const ec = (a._emscripten_bind_DracoInt16Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoInt16Array_size_0.apply(null, arguments);
-      });
-      const fc = (a._emscripten_bind_DracoInt16Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoInt16Array___destroy___0.apply(null, arguments);
-      });
-      var Za = (a._emscripten_bind_DracoFloat32Array_DracoFloat32Array_0 = function () {
-        return a.asm.emscripten_bind_DracoFloat32Array_DracoFloat32Array_0.apply(null, arguments);
-      });
-      const gc = (a._emscripten_bind_DracoFloat32Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoFloat32Array_GetValue_1.apply(null, arguments);
-      });
-      const hc = (a._emscripten_bind_DracoFloat32Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoFloat32Array_size_0.apply(null, arguments);
-      });
-      const ic = (a._emscripten_bind_DracoFloat32Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoFloat32Array___destroy___0.apply(null, arguments);
-      });
-      var $a = (a._emscripten_bind_GeometryAttribute_GeometryAttribute_0 = function () {
-        return a.asm.emscripten_bind_GeometryAttribute_GeometryAttribute_0.apply(null, arguments);
-      });
-      const jc = (a._emscripten_bind_GeometryAttribute___destroy___0 = function () {
-        return a.asm.emscripten_bind_GeometryAttribute___destroy___0.apply(null, arguments);
-      });
-      var ab = (a._emscripten_bind_DecoderBuffer_DecoderBuffer_0 = function () {
-        return a.asm.emscripten_bind_DecoderBuffer_DecoderBuffer_0.apply(null, arguments);
-      });
-      const kc = (a._emscripten_bind_DecoderBuffer_Init_2 = function () {
-        return a.asm.emscripten_bind_DecoderBuffer_Init_2.apply(null, arguments);
-      });
-      const lc = (a._emscripten_bind_DecoderBuffer___destroy___0 = function () {
-        return a.asm.emscripten_bind_DecoderBuffer___destroy___0.apply(null, arguments);
-      });
-      var bb = (a._emscripten_bind_Decoder_Decoder_0 = function () {
-        return a.asm.emscripten_bind_Decoder_Decoder_0.apply(null, arguments);
-      });
-      const mc = (a._emscripten_bind_Decoder_GetEncodedGeometryType_1 = function () {
-        return a.asm.emscripten_bind_Decoder_GetEncodedGeometryType_1.apply(null, arguments);
-      });
-      const nc = (a._emscripten_bind_Decoder_DecodeBufferToPointCloud_2 = function () {
-        return a.asm.emscripten_bind_Decoder_DecodeBufferToPointCloud_2.apply(null, arguments);
-      });
-      const oc = (a._emscripten_bind_Decoder_DecodeBufferToMesh_2 = function () {
-        return a.asm.emscripten_bind_Decoder_DecodeBufferToMesh_2.apply(null, arguments);
-      });
-      const pc = (a._emscripten_bind_Decoder_GetAttributeId_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeId_2.apply(null, arguments);
-      });
-      const qc = (a._emscripten_bind_Decoder_GetAttributeIdByName_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeIdByName_2.apply(null, arguments);
-      });
-      const rc = (a._emscripten_bind_Decoder_GetAttributeIdByMetadataEntry_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeIdByMetadataEntry_3.apply(null, arguments);
-      });
-      const sc = (a._emscripten_bind_Decoder_GetAttribute_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttribute_2.apply(null, arguments);
-      });
-      const tc = (a._emscripten_bind_Decoder_GetAttributeByUniqueId_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeByUniqueId_2.apply(null, arguments);
-      });
-      const uc = (a._emscripten_bind_Decoder_GetMetadata_1 = function () {
-        return a.asm.emscripten_bind_Decoder_GetMetadata_1.apply(null, arguments);
-      });
-      const vc = (a._emscripten_bind_Decoder_GetAttributeMetadata_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeMetadata_2.apply(null, arguments);
-      });
-      const wc = (a._emscripten_bind_Decoder_GetFaceFromMesh_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetFaceFromMesh_3.apply(null, arguments);
-      });
-      const xc = (a._emscripten_bind_Decoder_GetTriangleStripsFromMesh_2 = function () {
-        return a.asm.emscripten_bind_Decoder_GetTriangleStripsFromMesh_2.apply(null, arguments);
-      });
-      const yc = (a._emscripten_bind_Decoder_GetTrianglesUInt16Array_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetTrianglesUInt16Array_3.apply(null, arguments);
-      });
-      const zc = (a._emscripten_bind_Decoder_GetTrianglesUInt32Array_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetTrianglesUInt32Array_3.apply(null, arguments);
-      });
-      const Ac = (a._emscripten_bind_Decoder_GetAttributeFloat_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeFloat_3.apply(null, arguments);
-      });
-      const Bc = (a._emscripten_bind_Decoder_GetAttributeFloatForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeFloatForAllPoints_3.apply(null, arguments);
-      });
-      const Cc = (a._emscripten_bind_Decoder_GetAttributeIntForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeIntForAllPoints_3.apply(null, arguments);
-      });
-      const Dc = (a._emscripten_bind_Decoder_GetAttributeInt8ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeInt8ForAllPoints_3.apply(null, arguments);
-      });
-      const Ec = (a._emscripten_bind_Decoder_GetAttributeUInt8ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeUInt8ForAllPoints_3.apply(null, arguments);
-      });
-      const Fc = (a._emscripten_bind_Decoder_GetAttributeInt16ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeInt16ForAllPoints_3.apply(null, arguments);
-      });
-      const Gc = (a._emscripten_bind_Decoder_GetAttributeUInt16ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeUInt16ForAllPoints_3.apply(null, arguments);
-      });
-      const Hc = (a._emscripten_bind_Decoder_GetAttributeInt32ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeInt32ForAllPoints_3.apply(null, arguments);
-      });
-      const Ic = (a._emscripten_bind_Decoder_GetAttributeUInt32ForAllPoints_3 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeUInt32ForAllPoints_3.apply(null, arguments);
-      });
-      const Jc = (a._emscripten_bind_Decoder_GetAttributeDataArrayForAllPoints_5 = function () {
-        return a.asm.emscripten_bind_Decoder_GetAttributeDataArrayForAllPoints_5.apply(null, arguments);
-      });
-      const Kc = (a._emscripten_bind_Decoder_SkipAttributeTransform_1 = function () {
-        return a.asm.emscripten_bind_Decoder_SkipAttributeTransform_1.apply(null, arguments);
-      });
-      const Lc = (a._emscripten_bind_Decoder___destroy___0 = function () {
-        return a.asm.emscripten_bind_Decoder___destroy___0.apply(null, arguments);
-      });
-      var cb = (a._emscripten_bind_Mesh_Mesh_0 = function () {
-        return a.asm.emscripten_bind_Mesh_Mesh_0.apply(null, arguments);
-      });
-      const Mc = (a._emscripten_bind_Mesh_num_faces_0 = function () {
-        return a.asm.emscripten_bind_Mesh_num_faces_0.apply(null, arguments);
-      });
-      const Nc = (a._emscripten_bind_Mesh_num_attributes_0 = function () {
-        return a.asm.emscripten_bind_Mesh_num_attributes_0.apply(null, arguments);
-      });
-      const Oc = (a._emscripten_bind_Mesh_num_points_0 = function () {
-        return a.asm.emscripten_bind_Mesh_num_points_0.apply(null, arguments);
-      });
-      const Pc = (a._emscripten_bind_Mesh___destroy___0 = function () {
-        return a.asm.emscripten_bind_Mesh___destroy___0.apply(null, arguments);
-      });
-      const Qc = (a._emscripten_bind_VoidPtr___destroy___0 = function () {
-        return a.asm.emscripten_bind_VoidPtr___destroy___0.apply(null, arguments);
-      });
-      var db = (a._emscripten_bind_DracoInt32Array_DracoInt32Array_0 = function () {
-        return a.asm.emscripten_bind_DracoInt32Array_DracoInt32Array_0.apply(null, arguments);
-      });
-      const Rc = (a._emscripten_bind_DracoInt32Array_GetValue_1 = function () {
-        return a.asm.emscripten_bind_DracoInt32Array_GetValue_1.apply(null, arguments);
-      });
-      const Sc = (a._emscripten_bind_DracoInt32Array_size_0 = function () {
-        return a.asm.emscripten_bind_DracoInt32Array_size_0.apply(null, arguments);
-      });
-      const Tc = (a._emscripten_bind_DracoInt32Array___destroy___0 = function () {
-        return a.asm.emscripten_bind_DracoInt32Array___destroy___0.apply(null, arguments);
-      });
-      var eb = (a._emscripten_bind_Metadata_Metadata_0 = function () {
-        return a.asm.emscripten_bind_Metadata_Metadata_0.apply(null, arguments);
-      });
-      const Uc = (a._emscripten_bind_Metadata___destroy___0 = function () {
-        return a.asm.emscripten_bind_Metadata___destroy___0.apply(null, arguments);
-      });
-      const Vc = (a._emscripten_enum_draco_StatusCode_OK = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_OK.apply(null, arguments);
-      });
-      const Wc = (a._emscripten_enum_draco_StatusCode_DRACO_ERROR = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_DRACO_ERROR.apply(null, arguments);
-      });
-      const Xc = (a._emscripten_enum_draco_StatusCode_IO_ERROR = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_IO_ERROR.apply(null, arguments);
-      });
-      const Yc = (a._emscripten_enum_draco_StatusCode_INVALID_PARAMETER = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_INVALID_PARAMETER.apply(null, arguments);
-      });
-      const Zc = (a._emscripten_enum_draco_StatusCode_UNSUPPORTED_VERSION = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_UNSUPPORTED_VERSION.apply(null, arguments);
-      });
-      const $c = (a._emscripten_enum_draco_StatusCode_UNKNOWN_VERSION = function () {
-        return a.asm.emscripten_enum_draco_StatusCode_UNKNOWN_VERSION.apply(null, arguments);
-      });
-      const ad = (a._emscripten_enum_draco_DataType_DT_INVALID = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_INVALID.apply(null, arguments);
-      });
-      const bd = (a._emscripten_enum_draco_DataType_DT_INT8 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_INT8.apply(null, arguments);
-      });
-      const cd = (a._emscripten_enum_draco_DataType_DT_UINT8 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_UINT8.apply(null, arguments);
-      });
-      const dd = (a._emscripten_enum_draco_DataType_DT_INT16 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_INT16.apply(null, arguments);
-      });
-      const ed = (a._emscripten_enum_draco_DataType_DT_UINT16 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_UINT16.apply(null, arguments);
-      });
-      const fd = (a._emscripten_enum_draco_DataType_DT_INT32 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_INT32.apply(null, arguments);
-      });
-      const gd = (a._emscripten_enum_draco_DataType_DT_UINT32 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_UINT32.apply(null, arguments);
-      });
-      const hd = (a._emscripten_enum_draco_DataType_DT_INT64 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_INT64.apply(null, arguments);
-      });
-      const id = (a._emscripten_enum_draco_DataType_DT_UINT64 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_UINT64.apply(null, arguments);
-      });
-      const jd = (a._emscripten_enum_draco_DataType_DT_FLOAT32 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_FLOAT32.apply(null, arguments);
-      });
-      const kd = (a._emscripten_enum_draco_DataType_DT_FLOAT64 = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_FLOAT64.apply(null, arguments);
-      });
-      const ld = (a._emscripten_enum_draco_DataType_DT_BOOL = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_BOOL.apply(null, arguments);
-      });
-      const md = (a._emscripten_enum_draco_DataType_DT_TYPES_COUNT = function () {
-        return a.asm.emscripten_enum_draco_DataType_DT_TYPES_COUNT.apply(null, arguments);
-      });
-      const nd = (a._emscripten_enum_draco_EncodedGeometryType_INVALID_GEOMETRY_TYPE = function () {
-        return a.asm.emscripten_enum_draco_EncodedGeometryType_INVALID_GEOMETRY_TYPE.apply(null, arguments);
-      });
-      const od = (a._emscripten_enum_draco_EncodedGeometryType_POINT_CLOUD = function () {
-        return a.asm.emscripten_enum_draco_EncodedGeometryType_POINT_CLOUD.apply(null, arguments);
-      });
-      const pd = (a._emscripten_enum_draco_EncodedGeometryType_TRIANGULAR_MESH = function () {
-        return a.asm.emscripten_enum_draco_EncodedGeometryType_TRIANGULAR_MESH.apply(null, arguments);
-      });
-      const qd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_INVALID_TRANSFORM = function () {
-        return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_INVALID_TRANSFORM.apply(null, arguments);
-      });
-      const rd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_NO_TRANSFORM = function () {
-        return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_NO_TRANSFORM.apply(null, arguments);
-      });
-      const sd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_QUANTIZATION_TRANSFORM = function () {
-        return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_QUANTIZATION_TRANSFORM.apply(null, arguments);
-      });
-      const td = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_OCTAHEDRON_TRANSFORM = function () {
-        return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_OCTAHEDRON_TRANSFORM.apply(null, arguments);
-      });
-      const ud = (a._emscripten_enum_draco_GeometryAttribute_Type_INVALID = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_INVALID.apply(null, arguments);
-      });
-      const vd = (a._emscripten_enum_draco_GeometryAttribute_Type_POSITION = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_POSITION.apply(null, arguments);
-      });
-      const wd = (a._emscripten_enum_draco_GeometryAttribute_Type_NORMAL = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_NORMAL.apply(null, arguments);
-      });
-      const xd = (a._emscripten_enum_draco_GeometryAttribute_Type_COLOR = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_COLOR.apply(null, arguments);
-      });
-      const yd = (a._emscripten_enum_draco_GeometryAttribute_Type_TEX_COORD = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_TEX_COORD.apply(null, arguments);
-      });
-      const zd = (a._emscripten_enum_draco_GeometryAttribute_Type_GENERIC = function () {
-        return a.asm.emscripten_enum_draco_GeometryAttribute_Type_GENERIC.apply(null, arguments);
-      });
+      return a.asm.__wasm_call_ctors.apply(null, arguments);
+    });
+    const jb = (a._emscripten_bind_Status_code_0 = function () {
+      return a.asm.emscripten_bind_Status_code_0.apply(null, arguments);
+    });
+    const kb = (a._emscripten_bind_Status_ok_0 = function () {
+      return a.asm.emscripten_bind_Status_ok_0.apply(null, arguments);
+    });
+    const lb = (a._emscripten_bind_Status_error_msg_0 = function () {
+      return a.asm.emscripten_bind_Status_error_msg_0.apply(null, arguments);
+    });
+    const mb = (a._emscripten_bind_Status___destroy___0 = function () {
+      return a.asm.emscripten_bind_Status___destroy___0.apply(null, arguments);
+    });
+    var Oa = (a._emscripten_bind_DracoUInt16Array_DracoUInt16Array_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt16Array_DracoUInt16Array_0.apply(null, arguments);
+    });
+    const nb = (a._emscripten_bind_DracoUInt16Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoUInt16Array_GetValue_1.apply(null, arguments);
+    });
+    const ob = (a._emscripten_bind_DracoUInt16Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt16Array_size_0.apply(null, arguments);
+    });
+    const pb = (a._emscripten_bind_DracoUInt16Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoUInt16Array___destroy___0.apply(null, arguments);
+    });
+    var Pa = (a._emscripten_bind_PointCloud_PointCloud_0 = function () {
+      return a.asm.emscripten_bind_PointCloud_PointCloud_0.apply(null, arguments);
+    });
+    const qb = (a._emscripten_bind_PointCloud_num_attributes_0 = function () {
+      return a.asm.emscripten_bind_PointCloud_num_attributes_0.apply(null, arguments);
+    });
+    const rb = (a._emscripten_bind_PointCloud_num_points_0 = function () {
+      return a.asm.emscripten_bind_PointCloud_num_points_0.apply(null, arguments);
+    });
+    const sb = (a._emscripten_bind_PointCloud___destroy___0 = function () {
+      return a.asm.emscripten_bind_PointCloud___destroy___0.apply(null, arguments);
+    });
+    var Qa = (a._emscripten_bind_DracoUInt8Array_DracoUInt8Array_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt8Array_DracoUInt8Array_0.apply(null, arguments);
+    });
+    const tb = (a._emscripten_bind_DracoUInt8Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoUInt8Array_GetValue_1.apply(null, arguments);
+    });
+    const ub = (a._emscripten_bind_DracoUInt8Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt8Array_size_0.apply(null, arguments);
+    });
+    const vb = (a._emscripten_bind_DracoUInt8Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoUInt8Array___destroy___0.apply(null, arguments);
+    });
+    var Ra = (a._emscripten_bind_DracoUInt32Array_DracoUInt32Array_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt32Array_DracoUInt32Array_0.apply(null, arguments);
+    });
+    const wb = (a._emscripten_bind_DracoUInt32Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoUInt32Array_GetValue_1.apply(null, arguments);
+    });
+    const xb = (a._emscripten_bind_DracoUInt32Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoUInt32Array_size_0.apply(null, arguments);
+    });
+    const yb = (a._emscripten_bind_DracoUInt32Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoUInt32Array___destroy___0.apply(null, arguments);
+    });
+    var Sa = (a._emscripten_bind_AttributeOctahedronTransform_AttributeOctahedronTransform_0 = function () {
+      return a.asm.emscripten_bind_AttributeOctahedronTransform_AttributeOctahedronTransform_0.apply(null, arguments);
+    });
+    const zb = (a._emscripten_bind_AttributeOctahedronTransform_InitFromAttribute_1 = function () {
+      return a.asm.emscripten_bind_AttributeOctahedronTransform_InitFromAttribute_1.apply(null, arguments);
+    });
+    const Ab = (a._emscripten_bind_AttributeOctahedronTransform_quantization_bits_0 = function () {
+      return a.asm.emscripten_bind_AttributeOctahedronTransform_quantization_bits_0.apply(null, arguments);
+    });
+    const Bb = (a._emscripten_bind_AttributeOctahedronTransform___destroy___0 = function () {
+      return a.asm.emscripten_bind_AttributeOctahedronTransform___destroy___0.apply(null, arguments);
+    });
+    var Ta = (a._emscripten_bind_PointAttribute_PointAttribute_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_PointAttribute_0.apply(null, arguments);
+    });
+    const Cb = (a._emscripten_bind_PointAttribute_size_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_size_0.apply(null, arguments);
+    });
+    const Db = (a._emscripten_bind_PointAttribute_GetAttributeTransformData_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_GetAttributeTransformData_0.apply(null, arguments);
+    });
+    const Eb = (a._emscripten_bind_PointAttribute_attribute_type_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_attribute_type_0.apply(null, arguments);
+    });
+    const Fb = (a._emscripten_bind_PointAttribute_data_type_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_data_type_0.apply(null, arguments);
+    });
+    const Gb = (a._emscripten_bind_PointAttribute_num_components_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_num_components_0.apply(null, arguments);
+    });
+    const Hb = (a._emscripten_bind_PointAttribute_normalized_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_normalized_0.apply(null, arguments);
+    });
+    const Ib = (a._emscripten_bind_PointAttribute_byte_stride_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_byte_stride_0.apply(null, arguments);
+    });
+    const Jb = (a._emscripten_bind_PointAttribute_byte_offset_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_byte_offset_0.apply(null, arguments);
+    });
+    const Kb = (a._emscripten_bind_PointAttribute_unique_id_0 = function () {
+      return a.asm.emscripten_bind_PointAttribute_unique_id_0.apply(null, arguments);
+    });
+    const Lb = (a._emscripten_bind_PointAttribute___destroy___0 = function () {
+      return a.asm.emscripten_bind_PointAttribute___destroy___0.apply(null, arguments);
+    });
+    var Ua = (a._emscripten_bind_AttributeTransformData_AttributeTransformData_0 = function () {
+      return a.asm.emscripten_bind_AttributeTransformData_AttributeTransformData_0.apply(null, arguments);
+    });
+    const Mb = (a._emscripten_bind_AttributeTransformData_transform_type_0 = function () {
+      return a.asm.emscripten_bind_AttributeTransformData_transform_type_0.apply(null, arguments);
+    });
+    const Nb = (a._emscripten_bind_AttributeTransformData___destroy___0 = function () {
+      return a.asm.emscripten_bind_AttributeTransformData___destroy___0.apply(null, arguments);
+    });
+    var Va = (a._emscripten_bind_AttributeQuantizationTransform_AttributeQuantizationTransform_0 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform_AttributeQuantizationTransform_0.apply(null, arguments);
+    });
+    const Ob = (a._emscripten_bind_AttributeQuantizationTransform_InitFromAttribute_1 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform_InitFromAttribute_1.apply(null, arguments);
+    });
+    const Pb = (a._emscripten_bind_AttributeQuantizationTransform_quantization_bits_0 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform_quantization_bits_0.apply(null, arguments);
+    });
+    const Qb = (a._emscripten_bind_AttributeQuantizationTransform_min_value_1 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform_min_value_1.apply(null, arguments);
+    });
+    const Rb = (a._emscripten_bind_AttributeQuantizationTransform_range_0 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform_range_0.apply(null, arguments);
+    });
+    const Sb = (a._emscripten_bind_AttributeQuantizationTransform___destroy___0 = function () {
+      return a.asm.emscripten_bind_AttributeQuantizationTransform___destroy___0.apply(null, arguments);
+    });
+    var Wa = (a._emscripten_bind_DracoInt8Array_DracoInt8Array_0 = function () {
+      return a.asm.emscripten_bind_DracoInt8Array_DracoInt8Array_0.apply(null, arguments);
+    });
+    const Tb = (a._emscripten_bind_DracoInt8Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoInt8Array_GetValue_1.apply(null, arguments);
+    });
+    const Ub = (a._emscripten_bind_DracoInt8Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoInt8Array_size_0.apply(null, arguments);
+    });
+    const Vb = (a._emscripten_bind_DracoInt8Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoInt8Array___destroy___0.apply(null, arguments);
+    });
+    var Xa = (a._emscripten_bind_MetadataQuerier_MetadataQuerier_0 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_MetadataQuerier_0.apply(null, arguments);
+    });
+    const Wb = (a._emscripten_bind_MetadataQuerier_HasEntry_2 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_HasEntry_2.apply(null, arguments);
+    });
+    const Xb = (a._emscripten_bind_MetadataQuerier_GetIntEntry_2 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_GetIntEntry_2.apply(null, arguments);
+    });
+    const Yb = (a._emscripten_bind_MetadataQuerier_GetIntEntryArray_3 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_GetIntEntryArray_3.apply(null, arguments);
+    });
+    const Zb = (a._emscripten_bind_MetadataQuerier_GetDoubleEntry_2 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_GetDoubleEntry_2.apply(null, arguments);
+    });
+    const $b = (a._emscripten_bind_MetadataQuerier_GetStringEntry_2 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_GetStringEntry_2.apply(null, arguments);
+    });
+    const ac = (a._emscripten_bind_MetadataQuerier_NumEntries_1 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_NumEntries_1.apply(null, arguments);
+    });
+    const bc = (a._emscripten_bind_MetadataQuerier_GetEntryName_2 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier_GetEntryName_2.apply(null, arguments);
+    });
+    const cc = (a._emscripten_bind_MetadataQuerier___destroy___0 = function () {
+      return a.asm.emscripten_bind_MetadataQuerier___destroy___0.apply(null, arguments);
+    });
+    var Ya = (a._emscripten_bind_DracoInt16Array_DracoInt16Array_0 = function () {
+      return a.asm.emscripten_bind_DracoInt16Array_DracoInt16Array_0.apply(null, arguments);
+    });
+    const dc = (a._emscripten_bind_DracoInt16Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoInt16Array_GetValue_1.apply(null, arguments);
+    });
+    const ec = (a._emscripten_bind_DracoInt16Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoInt16Array_size_0.apply(null, arguments);
+    });
+    const fc = (a._emscripten_bind_DracoInt16Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoInt16Array___destroy___0.apply(null, arguments);
+    });
+    var Za = (a._emscripten_bind_DracoFloat32Array_DracoFloat32Array_0 = function () {
+      return a.asm.emscripten_bind_DracoFloat32Array_DracoFloat32Array_0.apply(null, arguments);
+    });
+    const gc = (a._emscripten_bind_DracoFloat32Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoFloat32Array_GetValue_1.apply(null, arguments);
+    });
+    const hc = (a._emscripten_bind_DracoFloat32Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoFloat32Array_size_0.apply(null, arguments);
+    });
+    const ic = (a._emscripten_bind_DracoFloat32Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoFloat32Array___destroy___0.apply(null, arguments);
+    });
+    var $a = (a._emscripten_bind_GeometryAttribute_GeometryAttribute_0 = function () {
+      return a.asm.emscripten_bind_GeometryAttribute_GeometryAttribute_0.apply(null, arguments);
+    });
+    const jc = (a._emscripten_bind_GeometryAttribute___destroy___0 = function () {
+      return a.asm.emscripten_bind_GeometryAttribute___destroy___0.apply(null, arguments);
+    });
+    var ab = (a._emscripten_bind_DecoderBuffer_DecoderBuffer_0 = function () {
+      return a.asm.emscripten_bind_DecoderBuffer_DecoderBuffer_0.apply(null, arguments);
+    });
+    const kc = (a._emscripten_bind_DecoderBuffer_Init_2 = function () {
+      return a.asm.emscripten_bind_DecoderBuffer_Init_2.apply(null, arguments);
+    });
+    const lc = (a._emscripten_bind_DecoderBuffer___destroy___0 = function () {
+      return a.asm.emscripten_bind_DecoderBuffer___destroy___0.apply(null, arguments);
+    });
+    var bb = (a._emscripten_bind_Decoder_Decoder_0 = function () {
+      return a.asm.emscripten_bind_Decoder_Decoder_0.apply(null, arguments);
+    });
+    const mc = (a._emscripten_bind_Decoder_GetEncodedGeometryType_1 = function () {
+      return a.asm.emscripten_bind_Decoder_GetEncodedGeometryType_1.apply(null, arguments);
+    });
+    const nc = (a._emscripten_bind_Decoder_DecodeBufferToPointCloud_2 = function () {
+      return a.asm.emscripten_bind_Decoder_DecodeBufferToPointCloud_2.apply(null, arguments);
+    });
+    const oc = (a._emscripten_bind_Decoder_DecodeBufferToMesh_2 = function () {
+      return a.asm.emscripten_bind_Decoder_DecodeBufferToMesh_2.apply(null, arguments);
+    });
+    const pc = (a._emscripten_bind_Decoder_GetAttributeId_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeId_2.apply(null, arguments);
+    });
+    const qc = (a._emscripten_bind_Decoder_GetAttributeIdByName_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeIdByName_2.apply(null, arguments);
+    });
+    const rc = (a._emscripten_bind_Decoder_GetAttributeIdByMetadataEntry_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeIdByMetadataEntry_3.apply(null, arguments);
+    });
+    const sc = (a._emscripten_bind_Decoder_GetAttribute_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttribute_2.apply(null, arguments);
+    });
+    const tc = (a._emscripten_bind_Decoder_GetAttributeByUniqueId_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeByUniqueId_2.apply(null, arguments);
+    });
+    const uc = (a._emscripten_bind_Decoder_GetMetadata_1 = function () {
+      return a.asm.emscripten_bind_Decoder_GetMetadata_1.apply(null, arguments);
+    });
+    const vc = (a._emscripten_bind_Decoder_GetAttributeMetadata_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeMetadata_2.apply(null, arguments);
+    });
+    const wc = (a._emscripten_bind_Decoder_GetFaceFromMesh_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetFaceFromMesh_3.apply(null, arguments);
+    });
+    const xc = (a._emscripten_bind_Decoder_GetTriangleStripsFromMesh_2 = function () {
+      return a.asm.emscripten_bind_Decoder_GetTriangleStripsFromMesh_2.apply(null, arguments);
+    });
+    const yc = (a._emscripten_bind_Decoder_GetTrianglesUInt16Array_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetTrianglesUInt16Array_3.apply(null, arguments);
+    });
+    const zc = (a._emscripten_bind_Decoder_GetTrianglesUInt32Array_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetTrianglesUInt32Array_3.apply(null, arguments);
+    });
+    const Ac = (a._emscripten_bind_Decoder_GetAttributeFloat_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeFloat_3.apply(null, arguments);
+    });
+    const Bc = (a._emscripten_bind_Decoder_GetAttributeFloatForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeFloatForAllPoints_3.apply(null, arguments);
+    });
+    const Cc = (a._emscripten_bind_Decoder_GetAttributeIntForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeIntForAllPoints_3.apply(null, arguments);
+    });
+    const Dc = (a._emscripten_bind_Decoder_GetAttributeInt8ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeInt8ForAllPoints_3.apply(null, arguments);
+    });
+    const Ec = (a._emscripten_bind_Decoder_GetAttributeUInt8ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeUInt8ForAllPoints_3.apply(null, arguments);
+    });
+    const Fc = (a._emscripten_bind_Decoder_GetAttributeInt16ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeInt16ForAllPoints_3.apply(null, arguments);
+    });
+    const Gc = (a._emscripten_bind_Decoder_GetAttributeUInt16ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeUInt16ForAllPoints_3.apply(null, arguments);
+    });
+    const Hc = (a._emscripten_bind_Decoder_GetAttributeInt32ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeInt32ForAllPoints_3.apply(null, arguments);
+    });
+    const Ic = (a._emscripten_bind_Decoder_GetAttributeUInt32ForAllPoints_3 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeUInt32ForAllPoints_3.apply(null, arguments);
+    });
+    const Jc = (a._emscripten_bind_Decoder_GetAttributeDataArrayForAllPoints_5 = function () {
+      return a.asm.emscripten_bind_Decoder_GetAttributeDataArrayForAllPoints_5.apply(null, arguments);
+    });
+    const Kc = (a._emscripten_bind_Decoder_SkipAttributeTransform_1 = function () {
+      return a.asm.emscripten_bind_Decoder_SkipAttributeTransform_1.apply(null, arguments);
+    });
+    const Lc = (a._emscripten_bind_Decoder___destroy___0 = function () {
+      return a.asm.emscripten_bind_Decoder___destroy___0.apply(null, arguments);
+    });
+    var cb = (a._emscripten_bind_Mesh_Mesh_0 = function () {
+      return a.asm.emscripten_bind_Mesh_Mesh_0.apply(null, arguments);
+    });
+    const Mc = (a._emscripten_bind_Mesh_num_faces_0 = function () {
+      return a.asm.emscripten_bind_Mesh_num_faces_0.apply(null, arguments);
+    });
+    const Nc = (a._emscripten_bind_Mesh_num_attributes_0 = function () {
+      return a.asm.emscripten_bind_Mesh_num_attributes_0.apply(null, arguments);
+    });
+    const Oc = (a._emscripten_bind_Mesh_num_points_0 = function () {
+      return a.asm.emscripten_bind_Mesh_num_points_0.apply(null, arguments);
+    });
+    const Pc = (a._emscripten_bind_Mesh___destroy___0 = function () {
+      return a.asm.emscripten_bind_Mesh___destroy___0.apply(null, arguments);
+    });
+    const Qc = (a._emscripten_bind_VoidPtr___destroy___0 = function () {
+      return a.asm.emscripten_bind_VoidPtr___destroy___0.apply(null, arguments);
+    });
+    var db = (a._emscripten_bind_DracoInt32Array_DracoInt32Array_0 = function () {
+      return a.asm.emscripten_bind_DracoInt32Array_DracoInt32Array_0.apply(null, arguments);
+    });
+    const Rc = (a._emscripten_bind_DracoInt32Array_GetValue_1 = function () {
+      return a.asm.emscripten_bind_DracoInt32Array_GetValue_1.apply(null, arguments);
+    });
+    const Sc = (a._emscripten_bind_DracoInt32Array_size_0 = function () {
+      return a.asm.emscripten_bind_DracoInt32Array_size_0.apply(null, arguments);
+    });
+    const Tc = (a._emscripten_bind_DracoInt32Array___destroy___0 = function () {
+      return a.asm.emscripten_bind_DracoInt32Array___destroy___0.apply(null, arguments);
+    });
+    var eb = (a._emscripten_bind_Metadata_Metadata_0 = function () {
+      return a.asm.emscripten_bind_Metadata_Metadata_0.apply(null, arguments);
+    });
+    const Uc = (a._emscripten_bind_Metadata___destroy___0 = function () {
+      return a.asm.emscripten_bind_Metadata___destroy___0.apply(null, arguments);
+    });
+    const Vc = (a._emscripten_enum_draco_StatusCode_OK = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_OK.apply(null, arguments);
+    });
+    const Wc = (a._emscripten_enum_draco_StatusCode_DRACO_ERROR = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_DRACO_ERROR.apply(null, arguments);
+    });
+    const Xc = (a._emscripten_enum_draco_StatusCode_IO_ERROR = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_IO_ERROR.apply(null, arguments);
+    });
+    const Yc = (a._emscripten_enum_draco_StatusCode_INVALID_PARAMETER = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_INVALID_PARAMETER.apply(null, arguments);
+    });
+    const Zc = (a._emscripten_enum_draco_StatusCode_UNSUPPORTED_VERSION = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_UNSUPPORTED_VERSION.apply(null, arguments);
+    });
+    const $c = (a._emscripten_enum_draco_StatusCode_UNKNOWN_VERSION = function () {
+      return a.asm.emscripten_enum_draco_StatusCode_UNKNOWN_VERSION.apply(null, arguments);
+    });
+    const ad = (a._emscripten_enum_draco_DataType_DT_INVALID = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_INVALID.apply(null, arguments);
+    });
+    const bd = (a._emscripten_enum_draco_DataType_DT_INT8 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_INT8.apply(null, arguments);
+    });
+    const cd = (a._emscripten_enum_draco_DataType_DT_UINT8 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_UINT8.apply(null, arguments);
+    });
+    const dd = (a._emscripten_enum_draco_DataType_DT_INT16 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_INT16.apply(null, arguments);
+    });
+    const ed = (a._emscripten_enum_draco_DataType_DT_UINT16 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_UINT16.apply(null, arguments);
+    });
+    const fd = (a._emscripten_enum_draco_DataType_DT_INT32 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_INT32.apply(null, arguments);
+    });
+    const gd = (a._emscripten_enum_draco_DataType_DT_UINT32 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_UINT32.apply(null, arguments);
+    });
+    const hd = (a._emscripten_enum_draco_DataType_DT_INT64 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_INT64.apply(null, arguments);
+    });
+    const id = (a._emscripten_enum_draco_DataType_DT_UINT64 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_UINT64.apply(null, arguments);
+    });
+    const jd = (a._emscripten_enum_draco_DataType_DT_FLOAT32 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_FLOAT32.apply(null, arguments);
+    });
+    const kd = (a._emscripten_enum_draco_DataType_DT_FLOAT64 = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_FLOAT64.apply(null, arguments);
+    });
+    const ld = (a._emscripten_enum_draco_DataType_DT_BOOL = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_BOOL.apply(null, arguments);
+    });
+    const md = (a._emscripten_enum_draco_DataType_DT_TYPES_COUNT = function () {
+      return a.asm.emscripten_enum_draco_DataType_DT_TYPES_COUNT.apply(null, arguments);
+    });
+    const nd = (a._emscripten_enum_draco_EncodedGeometryType_INVALID_GEOMETRY_TYPE = function () {
+      return a.asm.emscripten_enum_draco_EncodedGeometryType_INVALID_GEOMETRY_TYPE.apply(null, arguments);
+    });
+    const od = (a._emscripten_enum_draco_EncodedGeometryType_POINT_CLOUD = function () {
+      return a.asm.emscripten_enum_draco_EncodedGeometryType_POINT_CLOUD.apply(null, arguments);
+    });
+    const pd = (a._emscripten_enum_draco_EncodedGeometryType_TRIANGULAR_MESH = function () {
+      return a.asm.emscripten_enum_draco_EncodedGeometryType_TRIANGULAR_MESH.apply(null, arguments);
+    });
+    const qd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_INVALID_TRANSFORM = function () {
+      return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_INVALID_TRANSFORM.apply(null, arguments);
+    });
+    const rd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_NO_TRANSFORM = function () {
+      return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_NO_TRANSFORM.apply(null, arguments);
+    });
+    const sd = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_QUANTIZATION_TRANSFORM = function () {
+      return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_QUANTIZATION_TRANSFORM.apply(null, arguments);
+    });
+    const td = (a._emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_OCTAHEDRON_TRANSFORM = function () {
+      return a.asm.emscripten_enum_draco_AttributeTransformType_ATTRIBUTE_OCTAHEDRON_TRANSFORM.apply(null, arguments);
+    });
+    const ud = (a._emscripten_enum_draco_GeometryAttribute_Type_INVALID = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_INVALID.apply(null, arguments);
+    });
+    const vd = (a._emscripten_enum_draco_GeometryAttribute_Type_POSITION = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_POSITION.apply(null, arguments);
+    });
+    const wd = (a._emscripten_enum_draco_GeometryAttribute_Type_NORMAL = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_NORMAL.apply(null, arguments);
+    });
+    const xd = (a._emscripten_enum_draco_GeometryAttribute_Type_COLOR = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_COLOR.apply(null, arguments);
+    });
+    const yd = (a._emscripten_enum_draco_GeometryAttribute_Type_TEX_COORD = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_TEX_COORD.apply(null, arguments);
+    });
+    const zd = (a._emscripten_enum_draco_GeometryAttribute_Type_GENERIC = function () {
+      return a.asm.emscripten_enum_draco_GeometryAttribute_Type_GENERIC.apply(null, arguments);
+    });
     a._setThrew = function () {
       return a.asm.setThrew.apply(null, arguments);
     };
@@ -1321,7 +1321,7 @@ const DracoDecoderModule = (function () {
       pos: 0,
       temps: [],
       needed: 0,
-      prepare () {
+      prepare() {
         if (n.needed) {
           for (let c = 0; c < n.temps.length; c++) a._free(n.temps[c]);
           n.temps.length = 0;
@@ -1333,14 +1333,14 @@ const DracoDecoderModule = (function () {
         n.buffer || ((n.size += 128), (n.buffer = a._malloc(n.size)), t(n.buffer));
         n.pos = 0;
       },
-      alloc (c, b) {
+      alloc(c, b) {
         t(n.buffer);
         c = c.length * b.BYTES_PER_ELEMENT;
         c = (c + 7) & -8;
         n.pos + c >= n.size ? (t(c > 0), (n.needed += c), (b = a._malloc(c)), n.temps.push(b)) : ((b = n.buffer + n.pos), (n.pos += c));
         return b;
       },
-      copy (a, b, d) {
+      copy(a, b, d) {
         switch (b.BYTES_PER_ELEMENT) {
           case 2:
             d >>= 1;

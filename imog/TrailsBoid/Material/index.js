@@ -47,11 +47,11 @@ class CustomLineMaterial extends ShaderMaterial {
       color: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.diffuse.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.diffuse.value = value;
         },
       },
@@ -59,11 +59,11 @@ class CustomLineMaterial extends ShaderMaterial {
       worldUnits: {
         enumerable: true,
 
-        get () {
+        get() {
           return 'WORLD_UNITS' in this.defines;
         },
 
-        set (value) {
+        set(value) {
           if (value === true) {
             this.defines.WORLD_UNITS = '';
           } else {
@@ -75,11 +75,11 @@ class CustomLineMaterial extends ShaderMaterial {
       linewidth: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.linewidth.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.linewidth.value = value;
         },
       },
@@ -87,7 +87,7 @@ class CustomLineMaterial extends ShaderMaterial {
       dashed: {
         enumerable: true,
 
-        get () {
+        get() {
           return Boolean('USE_DASH' in this.defines);
         },
 
@@ -107,11 +107,11 @@ class CustomLineMaterial extends ShaderMaterial {
       dashScale: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.dashScale.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.dashScale.value = value;
         },
       },
@@ -119,11 +119,11 @@ class CustomLineMaterial extends ShaderMaterial {
       dashSize: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.dashSize.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.dashSize.value = value;
         },
       },
@@ -131,11 +131,11 @@ class CustomLineMaterial extends ShaderMaterial {
       dashOffset: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.dashOffset.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.dashOffset.value = value;
         },
       },
@@ -143,11 +143,11 @@ class CustomLineMaterial extends ShaderMaterial {
       gapSize: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.gapSize.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.gapSize.value = value;
         },
       },
@@ -155,11 +155,11 @@ class CustomLineMaterial extends ShaderMaterial {
       opacity: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.opacity.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.opacity.value = value;
         },
       },
@@ -167,11 +167,11 @@ class CustomLineMaterial extends ShaderMaterial {
       resolution: {
         enumerable: true,
 
-        get () {
+        get() {
           return this.uniforms.resolution.value;
         },
 
-        set (value) {
+        set(value) {
           this.uniforms.resolution.value.copy(value);
         },
       },
@@ -179,11 +179,11 @@ class CustomLineMaterial extends ShaderMaterial {
       alphaToCoverage: {
         enumerable: true,
 
-        get () {
+        get() {
           return Boolean('USE_ALPHA_TO_COVERAGE' in this.defines);
         },
 
-        set (value) {
+        set(value) {
           if (Boolean(value) !== Boolean('USE_ALPHA_TO_COVERAGE' in this.defines)) {
             this.needsUpdate = true;
           }

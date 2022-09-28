@@ -312,16 +312,16 @@ const DracoDecoderModule = (function () {
     let noExitRuntime;
     if (Module.noExitRuntime) noExitRuntime = Module.noExitRuntime;
     var WebAssembly = {
-      Memory (opts) {
+      Memory(opts) {
         return {
           buffer: new ArrayBuffer(opts.initial * 65536),
-          grow (amount) {
+          grow(amount) {
             const ret = __growWasmMemory(amount);
             return ret;
           },
         };
       },
-      Table (opts) {
+      Table(opts) {
         const ret = new Array(opts.initial);
         ret.grow = function (by) {
           if (ret.length >= 381 + 0) {
@@ -337,10 +337,10 @@ const DracoDecoderModule = (function () {
         };
         return ret;
       },
-      Module (binary) {
+      Module(binary) {
         return {};
       },
-      Instance (module, info) {
+      Instance(module, info) {
         const decodeBase64 =
           typeof atob === 'function'
             ? atob
@@ -462,9 +462,9 @@ const DracoDecoderModule = (function () {
               }
               function fa(a, b) {
                 let c = 0;
-                  let d = 0;
-                  let e = 0;
-                  let f = 0;
+                let d = 0;
+                let e = 0;
+                let f = 0;
                 c = (T - 16) | 0;
                 T = c;
                 q[(c + 8) >> 2] = 0;
@@ -503,13 +503,13 @@ const DracoDecoderModule = (function () {
               }
               function ga(a, b) {
                 let g = 0;
-                  let h = 0;
-                  let i = 0;
-                  let j = 0;
-                  let k = 0;
-                  let l = 0;
-                  let m = 0;
-                  let n = 0;
+                let h = 0;
+                let i = 0;
+                let j = 0;
+                let k = 0;
+                let l = 0;
+                let m = 0;
+                let n = 0;
                 a = q[(a + 4) >> 2];
                 if (a) {
                   h = r[(b + 11) | 0];
@@ -577,9 +577,9 @@ const DracoDecoderModule = (function () {
               }
               function ha(a, b) {
                 let p = 0;
-                  let r = 0;
-                  let s = 0;
-                  let t = 0;
+                let r = 0;
+                let s = 0;
+                let t = 0;
                 p = (T - 16) | 0;
                 T = p;
                 q[(p + 12) >> 2] = 0;
@@ -620,9 +620,9 @@ const DracoDecoderModule = (function () {
               }
               function ia(a, b, u) {
                 let v = 0;
-                  let w = 0;
-                  let x = 0;
-                  let y = 0;
+                let w = 0;
+                let x = 0;
+                let y = 0;
                 v = (T - 32) | 0;
                 T = v;
                 q[(v + 24) >> 2] = 0;
@@ -675,10 +675,10 @@ const DracoDecoderModule = (function () {
               }
               function ja(a, b) {
                 let u = 0;
-                  let z = 0;
-                  let A = 0;
-                  let B = 0;
-                  let C = 0;
+                let z = 0;
+                let A = 0;
+                let B = 0;
+                let C = 0;
                 u = (T - 32) | 0;
                 T = u;
                 q[(u + 24) >> 2] = 0;
@@ -720,9 +720,9 @@ const DracoDecoderModule = (function () {
               }
               function ka(a, b, D) {
                 let E = 0;
-                  let G = 0;
-                  let H = 0;
-                  let I = 0;
+                let G = 0;
+                let H = 0;
+                let I = 0;
                 E = (T - 16) | 0;
                 T = E;
                 q[(E + 8) >> 2] = 0;
@@ -772,9 +772,9 @@ const DracoDecoderModule = (function () {
               }
               function la(a, b, D) {
                 let F = 0;
-                  let J = 0;
-                  let K = 0;
-                  let L = 0;
+                let J = 0;
+                let K = 0;
+                let L = 0;
                 a: {
                   if (q[(a + 12) >> 2] == (b | 0)) {
                     break a;
@@ -870,10 +870,10 @@ const DracoDecoderModule = (function () {
               }
               function ma(a, b) {
                 let D = 0;
-                  let M = 0;
-                  let N = 0;
-                  let O = 0;
-                  let P = 0;
+                let M = 0;
+                let N = 0;
+                let O = 0;
+                let P = 0;
                 a: {
                   b: {
                     c: {
@@ -1005,9 +1005,9 @@ const DracoDecoderModule = (function () {
               }
               function ra(a, R) {
                 let S = 0;
-                  let W = 0;
-                  let X = 0;
-                  let Y = 0;
+                let W = 0;
+                let X = 0;
+                let Y = 0;
                 S = (T - 32) | 0;
                 T = S;
                 q[(S + 24) >> 2] = 0;
@@ -1066,9 +1066,9 @@ const DracoDecoderModule = (function () {
               }
               function sa(a, R, Z) {
                 let _ = 0;
-                  let $ = 0;
-                  let aa = 0;
-                  let ba = 0;
+                let $ = 0;
+                let aa = 0;
+                let ba = 0;
                 _ = (T - 32) | 0;
                 T = _;
                 q[(_ + 24) >> 2] = 0;
@@ -1153,8 +1153,8 @@ const DracoDecoderModule = (function () {
               }
               function ta(a, o, R) {
                 let Z = 0;
-                  let ca = 0;
-                  let da = 0;
+                let ca = 0;
+                let da = 0;
                 Z = (T - 16) | 0;
                 T = Z;
                 ca = q[(a + 96) >> 2];
@@ -1184,7 +1184,7 @@ const DracoDecoderModule = (function () {
               }
               function ua(a, o) {
                 let R = 0;
-                  let ea = 0;
+                let ea = 0;
                 R = (T - 96) | 0;
                 T = R;
                 Dn((R + 16) | 0, 0, 76);
@@ -1247,18 +1247,18 @@ const DracoDecoderModule = (function () {
               }
               function va(a, o, fa) {
                 let ga = 0;
-                  let ha = 0;
-                  let ia = 0;
-                  let ja = 0;
-                  let ka = 0;
-                  let la = 0;
-                  let ma = 0;
-                  let na = 0;
-                  let oa = 0;
-                  let pa = 0;
-                  let qa = 0;
-                  let ra = 0;
-                  let sa = 0;
+                let ha = 0;
+                let ia = 0;
+                let ja = 0;
+                let ka = 0;
+                let la = 0;
+                let ma = 0;
+                let na = 0;
+                let oa = 0;
+                let pa = 0;
+                let qa = 0;
+                let ra = 0;
+                let sa = 0;
                 ja = (T - 16) | 0;
                 T = ja;
                 a: {
@@ -1396,8 +1396,8 @@ const DracoDecoderModule = (function () {
               }
               function xa(a, fa) {
                 let ta = 0;
-                  let ua = 0;
-                  let va = 0;
+                let ua = 0;
+                let va = 0;
                 ta = (T - 16) | 0;
                 T = ta;
                 q[(a + 68) >> 2] = 0;
@@ -1436,11 +1436,11 @@ const DracoDecoderModule = (function () {
               }
               function ya(a, o) {
                 let T = 0;
-                  let fa = 0;
-                  let wa = 0;
-                  let xa = 0;
-                  let ya = 0;
-                  let za = 0;
+                let fa = 0;
+                let wa = 0;
+                let xa = 0;
+                let ya = 0;
+                let za = 0;
                 a: {
                   wa = q[a >> 2];
                   ya = (q[(a + 4) >> 2] - wa) | 0;
@@ -1484,13 +1484,13 @@ const DracoDecoderModule = (function () {
               }
               function za(a, o, Aa) {
                 let Ba = 0;
-                  let Ca = 0;
-                  let Da = 0;
-                  let Ea = 0;
-                  let Fa = 0;
-                  let Ga = 0;
-                  let Ha = 0;
-                  let Ia = 0;
+                let Ca = 0;
+                let Da = 0;
+                let Ea = 0;
+                let Fa = 0;
+                let Ga = 0;
+                let Ha = 0;
+                let Ia = 0;
                 Da = (T - 16) | 0;
                 T = Da;
                 q[(a + 68) >> 2] = q[(a + 68) >> 2] + 1;
@@ -1618,8 +1618,8 @@ const DracoDecoderModule = (function () {
               }
               function Aa(a, o, Aa) {
                 let Ja = 0;
-                  let Ka = 0;
-                  let La = 0;
+                let Ka = 0;
+                let La = 0;
                 a: {
                   if (t[(a + 80) >> 2] > 65535) {
                     break a;
@@ -1652,8 +1652,8 @@ const DracoDecoderModule = (function () {
               }
               function Ba(a, o, Aa) {
                 let Ma = 0;
-                  let Na = 0;
-                  let Oa = 0;
+                let Na = 0;
+                let Oa = 0;
                 Na = q[(a + 96) >> 2];
                 a = (q[(a + 100) >> 2] - Na) | 0;
                 Oa = ((a | 0) / 12) | 0;
@@ -1681,9 +1681,9 @@ const DracoDecoderModule = (function () {
               }
               function Ca(a, Aa, Pa) {
                 let Qa = 0;
-                  let Ra = 0;
-                  let Sa = 0;
-                  let Ta = 0;
+                let Ra = 0;
+                let Sa = 0;
+                let Ta = 0;
                 Qa = (T - 32) | 0;
                 T = Qa;
                 Ra = o[(a + 24) | 0];
@@ -1737,10 +1737,10 @@ const DracoDecoderModule = (function () {
               }
               function Da(a, Aa, Pa, Ua) {
                 let Va = 0;
-                  let Wa = 0;
-                  let Xa = x(0);
-                  let Ya = 0;
-                  let Za = 0;
+                let Wa = 0;
+                let Xa = x(0);
+                let Ya = 0;
+                let Za = 0;
                 a: {
                   b: {
                     if (!Ua) {
@@ -2021,13 +2021,13 @@ const DracoDecoderModule = (function () {
               }
               function Ea(a, Aa, Pa) {
                 let Ua = 0;
-                  let _a = 0;
-                  let $a = 0;
-                  let ab = 0;
-                  let bb = 0;
-                  let cb = 0;
-                  let db = 0;
-                  let eb = 0;
+                let _a = 0;
+                let $a = 0;
+                let ab = 0;
+                let bb = 0;
+                let cb = 0;
+                let db = 0;
+                let eb = 0;
                 Ua = (T - 16) | 0;
                 T = Ua;
                 bb = q[(a + 80) >> 2];
@@ -2095,14 +2095,14 @@ const DracoDecoderModule = (function () {
               }
               function Fa(a, o) {
                 let Aa = 0;
-                  let Pa = 0;
-                  let fb = 0;
-                  let gb = 0;
-                  let hb = 0;
-                  let ib = 0;
-                  let jb = 0;
-                  let kb = 0;
-                  let lb = 0;
+                let Pa = 0;
+                let fb = 0;
+                let gb = 0;
+                let hb = 0;
+                let ib = 0;
+                let jb = 0;
+                let kb = 0;
+                let lb = 0;
                 Pa = q[(a + 8) >> 2];
                 fb = (a + 4) | 0;
                 Aa = q[fb >> 2];
@@ -2154,13 +2154,13 @@ const DracoDecoderModule = (function () {
               }
               function Ga(a, mb, nb) {
                 let ob = 0;
-                  let pb = 0;
-                  let qb = 0;
-                  let rb = 0;
-                  let sb = 0;
-                  let tb = 0;
-                  let ub = 0;
-                  let vb = 0;
+                let pb = 0;
+                let qb = 0;
+                let rb = 0;
+                let sb = 0;
+                let tb = 0;
+                let ub = 0;
+                let vb = 0;
                 pb = (T - 16) | 0;
                 T = pb;
                 sb = q[(a + 80) >> 2];
@@ -2290,11 +2290,11 @@ const DracoDecoderModule = (function () {
               }
               function Ha(a, mb) {
                 let nb = 0;
-                  let wb = 0;
-                  let xb = 0;
-                  let yb = 0;
-                  let zb = 0;
-                  let Ab = 0;
+                let wb = 0;
+                let xb = 0;
+                let yb = 0;
+                let zb = 0;
+                let Ab = 0;
                 a: {
                   wb = q[(a + 8) >> 2];
                   xb = (a + 4) | 0;
@@ -2354,11 +2354,11 @@ const DracoDecoderModule = (function () {
               }
               function Ia(a, mb, Bb, Cb) {
                 let Db = 0;
-                  let Eb = 0;
-                  let Fb = 0;
-                  let Gb = 0;
-                  let Hb = x(0);
-                  let Ib = 0;
+                let Eb = 0;
+                let Fb = 0;
+                let Gb = 0;
+                let Hb = x(0);
+                let Ib = 0;
                 a: {
                   b: {
                     if (!Cb) {
@@ -2650,13 +2650,13 @@ const DracoDecoderModule = (function () {
               }
               function Ja(a, mb, Bb) {
                 let Cb = 0;
-                  let Jb = 0;
-                  let Kb = 0;
-                  let Lb = 0;
-                  let Mb = 0;
-                  let Nb = 0;
-                  let Ob = 0;
-                  let Pb = 0;
+                let Jb = 0;
+                let Kb = 0;
+                let Lb = 0;
+                let Mb = 0;
+                let Nb = 0;
+                let Ob = 0;
+                let Pb = 0;
                 Jb = (T - 16) | 0;
                 T = Jb;
                 Mb = q[(a + 80) >> 2];
@@ -2786,11 +2786,11 @@ const DracoDecoderModule = (function () {
               }
               function Ka(a, mb, Bb, Qb) {
                 let Rb = 0;
-                  let Sb = 0;
-                  let Tb = 0;
-                  let Ub = 0;
-                  let Vb = x(0);
-                  let Wb = 0;
+                let Sb = 0;
+                let Tb = 0;
+                let Ub = 0;
+                let Vb = x(0);
+                let Wb = 0;
                 a: {
                   b: {
                     if (!Qb) {
@@ -3082,14 +3082,14 @@ const DracoDecoderModule = (function () {
               }
               function La(a, mb, Bb) {
                 let Qb = 0;
-                  let Xb = 0;
-                  let Yb = 0;
-                  let Zb = 0;
-                  let _b = 0;
-                  let $b = 0;
-                  let ac = 0;
-                  let bc = 0;
-                  let cc = 0;
+                let Xb = 0;
+                let Yb = 0;
+                let Zb = 0;
+                let _b = 0;
+                let $b = 0;
+                let ac = 0;
+                let bc = 0;
+                let cc = 0;
                 Qb = (T - 16) | 0;
                 T = Qb;
                 ac = q[(a + 80) >> 2];
@@ -3213,14 +3213,14 @@ const DracoDecoderModule = (function () {
               }
               function Ma(a, o) {
                 let mb = 0;
-                  let Bb = 0;
-                  let dc = 0;
-                  let ec = 0;
-                  let fc = 0;
-                  let gc = 0;
-                  let hc = 0;
-                  let ic = 0;
-                  let jc = 0;
+                let Bb = 0;
+                let dc = 0;
+                let ec = 0;
+                let fc = 0;
+                let gc = 0;
+                let hc = 0;
+                let ic = 0;
+                let jc = 0;
                 Bb = q[(a + 8) >> 2];
                 dc = (a + 4) | 0;
                 mb = q[dc >> 2];
@@ -3271,11 +3271,11 @@ const DracoDecoderModule = (function () {
               }
               function Na(a, kc, lc, mc) {
                 let nc = 0;
-                  let oc = 0;
-                  let pc = 0;
-                  let qc = 0;
-                  let rc = x(0);
-                  let sc = 0;
+                let oc = 0;
+                let pc = 0;
+                let qc = 0;
+                let rc = x(0);
+                let sc = 0;
                 a: {
                   b: {
                     if (!mc) {
@@ -3567,14 +3567,14 @@ const DracoDecoderModule = (function () {
               }
               function Oa(a, kc, lc) {
                 let mc = 0;
-                  let tc = 0;
-                  let uc = 0;
-                  let vc = 0;
-                  let wc = 0;
-                  let xc = 0;
-                  let yc = 0;
-                  let zc = 0;
-                  let Ac = 0;
+                let tc = 0;
+                let uc = 0;
+                let vc = 0;
+                let wc = 0;
+                let xc = 0;
+                let yc = 0;
+                let zc = 0;
+                let Ac = 0;
                 mc = (T - 16) | 0;
                 T = mc;
                 yc = q[(a + 80) >> 2];
@@ -3698,11 +3698,11 @@ const DracoDecoderModule = (function () {
               }
               function Pa(a, kc, lc, Bc) {
                 let Cc = 0;
-                  let Dc = 0;
-                  let Ec = 0;
-                  let Fc = 0;
-                  let Gc = x(0);
-                  let Hc = 0;
+                let Dc = 0;
+                let Ec = 0;
+                let Fc = 0;
+                let Gc = x(0);
+                let Hc = 0;
                 a: {
                   b: {
                     if (!Bc) {
@@ -3994,14 +3994,14 @@ const DracoDecoderModule = (function () {
               }
               function Qa(a, kc, lc) {
                 let Bc = 0;
-                  let Ic = 0;
-                  let Jc = 0;
-                  let Kc = 0;
-                  let Lc = 0;
-                  let Mc = 0;
-                  let Nc = 0;
-                  let Oc = 0;
-                  let Pc = 0;
+                let Ic = 0;
+                let Jc = 0;
+                let Kc = 0;
+                let Lc = 0;
+                let Mc = 0;
+                let Nc = 0;
+                let Oc = 0;
+                let Pc = 0;
                 Bc = (T - 16) | 0;
                 T = Bc;
                 Nc = q[(a + 80) >> 2];
@@ -4134,11 +4134,11 @@ const DracoDecoderModule = (function () {
               }
               function Ra(a, kc, lc, Qc) {
                 let Rc = 0;
-                  let Sc = 0;
-                  let Tc = 0;
-                  let Uc = 0;
-                  let Vc = x(0);
-                  let Wc = 0;
+                let Sc = 0;
+                let Tc = 0;
+                let Uc = 0;
+                let Vc = x(0);
+                let Wc = 0;
                 a: {
                   b: {
                     if (!Qc) {
@@ -4430,14 +4430,14 @@ const DracoDecoderModule = (function () {
               }
               function Sa(a, kc, lc) {
                 let Qc = 0;
-                  let Xc = 0;
-                  let Yc = 0;
-                  let Zc = 0;
-                  let _c = 0;
-                  let $c = 0;
-                  let ad = 0;
-                  let bd = 0;
-                  let cd = 0;
+                let Xc = 0;
+                let Yc = 0;
+                let Zc = 0;
+                let _c = 0;
+                let $c = 0;
+                let ad = 0;
+                let bd = 0;
+                let cd = 0;
                 Qc = (T - 16) | 0;
                 T = Qc;
                 ad = q[(a + 80) >> 2];
@@ -4570,11 +4570,11 @@ const DracoDecoderModule = (function () {
               }
               function Ta(a, kc, lc, dd) {
                 let ed = 0;
-                  let fd = 0;
-                  let gd = 0;
-                  let hd = 0;
-                  let id = x(0);
-                  let jd = 0;
+                let fd = 0;
+                let gd = 0;
+                let hd = 0;
+                let id = x(0);
+                let jd = 0;
                 a: {
                   b: {
                     if (!dd) {
@@ -4866,12 +4866,12 @@ const DracoDecoderModule = (function () {
               }
               function Ua(a, kc, lc, dd, kd) {
                 let ld = 0;
-                  let md = 0;
-                  let nd = 0;
-                  let od = 0;
-                  let pd = 0;
-                  let qd = 0;
-                  let rd = 0;
+                let md = 0;
+                let nd = 0;
+                let od = 0;
+                let pd = 0;
+                let qd = 0;
+                let rd = 0;
                 md = (T - 16) | 0;
                 T = md;
                 lc = (lc + -1) | 0;
@@ -4953,12 +4953,12 @@ const DracoDecoderModule = (function () {
               }
               function Va(a, kc, lc, dd) {
                 let kd = 0;
-                  let sd = 0;
-                  let td = 0;
-                  let ud = 0;
-                  let vd = 0;
-                  let wd = 0;
-                  let xd = 0;
+                let sd = 0;
+                let td = 0;
+                let ud = 0;
+                let vd = 0;
+                let wd = 0;
+                let xd = 0;
                 sd = (T - 16) | 0;
                 T = sd;
                 a: {
@@ -5050,14 +5050,14 @@ const DracoDecoderModule = (function () {
               }
               function Wa(a, kc, lc, dd) {
                 let yd = 0;
-                  let zd = 0;
-                  let Ad = 0;
-                  let Bd = 0;
-                  let Cd = 0;
-                  let Dd = 0;
-                  let Ed = 0;
-                  let Fd = 0;
-                  let Gd = 0;
+                let zd = 0;
+                let Ad = 0;
+                let Bd = 0;
+                let Cd = 0;
+                let Dd = 0;
+                let Ed = 0;
+                let Fd = 0;
+                let Gd = 0;
                 yd = (T - 16) | 0;
                 T = yd;
                 a: {
@@ -5142,14 +5142,14 @@ const DracoDecoderModule = (function () {
               }
               function Xa(a, kc, lc, dd) {
                 let Hd = 0;
-                  let Id = 0;
-                  let Jd = 0;
-                  let Kd = 0;
-                  let Ld = 0;
-                  let Md = 0;
-                  let Nd = 0;
-                  let Od = 0;
-                  let Pd = 0;
+                let Id = 0;
+                let Jd = 0;
+                let Kd = 0;
+                let Ld = 0;
+                let Md = 0;
+                let Nd = 0;
+                let Od = 0;
+                let Pd = 0;
                 Hd = (T - 16) | 0;
                 T = Hd;
                 a: {
@@ -5234,12 +5234,12 @@ const DracoDecoderModule = (function () {
               }
               function Ya(a, kc, lc, dd) {
                 let Qd = 0;
-                  let Rd = 0;
-                  let Sd = 0;
-                  let Td = 0;
-                  let Ud = 0;
-                  let Vd = 0;
-                  let Wd = 0;
+                let Rd = 0;
+                let Sd = 0;
+                let Td = 0;
+                let Ud = 0;
+                let Vd = 0;
+                let Wd = 0;
                 Rd = (T - 16) | 0;
                 T = Rd;
                 a: {
@@ -5331,14 +5331,14 @@ const DracoDecoderModule = (function () {
               }
               function Za(a, kc, lc, dd) {
                 let Xd = 0;
-                  let Yd = 0;
-                  let Zd = 0;
-                  let _d = 0;
-                  let $d = 0;
-                  let ae = 0;
-                  let be = 0;
-                  let ce = 0;
-                  let de = 0;
+                let Yd = 0;
+                let Zd = 0;
+                let _d = 0;
+                let $d = 0;
+                let ae = 0;
+                let be = 0;
+                let ce = 0;
+                let de = 0;
                 Xd = (T - 16) | 0;
                 T = Xd;
                 a: {
@@ -5423,14 +5423,14 @@ const DracoDecoderModule = (function () {
               }
               function _a(a, kc, lc, dd) {
                 let ee = 0;
-                  let fe = 0;
-                  let ge = 0;
-                  let he = 0;
-                  let ie = 0;
-                  let je = 0;
-                  let ke = 0;
-                  let le = 0;
-                  let me = 0;
+                let fe = 0;
+                let ge = 0;
+                let he = 0;
+                let ie = 0;
+                let je = 0;
+                let ke = 0;
+                let le = 0;
+                let me = 0;
                 ee = (T - 16) | 0;
                 T = ee;
                 a: {
@@ -5515,7 +5515,7 @@ const DracoDecoderModule = (function () {
               }
               function $a(a, o) {
                 let kc = 0;
-                  let lc = 0;
+                let lc = 0;
                 kc = q[(a + 4) >> 2];
                 if (!kc) {
                   return 0;
@@ -5557,10 +5557,10 @@ const DracoDecoderModule = (function () {
               }
               function bb(a, dd, ne) {
                 let oe = 0;
-                  let pe = 0;
-                  let qe = 0;
-                  let re = 0;
-                  let se = 0;
+                let pe = 0;
+                let qe = 0;
+                let re = 0;
+                let se = 0;
                 pe = (T - 16) | 0;
                 T = pe;
                 q[(a + 4) >> 2] = 0;
@@ -5635,7 +5635,7 @@ const DracoDecoderModule = (function () {
               }
               function cb(a, dd) {
                 let ne = 0;
-                  let te = 0;
+                let te = 0;
                 ne = (T - 32) | 0;
                 T = ne;
                 a: {
@@ -5684,11 +5684,11 @@ const DracoDecoderModule = (function () {
               }
               function db(a, dd, ue) {
                 let ve = 0;
-                  let we = 0;
-                  let xe = 0;
-                  let ye = 0;
-                  let ze = 0;
-                  let Ae = 0;
+                let we = 0;
+                let xe = 0;
+                let ye = 0;
+                let ze = 0;
+                let Ae = 0;
                 xe = (T - 32) | 0;
                 T = xe;
                 ze = q[(ue + 4) >> 2];
@@ -5761,13 +5761,13 @@ const DracoDecoderModule = (function () {
               }
               function eb(a, dd, ue, Be) {
                 let Ce = 0;
-                  let De = 0;
-                  let Ee = 0;
-                  let Fe = 0;
-                  let Ge = 0;
-                  let He = 0;
-                  let Ie = 0;
-                  let Je = 0;
+                let De = 0;
+                let Ee = 0;
+                let Fe = 0;
+                let Ge = 0;
+                let He = 0;
+                let Ie = 0;
+                let Je = 0;
                 De = q[dd >> 2];
                 Ce = (q[(ue + 4) >> 2] + ((q[ue >> 2] - De) << 3)) | 0;
                 ue = q[(dd + 4) >> 2];
@@ -5999,7 +5999,7 @@ const DracoDecoderModule = (function () {
               function Hb(Ke) {
                 Ke = Ke | 0;
                 let Le = 0;
-                  let Me = 0;
+                let Me = 0;
                 if (Ke) {
                   Le = (Ke + 88) | 0;
                   Me = q[Le >> 2];
@@ -6132,10 +6132,10 @@ const DracoDecoderModule = (function () {
               function Wb(Qe) {
                 Qe = Qe | 0;
                 let Re = 0;
-                  let Se = 0;
-                  let Te = 0;
-                  let Ue = 0;
-                  let Ve = 0;
+                let Se = 0;
+                let Te = 0;
+                let Ue = 0;
+                let Ve = 0;
                 if (Qe) {
                   if (o[(Qe + 27) | 0] <= -1) {
                     An(q[(Qe + 16) >> 2]);
@@ -6402,8 +6402,8 @@ const DracoDecoderModule = (function () {
               }
               function Fc() {
                 let Qe = 0;
-                  let We = 0;
-                  let Xe = 0;
+                let We = 0;
+                let Xe = 0;
                 We = Mm(24);
                 Xe = (We + 4) | 0;
                 Qe = Xe;
@@ -6529,7 +6529,7 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Ze = Ze | 0;
                 let af = 0;
-                  let bf = 0;
+                let bf = 0;
                 q[Ze >> 2] = 2;
                 af = q[(Ze + 8) >> 2];
                 bf = (q[(Ze + 12) >> 2] - af) | 0;
@@ -6561,11 +6561,11 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Ze = Ze | 0;
                 let cf = 0;
-                  let df = 0;
-                  let ef = 0;
-                  let ff = 0;
-                  let gf = 0;
-                  let hf = 0;
+                let df = 0;
+                let ef = 0;
+                let ff = 0;
+                let gf = 0;
+                let hf = 0;
                 ef = q[(Ze + 88) >> 2];
                 if (!(!ef | (q[ef >> 2] != 1))) {
                   ff = (ef + 8) | 0;
@@ -6616,11 +6616,11 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Ze = Ze | 0;
                 let jf = 0;
-                  let kf = 0;
-                  let lf = 0;
-                  let mf = 0;
-                  let nf = 0;
-                  let of = 0;
+                let kf = 0;
+                let lf = 0;
+                let mf = 0;
+                let nf = 0;
+                let of = 0;
                 q[Ze >> 2] = 1;
                 mf = (Ze + 8) | 0;
                 jf = q[(Ze + 8) >> 2];
@@ -6681,12 +6681,12 @@ const DracoDecoderModule = (function () {
               }
               function hd(Ye, Ze, pf) {
                 let qf = 0;
-                  let rf = 0;
-                  let sf = 0;
-                  let tf = 0;
-                  let uf = 0;
-                  let vf = 0;
-                  let wf = 0;
+                let rf = 0;
+                let sf = 0;
+                let tf = 0;
+                let uf = 0;
+                let vf = 0;
+                let wf = 0;
                 a: {
                   tf = (pf - Ze) | 0;
                   sf = tf >> 2;
@@ -6792,11 +6792,11 @@ const DracoDecoderModule = (function () {
               }
               function md(Ye, xf, zf) {
                 let Af = 0;
-                  let Bf = 0;
-                  let Cf = 0;
-                  let Df = 0;
-                  let Ef = 0;
-                  let Ff = 0;
+                let Bf = 0;
+                let Cf = 0;
+                let Df = 0;
+                let Ef = 0;
+                let Ff = 0;
                 Cf = q[(Ye + 8) >> 2];
                 Af = q[(Ye + 4) >> 2];
                 if (((Cf - Af) >> 2) >>> 0 >= xf >>> 0) {
@@ -6888,8 +6888,8 @@ const DracoDecoderModule = (function () {
               }
               function pd(Ye, xf) {
                 let zf = 0;
-                  let Gf = 0;
-                  let Hf = 0;
+                let Gf = 0;
+                let Hf = 0;
                 Gf = q[Ye >> 2];
                 a: {
                   if (!Gf) {
@@ -6997,7 +6997,7 @@ const DracoDecoderModule = (function () {
               }
               function td(Ye, xf) {
                 let Jf = 0;
-                  let Lf = 0;
+                let Lf = 0;
                 a: {
                   if (q[(Ye + 64) >> 2]) {
                     break a;
@@ -7031,12 +7031,12 @@ const DracoDecoderModule = (function () {
               }
               function ud(Ye, xf) {
                 let Mf = 0;
-                  let Nf = 0;
-                  let Of = 0;
-                  let Pf = 0;
-                  let Qf = 0;
-                  let Rf = 0;
-                  let Sf = 0;
+                let Nf = 0;
+                let Of = 0;
+                let Pf = 0;
+                let Qf = 0;
+                let Rf = 0;
+                let Sf = 0;
                 if (!q[(Ye - -64) >> 2]) {
                   Mf = Mm(32);
                   Uj(Mf);
@@ -7131,12 +7131,12 @@ const DracoDecoderModule = (function () {
               }
               function vd(Ye, xf, Tf) {
                 let Uf = 0;
-                  let Vf = 0;
-                  let Wf = 0;
-                  let Xf = 0;
-                  let Yf = 0;
-                  let Zf = 0;
-                  let _f = 0;
+                let Vf = 0;
+                let Wf = 0;
+                let Xf = 0;
+                let Yf = 0;
+                let Zf = 0;
+                let _f = 0;
                 a: {
                   Uf = (Tf - xf) | 0;
                   Wf = Uf >> 2;
@@ -7227,22 +7227,22 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 xf = xf | 0;
                 let Tf = 0;
-                  let $f = 0;
-                  let ag = 0;
-                  let bg = 0;
-                  let cg = 0;
-                  let dg = 0;
-                  let eg = 0;
-                  let fg = 0;
-                  let gg = 0;
-                  let hg = 0;
-                  let ig = 0;
-                  let jg = 0;
-                  let kg = 0;
-                  let lg = 0;
-                  let mg = 0;
-                  let ng = 0;
-                  let og = 0;
+                let $f = 0;
+                let ag = 0;
+                let bg = 0;
+                let cg = 0;
+                let dg = 0;
+                let eg = 0;
+                let fg = 0;
+                let gg = 0;
+                let hg = 0;
+                let ig = 0;
+                let jg = 0;
+                let kg = 0;
+                let lg = 0;
+                let mg = 0;
+                let ng = 0;
+                let og = 0;
                 cg = (T - 96) | 0;
                 T = cg;
                 a: {
@@ -7431,9 +7431,9 @@ const DracoDecoderModule = (function () {
               }
               function zd(Ye, xf, pg) {
                 let qg = 0;
-                  let rg = 0;
-                  let sg = 0;
-                  let tg = 0;
+                let rg = 0;
+                let sg = 0;
+                let tg = 0;
                 a: {
                   if (Ye >>> 0 > 5) {
                     break a;
@@ -7467,11 +7467,11 @@ const DracoDecoderModule = (function () {
               }
               function Ad(Ye, xf, pg) {
                 let ug = 0;
-                  let vg = 0;
-                  let wg = 0;
-                  let xg = 0;
-                  let yg = 0;
-                  let zg = 0;
+                let vg = 0;
+                let wg = 0;
+                let xg = 0;
+                let yg = 0;
+                let zg = 0;
                 wg = q[(Ye + 8) >> 2];
                 ug = q[(Ye + 4) >> 2];
                 if (((wg - ug) >> 2) >>> 0 >= xf >>> 0) {
@@ -7605,21 +7605,21 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 pg = pg | 0;
                 let Bg = 0;
-                  let Cg = 0;
-                  let Dg = 0;
-                  let Eg = 0;
-                  let Fg = 0;
-                  let Gg = 0;
-                  let Hg = 0;
-                  let Ig = 0;
-                  let Jg = 0;
-                  let Kg = 0;
-                  let Lg = 0;
-                  let Mg = 0;
-                  let Ng = 0;
-                  let Og = 0;
-                  let Pg = 0;
-                  let Qg = 0;
+                let Cg = 0;
+                let Dg = 0;
+                let Eg = 0;
+                let Fg = 0;
+                let Gg = 0;
+                let Hg = 0;
+                let Ig = 0;
+                let Jg = 0;
+                let Kg = 0;
+                let Lg = 0;
+                let Mg = 0;
+                let Ng = 0;
+                let Og = 0;
+                let Pg = 0;
+                let Qg = 0;
                 Cg = (T - 704) | 0;
                 T = Cg;
                 Dg = 1;
@@ -7867,10 +7867,10 @@ const DracoDecoderModule = (function () {
               }
               function Kd(Ye, pg) {
                 let Rg = 0;
-                  let Sg = 0;
-                  let Tg = 0;
-                  let Ug = 0;
-                  let Vg = 0;
+                let Sg = 0;
+                let Tg = 0;
+                let Ug = 0;
+                let Vg = 0;
                 a: {
                   b: {
                     c: {
@@ -7944,10 +7944,10 @@ const DracoDecoderModule = (function () {
               }
               function Ld(Ye, pg) {
                 let Wg = 0;
-                  let Xg = 0;
-                  let Yg = 0;
-                  let Zg = 0;
-                  let _g = 0;
+                let Xg = 0;
+                let Yg = 0;
+                let Zg = 0;
+                let _g = 0;
                 q[(Ye + 16) >> 2] = 0;
                 q[(Ye + 20) >> 2] = 0;
                 q[Ye >> 2] = 0;
@@ -8015,11 +8015,11 @@ const DracoDecoderModule = (function () {
               }
               function Md(Ye, pg, ah) {
                 let bh = 0;
-                  let ch = 0;
-                  let dh = 0;
-                  let eh = 0;
-                  let fh = 0;
-                  let gh = 0;
+                let ch = 0;
+                let dh = 0;
+                let eh = 0;
+                let fh = 0;
+                let gh = 0;
                 ch = q[(pg + 12) >> 2];
                 a: {
                   dh = q[(pg + 20) >> 2];
@@ -8087,10 +8087,10 @@ const DracoDecoderModule = (function () {
               }
               function Nd(Ye) {
                 let pg = 0;
-                  let $g = 0;
-                  let ah = 0;
-                  let hh = 0;
-                  let ih = 0;
+                let $g = 0;
+                let ah = 0;
+                let hh = 0;
+                let ih = 0;
                 ah = q[(Ye + 132) >> 2];
                 if (ah) {
                   ih = (Ye + 136) | 0;
@@ -8162,9 +8162,9 @@ const DracoDecoderModule = (function () {
               }
               function Od(Ye, jh) {
                 let kh = 0;
-                  let lh = 0;
-                  let mh = 0;
-                  let nh = 0;
+                let lh = 0;
+                let mh = 0;
+                let nh = 0;
                 mh = (T - 16) | 0;
                 T = mh;
                 q[(Ye + 12) >> 2] = jh;
@@ -8300,11 +8300,11 @@ const DracoDecoderModule = (function () {
               }
               function Pd(Ye, jh, oh) {
                 let ph = 0;
-                  let qh = 0;
-                  let rh = 0;
-                  let sh = 0;
-                  let th = 0;
-                  let uh = 0;
+                let qh = 0;
+                let rh = 0;
+                let sh = 0;
+                let th = 0;
+                let uh = 0;
                 qh = q[(jh + 12) >> 2];
                 a: {
                   rh = q[(jh + 20) >> 2];
@@ -8372,11 +8372,11 @@ const DracoDecoderModule = (function () {
               }
               function Qd(Ye, jh, oh) {
                 let vh = 0;
-                  let wh = 0;
-                  let xh = 0;
-                  let yh = 0;
-                  let zh = 0;
-                  let Ah = 0;
+                let wh = 0;
+                let xh = 0;
+                let yh = 0;
+                let zh = 0;
+                let Ah = 0;
                 wh = q[(jh + 12) >> 2];
                 a: {
                   xh = q[(jh + 20) >> 2];
@@ -8444,10 +8444,10 @@ const DracoDecoderModule = (function () {
               }
               function Rd(Ye) {
                 let jh = 0;
-                  let oh = 0;
-                  let Bh = 0;
-                  let Ch = 0;
-                  let Dh = 0;
+                let oh = 0;
+                let Bh = 0;
+                let Ch = 0;
+                let Dh = 0;
                 Bh = q[(Ye + 128) >> 2];
                 if (Bh) {
                   Dh = (Ye + 132) | 0;
@@ -8518,9 +8518,9 @@ const DracoDecoderModule = (function () {
               }
               function Sd(Ye, Eh) {
                 let Fh = 0;
-                  let Gh = 0;
-                  let Hh = 0;
-                  let Ih = 0;
+                let Gh = 0;
+                let Hh = 0;
+                let Ih = 0;
                 Hh = (T - 16) | 0;
                 T = Hh;
                 q[(Ye + 12) >> 2] = Eh;
@@ -8656,11 +8656,11 @@ const DracoDecoderModule = (function () {
               }
               function Td(Ye, Eh, Jh) {
                 let Kh = 0;
-                  let Lh = 0;
-                  let Mh = 0;
-                  let Nh = 0;
-                  let Oh = 0;
-                  let Ph = 0;
+                let Lh = 0;
+                let Mh = 0;
+                let Nh = 0;
+                let Oh = 0;
+                let Ph = 0;
                 Lh = q[(Eh + 12) >> 2];
                 a: {
                   Mh = q[(Eh + 20) >> 2];
@@ -8728,11 +8728,11 @@ const DracoDecoderModule = (function () {
               }
               function Ud(Ye, Eh, Jh) {
                 let Qh = 0;
-                  let Rh = 0;
-                  let Sh = 0;
-                  let Th = 0;
-                  let Uh = 0;
-                  let Vh = 0;
+                let Rh = 0;
+                let Sh = 0;
+                let Th = 0;
+                let Uh = 0;
+                let Vh = 0;
                 Rh = q[(Eh + 12) >> 2];
                 a: {
                   Sh = q[(Eh + 20) >> 2];
@@ -8811,10 +8811,10 @@ const DracoDecoderModule = (function () {
               }
               function Vd(Ye) {
                 let Eh = 0;
-                  let Jh = 0;
-                  let Wh = 0;
-                  let Xh = 0;
-                  let Yh = 0;
+                let Jh = 0;
+                let Wh = 0;
+                let Xh = 0;
+                let Yh = 0;
                 Wh = q[(Ye + 640) >> 2];
                 if (Wh) {
                   Yh = (Ye + 644) | 0;
@@ -8885,9 +8885,9 @@ const DracoDecoderModule = (function () {
               }
               function Wd(Ye, Zh) {
                 let _h = 0;
-                  let $h = 0;
-                  let ai = 0;
-                  let bi = 0;
+                let $h = 0;
+                let ai = 0;
+                let bi = 0;
                 ai = (T - 16) | 0;
                 T = ai;
                 q[(Ye + 12) >> 2] = Zh;
@@ -9024,11 +9024,11 @@ const DracoDecoderModule = (function () {
               }
               function Xd(Ye, Zh, ci) {
                 let di = 0;
-                  let ei = 0;
-                  let fi = 0;
-                  let gi = 0;
-                  let hi = 0;
-                  let ii = 0;
+                let ei = 0;
+                let fi = 0;
+                let gi = 0;
+                let hi = 0;
+                let ii = 0;
                 ei = q[(Zh + 12) >> 2];
                 a: {
                   fi = q[(Zh + 20) >> 2];
@@ -9107,11 +9107,11 @@ const DracoDecoderModule = (function () {
               }
               function Yd(Ye, Zh, ci) {
                 let ji = 0;
-                  let ki = 0;
-                  let li = 0;
-                  let mi = 0;
-                  let ni = 0;
-                  let oi = 0;
+                let ki = 0;
+                let li = 0;
+                let mi = 0;
+                let ni = 0;
+                let oi = 0;
                 ki = q[(Zh + 12) >> 2];
                 a: {
                   li = q[(Zh + 20) >> 2];
@@ -9190,31 +9190,31 @@ const DracoDecoderModule = (function () {
               }
               function Zd(Ye, Zh, ci) {
                 let pi = 0;
-                  let qi = 0;
-                  let ri = 0;
-                  let si = 0;
-                  let ti = 0;
-                  let ui = 0;
-                  let vi = 0;
-                  let wi = 0;
-                  let xi = 0;
-                  let yi = 0;
-                  let zi = 0;
-                  let Ai = 0;
-                  let Bi = 0;
-                  let Ci = 0;
-                  let Di = 0;
-                  let Ei = 0;
-                  let Fi = 0;
-                  let Gi = 0;
-                  let Hi = 0;
-                  let Ii = 0;
-                  let Ji = 0;
-                  let Ki = 0;
-                  let Li = 0;
-                  let Mi = 0;
-                  let Ni = 0;
-                  let Oi = 0;
+                let qi = 0;
+                let ri = 0;
+                let si = 0;
+                let ti = 0;
+                let ui = 0;
+                let vi = 0;
+                let wi = 0;
+                let xi = 0;
+                let yi = 0;
+                let zi = 0;
+                let Ai = 0;
+                let Bi = 0;
+                let Ci = 0;
+                let Di = 0;
+                let Ei = 0;
+                let Fi = 0;
+                let Gi = 0;
+                let Hi = 0;
+                let Ii = 0;
+                let Ji = 0;
+                let Ki = 0;
+                let Li = 0;
+                let Mi = 0;
+                let Ni = 0;
+                let Oi = 0;
                 si = (T - 32) | 0;
                 T = si;
                 qi = q[(Ye + 12) >> 2];
@@ -9765,13 +9765,13 @@ const DracoDecoderModule = (function () {
               }
               function _d(Ye, Zh, ci) {
                 let Pi = 0;
-                  let Qi = 0;
-                  let Ri = 0;
-                  let Si = 0;
-                  let Ti = 0;
-                  let Ui = 0;
-                  let Vi = 0;
-                  let Wi = 0;
+                let Qi = 0;
+                let Ri = 0;
+                let Si = 0;
+                let Ti = 0;
+                let Ui = 0;
+                let Vi = 0;
+                let Wi = 0;
                 q[Ye >> 2] = 0;
                 q[(Ye + 4) >> 2] = 0;
                 q[(Ye + 8) >> 2] = 0;
@@ -9833,31 +9833,31 @@ const DracoDecoderModule = (function () {
               }
               function $d(Ye, Zh, ci) {
                 let Xi = 0;
-                  let Yi = 0;
-                  let Zi = 0;
-                  let _i = 0;
-                  let $i = 0;
-                  let aj = 0;
-                  let bj = 0;
-                  let cj = 0;
-                  let dj = 0;
-                  let ej = 0;
-                  let fj = 0;
-                  let gj = 0;
-                  let hj = 0;
-                  let ij = 0;
-                  let jj = 0;
-                  let kj = 0;
-                  let lj = 0;
-                  let mj = 0;
-                  let nj = 0;
-                  let oj = 0;
-                  let pj = 0;
-                  let qj = 0;
-                  let rj = 0;
-                  let sj = 0;
-                  let tj = 0;
-                  let uj = 0;
+                let Yi = 0;
+                let Zi = 0;
+                let _i = 0;
+                let $i = 0;
+                let aj = 0;
+                let bj = 0;
+                let cj = 0;
+                let dj = 0;
+                let ej = 0;
+                let fj = 0;
+                let gj = 0;
+                let hj = 0;
+                let ij = 0;
+                let jj = 0;
+                let kj = 0;
+                let lj = 0;
+                let mj = 0;
+                let nj = 0;
+                let oj = 0;
+                let pj = 0;
+                let qj = 0;
+                let rj = 0;
+                let sj = 0;
+                let tj = 0;
+                let uj = 0;
                 _i = (T - 32) | 0;
                 T = _i;
                 Yi = q[(Ye + 12) >> 2];
@@ -10408,32 +10408,32 @@ const DracoDecoderModule = (function () {
               }
               function ae(Ye, Zh, ci) {
                 let vj = 0;
-                  let wj = 0;
-                  let xj = 0;
-                  let yj = 0;
-                  let zj = 0;
-                  let Aj = 0;
-                  let Bj = 0;
-                  let Cj = 0;
-                  let Dj = 0;
-                  let Ej = 0;
-                  let Fj = 0;
-                  let Gj = 0;
-                  let Hj = 0;
-                  let Ij = 0;
-                  let Jj = 0;
-                  let Kj = 0;
-                  let Lj = 0;
-                  let Mj = 0;
-                  let Nj = 0;
-                  let Oj = 0;
-                  let Pj = 0;
-                  let Qj = 0;
-                  let Rj = 0;
-                  let Sj = 0;
-                  let Tj = 0;
-                  let Uj = 0;
-                  let Vj = 0;
+                let wj = 0;
+                let xj = 0;
+                let yj = 0;
+                let zj = 0;
+                let Aj = 0;
+                let Bj = 0;
+                let Cj = 0;
+                let Dj = 0;
+                let Ej = 0;
+                let Fj = 0;
+                let Gj = 0;
+                let Hj = 0;
+                let Ij = 0;
+                let Jj = 0;
+                let Kj = 0;
+                let Lj = 0;
+                let Mj = 0;
+                let Nj = 0;
+                let Oj = 0;
+                let Pj = 0;
+                let Qj = 0;
+                let Rj = 0;
+                let Sj = 0;
+                let Tj = 0;
+                let Uj = 0;
+                let Vj = 0;
                 yj = (T - 32) | 0;
                 T = yj;
                 vj = q[(Ye + 12) >> 2];
@@ -10951,32 +10951,32 @@ const DracoDecoderModule = (function () {
               }
               function be(Ye, Zh, ci) {
                 let Wj = 0;
-                  let Xj = 0;
-                  let Yj = 0;
-                  let Zj = 0;
-                  let _j = 0;
-                  let $j = 0;
-                  let ak = 0;
-                  let bk = 0;
-                  let ck = 0;
-                  let dk = 0;
-                  let ek = 0;
-                  let fk = 0;
-                  let gk = 0;
-                  let hk = 0;
-                  let ik = 0;
-                  let jk = 0;
-                  let kk = 0;
-                  let lk = 0;
-                  let mk = 0;
-                  let nk = 0;
-                  let ok = 0;
-                  let pk = 0;
-                  let qk = 0;
-                  let rk = 0;
-                  let sk = 0;
-                  let tk = 0;
-                  let uk = 0;
+                let Xj = 0;
+                let Yj = 0;
+                let Zj = 0;
+                let _j = 0;
+                let $j = 0;
+                let ak = 0;
+                let bk = 0;
+                let ck = 0;
+                let dk = 0;
+                let ek = 0;
+                let fk = 0;
+                let gk = 0;
+                let hk = 0;
+                let ik = 0;
+                let jk = 0;
+                let kk = 0;
+                let lk = 0;
+                let mk = 0;
+                let nk = 0;
+                let ok = 0;
+                let pk = 0;
+                let qk = 0;
+                let rk = 0;
+                let sk = 0;
+                let tk = 0;
+                let uk = 0;
                 Zj = (T - 32) | 0;
                 T = Zj;
                 Xj = q[(Ye + 12) >> 2];
@@ -11494,31 +11494,31 @@ const DracoDecoderModule = (function () {
               }
               function ce(Ye, Zh, ci) {
                 let vk = 0;
-                  let wk = 0;
-                  let xk = 0;
-                  let yk = 0;
-                  let zk = 0;
-                  let Ak = 0;
-                  let Bk = 0;
-                  let Ck = 0;
-                  let Dk = 0;
-                  let Ek = 0;
-                  let Fk = 0;
-                  let Gk = 0;
-                  let Hk = 0;
-                  let Ik = 0;
-                  let Jk = 0;
-                  let Kk = 0;
-                  let Lk = 0;
-                  let Mk = 0;
-                  let Nk = 0;
-                  let Ok = 0;
-                  let Pk = 0;
-                  let Qk = 0;
-                  let Rk = 0;
-                  let Sk = 0;
-                  let Tk = 0;
-                  let Uk = 0;
+                let wk = 0;
+                let xk = 0;
+                let yk = 0;
+                let zk = 0;
+                let Ak = 0;
+                let Bk = 0;
+                let Ck = 0;
+                let Dk = 0;
+                let Ek = 0;
+                let Fk = 0;
+                let Gk = 0;
+                let Hk = 0;
+                let Ik = 0;
+                let Jk = 0;
+                let Kk = 0;
+                let Lk = 0;
+                let Mk = 0;
+                let Nk = 0;
+                let Ok = 0;
+                let Pk = 0;
+                let Qk = 0;
+                let Rk = 0;
+                let Sk = 0;
+                let Tk = 0;
+                let Uk = 0;
                 yk = (T - 32) | 0;
                 T = yk;
                 vk = q[(Ye + 12) >> 2];
@@ -12089,31 +12089,31 @@ const DracoDecoderModule = (function () {
               }
               function ee(Ye, Zh, ci) {
                 let Vk = 0;
-                  let Wk = 0;
-                  let Xk = 0;
-                  let Yk = 0;
-                  let Zk = 0;
-                  let _k = 0;
-                  let $k = 0;
-                  let al = 0;
-                  let bl = 0;
-                  let cl = 0;
-                  let dl = 0;
-                  let el = 0;
-                  let fl = 0;
-                  let gl = 0;
-                  let hl = 0;
-                  let il = 0;
-                  let jl = 0;
-                  let kl = 0;
-                  let ll = 0;
-                  let ml = 0;
-                  let nl = 0;
-                  let ol = 0;
-                  let pl = 0;
-                  let ql = 0;
-                  let rl = 0;
-                  let sl = 0;
+                let Wk = 0;
+                let Xk = 0;
+                let Yk = 0;
+                let Zk = 0;
+                let _k = 0;
+                let $k = 0;
+                let al = 0;
+                let bl = 0;
+                let cl = 0;
+                let dl = 0;
+                let el = 0;
+                let fl = 0;
+                let gl = 0;
+                let hl = 0;
+                let il = 0;
+                let jl = 0;
+                let kl = 0;
+                let ll = 0;
+                let ml = 0;
+                let nl = 0;
+                let ol = 0;
+                let pl = 0;
+                let ql = 0;
+                let rl = 0;
+                let sl = 0;
                 Yk = (T - 32) | 0;
                 T = Yk;
                 Vk = q[(Ye + 12) >> 2];
@@ -12647,31 +12647,31 @@ const DracoDecoderModule = (function () {
               }
               function fe(Ye, Zh, ci) {
                 let tl = 0;
-                  let ul = 0;
-                  let vl = 0;
-                  let wl = 0;
-                  let xl = 0;
-                  let yl = 0;
-                  let zl = 0;
-                  let Al = 0;
-                  let Bl = 0;
-                  let Cl = 0;
-                  let Dl = 0;
-                  let El = 0;
-                  let Fl = 0;
-                  let Gl = 0;
-                  let Hl = 0;
-                  let Il = 0;
-                  let Jl = 0;
-                  let Kl = 0;
-                  let Ll = 0;
-                  let Ml = 0;
-                  let Nl = 0;
-                  let Ol = 0;
-                  let Pl = 0;
-                  let Ql = 0;
-                  let Rl = 0;
-                  let Sl = 0;
+                let ul = 0;
+                let vl = 0;
+                let wl = 0;
+                let xl = 0;
+                let yl = 0;
+                let zl = 0;
+                let Al = 0;
+                let Bl = 0;
+                let Cl = 0;
+                let Dl = 0;
+                let El = 0;
+                let Fl = 0;
+                let Gl = 0;
+                let Hl = 0;
+                let Il = 0;
+                let Jl = 0;
+                let Kl = 0;
+                let Ll = 0;
+                let Ml = 0;
+                let Nl = 0;
+                let Ol = 0;
+                let Pl = 0;
+                let Ql = 0;
+                let Rl = 0;
+                let Sl = 0;
                 wl = (T - 32) | 0;
                 T = wl;
                 tl = q[(Ye + 12) >> 2];
@@ -13209,24 +13209,24 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Zh = Zh | 0;
                 let ci = 0;
-                  let Tl = 0;
-                  let Ul = 0;
-                  let Vl = 0;
-                  let Wl = 0;
-                  let Xl = 0;
-                  let Zl = 0;
-                  let _l = 0;
-                  let $l = 0;
-                  let am = 0;
-                  let bm = 0;
-                  let cm = 0;
-                  let dm = 0;
-                  let em = 0;
-                  let fm = 0;
-                  let gm = 0;
-                  let hm = 0;
-                  let im = 0;
-                  let jm = 0;
+                let Tl = 0;
+                let Ul = 0;
+                let Vl = 0;
+                let Wl = 0;
+                let Xl = 0;
+                let Zl = 0;
+                let _l = 0;
+                let $l = 0;
+                let am = 0;
+                let bm = 0;
+                let cm = 0;
+                let dm = 0;
+                let em = 0;
+                let fm = 0;
+                let gm = 0;
+                let hm = 0;
+                let im = 0;
+                let jm = 0;
                 Ul = (T - 720) | 0;
                 T = Ul;
                 a: {
@@ -13688,9 +13688,9 @@ const DracoDecoderModule = (function () {
               }
               function he(Ye, Zh, Yl) {
                 let km = 0;
-                  let lm = 0;
-                  let mm = 0;
-                  let nm = 0;
+                let lm = 0;
+                let mm = 0;
+                let nm = 0;
                 a: {
                   if (Ye >>> 0 > 5) {
                     break a;
@@ -13724,12 +13724,12 @@ const DracoDecoderModule = (function () {
               }
               function ie(Ye, Zh) {
                 let Yl = 0;
-                  let om = 0;
-                  let pm = 0;
-                  let qm = 0;
-                  let rm = 0;
-                  let sm = 0;
-                  let tm = 0;
+                let om = 0;
+                let pm = 0;
+                let qm = 0;
+                let rm = 0;
+                let sm = 0;
+                let tm = 0;
                 a: {
                   b: {
                     c: {
@@ -13815,15 +13815,15 @@ const DracoDecoderModule = (function () {
               }
               function je(Ye, Zh, um) {
                 let vm = 0;
-                  let wm = 0;
-                  let xm = 0;
-                  let ym = 0;
-                  let zm = 0;
-                  let Am = 0;
-                  let Bm = 0;
-                  let Cm = 0;
-                  let Dm = 0;
-                  let Em = 0;
+                let wm = 0;
+                let xm = 0;
+                let ym = 0;
+                let zm = 0;
+                let Am = 0;
+                let Bm = 0;
+                let Cm = 0;
+                let Dm = 0;
+                let Em = 0;
                 wm = (T - 32) | 0;
                 T = wm;
                 q[(wm + 24) >> 2] = 0;
@@ -13898,13 +13898,13 @@ const DracoDecoderModule = (function () {
               }
               function ke(Ye, Zh, um, Fm) {
                 let Gm = 0;
-                  let Hm = 0;
-                  let Im = 0;
-                  let Jm = x(0);
-                  let Km = 0;
-                  let Lm = 0;
-                  let Mm = 0;
-                  let Nm = 0;
+                let Hm = 0;
+                let Im = 0;
+                let Jm = x(0);
+                let Km = 0;
+                let Lm = 0;
+                let Mm = 0;
+                let Nm = 0;
                 Gm = (T - 32) | 0;
                 T = Gm;
                 Hm = q[um >> 2];
@@ -13945,25 +13945,25 @@ const DracoDecoderModule = (function () {
               function le(Ye) {
                 Ye = Ye | 0;
                 let Zh = 0;
-                  let um = 0;
-                  let Fm = 0;
-                  let Om = 0;
-                  let Pm = 0;
-                  let Qm = 0;
-                  let Rm = 0;
-                  let Sm = 0;
-                  let Tm = 0;
-                  let Um = 0;
-                  let Vm = 0;
-                  let Wm = 0;
-                  let Xm = 0;
-                  let Ym = 0;
-                  let Zm = 0;
-                  let _m = 0;
-                  let $m = 0;
-                  let an = 0;
-                  let cn = 0;
-                  let dn = x(0);
+                let um = 0;
+                let Fm = 0;
+                let Om = 0;
+                let Pm = 0;
+                let Qm = 0;
+                let Rm = 0;
+                let Sm = 0;
+                let Tm = 0;
+                let Um = 0;
+                let Vm = 0;
+                let Wm = 0;
+                let Xm = 0;
+                let Ym = 0;
+                let Zm = 0;
+                let _m = 0;
+                let $m = 0;
+                let an = 0;
+                let cn = 0;
+                let dn = x(0);
                 Om = (T - 32) | 0;
                 T = Om;
                 a: {
@@ -14232,20 +14232,20 @@ const DracoDecoderModule = (function () {
               }
               function me(Ye, en, fn) {
                 let gn = 0;
-                  let hn = 0;
-                  let jn = 0;
-                  let kn = 0;
-                  let ln = 0;
-                  let mn = 0;
-                  let nn = 0;
-                  let on = 0;
-                  let pn = 0;
-                  let qn = 0;
-                  let rn = 0;
-                  let sn = 0;
-                  let tn = 0;
-                  let un = 0;
-                  let vn = 0;
+                let hn = 0;
+                let jn = 0;
+                let kn = 0;
+                let ln = 0;
+                let mn = 0;
+                let nn = 0;
+                let on = 0;
+                let pn = 0;
+                let qn = 0;
+                let rn = 0;
+                let sn = 0;
+                let tn = 0;
+                let un = 0;
+                let vn = 0;
                 hn = (T - 16) | 0;
                 T = hn;
                 gn = o[(en + 24) | 0];
@@ -14327,20 +14327,20 @@ const DracoDecoderModule = (function () {
               }
               function ne(Ye, en, fn) {
                 let wn = 0;
-                  let xn = 0;
-                  let yn = 0;
-                  let zn = 0;
-                  let Bn = 0;
-                  let En = 0;
-                  let Fn = 0;
-                  let Gn = 0;
-                  let Hn = 0;
-                  let In = 0;
-                  let Jn = 0;
-                  let Kn = 0;
-                  let Ln = 0;
-                  let Mn = 0;
-                  let Nn = 0;
+                let xn = 0;
+                let yn = 0;
+                let zn = 0;
+                let Bn = 0;
+                let En = 0;
+                let Fn = 0;
+                let Gn = 0;
+                let Hn = 0;
+                let In = 0;
+                let Jn = 0;
+                let Kn = 0;
+                let Ln = 0;
+                let Mn = 0;
+                let Nn = 0;
                 xn = (T - 16) | 0;
                 T = xn;
                 wn = o[(en + 24) | 0];
@@ -14422,15 +14422,15 @@ const DracoDecoderModule = (function () {
               }
               function oe(Ye, en, fn) {
                 let Dn = 0;
-                  let On = 0;
-                  let Pn = 0;
-                  let Qn = 0;
-                  let Rn = 0;
-                  let Sn = 0;
-                  let Tn = 0;
-                  let Un = 0;
-                  let Vn = 0;
-                  let Wn = 0;
+                let On = 0;
+                let Pn = 0;
+                let Qn = 0;
+                let Rn = 0;
+                let Sn = 0;
+                let Tn = 0;
+                let Un = 0;
+                let Vn = 0;
+                let Wn = 0;
                 On = (T - 32) | 0;
                 T = On;
                 Dn = o[(en + 24) | 0];
@@ -14551,9 +14551,9 @@ const DracoDecoderModule = (function () {
               function pe(Ye) {
                 Ye = Ye | 0;
                 let bn = 0;
-                  let en = 0;
-                  let fn = 0;
-                  let Cn = 0;
+                let en = 0;
+                let fn = 0;
+                let Cn = 0;
                 q[Ye >> 2] = 1596;
                 bn = q[(Ye + 60) >> 2];
                 if (bn) {
@@ -14627,17 +14627,17 @@ const DracoDecoderModule = (function () {
               }
               function re(Ye) {
                 let Xn = 0;
-                  let Yn = 0;
-                  let Zn = 0;
-                  let _n = 0;
-                  let $n = 0;
-                  let ao = 0;
-                  let bo = 0;
-                  let co = 0;
-                  let eo = 0;
-                  let fo = 0;
-                  let go = 0;
-                  let ho = 0;
+                let Yn = 0;
+                let Zn = 0;
+                let _n = 0;
+                let $n = 0;
+                let ao = 0;
+                let bo = 0;
+                let co = 0;
+                let eo = 0;
+                let fo = 0;
+                let go = 0;
+                let ho = 0;
                 ao = (T - 32) | 0;
                 T = ao;
                 a: {
@@ -14853,12 +14853,12 @@ const DracoDecoderModule = (function () {
               }
               function se(Ye) {
                 let io = 0;
-                  let jo = 0;
-                  let ko = 0;
-                  let lo = 0;
-                  let mo = 0;
-                  let no = 0;
-                  let oo = 0;
+                let jo = 0;
+                let ko = 0;
+                let lo = 0;
+                let mo = 0;
+                let no = 0;
+                let oo = 0;
                 jo = q[(Ye + 16) >> 2];
                 io = ((jo >>> 0) / 341) | 0;
                 ko = q[(Ye + 4) >> 2];
@@ -14910,12 +14910,12 @@ const DracoDecoderModule = (function () {
               }
               function te(Ye, po) {
                 let qo = 0;
-                  let ro = 0;
-                  let so = 0;
-                  let to = 0;
-                  let uo = 0;
-                  let vo = 0;
-                  let wo = 0;
+                let ro = 0;
+                let so = 0;
+                let to = 0;
+                let uo = 0;
+                let vo = 0;
+                let wo = 0;
                 a: {
                   so = q[(Ye + 8) >> 2];
                   qo = q[(Ye + 12) >> 2];
@@ -14983,11 +14983,11 @@ const DracoDecoderModule = (function () {
               }
               function ue(Ye, po) {
                 let xo = 0;
-                  let yo = 0;
-                  let zo = 0;
-                  let Ao = 0;
-                  let Bo = 0;
-                  let Co = 0;
+                let yo = 0;
+                let zo = 0;
+                let Ao = 0;
+                let Bo = 0;
+                let Co = 0;
                 a: {
                   zo = q[(Ye + 4) >> 2];
                   yo = q[Ye >> 2];
@@ -15056,11 +15056,11 @@ const DracoDecoderModule = (function () {
               }
               function ve(Ye, An) {
                 let po = 0;
-                  let Do = 0;
-                  let Eo = 0;
-                  let Fo = 0;
-                  let Go = 0;
-                  let Ho = 0;
+                let Do = 0;
+                let Eo = 0;
+                let Fo = 0;
+                let Go = 0;
+                let Ho = 0;
                 q[Ye >> 2] = 1232;
                 po = q[(An + 4) >> 2];
                 q[(Ye + 16) >> 2] = 0;
@@ -15124,7 +15124,7 @@ const DracoDecoderModule = (function () {
                 An = An | 0;
                 Io = Io | 0;
                 let Jo = 0;
-                  let Ko = 0;
+                let Ko = 0;
                 Jo = q[(Ye + 8) >> 2];
                 a: {
                   if (o[(Jo + 24) | 0] < 1) {
@@ -15145,13 +15145,13 @@ const DracoDecoderModule = (function () {
               }
               function Be(Ye) {
                 let An = 0;
-                  let Io = 0;
-                  let Lo = 0;
-                  let Mo = 0;
-                  let No = 0;
-                  let Oo = 0;
-                  let Po = 0;
-                  let Qo = 0;
+                let Io = 0;
+                let Lo = 0;
+                let Mo = 0;
+                let No = 0;
+                let Oo = 0;
+                let Po = 0;
+                let Qo = 0;
                 a: {
                   Lo = q[(Ye + 8) >> 2];
                   if (r[(Lo + 84) | 0]) {
@@ -15203,8 +15203,8 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Ro = Ro | 0;
                 let So = 0;
-                  let To = 0;
-                  let Uo = 0;
+                let To = 0;
+                let Uo = 0;
                 if ((n[q[(q[Ro >> 2] + 20) >> 2]](Ro) | 0) >= 1) {
                   while (1) {
                     So = bl(q[(q[(Ye + 4) >> 2] + 4) >> 2], n[q[(q[Ro >> 2] + 24) >> 2]](Ro, To) | 0);
@@ -15242,16 +15242,16 @@ const DracoDecoderModule = (function () {
                 Ro = Ro | 0;
                 Vo = Vo | 0;
                 let Wo = 0;
-                  let Xo = 0;
-                  let Yo = 0;
-                  let Zo = 0;
-                  let _o = 0;
-                  let $o = 0;
-                  let ap = 0;
-                  let bp = 0;
-                  let cp = 0;
-                  let dp = 0;
-                  const ep = 0;
+                let Xo = 0;
+                let Yo = 0;
+                let Zo = 0;
+                let _o = 0;
+                let $o = 0;
+                let ap = 0;
+                let bp = 0;
+                let cp = 0;
+                let dp = 0;
+                const ep = 0;
                 Wo = q[(Ro + 4) >> 2];
                 Xo = q[Ro >> 2];
                 Ro = q[(q[(Ye + 8) >> 2] + 40) >> 2];
@@ -15328,18 +15328,18 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 fp = fp | 0;
                 let hp = 0;
-                  let ip = 0;
-                  let jp = 0;
-                  let kp = 0;
-                  let lp = 0;
-                  let mp = 0;
-                  let np = 0;
-                  let op = 0;
-                  let pp = 0;
-                  let qp = 0;
-                  let rp = 0;
-                  let sp = 0;
-                  let tp = 0;
+                let ip = 0;
+                let jp = 0;
+                let kp = 0;
+                let lp = 0;
+                let mp = 0;
+                let np = 0;
+                let op = 0;
+                let pp = 0;
+                let qp = 0;
+                let rp = 0;
+                let sp = 0;
+                let tp = 0;
                 lp = (T - 16) | 0;
                 T = lp;
                 a: {
@@ -15435,14 +15435,14 @@ const DracoDecoderModule = (function () {
               }
               function Ie(Ye, fp) {
                 let up = 0;
-                  let vp = 0;
-                  let wp = 0;
-                  let xp = 0;
-                  let yp = 0;
-                  let zp = 0;
-                  let Ap = 0;
-                  let Bp = 0;
-                  let Cp = 0;
+                let vp = 0;
+                let wp = 0;
+                let xp = 0;
+                let yp = 0;
+                let zp = 0;
+                let Ap = 0;
+                let Bp = 0;
+                let Cp = 0;
                 vp = q[(Ye + 8) >> 2];
                 wp = (Ye + 4) | 0;
                 up = q[wp >> 2];
@@ -15517,12 +15517,12 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 fp = fp | 0;
                 let Dp = 0;
-                  let Ep = 0;
-                  let Fp = 0;
-                  let Gp = 0;
-                  let Hp = 0;
-                  let Ip = 0;
-                  let Jp = 0;
+                let Ep = 0;
+                let Fp = 0;
+                let Gp = 0;
+                let Hp = 0;
+                let Ip = 0;
+                let Jp = 0;
                 Dp = q[(Ye + 60) >> 2];
                 a: {
                   if (!Dp) {
@@ -15571,10 +15571,10 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 fp = fp | 0;
                 let Kp = 0;
-                  let Lp = 0;
-                  let Mp = 0;
-                  let Np = 0;
-                  let Op = 0;
+                let Lp = 0;
+                let Mp = 0;
+                let Np = 0;
+                let Op = 0;
                 Kp = 1;
                 Lp = n[q[(q[Ye >> 2] + 24) >> 2]](Ye) | 0;
                 a: {
@@ -15604,10 +15604,10 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 fp = fp | 0;
                 let Pp = 0;
-                  let Qp = 0;
-                  let Rp = 0;
-                  let Sp = 0;
-                  let Tp = 0;
+                let Qp = 0;
+                let Rp = 0;
+                let Sp = 0;
+                let Tp = 0;
                 Pp = 1;
                 Qp = n[q[(q[Ye >> 2] + 24) >> 2]](Ye) | 0;
                 a: {
@@ -15636,18 +15636,18 @@ const DracoDecoderModule = (function () {
               function Me(Ye) {
                 Ye = Ye | 0;
                 let fp = 0;
-                  let Up = 0;
-                  let Vp = 0;
-                  let Wp = 0;
-                  let Xp = 0;
-                  let Yp = 0;
-                  let Zp = 0;
-                  let _p = 0;
-                  let $p = 0;
-                  let aq = 0;
-                  let bq = 0;
-                  let cq = 0;
-                  let dq = 0;
+                let Up = 0;
+                let Vp = 0;
+                let Wp = 0;
+                let Xp = 0;
+                let Yp = 0;
+                let Zp = 0;
+                let _p = 0;
+                let $p = 0;
+                let aq = 0;
+                let bq = 0;
+                let cq = 0;
+                let dq = 0;
                 Wp = (T - 16) | 0;
                 T = Wp;
                 fp = 1;
@@ -15808,10 +15808,10 @@ const DracoDecoderModule = (function () {
               function Oe(Ye) {
                 Ye = Ye | 0;
                 let eq = 0;
-                  let fq = 0;
-                  let gq = 0;
-                  let hq = 0;
-                  let iq = 0;
+                let fq = 0;
+                let gq = 0;
+                let hq = 0;
+                let iq = 0;
                 q[Ye >> 2] = 2004;
                 eq = (Ye + 60) | 0;
                 fq = q[eq >> 2];
@@ -15868,10 +15868,10 @@ const DracoDecoderModule = (function () {
               function Pe(Ye) {
                 Ye = Ye | 0;
                 let jq = 0;
-                  let kq = 0;
-                  let lq = 0;
-                  let mq = 0;
-                  let nq = 0;
+                let kq = 0;
+                let lq = 0;
+                let mq = 0;
+                let nq = 0;
                 q[Ye >> 2] = 2004;
                 jq = (Ye + 60) | 0;
                 kq = q[jq >> 2];
@@ -15929,7 +15929,7 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 oq = oq | 0;
                 let pq = 0;
-                  let qq = 0;
+                let qq = 0;
                 qq = q[(Ye + 16) >> 2];
                 pq = 0;
                 a: {
@@ -15960,7 +15960,7 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 oq = oq | 0;
                 let rq = 0;
-                  let sq = 0;
+                let sq = 0;
                 sq = q[(Ye + 4) >> 2];
                 a: {
                   if (sq) {
@@ -15978,15 +15978,15 @@ const DracoDecoderModule = (function () {
                 oq = oq | 0;
                 tq = tq | 0;
                 let uq = 0;
-                  let vq = 0;
-                  let wq = 0;
-                  let xq = 0;
-                  let yq = 0;
-                  let zq = 0;
-                  let Aq = 0;
-                  let Bq = 0;
-                  let Cq = 0;
-                  let Dq = 0;
+                let vq = 0;
+                let wq = 0;
+                let xq = 0;
+                let yq = 0;
+                let zq = 0;
+                let Aq = 0;
+                let Bq = 0;
+                let Cq = 0;
+                let Dq = 0;
                 wq = (T - 16) | 0;
                 T = wq;
                 Aq = q[(tq + 8) >> 2];
@@ -16065,7 +16065,7 @@ const DracoDecoderModule = (function () {
                 tq = tq | 0;
                 Eq = Eq | 0;
                 let Fq = 0;
-                  let Gq = 0;
+                let Gq = 0;
                 Fq = (T - 48) | 0;
                 T = Fq;
                 a: {
@@ -16097,7 +16097,7 @@ const DracoDecoderModule = (function () {
               }
               function We(Ye, oq, tq, Eq, Hq) {
                 let Iq = 0;
-                  let Jq = 0;
+                let Jq = 0;
                 a: {
                   if ((oq | 0) != -2) {
                     Jq = q[(q[(q[(Eq + 4) >> 2] + 8) >> 2] + (tq << 2)) >> 2];
@@ -16121,18 +16121,18 @@ const DracoDecoderModule = (function () {
                 tq = tq | 0;
                 Eq = Eq | 0;
                 let Hq = 0;
-                  let Kq = 0;
-                  let Lq = 0;
-                  let Mq = 0;
-                  let Nq = 0;
-                  let Oq = 0;
-                  let Pq = 0;
-                  let Qq = 0;
-                  let Rq = 0;
-                  let Sq = 0;
-                  let Tq = 0;
-                  let Uq = 0;
-                  let Vq = 0;
+                let Kq = 0;
+                let Lq = 0;
+                let Mq = 0;
+                let Nq = 0;
+                let Oq = 0;
+                let Pq = 0;
+                let Qq = 0;
+                let Rq = 0;
+                let Sq = 0;
+                let Tq = 0;
+                let Uq = 0;
+                let Vq = 0;
                 a: {
                   Tq = n[q[(q[oq >> 2] + 44) >> 2]](oq) | 0;
                   if ((Tq | 0) < 1) {
@@ -16315,9 +16315,9 @@ const DracoDecoderModule = (function () {
               }
               function Ye(Ye, oq, tq) {
                 let Eq = 0;
-                  let Wq = 0;
-                  let Xq = 0;
-                  let Yq = 0;
+                let Wq = 0;
+                let Xq = 0;
+                let Yq = 0;
                 Eq = (T - 80) | 0;
                 T = Eq;
                 Wq = nd((Eq + 16) | 0);
@@ -16361,14 +16361,14 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 oq = oq | 0;
                 let tq = 0;
-                  let Zq = 0;
-                  let _q = 0;
-                  let $q = 0;
-                  let ar = 0;
-                  let br = 0;
-                  let cr = 0;
-                  let dr = 0;
-                  let er = 0;
+                let Zq = 0;
+                let _q = 0;
+                let $q = 0;
+                let ar = 0;
+                let br = 0;
+                let cr = 0;
+                let dr = 0;
+                let er = 0;
                 Zq = q[(Ye + 8) >> 2];
                 tq = (q[(Zq + 28) >> 2] + -1) | 0;
                 if (tq >>> 0 > 5) {
@@ -16626,7 +16626,7 @@ const DracoDecoderModule = (function () {
               function _e(Ye) {
                 Ye = Ye | 0;
                 let oq = 0;
-                  let fr = 0;
+                let fr = 0;
                 q[Ye >> 2] = 2220;
                 fr = (Ye + 20) | 0;
                 oq = q[fr >> 2];
@@ -16646,7 +16646,7 @@ const DracoDecoderModule = (function () {
               function $e(Ye) {
                 Ye = Ye | 0;
                 let gr = 0;
-                  let hr = 0;
+                let hr = 0;
                 q[Ye >> 2] = 2220;
                 hr = (Ye + 20) | 0;
                 gr = q[hr >> 2];
@@ -16669,9 +16669,9 @@ const DracoDecoderModule = (function () {
               }
               function bf(Ye, ir, jr, kr, lr, mr) {
                 let nr = 0;
-                  let or = 0;
-                  let pr = 0;
-                  let qr = 0;
+                let or = 0;
+                let pr = 0;
+                let qr = 0;
                 nr = (T - 32) | 0;
                 T = nr;
                 pr = q[(q[(q[(ir + 4) >> 2] + 8) >> 2] + (kr << 2)) >> 2];
@@ -16717,13 +16717,13 @@ const DracoDecoderModule = (function () {
               }
               function cf(Ye, ir, jr) {
                 let kr = 0;
-                  let lr = 0;
-                  let mr = 0;
-                  let rr = 0;
-                  let sr = 0;
-                  let tr = 0;
-                  let ur = 0;
-                  let vr = 0;
+                let lr = 0;
+                let mr = 0;
+                let rr = 0;
+                let sr = 0;
+                let tr = 0;
+                let ur = 0;
+                let vr = 0;
                 q[Ye >> 2] = 3044;
                 q[(Ye + 4) >> 2] = ir;
                 ir = q[(jr + 8) >> 2];
@@ -16960,13 +16960,13 @@ const DracoDecoderModule = (function () {
               }
               function ff(Ye, ir, jr, wr) {
                 let xr = 0;
-                  let yr = 0;
-                  let zr = 0;
-                  let Ar = 0;
-                  let Br = 0;
-                  let Cr = 0;
-                  let Dr = 0;
-                  let Er = 0;
+                let yr = 0;
+                let zr = 0;
+                let Ar = 0;
+                let Br = 0;
+                let Cr = 0;
+                let Dr = 0;
+                let Er = 0;
                 q[Ye >> 2] = 3044;
                 q[(Ye + 4) >> 2] = ir;
                 ir = q[(jr + 8) >> 2];
@@ -17051,15 +17051,15 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 wr = wr | 0;
                 let Fr = 0;
-                  let Gr = 0;
-                  let Hr = 0;
-                  let Ir = 0;
-                  let Jr = 0;
-                  let Kr = 0;
-                  let Lr = 0;
-                  let Mr = 0;
-                  let Nr = 0;
-                  let Or = 0;
+                let Gr = 0;
+                let Hr = 0;
+                let Ir = 0;
+                let Jr = 0;
+                let Kr = 0;
+                let Lr = 0;
+                let Mr = 0;
+                let Nr = 0;
+                let Or = 0;
                 Gr = q[(wr + 12) >> 2];
                 Lr = Gr;
                 Fr = q[(wr + 20) >> 2];
@@ -17128,21 +17128,21 @@ const DracoDecoderModule = (function () {
                 Rr = Rr | 0;
                 Sr = Sr | 0;
                 let Tr = 0;
-                  let Ur = 0;
-                  let Vr = 0;
-                  let Wr = 0;
-                  let Xr = 0;
-                  let Yr = 0;
-                  let Zr = 0;
-                  let _r = 0;
-                  let $r = 0;
-                  let as = 0;
-                  let bs = 0;
-                  let cs = 0;
-                  let ds = 0;
-                  let es = 0;
-                  let fs = 0;
-                  let gs = 0;
+                let Ur = 0;
+                let Vr = 0;
+                let Wr = 0;
+                let Xr = 0;
+                let Yr = 0;
+                let Zr = 0;
+                let _r = 0;
+                let $r = 0;
+                let as = 0;
+                let bs = 0;
+                let cs = 0;
+                let ds = 0;
+                let es = 0;
+                let fs = 0;
+                let gs = 0;
                 q[(Ye + 8) >> 2] = Rr;
                 Sr = (Ye + 32) | 0;
                 Tr = q[Sr >> 2];
@@ -17439,27 +17439,27 @@ const DracoDecoderModule = (function () {
                 Sr = Sr | 0;
                 hs = hs | 0;
                 let is = 0;
-                  let js = 0;
-                  let ks = 0;
-                  let ls = 0;
-                  let ms = 0;
-                  let ns = 0;
-                  let os = 0;
-                  let ps = 0;
-                  let qs = 0;
-                  let rs = 0;
-                  let ss = 0;
-                  let ts = 0;
-                  let us = 0;
-                  let vs = 0;
-                  let ws = 0;
-                  let xs = 0;
-                  let ys = 0;
-                  let zs = 0;
-                  let As = 0;
-                  let Bs = 0;
-                  let Cs = 0;
-                  let Ds = 0;
+                let js = 0;
+                let ks = 0;
+                let ls = 0;
+                let ms = 0;
+                let ns = 0;
+                let os = 0;
+                let ps = 0;
+                let qs = 0;
+                let rs = 0;
+                let ss = 0;
+                let ts = 0;
+                let us = 0;
+                let vs = 0;
+                let ws = 0;
+                let xs = 0;
+                let ys = 0;
+                let zs = 0;
+                let As = 0;
+                let Bs = 0;
+                let Cs = 0;
+                let Ds = 0;
                 q[(Ye + 8) >> 2] = Sr;
                 hs = (Ye + 32) | 0;
                 is = q[hs >> 2];
@@ -17877,16 +17877,16 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Rr = Rr | 0;
                 let Sr = 0;
-                  let hs = 0;
-                  let Es = 0;
-                  let Fs = 0;
-                  let Gs = 0;
-                  let Hs = 0;
-                  let Is = 0;
-                  let Js = 0;
-                  let Ks = 0;
-                  let Ls = 0;
-                  let Ms = 0;
+                let hs = 0;
+                let Es = 0;
+                let Fs = 0;
+                let Gs = 0;
+                let Hs = 0;
+                let Is = 0;
+                let Js = 0;
+                let Ks = 0;
+                let Ls = 0;
+                let Ms = 0;
                 Js = (T - 32) | 0;
                 T = Js;
                 a: {
@@ -18012,9 +18012,9 @@ const DracoDecoderModule = (function () {
               }
               function tf(Ye, Rr, Ns) {
                 let Os = 0;
-                  let Ps = 0;
-                  let Qs = 0;
-                  let Rs = 0;
+                let Ps = 0;
+                let Qs = 0;
+                let Rs = 0;
                 a: {
                   if (Ye >>> 0 > 5) {
                     break a;
@@ -18048,11 +18048,11 @@ const DracoDecoderModule = (function () {
               }
               function uf(Ye, Rr) {
                 let Ns = 0;
-                  let Ss = 0;
-                  let Ts = 0;
-                  let Us = 0;
-                  let Vs = 0;
-                  let Ws = 0;
+                let Ss = 0;
+                let Ts = 0;
+                let Us = 0;
+                let Vs = 0;
+                let Ws = 0;
                 Ss = (T - 32) | 0;
                 T = Ss;
                 a: {
@@ -18159,31 +18159,31 @@ const DracoDecoderModule = (function () {
                 Zs = Zs | 0;
                 _s = _s | 0;
                 let $s = 0;
-                  let at = 0;
-                  let bt = 0;
-                  let ct = 0;
-                  let dt = 0;
-                  let et = 0;
-                  let ft = 0;
-                  let gt = 0;
-                  let ht = 0;
-                  let it = 0;
-                  let jt = 0;
-                  let kt = 0;
-                  let lt = 0;
-                  let mt = 0;
-                  let nt = 0;
-                  let ot = 0;
-                  let pt = 0;
-                  let qt = 0;
-                  let rt = 0;
-                  let st = 0;
-                  let tt = 0;
-                  let ut = 0;
-                  let vt = 0;
-                  let wt = 0;
-                  let xt = 0;
-                  let yt = 0;
+                let at = 0;
+                let bt = 0;
+                let ct = 0;
+                let dt = 0;
+                let et = 0;
+                let ft = 0;
+                let gt = 0;
+                let ht = 0;
+                let it = 0;
+                let jt = 0;
+                let kt = 0;
+                let lt = 0;
+                let mt = 0;
+                let nt = 0;
+                let ot = 0;
+                let pt = 0;
+                let qt = 0;
+                let rt = 0;
+                let st = 0;
+                let tt = 0;
+                let ut = 0;
+                let vt = 0;
+                let wt = 0;
+                let xt = 0;
+                let yt = 0;
                 bt = (T + -64) | 0;
                 T = bt;
                 q[(Ye + 8) >> 2] = Zs;
@@ -18733,7 +18733,7 @@ const DracoDecoderModule = (function () {
               function wf(Ye) {
                 Ye = Ye | 0;
                 let Rr = 0;
-                  let Xs = 0;
+                let Xs = 0;
                 q[Ye >> 2] = 3584;
                 Rr = q[(Ye + 76) >> 2];
                 if (Rr) {
@@ -18756,7 +18756,7 @@ const DracoDecoderModule = (function () {
               function xf(Ye) {
                 Ye = Ye | 0;
                 let Ys = 0;
-                  let Zs = 0;
+                let Zs = 0;
                 q[Ye >> 2] = 3584;
                 Ys = q[(Ye + 76) >> 2];
                 if (Ys) {
@@ -18801,16 +18801,16 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 _s = _s | 0;
                 let At = 0;
-                  let Bt = 0;
-                  let Ct = 0;
-                  let Dt = 0;
-                  let Et = 0;
-                  let Ft = 0;
-                  let Gt = 0;
-                  let Ht = 0;
-                  let It = 0;
-                  let Jt = 0;
-                  let Kt = 0;
+                let Bt = 0;
+                let Ct = 0;
+                let Dt = 0;
+                let Et = 0;
+                let Ft = 0;
+                let Gt = 0;
+                let Ht = 0;
+                let It = 0;
+                let Jt = 0;
+                let Kt = 0;
                 Gt = (T - 32) | 0;
                 T = Gt;
                 q[(Gt + 28) >> 2] = 0;
@@ -18943,17 +18943,17 @@ const DracoDecoderModule = (function () {
                 Nt = Nt | 0;
                 Ot = Ot | 0;
                 let Pt = 0;
-                  let Qt = 0;
-                  let Rt = 0;
-                  let St = 0;
-                  let Tt = 0;
-                  let Ut = 0;
-                  let Vt = 0;
-                  let Wt = 0;
-                  let Xt = 0;
-                  let Yt = 0;
-                  let Zt = 0;
-                  let _t = 0;
+                let Qt = 0;
+                let Rt = 0;
+                let St = 0;
+                let Tt = 0;
+                let Ut = 0;
+                let Vt = 0;
+                let Wt = 0;
+                let Xt = 0;
+                let Yt = 0;
+                let Zt = 0;
+                let _t = 0;
                 q[(Ye + 64) >> 2] = Ot;
                 q[(Ye + 72) >> 2] = Nt;
                 Ot = Mm((Nt & 1073741823) != (Nt | 0) ? -1 : Nt << 2);
@@ -19075,28 +19075,28 @@ const DracoDecoderModule = (function () {
               }
               function Df(Ye, _s, Lt, Mt) {
                 let Nt = 0;
-                  let Ot = 0;
-                  let $t = 0;
-                  let au = x(0);
-                  let bu = x(0);
-                  let cu = x(0);
-                  let du = 0;
-                  let eu = x(0);
-                  let fu = x(0);
-                  let gu = x(0);
-                  let hu = x(0);
-                  let iu = x(0);
-                  let ju = 0;
-                  let ku = 0;
-                  let lu = x(0);
-                  let mu = x(0);
-                  let nu = x(0);
-                  let ou = x(0);
-                  let pu = x(0);
-                  let qu = x(0);
-                  let ru = x(0);
-                  let su = x(0);
-                  let tu = 0;
+                let Ot = 0;
+                let $t = 0;
+                let au = x(0);
+                let bu = x(0);
+                let cu = x(0);
+                let du = 0;
+                let eu = x(0);
+                let fu = x(0);
+                let gu = x(0);
+                let hu = x(0);
+                let iu = x(0);
+                let ju = 0;
+                let ku = 0;
+                let lu = x(0);
+                let mu = x(0);
+                let nu = x(0);
+                let ou = x(0);
+                let pu = x(0);
+                let qu = x(0);
+                let ru = x(0);
+                let su = x(0);
+                let tu = 0;
                 Nt = (T - 48) | 0;
                 T = Nt;
                 du = -1;
@@ -19343,16 +19343,16 @@ const DracoDecoderModule = (function () {
                 Ye = Ye | 0;
                 Mt = Mt | 0;
                 let uu = 0;
-                  let vu = 0;
-                  let wu = 0;
-                  let xu = 0;
-                  let yu = 0;
-                  let zu = 0;
-                  let Au = 0;
-                  let Bu = 0;
-                  let Cu = 0;
-                  let Du = 0;
-                  let Eu = 0;
+                let vu = 0;
+                let wu = 0;
+                let xu = 0;
+                let yu = 0;
+                let zu = 0;
+                let Au = 0;
+                let Bu = 0;
+                let Cu = 0;
+                let Du = 0;
+                let Eu = 0;
                 Bu = (T - 16) | 0;
                 T = Bu;
                 wu = q[(Mt + 12) >> 2];
@@ -19474,17 +19474,17 @@ const DracoDecoderModule = (function () {
                 Hu = Hu | 0;
                 Iu = Iu | 0;
                 let Ju = 0;
-                  let Ku = 0;
-                  let Lu = 0;
-                  let Mu = 0;
-                  let Nu = 0;
-                  let Ou = 0;
-                  let Pu = 0;
-                  let Qu = 0;
-                  let Ru = 0;
-                  let Su = 0;
-                  let Tu = 0;
-                  let Uu = 0;
+                let Ku = 0;
+                let Lu = 0;
+                let Mu = 0;
+                let Nu = 0;
+                let Ou = 0;
+                let Pu = 0;
+                let Qu = 0;
+                let Ru = 0;
+                let Su = 0;
+                let Tu = 0;
+                let Uu = 0;
                 Gu = 0;
                 a: {
                   if ((Hu | 0) != 2) {
@@ -19609,30 +19609,30 @@ const DracoDecoderModule = (function () {
               }
               function Jf(Ye, Mt, Fu, Gu) {
                 let Hu = 0;
-                  let Iu = 0;
-                  let Vu = 0;
-                  let Wu = 0;
-                  let Xu = 0;
-                  let Yu = 0;
-                  let Zu = 0;
-                  let _u = 0;
-                  let $u = 0;
-                  let av = 0;
-                  let bv = 0;
-                  let cv = 0;
-                  let dv = 0;
-                  let ev = 0;
-                  let fv = 0;
-                  let gv = 0;
-                  let hv = 0;
-                  let iv = 0;
-                  let jv = 0;
-                  let kv = 0;
-                  let lv = 0;
-                  let mv = 0;
-                  let nv = 0;
-                  let ov = 0;
-                  let pv = 0;
+                let Iu = 0;
+                let Vu = 0;
+                let Wu = 0;
+                let Xu = 0;
+                let Yu = 0;
+                let Zu = 0;
+                let _u = 0;
+                let $u = 0;
+                let av = 0;
+                let bv = 0;
+                let cv = 0;
+                let dv = 0;
+                let ev = 0;
+                let fv = 0;
+                let gv = 0;
+                let hv = 0;
+                let iv = 0;
+                let jv = 0;
+                let kv = 0;
+                let lv = 0;
+                let mv = 0;
+                let nv = 0;
+                let ov = 0;
+                let pv = 0;
                 Vu = (T - 80) | 0;
                 T = Vu;
                 Iu = -1;
@@ -19927,12 +19927,12 @@ const DracoDecoderModule = (function () {
 
               function Kf(a, b, c, d) {
                 let e = 0;
-                  let f = 0;
-                  let g = 0;
-                  let h = 0;
-                  let i = x(0);
-                  let j = 0;
-                  let k = 0;
+                let f = 0;
+                let g = 0;
+                let h = 0;
+                let i = x(0);
+                let j = 0;
+                let k = 0;
                 a: {
                   b: {
                     if (!d) {
@@ -20297,16 +20297,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 l = l | 0;
                 let n = 0;
-                  let o = 0;
-                  let p = 0;
-                  let t = 0;
-                  let u = 0;
-                  let v = 0;
-                  let w = 0;
-                  let x = 0;
-                  let y = 0;
-                  let z = 0;
-                  let A = 0;
+                let o = 0;
+                let p = 0;
+                let t = 0;
+                let u = 0;
+                let v = 0;
+                let w = 0;
+                let x = 0;
+                let y = 0;
+                let z = 0;
+                let A = 0;
                 w = q[(l + 12) >> 2];
                 p = w;
                 o = q[(l + 20) >> 2];
@@ -20391,20 +20391,20 @@ const DracoDecoderModule = (function () {
                 B = B | 0;
                 C = C | 0;
                 let D = 0;
-                  let E = 0;
-                  let G = 0;
-                  let H = 0;
-                  let I = 0;
-                  let J = 0;
-                  let K = 0;
-                  let L = 0;
-                  let M = 0;
-                  let N = 0;
-                  let O = 0;
-                  let P = 0;
-                  let Q = 0;
-                  let R = 0;
-                  let S = 0;
+                let E = 0;
+                let G = 0;
+                let H = 0;
+                let I = 0;
+                let J = 0;
+                let K = 0;
+                let L = 0;
+                let M = 0;
+                let N = 0;
+                let O = 0;
+                let P = 0;
+                let Q = 0;
+                let R = 0;
+                let S = 0;
                 E = (T - 32) | 0;
                 T = E;
                 q[(a + 68) >> 2] = C;
@@ -20650,31 +20650,31 @@ const DracoDecoderModule = (function () {
                 l = l | 0;
                 s = s | 0;
                 let B = 0;
-                  let C = 0;
-                  let U = 0;
-                  let W = 0;
-                  let X = 0;
-                  let Y = 0;
-                  let Z = 0;
-                  let _ = 0;
-                  let $ = 0;
-                  let aa = 0;
-                  let ba = 0;
-                  let ca = 0;
-                  let da = 0;
-                  let ea = 0;
-                  let fa = 0;
-                  let ga = 0;
-                  let ha = 0;
-                  let ia = 0;
-                  let ja = 0;
-                  let ka = 0;
-                  let la = 0;
-                  let ma = 0;
-                  let na = 0;
-                  let oa = 0;
-                  let pa = 0;
-                  let qa = 0;
+                let C = 0;
+                let U = 0;
+                let W = 0;
+                let X = 0;
+                let Y = 0;
+                let Z = 0;
+                let _ = 0;
+                let $ = 0;
+                let aa = 0;
+                let ba = 0;
+                let ca = 0;
+                let da = 0;
+                let ea = 0;
+                let fa = 0;
+                let ga = 0;
+                let ha = 0;
+                let ia = 0;
+                let ja = 0;
+                let ka = 0;
+                let la = 0;
+                let ma = 0;
+                let na = 0;
+                let oa = 0;
+                let pa = 0;
+                let qa = 0;
                 C = (T - 96) | 0;
                 T = C;
                 B = q[(a + 16) >> 2];
@@ -20925,8 +20925,8 @@ const DracoDecoderModule = (function () {
               }
               function Uf(a) {
                 let l = 0;
-                  let s = 0;
-                  let F = 0;
+                let s = 0;
+                let F = 0;
                 l = q[(a + 8) >> 2];
                 F = q[a >> 2];
                 a: {
@@ -21012,13 +21012,13 @@ const DracoDecoderModule = (function () {
               }
               function Vf(a, r, T, V) {
                 let ra = 0;
-                  let sa = 0;
-                  let ta = 0;
-                  let ua = 0;
-                  let va = 0;
-                  let wa = 0;
-                  let xa = 0;
-                  let ya = 0;
+                let sa = 0;
+                let ta = 0;
+                let ua = 0;
+                let va = 0;
+                let wa = 0;
+                let xa = 0;
+                let ya = 0;
                 q[a >> 2] = 3044;
                 q[(a + 4) >> 2] = r;
                 r = q[(T + 8) >> 2];
@@ -21079,21 +21079,21 @@ const DracoDecoderModule = (function () {
                 za = za | 0;
                 Aa = Aa | 0;
                 let Ba = 0;
-                  let Ca = 0;
-                  let Da = 0;
-                  let Ea = 0;
-                  let Ga = 0;
-                  let Ha = 0;
-                  let Ia = 0;
-                  let Ja = 0;
-                  let Ka = 0;
-                  let La = 0;
-                  let Ma = 0;
-                  let Na = 0;
-                  let Oa = 0;
-                  let Pa = 0;
-                  let Qa = 0;
-                  let Ra = 0;
+                let Ca = 0;
+                let Da = 0;
+                let Ea = 0;
+                let Ga = 0;
+                let Ha = 0;
+                let Ia = 0;
+                let Ja = 0;
+                let Ka = 0;
+                let La = 0;
+                let Ma = 0;
+                let Na = 0;
+                let Oa = 0;
+                let Pa = 0;
+                let Qa = 0;
+                let Ra = 0;
                 q[(a + 8) >> 2] = za;
                 Aa = (a + 32) | 0;
                 Ca = q[Aa >> 2];
@@ -21389,27 +21389,27 @@ const DracoDecoderModule = (function () {
                 za = za | 0;
                 Aa = Aa | 0;
                 let Sa = 0;
-                  let Ta = 0;
-                  let Ua = 0;
-                  let Va = 0;
-                  let Wa = 0;
-                  let Xa = 0;
-                  let Ya = 0;
-                  let Za = 0;
-                  let _a = 0;
-                  let $a = 0;
-                  let ab = 0;
-                  let bb = 0;
-                  let cb = 0;
-                  let db = 0;
-                  let eb = 0;
-                  let fb = 0;
-                  let gb = 0;
-                  let hb = 0;
-                  let ib = 0;
-                  let jb = 0;
-                  let kb = 0;
-                  let lb = 0;
+                let Ta = 0;
+                let Ua = 0;
+                let Va = 0;
+                let Wa = 0;
+                let Xa = 0;
+                let Ya = 0;
+                let Za = 0;
+                let _a = 0;
+                let $a = 0;
+                let ab = 0;
+                let bb = 0;
+                let cb = 0;
+                let db = 0;
+                let eb = 0;
+                let fb = 0;
+                let gb = 0;
+                let hb = 0;
+                let ib = 0;
+                let jb = 0;
+                let kb = 0;
+                let lb = 0;
                 q[(a + 8) >> 2] = za;
                 Aa = (a + 32) | 0;
                 Sa = q[Aa >> 2];
@@ -21835,30 +21835,30 @@ const DracoDecoderModule = (function () {
                 mb = mb | 0;
                 nb = nb | 0;
                 let ob = 0;
-                  let pb = 0;
-                  let qb = 0;
-                  let rb = 0;
-                  let sb = 0;
-                  let tb = 0;
-                  let ub = 0;
-                  let vb = 0;
-                  let wb = 0;
-                  let xb = 0;
-                  let yb = 0;
-                  let zb = 0;
-                  let Ab = 0;
-                  let Bb = 0;
-                  let Cb = 0;
-                  let Db = 0;
-                  let Eb = 0;
-                  let Fb = 0;
-                  let Gb = 0;
-                  let Hb = 0;
-                  let Ib = 0;
-                  let Jb = 0;
-                  let Kb = 0;
-                  let Lb = 0;
-                  let Mb = 0;
+                let pb = 0;
+                let qb = 0;
+                let rb = 0;
+                let sb = 0;
+                let tb = 0;
+                let ub = 0;
+                let vb = 0;
+                let wb = 0;
+                let xb = 0;
+                let yb = 0;
+                let zb = 0;
+                let Ab = 0;
+                let Bb = 0;
+                let Cb = 0;
+                let Db = 0;
+                let Eb = 0;
+                let Fb = 0;
+                let Gb = 0;
+                let Hb = 0;
+                let Ib = 0;
+                let Jb = 0;
+                let Kb = 0;
+                let Lb = 0;
+                let Mb = 0;
                 qb = (T + -64) | 0;
                 T = qb;
                 q[(a + 8) >> 2] = mb;
@@ -22413,7 +22413,7 @@ const DracoDecoderModule = (function () {
               function $f(a) {
                 a = a | 0;
                 let V = 0;
-                  let za = 0;
+                let za = 0;
                 q[a >> 2] = 5560;
                 V = q[(a + 76) >> 2];
                 if (V) {
@@ -22436,7 +22436,7 @@ const DracoDecoderModule = (function () {
               function ag(a) {
                 a = a | 0;
                 let Aa = 0;
-                  let Fa = 0;
+                let Fa = 0;
                 q[a >> 2] = 5560;
                 Aa = q[(a + 76) >> 2];
                 if (Aa) {
@@ -22464,17 +22464,17 @@ const DracoDecoderModule = (function () {
                 Ob = Ob | 0;
                 Pb = Pb | 0;
                 let Qb = 0;
-                  let Rb = 0;
-                  let Sb = 0;
-                  let Tb = 0;
-                  let Ub = 0;
-                  let Vb = 0;
-                  let Wb = 0;
-                  let Xb = 0;
-                  let Yb = 0;
-                  let Zb = 0;
-                  let _b = 0;
-                  let $b = 0;
+                let Rb = 0;
+                let Sb = 0;
+                let Tb = 0;
+                let Ub = 0;
+                let Vb = 0;
+                let Wb = 0;
+                let Xb = 0;
+                let Yb = 0;
+                let Zb = 0;
+                let _b = 0;
+                let $b = 0;
                 q[(a + 64) >> 2] = Pb;
                 q[(a + 72) >> 2] = Ob;
                 Pb = Mm((Ob & 1073741823) != (Ob | 0) ? -1 : Ob << 2);
@@ -22596,28 +22596,28 @@ const DracoDecoderModule = (function () {
               }
               function cg(a, mb, nb, Nb) {
                 let Ob = 0;
-                  let Pb = 0;
-                  let ac = 0;
-                  let bc = x(0);
-                  let cc = 0;
-                  let dc = x(0);
-                  let ec = x(0);
-                  let fc = x(0);
-                  let gc = x(0);
-                  let hc = x(0);
-                  let ic = x(0);
-                  let jc = x(0);
-                  let kc = 0;
-                  let lc = 0;
-                  let mc = x(0);
-                  let nc = x(0);
-                  let oc = x(0);
-                  let pc = x(0);
-                  let qc = x(0);
-                  let rc = 0;
-                  let sc = x(0);
-                  let tc = x(0);
-                  let uc = x(0);
+                let Pb = 0;
+                let ac = 0;
+                let bc = x(0);
+                let cc = 0;
+                let dc = x(0);
+                let ec = x(0);
+                let fc = x(0);
+                let gc = x(0);
+                let hc = x(0);
+                let ic = x(0);
+                let jc = x(0);
+                let kc = 0;
+                let lc = 0;
+                let mc = x(0);
+                let nc = x(0);
+                let oc = x(0);
+                let pc = x(0);
+                let qc = x(0);
+                let rc = 0;
+                let sc = x(0);
+                let tc = x(0);
+                let uc = x(0);
                 Ob = (T - 48) | 0;
                 T = Ob;
                 Pb = -1;
@@ -22858,17 +22858,17 @@ const DracoDecoderModule = (function () {
                 xc = xc | 0;
                 yc = yc | 0;
                 let zc = 0;
-                  let Ac = 0;
-                  let Bc = 0;
-                  let Cc = 0;
-                  let Dc = 0;
-                  let Ec = 0;
-                  let Fc = 0;
-                  let Gc = 0;
-                  let Hc = 0;
-                  let Ic = 0;
-                  let Jc = 0;
-                  let Kc = 0;
+                let Ac = 0;
+                let Bc = 0;
+                let Cc = 0;
+                let Dc = 0;
+                let Ec = 0;
+                let Fc = 0;
+                let Gc = 0;
+                let Hc = 0;
+                let Ic = 0;
+                let Jc = 0;
+                let Kc = 0;
                 wc = 0;
                 a: {
                   if ((xc | 0) != 2) {
@@ -22993,30 +22993,30 @@ const DracoDecoderModule = (function () {
               }
               function gg(a, Nb, vc, wc) {
                 let xc = 0;
-                  let yc = 0;
-                  let Lc = 0;
-                  let Mc = 0;
-                  let Nc = 0;
-                  let Oc = 0;
-                  let Pc = 0;
-                  let Qc = 0;
-                  let Rc = 0;
-                  let Sc = 0;
-                  let Tc = 0;
-                  let Uc = 0;
-                  let Vc = 0;
-                  let Wc = 0;
-                  let Xc = 0;
-                  let Yc = 0;
-                  let Zc = 0;
-                  let _c = 0;
-                  let $c = 0;
-                  let ad = 0;
-                  let bd = 0;
-                  let cd = 0;
-                  let dd = 0;
-                  let ed = 0;
-                  let fd = 0;
+                let yc = 0;
+                let Lc = 0;
+                let Mc = 0;
+                let Nc = 0;
+                let Oc = 0;
+                let Pc = 0;
+                let Qc = 0;
+                let Rc = 0;
+                let Sc = 0;
+                let Tc = 0;
+                let Uc = 0;
+                let Vc = 0;
+                let Wc = 0;
+                let Xc = 0;
+                let Yc = 0;
+                let Zc = 0;
+                let _c = 0;
+                let $c = 0;
+                let ad = 0;
+                let bd = 0;
+                let cd = 0;
+                let dd = 0;
+                let ed = 0;
+                let fd = 0;
                 Lc = (T - 80) | 0;
                 T = Lc;
                 xc = -1;
@@ -23334,20 +23334,20 @@ const DracoDecoderModule = (function () {
                 id = id | 0;
                 jd = jd | 0;
                 let kd = 0;
-                  let ld = 0;
-                  let md = 0;
-                  let nd = 0;
-                  let od = 0;
-                  let pd = 0;
-                  let qd = 0;
-                  let rd = 0;
-                  let sd = 0;
-                  let td = 0;
-                  let ud = 0;
-                  let vd = 0;
-                  let wd = 0;
-                  let xd = 0;
-                  let yd = 0;
+                let ld = 0;
+                let md = 0;
+                let nd = 0;
+                let od = 0;
+                let pd = 0;
+                let qd = 0;
+                let rd = 0;
+                let sd = 0;
+                let td = 0;
+                let ud = 0;
+                let vd = 0;
+                let wd = 0;
+                let xd = 0;
+                let yd = 0;
                 ld = (T - 32) | 0;
                 T = ld;
                 q[(a + 68) >> 2] = jd;
@@ -23593,31 +23593,31 @@ const DracoDecoderModule = (function () {
                 wc = wc | 0;
                 gd = gd | 0;
                 let hd = 0;
-                  let id = 0;
-                  let jd = 0;
-                  let zd = 0;
-                  let Ad = 0;
-                  let Bd = 0;
-                  let Cd = 0;
-                  let Dd = 0;
-                  let Ed = 0;
-                  let Fd = 0;
-                  let Gd = 0;
-                  let Hd = 0;
-                  let Id = 0;
-                  let Jd = 0;
-                  let Kd = 0;
-                  let Ld = 0;
-                  let Md = 0;
-                  let Nd = 0;
-                  let Od = 0;
-                  let Pd = 0;
-                  let Qd = 0;
-                  let Rd = 0;
-                  let Sd = 0;
-                  let Td = 0;
-                  let Ud = 0;
-                  let Vd = 0;
+                let id = 0;
+                let jd = 0;
+                let zd = 0;
+                let Ad = 0;
+                let Bd = 0;
+                let Cd = 0;
+                let Dd = 0;
+                let Ed = 0;
+                let Fd = 0;
+                let Gd = 0;
+                let Hd = 0;
+                let Id = 0;
+                let Jd = 0;
+                let Kd = 0;
+                let Ld = 0;
+                let Md = 0;
+                let Nd = 0;
+                let Od = 0;
+                let Pd = 0;
+                let Qd = 0;
+                let Rd = 0;
+                let Sd = 0;
+                let Td = 0;
+                let Ud = 0;
+                let Vd = 0;
                 jd = (T - 96) | 0;
                 T = jd;
                 id = q[(a + 16) >> 2];
@@ -23858,8 +23858,8 @@ const DracoDecoderModule = (function () {
               }
               function lg(a) {
                 let wc = 0;
-                  let gd = 0;
-                  let Wd = 0;
+                let gd = 0;
+                let Wd = 0;
                 wc = q[(a + 8) >> 2];
                 Wd = q[a >> 2];
                 a: {
@@ -23955,19 +23955,19 @@ const DracoDecoderModule = (function () {
                 _d = _d | 0;
                 $d = $d | 0;
                 let ae = 0;
-                  let be = 0;
-                  let ce = 0;
-                  let de = 0;
-                  let ee = 0;
-                  let fe = 0;
-                  let ge = 0;
-                  let he = 0;
-                  let ie = 0;
-                  let je = 0;
-                  let ke = 0;
-                  let le = 0;
-                  let me = 0;
-                  let ne = 0;
+                let be = 0;
+                let ce = 0;
+                let de = 0;
+                let ee = 0;
+                let fe = 0;
+                let ge = 0;
+                let he = 0;
+                let ie = 0;
+                let je = 0;
+                let ke = 0;
+                let le = 0;
+                let me = 0;
+                let ne = 0;
                 q[(a + 8) >> 2] = _d;
                 be = (a + 32) | 0;
                 ae = q[be >> 2];
@@ -24156,10 +24156,10 @@ const DracoDecoderModule = (function () {
                 Xd = Xd | 0;
                 Yd = Yd | 0;
                 let _d = 0;
-                  let $d = 0;
-                  let oe = 0;
-                  let pe = 0;
-                  let qe = 0;
+                let $d = 0;
+                let oe = 0;
+                let pe = 0;
+                let qe = 0;
                 a: {
                   if (r[(q[(a + 4) >> 2] + 36) | 0] <= 1) {
                     _d = q[(Yd + 16) >> 2];
@@ -24188,10 +24188,10 @@ const DracoDecoderModule = (function () {
                 Xd = Xd | 0;
                 Yd = Yd | 0;
                 let re = 0;
-                  let se = 0;
-                  let te = 0;
-                  let ue = 0;
-                  let ve = 0;
+                let se = 0;
+                let te = 0;
+                let ue = 0;
+                let ve = 0;
                 re = (T - 16) | 0;
                 T = re;
                 a: {
@@ -24230,13 +24230,13 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 Xd = Xd | 0;
                 let Yd = 0;
-                  let we = 0;
-                  let xe = 0;
-                  let ye = 0;
-                  let ze = 0;
-                  let Ae = x(0);
-                  let Be = 0;
-                  let Ce = 0;
+                let we = 0;
+                let xe = 0;
+                let ye = 0;
+                let ze = 0;
+                let Ae = x(0);
+                let Be = 0;
+                let Ce = 0;
                 we = (T - 32) | 0;
                 T = we;
                 ye = o[(q[(a + 8) >> 2] + 24) | 0];
@@ -24288,12 +24288,12 @@ const DracoDecoderModule = (function () {
               }
               function rg(a, Xd, De) {
                 let Ee = 0;
-                  let Fe = 0;
-                  let Ge = x(0);
-                  let He = x(0);
-                  let Ie = x(0);
-                  let Je = 0;
-                  let Ke = 0;
+                let Fe = 0;
+                let Ge = x(0);
+                let He = x(0);
+                let Ie = x(0);
+                let Je = 0;
+                let Ke = 0;
                 Ge = x(a + Xd);
                 a: {
                   b: {
@@ -24369,8 +24369,8 @@ const DracoDecoderModule = (function () {
                 De = De | 0;
                 Le = Le | 0;
                 let Me = 0;
-                  let Ne = 0;
-                  let Oe = 0;
+                let Ne = 0;
+                let Oe = 0;
                 Me = (T - 32) | 0;
                 T = Me;
                 Le = (Le + -2) | 0;
@@ -24455,9 +24455,9 @@ const DracoDecoderModule = (function () {
               }
               function tg(a, Xd, De, Le, Pe, Qe) {
                 let Re = 0;
-                  let Se = 0;
-                  let Te = 0;
-                  let Ue = 0;
+                let Se = 0;
+                let Te = 0;
+                let Ue = 0;
                 Ue = q[(q[(q[(Xd + 4) >> 2] + 8) >> 2] + (Le << 2)) >> 2];
                 a: {
                   b: {
@@ -24542,9 +24542,9 @@ const DracoDecoderModule = (function () {
               }
               function ug(a, Xd, De, Le, Pe, Qe) {
                 let Ve = 0;
-                  let We = 0;
-                  let Xe = 0;
-                  let Ye = 0;
+                let We = 0;
+                let Xe = 0;
+                let Ye = 0;
                 Ye = q[(q[(q[(Xd + 4) >> 2] + 8) >> 2] + (Le << 2)) >> 2];
                 a: {
                   b: {
@@ -24665,16 +24665,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 De = De | 0;
                 let Pe = 0;
-                  let Qe = 0;
-                  let Ze = 0;
-                  let _e = 0;
-                  let $e = 0;
-                  let af = 0;
-                  let bf = 0;
-                  let cf = 0;
-                  let df = 0;
-                  let ef = 0;
-                  let ff = 0;
+                let Qe = 0;
+                let Ze = 0;
+                let _e = 0;
+                let $e = 0;
+                let af = 0;
+                let bf = 0;
+                let cf = 0;
+                let df = 0;
+                let ef = 0;
+                let ff = 0;
                 $e = q[(De + 12) >> 2];
                 Pe = $e;
                 Qe = q[(De + 20) >> 2];
@@ -24750,16 +24750,16 @@ const DracoDecoderModule = (function () {
                 jf = jf | 0;
                 kf = kf | 0;
                 let lf = 0;
-                  let mf = 0;
-                  let nf = 0;
-                  let of = 0;
-                  let pf = 0;
-                  let qf = 0;
-                  let rf = 0;
-                  let sf = 0;
-                  let tf = 0;
-                  let uf = 0;
-                  let vf = 0;
+                let mf = 0;
+                let nf = 0;
+                let of = 0;
+                let pf = 0;
+                let qf = 0;
+                let rf = 0;
+                let sf = 0;
+                let tf = 0;
+                let uf = 0;
+                let vf = 0;
                 lf = (T - 48) | 0;
                 T = lf;
                 rf = (a + 8) | 0;
@@ -24955,13 +24955,13 @@ const DracoDecoderModule = (function () {
               }
               function Bg(a, De, gf, hf) {
                 let jf = 0;
-                  let kf = 0;
-                  let wf = 0;
-                  let xf = 0;
-                  let yf = 0;
-                  let zf = 0;
-                  let Af = 0;
-                  let Bf = 0;
+                let kf = 0;
+                let wf = 0;
+                let xf = 0;
+                let yf = 0;
+                let zf = 0;
+                let Af = 0;
+                let Bf = 0;
                 xf = (De + 12) | 0;
                 Af = q[xf >> 2];
                 kf = (q[(gf + 4) >> 2] - Af) | 0;
@@ -25102,14 +25102,14 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 De = De | 0;
                 let gf = 0;
-                  let hf = 0;
-                  let Cf = 0;
-                  let Df = 0;
-                  let Ef = 0;
-                  let Ff = 0;
-                  let Gf = 0;
-                  let Hf = 0;
-                  let If = 0;
+                let hf = 0;
+                let Cf = 0;
+                let Df = 0;
+                let Ef = 0;
+                let Ff = 0;
+                let Gf = 0;
+                let Hf = 0;
+                let If = 0;
                 gf = q[(De + 12) >> 2];
                 Ff = gf;
                 Cf = gf;
@@ -25180,16 +25180,16 @@ const DracoDecoderModule = (function () {
                 Lf = Lf | 0;
                 Mf = Mf | 0;
                 let Nf = 0;
-                  let Of = 0;
-                  let Pf = 0;
-                  let Qf = 0;
-                  let Rf = 0;
-                  let Sf = 0;
-                  let Tf = 0;
-                  let Uf = 0;
-                  let Vf = 0;
-                  let Wf = 0;
-                  let Xf = 0;
+                let Of = 0;
+                let Pf = 0;
+                let Qf = 0;
+                let Rf = 0;
+                let Sf = 0;
+                let Tf = 0;
+                let Uf = 0;
+                let Vf = 0;
+                let Wf = 0;
+                let Xf = 0;
                 Nf = (T - 48) | 0;
                 T = Nf;
                 Tf = (a + 8) | 0;
@@ -25391,13 +25391,13 @@ const DracoDecoderModule = (function () {
                 Lf = Lf | 0;
                 Mf = Mf | 0;
                 let Yf = 0;
-                  let Zf = 0;
-                  let _f = 0;
-                  let $f = 0;
-                  let ag = 0;
-                  let bg = 0;
-                  let cg = 0;
-                  let dg = 0;
+                let Zf = 0;
+                let _f = 0;
+                let $f = 0;
+                let ag = 0;
+                let bg = 0;
+                let cg = 0;
+                let dg = 0;
                 Mf = (T - 32) | 0;
                 T = Mf;
                 Yf = (Lf & 1073741823) != (Lf | 0) ? -1 : Lf << 2;
@@ -25457,16 +25457,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 De = De | 0;
                 let Jf = 0;
-                  let Kf = 0;
-                  let Lf = 0;
-                  let Mf = 0;
-                  let eg = 0;
-                  let fg = 0;
-                  let gg = 0;
-                  let hg = 0;
-                  let ig = 0;
-                  let jg = 0;
-                  let kg = 0;
+                let Kf = 0;
+                let Lf = 0;
+                let Mf = 0;
+                let eg = 0;
+                let fg = 0;
+                let gg = 0;
+                let hg = 0;
+                let ig = 0;
+                let jg = 0;
+                let kg = 0;
                 Mf = q[(De + 12) >> 2];
                 eg = Mf;
                 Jf = q[(De + 20) >> 2];
@@ -25542,16 +25542,16 @@ const DracoDecoderModule = (function () {
                 ng = ng | 0;
                 og = og | 0;
                 let pg = 0;
-                  let qg = 0;
-                  let rg = 0;
-                  let sg = 0;
-                  let tg = 0;
-                  let ug = 0;
-                  let vg = 0;
-                  let wg = 0;
-                  let xg = 0;
-                  let yg = 0;
-                  let zg = 0;
+                let qg = 0;
+                let rg = 0;
+                let sg = 0;
+                let tg = 0;
+                let ug = 0;
+                let vg = 0;
+                let wg = 0;
+                let xg = 0;
+                let yg = 0;
+                let zg = 0;
                 pg = (T - 48) | 0;
                 T = pg;
                 vg = (a + 8) | 0;
@@ -25748,13 +25748,13 @@ const DracoDecoderModule = (function () {
               }
               function Lg(a, De, lg, mg) {
                 let ng = 0;
-                  let og = 0;
-                  let Ag = 0;
-                  let Bg = 0;
-                  let Cg = 0;
-                  let Dg = 0;
-                  let Eg = 0;
-                  let Fg = 0;
+                let og = 0;
+                let Ag = 0;
+                let Bg = 0;
+                let Cg = 0;
+                let Dg = 0;
+                let Eg = 0;
+                let Fg = 0;
                 Bg = (De + 12) | 0;
                 Eg = q[Bg >> 2];
                 og = (q[(lg + 4) >> 2] - Eg) | 0;
@@ -26002,14 +26002,14 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 De = De | 0;
                 let lg = 0;
-                  let mg = 0;
-                  let Gg = 0;
-                  let Hg = 0;
-                  let Ig = 0;
-                  let Jg = 0;
-                  let Kg = 0;
-                  let Lg = 0;
-                  let Mg = 0;
+                let mg = 0;
+                let Gg = 0;
+                let Hg = 0;
+                let Ig = 0;
+                let Jg = 0;
+                let Kg = 0;
+                let Lg = 0;
+                let Mg = 0;
                 lg = q[(De + 12) >> 2];
                 Jg = lg;
                 Gg = lg;
@@ -26078,16 +26078,16 @@ const DracoDecoderModule = (function () {
                 Pg = Pg | 0;
                 Qg = Qg | 0;
                 let Rg = 0;
-                  let Sg = 0;
-                  let Tg = 0;
-                  let Ug = 0;
-                  let Vg = 0;
-                  let Wg = 0;
-                  let Xg = 0;
-                  let Yg = 0;
-                  let Zg = 0;
-                  let _g = 0;
-                  let $g = 0;
+                let Sg = 0;
+                let Tg = 0;
+                let Ug = 0;
+                let Vg = 0;
+                let Wg = 0;
+                let Xg = 0;
+                let Yg = 0;
+                let Zg = 0;
+                let _g = 0;
+                let $g = 0;
                 Rg = (T - 48) | 0;
                 T = Rg;
                 Xg = (a + 8) | 0;
@@ -26290,13 +26290,13 @@ const DracoDecoderModule = (function () {
                 Pg = Pg | 0;
                 Qg = Qg | 0;
                 let ah = 0;
-                  let bh = 0;
-                  let ch = 0;
-                  let dh = 0;
-                  let eh = 0;
-                  let fh = 0;
-                  let gh = 0;
-                  let hh = 0;
+                let bh = 0;
+                let ch = 0;
+                let dh = 0;
+                let eh = 0;
+                let fh = 0;
+                let gh = 0;
+                let hh = 0;
                 Qg = (T - 32) | 0;
                 T = Qg;
                 bh = (Pg & 1073741823) != (Pg | 0) ? -1 : Pg << 2;
@@ -26408,15 +26408,15 @@ const DracoDecoderModule = (function () {
               function Vg(a) {
                 a = a | 0;
                 let De = 0;
-                  let Ng = 0;
-                  let Pg = 0;
-                  let Qg = 0;
-                  let ih = 0;
-                  let jh = 0;
-                  let kh = 0;
-                  let lh = 0;
-                  let mh = 0;
-                  let nh = 0;
+                let Ng = 0;
+                let Pg = 0;
+                let Qg = 0;
+                let ih = 0;
+                let jh = 0;
+                let kh = 0;
+                let lh = 0;
+                let mh = 0;
+                let nh = 0;
                 De = o[(q[(a + 8) >> 2] + 24) | 0];
                 Pg = De << 2;
                 De = Mm((De | 0) != (De & 1073741823) ? -1 : Pg);
@@ -26503,20 +26503,20 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 oh = oh | 0;
                 let ph = 0;
-                  let qh = 0;
-                  let rh = 0;
-                  let sh = 0;
-                  let th = 0;
-                  let uh = 0;
-                  let vh = 0;
-                  let wh = 0;
-                  let xh = 0;
-                  let yh = 0;
-                  let zh = 0;
-                  let Ah = 0;
-                  let Bh = 0;
-                  let Ch = 0;
-                  let Dh = x(0);
+                let qh = 0;
+                let rh = 0;
+                let sh = 0;
+                let th = 0;
+                let uh = 0;
+                let vh = 0;
+                let wh = 0;
+                let xh = 0;
+                let yh = 0;
+                let zh = 0;
+                let Ah = 0;
+                let Bh = 0;
+                let Ch = 0;
+                let Dh = x(0);
                 sh = (T - 16) | 0;
                 T = sh;
                 qh = q[(a + 24) >> 2];
@@ -26577,7 +26577,7 @@ const DracoDecoderModule = (function () {
               function Xg(a) {
                 a = a | 0;
                 let oh = 0;
-                  let Eh = 0;
+                let Eh = 0;
                 q[a >> 2] = 10764;
                 Eh = (a + 28) | 0;
                 oh = q[Eh >> 2];
@@ -26604,7 +26604,7 @@ const DracoDecoderModule = (function () {
               function Yg(a) {
                 a = a | 0;
                 let Fh = 0;
-                  let Gh = 0;
+                let Gh = 0;
                 q[a >> 2] = 10764;
                 Gh = (a + 28) | 0;
                 Fh = q[Gh >> 2];
@@ -26637,7 +26637,7 @@ const DracoDecoderModule = (function () {
               }
               function _g(a) {
                 let Hh = 0;
-                  let Ih = 0;
+                let Ih = 0;
                 q[(a + 16) >> 2] = 0;
                 Ih = (a + 4) | 0;
                 Hh = q[a >> 2];
@@ -26650,14 +26650,14 @@ const DracoDecoderModule = (function () {
               }
               function $g(a, Jh) {
                 let Kh = 0;
-                  let Lh = 0;
-                  let Mh = 0;
-                  let Nh = 0;
-                  let Oh = 0;
-                  let Ph = 0;
-                  let Qh = 0;
-                  let Rh = 0;
-                  let Sh = 0;
+                let Lh = 0;
+                let Mh = 0;
+                let Nh = 0;
+                let Oh = 0;
+                let Ph = 0;
+                let Qh = 0;
+                let Rh = 0;
+                let Sh = 0;
                 q[(a + 16) >> 2] = 0;
                 Kh = q[a >> 2];
                 q[(a + 4) >> 2] = Kh;
@@ -26737,16 +26737,16 @@ const DracoDecoderModule = (function () {
               }
               function bh(a, Jh) {
                 let Th = 0;
-                  let Uh = 0;
-                  let Vh = 0;
-                  let Wh = 0;
-                  let Xh = 0;
-                  let Yh = 0;
-                  let Zh = 0;
-                  let _h = 0;
-                  let $h = 0;
-                  let ai = 0;
-                  let bi = 0;
+                let Uh = 0;
+                let Vh = 0;
+                let Wh = 0;
+                let Xh = 0;
+                let Yh = 0;
+                let Zh = 0;
+                let _h = 0;
+                let $h = 0;
+                let ai = 0;
+                let bi = 0;
                 _h = (T - 16) | 0;
                 T = _h;
                 Wh = q[(Jh + 16) >> 2];
@@ -26856,9 +26856,9 @@ const DracoDecoderModule = (function () {
               }
               function ch(a, Jh, ci) {
                 let di = 0;
-                  let ei = 0;
-                  let fi = 0;
-                  let gi = 0;
+                let ei = 0;
+                let fi = 0;
+                let gi = 0;
                 a: {
                   if (a >>> 0 > 5) {
                     break a;
@@ -26892,10 +26892,10 @@ const DracoDecoderModule = (function () {
               }
               function dh(a) {
                 let Jh = 0;
-                  let ci = 0;
-                  let hi = 0;
-                  let ii = 0;
-                  let ji = 0;
+                let ci = 0;
+                let hi = 0;
+                let ii = 0;
+                let ji = 0;
                 hi = (0 - r[(a + 12) | 0]) | 0;
                 ci = q[(a + 8) >> 2];
                 a: {
@@ -26920,11 +26920,11 @@ const DracoDecoderModule = (function () {
               }
               function eh(a, ki, li) {
                 let mi = 0;
-                  let ni = 0;
-                  let oi = 0;
-                  let pi = 0;
-                  let qi = 0;
-                  let ri = 0;
+                let ni = 0;
+                let oi = 0;
+                let pi = 0;
+                let qi = 0;
+                let ri = 0;
                 if (!ki) {
                   q[li >> 2] = 0;
                   return;
@@ -26963,8 +26963,8 @@ const DracoDecoderModule = (function () {
               }
               function fh(a, ki) {
                 let li = 0;
-                  let si = 0;
-                  let ti = 0;
+                let si = 0;
+                let ti = 0;
                 ti = (T - 32) | 0;
                 T = ti;
                 a: {
@@ -27071,8 +27071,8 @@ const DracoDecoderModule = (function () {
               }
               function gh(a, ki) {
                 let ui = 0;
-                  let vi = 0;
-                  let wi = 0;
+                let vi = 0;
+                let wi = 0;
                 wi = (T - 32) | 0;
                 T = wi;
                 a: {
@@ -27156,8 +27156,8 @@ const DracoDecoderModule = (function () {
               }
               function hh(a, ki) {
                 let xi = 0;
-                  let yi = 0;
-                  let zi = 0;
+                let yi = 0;
+                let zi = 0;
                 xi = (T - 80) | 0;
                 T = xi;
                 yi = q[(ki + 36) >> 2];
@@ -27202,8 +27202,8 @@ const DracoDecoderModule = (function () {
               }
               function ih(a, ki, Ai, Bi) {
                 let Ci = 0;
-                  let Di = 0;
-                  let Ei = 0;
+                let Di = 0;
+                let Ei = 0;
                 Ci = (T - 80) | 0;
                 T = Ci;
                 Di = q[(Ai + 36) >> 2];
@@ -27322,8 +27322,8 @@ const DracoDecoderModule = (function () {
               }
               function jh(a, ki, Ai, Bi) {
                 let Fi = 0;
-                  let Gi = 0;
-                  let Hi = 0;
+                let Gi = 0;
+                let Hi = 0;
                 Fi = (T - 80) | 0;
                 T = Fi;
                 Gi = q[(Ai + 36) >> 2];
@@ -27433,8 +27433,8 @@ const DracoDecoderModule = (function () {
               }
               function kh(a, ki) {
                 let Ai = 0;
-                  let Bi = 0;
-                  let Ii = 0;
+                let Bi = 0;
+                let Ii = 0;
                 Ii = (T - 16) | 0;
                 T = Ii;
                 q[(Ii + 12) >> 2] = ki;
@@ -27481,13 +27481,13 @@ const DracoDecoderModule = (function () {
               }
               function lh(a, ki) {
                 let Ji = 0;
-                  let Ki = 0;
-                  let Li = 0;
-                  let Mi = 0;
-                  let Ni = 0;
-                  let Oi = 0;
-                  let Pi = 0;
-                  let Qi = 0;
+                let Ki = 0;
+                let Li = 0;
+                let Mi = 0;
+                let Ni = 0;
+                let Oi = 0;
+                let Pi = 0;
+                let Qi = 0;
                 Li = (T - 32) | 0;
                 T = Li;
                 Mi = (a + 16) | 0;
@@ -27668,8 +27668,8 @@ const DracoDecoderModule = (function () {
               }
               function nh(a, ki) {
                 let Ri = 0;
-                  let Si = 0;
-                  let Ui = 0;
+                let Si = 0;
+                let Ui = 0;
                 Ri = (a | 0) == (ki | 0);
                 o[(ki + 12) | 0] = Ri;
                 a: {
@@ -27775,16 +27775,16 @@ const DracoDecoderModule = (function () {
               }
               function oh(a, ki, Vi, Wi, Xi) {
                 let Yi = 0;
-                  let Zi = 0;
-                  let _i = 0;
-                  let $i = 0;
-                  let aj = 0;
-                  let bj = 0;
-                  let cj = 0;
-                  let dj = 0;
-                  let ej = 0;
-                  let fj = 0;
-                  let gj = 0;
+                let Zi = 0;
+                let _i = 0;
+                let $i = 0;
+                let aj = 0;
+                let bj = 0;
+                let cj = 0;
+                let dj = 0;
+                let ej = 0;
+                let fj = 0;
+                let gj = 0;
                 a: {
                   b: {
                     c: {
@@ -27979,14 +27979,14 @@ const DracoDecoderModule = (function () {
               }
               function ph(a, ki, Vi) {
                 let Wi = 0;
-                  let Xi = 0;
-                  let hj = 0;
-                  let ij = 0;
-                  let jj = 0;
-                  let kj = 0;
-                  let lj = 0;
-                  let mj = 0;
-                  let nj = 0;
+                let Xi = 0;
+                let hj = 0;
+                let ij = 0;
+                let jj = 0;
+                let kj = 0;
+                let lj = 0;
+                let mj = 0;
+                let nj = 0;
                 a: {
                   Wi = (a + 4) | 0;
                   a = q[Wi >> 2];
@@ -28070,10 +28070,10 @@ const DracoDecoderModule = (function () {
               }
               function qh(a, ki, Vi, oj) {
                 let pj = 0;
-                  let qj = 0;
-                  let rj = 0;
-                  let sj = 0;
-                  let tj = 0;
+                let qj = 0;
+                let rj = 0;
+                let sj = 0;
+                let tj = 0;
                 if (!a) {
                   return 1;
                 }
@@ -28104,21 +28104,21 @@ const DracoDecoderModule = (function () {
               }
               function rh(a, ki, Vi, oj) {
                 let uj = 0;
-                  let vj = 0;
-                  let wj = 0;
-                  let xj = 0;
-                  let yj = 0;
-                  let zj = 0;
-                  let Aj = 0;
-                  let Bj = 0;
-                  let Cj = 0;
-                  let Dj = 0;
-                  let Ej = 0;
-                  let Fj = 0;
-                  let Gj = 0;
-                  let Hj = 0;
-                  let Ij = 0;
-                  let Jj = 0;
+                let vj = 0;
+                let wj = 0;
+                let xj = 0;
+                let yj = 0;
+                let zj = 0;
+                let Aj = 0;
+                let Bj = 0;
+                let Cj = 0;
+                let Dj = 0;
+                let Ej = 0;
+                let Fj = 0;
+                let Gj = 0;
+                let Hj = 0;
+                let Ij = 0;
+                let Jj = 0;
                 uj = (T + -64) | 0;
                 T = uj;
                 q[(uj + 56) >> 2] = 0;
@@ -28249,9 +28249,9 @@ const DracoDecoderModule = (function () {
               }
               function sh(a, ki, Vi) {
                 let oj = 0;
-                  let Kj = 0;
-                  let Lj = 0;
-                  let Mj = 0;
+                let Kj = 0;
+                let Lj = 0;
+                let Mj = 0;
                 a: {
                   b: {
                     Kj = q[(ki + 16) >> 2];
@@ -28308,18 +28308,18 @@ const DracoDecoderModule = (function () {
               }
               function th(a, ki) {
                 let Vi = 0;
-                  let Nj = 0;
-                  let Oj = 0;
-                  let Pj = 0;
-                  let Qj = 0;
-                  let Rj = 0;
-                  let Sj = 0;
-                  let Tj = 0;
-                  let Uj = 0;
-                  let Vj = 0;
-                  let Wj = 0;
-                  let Xj = 0;
-                  let Yj = 0;
+                let Nj = 0;
+                let Oj = 0;
+                let Pj = 0;
+                let Qj = 0;
+                let Rj = 0;
+                let Sj = 0;
+                let Tj = 0;
+                let Uj = 0;
+                let Vj = 0;
+                let Wj = 0;
+                let Xj = 0;
+                let Yj = 0;
                 a: {
                   Vi = s[(ki + 38) >> 1];
                   if (!Vi) {
@@ -28514,14 +28514,14 @@ const DracoDecoderModule = (function () {
               }
               function uh(a, ki) {
                 let Zj = 0;
-                  let _j = 0;
-                  let $j = 0;
-                  let ak = 0;
-                  let bk = 0;
-                  let ck = 0;
-                  let dk = 0;
-                  let ek = 0;
-                  let fk = 0;
+                let _j = 0;
+                let $j = 0;
+                let ak = 0;
+                let bk = 0;
+                let ck = 0;
+                let dk = 0;
+                let ek = 0;
+                let fk = 0;
                 bk = (T - 16) | 0;
                 T = bk;
                 a: {
@@ -28629,13 +28629,13 @@ const DracoDecoderModule = (function () {
               }
               function vh(a, ki, gk) {
                 let hk = 0;
-                  let ik = 0;
-                  let jk = 0;
-                  let kk = 0;
-                  let lk = 0;
-                  let mk = 0;
-                  let nk = 0;
-                  let ok = 0;
+                let ik = 0;
+                let jk = 0;
+                let kk = 0;
+                let lk = 0;
+                let mk = 0;
+                let nk = 0;
+                let ok = 0;
                 hk = (T + -64) | 0;
                 T = hk;
                 q[(hk + 56) >> 2] = 0;
@@ -28717,13 +28717,13 @@ const DracoDecoderModule = (function () {
               }
               function wh(a, ki, gk) {
                 let pk = 0;
-                  let qk = 0;
-                  let rk = 0;
-                  let sk = 0;
-                  let tk = 0;
-                  let uk = 0;
-                  let vk = 0;
-                  let wk = 0;
+                let qk = 0;
+                let rk = 0;
+                let sk = 0;
+                let tk = 0;
+                let uk = 0;
+                let vk = 0;
+                let wk = 0;
                 pk = (T + -64) | 0;
                 T = pk;
                 q[(pk + 56) >> 2] = 0;
@@ -28805,13 +28805,13 @@ const DracoDecoderModule = (function () {
               }
               function xh(a, ki, gk) {
                 let xk = 0;
-                  let yk = 0;
-                  let zk = 0;
-                  let Ak = 0;
-                  let Bk = 0;
-                  let Ck = 0;
-                  let Dk = 0;
-                  let Ek = 0;
+                let yk = 0;
+                let zk = 0;
+                let Ak = 0;
+                let Bk = 0;
+                let Ck = 0;
+                let Dk = 0;
+                let Ek = 0;
                 xk = (T + -64) | 0;
                 T = xk;
                 q[(xk + 56) >> 2] = 0;
@@ -28893,13 +28893,13 @@ const DracoDecoderModule = (function () {
               }
               function yh(a, ki, gk) {
                 let Fk = 0;
-                  let Gk = 0;
-                  let Hk = 0;
-                  let Ik = 0;
-                  let Jk = 0;
-                  let Kk = 0;
-                  let Lk = 0;
-                  let Mk = 0;
+                let Gk = 0;
+                let Hk = 0;
+                let Ik = 0;
+                let Jk = 0;
+                let Kk = 0;
+                let Lk = 0;
+                let Mk = 0;
                 Fk = (T + -64) | 0;
                 T = Fk;
                 q[(Fk + 56) >> 2] = 0;
@@ -28981,13 +28981,13 @@ const DracoDecoderModule = (function () {
               }
               function zh(a, ki, gk) {
                 let Nk = 0;
-                  let Ok = 0;
-                  let Pk = 0;
-                  let Qk = 0;
-                  let Rk = 0;
-                  let Sk = 0;
-                  let Tk = 0;
-                  let Uk = 0;
+                let Ok = 0;
+                let Pk = 0;
+                let Qk = 0;
+                let Rk = 0;
+                let Sk = 0;
+                let Tk = 0;
+                let Uk = 0;
                 Nk = (T + -64) | 0;
                 T = Nk;
                 q[(Nk + 56) >> 2] = 0;
@@ -29069,13 +29069,13 @@ const DracoDecoderModule = (function () {
               }
               function Ah(a, ki, gk) {
                 let Vk = 0;
-                  let Wk = 0;
-                  let Xk = 0;
-                  let Yk = 0;
-                  let Zk = 0;
-                  let _k = 0;
-                  let $k = 0;
-                  let al = 0;
+                let Wk = 0;
+                let Xk = 0;
+                let Yk = 0;
+                let Zk = 0;
+                let _k = 0;
+                let $k = 0;
+                let al = 0;
                 Vk = (T + -64) | 0;
                 T = Vk;
                 q[(Vk + 56) >> 2] = 0;
@@ -29157,13 +29157,13 @@ const DracoDecoderModule = (function () {
               }
               function Bh(a, ki, gk) {
                 let bl = 0;
-                  let cl = 0;
-                  let dl = 0;
-                  let el = 0;
-                  let fl = 0;
-                  let gl = 0;
-                  let hl = 0;
-                  let il = 0;
+                let cl = 0;
+                let dl = 0;
+                let el = 0;
+                let fl = 0;
+                let gl = 0;
+                let hl = 0;
+                let il = 0;
                 bl = (T + -64) | 0;
                 T = bl;
                 q[(bl + 56) >> 2] = 0;
@@ -29245,9 +29245,9 @@ const DracoDecoderModule = (function () {
               }
               function Ch(a, ki, gk) {
                 let jl = 0;
-                  let kl = 0;
-                  let ll = 0;
-                  let ml = 0;
+                let kl = 0;
+                let ll = 0;
+                let ml = 0;
                 a: {
                   if (a >>> 0 > 5) {
                     break a;
@@ -29281,12 +29281,12 @@ const DracoDecoderModule = (function () {
               }
               function Dh(a, ki) {
                 let gk = 0;
-                  let nl = 0;
-                  let ol = 0;
-                  let pl = 0;
-                  let ql = 0;
-                  let rl = 0;
-                  let sl = 0;
+                let nl = 0;
+                let ol = 0;
+                let pl = 0;
+                let ql = 0;
+                let rl = 0;
+                let sl = 0;
                 a: {
                   b: {
                     ol = q[(a + 8) >> 2];
@@ -29360,11 +29360,11 @@ const DracoDecoderModule = (function () {
               }
               function Eh(a, ki, tl) {
                 let ul = 0;
-                  let vl = 0;
-                  let wl = 0;
-                  let xl = 0;
-                  let yl = 0;
-                  let zl = 0;
+                let vl = 0;
+                let wl = 0;
+                let xl = 0;
+                let yl = 0;
+                let zl = 0;
                 a: {
                   if (a >>> 0 > 10) {
                     break a;
@@ -29412,18 +29412,18 @@ const DracoDecoderModule = (function () {
               }
               function Fh(a, ki) {
                 let tl = 0;
-                  let Al = 0;
-                  let Bl = 0;
-                  let Cl = 0;
-                  let Dl = 0;
-                  let El = 0;
-                  let Fl = 0;
-                  let Gl = 0;
-                  let Hl = 0;
-                  let Il = 0;
-                  let Jl = 0;
-                  let Kl = 0;
-                  let Ll = 0;
+                let Al = 0;
+                let Bl = 0;
+                let Cl = 0;
+                let Dl = 0;
+                let El = 0;
+                let Fl = 0;
+                let Gl = 0;
+                let Hl = 0;
+                let Il = 0;
+                let Jl = 0;
+                let Kl = 0;
+                let Ll = 0;
                 a: {
                   tl = s[(ki + 38) >> 1];
                   if (!tl) {
@@ -29618,14 +29618,14 @@ const DracoDecoderModule = (function () {
               }
               function Gh(a, ki) {
                 let Ml = 0;
-                  let Nl = 0;
-                  let Ol = 0;
-                  let Pl = 0;
-                  let Ql = 0;
-                  let Rl = 0;
-                  let Sl = 0;
-                  let Tl = 0;
-                  let Ul = 0;
+                let Nl = 0;
+                let Ol = 0;
+                let Pl = 0;
+                let Ql = 0;
+                let Rl = 0;
+                let Sl = 0;
+                let Tl = 0;
+                let Ul = 0;
                 Ql = (T - 16) | 0;
                 T = Ql;
                 a: {
@@ -29733,18 +29733,18 @@ const DracoDecoderModule = (function () {
               }
               function Hh(a, ki) {
                 let Vl = 0;
-                  let Wl = 0;
-                  let Xl = 0;
-                  let Yl = 0;
-                  let Zl = 0;
-                  let _l = 0;
-                  let $l = 0;
-                  let am = 0;
-                  let bm = 0;
-                  let cm = 0;
-                  let dm = 0;
-                  let em = 0;
-                  let fm = 0;
+                let Wl = 0;
+                let Xl = 0;
+                let Yl = 0;
+                let Zl = 0;
+                let _l = 0;
+                let $l = 0;
+                let am = 0;
+                let bm = 0;
+                let cm = 0;
+                let dm = 0;
+                let em = 0;
+                let fm = 0;
                 a: {
                   Vl = s[(ki + 38) >> 1];
                   if (!Vl) {
@@ -29939,14 +29939,14 @@ const DracoDecoderModule = (function () {
               }
               function Ih(a, ki) {
                 let gm = 0;
-                  let hm = 0;
-                  let im = 0;
-                  let jm = 0;
-                  let km = 0;
-                  let lm = 0;
-                  let mm = 0;
-                  let nm = 0;
-                  let om = 0;
+                let hm = 0;
+                let im = 0;
+                let jm = 0;
+                let km = 0;
+                let lm = 0;
+                let mm = 0;
+                let nm = 0;
+                let om = 0;
                 km = (T - 16) | 0;
                 T = km;
                 a: {
@@ -30054,18 +30054,18 @@ const DracoDecoderModule = (function () {
               }
               function Jh(a, ki) {
                 let pm = 0;
-                  let qm = 0;
-                  let rm = 0;
-                  let sm = 0;
-                  let tm = 0;
-                  let um = 0;
-                  let vm = 0;
-                  let wm = 0;
-                  let xm = 0;
-                  let ym = 0;
-                  let zm = 0;
-                  let Am = 0;
-                  let Bm = 0;
+                let qm = 0;
+                let rm = 0;
+                let sm = 0;
+                let tm = 0;
+                let um = 0;
+                let vm = 0;
+                let wm = 0;
+                let xm = 0;
+                let ym = 0;
+                let zm = 0;
+                let Am = 0;
+                let Bm = 0;
                 a: {
                   pm = s[(ki + 38) >> 1];
                   if (!pm) {
@@ -30260,14 +30260,14 @@ const DracoDecoderModule = (function () {
               }
               function Kh(a, ki) {
                 let Cm = 0;
-                  let Dm = 0;
-                  let Em = 0;
-                  let Fm = 0;
-                  let Gm = 0;
-                  let Hm = 0;
-                  let Im = 0;
-                  let Jm = 0;
-                  let Km = 0;
+                let Dm = 0;
+                let Em = 0;
+                let Fm = 0;
+                let Gm = 0;
+                let Hm = 0;
+                let Im = 0;
+                let Jm = 0;
+                let Km = 0;
                 Gm = (T - 16) | 0;
                 T = Gm;
                 a: {
@@ -30375,18 +30375,18 @@ const DracoDecoderModule = (function () {
               }
               function Lh(a, ki) {
                 let Lm = 0;
-                  let Mm = 0;
-                  let Nm = 0;
-                  let Om = 0;
-                  let Pm = 0;
-                  let Qm = 0;
-                  let Rm = 0;
-                  let Sm = 0;
-                  let Tm = 0;
-                  let Um = 0;
-                  let Vm = 0;
-                  let Wm = 0;
-                  let Xm = 0;
+                let Mm = 0;
+                let Nm = 0;
+                let Om = 0;
+                let Pm = 0;
+                let Qm = 0;
+                let Rm = 0;
+                let Sm = 0;
+                let Tm = 0;
+                let Um = 0;
+                let Vm = 0;
+                let Wm = 0;
+                let Xm = 0;
                 a: {
                   Lm = s[(ki + 38) >> 1];
                   if (!Lm) {
@@ -30581,14 +30581,14 @@ const DracoDecoderModule = (function () {
               }
               function Mh(a, ki) {
                 let Ym = 0;
-                  let Zm = 0;
-                  let _m = 0;
-                  let $m = 0;
-                  let an = 0;
-                  let bn = 0;
-                  let cn = 0;
-                  let dn = 0;
-                  let en = 0;
+                let Zm = 0;
+                let _m = 0;
+                let $m = 0;
+                let an = 0;
+                let bn = 0;
+                let cn = 0;
+                let dn = 0;
+                let en = 0;
                 an = (T - 16) | 0;
                 T = an;
                 a: {
@@ -30696,18 +30696,18 @@ const DracoDecoderModule = (function () {
               }
               function Nh(a, ki) {
                 let fn = 0;
-                  let gn = 0;
-                  let hn = 0;
-                  let jn = 0;
-                  let kn = 0;
-                  let ln = 0;
-                  let mn = 0;
-                  let nn = 0;
-                  let on = 0;
-                  let pn = 0;
-                  let qn = 0;
-                  let rn = 0;
-                  let sn = 0;
+                let gn = 0;
+                let hn = 0;
+                let jn = 0;
+                let kn = 0;
+                let ln = 0;
+                let mn = 0;
+                let nn = 0;
+                let on = 0;
+                let pn = 0;
+                let qn = 0;
+                let rn = 0;
+                let sn = 0;
                 a: {
                   fn = s[(ki + 38) >> 1];
                   if (!fn) {
@@ -30902,14 +30902,14 @@ const DracoDecoderModule = (function () {
               }
               function Oh(a, ki) {
                 let tn = 0;
-                  let un = 0;
-                  let vn = 0;
-                  let wn = 0;
-                  let xn = 0;
-                  let yn = 0;
-                  let zn = 0;
-                  let An = 0;
-                  let Bn = 0;
+                let un = 0;
+                let vn = 0;
+                let wn = 0;
+                let xn = 0;
+                let yn = 0;
+                let zn = 0;
+                let An = 0;
+                let Bn = 0;
                 xn = (T - 16) | 0;
                 T = xn;
                 a: {
@@ -31017,18 +31017,18 @@ const DracoDecoderModule = (function () {
               }
               function Ph(a, ki) {
                 let Cn = 0;
-                  let En = 0;
-                  let Fn = 0;
-                  let Gn = 0;
-                  let Hn = 0;
-                  let In = 0;
-                  let Jn = 0;
-                  let Kn = 0;
-                  let Ln = 0;
-                  let Mn = 0;
-                  let Nn = 0;
-                  let On = 0;
-                  let Pn = 0;
+                let En = 0;
+                let Fn = 0;
+                let Gn = 0;
+                let Hn = 0;
+                let In = 0;
+                let Jn = 0;
+                let Kn = 0;
+                let Ln = 0;
+                let Mn = 0;
+                let Nn = 0;
+                let On = 0;
+                let Pn = 0;
                 a: {
                   Cn = s[(ki + 38) >> 1];
                   if (!Cn) {
@@ -31223,14 +31223,14 @@ const DracoDecoderModule = (function () {
               }
               function Qh(a, ki) {
                 let Dn = 0;
-                  let Qn = 0;
-                  let Rn = 0;
-                  let Sn = 0;
-                  let Tn = 0;
-                  let Un = 0;
-                  let Vn = 0;
-                  let Wn = 0;
-                  let Xn = 0;
+                let Qn = 0;
+                let Rn = 0;
+                let Sn = 0;
+                let Tn = 0;
+                let Un = 0;
+                let Vn = 0;
+                let Wn = 0;
+                let Xn = 0;
                 Tn = (T - 16) | 0;
                 T = Tn;
                 a: {
@@ -31351,10 +31351,10 @@ const DracoDecoderModule = (function () {
               function Th(a) {
                 a = a | 0;
                 let ki = 0;
-                  let Yn = 0;
-                  let Zn = 0;
-                  let _n = 0;
-                  let $n = 0;
+                let Yn = 0;
+                let Zn = 0;
+                let _n = 0;
+                let $n = 0;
                 q[a >> 2] = 13300;
                 ki = q[(a + 20) >> 2];
                 if (ki) {
@@ -31400,9 +31400,9 @@ const DracoDecoderModule = (function () {
               function Vh(a) {
                 a = a | 0;
                 let ao = 0;
-                  let bo = 0;
-                  let co = 0;
-                  let eo = 0;
+                let bo = 0;
+                let co = 0;
+                let eo = 0;
                 ao = q[(a + 32) >> 2];
                 co = q[(ao + 16) >> 2];
                 eo = q[(ao + 12) >> 2];
@@ -31485,10 +31485,10 @@ const DracoDecoderModule = (function () {
               function Yh(a) {
                 a = a | 0;
                 let fo = 0;
-                  let go = 0;
-                  let ho = 0;
-                  let io = 0;
-                  let jo = 0;
+                let go = 0;
+                let ho = 0;
+                let io = 0;
+                let jo = 0;
                 q[a >> 2] = 11164;
                 fo = (a + 48) | 0;
                 go = q[fo >> 2];
@@ -31535,10 +31535,10 @@ const DracoDecoderModule = (function () {
               function Zh(a) {
                 a = a | 0;
                 let ko = 0;
-                  let lo = 0;
-                  let mo = 0;
-                  let no = 0;
-                  let oo = 0;
+                let lo = 0;
+                let mo = 0;
+                let no = 0;
+                let oo = 0;
                 q[a >> 2] = 11164;
                 ko = (a + 48) | 0;
                 lo = q[ko >> 2];
@@ -31659,10 +31659,10 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 po = po | 0;
                 let qo = 0;
-                  let ro = 0;
-                  let so = 0;
-                  let to = 0;
-                  let uo = 0;
+                let ro = 0;
+                let so = 0;
+                let to = 0;
+                let uo = 0;
                 qo = q[(a + 216) >> 2];
                 to = (a + 220) | 0;
                 if ((qo | 0) != q[to >> 2]) {
@@ -31709,10 +31709,10 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 po = po | 0;
                 let vo = 0;
-                  let wo = 0;
-                  let xo = 0;
-                  let yo = 0;
-                  let zo = 0;
+                let wo = 0;
+                let xo = 0;
+                let yo = 0;
+                let zo = 0;
                 vo = q[(a + 216) >> 2];
                 yo = (a + 220) | 0;
                 if ((vo | 0) != q[yo >> 2]) {
@@ -31758,20 +31758,20 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 po = po | 0;
                 let Ao = 0;
-                  let Bo = 0;
-                  let Co = 0;
-                  let Do = 0;
-                  let Eo = 0;
-                  let Fo = 0;
-                  let Go = 0;
-                  let Ho = 0;
-                  let Io = 0;
-                  let Jo = 0;
-                  let Ko = 0;
-                  let Lo = 0;
-                  let Mo = 0;
-                  let No = 0;
-                  let Oo = 0;
+                let Bo = 0;
+                let Co = 0;
+                let Do = 0;
+                let Eo = 0;
+                let Fo = 0;
+                let Go = 0;
+                let Ho = 0;
+                let Io = 0;
+                let Jo = 0;
+                let Ko = 0;
+                let Lo = 0;
+                let Mo = 0;
+                let No = 0;
+                let Oo = 0;
                 Do = (T - 80) | 0;
                 T = Do;
                 a: {
@@ -32101,17 +32101,17 @@ const DracoDecoderModule = (function () {
               }
               function hi(a, po, Po) {
                 let Qo = 0;
-                  let Ro = 0;
-                  let So = 0;
-                  let To = 0;
-                  let Uo = 0;
-                  let Vo = 0;
-                  let Wo = 0;
-                  let Xo = 0;
-                  let Yo = 0;
-                  let Zo = 0;
-                  let _o = 0;
-                  let $o = 0;
+                let Ro = 0;
+                let So = 0;
+                let To = 0;
+                let Uo = 0;
+                let Vo = 0;
+                let Wo = 0;
+                let Xo = 0;
+                let Yo = 0;
+                let Zo = 0;
+                let _o = 0;
+                let $o = 0;
                 Qo = (T + -64) | 0;
                 T = Qo;
                 So = q[(q[(po + 4) >> 2] + 44) >> 2];
@@ -32281,12 +32281,12 @@ const DracoDecoderModule = (function () {
               }
               function ii(a, po, Po) {
                 let ap = 0;
-                  let bp = 0;
-                  let cp = 0;
-                  let dp = 0;
-                  let ep = 0;
-                  let fp = 0;
-                  let gp = 0;
+                let bp = 0;
+                let cp = 0;
+                let dp = 0;
+                let ep = 0;
+                let fp = 0;
+                let gp = 0;
                 ap = (T - 112) | 0;
                 T = ap;
                 gp = q[(q[(po + 4) >> 2] + 44) >> 2];
@@ -32399,14 +32399,14 @@ const DracoDecoderModule = (function () {
               }
               function ji(a, po) {
                 let Po = 0;
-                  let hp = 0;
-                  let ip = 0;
-                  let jp = 0;
-                  let kp = 0;
-                  let lp = 0;
-                  let mp = 0;
-                  let np = 0;
-                  let op = 0;
+                let hp = 0;
+                let ip = 0;
+                let jp = 0;
+                let kp = 0;
+                let lp = 0;
+                let mp = 0;
+                let np = 0;
+                let op = 0;
                 hp = q[(a + 8) >> 2];
                 ip = (a + 4) | 0;
                 Po = q[ip >> 2];
@@ -32503,7 +32503,7 @@ const DracoDecoderModule = (function () {
                 po = po | 0;
                 qp = qp | 0;
                 let rp = 0;
-                  let sp = 0;
+                let sp = 0;
                 rp = (T - 16) | 0;
                 T = rp;
                 q[(a + 4) >> 2] = po;
@@ -32548,20 +32548,20 @@ const DracoDecoderModule = (function () {
               function ni(a) {
                 a = a | 0;
                 let qp = 0;
-                  let tp = 0;
-                  let up = 0;
-                  let vp = 0;
-                  let wp = 0;
-                  let xp = 0;
-                  let yp = 0;
-                  let zp = 0;
-                  let Ap = 0;
-                  let Bp = 0;
-                  let Cp = 0;
-                  let Dp = 0;
-                  let Ep = 0;
-                  let Fp = 0;
-                  let Gp = 0;
+                let tp = 0;
+                let up = 0;
+                let vp = 0;
+                let wp = 0;
+                let xp = 0;
+                let yp = 0;
+                let zp = 0;
+                let Ap = 0;
+                let Bp = 0;
+                let Cp = 0;
+                let Dp = 0;
+                let Ep = 0;
+                let Fp = 0;
+                let Gp = 0;
                 zp = (T + -64) | 0;
                 T = zp;
                 q[(a + 132) >> 2] = 0;
@@ -33141,9 +33141,9 @@ const DracoDecoderModule = (function () {
               }
               function oi(a, Hp, Ip) {
                 let Jp = 0;
-                  let Kp = 0;
-                  let Lp = 0;
-                  let Mp = 0;
+                let Kp = 0;
+                let Lp = 0;
+                let Mp = 0;
                 a: {
                   if (a >>> 0 > 5) {
                     break a;
@@ -33213,11 +33213,11 @@ const DracoDecoderModule = (function () {
               }
               function qi(a, Ip) {
                 let Np = 0;
-                  let Op = 0;
-                  let Pp = 0;
-                  let Qp = 0;
-                  let Rp = 0;
-                  let Sp = 0;
+                let Op = 0;
+                let Pp = 0;
+                let Qp = 0;
+                let Rp = 0;
+                let Sp = 0;
                 Op = (T - 32) | 0;
                 T = Op;
                 a: {
@@ -33337,21 +33337,21 @@ const DracoDecoderModule = (function () {
               }
               function ri(a, Ip) {
                 let Tp = 0;
-                  let Up = 0;
-                  let Vp = 0;
-                  let Wp = 0;
-                  let Xp = 0;
-                  let Yp = 0;
-                  let Zp = 0;
-                  let _p = 0;
-                  let $p = 0;
-                  let aq = 0;
-                  let bq = 0;
-                  let cq = 0;
-                  let dq = 0;
-                  let eq = 0;
-                  let fq = 0;
-                  let gq = 0;
+                let Up = 0;
+                let Vp = 0;
+                let Wp = 0;
+                let Xp = 0;
+                let Yp = 0;
+                let Zp = 0;
+                let _p = 0;
+                let $p = 0;
+                let aq = 0;
+                let bq = 0;
+                let cq = 0;
+                let dq = 0;
+                let eq = 0;
+                let fq = 0;
+                let gq = 0;
                 Vp = (T - 32) | 0;
                 T = Vp;
                 a: {
@@ -33669,13 +33669,13 @@ const DracoDecoderModule = (function () {
               }
               function si(a, Ip) {
                 let hq = 0;
-                  let iq = 0;
-                  let jq = 0;
-                  let kq = 0;
-                  let lq = 0;
-                  let mq = 0;
-                  let nq = 0;
-                  let oq = 0;
+                let iq = 0;
+                let jq = 0;
+                let kq = 0;
+                let lq = 0;
+                let mq = 0;
+                let nq = 0;
+                let oq = 0;
                 nq = (T - 16) | 0;
                 T = nq;
                 hq = q[(a + 4) >> 2];
@@ -33842,28 +33842,28 @@ const DracoDecoderModule = (function () {
               }
               function ti(a, Ip) {
                 let pq = 0;
-                  let qq = 0;
-                  let rq = 0;
-                  let sq = 0;
-                  let tq = 0;
-                  let uq = 0;
-                  let vq = 0;
-                  let wq = 0;
-                  let xq = 0;
-                  let yq = 0;
-                  let zq = 0;
-                  let Aq = 0;
-                  let Bq = 0;
-                  let Cq = 0;
-                  let Dq = 0;
-                  let Eq = 0;
-                  let Fq = 0;
-                  let Gq = 0;
-                  let Hq = 0;
-                  let Iq = 0;
-                  let Jq = 0;
-                  let Kq = 0;
-                  let Lq = 0;
+                let qq = 0;
+                let rq = 0;
+                let sq = 0;
+                let tq = 0;
+                let uq = 0;
+                let vq = 0;
+                let wq = 0;
+                let xq = 0;
+                let yq = 0;
+                let zq = 0;
+                let Aq = 0;
+                let Bq = 0;
+                let Cq = 0;
+                let Dq = 0;
+                let Eq = 0;
+                let Fq = 0;
+                let Gq = 0;
+                let Hq = 0;
+                let Iq = 0;
+                let Jq = 0;
+                let Kq = 0;
+                let Lq = 0;
                 sq = (T - 96) | 0;
                 T = sq;
                 q[(sq + 72) >> 2] = 0;
@@ -34792,16 +34792,16 @@ const DracoDecoderModule = (function () {
               }
               function ui(a, Ip) {
                 let Mq = 0;
-                  let Nq = 0;
-                  let Oq = 0;
-                  let Pq = 0;
-                  let Qq = 0;
-                  let Rq = 0;
-                  let Sq = 0;
-                  let Tq = 0;
-                  let Uq = 0;
-                  let Vq = 0;
-                  let Wq = 0;
+                let Nq = 0;
+                let Oq = 0;
+                let Pq = 0;
+                let Qq = 0;
+                let Rq = 0;
+                let Sq = 0;
+                let Tq = 0;
+                let Uq = 0;
+                let Vq = 0;
+                let Wq = 0;
                 Nq = (T - 32) | 0;
                 T = Nq;
                 q[(Nq + 16) >> 2] = Ip;
@@ -34895,17 +34895,17 @@ const DracoDecoderModule = (function () {
               }
               function vi(a, Ip) {
                 let Xq = 0;
-                  let Yq = 0;
-                  let Zq = 0;
-                  let _q = 0;
-                  let $q = 0;
-                  let ar = 0;
-                  let br = 0;
-                  let cr = 0;
-                  let dr = 0;
-                  let er = 0;
-                  let fr = 0;
-                  let gr = 0;
+                let Yq = 0;
+                let Zq = 0;
+                let _q = 0;
+                let $q = 0;
+                let ar = 0;
+                let br = 0;
+                let cr = 0;
+                let dr = 0;
+                let er = 0;
+                let fr = 0;
+                let gr = 0;
                 Yq = (T - 32) | 0;
                 T = Yq;
                 q[(Yq + 16) >> 2] = Ip;
@@ -35009,10 +35009,10 @@ const DracoDecoderModule = (function () {
               }
               function wi(a, Ip) {
                 let hr = 0;
-                  let ir = 0;
-                  let jr = 0;
-                  let kr = 0;
-                  let lr = 0;
+                let ir = 0;
+                let jr = 0;
+                let kr = 0;
+                let lr = 0;
                 ir = q[(a + 12) >> 2];
                 hr = (q[(a + 16) >> 2] - ir) >> 2;
                 a: {
@@ -35059,21 +35059,21 @@ const DracoDecoderModule = (function () {
               }
               function xi(a, Ip) {
                 let mr = 0;
-                  let nr = 0;
-                  let or = 0;
-                  let pr = 0;
-                  let qr = 0;
-                  let rr = 0;
-                  let sr = 0;
-                  let tr = 0;
-                  let ur = 0;
-                  let vr = 0;
-                  let wr = 0;
-                  let xr = 0;
-                  let yr = 0;
-                  let zr = 0;
-                  let Ar = 0;
-                  let Br = 0;
+                let nr = 0;
+                let or = 0;
+                let pr = 0;
+                let qr = 0;
+                let rr = 0;
+                let sr = 0;
+                let tr = 0;
+                let ur = 0;
+                let vr = 0;
+                let wr = 0;
+                let xr = 0;
+                let yr = 0;
+                let zr = 0;
+                let Ar = 0;
+                let Br = 0;
                 nr = (T - 48) | 0;
                 T = nr;
                 mr = q[(a + 8) >> 2];
@@ -35424,11 +35424,11 @@ const DracoDecoderModule = (function () {
               }
               function yi(a, Ip) {
                 let Cr = 0;
-                  let Dr = 0;
-                  let Er = 0;
-                  let Fr = 0;
-                  let Gr = 0;
-                  let Hr = 0;
+                let Dr = 0;
+                let Er = 0;
+                let Fr = 0;
+                let Gr = 0;
+                let Hr = 0;
                 a: {
                   Fr = q[a >> 2];
                   Gr = (q[(a + 4) >> 2] - Fr) | 0;
@@ -35476,11 +35476,11 @@ const DracoDecoderModule = (function () {
               }
               function zi(a, Ip) {
                 let Ir = 0;
-                  let Jr = 0;
-                  let Kr = 0;
-                  let Lr = 0;
-                  let Mr = 0;
-                  let Nr = 0;
+                let Jr = 0;
+                let Kr = 0;
+                let Lr = 0;
+                let Mr = 0;
+                let Nr = 0;
                 a: {
                   Kr = q[a >> 2];
                   Mr = (q[(a + 4) >> 2] - Kr) | 0;
@@ -35524,9 +35524,9 @@ const DracoDecoderModule = (function () {
               }
               function Ai(a) {
                 let Ip = 0;
-                  let Or = 0;
-                  let Pr = 0;
-                  let Qr = 0;
+                let Or = 0;
+                let Pr = 0;
+                let Qr = 0;
                 Or = 1;
                 Pr = q[(a + 140) >> 2];
                 a: {
@@ -35585,14 +35585,14 @@ const DracoDecoderModule = (function () {
               }
               function Bi(a, Rr, Sr, Tr) {
                 let Ur = 0;
-                  let Vr = 0;
-                  let Wr = 0;
-                  let Xr = 0;
-                  let Yr = 0;
-                  let Zr = x(0);
-                  let _r = 0;
-                  let $r = x(0);
-                  let as = 0;
+                let Vr = 0;
+                let Wr = 0;
+                let Xr = 0;
+                let Yr = 0;
+                let Zr = x(0);
+                let _r = 0;
+                let $r = x(0);
+                let as = 0;
                 Ur = q[Sr >> 2];
                 as = a;
                 a: {
@@ -35725,10 +35725,10 @@ const DracoDecoderModule = (function () {
               }
               function Ci(a, Rr, Sr) {
                 let Tr = 0;
-                  let bs = 0;
-                  let cs = 0;
-                  let ds = 0;
-                  let es = 0;
+                let bs = 0;
+                let cs = 0;
+                let ds = 0;
+                let es = 0;
                 a: {
                   b: {
                     ds = q[(a + 8) >> 2];
@@ -35863,22 +35863,22 @@ const DracoDecoderModule = (function () {
               function Fi(a) {
                 a = a | 0;
                 let Rr = 0;
-                  let Sr = 0;
-                  let fs = 0;
-                  let gs = 0;
-                  let hs = 0;
-                  let is = 0;
-                  let js = 0;
-                  let ks = 0;
-                  let ls = 0;
-                  let ms = 0;
-                  let ns = 0;
-                  let os = 0;
-                  let ps = 0;
-                  let qs = 0;
-                  let rs = 0;
-                  let ss = 0;
-                  let ts = 0;
+                let Sr = 0;
+                let fs = 0;
+                let gs = 0;
+                let hs = 0;
+                let is = 0;
+                let js = 0;
+                let ks = 0;
+                let ls = 0;
+                let ms = 0;
+                let ns = 0;
+                let os = 0;
+                let ps = 0;
+                let qs = 0;
+                let rs = 0;
+                let ss = 0;
+                let ts = 0;
                 ks = (T + -64) | 0;
                 T = ks;
                 q[(a + 132) >> 2] = 0;
@@ -36460,12 +36460,12 @@ const DracoDecoderModule = (function () {
               }
               function Gi(a, us) {
                 let vs = 0;
-                  let ws = 0;
-                  let xs = 0;
-                  let ys = 0;
-                  let zs = 0;
-                  let As = 0;
-                  let Bs = 0;
+                let ws = 0;
+                let xs = 0;
+                let ys = 0;
+                let zs = 0;
+                let As = 0;
+                let Bs = 0;
                 ys = (T - 16) | 0;
                 T = ys;
                 a: {
@@ -36515,32 +36515,32 @@ const DracoDecoderModule = (function () {
               }
               function Hi(a, us) {
                 let Cs = 0;
-                  let Ds = 0;
-                  let Es = 0;
-                  let Fs = 0;
-                  let Gs = 0;
-                  let Hs = 0;
-                  let Is = 0;
-                  let Js = 0;
-                  let Ks = 0;
-                  let Ls = 0;
-                  let Ms = 0;
-                  let Ns = 0;
-                  let Os = 0;
-                  let Ps = 0;
-                  let Qs = 0;
-                  let Rs = 0;
-                  let Ss = 0;
-                  let Ts = 0;
-                  let Us = 0;
-                  let Vs = 0;
-                  let Ws = 0;
-                  let Xs = 0;
-                  let Ys = 0;
-                  let Zs = 0;
-                  let _s = 0;
-                  let $s = 0;
-                  let at = 0;
+                let Ds = 0;
+                let Es = 0;
+                let Fs = 0;
+                let Gs = 0;
+                let Hs = 0;
+                let Is = 0;
+                let Js = 0;
+                let Ks = 0;
+                let Ls = 0;
+                let Ms = 0;
+                let Ns = 0;
+                let Os = 0;
+                let Ps = 0;
+                let Qs = 0;
+                let Rs = 0;
+                let Ss = 0;
+                let Ts = 0;
+                let Us = 0;
+                let Vs = 0;
+                let Ws = 0;
+                let Xs = 0;
+                let Ys = 0;
+                let Zs = 0;
+                let _s = 0;
+                let $s = 0;
+                let at = 0;
                 Gs = (T - 96) | 0;
                 T = Gs;
                 q[(Gs + 72) >> 2] = 0;
@@ -37508,10 +37508,10 @@ const DracoDecoderModule = (function () {
               }
               function Ii(a, us) {
                 let bt = 0;
-                  let ct = 0;
-                  let dt = 0;
-                  let et = 0;
-                  let ft = 0;
+                let ct = 0;
+                let dt = 0;
+                let et = 0;
+                let ft = 0;
                 ct = -1;
                 ft = -1;
                 a: {
@@ -37680,22 +37680,22 @@ const DracoDecoderModule = (function () {
               function Ki(a) {
                 a = a | 0;
                 let us = 0;
-                  let gt = 0;
-                  let ht = 0;
-                  let it = 0;
-                  let jt = 0;
-                  let kt = 0;
-                  let lt = 0;
-                  let mt = 0;
-                  let nt = 0;
-                  let ot = 0;
-                  let pt = 0;
-                  let qt = 0;
-                  let rt = 0;
-                  let st = 0;
-                  let tt = 0;
-                  let ut = 0;
-                  let vt = 0;
+                let gt = 0;
+                let ht = 0;
+                let it = 0;
+                let jt = 0;
+                let kt = 0;
+                let lt = 0;
+                let mt = 0;
+                let nt = 0;
+                let ot = 0;
+                let pt = 0;
+                let qt = 0;
+                let rt = 0;
+                let st = 0;
+                let tt = 0;
+                let ut = 0;
+                let vt = 0;
                 mt = (T + -64) | 0;
                 T = mt;
                 q[(a + 132) >> 2] = 0;
@@ -38277,17 +38277,17 @@ const DracoDecoderModule = (function () {
               }
               function Li(a, wt) {
                 let xt = 0;
-                  let yt = 0;
-                  let zt = 0;
-                  let At = 0;
-                  let Bt = 0;
-                  let Ct = 0;
-                  let Dt = 0;
-                  let Et = 0;
-                  let Ft = 0;
-                  let Gt = 0;
-                  let Ht = 0;
-                  let It = 0;
+                let yt = 0;
+                let zt = 0;
+                let At = 0;
+                let Bt = 0;
+                let Ct = 0;
+                let Dt = 0;
+                let Et = 0;
+                let Ft = 0;
+                let Gt = 0;
+                let Ht = 0;
+                let It = 0;
                 Et = (T - 16) | 0;
                 T = Et;
                 xt = q[(a + 144) >> 2];
@@ -38617,31 +38617,31 @@ const DracoDecoderModule = (function () {
 
               function Mi(a, b) {
                 let c = 0;
-                  let d = 0;
-                  let e = 0;
-                  let f = 0;
-                  let g = 0;
-                  let h = 0;
-                  let i = 0;
-                  let j = 0;
-                  let k = 0;
-                  let l = 0;
-                  let m = 0;
-                  let n = 0;
-                  let p = 0;
-                  let u = 0;
-                  let v = 0;
-                  let x = 0;
-                  let y = 0;
-                  let z = 0;
-                  let A = 0;
-                  let B = 0;
-                  let C = 0;
-                  let D = 0;
-                  let E = 0;
-                  let G = 0;
-                  let H = 0;
-                  let I = 0;
+                let d = 0;
+                let e = 0;
+                let f = 0;
+                let g = 0;
+                let h = 0;
+                let i = 0;
+                let j = 0;
+                let k = 0;
+                let l = 0;
+                let m = 0;
+                let n = 0;
+                let p = 0;
+                let u = 0;
+                let v = 0;
+                let x = 0;
+                let y = 0;
+                let z = 0;
+                let A = 0;
+                let B = 0;
+                let C = 0;
+                let D = 0;
+                let E = 0;
+                let G = 0;
+                let H = 0;
+                let I = 0;
                 g = (T - 96) | 0;
                 T = g;
                 q[(g + 72) >> 2] = 0;
@@ -39543,14 +39543,14 @@ const DracoDecoderModule = (function () {
               }
               function Ni(a, b) {
                 let o = 0;
-                  let r = 0;
-                  let s = 0;
-                  let t = 0;
-                  let J = 0;
-                  let K = 0;
-                  let L = 0;
-                  let M = 0;
-                  let N = 0;
+                let r = 0;
+                let s = 0;
+                let t = 0;
+                let J = 0;
+                let K = 0;
+                let L = 0;
+                let M = 0;
+                let N = 0;
                 s = q[(a + 8) >> 2];
                 t = (a + 4) | 0;
                 o = q[t >> 2];
@@ -39633,12 +39633,12 @@ const DracoDecoderModule = (function () {
               }
               function Oi(a) {
                 let b = 0;
-                  let F = 0;
-                  let O = 0;
-                  let P = 0;
-                  let Q = 0;
-                  let R = 0;
-                  let S = 0;
+                let F = 0;
+                let O = 0;
+                let P = 0;
+                let Q = 0;
+                let R = 0;
+                let S = 0;
                 b = q[(a + 172) >> 2];
                 if ((b | 0) != -1) {
                   F = (q[(a + 196) >> 2] + (b << 2)) | 0;
@@ -39707,10 +39707,10 @@ const DracoDecoderModule = (function () {
               }
               function Pi(a, w) {
                 let T = 0;
-                  let U = 0;
-                  let V = 0;
-                  let W = 0;
-                  let X = 0;
+                let U = 0;
+                let V = 0;
+                let W = 0;
+                let X = 0;
                 W = -1;
                 U = -1;
                 a: {
@@ -39805,10 +39805,10 @@ const DracoDecoderModule = (function () {
               function Qi(a) {
                 a = a | 0;
                 let w = 0;
-                  let Y = 0;
-                  let Z = 0;
-                  let _ = 0;
-                  let $ = 0;
+                let Y = 0;
+                let Z = 0;
+                let _ = 0;
+                let $ = 0;
                 q[a >> 2] = 11272;
                 w = (a + 368) | 0;
                 Z = q[w >> 2];
@@ -39959,10 +39959,10 @@ const DracoDecoderModule = (function () {
               function Si(a) {
                 a = a | 0;
                 let aa = 0;
-                  let ba = 0;
-                  let ca = 0;
-                  let da = 0;
-                  let ea = 0;
+                let ba = 0;
+                let ca = 0;
+                let da = 0;
+                let ea = 0;
                 q[a >> 2] = 11324;
                 aa = q[(a + 388) >> 2];
                 if (aa) {
@@ -40118,10 +40118,10 @@ const DracoDecoderModule = (function () {
               function Ui(a) {
                 a = a | 0;
                 let fa = 0;
-                  let ga = 0;
-                  let ha = 0;
-                  let ia = 0;
-                  let ja = 0;
+                let ga = 0;
+                let ha = 0;
+                let ia = 0;
+                let ja = 0;
                 q[a >> 2] = 11372;
                 Vi((a + 232) | 0);
                 ia = q[(a + 216) >> 2];
@@ -40252,10 +40252,10 @@ const DracoDecoderModule = (function () {
               }
               function Vi(a) {
                 let ka = 0;
-                  let la = 0;
-                  let ma = 0;
-                  let na = 0;
-                  let oa = 0;
+                let la = 0;
+                let ma = 0;
+                let na = 0;
+                let oa = 0;
                 ka = q[(a + 196) >> 2];
                 if (ka) {
                   q[(a + 200) >> 2] = ka;
@@ -40369,7 +40369,7 @@ const DracoDecoderModule = (function () {
                 sa = sa | 0;
                 ta = ta | 0;
                 let ua = 0;
-                  let va = 0;
+                let va = 0;
                 ua = (T - 16) | 0;
                 T = ua;
                 q[(a + 4) >> 2] = sa;
@@ -40392,8 +40392,8 @@ const DracoDecoderModule = (function () {
               }
               function $i(a, sa) {
                 let ta = 0;
-                  let wa = 0;
-                  let xa = 0;
+                let wa = 0;
+                let xa = 0;
                 a: {
                   if ((a | 0) != (sa | 0)) {
                     xa = a;
@@ -40547,16 +40547,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 Aa = Aa | 0;
                 let Ba = 0;
-                  let Ca = 0;
-                  let Da = 0;
-                  let Ea = 0;
-                  let Fa = 0;
-                  let Ga = 0;
-                  let Ha = 0;
-                  let Ia = 0;
-                  let Ja = 0;
-                  let Ka = 0;
-                  let La = 0;
+                let Ca = 0;
+                let Da = 0;
+                let Ea = 0;
+                let Fa = 0;
+                let Ga = 0;
+                let Ha = 0;
+                let Ia = 0;
+                let Ja = 0;
+                let Ka = 0;
+                let La = 0;
                 Ja = q[(a + 12) >> 2];
                 Ba = q[(a + 108) >> 2];
                 Ca = q[(Ba + 80) >> 2];
@@ -40650,14 +40650,14 @@ const DracoDecoderModule = (function () {
               function ej(a) {
                 a = a | 0;
                 let Aa = 0;
-                  let Ma = 0;
-                  let Na = 0;
-                  let Oa = 0;
-                  let Pa = 0;
-                  let Qa = 0;
-                  let Ra = 0;
-                  let Sa = 0;
-                  let Ta = 0;
+                let Ma = 0;
+                let Na = 0;
+                let Oa = 0;
+                let Pa = 0;
+                let Qa = 0;
+                let Ra = 0;
+                let Sa = 0;
+                let Ta = 0;
                 Pa = (T - 16) | 0;
                 T = Pa;
                 Ma = q[(a + 4) >> 2];
@@ -40766,18 +40766,18 @@ const DracoDecoderModule = (function () {
               }
               function fj(a, Ua) {
                 let Va = 0;
-                  let Wa = 0;
-                  let Xa = 0;
-                  let Ya = 0;
-                  let Za = 0;
-                  let _a = 0;
-                  let $a = 0;
-                  let ab = 0;
-                  let bb = 0;
-                  let cb = 0;
-                  let db = 0;
-                  let eb = 0;
-                  let fb = 0;
+                let Wa = 0;
+                let Xa = 0;
+                let Ya = 0;
+                let Za = 0;
+                let _a = 0;
+                let $a = 0;
+                let ab = 0;
+                let bb = 0;
+                let cb = 0;
+                let db = 0;
+                let eb = 0;
+                let fb = 0;
                 Ya = (T - 32) | 0;
                 T = Ya;
                 q[(Ya + 8) >> 2] = Ua;
@@ -41252,7 +41252,7 @@ const DracoDecoderModule = (function () {
               function kj(a) {
                 a = a | 0;
                 let jb = 0;
-                  let kb = 0;
+                let kb = 0;
                 q[a >> 2] = 12592;
                 kb = (a + 8) | 0;
                 q[kb >> 2] = 12756;
@@ -41275,7 +41275,7 @@ const DracoDecoderModule = (function () {
               function lj(a) {
                 a = a | 0;
                 let lb = 0;
-                  let mb = 0;
+                let mb = 0;
                 q[a >> 2] = 12592;
                 mb = (a + 8) | 0;
                 q[mb >> 2] = 12756;
@@ -41299,16 +41299,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 nb = nb | 0;
                 let ob = 0;
-                  let pb = 0;
-                  let qb = 0;
-                  let rb = 0;
-                  let sb = 0;
-                  let tb = 0;
-                  let ub = 0;
-                  let vb = 0;
-                  let wb = 0;
-                  let xb = 0;
-                  let yb = 0;
+                let pb = 0;
+                let qb = 0;
+                let rb = 0;
+                let sb = 0;
+                let tb = 0;
+                let ub = 0;
+                let vb = 0;
+                let wb = 0;
+                let xb = 0;
+                let yb = 0;
                 wb = q[(a + 12) >> 2];
                 ob = q[(a + 68) >> 2];
                 pb = q[(ob + 80) >> 2];
@@ -41402,12 +41402,12 @@ const DracoDecoderModule = (function () {
               function nj(a) {
                 a = a | 0;
                 let nb = 0;
-                  let zb = 0;
-                  let Ab = 0;
-                  let Bb = 0;
-                  let Cb = 0;
-                  let Db = 0;
-                  let Eb = 0;
+                let zb = 0;
+                let Ab = 0;
+                let Bb = 0;
+                let Cb = 0;
+                let Db = 0;
+                let Eb = 0;
                 Bb = q[(a + 4) >> 2];
                 nb = q[Bb >> 2];
                 a: {
@@ -41491,20 +41491,20 @@ const DracoDecoderModule = (function () {
               }
               function oj(a, Fb) {
                 let Gb = 0;
-                  let Hb = 0;
-                  let Ib = 0;
-                  let Jb = 0;
-                  let Kb = 0;
-                  let Lb = 0;
-                  let Mb = 0;
-                  let Nb = 0;
-                  let Ob = 0;
-                  let Pb = 0;
-                  let Qb = 0;
-                  let Rb = 0;
-                  let Sb = 0;
-                  let Tb = 0;
-                  let Ub = 0;
+                let Hb = 0;
+                let Ib = 0;
+                let Jb = 0;
+                let Kb = 0;
+                let Lb = 0;
+                let Mb = 0;
+                let Nb = 0;
+                let Ob = 0;
+                let Pb = 0;
+                let Qb = 0;
+                let Rb = 0;
+                let Sb = 0;
+                let Tb = 0;
+                let Ub = 0;
                 Kb = (T - 32) | 0;
                 T = Kb;
                 q[(Kb + 8) >> 2] = Fb;
@@ -41895,7 +41895,7 @@ const DracoDecoderModule = (function () {
               function qj(a) {
                 a = a | 0;
                 let Vb = 0;
-                  let Wb = 0;
+                let Wb = 0;
                 q[a >> 2] = 12884;
                 Wb = (a + 8) | 0;
                 q[Wb >> 2] = 11760;
@@ -41918,7 +41918,7 @@ const DracoDecoderModule = (function () {
               function rj(a) {
                 a = a | 0;
                 let Xb = 0;
-                  let Yb = 0;
+                let Yb = 0;
                 q[a >> 2] = 12884;
                 Yb = (a + 8) | 0;
                 q[Yb >> 2] = 11760;
@@ -41942,16 +41942,16 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 Zb = Zb | 0;
                 let _b = 0;
-                  let $b = 0;
-                  let ac = 0;
-                  let bc = 0;
-                  let cc = 0;
-                  let dc = 0;
-                  let ec = 0;
-                  let fc = 0;
-                  let gc = 0;
-                  let hc = 0;
-                  let ic = 0;
+                let $b = 0;
+                let ac = 0;
+                let bc = 0;
+                let cc = 0;
+                let dc = 0;
+                let ec = 0;
+                let fc = 0;
+                let gc = 0;
+                let hc = 0;
+                let ic = 0;
                 dc = q[(a + 12) >> 2];
                 _b = q[(a + 68) >> 2];
                 $b = q[(_b + 80) >> 2];
@@ -42043,12 +42043,12 @@ const DracoDecoderModule = (function () {
               function tj(a) {
                 a = a | 0;
                 let Zb = 0;
-                  let jc = 0;
-                  let kc = 0;
-                  let lc = 0;
-                  let mc = 0;
-                  let nc = 0;
-                  let oc = 0;
+                let jc = 0;
+                let kc = 0;
+                let lc = 0;
+                let mc = 0;
+                let nc = 0;
+                let oc = 0;
                 lc = q[(a + 4) >> 2];
                 Zb = q[lc >> 2];
                 a: {
@@ -42132,20 +42132,20 @@ const DracoDecoderModule = (function () {
               }
               function uj(a, pc) {
                 let qc = 0;
-                  let rc = 0;
-                  let sc = 0;
-                  let tc = 0;
-                  let uc = 0;
-                  let vc = 0;
-                  let wc = 0;
-                  let xc = 0;
-                  let yc = 0;
-                  let zc = 0;
-                  let Ac = 0;
-                  let Bc = 0;
-                  let Cc = 0;
-                  let Dc = 0;
-                  let Ec = 0;
+                let rc = 0;
+                let sc = 0;
+                let tc = 0;
+                let uc = 0;
+                let vc = 0;
+                let wc = 0;
+                let xc = 0;
+                let yc = 0;
+                let zc = 0;
+                let Ac = 0;
+                let Bc = 0;
+                let Cc = 0;
+                let Dc = 0;
+                let Ec = 0;
                 uc = (T - 32) | 0;
                 T = uc;
                 q[(uc + 8) >> 2] = pc;
@@ -42526,8 +42526,8 @@ const DracoDecoderModule = (function () {
               }
               function vj(a, pc) {
                 let Fc = 0;
-                  let Gc = 0;
-                  let Hc = 0;
+                let Gc = 0;
+                let Hc = 0;
                 q[a >> 2] = q[pc >> 2];
                 q[(a + 4) >> 2] = q[(pc + 4) >> 2];
                 q[(a + 8) >> 2] = q[(pc + 8) >> 2];
@@ -42667,8 +42667,8 @@ const DracoDecoderModule = (function () {
               }
               function wj(a) {
                 let pc = 0;
-                  let Ic = 0;
-                  let Jc = 0;
+                let Ic = 0;
+                let Jc = 0;
                 Ic = q[(a + 8) >> 2];
                 Jc = q[(a + 4) >> 2];
                 if ((Ic | 0) != (Jc | 0)) {
@@ -42705,8 +42705,8 @@ const DracoDecoderModule = (function () {
               }
               function xj(a, Kc) {
                 let Lc = 0;
-                  let Mc = 0;
-                  let Nc = x(0);
+                let Mc = 0;
+                let Nc = x(0);
                 Lc = 2;
                 a: {
                   if ((Kc | 0) == 1) {
@@ -42757,14 +42757,14 @@ const DracoDecoderModule = (function () {
               }
               function yj(a, Kc) {
                 let Oc = 0;
-                  let Pc = 0;
-                  let Qc = 0;
-                  let Rc = 0;
-                  let Sc = 0;
-                  let Tc = 0;
-                  let Uc = 0;
-                  let Vc = 0;
-                  let Wc = 0;
+                let Pc = 0;
+                let Qc = 0;
+                let Rc = 0;
+                let Sc = 0;
+                let Tc = 0;
+                let Uc = 0;
+                let Vc = 0;
+                let Wc = 0;
                 a: {
                   b: {
                     if (Kc) {
@@ -42872,23 +42872,23 @@ const DracoDecoderModule = (function () {
               function zj(a) {
                 a = a | 0;
                 let Kc = 0;
-                  let Xc = 0;
-                  let Yc = 0;
-                  let Zc = 0;
-                  let _c = 0;
-                  let $c = 0;
-                  let ad = 0;
-                  let bd = 0;
-                  let cd = 0;
-                  let dd = 0;
-                  let ed = 0;
-                  let fd = 0;
-                  let gd = 0;
-                  let hd = 0;
-                  let id = 0;
-                  let jd = 0;
-                  let kd = 0;
-                  let ld = 0;
+                let Xc = 0;
+                let Yc = 0;
+                let Zc = 0;
+                let _c = 0;
+                let $c = 0;
+                let ad = 0;
+                let bd = 0;
+                let cd = 0;
+                let dd = 0;
+                let ed = 0;
+                let fd = 0;
+                let gd = 0;
+                let hd = 0;
+                let id = 0;
+                let jd = 0;
+                let kd = 0;
+                let ld = 0;
                 Zc = (T - 32) | 0;
                 T = Zc;
                 $c = q[(a + 32) >> 2];
@@ -43337,9 +43337,9 @@ const DracoDecoderModule = (function () {
               }
               function Aj(a, md, nd) {
                 let od = 0;
-                  let pd = 0;
-                  let qd = 0;
-                  let rd = 0;
+                let pd = 0;
+                let qd = 0;
+                let rd = 0;
                 a: {
                   if (a >>> 0 > 5) {
                     break a;
@@ -43373,15 +43373,15 @@ const DracoDecoderModule = (function () {
               }
               function Bj(a, md) {
                 let nd = 0;
-                  let sd = 0;
-                  let td = 0;
-                  let ud = 0;
-                  let vd = 0;
-                  let wd = 0;
-                  let xd = 0;
-                  let yd = 0;
-                  let zd = 0;
-                  let Ad = 0;
+                let sd = 0;
+                let td = 0;
+                let ud = 0;
+                let vd = 0;
+                let wd = 0;
+                let xd = 0;
+                let yd = 0;
+                let zd = 0;
+                let Ad = 0;
                 nd = (T - 32) | 0;
                 T = nd;
                 q[(nd + 24) >> 2] = 0;
@@ -43463,11 +43463,11 @@ const DracoDecoderModule = (function () {
               }
               function Cj(a, md) {
                 let Bd = 0;
-                  let Cd = 0;
-                  let Dd = 0;
-                  let Ed = 0;
-                  let Fd = 0;
-                  let Gd = 0;
+                let Cd = 0;
+                let Dd = 0;
+                let Ed = 0;
+                let Fd = 0;
+                let Gd = 0;
                 a: {
                   Ed = q[a >> 2];
                   Fd = (q[(a + 4) >> 2] - Ed) | 0;
@@ -43517,12 +43517,12 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 md = md | 0;
                 let Hd = 0;
-                  let Id = 0;
-                  let Jd = 0;
-                  let Kd = 0;
-                  let Ld = 0;
-                  let Md = 0;
-                  let Nd = 0;
+                let Id = 0;
+                let Jd = 0;
+                let Kd = 0;
+                let Ld = 0;
+                let Md = 0;
+                let Nd = 0;
                 Kd = (T - 16) | 0;
                 T = Kd;
                 Ld = Mm(64);
@@ -43590,10 +43590,10 @@ const DracoDecoderModule = (function () {
               function Ej(a) {
                 a = a | 0;
                 let md = 0;
-                  let Od = 0;
-                  let Pd = 0;
-                  let Qd = 0;
-                  let Rd = 0;
+                let Od = 0;
+                let Pd = 0;
+                let Qd = 0;
+                let Rd = 0;
                 q[a >> 2] = 13300;
                 md = q[(a + 20) >> 2];
                 if (md) {
@@ -43640,9 +43640,9 @@ const DracoDecoderModule = (function () {
               function Gj(a) {
                 a = a | 0;
                 let Sd = 0;
-                  let Td = 0;
-                  let Ud = 0;
-                  let Vd = 0;
+                let Td = 0;
+                let Ud = 0;
+                let Vd = 0;
                 a: {
                   Sd = q[(a + 8) >> 2];
                   b: {
@@ -43690,14 +43690,14 @@ const DracoDecoderModule = (function () {
               }
               function Hj(a, Wd) {
                 let Xd = 0;
-                  let Yd = 0;
-                  let Zd = 0;
-                  let _d = 0;
-                  let $d = 0;
-                  let ae = 0;
-                  let be = 0;
-                  let ce = 0;
-                  let de = 0;
+                let Yd = 0;
+                let Zd = 0;
+                let _d = 0;
+                let $d = 0;
+                let ae = 0;
+                let be = 0;
+                let ce = 0;
+                let de = 0;
                 Yd = q[(a + 8) >> 2];
                 Zd = (a + 4) | 0;
                 Xd = q[Zd >> 2];
@@ -43762,11 +43762,11 @@ const DracoDecoderModule = (function () {
               }
               function Jj(a, Wd, ee) {
                 let fe = 0;
-                  let ge = 0;
-                  let he = 0;
-                  let ie = 0;
-                  let je = 0;
-                  let ke = 0;
+                let ge = 0;
+                let he = 0;
+                let ie = 0;
+                let je = 0;
+                let ke = 0;
                 ge = (T - 16) | 0;
                 T = ge;
                 ie = q[(Wd + 12) >> 2];
@@ -44218,9 +44218,9 @@ const DracoDecoderModule = (function () {
               }
               function Kj(a, Wd) {
                 let ee = 0;
-                  let le = 0;
-                  let me = 0;
-                  let ne = 0;
+                let le = 0;
+                let me = 0;
+                let ne = 0;
                 le = (T - 48) | 0;
                 T = le;
                 ee = Mm(36);
@@ -44322,10 +44322,10 @@ const DracoDecoderModule = (function () {
               }
               function Lj(a) {
                 let Wd = 0;
-                  let oe = 0;
-                  let pe = 0;
-                  let qe = 0;
-                  let re = 0;
+                let oe = 0;
+                let pe = 0;
+                let qe = 0;
+                let re = 0;
                 if (a) {
                   pe = q[(a + 24) >> 2];
                   if (pe) {
@@ -44364,7 +44364,7 @@ const DracoDecoderModule = (function () {
               }
               function Mj(a, se, te, ue, ve) {
                 let we = 0;
-                  let xe = 0;
+                let xe = 0;
                 we = (T - 32) | 0;
                 T = we;
                 q[(se + 32) >> 2] = ue;
@@ -44740,17 +44740,17 @@ const DracoDecoderModule = (function () {
               function Nj(a) {
                 a = a | 0;
                 let se = 0;
-                  let te = 0;
-                  let ue = 0;
-                  let ve = 0;
-                  let ye = 0;
-                  let ze = 0;
-                  let Ae = 0;
-                  let Be = 0;
-                  let Ce = 0;
-                  let De = 0;
-                  let Ee = 0;
-                  let Fe = 0;
+                let te = 0;
+                let ue = 0;
+                let ve = 0;
+                let ye = 0;
+                let ze = 0;
+                let Ae = 0;
+                let Be = 0;
+                let Ce = 0;
+                let De = 0;
+                let Ee = 0;
+                let Fe = 0;
                 a: {
                   se = q[(a + 32) >> 2];
                   ve = q[(se + 16) >> 2];
@@ -44875,9 +44875,9 @@ const DracoDecoderModule = (function () {
               function Oj(a) {
                 a = a | 0;
                 let Ge = 0;
-                  let He = 0;
-                  let Ie = 0;
-                  let Je = 0;
+                let He = 0;
+                let Ie = 0;
+                let Je = 0;
                 He = 1;
                 Ge = q[(a + 8) >> 2];
                 Ie = q[(a + 12) >> 2];
@@ -44902,7 +44902,7 @@ const DracoDecoderModule = (function () {
               }
               function Pj(a, Ke) {
                 let Le = 0;
-                  let Me = 0;
+                let Me = 0;
                 a: {
                   if ((Ke | 0) < 0) {
                     break a;
@@ -44919,13 +44919,13 @@ const DracoDecoderModule = (function () {
               function Qj(a) {
                 a = a | 0;
                 let Ke = 0;
-                  let Ne = 0;
-                  let Oe = 0;
-                  let Pe = 0;
-                  let Qe = 0;
-                  let Re = 0;
-                  let Se = 0;
-                  let Te = 0;
+                let Ne = 0;
+                let Oe = 0;
+                let Pe = 0;
+                let Qe = 0;
+                let Re = 0;
+                let Se = 0;
+                let Te = 0;
                 Oe = q[(a + 32) >> 2];
                 Ne = Oe;
                 Pe = q[(Ne + 8) >> 2];
@@ -44959,11 +44959,11 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 Ue = Ue | 0;
                 let Ve = 0;
-                  let We = 0;
-                  let Xe = 0;
-                  let Ye = 0;
-                  let Ze = 0;
-                  let _e = 0;
+                let We = 0;
+                let Xe = 0;
+                let Ye = 0;
+                let Ze = 0;
+                let _e = 0;
                 Ye = Mm(72);
                 Id(Ye);
                 a: {
@@ -45018,12 +45018,12 @@ const DracoDecoderModule = (function () {
               function Sj(a) {
                 a = a | 0;
                 let Ue = 0;
-                  let $e = 0;
-                  let af = 0;
-                  let bf = 0;
-                  let cf = 0;
-                  let df = 0;
-                  let ef = 0;
+                let $e = 0;
+                let af = 0;
+                let bf = 0;
+                let cf = 0;
+                let df = 0;
+                let ef = 0;
                 af = q[(a + 32) >> 2];
                 $e = af;
                 bf = q[($e + 8) >> 2];
@@ -45051,8 +45051,8 @@ const DracoDecoderModule = (function () {
               }
               function Tj(a, ff, gf) {
                 let hf = 0;
-                  let jf = 0;
-                  let kf = 0;
+                let jf = 0;
+                let kf = 0;
                 if ((ff | 0) > 0) {
                   while (1) {
                     jf = hf << 2;
@@ -45080,8 +45080,8 @@ const DracoDecoderModule = (function () {
               }
               function Wj(a, ff, gf, lf) {
                 let mf = 0;
-                  let nf = 0;
-                  let of = 0;
+                let nf = 0;
+                let of = 0;
                 a: {
                   if (!ff) {
                     ff = gf;
@@ -45143,7 +45143,7 @@ const DracoDecoderModule = (function () {
               }
               function Xj(a, ff) {
                 let gf = 0;
-                  let lf = 0;
+                let lf = 0;
                 lf = q[a >> 2];
                 gf = (q[(a + 4) >> 2] - lf) | 0;
                 a: {
@@ -45196,9 +45196,9 @@ const DracoDecoderModule = (function () {
               }
               function _j(a, ff, pf) {
                 let qf = 0;
-                  let rf = 0;
-                  let sf = 0;
-                  let tf = 0;
+                let rf = 0;
+                let sf = 0;
+                let tf = 0;
                 a: {
                   b: {
                     if (!ff) {
@@ -45246,11 +45246,11 @@ const DracoDecoderModule = (function () {
               }
               function $j(a, ff, pf) {
                 let uf = 0;
-                  let vf = 0;
-                  let wf = 0;
-                  let xf = 0;
-                  let yf = 0;
-                  let zf = 0;
+                let vf = 0;
+                let wf = 0;
+                let xf = 0;
+                let yf = 0;
+                let zf = 0;
                 a: {
                   if (a >>> 0 > 10) {
                     break a;
@@ -45298,11 +45298,11 @@ const DracoDecoderModule = (function () {
               }
               function ak(a) {
                 let ff = 0;
-                  let pf = 0;
-                  let Af = 0;
-                  let Bf = 0;
-                  let Cf = 0;
-                  let Df = 0;
+                let pf = 0;
+                let Af = 0;
+                let Bf = 0;
+                let Cf = 0;
+                let Df = 0;
                 o[(a + 36) | 0] = 0;
                 Af = q[(a + 20) >> 2];
                 Bf = a;
@@ -45336,9 +45336,9 @@ const DracoDecoderModule = (function () {
               }
               function dk(a, Ff, Gf, Hf) {
                 let If = 0;
-                  let Jf = 0;
-                  let Kf = 0;
-                  let Lf = 0;
+                let Jf = 0;
+                let Kf = 0;
+                let Lf = 0;
                 If = (T - 16) | 0;
                 T = If;
                 Lf = a;
@@ -45402,13 +45402,13 @@ const DracoDecoderModule = (function () {
               }
               function fk(a, Ff) {
                 let Hf = 0;
-                  let Mf = 0;
-                  let Nf = 0;
-                  let Of = 0;
-                  let Pf = 0;
-                  let Qf = 0;
-                  let Rf = 0;
-                  let Sf = 0;
+                let Mf = 0;
+                let Nf = 0;
+                let Of = 0;
+                let Pf = 0;
+                let Qf = 0;
+                let Rf = 0;
+                let Sf = 0;
                 Pf = (a + 4) | 0;
                 a = q[Pf >> 2];
                 a: {
@@ -45530,8 +45530,8 @@ const DracoDecoderModule = (function () {
               }
               function kk(a, Uf) {
                 let Vf = 0;
-                  let Wf = 0;
-                  let Xf = 0;
+                let Wf = 0;
+                let Xf = 0;
                 Xf = (T - 16) | 0;
                 T = Xf;
                 Wf = Mm(88);
@@ -45578,12 +45578,12 @@ const DracoDecoderModule = (function () {
               }
               function lk(a, Uf) {
                 let Yf = 0;
-                  let Zf = 0;
-                  let _f = 0;
-                  let $f = 0;
-                  let ag = 0;
-                  let bg = 0;
-                  let cg = 0;
+                let Zf = 0;
+                let _f = 0;
+                let $f = 0;
+                let ag = 0;
+                let bg = 0;
+                let cg = 0;
                 $f = (T - 16) | 0;
                 T = $f;
                 q[(a + 80) >> 2] = 0;
@@ -45650,14 +45650,14 @@ const DracoDecoderModule = (function () {
               }
               function mk(a, Uf) {
                 let dg = 0;
-                  let eg = 0;
-                  let fg = 0;
-                  let gg = 0;
-                  let hg = 0;
-                  let ig = 0;
-                  let jg = 0;
-                  let kg = 0;
-                  let lg = 0;
+                let eg = 0;
+                let fg = 0;
+                let gg = 0;
+                let hg = 0;
+                let ig = 0;
+                let jg = 0;
+                let kg = 0;
+                let lg = 0;
                 eg = q[(a + 8) >> 2];
                 fg = (a + 4) | 0;
                 dg = q[fg >> 2];
@@ -45709,26 +45709,26 @@ const DracoDecoderModule = (function () {
               }
               function nk(a, Uf) {
                 let mg = 0;
-                  let ng = 0;
-                  let og = 0;
-                  let pg = 0;
-                  let qg = 0;
-                  let rg = 0;
-                  let sg = 0;
-                  let tg = 0;
-                  let ug = 0;
-                  let vg = 0;
-                  let wg = 0;
-                  let xg = 0;
-                  let yg = 0;
-                  let zg = 0;
-                  let Ag = 0;
-                  let Bg = 0;
-                  let Cg = 0;
-                  let Dg = 0;
-                  let Eg = 0;
-                  let Fg = 0;
-                  let Gg = 0;
+                let ng = 0;
+                let og = 0;
+                let pg = 0;
+                let qg = 0;
+                let rg = 0;
+                let sg = 0;
+                let tg = 0;
+                let ug = 0;
+                let vg = 0;
+                let wg = 0;
+                let xg = 0;
+                let yg = 0;
+                let zg = 0;
+                let Ag = 0;
+                let Bg = 0;
+                let Cg = 0;
+                let Dg = 0;
+                let Eg = 0;
+                let Fg = 0;
+                let Gg = 0;
                 og = (T - 48) | 0;
                 T = og;
                 if (Uf) {
@@ -46040,20 +46040,20 @@ const DracoDecoderModule = (function () {
               }
               function ok(a) {
                 let Uf = 0;
-                  let Hg = 0;
-                  let Ig = 0;
-                  let Jg = 0;
-                  let Kg = 0;
-                  let Lg = 0;
-                  let Mg = 0;
-                  let Ng = 0;
-                  let Og = 0;
-                  let Pg = 0;
-                  let Qg = 0;
-                  let Rg = 0;
-                  let Sg = 0;
-                  let Tg = 0;
-                  let Ug = 0;
+                let Hg = 0;
+                let Ig = 0;
+                let Jg = 0;
+                let Kg = 0;
+                let Lg = 0;
+                let Mg = 0;
+                let Ng = 0;
+                let Og = 0;
+                let Pg = 0;
+                let Qg = 0;
+                let Rg = 0;
+                let Sg = 0;
+                let Tg = 0;
+                let Ug = 0;
                 Ig = (T - 48) | 0;
                 T = Ig;
                 Qg = (a + 4) | 0;
@@ -46211,28 +46211,28 @@ const DracoDecoderModule = (function () {
               }
               function pk(a, Vg) {
                 let Wg = 0;
-                  let Xg = 0;
-                  let Yg = 0;
-                  let Zg = 0;
-                  let _g = 0;
-                  let $g = 0;
-                  let ah = 0;
-                  let bh = 0;
-                  let ch = 0;
-                  let dh = 0;
-                  let eh = 0;
-                  let fh = 0;
-                  let gh = 0;
-                  let hh = 0;
-                  let ih = 0;
-                  let jh = 0;
-                  let kh = 0;
-                  let lh = 0;
-                  let mh = 0;
-                  let nh = 0;
-                  let oh = 0;
-                  let ph = 0;
-                  let qh = 0;
+                let Xg = 0;
+                let Yg = 0;
+                let Zg = 0;
+                let _g = 0;
+                let $g = 0;
+                let ah = 0;
+                let bh = 0;
+                let ch = 0;
+                let dh = 0;
+                let eh = 0;
+                let fh = 0;
+                let gh = 0;
+                let hh = 0;
+                let ih = 0;
+                let jh = 0;
+                let kh = 0;
+                let lh = 0;
+                let mh = 0;
+                let nh = 0;
+                let oh = 0;
+                let ph = 0;
+                let qh = 0;
                 $g = (T - 48) | 0;
                 T = $g;
                 q[(a + 36) >> 2] = Vg;
@@ -46481,11 +46481,11 @@ const DracoDecoderModule = (function () {
               }
               function qk(a, Vg) {
                 let rh = 0;
-                  let sh = 0;
-                  let th = 0;
-                  let uh = 0;
-                  let vh = 0;
-                  let wh = 0;
+                let sh = 0;
+                let th = 0;
+                let uh = 0;
+                let vh = 0;
+                let wh = 0;
                 th = q[(a + 8) >> 2];
                 rh = q[(a + 4) >> 2];
                 if (((th - rh) >> 2) >>> 0 >= Vg >>> 0) {
@@ -46550,8 +46550,8 @@ const DracoDecoderModule = (function () {
               }
               function rk(a, Vg, xh) {
                 let yh = 0;
-                  let zh = 0;
-                  let Ah = 0;
+                let zh = 0;
+                let Ah = 0;
                 q[a >> 2] = 0;
                 q[(a + 4) >> 2] = 0;
                 q[(a + 8) >> 2] = 0;
@@ -46598,11 +46598,11 @@ const DracoDecoderModule = (function () {
               }
               function sk(a, Vg) {
                 let xh = 0;
-                  let Bh = 0;
-                  let Ch = 0;
-                  let Dh = 0;
-                  let Eh = 0;
-                  let Fh = 0;
+                let Bh = 0;
+                let Ch = 0;
+                let Dh = 0;
+                let Eh = 0;
+                let Fh = 0;
                 a: {
                   Ch = q[a >> 2];
                   Fh = (q[(a + 4) >> 2] - Ch) | 0;
@@ -46648,9 +46648,9 @@ const DracoDecoderModule = (function () {
               }
               function tk(a, Vg, Gh) {
                 let Hh = 0;
-                  let Ih = 0;
-                  let Jh = 0;
-                  let Kh = 0;
+                let Ih = 0;
+                let Jh = 0;
+                let Kh = 0;
                 a: {
                   b: {
                     if (((Vg | Gh) < 0) | (Vg >>> 0 > 1431655765)) {
@@ -46711,10 +46711,10 @@ const DracoDecoderModule = (function () {
               }
               function uk(a, Vg, Gh) {
                 let Lh = 0;
-                  let Mh = 0;
-                  let Nh = 0;
-                  let Oh = 0;
-                  let Ph = 0;
+                let Mh = 0;
+                let Nh = 0;
+                let Oh = 0;
+                let Ph = 0;
                 Lh = q[(a + 8) >> 2];
                 Mh = q[a >> 2];
                 if (((Lh - Mh) >> 2) >>> 0 >= Vg >>> 0) {
@@ -46801,10 +46801,10 @@ const DracoDecoderModule = (function () {
               function wk(a) {
                 a = a | 0;
                 let Vg = 0;
-                  let Gh = 0;
-                  let Qh = 0;
-                  let Rh = 0;
-                  let Sh = 0;
+                let Gh = 0;
+                let Qh = 0;
+                let Rh = 0;
+                let Sh = 0;
                 q[a >> 2] = 14380;
                 Vg = q[(a + 68) >> 2];
                 if (Vg) {
@@ -46905,7 +46905,7 @@ const DracoDecoderModule = (function () {
                 Vh = Vh | 0;
                 Wh = Wh | 0;
                 let Xh = 0;
-                  let Yh = 0;
+                let Yh = 0;
                 Xh = (T - 16) | 0;
                 T = Xh;
                 Yh = q[Wh >> 2];
@@ -46937,11 +46937,11 @@ const DracoDecoderModule = (function () {
               }
               function Ak(a, Vh) {
                 let Wh = 0;
-                  let Zh = 0;
-                  let _h = 0;
-                  let $h = 0;
-                  let ai = 0;
-                  let bi = 0;
+                let Zh = 0;
+                let _h = 0;
+                let $h = 0;
+                let ai = 0;
+                let bi = 0;
                 _h = q[(a + 8) >> 2];
                 Wh = q[(a + 4) >> 2];
                 if (((_h - Wh) >> 2) >>> 0 >= Vh >>> 0) {
@@ -47008,8 +47008,8 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 Vh = Vh | 0;
                 let ci = 0;
-                  let di = 0;
-                  let ei = 0;
+                let di = 0;
+                let ei = 0;
                 jl(a, Vh);
                 a: {
                   if ((Vh | 0) < 0) {
@@ -47032,11 +47032,11 @@ const DracoDecoderModule = (function () {
               }
               function Ck(a, Vh) {
                 let fi = 0;
-                  let gi = 0;
-                  let hi = 0;
-                  let ii = 0;
-                  let ji = 0;
-                  let ki = 0;
+                let gi = 0;
+                let hi = 0;
+                let ii = 0;
+                let ji = 0;
+                let ki = 0;
                 a: {
                   hi = q[a >> 2];
                   ji = (q[(a + 4) >> 2] - hi) | 0;
@@ -47106,13 +47106,13 @@ const DracoDecoderModule = (function () {
               }
               function Ek(a, Vh) {
                 let li = 0;
-                  let mi = 0;
-                  let ni = 0;
-                  let oi = 0;
-                  let pi = 0;
-                  let qi = 0;
-                  let ri = 0;
-                  let si = 0;
+                let mi = 0;
+                let ni = 0;
+                let oi = 0;
+                let pi = 0;
+                let qi = 0;
+                let ri = 0;
+                let si = 0;
                 qi = (T - 16) | 0;
                 T = qi;
                 a: {
@@ -47215,18 +47215,18 @@ const DracoDecoderModule = (function () {
               }
               function Fk(a) {
                 let Vh = 0;
-                  let ti = 0;
-                  let ui = 0;
-                  let vi = 0;
-                  let wi = 0;
-                  let xi = 0;
-                  let yi = 0;
-                  let Ai = 0;
-                  let Bi = 0;
-                  let Ci = 0;
-                  let Di = 0;
-                  let Ei = 0;
-                  let Fi = 0;
+                let ti = 0;
+                let ui = 0;
+                let vi = 0;
+                let wi = 0;
+                let xi = 0;
+                let yi = 0;
+                let Ai = 0;
+                let Bi = 0;
+                let Ci = 0;
+                let Di = 0;
+                let Ei = 0;
+                let Fi = 0;
                 ui = (T - 32) | 0;
                 T = ui;
                 xi = (a + 56) | 0;
@@ -47399,11 +47399,11 @@ const DracoDecoderModule = (function () {
               }
               function Gk(a, zi) {
                 let Gi = 0;
-                  let Hi = 0;
-                  let Ii = 0;
-                  let Ji = 0;
-                  let Ki = 0;
-                  let Li = 0;
+                let Hi = 0;
+                let Ii = 0;
+                let Ji = 0;
+                let Ki = 0;
+                let Li = 0;
                 Ii = q[a >> 2];
                 Gi = (Ii + ((zi >>> 3) & 536870908)) | 0;
                 q[Gi >> 2] = q[Gi >> 2] | (1 << (zi & 31));
@@ -47469,11 +47469,11 @@ const DracoDecoderModule = (function () {
               }
               function Hk(a, zi) {
                 let Mi = 0;
-                  let Ni = 0;
-                  let Oi = 0;
-                  let Pi = 0;
-                  let Qi = 0;
-                  let Ri = 0;
+                let Ni = 0;
+                let Oi = 0;
+                let Pi = 0;
+                let Qi = 0;
+                let Ri = 0;
                 a: {
                   Oi = q[a >> 2];
                   Qi = (q[(a + 4) >> 2] - Oi) | 0;
@@ -47517,16 +47517,16 @@ const DracoDecoderModule = (function () {
               }
               function Ik(a, zi) {
                 let Si = 0;
-                  let Ti = 0;
-                  let Ui = 0;
-                  let Vi = 0;
-                  let Wi = 0;
-                  let Xi = 0;
-                  let Yi = 0;
-                  let Zi = 0;
-                  let _i = 0;
-                  let $i = 0;
-                  let aj = 0;
+                let Ti = 0;
+                let Ui = 0;
+                let Vi = 0;
+                let Wi = 0;
+                let Xi = 0;
+                let Yi = 0;
+                let Zi = 0;
+                let _i = 0;
+                let $i = 0;
+                let aj = 0;
                 Ti = (T - 16) | 0;
                 T = Ti;
                 a: {
@@ -47610,21 +47610,21 @@ const DracoDecoderModule = (function () {
               }
               function Jk(a, zi, bj) {
                 let cj = 0;
-                  let dj = 0;
-                  let ej = 0;
-                  let fj = 0;
-                  let gj = 0;
-                  let hj = 0;
-                  let ij = 0;
-                  let jj = 0;
-                  let kj = 0;
-                  let lj = 0;
-                  let mj = 0;
-                  let nj = 0;
-                  let oj = 0;
-                  let pj = 0;
-                  let qj = 0;
-                  let rj = 0;
+                let dj = 0;
+                let ej = 0;
+                let fj = 0;
+                let gj = 0;
+                let hj = 0;
+                let ij = 0;
+                let jj = 0;
+                let kj = 0;
+                let lj = 0;
+                let mj = 0;
+                let nj = 0;
+                let oj = 0;
+                let pj = 0;
+                let qj = 0;
+                let rj = 0;
                 hj = (T - 16) | 0;
                 T = hj;
                 gj = (w(zi, 12) + a) | 0;
@@ -47772,10 +47772,10 @@ const DracoDecoderModule = (function () {
               }
               function Kk(a, zi) {
                 let bj = 0;
-                  let sj = 0;
-                  let tj = 0;
-                  let uj = 0;
-                  let vj = 0;
+                let sj = 0;
+                let tj = 0;
+                let uj = 0;
+                let vj = 0;
                 sj = -1;
                 uj = -1;
                 tj = -1;
@@ -47840,16 +47840,16 @@ const DracoDecoderModule = (function () {
               }
               function Lk(a, zi) {
                 let wj = 0;
-                  let xj = 0;
-                  let yj = 0;
-                  let zj = 0;
-                  let Aj = 0;
-                  let Bj = 0;
-                  let Cj = 0;
-                  let Dj = 0;
-                  let Ej = 0;
-                  let Fj = 0;
-                  let Gj = 0;
+                let xj = 0;
+                let yj = 0;
+                let zj = 0;
+                let Aj = 0;
+                let Bj = 0;
+                let Cj = 0;
+                let Dj = 0;
+                let Ej = 0;
+                let Fj = 0;
+                let Gj = 0;
                 xj = (T - 48) | 0;
                 T = xj;
                 q[(xj + 40) >> 2] = 0;
@@ -48055,9 +48055,9 @@ const DracoDecoderModule = (function () {
               }
               function Mk(a, zi, Hj) {
                 let Ij = 0;
-                  let Jj = 0;
-                  let Kj = 0;
-                  let Lj = 0;
+                let Jj = 0;
+                let Kj = 0;
+                let Lj = 0;
                 a: {
                   if (a >>> 0 > 5) {
                     break a;
@@ -48091,15 +48091,15 @@ const DracoDecoderModule = (function () {
               }
               function Nk(a, zi) {
                 let Hj = 0;
-                  let Mj = 0;
-                  let Nj = 0;
-                  let Oj = 0;
-                  let Pj = 0;
-                  let Qj = 0;
-                  let Rj = 0;
-                  let Sj = 0;
-                  let Tj = 0;
-                  let Uj = 0;
+                let Mj = 0;
+                let Nj = 0;
+                let Oj = 0;
+                let Pj = 0;
+                let Qj = 0;
+                let Rj = 0;
+                let Sj = 0;
+                let Tj = 0;
+                let Uj = 0;
                 Mj = (T - 32) | 0;
                 T = Mj;
                 q[(Mj + 24) >> 2] = 0;
@@ -48221,10 +48221,10 @@ const DracoDecoderModule = (function () {
               }
               function Ok(a, zi, Vj) {
                 let Wj = 0;
-                  let Xj = 0;
-                  let Yj = 0;
-                  let Zj = 0;
-                  let _j = 0;
+                let Xj = 0;
+                let Yj = 0;
+                let Zj = 0;
+                let _j = 0;
                 Xj = (T - 16) | 0;
                 T = Xj;
                 a: {
@@ -48290,17 +48290,17 @@ const DracoDecoderModule = (function () {
               }
               function Pk(a, zi, Vj) {
                 let $j = 0;
-                  let ak = 0;
-                  let bk = 0;
-                  let ck = 0;
-                  let dk = 0;
-                  let ek = 0;
-                  let fk = 0;
-                  let gk = 0;
-                  let hk = 0;
-                  let ik = 0;
-                  let jk = 0;
-                  let kk = 0;
+                let ak = 0;
+                let bk = 0;
+                let ck = 0;
+                let dk = 0;
+                let ek = 0;
+                let fk = 0;
+                let gk = 0;
+                let hk = 0;
+                let ik = 0;
+                let jk = 0;
+                let kk = 0;
                 $j = (T - 16) | 0;
                 T = $j;
                 ck = q[(a + 24) >> 2];
@@ -48399,8 +48399,8 @@ const DracoDecoderModule = (function () {
               }
               function Qk(a, zi) {
                 let Vj = 0;
-                  let lk = 0;
-                  let mk = 0;
+                let lk = 0;
+                let mk = 0;
                 lk = q[zi >> 2];
                 if (!lk) {
                   return;
@@ -48417,10 +48417,10 @@ const DracoDecoderModule = (function () {
               }
               function Rk(a, zi) {
                 let nk = 0;
-                  let ok = 0;
-                  let pk = 0;
-                  let qk = 0;
-                  let rk = 0;
+                let ok = 0;
+                let pk = 0;
+                let qk = 0;
+                let rk = 0;
                 a: {
                   b: {
                     c: {
@@ -48496,9 +48496,9 @@ const DracoDecoderModule = (function () {
               }
               function Sk(a, zi, sk, tk) {
                 let uk = 0;
-                  let vk = 0;
-                  let wk = 0;
-                  let xk = 0;
+                let vk = 0;
+                let wk = 0;
+                let xk = 0;
                 uk = (T - 16) | 0;
                 T = uk;
                 xk = a;
@@ -48531,8 +48531,8 @@ const DracoDecoderModule = (function () {
               }
               function Tk(a, zi) {
                 let sk = 0;
-                  let tk = 0;
-                  let yk = 0;
+                let tk = 0;
+                let yk = 0;
                 sk = q[(zi + 4) >> 2];
                 a: {
                   if (!sk) {
@@ -48579,10 +48579,10 @@ const DracoDecoderModule = (function () {
               }
               function Uk(a, zi, zk) {
                 let Ak = 0;
-                  let Bk = 0;
-                  let Ck = 0;
-                  let Dk = 0;
-                  let Ek = 0;
+                let Bk = 0;
+                let Ck = 0;
+                let Dk = 0;
+                let Ek = 0;
                 Ak = Mm(40);
                 o[(a + 8) | 0] = 0;
                 q[(a + 4) >> 2] = zi + 4;
@@ -48630,9 +48630,9 @@ const DracoDecoderModule = (function () {
               }
               function Wk(a, zi, zk) {
                 let Gk = 0;
-                  let Hk = 0;
-                  let Ik = 0;
-                  let Jk = 0;
+                let Hk = 0;
+                let Ik = 0;
+                let Jk = 0;
                 a: {
                   zi = fk(a, zi);
                   b: {
@@ -48698,8 +48698,8 @@ const DracoDecoderModule = (function () {
               }
               function Yk(a, zi, zk) {
                 let Lk = 0;
-                  let Mk = 0;
-                  let Nk = 0;
+                let Mk = 0;
+                let Nk = 0;
                 Lk = (a + 4) | 0;
                 a = fk(a, zi);
                 a: {
@@ -48722,9 +48722,9 @@ const DracoDecoderModule = (function () {
               }
               function Zk(a, zi, zk) {
                 let Ok = 0;
-                  let Pk = 0;
-                  let Qk = 0;
-                  let Rk = 0;
+                let Pk = 0;
+                let Qk = 0;
+                let Rk = 0;
                 Ok = (T + -64) | 0;
                 T = Ok;
                 Pk = fk(a, zi);
@@ -48793,7 +48793,7 @@ const DracoDecoderModule = (function () {
               }
               function _k(a, zi, zk) {
                 let Tk = 0;
-                  let Uk = 0;
+                let Uk = 0;
                 Tk = (T - 32) | 0;
                 T = Tk;
                 Uk = (a + 12) | 0;
@@ -48820,11 +48820,11 @@ const DracoDecoderModule = (function () {
               }
               function $k(a, zi) {
                 let zk = 0;
-                  let Sk = 0;
-                  let Vk = 0;
-                  let Wk = 0;
-                  let Xk = 0;
-                  let Yk = 0;
+                let Sk = 0;
+                let Vk = 0;
+                let Wk = 0;
+                let Xk = 0;
+                let Yk = 0;
                 a: {
                   b: {
                     Sk = zi;
@@ -49089,7 +49089,7 @@ const DracoDecoderModule = (function () {
               }
               function cl(a) {
                 let zi = 0;
-                  let _k = 0;
+                let _k = 0;
                 zi = q[(a + 20) >> 2];
                 a: {
                   if (((q[(a + 24) >> 2] - zi) | 0) < 1) {
@@ -49105,8 +49105,8 @@ const DracoDecoderModule = (function () {
               }
               function dl(a, $k) {
                 let al = 0;
-                  let bl = 0;
-                  let cl = 0;
+                let bl = 0;
+                let cl = 0;
                 al = q[(a + 8) >> 2];
                 a = q[(a + 12) >> 2];
                 a: {
@@ -49132,7 +49132,7 @@ const DracoDecoderModule = (function () {
               }
               function el(a, $k) {
                 let dl = 0;
-                  let el = 0;
+                let el = 0;
                 dl = q[(a + 8) >> 2];
                 a = q[(a + 12) >> 2];
                 if ((dl | 0) != (a | 0)) {
@@ -49153,10 +49153,10 @@ const DracoDecoderModule = (function () {
               }
               function fl(a, $k) {
                 let fl = 0;
-                  let gl = 0;
-                  let hl = 0;
-                  let il = 0;
-                  let jl = 0;
+                let gl = 0;
+                let hl = 0;
+                let il = 0;
+                let jl = 0;
                 fl = (T - 16) | 0;
                 T = fl;
                 gl = (a + 12) | 0;
@@ -49179,11 +49179,11 @@ const DracoDecoderModule = (function () {
                 $k = $k | 0;
                 kl = kl | 0;
                 let ll = 0;
-                  let ml = 0;
-                  let nl = 0;
-                  let ol = 0;
-                  let pl = 0;
-                  let ql = 0;
+                let ml = 0;
+                let nl = 0;
+                let ol = 0;
+                let pl = 0;
+                let ql = 0;
                 ol = (T - 16) | 0;
                 T = ol;
                 q[(ol + 12) >> 2] = $k;
@@ -49250,14 +49250,14 @@ const DracoDecoderModule = (function () {
               }
               function hl(a, $k) {
                 let kl = 0;
-                  let rl = 0;
-                  let sl = 0;
-                  let tl = 0;
-                  let ul = 0;
-                  let vl = 0;
-                  let wl = 0;
-                  let xl = 0;
-                  let yl = 0;
+                let rl = 0;
+                let sl = 0;
+                let tl = 0;
+                let ul = 0;
+                let vl = 0;
+                let wl = 0;
+                let xl = 0;
+                let yl = 0;
                 rl = q[(a + 8) >> 2];
                 sl = (a + 4) | 0;
                 kl = q[sl >> 2];
@@ -49330,11 +49330,11 @@ const DracoDecoderModule = (function () {
               }
               function il(a, $k) {
                 let zl = 0;
-                  let Al = 0;
-                  let Bl = 0;
-                  let Cl = 0;
-                  let Dl = 0;
-                  let El = 0;
+                let Al = 0;
+                let Bl = 0;
+                let Cl = 0;
+                let Dl = 0;
+                let El = 0;
                 a: {
                   Bl = q[a >> 2];
                   Dl = (q[(a + 4) >> 2] - Bl) | 0;
@@ -49380,12 +49380,12 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 $k = $k | 0;
                 let Fl = 0;
-                  let Gl = 0;
-                  let Hl = 0;
-                  let Il = 0;
-                  let Jl = 0;
-                  let Kl = 0;
-                  let Ll = 0;
+                let Gl = 0;
+                let Hl = 0;
+                let Il = 0;
+                let Jl = 0;
+                let Kl = 0;
+                let Ll = 0;
                 a: {
                   if (($k | 0) < 0) {
                     break a;
@@ -49570,9 +49570,9 @@ const DracoDecoderModule = (function () {
               }
               function kl(a, $k) {
                 let Ml = 0;
-                  let Nl = 0;
-                  let Ol = 0;
-                  let Pl = 0;
+                let Nl = 0;
+                let Ol = 0;
+                let Pl = 0;
                 a: {
                   if (($k | 0) < 0) {
                     break a;
@@ -49641,8 +49641,8 @@ const DracoDecoderModule = (function () {
               }
               function nl(a, $k, Ql) {
                 let Rl = 0;
-                  let Sl = 0;
-                  let Tl = 0;
+                let Sl = 0;
+                let Tl = 0;
                 a: {
                   if ($k >>> 0 <= 63) {
                     $k = 0;
@@ -49695,14 +49695,14 @@ const DracoDecoderModule = (function () {
               }
               function ol(a, $k, Ql) {
                 let Ul = 0;
-                  let Vl = 0;
-                  let Wl = 0;
-                  let Xl = 0;
-                  let Zl = 0;
-                  let _l = 0;
-                  let $l = 0;
-                  let am = 0;
-                  let bm = 0;
+                let Vl = 0;
+                let Wl = 0;
+                let Xl = 0;
+                let Zl = 0;
+                let _l = 0;
+                let $l = 0;
+                let am = 0;
+                let bm = 0;
                 Zl = (T - 672) | 0;
                 T = Zl;
                 Vl = q[($k + 12) >> 2];
@@ -49905,10 +49905,10 @@ const DracoDecoderModule = (function () {
               }
               function pl(a, $k, Ql) {
                 let Yl = 0;
-                  let cm = 0;
-                  let dm = 0;
-                  let em = 0;
-                  let fm = 0;
+                let cm = 0;
+                let dm = 0;
+                let em = 0;
+                let fm = 0;
                 cm = q[($k + 12) >> 2];
                 dm = q[($k + 20) >> 2];
                 em = q[($k + 16) >> 2];
@@ -49974,10 +49974,10 @@ const DracoDecoderModule = (function () {
               }
               function ql(a, $k, Ql) {
                 let gm = 0;
-                  let hm = 0;
-                  let im = 0;
-                  let jm = 0;
-                  let km = 0;
+                let hm = 0;
+                let im = 0;
+                let jm = 0;
+                let km = 0;
                 hm = q[($k + 12) >> 2];
                 im = q[($k + 20) >> 2];
                 jm = q[($k + 16) >> 2];
@@ -50043,10 +50043,10 @@ const DracoDecoderModule = (function () {
               }
               function rl(a, $k, Ql) {
                 let lm = 0;
-                  let mm = 0;
-                  let nm = 0;
-                  let om = 0;
-                  let pm = 0;
+                let mm = 0;
+                let nm = 0;
+                let om = 0;
+                let pm = 0;
                 mm = q[($k + 12) >> 2];
                 nm = q[($k + 20) >> 2];
                 om = q[($k + 16) >> 2];
@@ -50112,10 +50112,10 @@ const DracoDecoderModule = (function () {
               }
               function sl(a, $k, Ql) {
                 let qm = 0;
-                  let rm = 0;
-                  let sm = 0;
-                  let tm = 0;
-                  let um = 0;
+                let rm = 0;
+                let sm = 0;
+                let tm = 0;
+                let um = 0;
                 rm = q[($k + 12) >> 2];
                 sm = q[($k + 20) >> 2];
                 tm = q[($k + 16) >> 2];
@@ -50181,10 +50181,10 @@ const DracoDecoderModule = (function () {
               }
               function tl(a, $k, Ql) {
                 let vm = 0;
-                  let wm = 0;
-                  let xm = 0;
-                  let ym = 0;
-                  let zm = 0;
+                let wm = 0;
+                let xm = 0;
+                let ym = 0;
+                let zm = 0;
                 wm = q[($k + 12) >> 2];
                 xm = q[($k + 20) >> 2];
                 ym = q[($k + 16) >> 2];
@@ -50261,10 +50261,10 @@ const DracoDecoderModule = (function () {
               }
               function ul(a, $k, Ql) {
                 let Am = 0;
-                  let Bm = 0;
-                  let Cm = 0;
-                  let Dm = 0;
-                  let Em = 0;
+                let Bm = 0;
+                let Cm = 0;
+                let Dm = 0;
+                let Em = 0;
                 Bm = q[($k + 12) >> 2];
                 Cm = q[($k + 20) >> 2];
                 Dm = q[($k + 16) >> 2];
@@ -50341,10 +50341,10 @@ const DracoDecoderModule = (function () {
               }
               function vl(a, $k, Ql) {
                 let Fm = 0;
-                  let Gm = 0;
-                  let Hm = 0;
-                  let Im = 0;
-                  let Jm = 0;
+                let Gm = 0;
+                let Hm = 0;
+                let Im = 0;
+                let Jm = 0;
                 Gm = q[($k + 12) >> 2];
                 Hm = q[($k + 20) >> 2];
                 Im = q[($k + 16) >> 2];
@@ -50421,32 +50421,32 @@ const DracoDecoderModule = (function () {
               }
               function wl(a, $k, Ql) {
                 let Km = 0;
-                  let Lm = 0;
-                  let Nm = 0;
-                  let Om = 0;
-                  let Pm = 0;
-                  let Qm = 0;
-                  let Rm = 0;
-                  let Sm = 0;
-                  let Tm = 0;
-                  let Um = 0;
-                  let Vm = 0;
-                  let Wm = 0;
-                  let Xm = 0;
-                  let Ym = 0;
-                  let Zm = 0;
-                  let _m = 0;
-                  let $m = 0;
-                  let an = 0;
-                  let cn = 0;
-                  let dn = 0;
-                  let en = 0;
-                  let fn = 0;
-                  let gn = 0;
-                  let hn = 0;
-                  let jn = 0;
-                  let kn = 0;
-                  let ln = 0;
+                let Lm = 0;
+                let Nm = 0;
+                let Om = 0;
+                let Pm = 0;
+                let Qm = 0;
+                let Rm = 0;
+                let Sm = 0;
+                let Tm = 0;
+                let Um = 0;
+                let Vm = 0;
+                let Wm = 0;
+                let Xm = 0;
+                let Ym = 0;
+                let Zm = 0;
+                let _m = 0;
+                let $m = 0;
+                let an = 0;
+                let cn = 0;
+                let dn = 0;
+                let en = 0;
+                let fn = 0;
+                let gn = 0;
+                let hn = 0;
+                let jn = 0;
+                let kn = 0;
+                let ln = 0;
                 Nm = (T - 48) | 0;
                 T = Nm;
                 Km = q[(a + 12) >> 2];
@@ -50936,32 +50936,32 @@ const DracoDecoderModule = (function () {
               }
               function xl(a, $k, Ql) {
                 let mn = 0;
-                  let nn = 0;
-                  let on = 0;
-                  let pn = 0;
-                  let qn = 0;
-                  let rn = 0;
-                  let sn = 0;
-                  let tn = 0;
-                  let un = 0;
-                  let vn = 0;
-                  let wn = 0;
-                  let xn = 0;
-                  let yn = 0;
-                  let zn = 0;
-                  let Bn = 0;
-                  let Cn = 0;
-                  let En = 0;
-                  let Fn = 0;
-                  let Gn = 0;
-                  let Hn = 0;
-                  let In = 0;
-                  let Jn = 0;
-                  let Kn = 0;
-                  let Ln = 0;
-                  let Mn = 0;
-                  let Nn = 0;
-                  let On = 0;
+                let nn = 0;
+                let on = 0;
+                let pn = 0;
+                let qn = 0;
+                let rn = 0;
+                let sn = 0;
+                let tn = 0;
+                let un = 0;
+                let vn = 0;
+                let wn = 0;
+                let xn = 0;
+                let yn = 0;
+                let zn = 0;
+                let Bn = 0;
+                let Cn = 0;
+                let En = 0;
+                let Fn = 0;
+                let Gn = 0;
+                let Hn = 0;
+                let In = 0;
+                let Jn = 0;
+                let Kn = 0;
+                let Ln = 0;
+                let Mn = 0;
+                let Nn = 0;
+                let On = 0;
                 on = (T - 48) | 0;
                 T = on;
                 mn = q[(a + 12) >> 2];
@@ -51448,31 +51448,31 @@ const DracoDecoderModule = (function () {
               }
               function yl(a, $k, Ql) {
                 let Pn = 0;
-                  let Qn = 0;
-                  let Rn = 0;
-                  let Sn = 0;
-                  let Tn = 0;
-                  let Un = 0;
-                  let Vn = 0;
-                  let Wn = 0;
-                  let Xn = 0;
-                  let Yn = 0;
-                  let Zn = 0;
-                  let _n = 0;
-                  let $n = 0;
-                  let ao = 0;
-                  let bo = 0;
-                  let co = 0;
-                  let eo = 0;
-                  let fo = 0;
-                  let go = 0;
-                  let ho = 0;
-                  let io = 0;
-                  let jo = 0;
-                  let ko = 0;
-                  let lo = 0;
-                  let mo = 0;
-                  let no = 0;
+                let Qn = 0;
+                let Rn = 0;
+                let Sn = 0;
+                let Tn = 0;
+                let Un = 0;
+                let Vn = 0;
+                let Wn = 0;
+                let Xn = 0;
+                let Yn = 0;
+                let Zn = 0;
+                let _n = 0;
+                let $n = 0;
+                let ao = 0;
+                let bo = 0;
+                let co = 0;
+                let eo = 0;
+                let fo = 0;
+                let go = 0;
+                let ho = 0;
+                let io = 0;
+                let jo = 0;
+                let ko = 0;
+                let lo = 0;
+                let mo = 0;
+                let no = 0;
                 Qn = (T - 48) | 0;
                 T = Qn;
                 Pn = q[(a + 12) >> 2];
@@ -51927,31 +51927,31 @@ const DracoDecoderModule = (function () {
               }
               function zl(a, $k, Ql) {
                 let oo = 0;
-                  let po = 0;
-                  let qo = 0;
-                  let ro = 0;
-                  let so = 0;
-                  let to = 0;
-                  let uo = 0;
-                  let vo = 0;
-                  let wo = 0;
-                  let xo = 0;
-                  let yo = 0;
-                  let zo = 0;
-                  let Ao = 0;
-                  let Bo = 0;
-                  let Co = 0;
-                  let Do = 0;
-                  let Eo = 0;
-                  let Fo = 0;
-                  let Go = 0;
-                  let Ho = 0;
-                  let Io = 0;
-                  let Jo = 0;
-                  let Ko = 0;
-                  let Lo = 0;
-                  let Mo = 0;
-                  let No = 0;
+                let po = 0;
+                let qo = 0;
+                let ro = 0;
+                let so = 0;
+                let to = 0;
+                let uo = 0;
+                let vo = 0;
+                let wo = 0;
+                let xo = 0;
+                let yo = 0;
+                let zo = 0;
+                let Ao = 0;
+                let Bo = 0;
+                let Co = 0;
+                let Do = 0;
+                let Eo = 0;
+                let Fo = 0;
+                let Go = 0;
+                let Ho = 0;
+                let Io = 0;
+                let Jo = 0;
+                let Ko = 0;
+                let Lo = 0;
+                let Mo = 0;
+                let No = 0;
                 po = (T - 48) | 0;
                 T = po;
                 oo = q[(a + 12) >> 2];
@@ -52403,30 +52403,30 @@ const DracoDecoderModule = (function () {
               }
               function Al(a, $k, Ql) {
                 let Oo = 0;
-                  let Po = 0;
-                  let Qo = 0;
-                  let Ro = 0;
-                  let So = 0;
-                  let To = 0;
-                  let Uo = 0;
-                  let Vo = 0;
-                  let Wo = 0;
-                  let Xo = 0;
-                  let Yo = 0;
-                  let Zo = 0;
-                  let _o = 0;
-                  let $o = 0;
-                  let ap = 0;
-                  let bp = 0;
-                  let cp = 0;
-                  let dp = 0;
-                  let ep = 0;
-                  let fp = 0;
-                  let gp = 0;
-                  let hp = 0;
-                  let ip = 0;
-                  let jp = 0;
-                  let kp = 0;
+                let Po = 0;
+                let Qo = 0;
+                let Ro = 0;
+                let So = 0;
+                let To = 0;
+                let Uo = 0;
+                let Vo = 0;
+                let Wo = 0;
+                let Xo = 0;
+                let Yo = 0;
+                let Zo = 0;
+                let _o = 0;
+                let $o = 0;
+                let ap = 0;
+                let bp = 0;
+                let cp = 0;
+                let dp = 0;
+                let ep = 0;
+                let fp = 0;
+                let gp = 0;
+                let hp = 0;
+                let ip = 0;
+                let jp = 0;
+                let kp = 0;
                 Qo = (T - 48) | 0;
                 T = Qo;
                 Oo = q[(a + 12) >> 2];
@@ -52894,30 +52894,30 @@ const DracoDecoderModule = (function () {
               }
               function Bl(a, $k, Ql) {
                 let lp = 0;
-                  let mp = 0;
-                  let np = 0;
-                  let op = 0;
-                  let pp = 0;
-                  let qp = 0;
-                  let rp = 0;
-                  let sp = 0;
-                  let tp = 0;
-                  let up = 0;
-                  let vp = 0;
-                  let wp = 0;
-                  let xp = 0;
-                  let yp = 0;
-                  let zp = 0;
-                  let Ap = 0;
-                  let Bp = 0;
-                  let Cp = 0;
-                  let Dp = 0;
-                  let Ep = 0;
-                  let Fp = 0;
-                  let Gp = 0;
-                  let Hp = 0;
-                  let Ip = 0;
-                  let Jp = 0;
+                let mp = 0;
+                let np = 0;
+                let op = 0;
+                let pp = 0;
+                let qp = 0;
+                let rp = 0;
+                let sp = 0;
+                let tp = 0;
+                let up = 0;
+                let vp = 0;
+                let wp = 0;
+                let xp = 0;
+                let yp = 0;
+                let zp = 0;
+                let Ap = 0;
+                let Bp = 0;
+                let Cp = 0;
+                let Dp = 0;
+                let Ep = 0;
+                let Fp = 0;
+                let Gp = 0;
+                let Hp = 0;
+                let Ip = 0;
+                let Jp = 0;
                 np = (T - 48) | 0;
                 T = np;
                 lp = q[(a + 12) >> 2];
@@ -53382,30 +53382,30 @@ const DracoDecoderModule = (function () {
               }
               function Cl(a, $k, Ql) {
                 let Kp = 0;
-                  let Lp = 0;
-                  let Mp = 0;
-                  let Np = 0;
-                  let Op = 0;
-                  let Pp = 0;
-                  let Qp = 0;
-                  let Rp = 0;
-                  let Sp = 0;
-                  let Tp = 0;
-                  let Up = 0;
-                  let Vp = 0;
-                  let Wp = 0;
-                  let Xp = 0;
-                  let Yp = 0;
-                  let Zp = 0;
-                  let _p = 0;
-                  let $p = 0;
-                  let aq = 0;
-                  let bq = 0;
-                  let cq = 0;
-                  let dq = 0;
-                  let eq = 0;
-                  let fq = 0;
-                  let gq = 0;
+                let Lp = 0;
+                let Mp = 0;
+                let Np = 0;
+                let Op = 0;
+                let Pp = 0;
+                let Qp = 0;
+                let Rp = 0;
+                let Sp = 0;
+                let Tp = 0;
+                let Up = 0;
+                let Vp = 0;
+                let Wp = 0;
+                let Xp = 0;
+                let Yp = 0;
+                let Zp = 0;
+                let _p = 0;
+                let $p = 0;
+                let aq = 0;
+                let bq = 0;
+                let cq = 0;
+                let dq = 0;
+                let eq = 0;
+                let fq = 0;
+                let gq = 0;
                 Mp = (T - 48) | 0;
                 T = Mp;
                 Kp = q[(a + 12) >> 2];
@@ -53872,11 +53872,11 @@ const DracoDecoderModule = (function () {
               }
               function Dl(a, $k) {
                 let Ql = 0;
-                  let Dn = 0;
-                  let hq = 0;
-                  let iq = 0;
-                  let jq = 0;
-                  let kq = 0;
+                let Dn = 0;
+                let hq = 0;
+                let iq = 0;
+                let jq = 0;
+                let kq = 0;
                 a: {
                   hq = q[(a + 4) >> 2];
                   jq = q[a >> 2];
@@ -53950,9 +53950,9 @@ const DracoDecoderModule = (function () {
               }
               function Fl(a, Mm, bn) {
                 let An = 0;
-                  let lq = 0;
-                  let mq = 0;
-                  let nq = 0;
+                let lq = 0;
+                let mq = 0;
+                let nq = 0;
                 An = q[(bn + 16) >> 2];
                 a: {
                   if (!An) {
@@ -54010,8 +54010,8 @@ const DracoDecoderModule = (function () {
               }
               function Il(a, Mm, bn, oq, pq) {
                 let qq = 0;
-                  let rq = 0;
-                  let sq = 0;
+                let rq = 0;
+                let sq = 0;
                 qq = (T - 208) | 0;
                 T = qq;
                 q[(qq + 204) >> 2] = bn;
@@ -54067,20 +54067,20 @@ const DracoDecoderModule = (function () {
               }
               function Jl(a, Mm, bn, oq, pq, tq, uq) {
                 let vq = 0;
-                  let wq = 0;
-                  let xq = 0;
-                  let yq = 0;
-                  let zq = 0;
-                  let Aq = 0;
-                  let Bq = 0;
-                  let Cq = 0;
-                  let Dq = 0;
-                  let Eq = 0;
-                  let Fq = 0;
-                  let Gq = 0;
-                  let Hq = 0;
-                  let Iq = 0;
-                  let Jq = 0;
+                let wq = 0;
+                let xq = 0;
+                let yq = 0;
+                let zq = 0;
+                let Aq = 0;
+                let Bq = 0;
+                let Cq = 0;
+                let Dq = 0;
+                let Eq = 0;
+                let Fq = 0;
+                let Gq = 0;
+                let Hq = 0;
+                let Iq = 0;
+                let Jq = 0;
                 vq = (T - 80) | 0;
                 T = vq;
                 q[(vq + 76) >> 2] = Mm;
@@ -54661,8 +54661,8 @@ const DracoDecoderModule = (function () {
               }
               function Ll(a) {
                 let Mm = 0;
-                  let bn = 0;
-                  let oq = 0;
+                let bn = 0;
+                let oq = 0;
                 if (Zl(o[q[a >> 2]])) {
                   while (1) {
                     Mm = q[a >> 2];
@@ -54752,8 +54752,8 @@ const DracoDecoderModule = (function () {
               }
               function Nl(a, q, pq, tq, uq) {
                 let Kq = 0;
-                  let Lq = 0;
-                  let Mq = 0;
+                let Lq = 0;
+                let Mq = 0;
                 Kq = (T - 256) | 0;
                 T = Kq;
                 if (!((uq & 73728) | ((pq | 0) <= (tq | 0)))) {
@@ -54810,8 +54810,8 @@ const DracoDecoderModule = (function () {
               }
               function Ql(a, q, pq) {
                 let tq = 0;
-                  let uq = 0;
-                  let Nq = 0;
+                let uq = 0;
+                let Nq = 0;
                 a: {
                   if ((((q | 0) == 1) & (a >>> 0 < 0)) | (q >>> 0 < 1)) {
                     tq = a;
@@ -54859,30 +54859,30 @@ const DracoDecoderModule = (function () {
                 Qq = Qq | 0;
                 Rq = Rq | 0;
                 let Sq = 0;
-                  let Tq = 0;
-                  let Uq = 0;
-                  let Vq = 0;
-                  let Wq = 0;
-                  let Xq = 0;
-                  let Yq = 0;
-                  let Zq = 0;
-                  let _q = 0;
-                  let $q = 0;
-                  let ar = 0;
-                  let br = 0;
-                  let cr = 0;
-                  let dr = 0;
-                  let er = 0;
-                  let fr = 0;
-                  let gr = 0;
-                  let hr = 0;
-                  let ir = 0;
-                  let jr = 0;
-                  let kr = 0;
-                  let lr = 0;
-                  let mr = 0;
-                  let nr = 0;
-                  let or = 0;
+                let Tq = 0;
+                let Uq = 0;
+                let Vq = 0;
+                let Wq = 0;
+                let Xq = 0;
+                let Yq = 0;
+                let Zq = 0;
+                let _q = 0;
+                let $q = 0;
+                let ar = 0;
+                let br = 0;
+                let cr = 0;
+                let dr = 0;
+                let er = 0;
+                let fr = 0;
+                let gr = 0;
+                let hr = 0;
+                let ir = 0;
+                let jr = 0;
+                let kr = 0;
+                let lr = 0;
+                let mr = 0;
+                let nr = 0;
+                let or = 0;
                 Wq = (T - 560) | 0;
                 T = Wq;
                 q[(Wq + 44) >> 2] = 0;
@@ -55464,8 +55464,8 @@ const DracoDecoderModule = (function () {
                 a = a | 0;
                 pq = pq | 0;
                 let Oq = 0;
-                  let Pq = 0;
-                  let Qq = 0;
+                let Pq = 0;
+                let Qq = 0;
                 Oq = pq;
                 pq = (q[pq >> 2] + 15) & -16;
                 q[Oq >> 2] = pq + 16;
@@ -55476,11 +55476,11 @@ const DracoDecoderModule = (function () {
                 pq = pq | 0;
                 Rq = Rq | 0;
                 let pr = 0;
-                  let qr = 0;
-                  let rr = 0;
-                  let sr = 0;
-                  let tr = 0;
-                  let ur = 0;
+                let qr = 0;
+                let rr = 0;
+                let sr = 0;
+                let tr = 0;
+                let ur = 0;
                 pr = (T - 32) | 0;
                 T = pr;
                 qr = q[(a + 28) >> 2];
@@ -55635,8 +55635,8 @@ const DracoDecoderModule = (function () {
               }
               function am(a, pq) {
                 let vr = 0;
-                  let xr = 0;
-                  let yr = 0;
+                let xr = 0;
+                let yr = 0;
                 h(+a);
                 vr = e(1) | 0;
                 xr = e(0) | 0;
@@ -55663,11 +55663,11 @@ const DracoDecoderModule = (function () {
               }
               function bm(a) {
                 let q = 0;
-                  let pq = 0;
-                  let zr = 0;
-                  let Ar = 0;
-                  let Br = 0;
-                  let Cr = 0;
+                let pq = 0;
+                let zr = 0;
+                let Ar = 0;
+                let Br = 0;
+                let Cr = 0;
                 while (1) {
                   q = a;
                   a = (q + 1) | 0;
@@ -55713,8 +55713,8 @@ const DracoDecoderModule = (function () {
               }
               function cm(a, Dr, Er) {
                 let Fr = 0;
-                  let Gr = 0;
-                  let Hr = 0;
+                let Gr = 0;
+                let Hr = 0;
                 a: {
                   if (!Er) {
                     break a;
@@ -55739,8 +55739,8 @@ const DracoDecoderModule = (function () {
               }
               function dm(a) {
                 let Dr = 0;
-                  let Er = 0;
-                  let Ir = 0;
+                let Er = 0;
+                let Ir = 0;
                 a: {
                   b: {
                     Dr = a;
@@ -55789,8 +55789,8 @@ const DracoDecoderModule = (function () {
               }
               function em(a, Jr) {
                 let Kr = 0;
-                  let Lr = 0;
-                  let Mr = 0;
+                let Lr = 0;
+                let Mr = 0;
                 Kr = (Jr | 0) != 0;
                 a: {
                   b: {
@@ -55872,9 +55872,9 @@ const DracoDecoderModule = (function () {
               }
               function gm(a, Jr, Nr, Or, Pr, Qr) {
                 let Rr = 0;
-                  let Sr = 0;
-                  let Tr = 0;
-                  let Ur = 0;
+                let Sr = 0;
+                let Tr = 0;
+                let Ur = 0;
                 a: {
                   if (Qr & 64) {
                     Or = Jr;
@@ -55935,9 +55935,9 @@ const DracoDecoderModule = (function () {
               }
               function hm(a, Jr, Nr, Or, Pr, Qr) {
                 let Vr = 0;
-                  let Wr = 0;
-                  let Xr = 0;
-                  let Yr = 0;
+                let Wr = 0;
+                let Xr = 0;
+                let Yr = 0;
                 a: {
                   b: {
                     if (Qr & 64) {
@@ -55999,12 +55999,12 @@ const DracoDecoderModule = (function () {
               }
               function im(a, Jr, Nr, Or) {
                 let Pr = 0;
-                  let Qr = 0;
-                  let Zr = 0;
-                  let _r = 0;
-                  let $r = 0;
-                  let as = 0;
-                  let bs = 0;
+                let Qr = 0;
+                let Zr = 0;
+                let _r = 0;
+                let $r = 0;
+                let as = 0;
+                let bs = 0;
                 Zr = (T - 32) | 0;
                 T = Zr;
                 Pr = Or & 2147483647;
@@ -56099,13 +56099,13 @@ const DracoDecoderModule = (function () {
               }
               function jm(a) {
                 let Jr = 0;
-                  let Nr = 0;
-                  let Or = 0;
-                  let cs = 0;
-                  let ds = 0;
-                  let es = 0;
-                  let fs = 0;
-                  let gs = 0;
+                let Nr = 0;
+                let Or = 0;
+                let cs = 0;
+                let ds = 0;
+                let es = 0;
+                let fs = 0;
+                let gs = 0;
                 cs = (T - 16) | 0;
                 T = cs;
                 q[(cs + 12) >> 2] = a;
@@ -56574,9 +56574,9 @@ const DracoDecoderModule = (function () {
               }
               function mm(a, hs, is) {
                 let ks = 0;
-                  let ls = 0;
-                  let ms = 0;
-                  let ns = 0;
+                let ls = 0;
+                let ms = 0;
+                let ns = 0;
                 ks = (T - 16) | 0;
                 T = ks;
                 hs = (hs - a) >> 2;
@@ -56615,7 +56615,7 @@ const DracoDecoderModule = (function () {
               }
               function qm(a, hs) {
                 let is = 0;
-                  let os = 0;
+                let os = 0;
                 is = (T - 16) | 0;
                 T = is;
                 os = nm(a, hs);
@@ -56629,7 +56629,7 @@ const DracoDecoderModule = (function () {
               }
               function sm(a, hs) {
                 let ps = 0;
-                  let qs = 0;
+                let qs = 0;
                 ps = r[a | 0];
                 qs = r[hs | 0];
                 a: {
@@ -56654,8 +56654,8 @@ const DracoDecoderModule = (function () {
               }
               function tm() {
                 let a = 0;
-                  let hs = 0;
-                  let rs = 0;
+                let hs = 0;
+                let rs = 0;
                 a = (T - 16) | 0;
                 T = a;
                 a: {
@@ -56688,7 +56688,7 @@ const DracoDecoderModule = (function () {
               }
               function um(ss, ts, us) {
                 let vs = 0;
-                  let ws = 0;
+                let ws = 0;
                 vs = (T - 160) | 0;
                 T = vs;
                 Cn((vs + 8) | 0, 15568, 144);
@@ -56728,7 +56728,7 @@ const DracoDecoderModule = (function () {
                 ts = ts | 0;
                 us = us | 0;
                 let xs = 0;
-                  let ys = 0;
+                let ys = 0;
                 ys = q[(ss + 20) >> 2];
                 xs = (q[(ss + 16) >> 2] - ys) | 0;
                 xs = xs >>> 0 > us >>> 0 ? us : xs;
@@ -56829,7 +56829,7 @@ const DracoDecoderModule = (function () {
               }
               function Mm(ss) {
                 let As = 0;
-                  let Bs = 0;
+                let Bs = 0;
                 ss = ss || 1;
                 while (1) {
                   a: {
@@ -56850,9 +56850,9 @@ const DracoDecoderModule = (function () {
               }
               function Nm(ss, Cs) {
                 let Ds = 0;
-                  let Es = 0;
-                  let Fs = 0;
-                  let Gs = 0;
+                let Es = 0;
+                let Fs = 0;
+                let Gs = 0;
                 Ds = dm(Cs);
                 Es = Mm((Ds + 13) | 0);
                 q[(Es + 8) >> 2] = 0;
@@ -56862,8 +56862,8 @@ const DracoDecoderModule = (function () {
               }
               function Om(ss) {
                 let Cs = 0;
-                  let Hs = 0;
-                  let Is = 0;
+                let Hs = 0;
+                let Is = 0;
                 Cs = (T - 16) | 0;
                 T = Cs;
                 o[(Cs + 15) | 0] = 10;
@@ -56897,8 +56897,8 @@ const DracoDecoderModule = (function () {
               }
               function Rm(ss, Js) {
                 let Ks = 0;
-                  let Ls = 0;
-                  let Ms = 0;
+                let Ls = 0;
+                let Ms = 0;
                 Ls = (T - 16) | 0;
                 T = Ls;
                 rm(ss);
@@ -56918,8 +56918,8 @@ const DracoDecoderModule = (function () {
               }
               function Sm(ss, Js, Ns) {
                 let Os = 0;
-                  let Ps = 0;
-                  let Qs = 0;
+                let Ps = 0;
+                let Qs = 0;
                 Os = (T - 16) | 0;
                 T = Os;
                 if (Ns >>> 0 <= 4294967279) {
@@ -56951,9 +56951,9 @@ const DracoDecoderModule = (function () {
               }
               function Um(ss, Js, Ns) {
                 let Rs = 0;
-                  let Ss = 0;
-                  let Ts = 0;
-                  let Us = 0;
+                let Ss = 0;
+                let Ts = 0;
+                let Us = 0;
                 Ss = (T - 16) | 0;
                 T = Ss;
                 Rs = ym(ss);
@@ -56978,8 +56978,8 @@ const DracoDecoderModule = (function () {
               }
               function Vm(ss, Js, Ns, Vs, Ws, Xs, Ys) {
                 let Zs = 0;
-                  let _s = 0;
-                  let $s = 0;
+                let _s = 0;
+                let $s = 0;
                 Zs = (T - 16) | 0;
                 T = Zs;
                 if (((Js ^ -1) + -17) >>> 0 >= Ns >>> 0) {
@@ -57030,9 +57030,9 @@ const DracoDecoderModule = (function () {
               }
               function Xm(ss, Js) {
                 let Vs = 0;
-                  let Ws = 0;
-                  let Xs = 0;
-                  let Ys = 0;
+                let Ws = 0;
+                let Xs = 0;
+                let Ys = 0;
                 Xs = (T - 16) | 0;
                 T = Xs;
                 if (Js) {
@@ -57056,7 +57056,7 @@ const DracoDecoderModule = (function () {
               }
               function Ym(ss, Js) {
                 let at = 0;
-                  let bt = 0;
+                let bt = 0;
                 at = (T - 16) | 0;
                 T = at;
                 a: {
@@ -57075,8 +57075,8 @@ const DracoDecoderModule = (function () {
               }
               function Zm(ss, Js, ct, dt, et) {
                 let ft = 0;
-                  let gt = 0;
-                  let ht = 0;
+                let gt = 0;
+                let ht = 0;
                 ft = (T - 16) | 0;
                 T = ft;
                 if ((-17 - Js) >>> 0 >= ct >>> 0) {
@@ -57119,7 +57119,7 @@ const DracoDecoderModule = (function () {
               }
               function $m(ss) {
                 let Js = 0;
-                  let ct = 0;
+                let ct = 0;
                 Js = (T - 16) | 0;
                 T = Js;
                 rm(Js);
@@ -57136,9 +57136,9 @@ const DracoDecoderModule = (function () {
               }
               function an(ss, dt) {
                 let et = 0;
-                  let it = 0;
-                  let jt = 0;
-                  let kt = 0;
+                let it = 0;
+                let jt = 0;
+                let kt = 0;
                 jt = (T - 16) | 0;
                 T = jt;
                 et = xm(dt);
@@ -57240,7 +57240,7 @@ const DracoDecoderModule = (function () {
               }
               function jn(lt) {
                 let mt = 0;
-                  let nt = 0;
+                let nt = 0;
                 mt = (q[lt >> 2] + -12) | 0;
                 nt = (mt + 8) | 0;
                 lt = (q[nt >> 2] + -1) | 0;
@@ -57276,7 +57276,7 @@ const DracoDecoderModule = (function () {
                 ot = ot | 0;
                 pt = pt | 0;
                 let qt = 0;
-                  let rt = 0;
+                let rt = 0;
                 qt = (T + -64) | 0;
                 T = qt;
                 rt = 1;
@@ -57312,9 +57312,9 @@ const DracoDecoderModule = (function () {
               }
               function pn(lt) {
                 let ot = 0;
-                  let pt = 0;
-                  let st = 0;
-                  let tt = 0;
+                let pt = 0;
+                let st = 0;
+                let tt = 0;
                 ot = (T + -64) | 0;
                 T = ot;
                 pt = q[lt >> 2];
@@ -57541,18 +57541,18 @@ const DracoDecoderModule = (function () {
               function zn(a) {
                 a = a | 0;
                 let b = 0;
-                  let c = 0;
-                  let d = 0;
-                  let e = 0;
-                  let f = 0;
-                  let g = 0;
-                  let h = 0;
-                  let i = 0;
-                  let j = 0;
-                  let k = 0;
-                  let l = 0;
-                  let m = 0;
-                  let n = 0;
+                let c = 0;
+                let d = 0;
+                let e = 0;
+                let f = 0;
+                let g = 0;
+                let h = 0;
+                let i = 0;
+                let j = 0;
+                let k = 0;
+                let l = 0;
+                let m = 0;
+                let n = 0;
                 l = (T - 16) | 0;
                 T = l;
                 a: {
@@ -58698,14 +58698,14 @@ const DracoDecoderModule = (function () {
               function An(a) {
                 a = a | 0;
                 let o = 0;
-                  let p = 0;
-                  let r = 0;
-                  let s = 0;
-                  let u = 0;
-                  let v = 0;
-                  let w = 0;
-                  let x = 0;
-                  let y = 0;
+                let p = 0;
+                let r = 0;
+                let s = 0;
+                let u = 0;
+                let v = 0;
+                let w = 0;
+                let x = 0;
+                let y = 0;
                 a: {
                   if (!a) {
                     break a;
@@ -59074,8 +59074,8 @@ const DracoDecoderModule = (function () {
               }
               function Cn(a, z, A) {
                 let B = 0;
-                  let C = 0;
-                  let D = 0;
+                let C = 0;
+                let D = 0;
                 if (A >>> 0 >= 8192) {
                   Q(a | 0, z | 0, A | 0) | 0;
                   return a;
@@ -59192,9 +59192,9 @@ const DracoDecoderModule = (function () {
               }
               function Dn(a, z, A) {
                 let E = 0;
-                  let F = 0;
-                  let G = 0;
-                  let H = 0;
+                let F = 0;
+                let G = 0;
+                let H = 0;
                 a: {
                   if (!A) {
                     break a;
@@ -59271,7 +59271,7 @@ const DracoDecoderModule = (function () {
               }
               function En(a, z, A) {
                 let I = 0;
-                  let J = 0;
+                let J = 0;
                 a: {
                   if ((a | 0) == (z | 0)) {
                     break a;
@@ -59515,11 +59515,11 @@ const DracoDecoderModule = (function () {
               }
               function Yn(a, q, z, A) {
                 let K = 0;
-                  let L = 0;
-                  let M = 0;
-                  let N = 0;
-                  let O = 0;
-                  let P = 0;
+                let L = 0;
+                let M = 0;
+                let N = 0;
+                let O = 0;
+                let P = 0;
                 K = z >>> 16;
                 L = a >>> 16;
                 P = w(K, L);
@@ -59535,9 +59535,9 @@ const DracoDecoderModule = (function () {
               }
               function Zn(a, q, z, A) {
                 let Q = 0;
-                  let R = 0;
-                  let S = 0;
-                  let T = 0;
+                let R = 0;
+                let S = 0;
+                let T = 0;
                 Q = q;
                 R = Q >> 31;
                 Q = Q >> 31;
@@ -59559,16 +59559,16 @@ const DracoDecoderModule = (function () {
               }
               function _n(a, q, A, U) {
                 let W = 0;
-                  let X = 0;
-                  let Y = 0;
-                  let Z = 0;
-                  let _ = 0;
-                  let $ = 0;
-                  let aa = 0;
-                  let ba = 0;
-                  let ca = 0;
-                  let da = 0;
-                  const ea = 0;
+                let X = 0;
+                let Y = 0;
+                let Z = 0;
+                let _ = 0;
+                let $ = 0;
+                let aa = 0;
+                let ba = 0;
+                let ca = 0;
+                let da = 0;
+                const ea = 0;
                 a: {
                   b: {
                     c: {
@@ -59746,7 +59746,7 @@ const DracoDecoderModule = (function () {
               }
               function co(a) {
                 let q = 0;
-                  let z = 0;
+                let z = 0;
                 while (1) {
                   z = q;
                   if (a) {
@@ -60441,9 +60441,9 @@ const DracoDecoderModule = (function () {
           );
         return { exports };
       },
-      instantiate (binary, info) {
+      instantiate(binary, info) {
         return {
-          then (ok, err) {
+          then(ok, err) {
             ok({ instance: new WebAssembly.Instance(new WebAssembly.Module(binary, info)) });
           },
         };
@@ -60509,7 +60509,7 @@ const DracoDecoderModule = (function () {
     }
     function ccall(ident, returnType, argTypes, args, opts) {
       const toC = {
-        string (str) {
+        string(str) {
           let ret = 0;
           if (str !== null && str !== undefined && str !== 0) {
             const len = (str.length << 2) + 1;
@@ -60518,7 +60518,7 @@ const DracoDecoderModule = (function () {
           }
           return ret;
         },
-        array (arr) {
+        array(arr) {
           const ret = stackAlloc(arr.length);
           writeArrayToMemory(arr, ret);
           return ret;
@@ -60666,8 +60666,8 @@ const DracoDecoderModule = (function () {
       Module.HEAPF64 = HEAPF64 = new Float64Array(buf);
     }
     const STACK_BASE = 5261456;
-      const DYNAMIC_BASE = 5261456;
-      var DYNAMICTOP_PTR = 18416;
+    const DYNAMIC_BASE = 5261456;
+    var DYNAMICTOP_PTR = 18416;
     let INITIAL_TOTAL_MEMORY = Module.TOTAL_MEMORY || 16777216;
     if (Module.wasmMemory) {
       wasmMemory = Module.wasmMemory;
@@ -60879,7 +60879,7 @@ const DracoDecoderModule = (function () {
     let tempDouble;
     let tempI64;
     __ATINIT__.push({
-      func () {
+      func() {
         ___wasm_call_ctors();
       },
     });
@@ -61008,11 +61008,11 @@ const DracoDecoderModule = (function () {
       return 0;
     }
     var PATH = {
-      splitPath (filename) {
+      splitPath(filename) {
         const splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
         return splitPathRe.exec(filename).slice(1);
       },
-      normalizeArray (parts, allowAboveRoot) {
+      normalizeArray(parts, allowAboveRoot) {
         let up = 0;
         for (let i = parts.length - 1; i >= 0; i--) {
           const last = parts[i];
@@ -61033,9 +61033,9 @@ const DracoDecoderModule = (function () {
         }
         return parts;
       },
-      normalize (path) {
+      normalize(path) {
         const isAbsolute = path.charAt(0) === '/';
-          const trailingSlash = path.substr(-1) === '/';
+        const trailingSlash = path.substr(-1) === '/';
         path = PATH.normalizeArray(
           path.split('/').filter(function (p) {
             return !!p;
@@ -61050,10 +61050,10 @@ const DracoDecoderModule = (function () {
         }
         return (isAbsolute ? '/' : '') + path;
       },
-      dirname (path) {
+      dirname(path) {
         const result = PATH.splitPath(path);
-          const root = result[0];
-          let dir = result[1];
+        const root = result[0];
+        let dir = result[1];
         if (!root && !dir) {
           return '.';
         }
@@ -61062,26 +61062,26 @@ const DracoDecoderModule = (function () {
         }
         return root + dir;
       },
-      basename (path) {
+      basename(path) {
         if (path === '/') return '/';
         const lastSlash = path.lastIndexOf('/');
         if (lastSlash === -1) return path;
         return path.substr(lastSlash + 1);
       },
-      extname (path) {
+      extname(path) {
         return PATH.splitPath(path)[3];
       },
-      join () {
+      join() {
         const paths = Array.prototype.slice.call(arguments, 0);
         return PATH.normalize(paths.join('/'));
       },
-      join2 (l, r) {
+      join2(l, r) {
         return PATH.normalize(l + '/' + r);
       },
     };
     var SYSCALLS = {
       buffers: [null, [], []],
-      printChar (stream, curr) {
+      printChar(stream, curr) {
         const buffer = SYSCALLS.buffers[stream];
         if (curr === 0 || curr === 10) {
           (stream === 1 ? out : err)(UTF8ArrayToString(buffer, 0));
@@ -61091,21 +61091,21 @@ const DracoDecoderModule = (function () {
         }
       },
       varargs: 0,
-      get (varargs) {
+      get(varargs) {
         SYSCALLS.varargs += 4;
         const ret = HEAP32[(SYSCALLS.varargs - 4) >> 2];
         return ret;
       },
-      getStr () {
+      getStr() {
         const ret = UTF8ToString(SYSCALLS.get());
         return ret;
       },
-      get64 () {
+      get64() {
         const low = SYSCALLS.get();
-          const high = SYSCALLS.get();
+        const high = SYSCALLS.get();
         return low;
       },
-      getZero () {
+      getZero() {
         SYSCALLS.get();
       },
     };
@@ -61836,7 +61836,7 @@ const DracoDecoderModule = (function () {
       pos: 0,
       temps: [],
       needed: 0,
-      prepare () {
+      prepare() {
         if (ensureCache.needed) {
           for (let i = 0; i < ensureCache.temps.length; i++) {
             Module._free(ensureCache.temps[i]);
@@ -61854,7 +61854,7 @@ const DracoDecoderModule = (function () {
         }
         ensureCache.pos = 0;
       },
-      alloc (array, view) {
+      alloc(array, view) {
         assert(ensureCache.buffer);
         const bytes = view.BYTES_PER_ELEMENT;
         let len = array.length * bytes;
@@ -61871,7 +61871,7 @@ const DracoDecoderModule = (function () {
         }
         return ret;
       },
-      copy (array, view, offset) {
+      copy(array, view, offset) {
         let offsetShifted = offset;
         const bytes = view.BYTES_PER_ELEMENT;
         switch (bytes) {

@@ -2,7 +2,7 @@
   <FocusLock :disabled="!galleryOpen || menuOpen">
     <div class="galleryOverlay">
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
-        <div ref="content" :key="activeSlide.title" class="content">
+        <div ref="content" :key="activeSlide.image.highres.scr" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
             <!-- <div class="subtitle">{{ activeItem.category }}</div> -->
@@ -11,12 +11,12 @@
         </div>
       </transition>
 
-      <div class="backgroundImages">
+      <div class="backgroundImages" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''">
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
           <img
             :key="activeSlide.image.highres.src"
             class="backgroundImage"
-            :class="activeSlide.image.highres.contain ? 'contain' : ''"
+            :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''"
             :src="activeSlide.image.highres.src"
             :alt="activeSlide.image.highres.alt"
           />

@@ -11,15 +11,15 @@ const Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Ve
   const self = this;
 
   let vector = new THREE.Vector3();
-    let _acceleration;
-    let _width = 500;
-    let _height = 500;
-    let _depth = 500;
-    let _goal;
-    const _neighborhoodRadius = 50;
-    const _maxSpeed = 4;
-    const _maxSteerForce = 0.2;
-    let _avoidWalls = false;
+  let _acceleration;
+  let _width = 500;
+  let _height = 500;
+  let _depth = 500;
+  let _goal;
+  const _neighborhoodRadius = 50;
+  const _maxSpeed = 4;
+  const _maxSteerForce = 0.2;
+  let _avoidWalls = false;
 
   this.position = position;
   this.velocity = velocity;
@@ -206,8 +206,8 @@ const Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Ve
 
   this.alignment = function (boids) {
     let boid;
-      const velSum = new THREE.Vector3();
-      let count = 0;
+    const velSum = new THREE.Vector3();
+    let count = 0;
 
     for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;
@@ -237,10 +237,10 @@ const Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Ve
 
   this.cohesion = function (boids) {
     let boid;
-      let distance;
-      const posSum = new THREE.Vector3();
-      const steer = new THREE.Vector3();
-      let count = 0;
+    let distance;
+    const posSum = new THREE.Vector3();
+    const steer = new THREE.Vector3();
+    let count = 0;
 
     for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;
@@ -271,9 +271,9 @@ const Boid = function ({ position = new THREE.Vector3(), velocity = new THREE.Ve
 
   this.separation = function (boids) {
     let boid;
-      let distance;
-      const posSum = new THREE.Vector3();
-      const repulse = new THREE.Vector3();
+    let distance;
+    const posSum = new THREE.Vector3();
+    const repulse = new THREE.Vector3();
 
     for (let i = 0, il = boids.length; i < il; i++) {
       if (Math.random() > 0.6) continue;

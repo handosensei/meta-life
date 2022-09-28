@@ -3,7 +3,6 @@ import Boid from './Boid';
 import IMOG from '~/lib/imog';
 import useMouse from '~/lib/imog/use/mouse';
 
-
 const raycaster = new THREE.Raycaster();
 const v = new THREE.Vector2();
 

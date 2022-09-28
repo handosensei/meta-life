@@ -10,8 +10,6 @@ import useWindowSize from '~/lib/imog/use/windowSize';
 import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';
 
-
-
 const wP = new THREE.Vector3();
 const simplex = new SimplexNoise();
 const rand = (x, y) => simplex.noise2D(x, y);

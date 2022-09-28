@@ -11,7 +11,6 @@ import OrbitCamera from '~/imog/Cameras/OrbitCamera';
 import BasicCamera from '~/imog/Cameras/BasicCamera';
 import KeyboardCamera from '~/imog/Cameras/KeyboardCamera';
 
-
 const quadGeometry = new THREE.PlaneBufferGeometry(1, 1);
 
 export default IMOG.Component('Renderer', {

@@ -4,7 +4,6 @@ import Line from './Line';
 import IMOG from '~/lib/imog';
 import { map } from '~/lib/math';
 
-
 export default IMOG.Component('TrailsTunnel', {
   options: {
     addTo: null,
