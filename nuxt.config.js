@@ -43,7 +43,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [ 'three', 'gsap', '@antinomy-studio/size', '@antinomy-studio/sniffer' ],
+    transpile: ['three', 'gsap', '@antinomy-studio/size', '@antinomy-studio/sniffer'],
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.(graphql|gql)$/,

@@ -31,18 +31,17 @@ export default {
 
   mixins: [Debug, PageTransition, Scroll, SEO],
 
-  async asyncData ({ query, $datocmsClient }) {
+  async asyncData({ query, $datocmsClient }) {
     try {
-      const preview =
-        query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN;
-      const {news: items, categories} = await $datocmsClient.getPage({ name: 'news', preview });
+      const preview = query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN;
+      const { news: items, categories } = await $datocmsClient.getPage({ name: 'news', preview });
       return {
         items,
-        categories
-      }
+        categories,
+      };
     } catch (e) {
-      console.log(e)
-      return e
+      console.log(e);
+      return e;
     }
   },
 
@@ -61,14 +60,12 @@ export default {
   methods: {
     selectCategory(category) {
       this.activeCategory = category;
-      if(this.activeCategory) {
-        this.activeItems = this.items.filter((item) => item.categories.find(category => category.name === this.activeCategory));
-      }
-      else {
+      if (this.activeCategory) {
+        this.activeItems = this.items.filter((item) => item.categories.find((category) => category.name === this.activeCategory));
+      } else {
         this.activeItems = this.items;
       }
     },
-
 
     ...mapActions('app', ['setTheme']),
   },

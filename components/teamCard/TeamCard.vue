@@ -13,12 +13,12 @@
 
 <script>
 import { mapState } from 'vuex';
-import Lazy from '~/components/lazy/LazyImage'
+import Lazy from '~/components/lazy/LazyImage';
 import imageDimensions from '~/utils/functions/imageDimensions';
 
 export default {
   name: 'TeamCardComponent',
-  components: {Lazy},
+  components: { Lazy },
 
   props: {
     image: {

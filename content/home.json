@@ -34,160 +34,461 @@
             "position": "right center",
             "galleryItems": [
               {
-                "id": "cities",
-                "category": "Cities",
+                "id": "creatures",
+                "category": "Creatures",
+                "slides": [
+                  {
+                    "title": "Kharan",
+                    "text": "Flying dragon Celestial creature, Kharan is one of the few flying creatures in Meta Life. It features a natural celestial shield of protection, and is capable of casting heavy magical spells to annihilate enemies.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/1.png",
+                        "alt": "Kharan"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/1.png",
+                        "alt": "Kharan"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Domenox",
+                    "text": "A high speed Matrix Angel creature, AI-programed to being capable of jumping to high distances and surprise enemies. Domenox also is quite a resistant creature but its sensitive areas are at mercy.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/2.png",
+                        "alt": "Domenox"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/2.png",
+                        "alt": "Domenox"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Ariox",
+                    "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/3.png",
+                        "alt": "Ariox"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/3.png",
+                        "alt": "Ariox"
+                      }
+                    }
+                  },
+
+                  {
+                    "title": "Pronghar",
+                    "text": "Pronghar is a high-velocity Roboter creature, often referred to as “The Proud One”. It has the stance of a royal creature, descended from divinities, and sights of a predator. It is highly agile, fast and wares off its adversaries at great speed.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/creatures/thumb/4.png",
+                        "alt": "Pronghar"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/creatures/4.png",
+                        "alt": "Pronghar"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "environments",
+                "category": "Environments",
                 "slides": [
                   {
                     "title": "Astralis",
-                    "text": "Magically suspended in the sky, Astralis is the capital of the noble Celestials, the most prestigious race in Meta Life. Filled with process and knowledge, it is home to godly monuments, clear lakes, stylized buildings and architectural spaces on different levels showcasing beautiful nature.",
+                    "text": "Magically suspended in the sky, Astralis is the capital city of the noble Celestials, the most prestigious race in Meta Life.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/01.jpg",
+                        "src": "/img/gallery/environment/Astralis/2.png",
                         "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/01.jpg",
+                        "src": "/img/gallery/environment/Astralis/2.png",
+                        "alt": "Astralis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Astralis",
+                    "text": "Home to clear lakes, stylized buildings and hyper-modern architectural spaces, Astralis never stops charming both visitors and locals. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Astralis/1.jpg",
                         "alt": "Astralis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Astralis/1.jpg",
+                        "alt": "Astralis",
+                        "fullscreen": true
                       }
                     }
                   },
+
                   {
-                    "title": "Astralis (2)",
-                    "text": "Another angle of Astralis, home to the Celestials.",
+                    "title": "Astralis",
+                    "text": "Filled with bazzling godly monuments, it owes its name to the divinities that have made it a magical city among the clouds.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/02.jpg",
+                        "src": "/img/gallery/environment/Astralis/3.png",
                         "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/02.jpg",
-                        "alt": "Astralis"
+                        "src": "/img/gallery/environment/Astralis/3.png",
+                        "alt": "Astralis",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "New Heaven",
-                    "text": "Home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. It connects rivers and seas through a magnificently modern coastline that outlines its futuristic skyscrapers and glass-windowed buildings. It was named after its purpose: provide a new place for Cybers to thrive.",
+                    "title": "The Celestial Stones",
+                    "text": "Astralis features the most amazing landscapes, dominated by sacred monuments: The Celestial Stones, home of beautiful spirits and receptacle of intelligence.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/03.jpg",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/environment/Astralis/4.jpeg",
+                        "alt": "The Celestial Stones"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/03.jpg",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/environment/Astralis/4.jpeg",
+                        "alt": "The Celestial Stones",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "New Heaven (2)",
-                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "title": "The Celestial Stones",
+                    "text": "Its formidable powers allow for divine benedictions of all Celestials owing allegiance.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/04.jpg",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/environment/Astralis/5.jpeg",
+                        "alt": "The Celestial Stones"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/04.jpg",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/environment/Astralis/5.jpeg",
+                        "alt": "The Celestial Stones",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "New Heaven (3)",
-                    "text": "Another angle and view of New Heaven, capital of the Cybers.",
+                    "title": "The Celestial Stones",
+                    "text": "Celestial Stones may be found at various locations within and without of Astralis and other Celestial cities. They vary in shape, power and size.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/05.jpg",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/environment/Astralis/6.jpeg",
+                        "alt": "The Celestial Stones"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/05.jpg",
-                        "alt": "New Heaven"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Neopolis",
-                    "text": "Filled with incredible new technologies and hyper-modern buildings, Neopolis is populated by the Matrix Angels, naturally gifted with immense knowledge in computer engineering. From robotics and hi-tech to cybernetics and industrial science: Neopolis is the city of hackers.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/06.jpg",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/06.jpg",
-                        "alt": "Neopolis"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Capital 111 or C-111",
-                    "text": "Home to the Roboters, Capital 111 is a reflection of neo-dystopian architecture. With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perception of reality.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/07.jpg",
-                        "alt": "Capital 111 or C-111"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/07.jpg",
-                        "alt": "Capital 111 or C-111"
+                        "src": "/img/gallery/environment/Astralis/6.jpeg",
+                        "alt": "The Celestial Stones",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
                     "title": "Aurora, the Golden City",
-                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence. Capital of the Goldbois, its excentric architecture is said to have been whispered by divinities and is home to the craziest financial and intellectual abundances.",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence, Capital of the rich Goldbois.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/08.jpg",
+                        "src": "/img/gallery/environment/Aurora/1.png",
                         "alt": "Aurora, the Golden City"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/08.jpg",
-                        "alt": "Aurora, the Golden City"
+                        "src": "/img/gallery/environment/Aurora/1.png",
+                        "alt": "Aurora, the Golden City",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "Barad-mörr",
-                    "text": "Capital city of the Burners, Barad-mörr is a place of fire and vileness. Heat and melt prevail as its population is obsessed with forging, building and developing their growing city. Myth goes that no-one ever to have gone was to be found again.",
+                    "title": "Aurora",
+                    "text": "Its excentric architecture is said to have been whispered by divinities and built in only a day, so the legend says.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/09.jpg",
-                        "alt": "Barad-mörr"
+                        "src": "/img/gallery/environment/Aurora/2.jpeg",
+                        "alt": "Aurora"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/09.jpg",
-                        "alt": "Barad-mörr"
+                        "src": "/img/gallery/environment/Aurora/2.jpeg",
+                        "alt": "Aurora",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora",
+                    "text": "Aurora is home to the craziest financial and intellectual abundances, and its population is known for its high-society lifestyle. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Aurora/3.jpeg",
+                        "alt": "Aurora"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Aurora/3.jpeg",
+                        "alt": "Aurora",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-Mörr",
+                    "text": "Capital city of the Burners, Barad-Môrr is a place of fire and vileness. Heat and melt prevail as its brilliant population is obsessed with forging.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/1.png",
+                        "alt": "Barad-Mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/1.png",
+                        "alt": "Barad-Mörr",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-Mörr",
+                    "text": "Filled with dust, smoke and a barely breathable atmosphere, Barad-Mörr is a place that most avoid. Its demographic inequalities have plunged elites to prosper, and the poor to survive.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/2.png",
+                        "alt": "Barad-Mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/2.png",
+                        "alt": "Barad-Mörr",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-Mörr",
+                    "text": "The Burners’ capital is a vast, highly populated megalopolis that extends on hundreds of miles. Despite its size, its population still lives in heavily packed neighborhoods.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Barad-Morr/3.png",
+                        "alt": "Barad-Mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Barad-Morr/3.png",
+                        "alt": "Barad-Mörr",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "C-111",
+                    "text": "Capital of the Roboters, Capital 111 or often referred to as C-111 is a reflection of neo-dystopian architecture. Named after the number of survivors that initially built it, it is home to an incredible cyberpunk feeling.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/1.png",
+                        "alt": "C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/1.png",
+                        "alt": "C-111",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "C-111",
+                    "text": "With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perceptions of reality.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/2.jpeg",
+                        "alt": "C-111"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/2.jpeg",
+                        "alt": "C-111",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboters Garage",
+                    "text": "Within Capital 111 can be found numerous high-end technology workshops with baffling wonders of Roboters engineering. Powered with cutting-edge AI, robotic creatures are then used for defense of the city.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/C-111/3.jpg",
+                        "alt": "Roboters Garage"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/C-111/3.jpg",
+                        "alt": "Roboters Garage",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "From above, Neopolis is a wonderful city of modernity and breathtaking architecture. Home of the Matrix Angels, its hyper-modern buildings are filled with new technologies.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/3.png",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/3.png",
+                        "alt": "Neopolis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "But Neopolis is also home to mysterious alleys, and neighborhoods aren’t always safe to cruise in. The City of Hackers - as some may call it - can sometimes be dangerous.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/1.jpeg",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/1.jpeg",
+                        "alt": "Neopolis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "Naturally gifted with immense knowledge in computer engineering, Neopolis is home to the most amazing robotics, hi-tech cybernetics and industrial sciences progress.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/neopolis/2.png",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/neopolis/2.png",
+                        "alt": "Neopolis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "New Heaven is home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/4.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/4.png",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+
+                  {
+                    "title": "New Heaven",
+                    "text": "It connects rivers and seas through a magnificent and modern coastline of modern tech-filled skyscrapers. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "Its futuristic buildings and glass-windowed buildings make up for its reputation: a place of light and revival.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/5.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/5.png",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "New Heaven was named after its purpose, to provide a new place for the brilliant Cybers to thrive and escape from the world into the metaverse, paradise found.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/1.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/1.png",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "The Cybers may now discover and research a new way of life, open to the world with globalized and outwards-looking businesses. A flourishing city of hope.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
+                        "alt": "New Heaven",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
                     "title": "Rust",
-                    "text": "Known for its survival-of-the-fittest environment, it is where the Roughs call home. Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
+                    "text": "Known ofr its survival-of-the-fittest living conditions, Rust is where the Roughs call home. Despite its recent technology outreach, Rust was named after what is most common to see: its rusty buildings.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/10.jpg",
+                        "src": "/img/gallery/environment/Rust/3.png",
                         "alt": "Rust"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/10.jpg",
-                        "alt": "Rust"
+                        "src": "/img/gallery/environment/Rust/3.png",
+                        "alt": "Rust",
+                        "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "The Wildlings",
-                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
+                    "title": "Rust",
+                    "text": "Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/11.jpg",
+                        "src": "/img/gallery/environment/Rust/1.jpeg",
                         "alt": "Rust"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/11.jpg",
+                        "src": "/img/gallery/environment/Rust/1.jpeg",
+                        "alt": "Rust",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust",
+                    "text": "But groups of survivors make the best out of what they can, and their recent technological progress creates hope. Once again.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Rust/2.jpeg",
                         "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Rust/2.jpeg",
+                        "alt": "Rust",
+                        "fullscreen": true
                       }
                     }
                   },
@@ -196,188 +497,28 @@
                     "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/cities/thumb/12.jpg",
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "The Swamps"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "The Swamps",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Wildlings",
+                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Wildlings/1.png",
                         "alt": "Rust"
                       },
                       "highres": {
-                        "src": "/img/gallery/cities/12.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Roboters Garage",
-                    "text": "A sneak peek into what happens within C-111, the capital city of the Roboters. A Mecha-Rhino is under construction, a power mechanical beast that very few can control.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/cities/thumb/13.jpg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/cities/13.jpg",
-                        "alt": "Rust"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "creatures",
-                "category": "Creatures",
-                "slides": [
-                  {
-                    "title": "Mörberr",
-                    "text": "A creature specific to the Burner environment with heavy armor equipment, and great forged claws. Ideal for tanking damage while hurting enemies back.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/01.jpg",
-                        "alt": "Mörberr"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/01.jpg",
-                        "alt": "Mörberr",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Celix",
-                    "text": "A stunning and extraordinary Celestial creature rarely witnessed by humans. Taming it and mastering its devastating spells requires time and dedication.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/02.jpg",
-                        "alt": "Celix"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/02.jpg",
-                        "alt": "Celix",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Vitruvis",
-                    "text": "Some say Vitruvis is a godly creature or a Celestial divinity. No one really knows but its ancient roots and magnificent aesthetics make it a rare occurence in the world of Meta Life.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/03.jpg",
-                        "alt": "Vitruvis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/03.jpg",
-                        "alt": "Vitruvis",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Squir",
-                    "text": "Squir is a mecha squirrel escaped from the Cybers Mecha Factory and is now nowhere to be found. Some say to have spotted it in The Swamps where it hunts other creatures. Approach with great caution.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/04.jpg",
-                        "alt": "Squir"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/04.jpg",
-                        "alt": "Squir",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Rhimo",
-                    "text": "The Rhimo was made by the Matrix Angels and is built with a powerful mechanical body that makes it an intimidating companion and creature to deal with.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/05.jpg",
-                        "alt": "Rhimo"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/05.jpg",
-                        "alt": "Rhimo",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Spyder",
-                    "text": "The Spyder is capable of detecting movements from afar thanks to an internal AI-powered algorithm. A formidable skill for hunters.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/06.jpg",
-                        "alt": "Spyder"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/06.jpg",
-                        "alt": "Spyder",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Ryena",
-                    "text": "The Ryena is a rare creature often found in or near C-111, the capital of the Roboters. It roams around the abandoned neighborhoods of the city to find food, most often at night. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/07.jpg",
-                        "alt": "Ryena"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/07.jpg",
-                        "alt": "Ryena",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Crust",
-                    "text": "Crust can bite, crawl and tear out faster than most creatures. It typically lives in arid environments and is said to be quite invasive in the region of Rust where Roughs reside. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/creatures/thumb/08.jpg",
-                        "alt": "Crust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/creatures/08.jpg",
-                        "alt": "Crust",
-                        "contain": true
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "vehicles",
-                "category": "Vehicles",
-                "slides": [
-                  {
-                    "title": "ZERO 11",
-                    "text": "The ZERO 11 motorbike is a product of Cybers engineering. It’s a light, fast and stable bike that is electrically powered.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/01.jpg",
-                        "alt": "ZERO 11"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/vehicles/01.jpg",
-                        "alt": "ZERO 11",
-                        "contain": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Buggy",
-                    "text": "The Buggy is an all-terrain vehicle used mostly by Roughs in and outside of Rust, in desert areas and on difficult soils.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/02.jpg",
-                        "alt": "Buggy"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/vehicles/02.jpg",
-                        "alt": "Buggy",
-                        "contain": true
+                        "src": "/img/gallery/environment/Wildlings/1.png",
+                        "alt": "Rust",
+                        "fullscreen": true
                       }
                     }
                   }
@@ -401,7 +542,119 @@
             "name": "SectionText",
             "title": "Your new life",
             "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
-            "position": "center top"
+            "position": "center top",
+            "galleryItems": [
+              {
+                "id": "lands",
+                "category": "Lands",
+                "slides": [
+                  {
+                    "title": "The Swamps",
+                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/environment/Swamps/1.jpeg",
+                        "alt": "Rust"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "residences",
+                "category": "Residences",
+                "slides": [
+                  {
+                    "title": "Matrix Angel Villa",
+                    "text": "A comfortable home, with built-in new technologies and AI-powered systems allowing optimal automation of the house. Matrix Angel residences have their own AI assistant, integrated at purchase: Meyna.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/1.png",
+                        "alt": "Matrix Angel Villa"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/1.png",
+                        "alt": "Matrix Angel Villa"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Goldboi Palace",
+                    "text": "Goldbois houses are home to the most luxuriant pieces of furniture and decorations, with vibrant crystals, shiny materials and omnipresent gildings. The tainted glass windows, doors and walls bring in natural light, remindful of cathedrals.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/2.png",
+                        "alt": "Goldboi Palace"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/2.png",
+                        "alt": "Goldboi Palace"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Burner Pool Mansion",
+                    "text": "Mansions form Burners are brilliant architectural creations with edgy curves and series of floors allowing for amazing views and great overall comfort. They are also known for their futuristic platforms, allowing for flying vehicles to land seamlessly.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/3.png",
+                        "alt": "Burner Pool Mansion"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/3.png",
+                        "alt": "Burner Pool Mansion"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboter Pool Villa",
+                    "text": "Roboters Villas are known for their futuristic looks, with vibrant neon lights dominating over architectural creativities. With overflowing swimming pools, these houses allow for maximum leisure while providing its owner with great technologies.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/4.png",
+                        "alt": "Roboter Pool Villa"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/4.png",
+                        "alt": "Roboter Pool Villa"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rough Favela House",
+                    "text": "The Rough’s Favela Houses are more often than not steel-made constructions with a dominating use of metal sheets, retrieved objects and wobbly pieces of furniture. Despite their rustic looks, Rough homes are comfortable, cosy and welcoming. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/5.png",
+                        "alt": "Rough Favela House"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/5.png",
+                        "alt": "Rough Favela House"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celestial Mansion",
+                    "text": "Celestial Mansions are among the most expensive, luxurious and high-end houses in Meta Life. Providing their owners with incredibly unique architecture, bazzling swimming pools and immense parking spaces. An ideal purchase for those who can afford it.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/6.png",
+                        "alt": "Celestial Mansion"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/6.png",
+                        "alt": "Celestial Mansion"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -419,7 +672,167 @@
             "name": "SectionText",
             "title": "Experience the metaverse",
             "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <br /><br /> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
-            "position": "center top"
+            "position": "center top",
+            "galleryItems": [
+              {
+                "id": "weapons",
+                "category": "Weapons",
+                "slides": [
+                  {
+                    "title": "LS-12",
+                    "text": "The LS-12 - short for Light Sniper of 12th Generation - is a Burner-crafted heavy rifle loaded with Fire Ammunition. Despite its looks, this brilliant product of Burner engineering is quite light but its reach is not optimal. An ideal pick for heavy damage, at close and medium distances. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/1.png",
+                        "alt": "LS-12"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/1.png",
+                        "alt": "LS-12"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Winger Heavy Rifle",
+                    "text": "Often referred to as WHR or simply Winger, and named after its Celestial roots, the Winger is a very heavy sniper rifle with long-distance accuracy and excellent stability, at the expense of agility and speed. It is a rare piece, owned by very few and used by even less.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/2.png",
+                        "alt": "Winger Heavy Rifle"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/2.png",
+                        "alt": "Winger Heavy Rifle"
+                      }
+                    }
+                  },
+                  {
+                    "title": "SCAB-C",
+                    "text": "The Scab-C SMG is a great choice for medium to long-distance auto shooting. It is precise, light and exquisitely beautiful. A pure product of Celestial engineering, the SCAB-C is a prestigious weapon often given as reward to the bravest.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/3.png",
+                        "alt": "SCAB-C"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/3.png",
+                        "alt": "SCAB-C"
+                      }
+                    }
+                  },
+                  {
+                    "title": "M1015",
+                    "text": "The M1015 was created by Cybers looking for a close-range combat weapon capable of being as light as powerful at short distances. Its heavy ammo and slick design make it an ideal companion for pure enemy annihilation.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/4.png",
+                        "alt": "M1015"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/4.png",
+                        "alt": "M1015"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "vehicles",
+                "category": "Vehicles",
+                "slides": [
+                  {
+                    "title": "Xondor ZERO-11",
+                    "text": "The Xondor ZERO-11 is a Cyber electric motorcycle. Known for its ‘fastest terrain vehicle in Meta Life’ reputation, it includes a speeder boost with nitro and 21-inch wheels made for velocity. A brilliant piece of technology.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/vehicles/thumb/1.png",
+                        "alt": "Xondor ZERO-11"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/vehicles/1.png",
+                        "alt": "Xondor ZERO-11"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Buggy Jumper",
+                    "text": "The four-wheel ‘Fast Escape’ Rough vehicle is the lightest of all four-wheel vehicles. Its strong engine makes accelerating an easy task, and its impressive tires allow make deserts and rocky environments look easy to cruise.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/vehicles/thumb/2.png",
+                        "alt": "Buggy Jumper"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/vehicles/2.png",
+                        "alt": "Buggy Jumper"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "armor",
+                "category": "Armors",
+                "slides": [
+                  {
+                    "title": "Alerion",
+                    "text": "The Alerion armor set brings a versatile, balanced and devastatingly efficient upgrade to the Cyber base kit. Equipped, this tactical masterpiece lets you own the battlefield.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/1.png",
+                        "alt": "Alerion"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/1.png",
+                        "alt": "Alerion"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Eludhel",
+                    "text": "Evasive medium-weight Matrix Angel armor set used to diverge direct attacks, move lightly and take opponents by surprise. Stealth and durability, combined.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/3.png",
+                        "alt": "Eludhel"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/3.png",
+                        "alt": "Eludhel"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Hermes’ Wrath",
+                    "text": "This Roboter-crafted armour set is tailored to suit ruthless, deadly fights. It is durable and meant for an agile type of experience.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/4.png",
+                        "alt": "Hermes’ Wrath"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/4.png",
+                        "alt": "Hermes’ Wrath"
+                      }
+                    }
+                  },
+                  {
+                    "title": "SkySuit",
+                    "text": "The Cyber SkySuit is a brilliant piece of aggregated new technologies with intelligent back and front armored protections reacting to strong impacts. Usually used to deal with high levels of atmospheric pressure.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/2.png",
+                        "alt": "SkySuit"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/2.png",
+                        "alt": "SkySuit"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -435,7 +848,7 @@
           "theme": "dark",
           "component": {
             "name": "SectionText",
-            "title": "A new economy",
+            "title": "Your new economy",
             "text": "Meta Life is powered by $METAL, its dual economy token. <br /><br /> Earn xMETAL by staking assets, selling on the marketplace and lending to other players. Swap it for ETH anytime. <br /><br /> Swap xMETAL for METAL - our governance token - to participe in the Meta Life DAO and help shape the future of your metaverse.",
             "position": "right center",
             "button": {

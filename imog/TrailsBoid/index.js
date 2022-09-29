@@ -1,8 +1,7 @@
 import * as THREE from 'three';
+import Boid from './Boid';
 import IMOG from '~/lib/imog';
 import useMouse from '~/lib/imog/use/mouse';
-
-import Boid from './Boid';
 
 const raycaster = new THREE.Raycaster();
 const v = new THREE.Vector2();
@@ -37,9 +36,9 @@ export default IMOG.Component('TrailsBoid', {
     this.boids = [];
 
     const numberTrails = 30;
-    for (var i = 0; i < numberTrails; i++) {
+    for (let i = 0; i < numberTrails; i++) {
       const color = i < numberTrails * 0.5 ? options.color1 : options.color2;
-      var boid = (this.boids[i] = new Boid({
+      const boid = (this.boids[i] = new Boid({
         position: new THREE.Vector3(Math.random() * 300 - 150, Math.random() * 300 - 150, Math.random() * 300 - 150),
         velocity: new THREE.Vector3((Math.random() - 0.5) * 5, (Math.random() - 0.5) * 5, (Math.random() - 0.5) * 5),
         color,

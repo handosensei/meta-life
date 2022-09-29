@@ -1,8 +1,6 @@
 <template>
   <div class="newsHero">
-    <h1 class="newsTitle">
-      The latest news from the <span class="purple">MetaLife</span> and beyond.
-    </h1>
+    <h1 class="newsTitle">The latest news from the <span class="purple">MetaLife</span> and beyond.</h1>
 
     <NewsFilter :categories="categories" :select-category="selectCategory" />
   </div>

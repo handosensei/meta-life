@@ -12,11 +12,11 @@ import Debug from '~/mixins/debug';
 import PageTransition from '~/mixins/pageTransition';
 import Scroll from '~/mixins/scroll';
 import SEO from '~/mixins/seo';
-import Contact from '~/components/contact/Contact.vue'
+import Contact from '~/components/contact/Contact.vue';
 
 export default {
   name: 'ContactPage',
-  
+
   components: {
     Contact,
   },

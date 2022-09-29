@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import fragmentShader from './fragment.glsl';
+import IMOG from '~/lib/imog';
 
 export default IMOG.Component('RendererMaterial', {
   options: {
@@ -11,7 +11,7 @@ export default IMOG.Component('RendererMaterial', {
 
   setup({ options }) {
     this.material = new THREE.ShaderMaterial({
-      vertexShader: /*glsl*/ `
+      vertexShader: /* glsl */ `
         varying vec2 vUv;
 
         void main() {

@@ -1,12 +1,12 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
-import loadTexture from '~/lib/three/loadTexture';
 
 import Sky from './Sky';
 import Planets from './Planets';
 import Planes from './Planes';
 import Coins from './Coins';
 import Land from './Land';
+import loadTexture from '~/lib/three/loadTexture';
+import IMOG from '~/lib/imog';
 
 export default IMOG.Component('Scene', {
   options: {

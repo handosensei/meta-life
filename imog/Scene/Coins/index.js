@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import _ from 'underscore';
+import IMOG from '~/lib/imog';
 
 import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';

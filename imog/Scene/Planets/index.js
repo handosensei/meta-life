@@ -1,7 +1,7 @@
 import * as THREE from 'three';
+import _ from 'underscore';
 import IMOG from '~/lib/imog';
 import loadGLTF from '~/lib/three/loadGLTF';
-import _ from 'underscore';
 import { map } from '~/lib/math';
 
 import TrailsBoid from '~/imog/TrailsBoid';

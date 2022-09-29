@@ -8,7 +8,7 @@
         <Icon ref="wordmark" type="wordmark" class="wordmark" />
         <div ref="button" class="preloader-button" @click="onClick">
           <svg width="205" height="61" viewBox="0 0 205 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3C0 1.34315 1.34315 0 3 0H202C203.657 0 205 1.34315 205 3V50L199.003 55.5L193.005 61H2.99999C1.34314 61 0 59.6569 0 58V3Z" fill="white"/>
+            <path d="M0 3C0 1.34315 1.34315 0 3 0H202C203.657 0 205 1.34315 205 3V50L199.003 55.5L193.005 61H2.99999C1.34314 61 0 59.6569 0 58V3Z" fill="white" />
           </svg>
           <div>
             <span>Launch the experience</span>
@@ -22,11 +22,11 @@
       </div>
 
       <Icon ref="logoOutline" type="LogoOutline" class="logoOutline" />
-      <Footer ref="footer"/>
+      <Footer ref="footer" />
     </div>
   </div>
-</template>    this.$root.on("experience:start", this.toggleAudio)
-
+</template>
+this.$root.on("experience:start", this.toggleAudio)
 
 <script>
 import { gsap } from 'gsap';
@@ -43,7 +43,7 @@ export default {
 
   components: {
     Icon,
-    Footer
+    Footer,
   },
 
   data() {
@@ -78,8 +78,8 @@ export default {
     };
 
     gsap.set(this.$refs.transform, {
-      y: 60
-    })
+      y: 60,
+    });
 
     gsap.to(progress, {
       delay: 0.5,
@@ -131,11 +131,15 @@ export default {
         //   duration: 0.4,
         //   ease: 'none'
         // }, 0)
-        .to([this.preloaderLogo, this.$refs.progress], {
-          autoAlpha: 0,
-          duration: 0.4,
-          ease: 'none',
-        }, 0)
+        .to(
+          [this.preloaderLogo, this.$refs.progress],
+          {
+            autoAlpha: 0,
+            duration: 0.4,
+            ease: 'none',
+          },
+          0
+        )
         .to(this.$refs.transform, {
           y: -20,
           duration: 1.2,
@@ -155,11 +159,9 @@ export default {
           duration: 0.4,
           ease: 'none',
         })
-        .fromTo(this.$refs.footer.$el,
-          { autoAlpha: 0 },
-          { autoAlpha: 1 })
+        .fromTo(this.$refs.footer.$el, { autoAlpha: 0 }, { autoAlpha: 1 })
         .add(() => {
-          window.canvas.props.target = 1
+          window.canvas.props.target = 1;
         }, 0)
         .restart();
     },
@@ -182,38 +184,61 @@ export default {
         .fromTo(this.wordmarChars.slice(0, 4), { yPercent: -120 }, { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5)
         .fromTo(this.wordmarChars.slice(4, 8), { yPercent: 120 }, { yPercent: 0, duration: 1, delay: 0.5, stagger: { from: 'start', amount: 0.5 } }, 0.5)
         .fromTo(this.preloaderProgress.children[0], { clipPath: from }, { clipPath: to, duration: 2, ease: 'linear' }, 0.5)
-        .fromTo(this.preloaderProgress.children[1], { drawSVG: '0%' }, { drawSVG: '100%', duration: 1 }, 0)
-        // .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5);
+        .fromTo(this.preloaderProgress.children[1], { drawSVG: '0%' }, { drawSVG: '100%', duration: 1 }, 0);
+      // .fromTo(this.splitSubtitle.chars, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1, stagger: { from: 'edges', amount: 0.5 } }, 0.5);
     },
 
     leave(done) {
-      const bounds = this.$refs.wordmark.$el.getBoundingClientRect()
-      gsap.timeline({
-        paused: true,
-        onComplete: () => {
-          this.setAssetsPreloaded();
-          this.setPreloaderVisible(false);
-          done();
-        }
-      }).to(this.$refs.button, {
-        autoAlpha: 0,
-        duration: 0.2,
-        ease: 'none'
-      }, 0).to(this.$refs.wordmark.$el, {
-        y: (bounds.top + bounds.height + 50) * -1,
-        duration: 1.75,
-        ease: 'expo.inOut'
-      }, 0).to(['main', '.header'], {
-        autoAlpha: 1,
-        duration: 0.4,
-        delay: 0.25
-      }, 1.25).to(this.$el, {
-        autoAlpha: 0,
-        duration: 0.2,
-        ease: 'none'
-      }, 1.25).add(() => {
-        window.canvas.props.target = 2
-      }, 0.35).restart()
+      const bounds = this.$refs.wordmark.$el.getBoundingClientRect();
+      gsap
+        .timeline({
+          paused: true,
+          onComplete: () => {
+            this.setAssetsPreloaded();
+            this.setPreloaderVisible(false);
+            done();
+          },
+        })
+        .to(
+          this.$refs.button,
+          {
+            autoAlpha: 0,
+            duration: 0.2,
+            ease: 'none',
+          },
+          0
+        )
+        .to(
+          this.$refs.wordmark.$el,
+          {
+            y: (bounds.top + bounds.height + 50) * -1,
+            duration: 1.75,
+            ease: 'expo.inOut',
+          },
+          0
+        )
+        .to(
+          ['main', '.header'],
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            delay: 0.25,
+          },
+          1.25
+        )
+        .to(
+          this.$el,
+          {
+            autoAlpha: 0,
+            duration: 0.2,
+            ease: 'none',
+          },
+          1.25
+        )
+        .add(() => {
+          window.canvas.props.target = 2;
+        }, 0.35)
+        .restart();
     },
 
     ...mapActions('app', ['setAssetsPreloaded', 'setHasPreloader', 'setPreloaderVisible']),

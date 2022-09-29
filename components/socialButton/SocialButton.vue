@@ -38,27 +38,26 @@ export default {
 
     name: {
       type: String,
-      default: ''
+      default: '',
     },
     icon: {
       type: String,
-      default: ''
+      default: '',
     },
     theme: {
       type: String,
-      default: 'light'
-    }
+      default: 'light',
+    },
   },
 
   computed: {
     type() {
-      return this.href ? this.href.substring(0, 4) === 'http' ? 'a' : 'NuxtLink' : 'button';
-    }
-  }
-}
+      return this.href ? (this.href.substring(0, 4) === 'http' ? 'a' : 'NuxtLink') : 'button';
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import './SocialButton.scss';
 </style>
-

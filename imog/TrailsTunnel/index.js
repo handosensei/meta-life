@@ -1,9 +1,8 @@
 import _ from 'underscore';
 import * as THREE from 'three';
+import Line from './Line';
 import IMOG from '~/lib/imog';
 import { map } from '~/lib/math';
-
-import Line from './Line';
 
 export default IMOG.Component('TrailsTunnel', {
   options: {

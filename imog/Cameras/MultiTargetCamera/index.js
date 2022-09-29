@@ -1,6 +1,8 @@
 import _ from 'underscore';
 import gsap from 'gsap';
 import * as THREE from 'three';
+import { SimplexNoise } from 'simplex-noise';
+import * as data from './data';
 import IMOG from '~/lib/imog';
 import { lerp, clamp } from '~/lib/math';
 
@@ -8,11 +10,7 @@ import useWindowSize from '~/lib/imog/use/windowSize';
 import useMouse from '~/lib/imog/use/mouse';
 import useSpring from '~/lib/imog/use/spring';
 
-import * as data from './data';
-
 const wP = new THREE.Vector3();
-
-import { SimplexNoise } from 'simplex-noise';
 const simplex = new SimplexNoise();
 const rand = (x, y) => simplex.noise2D(x, y);
 

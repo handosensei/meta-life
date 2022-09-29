@@ -1,6 +1,9 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
 import _ from 'underscore';
+import { SimplexNoise } from 'simplex-noise';
+import VelocityTrailsMaterial from './VelocityTrailsMaterial';
+import VelocityPointsMaterial from './VelocityPointsMaterial';
+import IMOG from '~/lib/imog';
 import { map } from '~/lib/math';
 
 import useMouse from '~/lib/imog/use/mouse';
@@ -10,10 +13,7 @@ import TrailsTunnel from '~/imog/TrailsTunnel';
 import AmbientLight from '~/imog/AmbientLight';
 
 import FresnelMaterial from '~/imog/_Shared/FresnelMaterial';
-import VelocityTrailsMaterial from './VelocityTrailsMaterial';
-import VelocityPointsMaterial from './VelocityPointsMaterial';
 
-import { SimplexNoise } from 'simplex-noise';
 const simplex = new SimplexNoise();
 const rand = (x, y) => simplex.noise2D(x, y);
 

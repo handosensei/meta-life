@@ -1,7 +1,6 @@
 import * as THREE from 'three';
-import IMOG from '~/lib/imog';
-
 import { Sky } from './SkyObject';
+import IMOG from '~/lib/imog';
 
 const v = new THREE.Vector3();
 

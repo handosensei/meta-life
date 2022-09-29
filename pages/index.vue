@@ -60,7 +60,7 @@ export default {
   watch: {
     activeSection: 'onSectionChange',
     preloaderVisible: 'onPageReady',
-    $route: 'onRouteChange'
+    $route: 'onRouteChange',
   },
 
   created() {
@@ -79,7 +79,7 @@ export default {
     }
 
     if (this.$route.hash === '#gallery') {
-      this.onRouteChange(this.$route)
+      this.onRouteChange(this.$route);
     }
   },
 
@@ -88,7 +88,7 @@ export default {
   },
 
   methods: {
-    onRouteChange (route) {
+    onRouteChange(route) {
       if (route.hash === '#gallery') {
         const galleryItem = this.chapters[1].sections[0].component.galleryItems[0];
         this.setActiveChapter(this.chapters[1]);

@@ -4,7 +4,7 @@
       <NewsArticleHero :article="article" data-section />
       <NewsArticle :article="article" data-section />
       <NewsArticleFeed :news="news" data-section />
-      <BackToExperience data-section /> 
+      <BackToExperience data-section />
     </div>
   </main>
 </template>
@@ -24,7 +24,6 @@ import NewsArticle from '~/components/newsArticle/NewsArticle.vue';
 import NewsArticleHero from '~/components/newsArticleHero/NewsArticleHero.vue';
 import NewsArticleFeed from '~/components/newsArticleFeed/NewsArticleFeed.vue';
 
-
 export default {
   name: 'NewsPage',
 
@@ -37,25 +36,24 @@ export default {
 
   mixins: [Debug, PageTransition, Scroll, SEO],
 
-  async asyncData ({ query, params, $datocmsClient }) {
+  async asyncData({ query, params, $datocmsClient }) {
     try {
-      const preview =
-        query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN
-      const data = await $datocmsClient.getPage({ name: 'newsArticle', variables: {slug: params.id}, preview })
-      return data
+      const preview = query && query.preview === '1' && query.secret === process.env.CMS_DATOCMS_PREVIEW_TOKEN;
+      const data = await $datocmsClient.getPage({ name: 'newsArticle', variables: { slug: params.id }, preview });
+      return data;
     } catch (e) {
-      console.log(e)
-      return e
+      console.log(e);
+      return e;
     }
   },
 
-  head () {
-    const seo = this.$store.state.app.settings.site
+  head() {
+    const seo = this.$store.state.app.settings.site;
     return this.$getPageMeta({
       seo,
       type: 'news',
-      news: this.article
-    })
+      news: this.article,
+    });
   },
 
   beforeMount() {
