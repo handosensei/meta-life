@@ -56,7 +56,7 @@ export default IMOG.Component('Renderer', {
     });
     this.renderer.autoClear = false;
     this.renderer.toneMapping = THREE.CustomToneMapping;
-    this.renderer.setClearColor(0x000000, 0);
+    this.renderer.setClearColor(0x000000, 1);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
     // this.renderer.shadowMap.enabled = true;
     // this.renderer.shadowMap.type = THREE.PCFShadowMap;
@@ -278,22 +278,20 @@ export default IMOG.Component('Renderer', {
         this.renderer.clear();
         this.renderer.render(this.worldScene, this.worldCamera);
       } else {
+        // Scene
         this.renderer.setRenderTarget(this.worldTarget);
         this.renderer.clear();
-        // BG
-        this.worldCamera.layers.set(5);
-        this.screenCamera.layers.set(5);
-        this.renderer.render(this.worldScene, this.screenCamera);
-        this.screenCamera.layers.set(0);
-        // Scene
         this.worldCamera.layers.set(0);
-        // this.worldCamera.layers.enable(3);
         this.renderer.render(this.worldScene, this.worldCamera);
+
+        // Bloom
         this.renderer.setRenderTarget(this.vfxTarget);
         this.renderer.clear();
         this.worldCamera.layers.set(1);
         this.renderer.render(this.worldScene, this.worldCamera);
         this.bloomPass.render(this.$renderer, this.vfxTargetBloom, this.vfxTarget);
+
+        // Screen
         this.renderer.setRenderTarget(null);
         this.renderer.clear();
         this.renderer.render(this.screenScene, this.screenCamera);
