@@ -30,23 +30,149 @@
           "component": {
             "name": "SectionText",
             "title": "Open your eyes",
-            "text": "Explore an extraordinary and vast universe, home to wonderful environments and mysterious creatures<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
+            "text": "Explore an extraordinary and vast universe, home to a wonderful Open World filled with vibrant cities. Discover neo-futuristic architectural wonders, from impressive buildings to sacred monuments in memory of ancient divinities.<br/><br/>Take your chances in the dangerous but stunning wild regions, home to a mysterious and magical wildlife. Lose yourself to extraordinary sceneries, where jaw-dropping creatures of all species live and thrive in Meta Life.<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
             "position": "right center",
             "galleryItems": [
               {
-                "id": "creatures",
-                "category": "Creatures",
+                "id": "open-world",
+                "category": "Open World",
+                "slides": [
+                  {
+                    "title": "Astralis",
+                    "text": "Magically suspended in the sky, Astralis is the capital city of the noble Celestials, the most prestigious race in Meta Life. Home to clear lakes, hyper-modern buildings and neo-futuristic architectural spaces, Astralis never ceases to charm both visitors and locals.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/1.png",
+                        "alt": "Astralis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/1.png",
+                        "alt": "Astralis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Neopolis",
+                    "text": "Home of the Matrix Angels, Neopolis is a wonderful city of modernity and breathtaking architecture. Filled with new technologies and immense knowledge in computer engineering, The City of Hackers - as some may call it - prevails in hosting hi-tech cybernetics and industrial sciences progress.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/2.png",
+                        "alt": "Neopolis"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/2.png",
+                        "alt": "Neopolis",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Wildlings",
+                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and magical creatures near Astralis. An extraordinary adventure for those brave enough to explore, in search of exceptional resources. Incredibles sceneries and a vibrant wildlife await you.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/3.png",
+                        "alt": "The Wildlings"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/3.png",
+                        "alt": "The Wildlings",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "Home of the Cybers, a race of brilliant beings who found success and safety in the metaverse after the end of the world we know. Its marvelous structure allows for rivers and seas to connect through a magnificent and modern coastline of modern tech-filled skyscrapers. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/4.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/4.png",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "The Swamps",
+                    "text": "A dangerous area filled with exotic wildlife. Once a place of worship for ancient divinities, but nature has reclaimed its territory and made it hard to navigate for the people of Meta Life. Swamps, creatures, magical plants, wild vegetation and ancient monuments prevail. But a place of many resources and treasure for whom will dare to explore.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/5.jpeg",
+                        "alt": "The Swamps"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/5.jpeg",
+                        "alt": "The Swamps",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Tahana, City of Light",
+                    "text": "Tahana belongs to the Celestials, and was built after their will for expansion outside of Astralis. Filled with bazzling godly monuments, it owes its name to the divinities that have made it possible to erect a magical city among the clouds.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/6.png",
+                        "alt": "Tahana, City of Light"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/6.png",
+                        "alt": "Tahana, City of Light",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "C-111, Roboters Garage",
+                    "text": "Within Capital-111, a neo-dystopian representation of the Roboters’ perceived reality, can be found numerous high-end technology workshops with baffling wonders of Roboters engineering. Powered with cutting-edge AI, robotic creatures are then used for defending the city.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/7.jpg",
+                        "alt": "C-111, Roboters Garage"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/7.jpg",
+                        "alt": "C-111, Roboters Garage",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "A sky-view of the city of Cybers. Its futuristic buildings and glass windowed buildings make up for its reputation: a place of light and rebirth. New Heaven was named after its purpose to provide a new place for Cybers to thrive and escape from the world into the metaverse. Paradise found.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/8.png",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/8.png",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "wildlife",
+                "category": "Wildlife",
                 "slides": [
                   {
                     "title": "Kharan",
                     "text": "Flying dragon Celestial creature, Kharan is one of the few flying creatures in Meta Life. It features a natural celestial shield of protection, and is capable of casting heavy magical spells to annihilate enemies.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/1.png",
+                        "src": "/img/gallery/wildlife/thumb/1.png",
                         "alt": "Kharan"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/1.png",
+                        "src": "/img/gallery/wildlife/1.png",
                         "alt": "Kharan"
                       }
                     }
@@ -56,11 +182,11 @@
                     "text": "A high speed Matrix Angel creature, AI-programed to being capable of jumping to high distances and surprise enemies. Domenox also is quite a resistant creature but its sensitive areas are at mercy.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/2.png",
+                        "src": "/img/gallery/wildlife/thumb/2.png",
                         "alt": "Domenox"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/2.png",
+                        "src": "/img/gallery/wildlife/2.png",
                         "alt": "Domenox"
                       }
                     }
@@ -70,11 +196,11 @@
                     "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/3.png",
+                        "src": "/img/gallery/wildlife/thumb/3.png",
                         "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/3.png",
+                        "src": "/img/gallery/wildlife/3.png",
                         "alt": "Ariox"
                       }
                     }
@@ -85,440 +211,12 @@
                     "text": "Pronghar is a high-velocity Roboter creature, often referred to as “The Proud One”. It has the stance of a royal creature, descended from divinities, and sights of a predator. It is highly agile, fast and wares off its adversaries at great speed.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/creatures/thumb/4.png",
+                        "src": "/img/gallery/wildlife/thumb/4.png",
                         "alt": "Pronghar"
                       },
                       "highres": {
-                        "src": "/img/gallery/creatures/4.png",
+                        "src": "/img/gallery/wildlife/4.png",
                         "alt": "Pronghar"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "environments",
-                "category": "Environments",
-                "slides": [
-                  {
-                    "title": "Astralis",
-                    "text": "Magically suspended in the sky, Astralis is the capital city of the noble Celestials, the most prestigious race in Meta Life.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/2.png",
-                        "alt": "Astralis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/2.png",
-                        "alt": "Astralis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Astralis",
-                    "text": "Home to clear lakes, stylized buildings and hyper-modern architectural spaces, Astralis never stops charming both visitors and locals. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/1.jpg",
-                        "alt": "Astralis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/1.jpg",
-                        "alt": "Astralis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-
-                  {
-                    "title": "Astralis",
-                    "text": "Filled with bazzling godly monuments, it owes its name to the divinities that have made it a magical city among the clouds.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/3.png",
-                        "alt": "Astralis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/3.png",
-                        "alt": "Astralis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Celestial Stones",
-                    "text": "Astralis features the most amazing landscapes, dominated by sacred monuments: The Celestial Stones, home of beautiful spirits and receptacle of intelligence.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/4.jpeg",
-                        "alt": "The Celestial Stones"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/4.jpeg",
-                        "alt": "The Celestial Stones",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Celestial Stones",
-                    "text": "Its formidable powers allow for divine benedictions of all Celestials owing allegiance.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/5.jpeg",
-                        "alt": "The Celestial Stones"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/5.jpeg",
-                        "alt": "The Celestial Stones",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Celestial Stones",
-                    "text": "Celestial Stones may be found at various locations within and without of Astralis and other Celestial cities. They vary in shape, power and size.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Astralis/6.jpeg",
-                        "alt": "The Celestial Stones"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Astralis/6.jpeg",
-                        "alt": "The Celestial Stones",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Aurora, the Golden City",
-                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence, Capital of the rich Goldbois.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Aurora/1.png",
-                        "alt": "Aurora, the Golden City"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Aurora/1.png",
-                        "alt": "Aurora, the Golden City",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Aurora",
-                    "text": "Its excentric architecture is said to have been whispered by divinities and built in only a day, so the legend says.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Aurora/2.jpeg",
-                        "alt": "Aurora"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Aurora/2.jpeg",
-                        "alt": "Aurora",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Aurora",
-                    "text": "Aurora is home to the craziest financial and intellectual abundances, and its population is known for its high-society lifestyle. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Aurora/3.jpeg",
-                        "alt": "Aurora"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Aurora/3.jpeg",
-                        "alt": "Aurora",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Barad-Mörr",
-                    "text": "Capital city of the Burners, Barad-Môrr is a place of fire and vileness. Heat and melt prevail as its brilliant population is obsessed with forging.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Barad-Morr/1.png",
-                        "alt": "Barad-Mörr"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Barad-Morr/1.png",
-                        "alt": "Barad-Mörr",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Barad-Mörr",
-                    "text": "Filled with dust, smoke and a barely breathable atmosphere, Barad-Mörr is a place that most avoid. Its demographic inequalities have plunged elites to prosper, and the poor to survive.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Barad-Morr/2.png",
-                        "alt": "Barad-Mörr"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Barad-Morr/2.png",
-                        "alt": "Barad-Mörr",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Barad-Mörr",
-                    "text": "The Burners’ capital is a vast, highly populated megalopolis that extends on hundreds of miles. Despite its size, its population still lives in heavily packed neighborhoods.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Barad-Morr/3.png",
-                        "alt": "Barad-Mörr"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Barad-Morr/3.png",
-                        "alt": "Barad-Mörr",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "C-111",
-                    "text": "Capital of the Roboters, Capital 111 or often referred to as C-111 is a reflection of neo-dystopian architecture. Named after the number of survivors that initially built it, it is home to an incredible cyberpunk feeling.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/C-111/1.png",
-                        "alt": "C-111"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/C-111/1.png",
-                        "alt": "C-111",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "C-111",
-                    "text": "With tech noir elements of decor, neon lights and a dark ambiance, C-111 presents technology as a force that threatens our perceptions of reality.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/C-111/2.jpeg",
-                        "alt": "C-111"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/C-111/2.jpeg",
-                        "alt": "C-111",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Roboters Garage",
-                    "text": "Within Capital 111 can be found numerous high-end technology workshops with baffling wonders of Roboters engineering. Powered with cutting-edge AI, robotic creatures are then used for defense of the city.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/C-111/3.jpg",
-                        "alt": "Roboters Garage"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/C-111/3.jpg",
-                        "alt": "Roboters Garage",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Neopolis",
-                    "text": "From above, Neopolis is a wonderful city of modernity and breathtaking architecture. Home of the Matrix Angels, its hyper-modern buildings are filled with new technologies.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/neopolis/3.png",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/neopolis/3.png",
-                        "alt": "Neopolis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Neopolis",
-                    "text": "But Neopolis is also home to mysterious alleys, and neighborhoods aren’t always safe to cruise in. The City of Hackers - as some may call it - can sometimes be dangerous.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/neopolis/1.jpeg",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/neopolis/1.jpeg",
-                        "alt": "Neopolis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Neopolis",
-                    "text": "Naturally gifted with immense knowledge in computer engineering, Neopolis is home to the most amazing robotics, hi-tech cybernetics and industrial sciences progress.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/neopolis/2.png",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/neopolis/2.png",
-                        "alt": "Neopolis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven",
-                    "text": "New Heaven is home to the Cybers, a race of brilliant beings who found success in the metaverse after the end of the world we know. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/New Heaven/4.png",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/New Heaven/4.png",
-                        "alt": "New Heaven",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-
-                  {
-                    "title": "New Heaven",
-                    "text": "It connects rivers and seas through a magnificent and modern coastline of modern tech-filled skyscrapers. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/New Heaven/2.jpeg",
-                        "alt": "New Heaven",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven",
-                    "text": "Its futuristic buildings and glass-windowed buildings make up for its reputation: a place of light and revival.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/New Heaven/5.png",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/New Heaven/5.png",
-                        "alt": "New Heaven",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven",
-                    "text": "New Heaven was named after its purpose, to provide a new place for the brilliant Cybers to thrive and escape from the world into the metaverse, paradise found.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/New Heaven/1.png",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/New Heaven/1.png",
-                        "alt": "New Heaven",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "New Heaven",
-                    "text": "The Cybers may now discover and research a new way of life, open to the world with globalized and outwards-looking businesses. A flourishing city of hope.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
-                        "alt": "New Heaven"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/New Heaven/3.jpeg",
-                        "alt": "New Heaven",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Rust",
-                    "text": "Known ofr its survival-of-the-fittest living conditions, Rust is where the Roughs call home. Despite its recent technology outreach, Rust was named after what is most common to see: its rusty buildings.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Rust/3.png",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Rust/3.png",
-                        "alt": "Rust",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Rust",
-                    "text": "Dusty, iron-sighted, dystopian and deserted, Rust is prone to constant civilian anarchy. A reflection of the old world, in the metaverse.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Rust/1.jpeg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Rust/1.jpeg",
-                        "alt": "Rust",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "Rust",
-                    "text": "But groups of survivors make the best out of what they can, and their recent technological progress creates hope. Once again.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Rust/2.jpeg",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Rust/2.jpeg",
-                        "alt": "Rust",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Swamps",
-                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Swamps/1.jpeg",
-                        "alt": "The Swamps"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Swamps/1.jpeg",
-                        "alt": "The Swamps",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
-                    "title": "The Wildlings",
-                    "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/environment/Wildlings/1.png",
-                        "alt": "Rust"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/environment/Wildlings/1.png",
-                        "alt": "Rust",
-                        "fullscreen": true
                       }
                     }
                   }
@@ -543,22 +241,37 @@
             "title": "Your new life",
             "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
             "position": "center top",
+
             "galleryItems": [
               {
                 "id": "lands",
                 "category": "Lands",
                 "slides": [
                   {
-                    "title": "The Swamps",
-                    "text": "A dangerous area of wild creatures. Once a place of worship for divinities, but nature has reclaimed its territory and made it hard to navigate. Swamps, animals, magical plants, wild vegetation and ancient monuments. But a place of many ressources and treasures for whom will dare to explore.",
+                    "title": "Map of Meta Life",
+                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/environment/Swamps/1.jpeg",
-                        "alt": "Rust"
+                        "src": "/img/gallery/lands/thumbs/1.png",
+                        "alt": "Map of Meta Life"
                       },
                       "highres": {
-                        "src": "/img/gallery/environment/Swamps/1.jpeg",
-                        "alt": "Rust"
+                        "src": "/img/gallery/lands/1.png",
+                        "alt": "Map of Meta Life"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Land concept",
+                    "text": "Stunning pieces of land on which to create your own perception of Meta Life and share it with your friends, in the metaverse. Rent, lend, buy, sell, host events etc., possibilities are endless. Your home, your property, your decisions.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/lands/thumbs/2.jpeg",
+                        "alt": "Land concept"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/lands/2.jpeg",
+                        "alt": "Land concept"
                       }
                     }
                   }
@@ -569,86 +282,254 @@
                 "category": "Residences",
                 "slides": [
                   {
-                    "title": "Matrix Angel Villa",
-                    "text": "A comfortable home, with built-in new technologies and AI-powered systems allowing optimal automation of the house. Matrix Angel residences have their own AI assistant, integrated at purchase: Meyna.",
+                    "title": "Matrix Angel Penthouse",
+                    "text": "A large property made of sizable floors and an integrated futuristic playground at purchase.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/residences/thumbs/1.png",
-                        "alt": "Matrix Angel Villa"
+                        "alt": "Matrix Angel Penthouse"
                       },
                       "highres": {
                         "src": "/img/gallery/residences/1.png",
+                        "alt": "Matrix Angel Penthouse"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Matrix Angel Villa",
+                    "text": "A comfortable home, with built-in new technologies allowing for optimal automation of the house, and its own integrated AI assistant: Meyna.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/2.png",
                         "alt": "Matrix Angel Villa"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/2.png",
+                        "alt": "Matrix Angel Villa"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Matrix Angel Pyra",
+                    "text": "An architectural wonder, pure product of Matrix Angel engineering. Directly inspired from ancient divinities, the Pyra’s design offers futuristic elements of comfort.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/3.png",
+                        "alt": "Matrix Angel Pyra"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/3.png",
+                        "alt": "Matrix Angel Pyra"
                       }
                     }
                   },
                   {
                     "title": "Goldboi Palace",
-                    "text": "Goldbois houses are home to the most luxuriant pieces of furniture and decorations, with vibrant crystals, shiny materials and omnipresent gildings. The tainted glass windows, doors and walls bring in natural light, remindful of cathedrals.",
+                    "text": "Goldboi homes have the most luxuriant pieces of furniture and decorations, with vibrant crystals, shiny materials and omnipresent gildings.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/2.png",
+                        "src": "/img/gallery/residences/thumbs/4.png",
                         "alt": "Goldboi Palace"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/2.png",
+                        "src": "/img/gallery/residences/4.png",
                         "alt": "Goldboi Palace"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Goldboi Sphera",
+                    "text": "The Sphera is a specific home of the Goldboi region, meant to capture natural light and highlight its great interior. The tainted glass windows, doors and walls make it a unique house to live in.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/5.png",
+                        "alt": "Goldboi Sphera"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/5.png",
+                        "alt": "Goldboi Sphera"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Goldboi Rubyn",
+                    "text": "The Rubyn employs shapes similar to cathedrals, with very rectangular angles and a center made of precious stones. Its name comes from the color of its core piece: the Ruby.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/6.png",
+                        "alt": "Goldboi Rubyn"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/6.png",
+                        "alt": "Goldboi Rubyn"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Burner Temple",
+                    "text": "Named after its shape, the Burner Temple residence features brilliant architectural shapes and designs. A medium-sized home with lots of style.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/7.png",
+                        "alt": "Burner Temple"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/7.png",
+                        "alt": "Burner Temple"
                       }
                     }
                   },
                   {
                     "title": "Burner Pool Mansion",
-                    "text": "Mansions form Burners are brilliant architectural creations with edgy curves and series of floors allowing for amazing views and great overall comfort. They are also known for their futuristic platforms, allowing for flying vehicles to land seamlessly.",
+                    "text": "Burner Mansions, and especially those with swimming pools, are extraordinary homes, typical of the elites of Barad-Mörr. Their edgy curves, series of floors and amazing views allow for great overall comfort.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/3.png",
+                        "src": "/img/gallery/residences/thumbs/8.png",
                         "alt": "Burner Pool Mansion"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/3.png",
+                        "src": "/img/gallery/residences/8.png",
                         "alt": "Burner Pool Mansion"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Burner SkyHome",
+                    "text": "The SkyHomes are known for their futuristic platforms, allowing for flying vehicles to land seamlessly. Their shape is rather vertical and their size varies depending on the neighborhood they were implemented in.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/9.png",
+                        "alt": "Burner SkyHome"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/9.png",
+                        "alt": "Burner SkyHome"
                       }
                     }
                   },
                   {
                     "title": "Roboter Pool Villa",
-                    "text": "Roboters Villas are known for their futuristic looks, with vibrant neon lights dominating over architectural creativities. With overflowing swimming pools, these houses allow for maximum leisure while providing its owner with great technologies.",
+                    "text": "Roboters have a unique conceptual way of designing their homes, and the Pool Villa stands as one of the most luxuriant homes of the Meta Life world. With high ceilings and incredible glass openings, owners of this property can enjoy natural light at its best.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/4.png",
+                        "src": "/img/gallery/residences/thumbs/10.png",
                         "alt": "Roboter Pool Villa"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/4.png",
+                        "src": "/img/gallery/residences/10.png",
                         "alt": "Roboter Pool Villa"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboter TriHouse",
+                    "text": "The TriHouse has a unique, yet quite familiar, silhouette with triangle shapes and futuristic overall design. Its surrounding swimming pool makes it an exquisite place of residence.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/11.png",
+                        "alt": "Roboter TriHouse"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/11.png",
+                        "alt": "Roboter TriHouse"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboter N-13",
+                    "text": "The N-13 is a typical Roboters residence, with glass-built openings and great volumes of space. Despite its smaller swimming pool, it still offers amazing overall comfort.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/12.png",
+                        "alt": "Roboter N-13"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/12.png",
+                        "alt": "Roboter N-13"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rough Metallion",
+                    "text": "The Metallion is common-sighted in and around Rust, the capital of Roughs. Despite its rusty and rustic looks, it remains quite comfortable.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/13.png",
+                        "alt": "Rough Metallion"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/13.png",
+                        "alt": "Rough Metallion"
                       }
                     }
                   },
                   {
                     "title": "Rough Favela House",
-                    "text": "The Rough’s Favela Houses are more often than not steel-made constructions with a dominating use of metal sheets, retrieved objects and wobbly pieces of furniture. Despite their rustic looks, Rough homes are comfortable, cosy and welcoming. ",
+                    "text": "Built solely from retrieved objects, pieces of furniture and materials, the Favela Houses are the most affordable houses in Meta Life. Their location on the outskirts of Rust, also make them less attractive to the general market.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/5.png",
+                        "src": "/img/gallery/residences/thumbs/14.png",
                         "alt": "Rough Favela House"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/5.png",
+                        "src": "/img/gallery/residences/14.png",
                         "alt": "Rough Favela House"
                       }
                     }
                   },
                   {
-                    "title": "Celestial Mansion",
-                    "text": "Celestial Mansions are among the most expensive, luxurious and high-end houses in Meta Life. Providing their owners with incredibly unique architecture, bazzling swimming pools and immense parking spaces. An ideal purchase for those who can afford it.",
+                    "title": "Rough Verti",
+                    "text": "The Verti was named after its vertical shape and design. Often called ‘Wobblies’, these residences have lasted through time and are affordable pieces of housing.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/6.png",
-                        "alt": "Celestial Mansion"
+                        "src": "/img/gallery/residences/thumbs/15.png",
+                        "alt": "Rough Verti"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/6.png",
-                        "alt": "Celestial Mansion"
+                        "src": "/img/gallery/residences/15.png",
+                        "alt": "Rough Verti"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celestial SkyMansion",
+                    "text": "The Celestial SkyMansion is a common house in Astralis and Tahana, cities of Celestials. Its high-end designs and looks, as well as its overall luxuriant comfort make up for its hefty price. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/16.png",
+                        "alt": "Celestial SkyMansion"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/16.png",
+                        "alt": "Celestial SkyMansion"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celestial Yachtia",
+                    "text": "The Yachtias are among the most expensive, luxurious and high-end houses in Meta Life. Providing their owners with incredibly unique architecture, bazzling swimming pools and immense parking spaces.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/17.png",
+                        "alt": "Celestial Yachtia"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/17.png",
+                        "alt": "Celestial Yachtia"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celestial Future Penthouse",
+                    "text": "The Future Penthouse, as its name indicates, is built vertically and features futuristic lines and edges, allowing for a premium stay or residency. An ideal purchase for those who can afford it.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/18.png",
+                        "alt": "Celestial Future Penthouse"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/18.png",
+                        "alt": "Celestial Future Penthouse"
                       }
                     }
                   }

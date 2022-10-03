@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { mapState } from 'vuex';
 
 import Icon from '~/components/elements/Icon.vue';
@@ -59,20 +60,27 @@ export default {
     gsap.to(this.$refs.galleryImage, { rotate: 360, ease: 'linear', repeat: -1, duration: 20 });
     gsap.to(this.$refs.galleryMask, { rotate: -360, ease: 'linear', repeat: -1, duration: 20 });
 
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 768px)': () => {
+        this.sphereSize = 25;
+      },
+      '(max-width: 767px)': () => {
+        this.sphereSize = 0;
+      },
+    });
+
     for (let i = 0; i < this.galleryItems.length; i++) {
       this.bigCircleAnimation[i] = gsap.timeline();
       this.bigCircleAnimation[i].fromTo(
         [this.galleryBigSphere[i * 2], this.galleryBigSphere[i * 2 + 1]],
 
         {
-          attr: {
-            r: 45,
-          },
+          attr:{r:  this.sphereSize + 30}
         },
         {
-          attr: {
-            r: 55,
-          },
+          attr:{ r: this.sphereSize + 40},
           ease: 'power1.inOut',
           duration: 1,
           yoyo: true,
@@ -131,9 +139,13 @@ export default {
           delay: 0.15,
         });
         gsap.to(this.$refs.label[id], { y: 20, duration: 0.75, ease: 'expo.out' });
-        gsap.to(circles, {
+        gsap.fromTo(circles, {
           attr: {
-            r: 72,
+              r: this.sphereSize,
+            },
+        },{
+          attr: {
+            r: this.sphereSize + 47,
             duration: 0.75,
             ease: 'expo.out',
           },
@@ -146,9 +158,14 @@ export default {
           },
         });
 
-        gsap.to(bigCircles, {
+        gsap.fromTo(bigCircles, {
           attr: {
-            r: 102,
+              r: this.sphereSize + 30,
+            },
+          },
+         {
+          attr: {
+            r: this.sphereSize + 80,
             duration: 0.75,
             ease: 'expo.out',
           },

@@ -1,6 +1,6 @@
 <template>
   <FocusLock :disabled="!galleryOpen || menuOpen">
-    <div class="galleryOverlay">
+    <div v-touch:swipe.left="()=>{changeSlide(-1)}" v-touch:swipe.right="()=>{changeSlide(-1)}" class="galleryOverlay">
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
         <div ref="content" :key="activeSlide.image.highres.scr" class="content">
           <div class="head">
@@ -12,6 +12,8 @@
       </transition>
 
       <div class="backgroundImages" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''">
+        <Icon class="navButton left" type="ChevronLeft" @click.native="changeSlide(-1)"/>
+        <Icon class="navButton right" type="ChevronRight" @click.native="changeSlide(1)"/>
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
           <img
             :key="activeSlide.image.highres.src"
@@ -30,19 +32,6 @@
           <Icon class="closeIcon" type="Close" />
           Back to the Experience
         </button>
-
-        <div class="navButtons">
-          <button
-            v-for="(slide, index) in activeItem.slides"
-            :key="`${index}-${slide.title}`"
-            class="navButton"
-            :class="{ isActive: activeSlide === slide }"
-            type="button"
-            @click="setActiveSlide(slide)"
-          >
-            <img class="navImage" :src="slide.image.thumb.src" :alt="slide.image.thumb.alt" />
-          </button>
-        </div>
       </nav>
     </div>
   </FocusLock>
@@ -64,7 +53,7 @@ export default {
     FocusLock,
     Icon,
     IconButton,
-  },
+},
 
   props: {
     activeItem: {
@@ -114,29 +103,34 @@ export default {
       this.activeSlide = slide;
     },
 
-    onKeyDown({ key }) {
-      if (key === 'Escape' && !this.menuOpen) {
-        this.$root.$emit('galleryOverlay:toggle', '');
-        this.setTheme(this.activeSection.theme);
-      }
-
+    changeSlide(direction) {
       const currentIndex = this.activeItem.slides.indexOf(this.activeSlide, 0);
-
-      if (key === 'ArrowRight' || key === 'ArrowDown') {
+      if(direction === 1){
         const nextIndex = (currentIndex + 1) % this.activeItem.slides.length;
         const nextItem = this.activeItem.slides[nextIndex];
 
         this.setActiveSlide(nextItem);
-      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+      } else if (direction === -1){
         let prevIndex;
         if (currentIndex === 0) {
           prevIndex = this.activeItem.slides.length - 1;
         } else {
           prevIndex = currentIndex - 1;
         }
-
         const prevItem = this.activeItem.slides[prevIndex];
         this.setActiveSlide(prevItem);
+      }
+    },
+
+    onKeyDown({ key }) {
+      if (key === 'Escape' && !this.menuOpen) {
+        this.$root.$emit('galleryOverlay:toggle', '');
+        this.setTheme(this.activeSection.theme);
+      }
+      if (key === 'ArrowRight' || key === 'ArrowDown') {
+        this.changeSlide(1)
+      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        this.changeSlide(-1)
       }
     },
 
@@ -166,7 +160,7 @@ export default {
         linesClass: 'text-line',
       });
 
-      const tl = gsap.timeline({ defaults: { duration: 1, ease: 'expo.out', willChange: 'transform' } });
+      const tl = gsap.timeline({ defaults: { duration: 1, ease: 'expo.out' } });
 
       tl.fromTo([title, subtitle], { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, stagger: 0.2 }, 0.5).fromTo(
         this.splitText.lines,

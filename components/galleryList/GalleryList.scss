@@ -1,0 +1,42 @@
+h3 {
+  font: 400 30px/0.9 'Matter';
+  letter-spacing: -0.01em;
+  color: white;
+  text-align: inherit;
+
+  @include minTablet {
+    font: 400 40px/0.9 'Matter';
+  }
+}
+
+.galleryContent {
+  margin-top: 20em;
+  padding-left: 6em;
+  padding-right: 6em;
+  padding-bottom: 6em;
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+
+.galleryList {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.galleryImgList {
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 2em;
+  @include minTablet {
+    padding: 0 2rem;
+  }
+}
+
+.galleryImg {
+  width: 32em;
+}

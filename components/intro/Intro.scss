@@ -15,11 +15,12 @@
   bottom: 41px;
   opacity: 0;
   visibility: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30vh;
 
   @include minTablet {
-    left: 50%;
     bottom: 122px;
-    transform: translateX(-50%);
   }
 
   span {
