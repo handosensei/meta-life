@@ -30,7 +30,7 @@
           "component": {
             "name": "SectionText",
             "title": "Open your eyes",
-            "text": "Explore an extraordinary and vast universe, home to a wonderful Open World filled with vibrant cities. Discover neo-futuristic architectural wonders, from impressive buildings to sacred monuments in memory of ancient divinities.<br/><br/>Take your chances in the dangerous but stunning wild regions, home to a mysterious and magical wildlife. Lose yourself to extraordinary sceneries, where jaw-dropping creatures of all species live and thrive in Meta Life.<br /><br /><span class=\"white\">Where will you begin your journey?</span>",
+            "text": "Explore an extraordinary and vast universe, home to a wonderful Open World filled with vibrant cities. Discover neo-futuristic architectural wonders, from impressive buildings to sacred monuments in memory of ancient divinities.<br/><br/><span class=\"white\">Where will you begin your journey?</span>",
             "position": "right center",
             "galleryItems": [
               {
@@ -241,7 +241,12 @@
             "title": "Your new life",
             "text": "Own pieces of land to use their ressources. Build your new home in the metaverse to settle in Meta Life. <br /><br /> Meet new friends, attend events, host parties. Have fun in Meta life’s rich social life.",
             "position": "center top",
-
+            "button": {
+              "name": "Whitepaper",
+              "icon": "Plus",
+              "href": "https://google.com",
+              "theme": "dark"
+            },
             "galleryItems": [
               {
                 "id": "lands",

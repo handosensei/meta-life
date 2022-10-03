@@ -64,10 +64,10 @@ export default {
 
     ScrollTrigger.matchMedia({
       '(min-width: 768px)': () => {
-        this.sphereSize = 25;
+        this.sphereSize = 30;
       },
       '(max-width: 767px)': () => {
-        this.sphereSize = 0;
+        this.sphereSize = -10;
       },
     });
 
@@ -77,10 +77,10 @@ export default {
         [this.galleryBigSphere[i * 2], this.galleryBigSphere[i * 2 + 1]],
 
         {
-          attr:{r:  this.sphereSize + 30}
+          attr:{r:  this.sphereSize + 25}
         },
         {
-          attr:{ r: this.sphereSize + 40},
+          attr:{ r: this.sphereSize + 35},
           ease: 'power1.inOut',
           duration: 1,
           yoyo: true,
@@ -91,7 +91,7 @@ export default {
 
     this.sound = new Audio('/audio/itemHover.mp3');
 
-    this.buttonAnimation = gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2 });
+    this.buttonAnimation = gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2.5 });
     for (let i = 0; i < this.galleryItems.length; i++) {
       this.buttonAnimation.call(
         () => {
@@ -138,14 +138,14 @@ export default {
           ease: 'expo.out',
           delay: 0.15,
         });
-        gsap.to(this.$refs.label[id], { y: 20, duration: 0.75, ease: 'expo.out' });
+        gsap.to(this.$refs.label[id], { y: 10, duration: 0.75, ease: 'expo.out' });
         gsap.fromTo(circles, {
           attr: {
-              r: this.sphereSize,
+              r: this.sphereSize + 10,
             },
         },{
           attr: {
-            r: this.sphereSize + 47,
+            r: this.sphereSize + 42,
             duration: 0.75,
             ease: 'expo.out',
           },
@@ -160,12 +160,12 @@ export default {
 
         gsap.fromTo(bigCircles, {
           attr: {
-              r: this.sphereSize + 30,
+              r: this.sphereSize + 25,
             },
           },
          {
           attr: {
-            r: this.sphereSize + 80,
+            r: this.sphereSize + 75,
             duration: 0.75,
             ease: 'expo.out',
           },
@@ -204,20 +204,23 @@ export default {
             ease: 'expo.out',
           },
           onComplete: () => {
-            gsap.fromTo(
-              this.$refs.gallerySphere[id].$el.lastChild,
-              {
-                drawSVG: '-100%',
-                rotate: 90,
-                transformOrigin: 'center',
-              },
-              {
-                drawSVG: '0%',
-                rotate: 270,
-                duration: 1.5,
-                ease: 'expo.out',
-              }
-            );
+          
+              gsap.fromTo(
+                this.$refs.gallerySphere[id].$el?.lastChild,
+                {
+                  drawSVG: '-100%',
+                  rotate: 90,
+                  transformOrigin: 'center',
+                },
+                {
+                  drawSVG: '0%',
+                  rotate: 270,
+                  duration: 1.5,
+                  ease: 'expo.out',
+                }
+              );
+            
+            
           },
         });
 
