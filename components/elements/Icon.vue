@@ -24,11 +24,15 @@ import Tunnel from '~/assets/svg/tunnel.svg?inline=true';
 import Twitter from '~/assets/svg/twitter.svg?inline=true';
 import Wordmark from '~/assets/svg/wordmark.svg?inline=true';
 import BigSphere from '~/assets/svg/bigSphere.svg?inline=true';
+import ChevronLeft from '~/assets/svg/chevronLeft.svg?inline=true';
+import ChevronRight from '~/assets/svg/chevronRight.svg?inline=true';
 
 export default {
   name: 'IconComponent',
 
   components: {
+    ChevronRight,
+    ChevronLeft,
     BigSphere,
     Close,
     CloseButton,
