@@ -174,8 +174,13 @@ export default {
           { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1, ease: 'expo.inOut' },
           0
         )
-        .fromTo(el.querySelector('.nav'), { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 0.5, ease: 'expo.out' }, '-=0.5')
-        .fromTo(el.querySelector('.content').children, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, stagger: 0.2, ease: 'expo.inOut' }, '<')
+        .fromTo(
+          el.querySelector('.nav'),
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' },
+          { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 0.5, ease: 'expo.out' },
+          '-=0.5'
+        )
+        .fromTo(el.querySelector('.content').children, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, stagger: 0.2, ease: 'expo.inOut' }, '<');
     },
 
     onGalleryOverlayLeave(el, done) {

@@ -29,7 +29,7 @@ export default {
   modules: ['@nuxt/image', '@nuxtjs/svg', 'nuxt-polyfill'],
 
   // (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/global.js', ssr: false }, { src: '~/plugins/datocmsClient.js' }, { src: '~/plugins/inject.js' },  { src: '~/plugins/vue-touch', ssr: false },],
+  plugins: [{ src: '~/plugins/global.js', ssr: false }, { src: '~/plugins/datocmsClient.js' }, { src: '~/plugins/inject.js' }, { src: '~/plugins/vue-touch', ssr: false }],
 
   // (https://www.npmjs.com/package/nuxt-polyfill)
   polyfill: {
