@@ -6,8 +6,8 @@
 
     <div class="sub">
       <span>visit : <a class="subLink" href="https://meta-legends.com" target="_blank" rel="noreferrer">meta-legends.com</a></span>
-      <span class="mobile-none" style="margin-left: 15px; opacity: 0.2"><NuxtLink to="/privacy-policy" class="subLink">Privacy Policy</NuxtLink></span>
-      <span class="mobile-none" style="margin-left: 5px; opacity: 0.2"><NuxtLink to="/terms-conditions" class="subLink">Terms &amp; Conditions</NuxtLink></span>
+      <span class="mobile-none" style="margin-left: 15px; opacity: 0.4"><a href="https://meta-life-1.gitbook.io/legal/privacy-policy" class="subLink">Privacy Policy</a></span>
+      <span class="mobile-none" style="margin-left: 5px; opacity: 0.4"><a href="https://meta-life-1.gitbook.io/legal/" class="subLink">Terms &amp; Conditions</a></span>
     </div>
   </div>
 </template>
