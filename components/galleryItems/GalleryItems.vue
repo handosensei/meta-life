@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { mapState } from 'vuex';
 
 import Icon from '~/components/elements/Icon.vue';
@@ -64,12 +64,13 @@ export default {
 
     ScrollTrigger.matchMedia({
       '(min-width: 768px)': () => {
-        this.sphereSize = 30;
+        this.isMobile = false;
       },
       '(max-width: 767px)': () => {
-        this.sphereSize = -10;
+        this.isMobile = true;
       },
     });
+    this.buttonAnimation = gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2.5 });
 
     for (let i = 0; i < this.galleryItems.length; i++) {
       this.bigCircleAnimation[i] = gsap.timeline();
@@ -77,22 +78,17 @@ export default {
         [this.galleryBigSphere[i * 2], this.galleryBigSphere[i * 2 + 1]],
 
         {
-          attr:{r:  this.sphereSize + 25}
+          attr: { r: this.isMobile ? 40: 65 },
         },
         {
-          attr:{ r: this.sphereSize + 35},
+          attr: { r: this.isMobile ? 45: 80 },
           ease: 'power1.inOut',
           duration: 1,
           yoyo: true,
           repeat: -1,
         }
       );
-    }
 
-    this.sound = new Audio('/audio/itemHover.mp3');
-
-    this.buttonAnimation = gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2.5 });
-    for (let i = 0; i < this.galleryItems.length; i++) {
       this.buttonAnimation.call(
         () => {
           this.onMouseEnter(i, false);
@@ -107,7 +103,13 @@ export default {
         null,
         '+=2'
       );
+
+      gsap.set(this.$refs.label[i], { y: this.isMobile ? -20 : 10});
+
     }
+
+    this.sound = new Audio('/audio/itemHover.mp3');
+
   },
 
   beforeDestroy() {
@@ -138,45 +140,52 @@ export default {
           ease: 'expo.out',
           delay: 0.15,
         });
-        gsap.to(this.$refs.label[id], { y: 10, duration: 0.75, ease: 'expo.out' });
-        gsap.fromTo(circles, {
-          attr: {
-              r: this.sphereSize + 10,
+        gsap.to(this.$refs.label[id], { y: this.isMobile ? -20 : 20, duration: 0.75, ease: 'expo.out' });
+        gsap.fromTo(
+          circles,
+          {
+            attr: {
+              r:  this.isMobile ? 25: 55,
             },
-        },{
-          attr: {
-            r: this.sphereSize + 42,
-            duration: 0.75,
-            ease: 'expo.out',
           },
-          onComplete: () => {
-            gsap.fromTo(
-              this.$refs.gallerySphere[id].$el.lastChild,
-              { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-              { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-            );
-          },
-        });
+          {
+            attr: {
+              r: this.isMobile ? 35: 70,
+              duration: 0.75,
+              ease: 'expo.out',
+            },
+            onComplete: () => {
+              gsap.fromTo(
+                this.$refs.gallerySphere[id].$el.lastChild,
+                { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+                { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+              );
+            },
+          }
+        );
 
-        gsap.fromTo(bigCircles, {
-          attr: {
-              r: this.sphereSize + 25,
+        gsap.fromTo(
+          bigCircles,
+          {
+            attr: {
+              r: this.isMobile ? 40: 65
             },
           },
-         {
-          attr: {
-            r: this.sphereSize + 75,
-            duration: 0.75,
-            ease: 'expo.out',
-          },
-          onComplete: () => {
-            gsap.fromTo(
-              this.$refs.galleryBigSphere[id].$el.lastChild,
-              { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-              { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-            );
-          },
-        });
+          {
+            attr: {
+              r: this.isMobile ? 50: 100,
+              duration: 0.75,
+              ease: 'expo.out',
+            },
+            onComplete: () => {
+              gsap.fromTo(
+                this.$refs.galleryBigSphere[id].$el.lastChild,
+                { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+                { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+              );
+            },
+          }
+        );
 
         if (this.audio && sound) {
           this.sound.currentTime = 0;
@@ -196,37 +205,34 @@ export default {
           duration: 0.65,
           ease: 'expo.out',
         });
-        gsap.to(this.$refs.label[id], { y: 0, duration: 0.75, ease: 'expo.out' });
+        gsap.to(this.$refs.label[id], { y: this.isMobile ? -20 : 10, duration: 0.75, ease: 'expo.out' });
         gsap.to(circles, {
           attr: {
-            r: 25,
+            r: this.isMobile ? 25: 50,
             duration: 0.75,
             ease: 'expo.out',
           },
           onComplete: () => {
-          
-              gsap.fromTo(
-                this.$refs.gallerySphere[id].$el?.lastChild,
-                {
-                  drawSVG: '-100%',
-                  rotate: 90,
-                  transformOrigin: 'center',
-                },
-                {
-                  drawSVG: '0%',
-                  rotate: 270,
-                  duration: 1.5,
-                  ease: 'expo.out',
-                }
-              );
-            
-            
+            gsap.fromTo(
+              this.$refs.gallerySphere[id].$el?.lastChild,
+              {
+                drawSVG: '-100%',
+                rotate: 90,
+                transformOrigin: 'center',
+              },
+              {
+                drawSVG: '0%',
+                rotate: 270,
+                duration: 1.5,
+                ease: 'expo.out',
+              }
+            );
           },
         });
 
         gsap.to(bigCircles, {
           attr: {
-            r: 55,
+            r: this.isMobile ? 50: 65,
             duration: 0.75,
             ease: 'expo.out',
           },

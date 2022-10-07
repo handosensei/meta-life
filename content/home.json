@@ -30,7 +30,7 @@
           "component": {
             "name": "SectionText",
             "title": "Open your eyes",
-            "text": "Explore an extraordinary and vast universe, home to a wonderful Open World filled with vibrant cities. Discover neo-futuristic architectural wonders, from impressive buildings to sacred monuments.<br/><br/>Take your chances in the dangerous but stunning wild regions, home to a mysterious wildlife. Lose yourself to extraordinary sceneries and explore new limits in a world your wildest imagination could not picture.<br/><br/><span class=\"white\">Where will you begin your journey?</span>",
+            "text": "Explore an extraordinary and vast universe, home to a wonderful Open World filled with vibrant cities. Discover neo-futuristic architectural wonders, from impressive buildings to sacred monuments.<div class='space'></div> Take your chances in the dangerous but stunning wild regions, home to a mysterious wildlife. Lose yourself to extraordinary sceneries and explore new limits in a world your wildest imagination could not picture.<br/><br/><span class=\"white\">Where will you begin your journey?</span>",
             "position": "right center",
             "galleryItems": [
               {
@@ -551,7 +551,7 @@
           "component": {
             "name": "SectionText",
             "title": "Experience the metaverse",
-            "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <br /><br /> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
+            "text": "Gear up with weapons, travel the marvelous map of Meta Life on a motorbike or purchase a shiny new armor set. <div class='space'></div> Buy, sell, stake or lend your assets to other players. The possibilities are endless.",
             "position": "center top",
             "galleryItems": [
               {

@@ -17,18 +17,27 @@
     left: 0 !important;
 
     .galleryItem:first-child {
-      top: 50vh;
+      top: 30vh;
       left: 5vw;
     }
 
     .galleryItem:nth-child(2) {
-      top: 55vh;
-      left: 48vw;
+      top: 65vh;
+      left: 38vw;
     }
 
     .galleryItem:nth-child(3) {
       top: 38vh;
       left: 60vw;
+    }
+  }
+}
+
+@include maxMobile {
+  .open-world {
+    .galleryItem:nth-child(2) {
+      top: 27vh;
+      left: 49vw;
     }
   }
 }
@@ -84,6 +93,18 @@
     &:nth-child(2) {
       top: 44vh;
       left: 60vw;
+    }
+
+    > span {
+      position: absolute;
+      bottom: 0px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 120%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      opacity: 0;
     }
   }
 }
