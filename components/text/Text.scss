@@ -66,10 +66,18 @@
 }
 
 ::v-deep .paragraph-line {
+  will-change: transform;
+
+  .space {
+    margin-bottom: 1em;
+  }
+
   @include maxMobile {
     text-align: center;
+    .space {
+      margin-bottom: 10em;
+    }
   }
-  will-change: transform;
 }
 
 .positionCenterTop {

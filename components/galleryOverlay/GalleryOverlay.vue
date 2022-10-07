@@ -1,6 +1,18 @@
 <template>
   <FocusLock :disabled="!galleryOpen || menuOpen">
-    <div v-touch:swipe.left="()=>{changeSlide(-1)}" v-touch:swipe.right="()=>{changeSlide(-1)}" class="galleryOverlay">
+    <div
+      v-touch:swipe.left="
+        () => {
+          changeSlide(-1);
+        }
+      "
+      v-touch:swipe.right="
+        () => {
+          changeSlide(-1);
+        }
+      "
+      class="galleryOverlay"
+    >
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
         <div ref="content" :key="activeSlide.image.highres.scr" class="content">
           <div class="head">
@@ -12,8 +24,8 @@
       </transition>
 
       <div class="backgroundImages" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''">
-        <Icon class="navButton left" type="ChevronLeft" @click.native="changeSlide(-1)"/>
-        <Icon class="navButton right" type="ChevronRight" @click.native="changeSlide(1)"/>
+        <Icon class="navButton left" type="ChevronLeft" @click.native="changeSlide(-1)" />
+        <Icon class="navButton right" type="ChevronRight" @click.native="changeSlide(1)" />
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
           <img
             :key="activeSlide.image.highres.src"
@@ -53,7 +65,7 @@ export default {
     FocusLock,
     Icon,
     IconButton,
-},
+  },
 
   props: {
     activeItem: {
@@ -105,12 +117,12 @@ export default {
 
     changeSlide(direction) {
       const currentIndex = this.activeItem.slides.indexOf(this.activeSlide, 0);
-      if(direction === 1){
+      if (direction === 1) {
         const nextIndex = (currentIndex + 1) % this.activeItem.slides.length;
         const nextItem = this.activeItem.slides[nextIndex];
 
         this.setActiveSlide(nextItem);
-      } else if (direction === -1){
+      } else if (direction === -1) {
         let prevIndex;
         if (currentIndex === 0) {
           prevIndex = this.activeItem.slides.length - 1;
@@ -128,9 +140,9 @@ export default {
         this.setTheme(this.activeSection.theme);
       }
       if (key === 'ArrowRight' || key === 'ArrowDown') {
-        this.changeSlide(1)
+        this.changeSlide(1);
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
-        this.changeSlide(-1)
+        this.changeSlide(-1);
       }
     },
 
