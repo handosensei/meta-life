@@ -56,11 +56,11 @@ export default {
     return {
       links: [
         { href: '/', text: 'Home', internal: true, disabled: false },
-        { href: '/news', text: 'News', internal: true, disabled: false },
+        { href: 'https://meta-life-1.gitbook.io/meta-life-news/', text: 'News', internal: false, disabled: false },
         { href: '/team', text: 'Team', internal: true, disabled: false },
         { href: '/contact', text: 'Contact', internal: true, disabled: false },
         { href: '/gallery', text: 'Gallery', internal: true, disabled: false },
-        { href: 'https://google.com/?', text: 'Whitepaper', internal: false, disabled: false },
+        { href: 'https://meta-life-1.gitbook.io/metalifewhitepaper/', text: 'Whitepaper', internal: false, disabled: false },
         { href: '#', text: 'Marketplace', internal: false, disabled: true },
       ],
       links2: [],

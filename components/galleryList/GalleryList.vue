@@ -3,17 +3,20 @@
     <div class="scroll">
       Scroll
     </div>
-    <template v-for="imgList in gallery">
-        <div v-for="(img, k) in imgList.slides" :key="img.title" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
-          <div ref="imgContainer" class="imgContainer">
-              <img class="galleryImg" :src="img.image.highres.src" :alt="img.title" />
-              <div>
-                  <h3>{{ img.title }}</h3>
-                  <p>{{ imgList.category }}</p>
-              </div>
-          </div>
-      </div>
+    <template v-for="(item, i) in Array(3).fill(0)">
+      <template v-for="imgList in gallery">
+          <div v-for="(img, k) in imgList.slides" :key="img.title + i" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
+            <div ref="imgContainer" class="imgContainer">
+                <img class="galleryImg" :src="img.image.highres.src" :alt="img.title" />
+                <div>
+                    <h3>{{ img.title }}</h3>
+                    <p>{{ imgList.category }}</p>
+                </div>
+            </div>
+        </div>
+      </template>
     </template>
+
   </div>
 </template>
 
@@ -51,13 +54,12 @@ export default {
         overwrite: 'auto',
       },
       scrollTrigger: {
-        pinSpacing: true,
         pin: true,
         scrub: 1,
         start: 'top 35%',
+        
         trigger: this.$refs.galleryContent,
-        end: "+=1000%",
-        preventOverlaps: true
+        end: "+=2700%",
       },
     });
 
@@ -113,14 +115,10 @@ export default {
         {
           y: 'random(-5, 5)',
           x: 'random(-5, 5)',
-          rotateX: 'random(-5, 5)',
-          rotateY: 'random(-5, 5)',
         },
         {
           y: 'random(-5, 5)',
           x: 'random(-5, 5)',
-          rotateX: 'random(-5, 5)',
-          rotateY: 'random(-5, 5)',
           duration: 2,
           ease: 'power2.inOut',
           repeat: -1,

@@ -41,12 +41,13 @@
   line-height: 130%;
   color: var(--color-white-08);
   margin-top: clamp(30px, 3rem, 3rem);
-
+  margin: auto;
   .isLight & {
     color: var(--color-dark-05);
   }
 
   @include maxMobile {
+    margin-top: clamp(25px, 2rem, 2rem);
     width: clamp(230px, 26rem, 90%);
     font-size: clamp(12px, 1rem, 20px);
     color: rgba(255, 255, 255, 0.85);
@@ -63,6 +64,7 @@
 
 ::v-deep .white {
   color: white;
+  font-weight: 600;
 }
 
 ::v-deep .paragraph-line {
@@ -75,7 +77,7 @@
   @include maxMobile {
     text-align: center;
     .space {
-      margin-bottom: 10em;
+      margin-bottom: 19vh;
     }
   }
 }

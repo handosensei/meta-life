@@ -247,20 +247,6 @@
                 "category": "Lands",
                 "slides": [
                   {
-                    "title": "Map of Meta Life",
-                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/lands/thumbs/1.png",
-                        "alt": "Map of Meta Life"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/lands/1.png",
-                        "alt": "Map of Meta Life"
-                      }
-                    }
-                  },
-                  {
                     "title": "Land concept",
                     "text": "Stunning pieces of land on which to create your own perception of Meta Life and share it with your friends, in the metaverse. Rent, lend, buy, sell, host events etc., possibilities are endless. Your home, your property, your decisions.",
                     "image": {
@@ -271,6 +257,20 @@
                       "highres": {
                         "src": "/img/gallery/lands/2.jpeg",
                         "alt": "Land concept"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Map of Meta Life",
+                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/lands/thumbs/1.png",
+                        "alt": "Map of Meta Life"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/lands/1.png",
+                        "alt": "Map of Meta Life"
                       }
                     }
                   }
@@ -734,7 +734,7 @@
             "button": {
               "name": "Tokenomics",
               "icon": "Plus",
-              "href": "https://google.com",
+              "href": "https://meta-life-1.gitbook.io/metalifewhitepaper/tokenomics",
               "theme": "dark"
             }
           }

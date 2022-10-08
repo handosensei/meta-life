@@ -1,9 +1,9 @@
 <template>
   <div class="socials">
-    <a href="#" class="discordIcon" target="_blank" rel="noreferrer" aria-label="Discord">
+    <a href="https://discord.gg/meta-life" class="discordIcon" target="_blank" rel="noreferrer" aria-label="Discord">
       <Icon type="Discord" />
     </a>
-    <a href="#" class="twitterIcon" target="_blank" rel="noreferrer" aria-label="Twitter">
+    <a href="https://twitter.com/metalegendsnft" class="twitterIcon" target="_blank" rel="noreferrer" aria-label="Twitter">
       <Icon type="Twitter" />
     </a>
     <span>Join the</span> community
