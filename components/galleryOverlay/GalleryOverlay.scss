@@ -93,7 +93,7 @@
   position: absolute;
   width: 60%;
   top: 50%;
-  transform: translateY(-50%) !important;
+  transform: translateY(-50%);
   right: 0;
 
   @include maxMobile {
@@ -101,6 +101,8 @@
       min-width: 100%;
       min-height: 100%;
       object-fit: cover;
+      top: 0%;
+      transform: none;
     }
     width: 95%;
     top: 25%;
