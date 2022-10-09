@@ -93,13 +93,13 @@
   position: absolute;
   width: 60%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
   right: 0;
 
   @include maxMobile {
     width: 95%;
     top: 25%;
-    transform: translateY(-25%);
+    transform: translateY(-25%) !important;
     margin: auto;
   }
 
@@ -112,7 +112,7 @@
       width: 90%;
       left: 50%;
       top: 25%;
-      transform: translate(-50%, -25%);
+      transform: translate(-50%, -25%) !important;
       margin: auto;
       min-width: unset;
       min-height: unset;
