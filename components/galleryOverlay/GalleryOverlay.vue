@@ -14,7 +14,7 @@
       class="galleryOverlay"
     >
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
-        <div ref="content" :key="activeSlide.image.highres.scr" class="content">
+        <div ref="content" :key="typeof activeSlide?.image?.highres?.src !== 'undefined'? activeSlide.image.highres.src : activeSlide.video" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
             <!-- <div class="subtitle">{{ activeItem.category }}</div> -->
@@ -23,20 +23,20 @@
         </div>
       </transition>
 
-      <div class="backgroundImages" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''">
+      <div class="backgroundImages" :class="activeSlide?.image?.highres?.fullscreen ? 'fullscreen' : ''">
         <Icon class="navButton left" type="ChevronLeft" @click.native="changeSlide(-1)" />
         <Icon class="navButton right" type="ChevronRight" @click.native="changeSlide(1)" />
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
           <img
-            v-if="typeof activeSlide.image !== 'undefined'"  
+            v-if="typeof activeSlide?.image !== 'undefined'"
             :key="activeSlide.image.highres.src"
             class="backgroundImage"
             :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''"
             :src="activeSlide.image.highres.src"
             :alt="activeSlide.image.highres.alt"
           />
-          <video v-else>
-            <source :src="activeSlide.video.src" type="video/mp4" class="backgroundImage" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''" />
+          <video v-else :key="activeSlide.video"  class='videoContainer' controls muted autoplay loop controlsList="nodownload noremoteplayback noplaybackrate" disablePictureInPicture>
+            <source :src="activeSlide.video" type="video/mp4">
           </video>
         </transition>
       </div>
@@ -102,7 +102,7 @@ export default {
 
     this.$nuxt.$emit(
       'assetsLoader:load',
-      this.activeItem.slides.map(({ image }) => image.highres.src)
+      this.activeItem.slides.map((img) => typeof img?.image?.highres?.src !== 'undefined'? img.image.highres.src : img.video)
     );
   },
 

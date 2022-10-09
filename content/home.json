@@ -178,45 +178,50 @@
                     }
                   },
                   {
-                    "title": "Domenox",
-                    "text": "A high speed Matrix Angel creature, AI-programed to being capable of jumping to high distances and surprise enemies. Domenox also is quite a resistant creature but its sensitive areas are at mercy.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/wildlife/thumb/2.webp",
-                        "alt": "Domenox"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/wildlife/2.webp",
-                        "alt": "Domenox"
-                      }
-                    }
-                  },
-                  {
                     "title": "Ariox",
                     "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/wildlife/thumb/3.webp",
+                        "src": "/img/gallery/wildlife/thumb/3.png",
                         "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/3.webp",
+                        "src": "/img/gallery/wildlife/3.png",
                         "alt": "Ariox"
                       }
                     }
                   },
-
                   {
                     "title": "Pronghar",
                     "text": "Pronghar is a high-velocity Roboter creature, often referred to as “The Proud One”. It has the stance of a royal creature, descended from divinities, and sights of a predator. It is highly agile, fast and wares off its adversaries at great speed.",
+                    "video": "/img/gallery/wildlife/4.mp4"
+                  },
+                  {
+                    "title": "Nisus",
+                    "text": "Nisus is a Celestial creature of many secrets and mysteries. Some say it was sent to Meta Life by ancient divinities themselves, looking to have more control over humans. Its beautiful, refined looks make it an admirable companion and explain its rarity.",
+                    "video": "/img/gallery/wildlife/6.mp4"
+                  },
+                  {
+                    "title": "Domenox",
+                    "text": "Thanks to its amazingly shaped body, Domenox is a very high-speed creature of Matrix Angel origin. AI-programed to being capable of sprinting to the back of enemies.",
+                    "video": "/img/gallery/wildlife/8.mp4"
+                  },
+                  {
+                    "title": "Squirrex",
+                    "text": "Squirrex is a pure product of Cybers engineering. A fast, adaptive creature loyal to its master. Although hard to train and often stubborn, Squirrex is an ideal companion for going on adventures in the world of Meta Life.",
+                    "video": "/img/gallery/wildlife/5.mp4"
+                  },
+                  {
+                    "title": "Lorem",
+                    "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/wildlife/thumb/4.webp",
-                        "alt": "Pronghar"
+                        "src": "/img/gallery/wildlife/9.png",
+                        "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/4.webp",
-                        "alt": "Pronghar"
+                        "src": "/img/gallery/wildlife/9.png",
+                        "alt": "Ariox"
                       }
                     }
                   }

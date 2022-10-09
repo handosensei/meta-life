@@ -97,10 +97,10 @@
   right: 0;
 
   @include maxMobile {
+    left: 50%;
     width: 95%;
     top: 25%;
-    transform: translateY(-25%) !important;
-    margin: auto;
+    transform: translate(-50%, -25%) !important;
   }
 
   &.fullscreen {
@@ -163,7 +163,7 @@
   transform: translateY(-50%);
   height: 5em;
   width: 5em;
-  z-index: 10;
+  z-index: 11;
   color: white;
   cursor: pointer;
   transform-origin: center;
@@ -191,5 +191,33 @@
 
   .isActive & {
     opacity: 0.5;
+  }
+}
+
+.videoContainer {
+  z-index: 10 !important;
+  position: absolute;
+  width: 45%;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  right: 2em;
+  aspect-ratio: 16 / 9;
+
+  &::-webkit-media-controls-start-playback-button,
+  &::-webkit-media-controls-volume-slider,
+  &::-webkit-media-controls-mute-button,
+  &::-webkit-media-controls-timeline,
+  &::-webkit-media-controls-current-time-display,
+  &::-webkit-media-controls-time-remaining-display {
+    display: none;
+  }
+
+  @include maxMobile {
+    left: 50%;
+    width: 95%;
+    top: 25%;
+    transform: translate(-50%, -25%) !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
