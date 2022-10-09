@@ -9,7 +9,7 @@
 
   .galleryItem:nth-child(2) {
     left: 59.92vw;
-    top: 63vh;
+    top: 57vh;
   }
 
   @include maxMobile {
@@ -22,7 +22,7 @@
     }
 
     .galleryItem:nth-child(2) {
-      top: 65vh;
+      top: 57vh;
       left: 38vw;
     }
 
