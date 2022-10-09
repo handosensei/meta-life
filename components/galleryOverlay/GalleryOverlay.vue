@@ -28,12 +28,16 @@
         <Icon class="navButton right" type="ChevronRight" @click.native="changeSlide(1)" />
         <transition :css="false" name="galleryOverlayImageTransition" @enter="onEnterImage" @leave="onLeaveImage">
           <img
+            v-if="typeof activeSlide.image !== 'undefined'"  
             :key="activeSlide.image.highres.src"
             class="backgroundImage"
             :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''"
             :src="activeSlide.image.highres.src"
             :alt="activeSlide.image.highres.alt"
           />
+          <video v-else>
+            <source :src="activeSlide.video.src" type="video/mp4" class="backgroundImage" :class="activeSlide.image.highres?.fullscreen ? 'fullscreen' : ''" />
+          </video>
         </transition>
       </div>
 

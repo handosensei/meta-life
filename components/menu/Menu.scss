@@ -98,6 +98,11 @@ br + .menuList {
       font-size: 9px;
       background: white;
       color: black;
+      @include maxMobile {
+        top: 50%;
+        transform: translate(0, -50%);
+        right: -90%;
+      }
     }
   }
 

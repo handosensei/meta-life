@@ -11,3 +11,20 @@
     color: var(--color-black);
   }
 }
+
+.iconContainer {
+  display: none;
+  position: absolute;
+  bottom: 3em;
+  left: 1em;
+  @include maxMobile {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+.icon {
+  width: 3em;
+  height: 3em;
+  color: var(--color-white-08);
+}

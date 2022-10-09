@@ -13,6 +13,10 @@
     @wheel="onWheel"
   >
     <component :is="component.name" ref="component" v-bind="component" />
+    <div class="iconContainer">
+      <Icon type="ChevronLeft" class="icon" @click.native="navigate(-1)"/>
+      <Icon type="ChevronRight" class="icon" @click.native="navigate(1)"/>
+    </div>
   </section>
 </template>
 
@@ -21,6 +25,7 @@ import sniffer from '@antinomy-studio/sniffer';
 import { gsap } from 'gsap';
 import { mapActions, mapState } from 'vuex';
 
+import Icon from '../elements/Icon.vue';
 import delay from '~/utils/functions/delay';
 import normalizeWheel from '~/utils/functions/normalizeWheel';
 
@@ -39,6 +44,7 @@ export default {
     SectionHeading,
     SectionIntro,
     SectionText,
+    Icon,
   },
 
   props: {

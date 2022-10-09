@@ -17,7 +17,7 @@
     left: 0 !important;
 
     .galleryItem:first-child {
-      top: 30vh;
+      top: 28vh;
       left: 5vw;
     }
 
@@ -36,7 +36,7 @@
 @include maxMobile {
   .open-world {
     .galleryItem:nth-child(2) {
-      top: 27vh;
+      top: 25vh;
       left: 49vw;
     }
   }

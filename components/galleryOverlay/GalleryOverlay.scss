@@ -97,13 +97,6 @@
   right: 0;
 
   @include maxMobile {
-    &.fullscreen {
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      top: 0%;
-      transform: none;
-    }
     width: 95%;
     top: 25%;
     transform: translateY(-25%);
@@ -114,6 +107,16 @@
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    @include maxMobile {
+      object-fit: unset;
+      width: 90%;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, -25%);
+      margin: auto;
+      min-width: unset;
+      min-height: unset;
+    }
   }
 }
 

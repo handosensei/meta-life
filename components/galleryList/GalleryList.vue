@@ -68,11 +68,13 @@ export default {
       timeline.fromTo(
         el,
         {
+          duration: 0.4,
           autoAlpha: 0,
-          y: -400,
-          scale: 0.5,
-          zIndex: 0,
-          x: 30 * (i % 2 === 0 ? 1 : -1),
+          y: 300,
+          scale: 1.5,
+          ease: 'power2.inOut',
+          zIndex: 10,
+          x: 30 * (i % 2 !== 0 ? 1 : -1),
         },
         {
           autoAlpha: 1,
@@ -96,13 +98,11 @@ export default {
           zIndex: 6
         },
         {
-          duration: 0.4,
           autoAlpha: 0,
-          y: 300,
-          scale: 1.5,
-          ease: 'power2.in',
-          zIndex: 10,
-          x: 30 * (i % 2 !== 0 ? 1 : -1),
+          y: -400,
+          scale: 0.5,
+          zIndex: 0,
+          x: 30 * (i % 2 === 0 ? 1 : -1),
         },
         '>'
       );
