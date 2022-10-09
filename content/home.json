@@ -46,7 +46,7 @@
                         "alt": "Astralis"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/1.png",
+                        "src": "/img/gallery/open-world/1.webp",
                         "alt": "Astralis",
                         "fullscreen": true
                       }
@@ -61,7 +61,7 @@
                         "alt": "Neopolis"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/2.png",
+                        "src": "/img/gallery/open-world/2.webp",
                         "alt": "Neopolis",
                         "fullscreen": true
                       }
@@ -76,7 +76,7 @@
                         "alt": "The Wildlings"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/3.png",
+                        "src": "/img/gallery/open-world/3.webp",
                         "alt": "The Wildlings",
                         "fullscreen": true
                       }
@@ -91,7 +91,7 @@
                         "alt": "New Heaven"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/4.png",
+                        "src": "/img/gallery/open-world/4.webp",
                         "alt": "New Heaven",
                         "fullscreen": true
                       }
@@ -106,7 +106,7 @@
                         "alt": "The Swamps"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/5.jpeg",
+                        "src": "/img/gallery/open-world/5.webp",
                         "alt": "The Swamps",
                         "fullscreen": true
                       }
@@ -121,7 +121,7 @@
                         "alt": "Tahana, City of Light"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/6.png",
+                        "src": "/img/gallery/open-world/6.webp",
                         "alt": "Tahana, City of Light",
                         "fullscreen": true
                       }
@@ -136,7 +136,7 @@
                         "alt": "C-111, Roboters Garage"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/7.jpg",
+                        "src": "/img/gallery/open-world/7.webp",
                         "alt": "C-111, Roboters Garage",
                         "fullscreen": true
                       }
@@ -151,7 +151,7 @@
                         "alt": "New Heaven"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/8.png",
+                        "src": "/img/gallery/open-world/8.webp",
                         "alt": "New Heaven",
                         "fullscreen": true
                       }
@@ -172,7 +172,7 @@
                         "alt": "Kharan"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/1.png",
+                        "src": "/img/gallery/wildlife/1.webp",
                         "alt": "Kharan"
                       }
                     }
@@ -186,7 +186,7 @@
                         "alt": "Domenox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/2.png",
+                        "src": "/img/gallery/wildlife/2.webp",
                         "alt": "Domenox"
                       }
                     }
@@ -200,7 +200,7 @@
                         "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/3.png",
+                        "src": "/img/gallery/wildlife/3.webp",
                         "alt": "Ariox"
                       }
                     }
@@ -215,7 +215,7 @@
                         "alt": "Pronghar"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/4.png",
+                        "src": "/img/gallery/wildlife/4.webp",
                         "alt": "Pronghar"
                       }
                     }
@@ -255,7 +255,7 @@
                         "alt": "Land concept"
                       },
                       "highres": {
-                        "src": "/img/gallery/lands/2.jpeg",
+                        "src": "/img/gallery/lands/2.webp",
                         "alt": "Land concept"
                       }
                     }
@@ -269,7 +269,7 @@
                         "alt": "Map of Meta Life"
                       },
                       "highres": {
-                        "src": "/img/gallery/lands/1.png",
+                        "src": "/img/gallery/lands/1.webp",
                         "alt": "Map of Meta Life"
                       }
                     }
@@ -289,7 +289,7 @@
                         "alt": "Matrix Angel Penthouse"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/1.png",
+                        "src": "/img/gallery/residences/1.webp",
                         "alt": "Matrix Angel Penthouse"
                       }
                     }
@@ -303,7 +303,7 @@
                         "alt": "Matrix Angel Villa"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/2.png",
+                        "src": "/img/gallery/residences/2.webp",
                         "alt": "Matrix Angel Villa"
                       }
                     }
@@ -317,7 +317,7 @@
                         "alt": "Matrix Angel Pyra"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/3.png",
+                        "src": "/img/gallery/residences/3.webp",
                         "alt": "Matrix Angel Pyra"
                       }
                     }
@@ -331,7 +331,7 @@
                         "alt": "Goldboi Palace"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/4.png",
+                        "src": "/img/gallery/residences/4.webp",
                         "alt": "Goldboi Palace"
                       }
                     }
@@ -345,7 +345,7 @@
                         "alt": "Goldboi Sphera"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/5.png",
+                        "src": "/img/gallery/residences/5.webp",
                         "alt": "Goldboi Sphera"
                       }
                     }
@@ -359,7 +359,7 @@
                         "alt": "Goldboi Rubyn"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/6.png",
+                        "src": "/img/gallery/residences/6.webp",
                         "alt": "Goldboi Rubyn"
                       }
                     }
@@ -373,7 +373,7 @@
                         "alt": "Burner Temple"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/7.png",
+                        "src": "/img/gallery/residences/7.webp",
                         "alt": "Burner Temple"
                       }
                     }
@@ -387,7 +387,7 @@
                         "alt": "Burner Pool Mansion"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/8.png",
+                        "src": "/img/gallery/residences/8.webp",
                         "alt": "Burner Pool Mansion"
                       }
                     }
@@ -401,7 +401,7 @@
                         "alt": "Burner SkyHome"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/9.png",
+                        "src": "/img/gallery/residences/9.webp",
                         "alt": "Burner SkyHome"
                       }
                     }
@@ -415,7 +415,7 @@
                         "alt": "Roboter Pool Villa"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/10.png",
+                        "src": "/img/gallery/residences/10.webp",
                         "alt": "Roboter Pool Villa"
                       }
                     }
@@ -429,7 +429,7 @@
                         "alt": "Roboter TriHouse"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/11.png",
+                        "src": "/img/gallery/residences/11.webp",
                         "alt": "Roboter TriHouse"
                       }
                     }
@@ -443,7 +443,7 @@
                         "alt": "Roboter N-13"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/12.png",
+                        "src": "/img/gallery/residences/12.webp",
                         "alt": "Roboter N-13"
                       }
                     }
@@ -457,7 +457,7 @@
                         "alt": "Rough Metallion"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/13.png",
+                        "src": "/img/gallery/residences/13.webp",
                         "alt": "Rough Metallion"
                       }
                     }
@@ -471,7 +471,7 @@
                         "alt": "Rough Favela House"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/14.png",
+                        "src": "/img/gallery/residences/14.webp",
                         "alt": "Rough Favela House"
                       }
                     }
@@ -485,7 +485,7 @@
                         "alt": "Rough Verti"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/15.png",
+                        "src": "/img/gallery/residences/15.webp",
                         "alt": "Rough Verti"
                       }
                     }
@@ -499,7 +499,7 @@
                         "alt": "Celestial SkyMansion"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/16.png",
+                        "src": "/img/gallery/residences/16.webp",
                         "alt": "Celestial SkyMansion"
                       }
                     }
@@ -513,7 +513,7 @@
                         "alt": "Celestial Yachtia"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/17.png",
+                        "src": "/img/gallery/residences/17.webp",
                         "alt": "Celestial Yachtia"
                       }
                     }
@@ -527,7 +527,7 @@
                         "alt": "Celestial Future Penthouse"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/18.png",
+                        "src": "/img/gallery/residences/18.webp",
                         "alt": "Celestial Future Penthouse"
                       }
                     }
@@ -567,7 +567,7 @@
                         "alt": "LS-12"
                       },
                       "highres": {
-                        "src": "/img/gallery/weapons/1.png",
+                        "src": "/img/gallery/weapons/1.webp",
                         "alt": "LS-12"
                       }
                     }
@@ -581,7 +581,7 @@
                         "alt": "Winger Heavy Rifle"
                       },
                       "highres": {
-                        "src": "/img/gallery/weapons/2.png",
+                        "src": "/img/gallery/weapons/2.webp",
                         "alt": "Winger Heavy Rifle"
                       }
                     }
@@ -595,7 +595,7 @@
                         "alt": "SCAB-C"
                       },
                       "highres": {
-                        "src": "/img/gallery/weapons/3.png",
+                        "src": "/img/gallery/weapons/3.webp",
                         "alt": "SCAB-C"
                       }
                     }
@@ -609,7 +609,7 @@
                         "alt": "M1015"
                       },
                       "highres": {
-                        "src": "/img/gallery/weapons/4.png",
+                        "src": "/img/gallery/weapons/4.webp",
                         "alt": "M1015"
                       }
                     }
@@ -629,7 +629,7 @@
                         "alt": "Xondor ZERO-11"
                       },
                       "highres": {
-                        "src": "/img/gallery/vehicles/1.png",
+                        "src": "/img/gallery/vehicles/1.webp",
                         "alt": "Xondor ZERO-11"
                       }
                     }
@@ -643,7 +643,7 @@
                         "alt": "Buggy Jumper"
                       },
                       "highres": {
-                        "src": "/img/gallery/vehicles/2.png",
+                        "src": "/img/gallery/vehicles/2.webp",
                         "alt": "Buggy Jumper"
                       }
                     }
@@ -663,7 +663,7 @@
                         "alt": "Alerion"
                       },
                       "highres": {
-                        "src": "/img/gallery/armors/1.png",
+                        "src": "/img/gallery/armors/1.webp",
                         "alt": "Alerion"
                       }
                     }
@@ -677,7 +677,7 @@
                         "alt": "Eludhel"
                       },
                       "highres": {
-                        "src": "/img/gallery/armors/3.png",
+                        "src": "/img/gallery/armors/3.webp",
                         "alt": "Eludhel"
                       }
                     }
@@ -691,7 +691,7 @@
                         "alt": "Hermes’ Wrath"
                       },
                       "highres": {
-                        "src": "/img/gallery/armors/4.png",
+                        "src": "/img/gallery/armors/4.webp",
                         "alt": "Hermes’ Wrath"
                       }
                     }
@@ -705,7 +705,7 @@
                         "alt": "SkySuit"
                       },
                       "highres": {
-                        "src": "/img/gallery/armors/2.png",
+                        "src": "/img/gallery/armors/2.webp",
                         "alt": "SkySuit"
                       }
                     }
