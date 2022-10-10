@@ -15,7 +15,6 @@
       <h1>Contact</h1>
       <div class="infos">
         <p>
-          Press : <a class="email" href="mailto:press@metalife.com">press@metalife.com</a><br />
           Infos : <a class="email" href="mailto:contact@meta-legends.com">contact@meta-legends.com</a><br />
           <br />
           Questions about economic ecosystem, read our whitepaper sections.
