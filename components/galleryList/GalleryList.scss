@@ -36,6 +36,25 @@
   }
 }
 
+.galleryVideo {
+  width: 56em;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-white-04);
+
+  &::-webkit-media-controls-start-playback-button,
+  &::-webkit-media-controls-volume-slider,
+  &::-webkit-media-controls-mute-button,
+  &::-webkit-media-controls-timeline,
+  &::-webkit-media-controls-current-time-display,
+  &::-webkit-media-controls-time-remaining-display {
+    display: none;
+  }
+
+  @include maxMobile {
+    width: 100%;
+  }
+}
+
 .imgRow {
   position: absolute;
   display: flex;

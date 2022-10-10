@@ -14,7 +14,7 @@
       class="galleryOverlay"
     >
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
-        <div ref="content" :key="typeof activeSlide?.image?.highres?.src !== 'undefined'? activeSlide.image.highres.src : activeSlide.video" class="content">
+        <div ref="content" :key="typeof activeSlide?.image?.highres?.src !== 'undefined'? activeSlide.image.highres.src : activeSlide.video.src" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
             <!-- <div class="subtitle">{{ activeItem.category }}</div> -->
@@ -35,8 +35,8 @@
             :src="activeSlide.image.highres.src"
             :alt="activeSlide.image.highres.alt"
           />
-          <video v-else :key="activeSlide.video"  class='videoContainer' controls muted autoplay loop controlsList="nodownload noremoteplayback noplaybackrate" disablePictureInPicture>
-            <source :src="activeSlide.video" type="video/mp4">
+          <video v-else :key="activeSlide.video.src"  class='videoContainer' controls muted autoplay loop controlsList="nodownload noremoteplayback noplaybackrate" disablePictureInPicture :poster="activeSlide.video.thumb">
+            <source :src="activeSlide.video.src" type="video/mp4">
           </video>
         </transition>
       </div>
@@ -159,11 +159,11 @@ export default {
     },
 
     onEnterImage(el) {
-      gsap.fromTo(el, { scale: 1.5, zIndex: 1 }, { scale: 1, duration: 2, ease: 'expo.out' });
+      gsap.fromTo(el, { scale: 1.5, autoAlpha:0 }, { scale: 1, duration: 2, autoAlpha: 1, ease: 'expo.out' });
     },
 
     onLeaveImage(el, done) {
-      gsap.fromTo(el, { autoAlpha: 1, zIndex: 2 }, { autoAlpha: 0, duration: 2, ease: 'expo.out', onComplete: done });
+      gsap.fromTo(el, { autoAlpha: 1 }, { autoAlpha: 0, duration: 2, ease: 'expo.out', onComplete: done });
     },
 
     onEnterContent(el) {

@@ -164,16 +164,36 @@
                 "category": "Wildlife",
                 "slides": [
                   {
-                    "title": "Kharan",
-                    "text": "Flying dragon Celestial creature, Kharan is one of the few flying creatures in Meta Life. It features a natural celestial shield of protection, and is capable of casting heavy magical spells to annihilate enemies.",
+                    "title": "Pronghar",
+                    "text": "Pronghar is a high-velocity Roboter creature, often referred to as “The Proud One”. It has the stance of a royal creature, descended from divinities, and sights of a predator. It is highly agile, fast and wares off its adversaries at great speed.",
+                    "video": { "src": "/img/gallery/wildlife/video/4.mp4", "thumb": "/img/gallery/wildlife/video/4.webp" }
+                  },
+                  {
+                    "title": "Nisus",
+                    "text": "Nisus is a Celestial creature of many secrets and mysteries. Some say it was sent to Meta Life by ancient divinities themselves, looking to have more control over humans. Its beautiful, refined looks make it an admirable companion and explain its rarity.",
+                    "video": { "src": "/img/gallery/wildlife/video/6.mp4", "thumb": "/img/gallery/wildlife/video/6.webp" }
+                  },
+                  {
+                    "title": "Domenox",
+                    "text": "Thanks to its amazingly shaped body, Domenox is a very high-speed creature of Matrix Angel origin. AI-programed to being capable of sprinting to the back of enemies.",
+                    "video": { "src": "/img/gallery/wildlife/video/7.mp4", "thumb": "/img/gallery/wildlife/video/7.webp" }
+                  },
+                  {
+                    "title": "Squirrex",
+                    "text": "Squirrex is a pure product of Cybers engineering. A fast, adaptive creature loyal to its master. Although hard to train and often stubborn, Squirrex is an ideal companion for going on adventures in the world of Meta Life.",
+                    "video": { "src": "/img/gallery/wildlife/video/5.mp4", "thumb": "/img/gallery/wildlife/video/5.webp" }
+                  },
+                  {
+                    "title": "C-Hound",
+                    "text": "The C-Hound is an AI-powered 4-legged robotic creature crafted by Cybers looking to create a steady and reliable pet. Its great stamina allows for long periods of activity, but also implies long periods of rest. An all-round average companion.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/wildlife/thumb/1.webp",
-                        "alt": "Kharan"
+                        "src": "/img/gallery/wildlife/8.webp",
+                        "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/1.webp",
-                        "alt": "Kharan"
+                        "src": "/img/gallery/wildlife/8.webp",
+                        "alt": "Ariox"
                       }
                     }
                   },
@@ -182,45 +202,11 @@
                     "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/wildlife/thumb/3.png",
+                        "src": "/img/gallery/wildlife/thumb/3.webp",
                         "alt": "Ariox"
                       },
                       "highres": {
-                        "src": "/img/gallery/wildlife/3.png",
-                        "alt": "Ariox"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Pronghar",
-                    "text": "Pronghar is a high-velocity Roboter creature, often referred to as “The Proud One”. It has the stance of a royal creature, descended from divinities, and sights of a predator. It is highly agile, fast and wares off its adversaries at great speed.",
-                    "video": "/img/gallery/wildlife/4.mp4"
-                  },
-                  {
-                    "title": "Nisus",
-                    "text": "Nisus is a Celestial creature of many secrets and mysteries. Some say it was sent to Meta Life by ancient divinities themselves, looking to have more control over humans. Its beautiful, refined looks make it an admirable companion and explain its rarity.",
-                    "video": "/img/gallery/wildlife/6.mp4"
-                  },
-                  {
-                    "title": "Domenox",
-                    "text": "Thanks to its amazingly shaped body, Domenox is a very high-speed creature of Matrix Angel origin. AI-programed to being capable of sprinting to the back of enemies.",
-                    "video": "/img/gallery/wildlife/8.mp4"
-                  },
-                  {
-                    "title": "Squirrex",
-                    "text": "Squirrex is a pure product of Cybers engineering. A fast, adaptive creature loyal to its master. Although hard to train and often stubborn, Squirrex is an ideal companion for going on adventures in the world of Meta Life.",
-                    "video": "/img/gallery/wildlife/5.mp4"
-                  },
-                  {
-                    "title": "Lorem",
-                    "text": "Ariox is an Insectoid Matrix Angel creature capable of moving at high-speed in multiple directions. It has the ability to track, sense and capture enemies thanks to its internal AI hunting system programmed to deploying a net of projectiles, trapping its target. Despite its resistant shell, Ariox still remains an easy target.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/wildlife/9.png",
-                        "alt": "Ariox"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/wildlife/9.png",
+                        "src": "/img/gallery/wildlife/3.webp",
                         "alt": "Ariox"
                       }
                     }
@@ -252,20 +238,6 @@
                 "category": "Lands",
                 "slides": [
                   {
-                    "title": "Land concept",
-                    "text": "Stunning pieces of land on which to create your own perception of Meta Life and share it with your friends, in the metaverse. Rent, lend, buy, sell, host events etc., possibilities are endless. Your home, your property, your decisions.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/lands/thumbs/2.webp",
-                        "alt": "Land concept"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/lands/2.webp",
-                        "alt": "Land concept"
-                      }
-                    }
-                  },
-                  {
                     "title": "Map of Meta Life",
                     "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
                     "image": {
@@ -275,6 +247,20 @@
                       },
                       "highres": {
                         "src": "/img/gallery/lands/1.webp",
+                        "alt": "Map of Meta Life"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Map of Meta Life",
+                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/lands/thumbs/3.webp",
+                        "alt": "Map of Meta Life"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/lands/3.webp",
                         "alt": "Map of Meta Life"
                       }
                     }
@@ -564,58 +550,142 @@
                 "category": "Weapons",
                 "slides": [
                   {
-                    "title": "LS-12",
-                    "text": "The LS-12 - short for Light Sniper of 12th Generation - is a Burner-crafted heavy rifle loaded with Fire Ammunition. Despite its looks, this brilliant product of Burner engineering is quite light but its reach is not optimal. An ideal pick for heavy damage, at close and medium distances. ",
+                    "title": "F-00",
+                    "text": "The F-00, short for Fennec 00, is a light SMG of Cyber construct.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/weapons/thumbs/1.webp",
-                        "alt": "LS-12"
+                        "alt": "F-00"
                       },
                       "highres": {
                         "src": "/img/gallery/weapons/1.webp",
-                        "alt": "LS-12"
+                        "alt": "F-00"
                       }
                     }
                   },
                   {
-                    "title": "Winger Heavy Rifle",
-                    "text": "Often referred to as WHR or simply Winger, and named after its Celestial roots, the Winger is a very heavy sniper rifle with long-distance accuracy and excellent stability, at the expense of agility and speed. It is a rare piece, owned by very few and used by even less.",
+                    "title": "F-00",
+                    "text": "Built with great care to its weight, it is meant for close to medium length and high-speed combats.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/weapons/thumbs/2.webp",
-                        "alt": "Winger Heavy Rifle"
+                        "alt": "F-00"
                       },
                       "highres": {
                         "src": "/img/gallery/weapons/2.webp",
-                        "alt": "Winger Heavy Rifle"
+                        "alt": "F-00"
                       }
                     }
                   },
                   {
-                    "title": "SCAB-C",
-                    "text": "The Scab-C SMG is a great choice for medium to long-distance auto shooting. It is precise, light and exquisitely beautiful. A pure product of Celestial engineering, the SCAB-C is a prestigious weapon often given as reward to the bravest.",
+                    "title": "F-00",
+                    "text": "This Bullet Per Second beast can tear enemies apart in seconds if close enough, or require a full charger if too far away.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/weapons/thumbs/3.webp",
-                        "alt": "SCAB-C"
+                        "alt": "F-00"
                       },
                       "highres": {
                         "src": "/img/gallery/weapons/3.webp",
-                        "alt": "SCAB-C"
+                        "alt": "F-00"
                       }
                     }
                   },
                   {
-                    "title": "M1015",
-                    "text": "The M1015 was created by Cybers looking for a close-range combat weapon capable of being as light as powerful at short distances. Its heavy ammo and slick design make it an ideal companion for pure enemy annihilation.",
+                    "title": "B-90",
+                    "text": "The Burner 90, or B-90, is a close range shredder with almost unlimited ammunition and a Bullet Per Second rate greater than the F-00.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/weapons/thumbs/4.webp",
-                        "alt": "M1015"
+                        "alt": "B-90"
                       },
                       "highres": {
                         "src": "/img/gallery/weapons/4.webp",
-                        "alt": "M1015"
+                        "alt": "B-90"
+                      }
+                    }
+                  },
+                  {
+                    "title": "B-90",
+                    "text": "Its light construct also allow for akimbo use, at the expense of precision. Eventually, the B-90 can also be equipped with inflammable bullets, specialty of the Burners.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/5.webp",
+                        "alt": "B-90"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/5.webp",
+                        "alt": "B-90"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Kross Vector",
+                    "text": "A light SMG of Rough firearm engineering, the Kross Vector - often abbreviated KV - is an ideal weapon for close to medium range shootouts.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/6.webp",
+                        "alt": "Kross Vector"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/6.webp",
+                        "alt": "Kross Vector"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Kross Vector",
+                    "text": "Its short butt allows for easy handling while its front handle helps with shooting stability.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/7.webp",
+                        "alt": "Kross Vector"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/7.webp",
+                        "alt": "Kross Vector"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Mk-99",
+                    "text": "The Mk-99 is a polyvalent rocket launcher mostly used to reach light targets.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/8.webp",
+                        "alt": "Mk-99"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/8.webp",
+                        "alt": "Mk-99"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Mk-99",
+                    "text": "Its AI-equipped scope allows for amazing precision with moving targets, even at far distances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/9.webp",
+                        "alt": "Mk-99"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/9.webp",
+                        "alt": "Mk-99"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Mk-99",
+                    "text": "Despite its weight, the Mk-99 is a great RPG for mobile purposes.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/10.webp",
+                        "alt": "Mk-99"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/10.webp",
+                        "alt": "Mk-99"
                       }
                     }
                   }
@@ -626,30 +696,24 @@
                 "category": "Vehicles",
                 "slides": [
                   {
+                    "title": "Buggy Jumper",
+                    "text": "The four-wheel ‘Fast Escape’ Rough vehicle is the lightest of all four-wheel vehicles. Its strong engine makes accelerating an easy task, and its impressive tires allow make deserts and rocky environments look easy to cruise.",
+                    "video": {
+                      "src": "/img/gallery/vehicles/video/1.mp4",
+                      "thumb": "img/gallery/vehicles/video/1.webp"
+                    }
+                  },
+                  {
                     "title": "Xondor ZERO-11",
                     "text": "The Xondor ZERO-11 is a Cyber electric motorcycle. Known for its ‘fastest terrain vehicle in Meta Life’ reputation, it includes a speeder boost with nitro and 21-inch wheels made for velocity. A brilliant piece of technology.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/1.webp",
-                        "alt": "Xondor ZERO-11"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/vehicles/1.webp",
-                        "alt": "Xondor ZERO-11"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Buggy Jumper",
-                    "text": "The four-wheel ‘Fast Escape’ Rough vehicle is the lightest of all four-wheel vehicles. Its strong engine makes accelerating an easy task, and its impressive tires allow make deserts and rocky environments look easy to cruise.",
-                    "image": {
-                      "thumb": {
                         "src": "/img/gallery/vehicles/thumb/2.webp",
-                        "alt": "Buggy Jumper"
+                        "alt": "Xondor ZERO-11"
                       },
                       "highres": {
                         "src": "/img/gallery/vehicles/2.webp",
-                        "alt": "Buggy Jumper"
+                        "alt": "Xondor ZERO-11"
                       }
                     }
                   }
@@ -660,58 +724,52 @@
                 "category": "Armors",
                 "slides": [
                   {
-                    "title": "Alerion",
-                    "text": "The Alerion armor set brings a versatile, balanced and devastatingly efficient upgrade to the Cyber base kit. Equipped, this tactical masterpiece lets you own the battlefield.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/armors/thumbs/1.webp",
-                        "alt": "Alerion"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/armors/1.webp",
-                        "alt": "Alerion"
-                      }
+                    "title": "Eludhel Armor",
+                    "text": "Evasive medium-weight Matrix Angel armor set used to diverge direct attacks, move lightly and take opponents by surprise. Stealth and durability combined.",
+                    "video": {
+                      "src": "/img/gallery/armors/video/1.mp4",
+                      "thumb": "/img/gallery/armors/video/1.webp"
                     }
                   },
                   {
-                    "title": "Eludhel",
-                    "text": "Evasive medium-weight Matrix Angel armor set used to diverge direct attacks, move lightly and take opponents by surprise. Stealth and durability, combined.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/armors/thumbs/3.webp",
-                        "alt": "Eludhel"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/armors/3.webp",
-                        "alt": "Eludhel"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Hermes’ Wrath",
-                    "text": "This Roboter-crafted armour set is tailored to suit ruthless, deadly fights. It is durable and meant for an agile type of experience.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/armors/thumbs/4.webp",
-                        "alt": "Hermes’ Wrath"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/armors/4.webp",
-                        "alt": "Hermes’ Wrath"
-                      }
-                    }
-                  },
-                  {
-                    "title": "SkySuit",
-                    "text": "The Cyber SkySuit is a brilliant piece of aggregated new technologies with intelligent back and front armored protections reacting to strong impacts. Usually used to deal with high levels of atmospheric pressure.",
+                    "title": "Celestial Stone Armor",
+                    "text": "The Celestials have built a divine armor set, made with ancient gods and divinities principles. It is a light but resistant piece of equipment powered with Celestial power. It is embeded with pieces of the Celestial Stone allowing for enhanced movement, kinetic and fighting abilities.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/armors/thumbs/2.webp",
-                        "alt": "SkySuit"
+                        "alt": "Celestial Stone Armor"
                       },
                       "highres": {
                         "src": "/img/gallery/armors/2.webp",
-                        "alt": "SkySuit"
+                        "alt": "Celestial Stone Armor"
+                      }
+                    }
+                  },
+                  {
+                    "title": "A-78 Armor",
+                    "text": "Roboters have built this armor set with integrated AI and intra-robotic features, allowing for an enhanced movement and fight experience. With highly automated reactions, and kinetic support of decisions, this armor set is an ideal choice for anyone seeking Augmented Reality add-ons to help them navigate the world of Meta Life. However quite heavy, this armor set should not be used for high-velocity scenarios.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/3.webp",
+                        "alt": "A-78 Armor"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/3.webp",
+                        "alt": "A-78 Armor"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Desert Scraper Armor",
+                    "text": "Rough Armor sets are composed of light fabrics and flexible leather pieces allowing for high velocity of movements. Built with the idea of both resisting the hard weather conditions of Rough territories and allowing for light movements in climbing, fighting of running situations, this armor set is a great polyvalent choice.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/armors/thumbs/4.webp",
+                        "alt": "Desert Scraper Armor"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/armors/4.webp",
+                        "alt": "Desert Scraper Armor"
                       }
                     }
                   }

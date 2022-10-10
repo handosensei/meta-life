@@ -7,7 +7,7 @@
       <template v-for="imgList in gallery">
           <div v-for="(img, k) in imgList.slides" :key="img.title + i" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
             <div ref="imgContainer" class="imgContainer">
-                <img class="galleryImg" :src="img.image.thumb.src" :alt="img.title" />
+                <img class="galleryImg" :src="typeof img?.image !== 'undefined' ? img?.image?.highres?.src : img?.video?.thumb" :alt="img.title" />
                 <div>
                     <h3>{{ img.title }}</h3>
                     <p>{{ imgList.category }}</p>

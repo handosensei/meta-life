@@ -14,7 +14,7 @@
     >
       <span ref="label" class>{{ galleryItem.category }}</span>
       <div ref="galleryMask" class="galleryMask">
-        <img ref="galleryImage" class="galleryImage" :src="galleryItem.slides[0].image.thumb.src" :alt="galleryItem.slides[0].image.thumb.alt" />
+        <img ref="galleryImage" class="galleryImage" :src="typeof galleryItem.slides[0]?.image !== 'undefined' ? galleryItem.slides[0]?.image.thumb.src : galleryItem.slides[0]?.video.thumb" :alt="galleryItem.slides[0].title" />
       </div>
       <Icon ref="galleryPlus" class="galleryPlus" type="Plus" />
       <Icon ref="gallerySphere" class="gallerySphere" type="Sphere" />
