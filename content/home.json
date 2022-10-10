@@ -671,34 +671,6 @@
                 "category": "Weapons",
                 "slides": [
                   {
-                    "title": "B-90",
-                    "text": "The Burner 90, or B-90, is a close range shredder with almost unlimited ammunition and a Bullet Per Second rate greater than the F-00.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/weapons/thumbs/4.webp",
-                        "alt": "B-90"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/weapons/4.webp",
-                        "alt": "B-90"
-                      }
-                    }
-                  },
-                  {
-                    "title": "B-90",
-                    "text": "Its light construct also allow for akimbo use, at the expense of precision. Eventually, the B-90 can also be equipped with inflammable bullets, specialty of the Burners.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/weapons/thumbs/5.webp",
-                        "alt": "B-90"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/weapons/5.webp",
-                        "alt": "B-90"
-                      }
-                    }
-                  },
-                  {
                     "title": "F-00",
                     "text": "The F-00, short for Fennec 00, is a light SMG of Cyber construct.",
                     "image": {
@@ -737,6 +709,34 @@
                       "highres": {
                         "src": "/img/gallery/weapons/3.webp",
                         "alt": "F-00"
+                      }
+                    }
+                  },
+                  {
+                    "title": "B-90",
+                    "text": "The Burner 90, or B-90, is a close range shredder with almost unlimited ammunition and a Bullet Per Second rate greater than the F-00.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/4.webp",
+                        "alt": "B-90"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/4.webp",
+                        "alt": "B-90"
+                      }
+                    }
+                  },
+                  {
+                    "title": "B-90",
+                    "text": "Its light construct also allow for akimbo use, at the expense of precision. Eventually, the B-90 can also be equipped with inflammable bullets, specialty of the Burners.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/5.webp",
+                        "alt": "B-90"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/5.webp",
+                        "alt": "B-90"
                       }
                     }
                   },
@@ -832,6 +832,20 @@
                 "category": "Vehicles",
                 "slides": [
                   {
+                    "title": "X-Venom",
+                    "text": "The X-Venom is a vehicle of Burner craft, created with the intention of having a resistant, fast and strong vehicle with the capacity of transporting up to four people at once.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/vehicles/thumb/3.webp",
+                        "alt": "X-Venom"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/vehicles/3.webp",
+                        "alt": "X-Venom"
+                      }
+                    }
+                  },
+                  {
                     "title": "Xondor ZERO-11",
                     "text": "The Xondor ZERO-11 is a Cyber electric motorcycle. Known for its ‘fastest terrain vehicle in Meta Life’ reputation, it includes a speeder boost with nitro and 21-inch wheels made for velocity. A brilliant piece of technology.",
                     "image": {
@@ -851,20 +865,6 @@
                     "video": {
                       "src": "/img/gallery/vehicles/video/1.mp4",
                       "thumb": "img/gallery/vehicles/video/1.webp"
-                    }
-                  },
-                  {
-                    "title": "X-Venom",
-                    "text": "The X-Venom is a vehicle of Burner craft, created with the intention of having a resistant, fast and strong vehicle with the capacity of transporting up to four people at once.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/vehicles/thumb/3.webp",
-                        "alt": "X-Venom"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/vehicles/3.webp",
-                        "alt": "X-Venom"
-                      }
                     }
                   }
                 ]

@@ -22,7 +22,7 @@
     }
 
     .galleryItem:nth-child(2) {
-      top: 62vh;
+      top: 58vh;
       left: 38vw;
     }
 
@@ -81,13 +81,13 @@
   @include maxMobile {
     &:first-child {
       position: relative;
-      top: 48vh;
+      top: 44vh;
       left: 5vw;
     }
 
     &:nth-child(3) {
-      top: 50vh;
-      left: 38vw;
+      top: 47vh;
+      left: 47vw;
     }
 
     &:nth-child(2) {
