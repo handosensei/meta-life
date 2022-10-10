@@ -98,7 +98,9 @@
   @include maxMobile {
     z-index: 3;
     left: 50%;
-    width: 95%;
+    width: unset;
+    max-width: 95%;
+    max-height: 30%;
     top: 25%;
     transform: translate(-50%, -25%) !important;
   }

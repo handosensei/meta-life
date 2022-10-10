@@ -150,7 +150,6 @@ export default {
     },
 
     async onClick(chapter, index) {
-      console.warn(chapter);
       this.setActiveChapter(chapter);
       this.setActiveSection(chapter.sections[0]);
       await delay(500);

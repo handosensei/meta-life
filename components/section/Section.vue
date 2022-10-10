@@ -152,8 +152,7 @@ export default {
       if (this.isNavigating || this.menuOpen || this.galleryOpen) {
         return;
       }
-
-      if (key === 'ArrowRight' || key === 'ArrowDown') {
+      if (key === 'ArrowRight' || key === 'ArrowDown' || key === ' ') {
         this.navigate(1);
       } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
         this.navigate(-1);

@@ -155,11 +155,14 @@ export default {
               ease: 'expo.out',
             },
             onComplete: () => {
-              gsap.fromTo(
+              if(this.$refs.gallerySphere[id].$el.lastChild){
+                gsap.fromTo(
                 this.$refs.gallerySphere[id].$el.lastChild,
                 { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
                 { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
               );
+              }
+              
             },
           }
         );
@@ -178,11 +181,14 @@ export default {
               ease: 'expo.out',
             },
             onComplete: () => {
-              gsap.fromTo(
+              if(this.$refs.galleryBigSphere[id].$el.lastChild){
+                gsap.fromTo(
                 this.$refs.galleryBigSphere[id].$el.lastChild,
                 { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
                 { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
               );
+              }
+             
             },
           }
         );

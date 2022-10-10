@@ -24,9 +24,9 @@
     <div class="socials">
       <h2>Official Channel</h2>
       <ul>
-        <li><a href="https://discord.gg/meta-life">Discord</a></li>
-        <li><a href="https://twitter.com/metalegendsnft">Twitter</a></li>
-        <li><a href="https://www.instagram.com/meta.legends/  ">Instagram</a></li>
+        <li><a href="https://discord.com/invite/meta-life" target="_blank">Discord</a></li>
+        <li><a href="https://twitter.com/metalegendsnft" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/meta.legends/" target="_blank">Instagram</a></li>
       </ul>
     </div>
   </div>

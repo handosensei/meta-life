@@ -98,6 +98,51 @@
                     }
                   },
                   {
+                    "title": "New Heaven",
+                    "text": "Its futuristic buildings and glass-windowed buildings make up for its reputation: a place of light and revival.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/10.webp",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/10.webp",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "It connects rivers and seas through a magnificent and modern coastline of modern tech-filled skyscrapers.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/9.webp",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/9.webp",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "New Heaven",
+                    "text": "New Heaven was named after its purpose, to provide a new place for the brilliant Cybers to thrive and escape from the world into the metaverse, paradise found.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/11.webp",
+                        "alt": "New Heaven"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/11.webp",
+                        "alt": "New Heaven",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
                     "title": "The Swamps",
                     "text": "A dangerous area filled with exotic wildlife. Once a place of worship for ancient divinities, but nature has reclaimed its territory and made it hard to navigate for the people of Meta Life. Swamps, creatures, magical plants, wild vegetation and ancient monuments prevail. But a place of many resources and treasure for whom will dare to explore.",
                     "image": {
@@ -128,31 +173,91 @@
                     }
                   },
                   {
-                    "title": "C-111, Roboters Garage",
-                    "text": "Within Capital-111, a neo-dystopian representation of the Roboters’ perceived reality, can be found numerous high-end technology workshops with baffling wonders of Roboters engineering. Powered with cutting-edge AI, robotic creatures are then used for defending the city.",
+                    "title": "Roboters Garage",
+                    "text": "Within Capital 111 can be found numerous high-end technology workshops with baffling wonders of Roboters engineering. Powered with cutting-edge AI, robotic creatures are then used for defense of the city.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/open-world/thumbs/7.webp",
-                        "alt": "C-111, Roboters Garage"
+                        "alt": "Roboters Garage"
                       },
                       "highres": {
                         "src": "/img/gallery/open-world/7.webp",
-                        "alt": "C-111, Roboters Garage",
+                        "alt": "Roboters Garage",
                         "fullscreen": true
                       }
                     }
                   },
                   {
-                    "title": "New Heaven",
-                    "text": "A sky-view of the city of Cybers. Its futuristic buildings and glass windowed buildings make up for its reputation: a place of light and rebirth. New Heaven was named after its purpose to provide a new place for Cybers to thrive and escape from the world into the metaverse. Paradise found.",
+                    "title": "C-111",
+                    "text": "Capital of the Roboters, Capital 111 or often referred to as C-111 is a reflection of neo-dystopian architecture. Named after the number of survivors that initially built it, it is home to an incredible cyberpunk feeling.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/open-world/thumbs/8.webp",
-                        "alt": "New Heaven"
+                        "src": "/img/gallery/open-world/thumbs/12.webp",
+                        "alt": "C-111"
                       },
                       "highres": {
-                        "src": "/img/gallery/open-world/8.webp",
-                        "alt": "New Heaven",
+                        "src": "/img/gallery/open-world/12.webp",
+                        "alt": "C-111",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Aurora, the Golden City",
+                    "text": "Aurora - derived from ‘aurous’ meaning ‘gold/golden’ - is a city of wealth and high influence, Capital of the rich Goldbois. Its excentric architecture is said to have been whispered by divinities and built in only a day, so the legend says. Aurora is home to the craziest financial and intellectual abundances, and its population is known for its high-society lifestyle.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/13.webp",
+                        "alt": "Aurora, the Golden City"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/13.webp",
+                        "alt": "Aurora, the Golden City",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-Mörr",
+                    "text": "Capital city of the Burners, Barad-Môrr is a place of fire and vileness. Heat and melt prevail as its brilliant population is obsessed with forging. Filled with dust, smoke and a barely breathable atmosphere, Barad-Mörr is a place that most avoid. Its demographic inequalities have plunged elites to prosper, and the poor to survive.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/14.webp",
+                        "alt": "Barad-Mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/14.webp",
+                        "alt": "Barad-Mörr",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Barad-Mörr",
+                    "text": "The Burners’ capital is a vast, highly populated megalopolis that extends on hundreds of miles. Despite its size, its population still lives in heavily packed neighborhoods. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/15.webp",
+                        "alt": "Barad-Mörr"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/15.webp",
+                        "alt": "Barad-Mörr",
+                        "fullscreen": true
+                      }
+                    }
+                  },
+                  {
+                    "title": "Rust",
+                    "text": "The Burners’ capital is a vast, highly populated megalopolis that extends on hundreds of miles. Despite its size, its population still lives in heavily packed neighborhoods. ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/open-world/thumbs/16.webp",
+                        "alt": "Rust"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/open-world/16.webp",
+                        "alt": "Rust",
                         "fullscreen": true
                       }
                     }
@@ -242,11 +347,11 @@
                     "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/lands/thumbs/1.webp",
+                        "src": "/img/gallery/lands/thumbs/3.webp",
                         "alt": "Map of Meta Life"
                       },
                       "highres": {
-                        "src": "/img/gallery/lands/1.webp",
+                        "src": "/img/gallery/lands/3.webp",
                         "alt": "Map of Meta Life"
                       }
                     }
@@ -256,11 +361,11 @@
                     "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/lands/thumbs/3.webp",
+                        "src": "/img/gallery/lands/thumbs/1.webp",
                         "alt": "Map of Meta Life"
                       },
                       "highres": {
-                        "src": "/img/gallery/lands/3.webp",
+                        "src": "/img/gallery/lands/1.webp",
                         "alt": "Map of Meta Life"
                       }
                     }
@@ -272,44 +377,58 @@
                 "category": "Residences",
                 "slides": [
                   {
-                    "title": "Matrix Angel Penthouse",
-                    "text": "A large property made of sizable floors and an integrated futuristic playground at purchase.",
+                    "title": "Roboter Pool Villa",
+                    "text": "Roboters have a unique conceptual way of designing their homes, and the Pool Villa stands as one of the most luxuriant homes of the Meta Life world. With high ceilings and incredible glass openings, owners of this property can enjoy natural light at its best.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/1.webp",
-                        "alt": "Matrix Angel Penthouse"
+                        "src": "/img/gallery/residences/thumbs/10.webp",
+                        "alt": "Roboter Pool Villa"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/1.webp",
-                        "alt": "Matrix Angel Penthouse"
+                        "src": "/img/gallery/residences/10.webp",
+                        "alt": "Roboter Pool Villa"
                       }
                     }
                   },
                   {
-                    "title": "Matrix Angel Villa",
-                    "text": "A comfortable home, with built-in new technologies allowing for optimal automation of the house, and its own integrated AI assistant: Meyna.",
+                    "title": "Celestial SkyMansion",
+                    "text": "The Celestial SkyMansion is a common house in Astralis and Tahana, cities of Celestials. Its high-end designs and looks, as well as its overall luxuriant comfort make up for its hefty price. ",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/2.webp",
-                        "alt": "Matrix Angel Villa"
+                        "src": "/img/gallery/residences/thumbs/16.webp",
+                        "alt": "Celestial SkyMansion"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/2.webp",
-                        "alt": "Matrix Angel Villa"
+                        "src": "/img/gallery/residences/16.webp",
+                        "alt": "Celestial SkyMansion"
                       }
                     }
                   },
                   {
-                    "title": "Matrix Angel Pyra",
-                    "text": "An architectural wonder, pure product of Matrix Angel engineering. Directly inspired from ancient divinities, the Pyra’s design offers futuristic elements of comfort.",
+                    "title": "Celestial Yachtia",
+                    "text": "The Yachtias are among the most expensive, luxurious and high-end houses in Meta Life. Providing their owners with incredibly unique architecture, bazzling swimming pools and immense parking spaces.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/3.webp",
-                        "alt": "Matrix Angel Pyra"
+                        "src": "/img/gallery/residences/thumbs/17.webp",
+                        "alt": "Celestial Yachtia"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/3.webp",
-                        "alt": "Matrix Angel Pyra"
+                        "src": "/img/gallery/residences/17.webp",
+                        "alt": "Celestial Yachtia"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Celestial Future Penthouse",
+                    "text": "The Future Penthouse, as its name indicates, is built vertically and features futuristic lines and edges, allowing for a premium stay or residency. An ideal purchase for those who can afford it.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/18.webp",
+                        "alt": "Celestial Future Penthouse"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/18.webp",
+                        "alt": "Celestial Future Penthouse"
                       }
                     }
                   },
@@ -352,6 +471,35 @@
                       "highres": {
                         "src": "/img/gallery/residences/6.webp",
                         "alt": "Goldboi Rubyn"
+                      }
+                    }
+                  },
+
+                  {
+                    "title": "Roboter TriHouse",
+                    "text": "The TriHouse has a unique, yet quite familiar, silhouette with triangle shapes and futuristic overall design. Its surrounding swimming pool makes it an exquisite place of residence.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/11.webp",
+                        "alt": "Roboter TriHouse"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/11.webp",
+                        "alt": "Roboter TriHouse"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Roboter N-13",
+                    "text": "The N-13 is a typical Roboters residence, with glass-built openings and great volumes of space. Despite its smaller swimming pool, it still offers amazing overall comfort.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/residences/thumbs/12.webp",
+                        "alt": "Roboter N-13"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/residences/12.webp",
+                        "alt": "Roboter N-13"
                       }
                     }
                   },
@@ -398,47 +546,48 @@
                     }
                   },
                   {
-                    "title": "Roboter Pool Villa",
-                    "text": "Roboters have a unique conceptual way of designing their homes, and the Pool Villa stands as one of the most luxuriant homes of the Meta Life world. With high ceilings and incredible glass openings, owners of this property can enjoy natural light at its best.",
+                    "title": "Matrix Angel Penthouse",
+                    "text": "A large property made of sizable floors and an integrated futuristic playground at purchase.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/10.webp",
-                        "alt": "Roboter Pool Villa"
+                        "src": "/img/gallery/residences/thumbs/1.webp",
+                        "alt": "Matrix Angel Penthouse"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/10.webp",
-                        "alt": "Roboter Pool Villa"
+                        "src": "/img/gallery/residences/1.webp",
+                        "alt": "Matrix Angel Penthouse"
                       }
                     }
                   },
                   {
-                    "title": "Roboter TriHouse",
-                    "text": "The TriHouse has a unique, yet quite familiar, silhouette with triangle shapes and futuristic overall design. Its surrounding swimming pool makes it an exquisite place of residence.",
+                    "title": "Matrix Angel Villa",
+                    "text": "A comfortable home, with built-in new technologies allowing for optimal automation of the house, and its own integrated AI assistant: Meyna.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/11.webp",
-                        "alt": "Roboter TriHouse"
+                        "src": "/img/gallery/residences/thumbs/2.webp",
+                        "alt": "Matrix Angel Villa"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/11.webp",
-                        "alt": "Roboter TriHouse"
+                        "src": "/img/gallery/residences/2.webp",
+                        "alt": "Matrix Angel Villa"
                       }
                     }
                   },
                   {
-                    "title": "Roboter N-13",
-                    "text": "The N-13 is a typical Roboters residence, with glass-built openings and great volumes of space. Despite its smaller swimming pool, it still offers amazing overall comfort.",
+                    "title": "Matrix Angel Pyra",
+                    "text": "An architectural wonder, pure product of Matrix Angel engineering. Directly inspired from ancient divinities, the Pyra’s design offers futuristic elements of comfort.",
                     "image": {
                       "thumb": {
-                        "src": "/img/gallery/residences/thumbs/12.webp",
-                        "alt": "Roboter N-13"
+                        "src": "/img/gallery/residences/thumbs/3.webp",
+                        "alt": "Matrix Angel Pyra"
                       },
                       "highres": {
-                        "src": "/img/gallery/residences/12.webp",
-                        "alt": "Roboter N-13"
+                        "src": "/img/gallery/residences/3.webp",
+                        "alt": "Matrix Angel Pyra"
                       }
                     }
                   },
+
                   {
                     "title": "Rough Metallion",
                     "text": "The Metallion is common-sighted in and around Rust, the capital of Roughs. Despite its rusty and rustic looks, it remains quite comfortable.",
@@ -480,48 +629,6 @@
                         "alt": "Rough Verti"
                       }
                     }
-                  },
-                  {
-                    "title": "Celestial SkyMansion",
-                    "text": "The Celestial SkyMansion is a common house in Astralis and Tahana, cities of Celestials. Its high-end designs and looks, as well as its overall luxuriant comfort make up for its hefty price. ",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/residences/thumbs/16.webp",
-                        "alt": "Celestial SkyMansion"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/residences/16.webp",
-                        "alt": "Celestial SkyMansion"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Celestial Yachtia",
-                    "text": "The Yachtias are among the most expensive, luxurious and high-end houses in Meta Life. Providing their owners with incredibly unique architecture, bazzling swimming pools and immense parking spaces.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/residences/thumbs/17.webp",
-                        "alt": "Celestial Yachtia"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/residences/17.webp",
-                        "alt": "Celestial Yachtia"
-                      }
-                    }
-                  },
-                  {
-                    "title": "Celestial Future Penthouse",
-                    "text": "The Future Penthouse, as its name indicates, is built vertically and features futuristic lines and edges, allowing for a premium stay or residency. An ideal purchase for those who can afford it.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/residences/thumbs/18.webp",
-                        "alt": "Celestial Future Penthouse"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/residences/18.webp",
-                        "alt": "Celestial Future Penthouse"
-                      }
-                    }
                   }
                 ]
               }
@@ -549,6 +656,34 @@
                 "id": "weapons",
                 "category": "Weapons",
                 "slides": [
+                  {
+                    "title": "B-90",
+                    "text": "The Burner 90, or B-90, is a close range shredder with almost unlimited ammunition and a Bullet Per Second rate greater than the F-00.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/4.webp",
+                        "alt": "B-90"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/4.webp",
+                        "alt": "B-90"
+                      }
+                    }
+                  },
+                  {
+                    "title": "B-90",
+                    "text": "Its light construct also allow for akimbo use, at the expense of precision. Eventually, the B-90 can also be equipped with inflammable bullets, specialty of the Burners.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/5.webp",
+                        "alt": "B-90"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/5.webp",
+                        "alt": "B-90"
+                      }
+                    }
+                  },
                   {
                     "title": "F-00",
                     "text": "The F-00, short for Fennec 00, is a light SMG of Cyber construct.",
@@ -591,34 +726,7 @@
                       }
                     }
                   },
-                  {
-                    "title": "B-90",
-                    "text": "The Burner 90, or B-90, is a close range shredder with almost unlimited ammunition and a Bullet Per Second rate greater than the F-00.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/weapons/thumbs/4.webp",
-                        "alt": "B-90"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/weapons/4.webp",
-                        "alt": "B-90"
-                      }
-                    }
-                  },
-                  {
-                    "title": "B-90",
-                    "text": "Its light construct also allow for akimbo use, at the expense of precision. Eventually, the B-90 can also be equipped with inflammable bullets, specialty of the Burners.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/weapons/thumbs/5.webp",
-                        "alt": "B-90"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/weapons/5.webp",
-                        "alt": "B-90"
-                      }
-                    }
-                  },
+
                   {
                     "title": "Kross Vector",
                     "text": "A light SMG of Rough firearm engineering, the Kross Vector - often abbreviated KV - is an ideal weapon for close to medium range shootouts.",
@@ -688,6 +796,20 @@
                         "alt": "Mk-99"
                       }
                     }
+                  },
+                  {
+                    "title": "LS-12",
+                    "text": "The LS-12 - short for Light Sniper of 12th Generation - is a Burner-crafted heavy rifle loaded with Fire Ammunition. Despite its looks, this brilliant product of Burner engineering is quite light but its reach is not optimal. An ideal pick for heavy damage, at close and medium distances.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/weapons/thumbs/11.webp",
+                        "alt": "LS-12"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/weapons/11.webp",
+                        "alt": "LS-12"
+                      }
+                    }
                   }
                 ]
               },
@@ -695,14 +817,6 @@
                 "id": "vehicles",
                 "category": "Vehicles",
                 "slides": [
-                  {
-                    "title": "Buggy Jumper",
-                    "text": "The four-wheel ‘Fast Escape’ Rough vehicle is the lightest of all four-wheel vehicles. Its strong engine makes accelerating an easy task, and its impressive tires allow make deserts and rocky environments look easy to cruise.",
-                    "video": {
-                      "src": "/img/gallery/vehicles/video/1.mp4",
-                      "thumb": "img/gallery/vehicles/video/1.webp"
-                    }
-                  },
                   {
                     "title": "Xondor ZERO-11",
                     "text": "The Xondor ZERO-11 is a Cyber electric motorcycle. Known for its ‘fastest terrain vehicle in Meta Life’ reputation, it includes a speeder boost with nitro and 21-inch wheels made for velocity. A brilliant piece of technology.",
@@ -716,6 +830,28 @@
                         "alt": "Xondor ZERO-11"
                       }
                     }
+                  },
+                  {
+                    "title": "Buggy Jumper",
+                    "text": "The four-wheel ‘Fast Escape’ Rough vehicle is the lightest of all four-wheel vehicles. Its strong engine makes accelerating an easy task, and its impressive tires allow make deserts and rocky environments look easy to cruise.",
+                    "video": {
+                      "src": "/img/gallery/vehicles/video/1.mp4",
+                      "thumb": "img/gallery/vehicles/video/1.webp"
+                    }
+                  },
+                  {
+                    "title": "X-Venom",
+                    "text": "The X-Venom is a high-speed vehicle of Burner craft, initially thought to for racing competitions. Despite its poor maneuvaribility, the X-Venom accounts for the fastest 4-wheel vehicle in Meta Life on flat environments.",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/vehicles/thumb/3.webp",
+                        "alt": "X-Venom"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/vehicles/3.webp",
+                        "alt": "X-Venom"
+                      }
+                    }
                   }
                 ]
               },
@@ -723,6 +859,14 @@
                 "id": "armor",
                 "category": "Armors",
                 "slides": [
+                  {
+                    "title": "Goldboi Armor",
+                    "text": "Goldbois' love for shiny, luxurious materials and fabrics are depicted in this beautifully crafted armor set often used in royal settings, and important ceremonies. Not only a proof of social status, and despite its ceremonial purpose, its heavy, resistant yet quite maneuverable nature make for an ideal choice for combat.",
+                    "video": {
+                      "src": "/img/gallery/armors/video/5.mp4",
+                      "thumb": "/img/gallery/armors/video/5.webp"
+                    }
+                  },
                   {
                     "title": "Eludhel Armor",
                     "text": "Evasive medium-weight Matrix Angel armor set used to diverge direct attacks, move lightly and take opponents by surprise. Stealth and durability combined.",
@@ -819,7 +963,7 @@
             "text": "Meta Life will be available soon. Discover the latest news on our social accounts.",
             "links": [
               {
-                "href": "https://discord.gg",
+                "href": "https://discord.com/invite/meta-life",
                 "icon": "discord",
                 "text": "DISCORD"
               },
