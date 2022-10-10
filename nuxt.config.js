@@ -11,7 +11,7 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    title:'Meta Life : The metaverse of tomorrow',
+    title:'Meta Life - The metaverse of tomorrow',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
