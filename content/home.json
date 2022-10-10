@@ -371,16 +371,16 @@
                     }
                   },
                   {
-                    "title": "Map of Meta Life",
-                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
+                    "title": "Land concept",
+                    "text": "Stunning pieces of land on which to create your own perception of Meta Life and share it with your friends, in the metaverse. Rent, lend, buy, sell, host events etc., possibilities are endless. Your home, your property, your decisions.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/lands/thumbs/2.webp",
-                        "alt": "Map of Meta Life"
+                        "alt": "Land concept"
                       },
                       "highres": {
                         "src": "/img/gallery/lands/2.webp",
-                        "alt": "Map of Meta Life"
+                        "alt": "Land concept"
                       }
                     }
                   }
