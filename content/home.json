@@ -275,7 +275,7 @@
                   },
                   {
                     "title": "Nisus",
-                    "text": "Nisus is a Celestial creature of many secrets and mysteries. Some say it was sent to Meta Life by ancient divinities themselves, looking to have more control over humans. Its beautiful, refined looks make it an admirable companion and explain its rarity.",
+                    "text": "Nisus is a Goldboi creature of many secrets and mysteries. Some say it was sent to Meta Life by ancient divinities themselves, looking to have more control over humans. Its beautiful, refined looks make it an admirable companion and explain its rarity.",
                     "video": { "src": "/img/gallery/wildlife/video/6.mp4", "thumb": "/img/gallery/wildlife/video/6.webp" }
                   },
                   {
@@ -366,6 +366,20 @@
                       },
                       "highres": {
                         "src": "/img/gallery/lands/1.webp",
+                        "alt": "Map of Meta Life"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Map of Meta Life",
+                    "text": "Twenty-one cities compose the world of Meta Life, itself divided into purchasable plots of land on which to build, craft, find resources and monetize. Lands are partly owned by the community and allow for high personal customization enabling private residency and/or lucrative enterprises (events, games, exhibitions etc.). ",
+                    "image": {
+                      "thumb": {
+                        "src": "/img/gallery/lands/thumbs/2.webp",
+                        "alt": "Map of Meta Life"
+                      },
+                      "highres": {
+                        "src": "/img/gallery/lands/2.webp",
                         "alt": "Map of Meta Life"
                       }
                     }
@@ -841,7 +855,7 @@
                   },
                   {
                     "title": "X-Venom",
-                    "text": "The X-Venom is a high-speed vehicle of Burner craft, initially thought to for racing competitions. Despite its poor maneuvaribility, the X-Venom accounts for the fastest 4-wheel vehicle in Meta Life on flat environments.",
+                    "text": "The X-Venom is a vehicle of Burner craft, created with the intention of having a resistant, fast and strong vehicle with the capacity of transporting up to four people at once.",
                     "image": {
                       "thumb": {
                         "src": "/img/gallery/vehicles/thumb/3.webp",
