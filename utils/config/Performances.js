@@ -47,7 +47,7 @@ class Performances {
       }
 
       this.PERF = quality;
-      console.log(this.PERF, this.PERFS);
+      // console.log(this.PERF, this.PERFS);
       document.documentElement.classList.add(`perf-${this.PERF}`);
 
       resolve();
