@@ -58,7 +58,6 @@ export default {
 
   methods: {
     onGalleryOpen(value) {
-      console.log('value', value);
       gsap.to(this.$refs.menuButton.$el, {
         autoAlpha: value ? 0 : 1,
         duration: 0.4,

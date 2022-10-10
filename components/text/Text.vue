@@ -80,7 +80,7 @@ export default {
     },
 
     useGallery() {
-      console.log(this.galleryItems);
+      
       return this.galleryItems && this.galleryItems.length > 0;
     },
 
@@ -133,7 +133,6 @@ export default {
 
       tl.fromTo(this.$refs.title, { autoAlpha: 0 }, { autoAlpha: 1 }, 0);
 
-      console.log(this.splitTitle && this.splitTitle.length > 0);
       if (this.splitTitle && this.splitTitle.length > 0) {
         tl.fromTo(this.splitTitle, { autoAlpha: 0, filter: 'blur(5px)' }, { autoAlpha: 1, filter: 'blur(0px)', stagger: 0.5, clearProps: 'filter' }, 0);
       }

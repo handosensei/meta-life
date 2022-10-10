@@ -17,10 +17,10 @@ export default {
     window.canvas = this.canvas = new Canvas({
       options: {
         handleItemLoaded: ({ itemsLoaded, itemsTotal }) => {
-          console.log('Loading progress', Math.round(itemsLoaded / itemsTotal));
+          // console.log('Loading progress', Math.round(itemsLoaded / itemsTotal));
         },
         handleReady: () => {
-          console.log('Loading complete');
+          // console.log('Loading complete');
           gsap.to(this.$el, {
             autoAlpha: 1,
             duration: 0.4,

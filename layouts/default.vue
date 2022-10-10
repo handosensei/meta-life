@@ -112,9 +112,7 @@ export default {
           },
         });
       } else {
-        console.log(window.canvas.props.active);
         window.canvas.props.active = true;
-        console.log(this.$refs.webgl.$el);
         gsap.to(this.$refs.webgl.$el, {
           autoAlpha: 1,
           duration: 0.6,
