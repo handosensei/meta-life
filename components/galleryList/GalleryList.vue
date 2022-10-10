@@ -5,7 +5,7 @@
     </div>
     <template v-for="(item, i) in Array(3).fill(0)">
       <template v-for="imgList in gallery">
-          <div v-for="(img, k) in imgList.slides" :key="img.title + i" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
+          <div v-for="(img, k) in imgList.slides" :key="img.title + i + k" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
             <div ref="imgContainer" class="imgContainer">
                 <img class="galleryImg" :src="typeof img?.image !== 'undefined' ? img?.image?.highres?.src : img?.video?.thumb" :alt="img.title" />
                 <div>
@@ -68,13 +68,11 @@ export default {
       timeline.fromTo(
         el,
         {
-          duration: 0.4,
           autoAlpha: 0,
-          y: 300,
-          scale: 1.5,
-          ease: 'power2.inOut',
-          zIndex: 10,
-          x: 30 * (i % 2 !== 0 ? 1 : -1),
+          y: -400,
+          scale: 0.5,
+          zIndex: 0,
+          x: 30 * (i % 2 === 0 ? 1 : -1),
         },
         {
           autoAlpha: 1,
@@ -98,12 +96,15 @@ export default {
           zIndex: 6
         },
         {
+          duration: 0.4,
           autoAlpha: 0,
-          y: -400,
-          scale: 0.5,
-          zIndex: 0,
-          x: 30 * (i % 2 === 0 ? 1 : -1),
+          y: 300,
+          scale: 1.5,
+          ease: 'power2.inOut',
+          zIndex: 10,
+          x: 30 * (i % 2 !== 0 ? 1 : -1),
         },
+        
         '>'
       );
     });
