@@ -14,7 +14,12 @@
     >
       <span ref="label" class>{{ galleryItem.category }}</span>
       <div ref="galleryMask" class="galleryMask">
-        <img ref="galleryImage" class="galleryImage" :src="typeof galleryItem.slides[0]?.image !== 'undefined' ? galleryItem.slides[0]?.image.thumb.src : galleryItem.slides[0]?.video.thumb" :alt="galleryItem.slides[0].title" />
+        <img
+          ref="galleryImage"
+          class="galleryImage"
+          :src="typeof galleryItem.slides[0]?.image !== 'undefined' ? galleryItem.slides[0]?.image.thumb.src : galleryItem.slides[0]?.video.thumb"
+          :alt="galleryItem.slides[0].title"
+        />
       </div>
       <Icon ref="galleryPlus" class="galleryPlus" type="Plus" />
       <Icon ref="gallerySphere" class="gallerySphere" type="Sphere" />
@@ -78,10 +83,10 @@ export default {
         [this.galleryBigSphere[i * 2], this.galleryBigSphere[i * 2 + 1]],
 
         {
-          attr: { r: this.isMobile ? 40: 65 },
+          attr: { r: this.isMobile ? 40 : 65 },
         },
         {
-          attr: { r: this.isMobile ? 45: 80 },
+          attr: { r: this.isMobile ? 45 : 80 },
           ease: 'power1.inOut',
           duration: 1,
           yoyo: true,
@@ -104,12 +109,10 @@ export default {
         '+=2'
       );
 
-      gsap.set(this.$refs.label[i], { y: this.isMobile ? -20 : 10});
-
+      gsap.set(this.$refs.label[i], { y: this.isMobile ? -20 : 10 });
     }
 
     this.sound = new Audio('/audio/itemHover.mp3');
-
   },
 
   beforeDestroy() {
@@ -145,24 +148,23 @@ export default {
           circles,
           {
             attr: {
-              r:  this.isMobile ? 25: 55,
+              r: this.isMobile ? 25 : 55,
             },
           },
           {
             attr: {
-              r: this.isMobile ? 35: 70,
+              r: this.isMobile ? 35 : 70,
               duration: 0.75,
               ease: 'expo.out',
             },
             onComplete: () => {
-              if(this.$refs.gallerySphere[id].$el.lastChild){
+              if (this.$refs.gallerySphere[id].$el.lastChild) {
                 gsap.fromTo(
-                this.$refs.gallerySphere[id].$el.lastChild,
-                { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-                { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-              );
+                  this.$refs.gallerySphere[id].$el.lastChild,
+                  { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+                  { drawSVG: '100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+                );
               }
-              
             },
           }
         );
@@ -171,24 +173,23 @@ export default {
           bigCircles,
           {
             attr: {
-              r: this.isMobile ? 40: 65
+              r: this.isMobile ? 40 : 65,
             },
           },
           {
             attr: {
-              r: this.isMobile ? 50: 100,
+              r: this.isMobile ? 50 : 100,
               duration: 0.75,
               ease: 'expo.out',
             },
             onComplete: () => {
-              if(this.$refs.galleryBigSphere[id].$el.lastChild){
+              if (this.$refs.galleryBigSphere[id].$el.lastChild) {
                 gsap.fromTo(
-                this.$refs.galleryBigSphere[id].$el.lastChild,
-                { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
-                { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
-              );
+                  this.$refs.galleryBigSphere[id].$el.lastChild,
+                  { drawSVG: '0%', rotate: -90, transformOrigin: 'center', visibility: 'visible' },
+                  { drawSVG: '-100%', rotate: 90, duration: 1.5, ease: 'expo.out' }
+                );
               }
-             
             },
           }
         );
@@ -214,7 +215,7 @@ export default {
         gsap.to(this.$refs.label[id], { y: this.isMobile ? -20 : 10, duration: 0.75, ease: 'expo.out' });
         gsap.to(circles, {
           attr: {
-            r: this.isMobile ? 25: 50,
+            r: this.isMobile ? 25 : 50,
             duration: 0.75,
             ease: 'expo.out',
           },
@@ -238,7 +239,7 @@ export default {
 
         gsap.to(bigCircles, {
           attr: {
-            r: this.isMobile ? 50: 65,
+            r: this.isMobile ? 50 : 65,
             duration: 0.75,
             ease: 'expo.out',
           },

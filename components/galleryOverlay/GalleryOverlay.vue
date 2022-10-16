@@ -14,7 +14,7 @@
       class="galleryOverlay"
     >
       <transition :css="false" name="galleryOverlayContentTransition" @enter="onEnterContent" @leave="onLeaveContent">
-        <div ref="content" :key="typeof activeSlide?.image?.highres?.src !== 'undefined'? activeSlide.image.highres.src : activeSlide.video.src" class="content">
+        <div ref="content" :key="typeof activeSlide?.image?.highres?.src !== 'undefined' ? activeSlide.image.highres.src : activeSlide.video.src" class="content">
           <div class="head">
             <div class="title">{{ activeSlide.title }}</div>
             <!-- <div class="subtitle">{{ activeItem.category }}</div> -->
@@ -35,11 +35,20 @@
             :src="activeSlide.image.highres.src"
             :alt="activeSlide.image.highres.alt"
           />
-          <video v-else :key="activeSlide.video.src"  class='videoContainer' controls muted autoplay loop controlsList="nodownload noremoteplayback noplaybackrate" disablePictureInPicture :poster="activeSlide.video.thumb">
-            <source :src="activeSlide.video.src" type="video/mp4">
+          <video
+            v-else
+            :key="activeSlide.video.src"
+            class="videoContainer"
+            controls
+            muted
+            autoplay
+            loop
+            controlsList="nodownload noremoteplayback noplaybackrate"
+            disablePictureInPicture
+            :poster="activeSlide.video.thumb"
+          >
+            <source :src="activeSlide.video.src" type="video/mp4" />
           </video>
-
-      
         </transition>
       </div>
 
@@ -104,7 +113,7 @@ export default {
 
     this.$nuxt.$emit(
       'assetsLoader:load',
-      this.activeItem.slides.map((img) => typeof img?.image?.highres?.src !== 'undefined'? img.image.highres.src : img.video)
+      this.activeItem.slides.map((img) => (typeof img?.image?.highres?.src !== 'undefined' ? img.image.highres.src : img.video))
     );
   },
 
@@ -161,7 +170,7 @@ export default {
     },
 
     onEnterImage(el) {
-      gsap.fromTo(el, { scale: 1.5, autoAlpha:0 }, { scale: 1, duration: 2, autoAlpha: 1, ease: 'expo.out' });
+      gsap.fromTo(el, { scale: 1.5, autoAlpha: 0 }, { scale: 1, duration: 2, autoAlpha: 1, ease: 'expo.out' });
     },
 
     onLeaveImage(el, done) {

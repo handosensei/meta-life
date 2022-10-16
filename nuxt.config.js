@@ -11,19 +11,18 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    title:'Meta Life - The metaverse of tomorrow',
+    title: 'Meta Life - The metaverse of tomorrow',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {name: 'Content-Type', content: 'text/html; charset=utf-8'},
+      { name: 'Content-Type', content: 'text/html; charset=utf-8' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Meta Life will offer you a unique immersive experience in a new world.\nBuy, Own, Earn, Play, Discover.'
-      }
-  ],
+        content: 'Meta Life will offer you a unique immersive experience in a new world.\nBuy, Own, Earn, Play, Discover.',
+      },
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

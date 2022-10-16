@@ -80,7 +80,6 @@ export default {
     },
 
     useGallery() {
-      
       return this.galleryItems && this.galleryItems.length > 0;
     },
 

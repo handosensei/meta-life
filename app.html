@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZLH7YRZWG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-<head {{ HEAD_ATTRS }}>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZLH7YRZWG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag('config', 'G-3ZLH7YRZWG');
+    </script>
+    {{ HEAD }}
+  </head>
 
-    gtag('config', 'G-3ZLH7YRZWG');
-  </script>
-  {{ HEAD }}
-</head>
-
-<body {{ BODY_ATTRS }}>
-  {{ APP }}
-</body>
-
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
 </html>

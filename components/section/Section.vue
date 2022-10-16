@@ -14,8 +14,8 @@
   >
     <component :is="component.name" ref="component" v-bind="component" />
     <div class="iconContainer">
-      <Icon type="ChevronLeft" class="icon" @click.native="navigate(-1)"/>
-      <Icon type="ChevronRight" class="icon" @click.native="navigate(1)"/>
+      <Icon type="ChevronLeft" class="icon" @click.native="navigate(-1)" />
+      <Icon type="ChevronRight" class="icon" @click.native="navigate(1)" />
     </div>
   </section>
 </template>
@@ -90,7 +90,6 @@ export default {
   },
 
   mounted() {
-    
     window.addEventListener('keydown', this.onKeyDown);
   },
 

@@ -1,6 +1,6 @@
 <template>
   <main class="isDark">
-      <GalleryList />
+    <GalleryList />
   </main>
 </template>
 

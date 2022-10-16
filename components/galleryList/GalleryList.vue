@@ -1,22 +1,19 @@
 <template>
   <div ref="galleryContent" class="galleryContent">
-    <div class="scroll">
-      Scroll
-    </div>
+    <div class="scroll">Scroll</div>
     <template v-for="(item, i) in Array(3).fill(0)">
       <template v-for="imgList in gallery">
-          <div v-for="(img, k) in imgList.slides" :key="img.title + i + k" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
-            <div ref="imgContainer" class="imgContainer">
-                <img class="galleryImg" :src="typeof img?.image !== 'undefined' ? img?.image?.highres?.src : img?.video?.thumb" :alt="img.title" />
-                <div>
-                    <h3>{{ img.title }}</h3>
-                    <p>{{ imgList.category }}</p>
-                </div>
+        <div v-for="(img, k) in imgList.slides" :key="img.title + i + k" ref="imgRow" class="imgRow" :class="{ reverse: k % 2 === 1 }">
+          <div ref="imgContainer" class="imgContainer">
+            <img class="galleryImg" :src="typeof img?.image !== 'undefined' ? img?.image?.highres?.src : img?.video?.thumb" :alt="img.title" />
+            <div>
+              <h3>{{ img.title }}</h3>
+              <p>{{ imgList.category }}</p>
             </div>
+          </div>
         </div>
       </template>
     </template>
-
   </div>
 </template>
 
@@ -39,7 +36,7 @@ export default {
       for (let i = 0; i < homeData.chapters.length; i++) {
         if (typeof homeData.chapters[i]?.sections[0]?.component?.galleryItems !== 'undefined') {
           homeData.chapters[i]?.sections[0]?.component?.galleryItems.forEach((item) => {
-              list.push(item);
+            list.push(item);
           });
         }
       }
@@ -58,55 +55,57 @@ export default {
         scrub: 0.5,
         start: 'top 35%',
         trigger: this.$refs.galleryContent,
-        end: "+=2700%",
+        end: '+=2700%',
       },
     });
 
     gsap.set(this.$refs.galleryContent, { autoAlpha: 1 });
 
     this.$refs.imgRow.forEach((el, i) => {
-      timeline.fromTo(
-        el,
-        {
-          autoAlpha: 0,
-          y: -400,
-          scale: 0.5,
-          zIndex: 0,
-          x: 30 * (i % 2 === 0 ? 1 : -1),
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          x: 0,
-          duration: 0.5,
-          ease: 'none',
-          scale: 1,
-          zIndex: 5
-        },
-        '-=0.7'
-      ).fromTo(
-        el,
-        {
-          autoAlpha: 1,
-          y: 0,
-          x: 0,
-          duration: 0.5,
-          ease: 'none',
-          scale: 1,
-          zIndex: 6
-        },
-        {
-          duration: 0.4,
-          autoAlpha: 0,
-          y: 300,
-          scale: 1.5,
-          ease: 'power2.inOut',
-          zIndex: 10,
-          x: 30 * (i % 2 !== 0 ? 1 : -1),
-        },
-        
-        '>'
-      );
+      timeline
+        .fromTo(
+          el,
+          {
+            autoAlpha: 0,
+            y: -400,
+            scale: 0.5,
+            zIndex: 0,
+            x: 30 * (i % 2 === 0 ? 1 : -1),
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            x: 0,
+            duration: 0.5,
+            ease: 'none',
+            scale: 1,
+            zIndex: 5,
+          },
+          '-=0.7'
+        )
+        .fromTo(
+          el,
+          {
+            autoAlpha: 1,
+            y: 0,
+            x: 0,
+            duration: 0.5,
+            ease: 'none',
+            scale: 1,
+            zIndex: 6,
+          },
+          {
+            duration: 0.4,
+            autoAlpha: 0,
+            y: 300,
+            scale: 1.5,
+            ease: 'power2.inOut',
+            zIndex: 10,
+            x: 30 * (i % 2 !== 0 ? 1 : -1),
+          },
+
+          '>'
+        );
     });
 
     this.$refs.imgContainer.forEach((el, i) => {
