@@ -98,21 +98,6 @@
                     }
                   },
                   {
-                    "title": "Neopolis",
-                    "text": "Naturally gifted with immense knowledge in computer engineering, Neopolis is home to the most amazing robotics, hi-tech cybernetics and industrial sciences progress.",
-                    "image": {
-                      "thumb": {
-                        "src": "/img/gallery/open-world/thumbs/5.webp",
-                        "alt": "Neopolis"
-                      },
-                      "highres": {
-                        "src": "/img/gallery/open-world/5.webp",
-                        "alt": "Neopolis",
-                        "fullscreen": true
-                      }
-                    }
-                  },
-                  {
                     "title": "The Wildlings",
                     "text": "An unspoiled land of jungle, lakes, rivers, waterfalls and wild animals near Astralis. Ready to be explored by bold and fearless adventurers looking to find exceptional resources at risk of coming across dangerous creatures.",
                     "image": {
