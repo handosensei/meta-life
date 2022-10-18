@@ -4,23 +4,30 @@
     "items": [
       {
         "title": "Robin Janssens",
-        "text": "Co-Founder - Main Advisor - Metaverse Empire Builder",
+        "text": "CEO - Co-Founder - Metaverse Empire Builder",
         "image": {
           "src": "/img/team/Robin.jpg"
         }
       },
       {
         "title": "Maxime Hacquard",
-        "text": "Co-Founder - Visionary Artist",
+        "text": "Co-Founder - Art Director",
         "image": {
           "src": "/img/team/Max.jpg"
         }
       },
       {
         "title": "Dara Sabeti",
-        "text": "CEO - Operations Consigliere",
+        "text": "CTO - Operations Consigliere",
         "image": {
           "src": "/img/team/Dara.jpg"
+        }
+      },
+      {
+        "title": "Theodoric Plichart",
+        "text": "COO",
+        "image": {
+          "src": "/img/team/Theo.png"
         }
       },
       {
@@ -193,10 +200,6 @@
   "advisors": {
     "title": "Advisors",
     "items": [
-      {
-        "title": "Theodoric Plichart",
-        "text": "Strategy"
-      },
       {
         "title": "Maxence Sallier",
         "text": "(Blockchain & NFT Analyst)"
